@@ -6,8 +6,8 @@
 
 "use strict"
 
-var r = require("../1758/257/index")
-var o = require("./1244")
+var r = require(/* 257 */"../1758/257/index")
+var o = require(/* 1244 */"./1244")
 var /* [auto-meaningful-name] */r$aTypedArray = r.aTypedArray;
 (0, r.exportTypedArrayMethod)("copyWithin", function (e, t) {
   return o.call(r$aTypedArray(this), e, t, arguments.length > 2 ? arguments[2] : undefined)

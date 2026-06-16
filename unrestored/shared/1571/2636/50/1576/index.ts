@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("./1577")
+var r = require(/* 1577 */"./1577")
 function i() {}
 function o() {}
 o.resetWarningCache = i

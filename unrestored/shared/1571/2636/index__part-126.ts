@@ -6,19 +6,19 @@
 
 "use strict"
 
-import /* [auto-meaningful-name] */$_186 from "./186"
-import qv from "./88"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import { useDispatch } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { memo, useState } from "react"
+import /* [auto-meaningful-name] */Module_186 from /* 186 */"./186"
+import /* [auto-meaningful-name] */Module_88 from /* 88 */"./88"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import { useDispatch } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo, useState } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_2680_index from "./2680/index"
+import * as /* [auto-meaningful-name] */Module_2680 from /* 2680 */"./2680/index"
 var hw = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "templateType" : e$keyName
@@ -27,10 +27,10 @@ var hw = memo(function (e) {
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var a = e$getValue(n)
   var s = e$getValue("templateRenderType")
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var l = useDispatch()
   var u = useState(false)
-  var d = $_10_index.a(u, 2)
+  var d = Module_10.a(u, 2)
   var p = d[0]
   var m = d[1]
   function g(e) {
@@ -40,7 +40,7 @@ var hw = memo(function (e) {
   }
   function v(e) {
     if (e !== a) {
-      l($$_$$_$$_$$_src_editor_redux_common_actions.Af(e$widgetId, e, function () {
+      l(Src_editor_redux_common_actions.Af(e$widgetId, e, function () {
         if (e$onChange) {
           e$onChange(n, e)
         }
@@ -51,33 +51,33 @@ var hw = memo(function (e) {
     }
   }
   return React.createElement("div", {
-    className: Classnames($_186.formItemWrapper, "templateType")
+    className: Classnames(Module_186.formItemWrapper, "templateType")
   }, React.createElement("div", {
     className: "coco-form-item coco-form-item-horizontal"
-  }, $_710$a$formatMessage({
+  }, Module_710$a$formatMessage({
     id: "ListViewerWidget.templateType"
   }), React.createElement("div", {
-    className: $_186.cardBox
+    className: Module_186.cardBox
   }, React.createElement("div", {
     onClick: g.bind(null, "tiled"),
-    className: Classnames($_186.cardItem, "tiled" === s && $_186.active)
-  }, $_710$a$formatMessage({
+    className: Classnames(Module_186.cardItem, "tiled" === s && Module_186.active)
+  }, Module_710$a$formatMessage({
     id: "ListViewerWidget.tiled"
   })), React.createElement("div", {
     onClick: g.bind(null, "card"),
-    className: Classnames($_186.cardItem, "card" === s && $_186.active)
-  }, $_710$a$formatMessage({
+    className: Classnames(Module_186.cardItem, "card" === s && Module_186.active)
+  }, Module_710$a$formatMessage({
     id: "ListViewerWidget.card"
   })))), React.createElement("div", {
-    className: $_186.templateBox,
+    className: Module_186.templateBox,
     onClick: function () {
       m(true)
     }
   }, React.createElement("img", {
-    className: $_186.selectedTemplateImg,
+    className: Module_186.selectedTemplateImg,
     src: "https://static.bcmcdn.com/coco/image/".concat(a, ".png"),
     alt: ""
-  })), React.createElement($_2680_index.a, {
+  })), React.createElement(Module_2680.a, {
     title: null,
     visible: p,
     footer: null,
@@ -95,26 +95,26 @@ var hw = memo(function (e) {
       m(false)
     }
   }, React.createElement("div", {
-    className: $_186.templateListTitle
+    className: Module_186.templateListTitle
   }, React.createElement("div", {
-    className: $_186.title
-  }, $_710$a$formatMessage({
+    className: Module_186.title
+  }, Module_710$a$formatMessage({
     id: "ListViewerWidget.templateType"
-  })), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+  })), React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-closed"
   })), React.createElement("div", {
-    className: $_186.templateListBox
-  }, Object.keys($$_$$_$$_$$_src_editor_widget_builtIn_types.o).map(function (e) {
+    className: Module_186.templateListBox
+  }, Object.keys(Src_editor_widget_builtIn_types.o).map(function (e) {
     return React.createElement("div", {
-      className: Classnames($_186.templateItem, e === a && $_186.active),
+      className: Classnames(Module_186.templateItem, e === a && Module_186.active),
       key: e,
       onClick: v.bind(null, e)
     }, e === a && React.createElement("div", {
-      className: $_186.selectIconBox
-    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+      className: Module_186.selectIconBox
+    }, React.createElement(Src_shared_ui_components_index.j, {
       type: "icon-style-selected"
     })), React.createElement("img", {
-      className: $_186.templateItemImg,
+      className: Module_186.templateItemImg,
       src: "https://static.bcmcdn.com/coco/image/".concat(e, ".png"),
       alt: ""
     }))
@@ -128,12 +128,12 @@ var mw = memo(function (e) {
   var /* [auto-meaningful-name] */e$formConfig = e.formConfig
   var a = e$getValue(n)
   var s = e$formConfig.dropdown || []
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var l = useState(a)
-  var u = $_10_index.a(l, 2)
+  var u = Module_10.a(l, 2)
   var d = u[0]
   var p = u[1]
-  var m = $_710$a$formatMessage({
+  var m = Module_710$a$formatMessage({
     id: e$formConfig.label || "options"
   })
   var g = function (e) {
@@ -142,17 +142,17 @@ var mw = memo(function (e) {
       e$onChange(n, e)
     }
   }
-  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
-    className: Classnames(qv.formItemWrapper),
+  return React.createElement(Src_shared_ui_components_index.i, {
+    className: Classnames(Module_88.formItemWrapper),
     label: m,
     align: "horizontal"
   }, React.createElement("div", {
-    className: qv.optionSwitch
+    className: Module_88.optionSwitch
   }, s.map(function (e) {
     return React.createElement("div", {
       key: e.label,
       onClick: g.bind(null, e.value),
-      className: Classnames(qv.option, d === e.value && qv.activeOption)
+      className: Classnames(Module_88.option, d === e.value && Module_88.activeOption)
     }, React.createElement("span", null, e.label))
   })))
 })

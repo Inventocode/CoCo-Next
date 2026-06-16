@@ -6,10 +6,10 @@
 
 "use strict"
 
-import * as Qu from "./60"
-import * as /* [auto-meaningful-name] */$_196 from "./196"
-import /* [auto-meaningful-name] */$_1961 from "./196"
-import * as /* [auto-meaningful-name] */$_146 from "./146"
+import * as /* [auto-meaningful-name] */Module_60 from /* 60 */"./60"
+import * as /* [auto-meaningful-name] */Module_196 from /* 196 */"./196"
+import /* [auto-meaningful-name] */Module_1961 from /* 196 */"./196"
+import * as /* [auto-meaningful-name] */Module_146 from /* 146 */"./146"
 var Xd = [
   {
     type: "WidgetTitle",
@@ -36,7 +36,7 @@ var Xd = [
     type: "WidgetOpacity"
   }, {
     type: "Size",
-    sizeRange: [[$_146.m, Qu.l], [$_146.l, Qu.g]]
+    sizeRange: [[Module_146.m, Module_60.l], [Module_146.l, Module_60.g]]
   }, {
     type: "Coordinate"
   }

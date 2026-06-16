@@ -6,23 +6,23 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_env from "../../../../src/shared/env"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials from "../../../../src/shared/utils/network/axios-with-credentials"
-import * as O from "./7"
-import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import /* [auto-meaningful-name] */React from "react"
-import { memo } from "react"
+import * as /* [auto-meaningful-name] */Src_shared_env from /* 57 */"../../../../src/shared/env"
+import * as /* [auto-meaningful-name] */Src_shared_utils_network_axiosWithCredentials from /* 41 */"../../../../src/shared/utils/network/axios-with-credentials"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"./7"
+import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_1200 from "./1200"
-import /* [auto-meaningful-name] */$_12001 from "./1200"
+import * as /* [auto-meaningful-name] */Module_1200 from /* 1200 */"./1200"
+import /* [auto-meaningful-name] */Module_12001 from /* 1200 */"./1200"
 var Ge = memo(function (e) {
   var /* [auto-meaningful-name] */e$stroke = e.stroke
   var n = undefined === e$stroke ? "white" : e$stroke
   return React.createElement("svg", {
-    className: $_12001.spinner,
+    className: Module_12001.spinner,
     viewBox: "0 0 50 50"
   }, React.createElement("circle", {
-    className: $_12001.spinnerPath,
+    className: Module_12001.spinnerPath,
     cx: "25",
     cy: "25",
     r: "20",
@@ -31,19 +31,19 @@ var Ge = memo(function (e) {
     stroke: n || "white"
   }))
 })
-var /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_env$a$backendHost = $$_$$_$$_$$_src_shared_env.a.backendHost
+var /* [auto-meaningful-name] */Src_shared_env$a$backendHost = Src_shared_env.a.backendHost
 function Ue() {
   return He.apply(this, arguments)
 }
 function He() {
-  return (He = O.a(RegeneratorRuntime.mark(function e() {
+  return (He = Module_7.a(RegeneratorRuntime.mark(function e() {
     var /* [auto-meaningful-name] */e$sent
     return RegeneratorRuntime.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
             e.next = 2
-            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.get($$_$$_$$_$$_src_shared_env$a$backendHost + "/tiger/v3/web/accounts/profile")
+            return Src_shared_utils_network_axiosWithCredentials.a.get(Src_shared_env$a$backendHost + "/tiger/v3/web/accounts/profile")
           case 2:
             e$sent = e.sent
             return e.abrupt("return", e$sent.data)
@@ -59,13 +59,13 @@ function Ve() {
   return ze.apply(this, arguments)
 }
 function ze() {
-  return (ze = O.a(RegeneratorRuntime.mark(function e() {
+  return (ze = Module_7.a(RegeneratorRuntime.mark(function e() {
     return RegeneratorRuntime.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
             e.next = 2
-            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.post($$_$$_$$_$$_src_shared_env$a$backendHost + "/tiger/v3/web/accounts/logout")
+            return Src_shared_utils_network_axiosWithCredentials.a.post(Src_shared_env$a$backendHost + "/tiger/v3/web/accounts/logout")
           case 2:
           case "end":
             return e.stop()

@@ -4,9 +4,9 @@
  * 模块 ID：284
  */
 
-var r = require("../532")
-var i = require("./1328")
-var o = require("./2007/index")
+var r = require(/* 532 */"../532")
+var i = require(/* 1328 */"./1328")
+var o = require(/* 2007 */"./2007/index")
 module.exports = function (e) {
   return function () {
     var t

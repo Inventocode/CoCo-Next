@@ -7,8 +7,8 @@
 "use strict"
 
 export { o as a }
-import * as /* [auto-meaningful-name] */$$_$$_434 from "../../434"
-import { Component } from "react"
+import * as /* [auto-meaningful-name] */Module_434 from /* 434 */"../../434"
+import { Component } from /* 0 */"react"
 var o = function (e) {
   function t(t) {
     var n;
@@ -69,7 +69,7 @@ var o = function (e) {
     }
     return n
   }
-  $$_$$_434.a(t, e)
+  Module_434.a(t, e)
   t.getDerivedStateFromProps = function (e, t) {
     return {
       value: t.local ? t.value : e.value,

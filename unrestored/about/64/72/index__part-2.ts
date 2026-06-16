@@ -6,10 +6,10 @@
 
 "use strict"
 
-import * as S from "./33"
-import * as /* [auto-meaningful-name] */$$_49_50 from "../49/50"
-import * as T from "./70"
-import * as j from "./18"
+import * as /* [auto-meaningful-name] */Module_33 from /* 33 */"./33"
+import * as /* [auto-meaningful-name] */Module_50 from /* 50 */"../49/50"
+import * as /* [auto-meaningful-name] */Module_70 from /* 70 */"./70"
+import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"./18"
 var x = Object.setPrototypeOf || ({
   __proto__: []
 } instanceof Array ? function (e, t) {
@@ -30,7 +30,7 @@ var C = function (e) {
     x(r, this$constructor.prototype)
     return r
   }
-  j.b(t, e)
+  Module_18.b(t, e)
   return t
 }(Error)
 var R = /^(?:(\w+):)\/\/(?:(\w+)(?::(\w+))?@)([\w.-]+)(?::(\d+))?\/(.+)/
@@ -61,7 +61,7 @@ var N = function () {
     if (!t) {
       throw new C(InvalidDsn)
     }
-    var n = j.c(t.slice(1), 6)
+    var n = Module_18.c(t.slice(1), 6)
     var r = n[0]
     var i = n[1]
     var o = n[2]

@@ -6,12 +6,12 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_25_index from "../../25/index"
-import * as /* [auto-meaningful-name] */$$_$$_11 from "../../11"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../src/editor/widget/built-in/types"
-import * as /* [auto-meaningful-name] */Animejs from "animejs"
-import * as /* [auto-meaningful-name] */Color from "color"
-import /* [auto-meaningful-name] */Color1 from "color"
+import * as /* [auto-meaningful-name] */Module_25 from /* 25 */"../../25/index"
+import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"../../11"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Animejs from /* 205 */"animejs"
+import * as /* [auto-meaningful-name] */Color from /* 51 */"color"
+import /* [auto-meaningful-name] */Color1 from /* 51 */"color"
 function p(e, t) {
   return [
     Animejs.default({

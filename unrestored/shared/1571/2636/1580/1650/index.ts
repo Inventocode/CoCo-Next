@@ -4,9 +4,9 @@
  * 模块 ID：1650
  */
 
-require("../1662/86")({
+require(/* 86 */"../1662/86")({
   target: "Number",
   stat: true
 }, {
-  isFinite: require("./1651")
+  isFinite: require(/* 1651 */"./1651")
 })

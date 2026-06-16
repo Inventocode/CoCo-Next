@@ -8,11 +8,11 @@
 
 export { l as a }
 export { h as b }
-import * as /* [auto-meaningful-name] */$_32_index from "./32/index"
-import * as /* [auto-meaningful-name] */$_119 from "./119"
-import * as o from "./65"
-import * as /* [auto-meaningful-name] */$_1024 from "./1024"
-import * as /* [auto-meaningful-name] */$_126 from "./126"
+import * as /* [auto-meaningful-name] */Module_32 from /* 32 */"./32/index"
+import * as /* [auto-meaningful-name] */Module_119 from /* 119 */"./119"
+import * as /* [auto-meaningful-name] */Module_65 from /* 65 */"./65"
+import * as /* [auto-meaningful-name] */Module_1024 from /* 1024 */"./1024"
+import * as /* [auto-meaningful-name] */Module_126 from /* 126 */"./126"
 var c = function () {
   var e = function (t, n) {
     return (e = Object.setPrototypeOf || {
@@ -66,7 +66,7 @@ var l = function () {
     this.data = t
     this.events = n
     this.playables = new Map()
-    this.playable_container = new $_32_index.f()
+    this.playable_container = new Module_32.f()
     this.playable_container.name = "playable_container"
   }
   e.prototype.add_video = function (e, t, n, r) {
@@ -75,33 +75,33 @@ var l = function () {
       if (r) {
         var a = new f(e, this.playable_container, this.app, this.events, undefined, undefined, r)
         this.playables.set(e, a)
-        return $_119.b.success(a)
+        return Module_119.b.success(a)
       }
-      return $_119.b.error("Can not find texture with texture id " + t)
+      return Module_119.b.error("Can not find texture with texture id " + t)
     }
     if (!o.baseTexture.getDrawableSource || !(o.baseTexture.getDrawableSource() instanceof HTMLVideoElement)) {
-      return $_119.b.error("texture is not video-based")
+      return Module_119.b.error("texture is not video-based")
     }
     var s = new f(e, this.playable_container, this.app, this.events, o, n)
     this.playables.set(e, s)
-    return $_119.b.success(s)
+    return Module_119.b.success(s)
   }
   e.prototype.add_animated_actor = function (e, t, n) {
     for (var r = [], o = 0; o < t.length; o++) {
       var a = this.data.get_texture(t[o])
       if (!a) {
-        return $_119.b.error("Can not find texture with texture_id " + t[o])
+        return Module_119.b.error("Can not find texture with texture_id " + t[o])
       }
       r.push(a)
     }
     var s = new d(e, r, this.playable_container, this.app, n)
     this.playables.set(e, s)
-    return $_119.b.success(s)
+    return Module_119.b.success(s)
   }
   e.prototype.destroy_playable = function (e) {
     var t = this.playables.get(e)
     if (!t) {
-      return new $_119.a("Can not find video with id " + e)
+      return new Module_119.a("Can not find video with id " + e)
     }
     this.playables.delete(e)
     t.destroy({
@@ -203,7 +203,7 @@ var l = function () {
 var f = function (e) {
   function t(t, n, i, a, c, u, l) {
     var f = e.call(this, t, n, i, a) || this
-    f.type = $_126.f.Video
+    f.type = Module_126.f.Video
     f.on_play_handler = function () {
       if (f.custom_on_play_handler) {
         f.custom_on_play_handler()
@@ -223,7 +223,7 @@ var f = function (e) {
     f.id = t
     f.app = i
     f.is_played = false
-    f.video_frame = new $_32_index.t(c)
+    f.video_frame = new Module_32.t(c)
     if (l) {
       f.generate_error_frame(l)
     }
@@ -247,7 +247,7 @@ var f = function (e) {
     var /* [auto-meaningful-name] */f$app$get_app$view = f.app.get_app().view
     var /* [auto-meaningful-name] */f$app$get_app$view$width = f$app$get_app$view.width
     var /* [auto-meaningful-name] */f$app$get_app$view$height = f$app$get_app$view.height
-    var _ = u || o.e({
+    var _ = u || Module_65.e({
       width: f.width,
       height: f.height
     }, {
@@ -353,17 +353,17 @@ var f = function (e) {
     var /* [auto-meaningful-name] */e$width = e.width
     var /* [auto-meaningful-name] */e$height = e.height
     var /* [auto-meaningful-name] */e$error_message = e.error_message
-    var o = new $_32_index.j()
-    var a = new $_32_index.v(e$error_message)
+    var o = new Module_32.j()
+    var a = new Module_32.v(e$error_message)
     o.beginFill(15922422)
     o.drawRect(-e$width / 2, -e$height / 2, e$width, e$height)
-    a.style = $_126.e
+    a.style = Module_126.e
     a.position.set(-a.width / 2, 0)
     o.addChild(a)
     this.video_frame.addChild(o)
   }
   return t
-}($_1024.a)
+}(Module_1024.a)
 var d = function (e) {
   function t(t, n, i, a, s) {
     var c = e.call(this) || this
@@ -378,7 +378,7 @@ var d = function (e) {
     c.ended = false
     c.is_played = false
     c.pivot.set(.5)
-    c.animated_actor = new $_32_index.a(n)
+    c.animated_actor = new Module_32.a(n)
     c.animated_actor.loop = false
     c.animated_actor.anchor.set(.5)
     c.animated_actor.onComplete = c.on_complete_handler
@@ -387,7 +387,7 @@ var d = function (e) {
     var /* [auto-meaningful-name] */c$app$get_app$view = c.app.get_app().view
     var /* [auto-meaningful-name] */c$app$get_app$view$width = c$app$get_app$view.width
     var /* [auto-meaningful-name] */c$app$get_app$view$height = c$app$get_app$view.height
-    var d = s || o.e({
+    var d = s || Module_65.e({
       width: c.width,
       height: c.height
     }, {
@@ -459,8 +459,8 @@ var d = function (e) {
     }
   }
   return t
-}($_32_index.f)
+}(Module_32.f)
 function h(e) {
-  return !(!e || !e.type) && e.type === $_126.f.Video
+  return !(!e || !e.type) && e.type === Module_126.f.Video
 }
 export default l

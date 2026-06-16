@@ -11,11 +11,11 @@ Object.defineProperty(exports, "__esModule", {
 })
 exports.ConflictResolver = undefined
 var r
-var i = require("tslib")
-var o = require("../../../../../17/644")
-var a = require("../../../../../17/646")
-var s = (0, i.__importStar)(require("../../../../../17/536"))
-var c = require("../../../../../1022/214")
+var i = require(/* 93 */"tslib")
+var o = require(/* 644 */"../../../../../17/644")
+var a = require(/* 646 */"../../../../../17/646")
+var s = (0, i.__importStar)(require(/* 536 */"../../../../../17/536"))
+var c = require(/* 214 */"../../../../../1022/214")
 var u = function (e) {
   function t() {
     return null !== e && e.apply(this, arguments) || this
@@ -150,7 +150,7 @@ var u = function (e) {
   (0, i.__decorate)([(0, o.lazy_inject)(a.BINDING.Blink)], t.prototype, "Blink", undefined);
   (0, i.__decorate)([(0, o.lazy_inject)(a.BINDING.GroupEvent)], t.prototype, "group_event_factory", undefined)
   return t
-}(require("../../../737/1156").BasePlugin)
+}(require(/* 1156 */"../../../737/1156").BasePlugin)
 exports.ConflictResolver = u;
 (function (e) {
   e.Gesture = "Gesture"

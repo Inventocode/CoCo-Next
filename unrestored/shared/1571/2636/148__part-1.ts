@@ -7,9 +7,9 @@
 "use strict"
 
 var r
-import * as o from "./11"
-import * as i from "./75"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"./11"
+import * as /* [auto-meaningful-name] */Module_75 from /* 75 */"./75"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../src/editor/widget/built-in/types"
 var /* [auto-meaningful-name] */IconWidgetRadio = "icon-widget-radio"
 var /* [auto-meaningful-name] */Ff2f2fff = "#ff2f2fff"
 var /* [auto-meaningful-name] */_34c958ff = "#34c958ff"
@@ -17,32 +17,32 @@ var /* [auto-meaningful-name] */_148cefff = "#148cefff"
 var d = false
 var p = false
 r = {}
-o.a(r, $$_$$_$$_$$_src_editor_widget_builtIn_types.s.SMALL, {
+Module_11.a(r, Src_editor_widget_builtIn_types.s.SMALL, {
   headlineFontSize: 14,
   innerSize: 16,
   optionFontSize: 12,
   optionPadding: "5px 28px",
   iconFontSize: 20,
   minWidth: 90,
-  maxWidth: i.e
+  maxWidth: Module_75.e
 })
-o.a(r, $$_$$_$$_$$_src_editor_widget_builtIn_types.s.MEDIUM, {
+Module_11.a(r, Src_editor_widget_builtIn_types.s.MEDIUM, {
   headlineFontSize: 16,
   optionFontSize: 14,
   optionPadding: "8px 32px",
   iconFontSize: 24,
   innerSize: 20,
   minWidth: 90,
-  maxWidth: i.e
+  maxWidth: Module_75.e
 })
-o.a(r, $$_$$_$$_$$_src_editor_widget_builtIn_types.s.LARGE, {
+Module_11.a(r, Src_editor_widget_builtIn_types.s.LARGE, {
   headlineFontSize: 18,
   optionFontSize: 16,
   optionPadding: "14px 36px",
   iconFontSize: 28,
   innerSize: 24,
   minWidth: 90,
-  maxWidth: i.e
+  maxWidth: Module_75.e
 })
 var f = r
 export { IconWidgetRadio as s }

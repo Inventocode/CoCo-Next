@@ -6,9 +6,9 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$_32_index from "./32/index"
+import * as /* [auto-meaningful-name] */Module_32 from /* 32 */"./32/index"
 var r
-import * as /* [auto-meaningful-name] */$_744 from "./744"
+import * as /* [auto-meaningful-name] */Module_744 from /* 744 */"./744"
 var g = function (e, t) {
   var n = "function" === typeof Symbol && e[Symbol.iterator]
   if (!n) {
@@ -62,21 +62,21 @@ function m(e, t, n, i) {
       switch ((l = m(o, s)) === r.MOVE_UP ? s-- : l === r.MOVE_DOWN ? s++ : l === r.MOVE_LEFT ? o-- : l === r.MOVE_RIGHT && o++, i.mode) {
         case "vertex":
           if (l !== r$SKIP) {
-            f.push(new $_32_index.m(o, s))
+            f.push(new Module_32.m(o, s))
           }
           break
         case "step":
           if (p % i.step === 0) {
-            f.push(new $_32_index.m(o, s))
+            f.push(new Module_32.m(o, s))
           }
           break
         case "mixed":
           if (l !== r$SKIP) {
-            f.push(new $_32_index.m(o, s))
+            f.push(new Module_32.m(o, s))
             p = 0
           } else {
             if (p % i.step === 0) {
-              f.push(new $_32_index.m(o, s))
+              f.push(new Module_32.m(o, s))
             }
           }
       }
@@ -103,7 +103,7 @@ function m(e, t, n, i) {
           var h = Math.floor(Math.sqrt(b(o, s)) / r)
           var p = []
           for (f = 1; f < h; f++) {
-            p.push(new $_32_index.m(o.x + (s.x - o.x) * f / h, o.y + (s.y - o.y) * f / h))
+            p.push(new Module_32.m(o.x + (s.x - o.x) * f / h, o.y + (s.y - o.y) * f / h))
           }
           return v([o], p, [s])
         }
@@ -143,7 +143,7 @@ function y(e, t, n) {
     return 0
   }
   var i = ((e.x - t.x) * (n.x - t.x) + (e.y - t.y) * (n.y - t.y)) / r
-  return b(e, i < 0 ? t : i > 1 ? n : new $_32_index.m(t.x + i * (n.x - t.x), t.y + i * (n.y - t.y)))
+  return b(e, i < 0 ? t : i > 1 ? n : new Module_32.m(t.x + i * (n.x - t.x), t.y + i * (n.y - t.y)))
 }
 function b(e, t) {
   var n = e.x - t.x

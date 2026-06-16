@@ -6,13 +6,13 @@
 
 "use strict"
 
-var r = require("../../180")
-var i = require("../../204")
-var o = require("../../../../1058/1393/1143/712/index")
-var a = require("../../../../1058/1393/1143/532")
-var s = require("../../../../1058/1393/1143/283/index")
-var c = require("../../../../1058/1393/1143/284/index")
-var u = require("./2240")
+var r = require(/* 180 */"../../180")
+var i = require(/* 204 */"../../204")
+var o = require(/* 712 */"../../../../1058/1393/1143/712/index")
+var a = require(/* 532 */"../../../../1058/1393/1143/532")
+var s = require(/* 283 */"../../../../1058/1393/1143/283/index")
+var c = require(/* 284 */"../../../../1058/1393/1143/284/index")
+var u = require(/* 2240 */"./2240")
 var l = /^[\da-fA-F]+$/
 var f = /^\d+$/
 var d = new WeakMap()
@@ -70,7 +70,7 @@ module.exports = function (e) {
   e = e || {}
   return function (t) {
     return function (e, t) {
-      var d = t.acorn || require("../1132")
+      var d = t.acorn || require(/* 1132 */"../1132")
       var _ = h(d)
       var /* [auto-meaningful-name] */d$tokTypes = d.tokTypes
       var /* [auto-meaningful-name] */_$tokTypes = _.tokTypes
@@ -442,7 +442,7 @@ module.exports = function (e) {
 }
 Object.defineProperty(module.exports, "tokTypes", {
   get: function () {
-    return h(require("../1132")).tokTypes
+    return h(require(/* 1132 */"../1132")).tokTypes
   },
   configurable: true,
   enumerable: true

@@ -4,9 +4,9 @@
  * 模块 ID：833
  */
 
-var r = require("../1659/168")
-var o = require("../1282/246/index")
-var i = require("../1774/633")
+var r = require(/* 168 */"../1659/168")
+var o = require(/* 246 */"../1282/246/index")
+var i = require(/* 633 */"../1774/633")
 var a = o("species")
 module.exports = function (e) {
   return i >= 51 || !r(function () {

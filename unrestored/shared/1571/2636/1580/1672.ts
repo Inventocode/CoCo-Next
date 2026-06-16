@@ -4,9 +4,9 @@
  * 模块 ID：1672
  */
 
-var r = require("./1662/86")
-var o = require("./1659/168")
-var i = require("./1282/231")
+var r = require(/* 86 */"./1662/86")
+var o = require(/* 168 */"./1659/168")
+var i = require(/* 231 */"./1282/231")
 var /* [auto-meaningful-name] */Object$isExtensible = Object.isExtensible
 r({
   target: "Object",

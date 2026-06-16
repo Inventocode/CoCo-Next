@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("./167")
+var r = require(/* 167 */"./167")
 var i = function () {
   var t = function (e, n) {
     return (t = Object.setPrototypeOf || {

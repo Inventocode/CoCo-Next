@@ -6,8 +6,8 @@
 
 "use strict"
 
-var r = require("../../../../180")
-var i = require("../../../../204")
+var r = require(/* 180 */"../../../../180")
+var i = require(/* 204 */"../../../../204")
 module.exports = function () {
   function e() {
     r(this, e)

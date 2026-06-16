@@ -6,14 +6,14 @@
 
 "use strict"
 
-import /* [auto-meaningful-name] */React from "react"
-import { memo, forwardRef, useRef, useState, useImperativeHandle } from "react"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo, forwardRef, useRef, useState, useImperativeHandle } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import i from "classnames"
-import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
-import * as /* [auto-meaningful-name] */$_794 from "./794"
-import /* [auto-meaningful-name] */$_7941 from "./794"
-import "./881"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../10/index"
+import * as /* [auto-meaningful-name] */Module_794 from /* 794 */"./794"
+import /* [auto-meaningful-name] */Module_7941 from /* 794 */"./794"
+import /* 881 */"./881"
 var Ue = memo(forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$sourceImage = e.sourceImage
   var /* [auto-meaningful-name] */e$defaultScale = e.defaultScale
@@ -32,7 +32,7 @@ var Ue = memo(forwardRef(function (e, t) {
   var E = undefined === e$maxScale ? 2 : e$maxScale
   var O = useRef(null)
   var w = useState(l)
-  var C = $$_10_index.a(w, 2)
+  var C = Module_10.a(w, 2)
   var T = C[0]
   var S = C[1]
   var A = function (e) {
@@ -55,7 +55,7 @@ var Ue = memo(forwardRef(function (e, t) {
   })
   return React.createElement("div", {
     className: "coco-avatar-editor"
-  }, React.createElement($_7941, {
+  }, React.createElement(Module_7941, {
     ref: O,
     crossOrigin: "anonymous",
     image: e$sourceImage,
@@ -73,12 +73,12 @@ var Ue = memo(forwardRef(function (e, t) {
   }), React.createElement("div", {
     className: "coco-avatar-editor-scaleBar"
   }, React.createElement("span", {
-    className: i("coco-avatar-editor-zoomButton", "coco-avatar-editor-zoomOut"),
+    className: Classnames("coco-avatar-editor-zoomButton", "coco-avatar-editor-zoomOut"),
     onClick: function () {
       A("out")
     }
   }, React.createElement("img", {
-    src: require("./882"),
+    src: require(/* 882 */"./882"),
     alt: "",
     className: "coco-avatar-editor-zoomOutIcon"
   })), React.createElement("input", {
@@ -91,12 +91,12 @@ var Ue = memo(forwardRef(function (e, t) {
       S(parseFloat(e.target.value))
     }
   }), React.createElement("span", {
-    className: i("coco-avatar-editor-zoomButton", "coco-avatar-editor-zoomIn"),
+    className: Classnames("coco-avatar-editor-zoomButton", "coco-avatar-editor-zoomIn"),
     onClick: function () {
       A("in")
     }
   }, React.createElement("img", {
-    src: require("./883"),
+    src: require(/* 883 */"./883"),
     alt: "",
     className: "coco-avatar-editor-zoomInIcon"
   }))))

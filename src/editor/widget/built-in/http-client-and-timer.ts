@@ -6,17 +6,17 @@
 
 import { Yh } from "../../../../unrestored/shared/1571/2636/index__part-68"
 import { gm } from "../../../../unrestored/shared/1571/2636/index__part-73"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_235 from "../../../../unrestored/shared/1571/2636/235"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_61 from "../../../../unrestored/shared/1571/2636/61"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_46_index from "../../../../unrestored/shared/1571/2636/46/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_4 from "../../../../unrestored/shared/1571/2636/4"
+import * as /* [auto-meaningful-name] */Module_235 from /* 235 */"../../../../unrestored/shared/1571/2636/235"
+import * as /* [auto-meaningful-name] */Module_61 from /* 61 */"../../../../unrestored/shared/1571/2636/61"
+import * as /* [auto-meaningful-name] */Module_46 from /* 46 */"../../../../unrestored/shared/1571/2636/46/index"
+import * as /* [auto-meaningful-name] */Module_4 from /* 4 */"../../../../unrestored/shared/1571/2636/4"
 import * as Types from "./types"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_6 from "../../../../unrestored/shared/1571/2636/6"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"../../../../unrestored/shared/1571/2636/6"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_552_index from "../../../../unrestored/shared/1571/2636/552/index"
+import * as /* [auto-meaningful-name] */Module_552 from /* 552 */"../../../../unrestored/shared/1571/2636/552/index"
 var vm = function (e) {
   var /* [auto-meaningful-name] */e$onChange = e.onChange
-  return React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_552_index.a, Object.assign({}, e, {
+  return React.createElement(Module_552.a, Object.assign({}, e, {
     onDatePickerChange: function (e) {
       if (e$onChange) {
         e$onChange("timeStamp", new Date(e).getTime())
@@ -27,12 +27,12 @@ var vm = function (e) {
 var bm = {
   type: Types.TIME_PICKER_WIDGET,
   category: {
-    iconId: $$_$$_$$_$$_unrestored_shared_1571_2636_235.h,
+    iconId: Module_235.h,
     blocks: Types.TIME_PICKER_WIDGET
   },
   getTemplate: function (e) {
     var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>")
-    return ["<block type=\"time_picker_on_select_done\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), $$_$$_$$_$$_unrestored_shared_1571_2636_61.d, "<block type=\"time_picker_open_select_dialog\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), $$_$$_$$_$$_unrestored_shared_1571_2636_61.d, "<block type=\"time_picker_get_time\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"time_picker_get_value\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), $$_$$_$$_$$_unrestored_shared_1571_2636_61.d, $$_$$_$$_$$_unrestored_shared_1571_2636_61.e]
+    return ["<block type=\"time_picker_on_select_done\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Module_61.d, "<block type=\"time_picker_open_select_dialog\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Module_61.d, "<block type=\"time_picker_get_time\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"time_picker_get_value\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Module_61.d, Module_61.e]
   },
   blockDeclareGroup: {
     setBlockGroupSnippet: function (e) {
@@ -44,7 +44,7 @@ var bm = {
         var s = e.valueToCode(t, n, "PARAM_HOUR", e.ORDER_ATOMIC)
         var c = e.valueToCode(t, n, "PARAM_MINUTE", e.ORDER_ATOMIC)
         var l = e.valueToCode(t, n, "PARAM_SECOND", e.ORDER_ATOMIC)
-        return o && i ? $$_$$_$$_$$_unrestored_shared_1571_2636_4.n("argsOnTimePickerSelectDone", [$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(o)], i, [a, s, c, l]) : ""
+        return o && i ? Module_4.n("argsOnTimePickerSelectDone", [Module_4.o(o)], i, [a, s, c, l]) : ""
       })
       e.insertBlockSnippetGenerator("time_picker_on_select_done_time", function () {
         return "time"
@@ -61,7 +61,7 @@ var bm = {
       e.insertBlockSnippetGenerator("time_picker_open_select_dialog", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID") || ""
-        return o ? $$_$$_$$_$$_unrestored_shared_1571_2636_4.n("openTimePickerDialog", [$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(o)]) : ""
+        return o ? Module_4.n("openTimePickerDialog", [Module_4.o(o)]) : ""
       })
       e.insertBlockSnippetGenerator("time_picker_get_value", function (t, n) {
         var r = t.blocks[n]
@@ -70,12 +70,12 @@ var bm = {
           return ""
         }
         var i = e.getFieldValue(r, "TYPE")
-        return i ? $$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getTimePickerValue", [$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(o), $$_$$_$$_$$_unrestored_shared_1571_2636_4.o(i)]) : ""
+        return i ? Module_4.s("getTimePickerValue", [Module_4.o(o), Module_4.o(i)]) : ""
       })
       e.insertBlockSnippetGenerator("time_picker_get_time", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID") || ""
-        return o ? $$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getTimePickerTime", [$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(o)]) : ""
+        return o ? Module_4.s("getTimePickerTime", [Module_4.o(o)]) : ""
       })
     },
     setBlockGroupProfile: function (e, t) {
@@ -84,14 +84,14 @@ var bm = {
         name: "WIDGET_ID",
         custom: true,
         options: function () {
-          return $$_$$_$$_$$_unrestored_shared_1571_2636_46_index.c().getWidgetListByType(Types.TIME_PICKER_WIDGET)
+          return Module_46.c().getWidgetListByType(Types.TIME_PICKER_WIDGET)
         }
       }
       e.insertBlockProfile("time_picker_on_select_done", {
         type: "time_picker_on_select_done",
         message0: "%{BKY_TIME_PICKER_ON_SELECT_DONE}",
         args0: [
-          $$_$$_$$_$$_unrestored_shared_1571_2636_4.e("%{BKY_BLOCK_TAB_ICON}", true), $$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, n), {
+          Module_4.e("%{BKY_BLOCK_TAB_ICON}", true), Module_6.a({}, n), {
             type: "input_value",
             name: "PARAM_TIME",
             align: "CENTRE",
@@ -155,7 +155,7 @@ var bm = {
       e.insertBlockProfile("time_picker_open_select_dialog", {
         type: "time_picker_open_select_dialog",
         message0: "%{BKY_TIME_PICKER_OPEN_SELECT_DIALOG}",
-        args0: [$$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, n)],
+        args0: [Module_6.a({}, n)],
         previousStatement: true,
         nextStatement: true,
         colour: "%{BKY_APPEARANCE_HUE}",
@@ -164,7 +164,7 @@ var bm = {
       e.insertBlockProfile("time_picker_get_time", {
         type: "time_picker_get_time",
         message0: "%{BKY_TIME_PICKER_GET_TIME}",
-        args0: [$$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, n)],
+        args0: [Module_6.a({}, n)],
         output: ["String"],
         colour: "%{BKY_APPEARANCE_HUE}",
         inputsInline: true
@@ -173,7 +173,7 @@ var bm = {
         type: "time_picker_get_value",
         message0: "%1 %{BKY_OF} %2",
         args0: [
-          $$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, n), {
+          Module_6.a({}, n), {
             type: "field_coco_dropdown",
             name: "TYPE",
             custom: true,
@@ -190,7 +190,7 @@ var bm = {
   },
   categoryClass: {
     text: "",
-    iconId: $$_$$_$$_$$_unrestored_shared_1571_2636_235.h,
+    iconId: Module_235.h,
     blocks: []
   },
   renameBlocksInfo: {
@@ -200,25 +200,25 @@ var bm = {
   topBlocks: ["time_picker_on_select_done"]
 }
 var ym = {
-  icon: $$_$$_$$_$$_unrestored_shared_1571_2636_235.h,
+  icon: Module_235.h,
   title: "TimePickerWidget.widgetName",
   type: Types.TIME_PICKER_WIDGET,
   previewAreaWidgetTitle: "TimePickerWidget.widgetName",
   component: vm,
   editConfig: gm,
   blockConfig: bm,
-  isInvisibleWidget: $$_$$_$$_$$_unrestored_shared_1571_2636_235.f,
+  isInvisibleWidget: Module_235.f,
   widget: {
-    isGlobalWidget: $$_$$_$$_$$_unrestored_shared_1571_2636_235.e,
+    isGlobalWidget: Module_235.e,
     size: {
-      width: $$_$$_$$_$$_unrestored_shared_1571_2636_235.g,
-      height: $$_$$_$$_$$_unrestored_shared_1571_2636_235.d
+      width: Module_235.g,
+      height: Module_235.d
     },
     attributes: {
       timeStamp: 0,
-      fontSize: $$_$$_$$_$$_unrestored_shared_1571_2636_235.c,
-      color: $$_$$_$$_$$_unrestored_shared_1571_2636_235.b,
-      backgroundColor: $$_$$_$$_$$_unrestored_shared_1571_2636_235.a
+      fontSize: Module_235.c,
+      color: Module_235.b,
+      backgroundColor: Module_235.a
     }
   }
 }
@@ -248,11 +248,11 @@ var Om = {
         }
         switch (o) {
           case "start":
-            return $$_$$_$$_$$_unrestored_shared_1571_2636_4.n("startTiming", [$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(i)])
+            return Module_4.n("startTiming", [Module_4.o(i)])
           case "stop":
-            return $$_$$_$$_$$_unrestored_shared_1571_2636_4.n("stopTiming", [$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(i)])
+            return Module_4.n("stopTiming", [Module_4.o(i)])
           case "reset":
-            return $$_$$_$$_$$_unrestored_shared_1571_2636_4.n("resetTiming", [$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(i)])
+            return Module_4.n("resetTiming", [Module_4.o(i)])
           default:
             return ""
         }
@@ -260,7 +260,7 @@ var Om = {
       e.insertBlockSnippetGenerator("date_get_timing_value", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID") || ""
-        return o ? $$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getTimingValue", [$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(o)]) : ""
+        return o ? Module_4.s("getTimingValue", [Module_4.o(o)]) : ""
       })
     },
     setBlockGroupProfile: function (e, t) {
@@ -269,7 +269,7 @@ var Om = {
         name: "WIDGET_ID",
         custom: true,
         options: function () {
-          return $$_$$_$$_$$_unrestored_shared_1571_2636_46_index.c().getWidgetListByType(Types.I)
+          return Module_46.c().getWidgetListByType(Types.I)
         }
       }
       e.insertBlockProfile("date_set_timing", {
@@ -283,7 +283,7 @@ var Om = {
             options: function () {
               return [[t.Msg.START, "start"], [t.Msg.STOP, "stop"], [t.Msg.RESET, "reset"]]
             }
-          }, $$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, n)
+          }, Module_6.a({}, n)
         ],
         previousStatement: true,
         nextStatement: true,
@@ -293,7 +293,7 @@ var Om = {
       e.insertBlockProfile("date_get_timing_value", {
         type: "date_get_timing_value",
         message0: "%{BKY_DATE_TIMER}",
-        args0: [$$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, n)],
+        args0: [Module_6.a({}, n)],
         output: "Number",
         colour: "%{BKY_SOUND_HUE}",
         inputsInline: true

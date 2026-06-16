@@ -7,16 +7,16 @@
 "use strict"
 
 export { c as a }
-import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
-import * as i from "./7"
-import * as /* [auto-meaningful-name] */Html2canvas from "html2canvas"
-import /* [auto-meaningful-name] */Html2canvas1 from "html2canvas"
+import * as /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import /* [auto-meaningful-name] */RegeneratorRuntime1 from /* 1 */"regenerator-runtime"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"./7"
+import * as /* [auto-meaningful-name] */Html2canvas from /* 414 */"html2canvas"
+import /* [auto-meaningful-name] */Html2canvas1 from /* 414 */"html2canvas"
 function c(e, t) {
   return l.apply(this, arguments)
 }
 function l() {
-  return (l = i.a(RegeneratorRuntime1.mark(function e(t, n) {
+  return (l = Module_7.a(RegeneratorRuntime1.mark(function e(t, n) {
     var /* [auto-meaningful-name] */e$sent
     return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {

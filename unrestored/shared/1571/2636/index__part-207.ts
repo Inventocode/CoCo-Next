@@ -6,23 +6,23 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import * as O from "./7"
-import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import { useDispatch } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { memo } from "react"
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"./7"
+import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import { useDispatch } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_348 from "./348"
-import /* [auto-meaningful-name] */$_3481 from "./348"
+import * as /* [auto-meaningful-name] */Module_348 from /* 348 */"./348"
+import /* [auto-meaningful-name] */Module_3481 from /* 348 */"./348"
 var zL = memo(function (e) {
   var t = useDispatch()
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var r = function () {
-    var r = O.a(RegeneratorRuntime.mark(function r(o) {
+    var r = Module_7.a(RegeneratorRuntime.mark(function r(o) {
       var i
       var a
       return RegeneratorRuntime.wrap(function (r) {
@@ -37,7 +37,7 @@ var zL = memo(function (e) {
             case 2:
               i = o[0]
               a = function () {
-                var r = O.a(RegeneratorRuntime.mark(function r(o) {
+                var r = Module_7.a(RegeneratorRuntime.mark(function r(o) {
                   var /* [auto-meaningful-name] */r$sent
                   var a
                   var s
@@ -49,8 +49,8 @@ var zL = memo(function (e) {
                             r.next = 4
                             break
                           }
-                          t($$_$$_$$_$$_src_editor_redux_common_actions.mj({
-                            message: $_710$a$formatMessage({
+                          t(Src_editor_redux_common_actions.mj({
+                            message: Module_710$a$formatMessage({
                               id: "cloudGrid.FileSizeLimit"
                             })
                           }))
@@ -58,7 +58,7 @@ var zL = memo(function (e) {
                         case 4:
                           r.prev = 4
                           r.next = 7
-                          return $$_$$_$$_$$_src_shared_tools_index.fb(o)
+                          return Src_shared_tools_index.fb(o)
                         case 7:
                           if (!(r$sent = r.sent)) {
                             r.next = 23
@@ -68,8 +68,8 @@ var zL = memo(function (e) {
                             r.next = 13
                             break
                           }
-                          t($$_$$_$$_$$_src_editor_redux_common_actions.mj({
-                            message: $_710$a$formatMessage({
+                          t(Src_editor_redux_common_actions.mj({
+                            message: Module_710$a$formatMessage({
                               id: "cloudGrid.FileColumnSizeLimit"
                             })
                           }))
@@ -81,8 +81,8 @@ var zL = memo(function (e) {
                             r.next = 17
                             break
                           }
-                          t($$_$$_$$_$$_src_editor_redux_common_actions.mj({
-                            message: $_710$a$formatMessage({
+                          t(Src_editor_redux_common_actions.mj({
+                            message: Module_710$a$formatMessage({
                               id: "cloudGrid.FileColumnNameRepeat"
                             })
                           }))
@@ -94,16 +94,16 @@ var zL = memo(function (e) {
                             r.next = 21
                             break
                           }
-                          t($$_$$_$$_$$_src_editor_redux_common_actions.mj({
-                            message: $_710$a$formatMessage({
+                          t(Src_editor_redux_common_actions.mj({
+                            message: Module_710$a$formatMessage({
                               id: "cloudGrid.FileRowSizeLimit"
                             })
                           }))
                           return r.abrupt("return")
                         case 21:
                           e.handleSetGridInfo(r$sent.data, r$sent.header)
-                          t($$_$$_$$_$$_src_editor_redux_common_actions.mj({
-                            message: $_710$a$formatMessage({
+                          t(Src_editor_redux_common_actions.mj({
+                            message: Module_710$a$formatMessage({
                               id: "cloudGrid.fileImportSuccess"
                             })
                           }))
@@ -115,8 +115,8 @@ var zL = memo(function (e) {
                           r.t0 = r.catch(4)
                           console.info(r.t0)
                           if ("cell length larger than 1000" === r.t0.error) {
-                            t($$_$$_$$_$$_src_editor_redux_common_actions.mj({
-                              message: $_710$a$formatMessage({
+                            t(Src_editor_redux_common_actions.mj({
+                              message: Module_710$a$formatMessage({
                                 id: "cloudGrid.FileCellSizeLimit"
                               })
                             }))
@@ -135,17 +135,17 @@ var zL = memo(function (e) {
               if (0 === e.getColumnInfo().length) {
                 a(i)
               } else {
-                t($$_$$_$$_$$_src_editor_redux_common_actions.zh({
+                t(Src_editor_redux_common_actions.zh({
                   onConfirm: function () {
                     a(i)
                   },
-                  allowText: $_710$a$formatMessage({
+                  allowText: Module_710$a$formatMessage({
                     id: "confirm"
                   }),
-                  title: $_710$a$formatMessage({
+                  title: Module_710$a$formatMessage({
                     id: "cloudGrid.importCoverTitle"
                   }),
-                  content: $_710$a$formatMessage({
+                  content: Module_710$a$formatMessage({
                     id: "cloudGrid.importCoverTitleContent"
                   })
                 }))
@@ -161,13 +161,13 @@ var zL = memo(function (e) {
       return r.apply(this, arguments)
     }
   }()
-  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.B, {
+  return React.createElement(Src_shared_ui_components_index.B, {
     onChange: r,
     accept: ".xlsx, .xls, .csv",
-    className: $_3481.uploadButton
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+    className: Module_3481.uploadButton
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-add"
-  }), React.createElement("span", null, $_710$a$formatMessage({
+  }), React.createElement("span", null, Module_710$a$formatMessage({
     id: "cloudGrid.FileImport"
   })))
 })

@@ -6,8 +6,8 @@
 
 "use strict"
 
-import * as Yr from "./53"
-import * as /* [auto-meaningful-name] */$_131 from "./131"
+import * as /* [auto-meaningful-name] */Module_53 from /* 53 */"./53"
+import * as /* [auto-meaningful-name] */Module_131 from /* 131 */"./131"
 var Af = [
   {
     type: "WidgetTitle",
@@ -24,7 +24,7 @@ var Af = [
     type: "WidgetOpacity"
   }, {
     type: "Size",
-    sizeRange: [[$_131.j, Yr.o], [$_131.i, Yr.m]]
+    sizeRange: [[Module_131.j, Module_53.o], [Module_131.i, Module_53.m]]
   }, {
     type: "Coordinate"
   }

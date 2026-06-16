@@ -9,7 +9,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 })
-var r = require("../../724")
+var r = require(/* 724 */"../../724")
 var i = function () {
   function e(e) {
     this.id = r.id()

@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("../19")
+var r = require(/* 19 */"../19")
 var i = {
   locale: "en_US",
   today: "Today",

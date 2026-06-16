@@ -6,7 +6,7 @@
 
 "use strict"
 
-var /* [auto-meaningful-name] */require$$_1785_959$charAt = require("../1785/959").charAt
+var /* [auto-meaningful-name] */require_959_$$_1785_959$charAt = require(/* 959 */"../1785/959").charAt
 module.exports = function (e, t, n) {
-  return t + (n ? require$$_1785_959$charAt(e, t).length : 1)
+  return t + (n ? require_959_$$_1785_959$charAt(e, t).length : 1)
 }

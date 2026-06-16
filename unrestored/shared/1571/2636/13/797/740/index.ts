@@ -6,8 +6,8 @@
 
 "use strict"
 
-var r = require("../325/index")
-var i = require("./1504")
+var r = require(/* 325 */"../325/index")
+var i = require(/* 1504 */"./1504")
 var o = "object" == typeof exports && exports && !exports.nodeType && exports
 var a = o && "object" == typeof module && module && !module.nodeType && module
 var s = a && a.exports === o ? r.a.Buffer : undefined

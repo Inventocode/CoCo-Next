@@ -10,10 +10,10 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.BlockDragger = undefined
-var r = require("tslib")
-var i = require("inversify")
-var o = require("@kitten-team/gl-matrix")
-var a = require("../../1058/125")
+var r = require(/* 93 */"tslib")
+var i = require(/* 134 */"inversify")
+var o = require(/* 258 */"@kitten-team/gl-matrix")
+var a = require(/* 125 */"../../1058/125")
 var s = function (e) {
   function t(t) {
     var n = e.call(this, t.target, t.workspace) || this
@@ -139,5 +139,5 @@ var s = function (e) {
   (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.insertion_marker_manager)], t.prototype, "insertion_marker_manager", undefined);
   (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.dragged_connection_manager)], t.prototype, "dragged_connection_manager", undefined)
   return t = (0, r.__decorate)([(0, i.injectable)()], t)
-}(require("./2165/1347").ElementDragger)
+}(require(/* 1347 */"./2165/1347").ElementDragger)
 exports.BlockDragger = s

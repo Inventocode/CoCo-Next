@@ -7,23 +7,23 @@
 "use strict"
 
 import { we } from "./index__part-6"
-import * as /* [auto-meaningful-name] */$_557 from "./557"
-import * as /* [auto-meaningful-name] */$_1213 from "./1213"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import /* [auto-meaningful-name] */React from "react"
-import { memo, useState, useEffect } from "react"
+import * as /* [auto-meaningful-name] */Module_557 from /* 557 */"./557"
+import * as /* [auto-meaningful-name] */Module_1213 from /* 1213 */"./1213"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo, useState, useEffect } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_160 from "./160"
-import /* [auto-meaningful-name] */$_1601 from "./160"
+import * as /* [auto-meaningful-name] */Module_160 from /* 160 */"./160"
+import /* [auto-meaningful-name] */Module_1601 from /* 160 */"./160"
 var eP = memo(function (e) {
   var t = useState(false)
-  var n = $_10_index.a(t, 2)
+  var n = Module_10.a(t, 2)
   var r = n[0]
   var o = n[1]
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   useEffect(function () {
     var e = function e() {
       o(false)
@@ -39,7 +39,7 @@ var eP = memo(function (e) {
     e.handleDelete(e.id, e.workIds)
     t.stopPropagation()
   }
-  return React.createElement(React.Fragment, null, React.createElement($_1213.a, {
+  return React.createElement(React.Fragment, null, React.createElement(Module_1213.a, {
     placement: "bottomLeft",
     trigger: "hover",
     onVisibleChange: function (e) {
@@ -55,19 +55,19 @@ var eP = memo(function (e) {
     },
     content: function () {
       return React.createElement("div", {
-        className: $_1601.popoverWrapper,
+        className: Module_1601.popoverWrapper,
         onContextMenu: function (e) {
           return e.preventDefault()
         }
       }, React.createElement("div", {
-        className: Classnames($_1601.menuItem, $_1601.delete),
+        className: Classnames(Module_1601.menuItem, Module_1601.delete),
         onMouseDown: a
-      }, $_710$a$formatMessage({
+      }, Module_710$a$formatMessage({
         id: "cloudDBManager.delete"
       })))
     }
   }), React.createElement("div", {
-    className: Classnames($_1601.item, e.isSelected && $_1601.selected),
+    className: Classnames(Module_1601.item, e.isSelected && Module_1601.selected),
     onClick: function (t) {
       e.handleClick(e.id)
       t.stopPropagation()
@@ -81,17 +81,17 @@ var eP = memo(function (e) {
       e.handleImport(e.id)
       t.stopPropagation()
     },
-    className: $_1601.import
-  }, $_710$a$formatMessage({
+    className: Module_1601.import
+  }, Module_710$a$formatMessage({
     id: "cloudDBManager.import"
   })), !e.canImport && React.createElement("span", {
-    className: $_1601.hasImport
-  }, $_710$a$formatMessage({
+    className: Module_1601.hasImport
+  }, Module_710$a$formatMessage({
     id: "cloudDBManager.hasImport"
   }))))
 })
 var nP = memo(function (e) {
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var /* [auto-meaningful-name] */e$renderColumns = e.renderColumns
   var /* [auto-meaningful-name] */e$renderRows = e.renderRows
   var o = function (e) {
@@ -99,45 +99,45 @@ var nP = memo(function (e) {
     var /* [auto-meaningful-name] */e$style = e.style
     var i = e$renderRows[e$index - 1]
     return 0 === e$index ? React.createElement("div", {
-      className: $_1601.listItem,
+      className: Module_1601.listItem,
       key: e$index,
       style: e$style
     }, e$renderColumns.map(function (e, t) {
       return React.createElement("div", {
-        className: $_1601.column,
+        className: Module_1601.column,
         key: "".concat(e.id)
       }, React.createElement("div", {
-        className: $_1601.columnArea
+        className: Module_1601.columnArea
       }, function (e) {
         switch (e) {
           case "boolean":
-            return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+            return React.createElement(Src_shared_ui_components_index.j, {
               type: "icon-grid-boolean",
-              className: $_1601.columnIcon
+              className: Module_1601.columnIcon
             })
           case "string":
-            return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+            return React.createElement(Src_shared_ui_components_index.j, {
               type: "icon-grid-string",
-              className: $_1601.columnIcon
+              className: Module_1601.columnIcon
             })
           case "number":
-            return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+            return React.createElement(Src_shared_ui_components_index.j, {
               type: "icon-grid-number",
-              className: $_1601.columnIcon
+              className: Module_1601.columnIcon
             })
           default:
             return
         }
       }(e.type), React.createElement("span", {
-        className: $_1601.text
+        className: Module_1601.text
       }, e.name)))
     })) : React.createElement("div", {
-      className: $_1601.listItem,
+      className: Module_1601.listItem,
       key: e$index,
       style: e$style
     }, i.value.map(function (e, t) {
       return React.createElement("div", {
-        className: $_1601.row,
+        className: Module_1601.row,
         key: "".concat(i.id, "-").concat(e, "-").concat(t)
       }, React.createElement("span", {
         title: String(e)
@@ -145,18 +145,18 @@ var nP = memo(function (e) {
     }))
   }
   return React.createElement("div", {
-    className: $_1601.list
+    className: Module_1601.list
   }, React.createElement("div", {
-    className: $_1601.header
+    className: Module_1601.header
   }, React.createElement("div", {
-    className: $_1601.name
+    className: Module_1601.name
   }, e.name), React.createElement("div", {
-    className: $_1601.description
+    className: Module_1601.description
   }, React.createElement("span", {
     style: {
       marginRight: "8px"
     }
-  }, $_710$a$formatMessage({
+  }, Module_710$a$formatMessage({
     id: "cloudDBManager.usedCapacity"
   }), ":"), React.createElement("span", {
     style: {
@@ -167,29 +167,29 @@ var nP = memo(function (e) {
       marginLeft: "8px"
     }
   }, 5e3)), !(!e.devMode && e.isNoData) && React.createElement("div", {
-    className: $_1601.edit,
+    className: Module_1601.edit,
     onClick: function () {
       e.handleEdit(e.id)
     }
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
-    className: $_1601.icon,
+  }, React.createElement(Src_shared_ui_components_index.j, {
+    className: Module_1601.icon,
     type: "icon-edit"
-  }), $_710$a$formatMessage({
+  }), Module_710$a$formatMessage({
     id: "cloudDBManager.editData"
   }))), e.isNoData ? function () {
-    var n = e.devMode ? $_710$a$formatMessage({
+    var n = e.devMode ? Module_710$a$formatMessage({
       id: "cloudDBManager.noDataDev"
-    }) : $_710$a$formatMessage({
+    }) : Module_710$a$formatMessage({
       id: "cloudDBManager.noDataProd"
     })
     return React.createElement("div", {
-      className: $_1601.container
+      className: Module_1601.container
     }, React.createElement(we, {
       text: n
     }))
   }() : React.createElement("div", {
-    className: $_1601.itemWrapper
-  }, e$renderColumns && e$renderColumns.length > 0 && React.createElement($_557.a, {
+    className: Module_1601.itemWrapper
+  }, e$renderColumns && e$renderColumns.length > 0 && React.createElement(Module_557.a, {
     width: e$renderColumns.length >= 7 ? 100 * e$renderColumns.length : "100%",
     height: 36 * (e$renderRows.length >= 11 ? 12 : e$renderRows.length + 1),
     itemCount: e$renderRows.length + 1,

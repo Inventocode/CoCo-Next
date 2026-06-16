@@ -7,8 +7,8 @@
 import { I } from "./index__part-0"
 import { ne } from "./index__part-4"
 import { re } from "./index__part-5"
-import { Provider } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
+import { Provider } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
 var _a
 _a = React.memo(function (e) {
   var /* [auto-meaningful-name] */e$messageWindow = e.messageWindow

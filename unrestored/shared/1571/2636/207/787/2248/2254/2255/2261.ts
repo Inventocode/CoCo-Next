@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("./765/index")
+var r = require(/* 765 */"./765/index")
 var i = /^(\d\d\d\d)-(\d\d)-(\d\d)$/
 var o = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 var a = /^(\d\d):(\d\d):(\d\d)(\.\d+)?(z|[+-]\d\d(?::?\d\d)?)?$/i

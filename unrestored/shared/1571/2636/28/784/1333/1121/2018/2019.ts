@@ -4,7 +4,7 @@
  * 模块 ID：2019
  */
 
-var r = require("./1335")
+var r = require(/* 1335 */"./1335")
 module.exports = function (e, t) {
   if (";" !== (e = r.trimRight(e))[e.length - 1]) {
     e += ";"

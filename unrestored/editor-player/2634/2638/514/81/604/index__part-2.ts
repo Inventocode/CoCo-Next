@@ -8,10 +8,10 @@
 
 import { u } from "./index__part-0"
 import { f, l, p } from "./index__part-1"
-import * as /* [auto-meaningful-name] */$$_108 from "../108"
-import * as /* [auto-meaningful-name] */$_469 from "./469"
-import * as /* [auto-meaningful-name] */$$_222 from "../222"
-import * as /* [auto-meaningful-name] */$$_36 from "../36"
+import * as /* [auto-meaningful-name] */Module_108 from /* 108 */"../108"
+import * as /* [auto-meaningful-name] */Module_469 from /* 469 */"./469"
+import * as /* [auto-meaningful-name] */Module_222 from /* 222 */"../222"
+import * as /* [auto-meaningful-name] */Module_36 from /* 36 */"../36"
 var y = function () {
   var t = function (e, r) {
     return (t = Object.setPrototypeOf || {
@@ -39,9 +39,9 @@ var w = function (t) {
   y(e, t)
   e.prototype.parseInformation = function () {
     if (this.getInformation().getSize() != e.HEADER_SIZE + p.GTIN_SIZE + e.WEIGHT_SIZE) {
-      throw new $$_36.a()
+      throw new Module_36.a()
     }
-    var t = new $$_108.a()
+    var t = new Module_108.a()
     this.encodeCompressedGtin(t, e.HEADER_SIZE)
     this.encodeCompressedWeight(t, e.HEADER_SIZE + p.GTIN_SIZE, e.WEIGHT_SIZE)
     return t.toString()
@@ -147,9 +147,9 @@ var C = function (t) {
   E(e, t)
   e.prototype.parseInformation = function () {
     if (this.getInformation().getSize() < e.HEADER_SIZE + u.GTIN_SIZE) {
-      throw new $$_36.a()
+      throw new Module_36.a()
     }
-    var t = new $$_108.a()
+    var t = new Module_108.a()
     this.encodeCompressedGtin(t, e.HEADER_SIZE)
     var r = this.getGeneralDecoder().extractNumericValueFromBitArray(e.HEADER_SIZE + u.GTIN_SIZE, e.LAST_DIGIT_SIZE)
     t.append("(392")
@@ -190,9 +190,9 @@ var S = function (t) {
   I(e, t)
   e.prototype.parseInformation = function () {
     if (this.getInformation().getSize() < e.HEADER_SIZE + u.GTIN_SIZE) {
-      throw new $$_36.a()
+      throw new Module_36.a()
     }
-    var t = new $$_108.a()
+    var t = new Module_108.a()
     this.encodeCompressedGtin(t, e.HEADER_SIZE)
     var r = this.getGeneralDecoder().extractNumericValueFromBitArray(e.HEADER_SIZE + u.GTIN_SIZE, e.LAST_DIGIT_SIZE)
     t.append("(393")
@@ -245,9 +245,9 @@ var O = function (t) {
   T(e, t)
   e.prototype.parseInformation = function () {
     if (this.getInformation().getSize() != e.HEADER_SIZE + e.GTIN_SIZE + e.WEIGHT_SIZE + e.DATE_SIZE) {
-      throw new $$_36.a()
+      throw new Module_36.a()
     }
-    var t = new $$_108.a()
+    var t = new Module_108.a()
     this.encodeCompressedGtin(t, e.HEADER_SIZE)
     this.encodeCompressedWeight(t, e.HEADER_SIZE + e.GTIN_SIZE, e.WEIGHT_SIZE)
     this.encodeCompressedDate(t, e.HEADER_SIZE + e.GTIN_SIZE + e.WEIGHT_SIZE)
@@ -298,19 +298,19 @@ function b(t) {
     if (!t.get(2)) {
       return new l(t)
     }
-    switch ($_469.a.extractNumericValueFromBitArray(t, 1, 4)) {
+    switch (Module_469.a.extractNumericValueFromBitArray(t, 1, 4)) {
       case 4:
         return new _(t)
       case 5:
         return new A(t)
     }
-    switch ($_469.a.extractNumericValueFromBitArray(t, 1, 5)) {
+    switch (Module_469.a.extractNumericValueFromBitArray(t, 1, 5)) {
       case 12:
         return new C(t)
       case 13:
         return new S(t)
     }
-    switch ($_469.a.extractNumericValueFromBitArray(t, 1, 7)) {
+    switch (Module_469.a.extractNumericValueFromBitArray(t, 1, 7)) {
       case 56:
         return new O(t, "310", "11")
       case 57:
@@ -330,7 +330,7 @@ function b(t) {
     }
   } catch (e) {
     console.log(e)
-    throw new $$_222.a("unknown decoder: " + t)
+    throw new Module_222.a("unknown decoder: " + t)
   }
 }
 export { b }

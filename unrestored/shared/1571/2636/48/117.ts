@@ -7,20 +7,20 @@
 "use strict"
 
 export { p as a }
-import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
-import * as i from "../7"
-import * as /* [auto-meaningful-name] */JsSha256 from "js-sha256"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials from "../../../../../src/shared/utils/network/axios-with-credentials"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_env from "../../../../../src/shared/env"
-var l = "".concat($$_$$_$$_$$_$$_src_shared_env.a.serverHost, "/coconut")
+import * as /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import /* [auto-meaningful-name] */RegeneratorRuntime1 from /* 1 */"regenerator-runtime"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../7"
+import * as /* [auto-meaningful-name] */JsSha256 from /* 785 */"js-sha256"
+import * as /* [auto-meaningful-name] */Src_shared_utils_network_axiosWithCredentials from /* 41 */"../../../../../src/shared/utils/network/axios-with-credentials"
+import * as /* [auto-meaningful-name] */Src_shared_env from /* 57 */"../../../../../src/shared/env"
+var l = "".concat(Src_shared_env.a.serverHost, "/coconut")
 var u = false
 var d = 0
 function p(e) {
   return f.apply(this, arguments)
 }
 function f() {
-  return (f = i.a(RegeneratorRuntime1.mark(function e(t) {
+  return (f = Module_7.a(RegeneratorRuntime1.mark(function e(t) {
     var n
     var r
     return RegeneratorRuntime1.wrap(function (e) {
@@ -53,7 +53,7 @@ function h() {
   return m.apply(this, arguments)
 }
 function m() {
-  return (m = i.a(RegeneratorRuntime1.mark(function e() {
+  return (m = Module_7.a(RegeneratorRuntime1.mark(function e() {
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$sent$data
     var r
@@ -62,7 +62,7 @@ function m() {
         switch (e.prev = e.next) {
           case 0:
             e.next = 2
-            return $$_$$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.get("".concat(l, "/clouddb/currentTime"))
+            return Src_shared_utils_network_axiosWithCredentials.a.get("".concat(l, "/clouddb/currentTime"))
           case 2:
             if (e$sent = e.sent, 200 === (e$sent$data = e$sent.data).code) {
               try {

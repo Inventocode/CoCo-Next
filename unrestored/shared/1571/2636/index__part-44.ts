@@ -7,23 +7,23 @@
 "use strict"
 
 import { qp, Xp, Qp } from "./index__part-43"
-import * as Jd from "./33"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
-import * as wn from "./90"
-import * as /* [auto-meaningful-name] */$_133 from "./133"
-import * as k from "./11"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import /* [auto-meaningful-name] */React from "react"
-import { useRef } from "react"
+import * as /* [auto-meaningful-name] */Module_33 from /* 33 */"./33"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Module_90 from /* 90 */"./90"
+import * as /* [auto-meaningful-name] */Module_133 from /* 133 */"./133"
+import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"./11"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { useRef } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_513 from "./513"
-import /* [auto-meaningful-name] */$_5131 from "./513"
-import * as /* [auto-meaningful-name] */$_433 from "./433"
-import * as /* [auto-meaningful-name] */$_206 from "./206"
+import * as /* [auto-meaningful-name] */Module_513 from /* 513 */"./513"
+import /* [auto-meaningful-name] */Module_5131 from /* 513 */"./513"
+import * as /* [auto-meaningful-name] */Module_433 from /* 433 */"./433"
+import * as /* [auto-meaningful-name] */Module_206 from /* 206 */"./206"
 var tf = {
-  icon: $_133.a,
-  title: $_133.b,
-  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.v,
+  icon: Module_133.a,
+  title: Module_133.b,
+  type: Src_editor_widget_builtIn_types.v,
   previewAreaWidgetTitle: "imageBox",
   component: function (e) {
     var t = e.id
@@ -38,13 +38,13 @@ var tf = {
     var /* [auto-meaningful-name] */e$attributes$fileId = e$attributes.fileId
     var /* [auto-meaningful-name] */e$attributes$backgroundColor = e$attributes.backgroundColor
     var p = useRef(null)
-    var m = Jd.Fb(e$attributes$fileId) || $_133.m
+    var m = Module_33.Fb(e$attributes$fileId) || Module_133.m
     return React.createElement("div", {
       id: t,
-      className: Classnames($_5131.imageWidget, wn.b, k.a({}, $_5131.hide, !e$visible)),
-      "data-role": $$_$$_$$_$$_src_editor_widget_builtIn_types.M,
-      "data-widget-type": $$_$$_$$_$$_src_editor_widget_builtIn_types.v,
-      "data-scale-mode": $$_$$_$$_$$_src_editor_widget_builtIn_types.p.PROPORTIONAL,
+      className: Classnames(Module_5131.imageWidget, Module_90.b, Module_11.a({}, Module_5131.hide, !e$visible)),
+      "data-role": Src_editor_widget_builtIn_types.M,
+      "data-widget-type": Src_editor_widget_builtIn_types.v,
+      "data-scale-mode": Src_editor_widget_builtIn_types.p.PROPORTIONAL,
       ref: p,
       style: {
         top: e$position.y,
@@ -56,7 +56,7 @@ var tf = {
         backgroundImage: "url(".concat(m, ")"),
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center center",
-        backgroundSize: $_433.a(e$attributes$resizeMode),
+        backgroundSize: Module_433.a(e$attributes$resizeMode),
         borderRadius: e$attributes$borderRadius,
         opacity: undefined === e$opacity ? undefined : e$opacity / 100
       }
@@ -66,26 +66,26 @@ var tf = {
       style: {
         visibility: "hidden",
         borderRadius: e$attributes$borderRadius,
-        objectFit: $_433.b(e$attributes$resizeMode)
+        objectFit: Module_433.b(e$attributes$resizeMode)
       }
     }))
   },
   editConfig: qp,
   childWidgetEditConfig: Xp,
   blockConfig: Qp,
-  isInvisibleWidget: $_133.k,
+  isInvisibleWidget: Module_133.k,
   hasAnyWidget: true,
   widget: {
-    isGlobalWidget: $_133.j,
+    isGlobalWidget: Module_133.j,
     size: {
-      width: $_133.l,
-      height: $_133.h
+      width: Module_133.l,
+      height: Module_133.h
     },
     attributes: {
       borderRadius: 0,
-      fileId: $_133.i,
-      resizeMode: $_206.a.CONTAIN,
-      backgroundColor: $_133.g
+      fileId: Module_133.i,
+      resizeMode: Module_206.a.CONTAIN,
+      backgroundColor: Module_133.g
     }
   }
 }

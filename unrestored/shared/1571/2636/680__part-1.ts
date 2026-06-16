@@ -6,13 +6,13 @@
 
 "use strict"
 
-import * as o from "./6"
-import * as /* [auto-meaningful-name] */$_133 from "./133"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
-import * as s from "./33"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"./6"
+import * as /* [auto-meaningful-name] */Module_133 from /* 133 */"./133"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Module_33 from /* 33 */"./33"
 var c = {
-  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.v,
-  icon: $_133.a,
+  type: Src_editor_widget_builtIn_types.v,
+  icon: Module_133.a,
   title: "widgetName",
   platforms: ["web", "android", "ios"],
   isGlobalWidget: false,
@@ -35,8 +35,8 @@ var c = {
       key: "backgroundColor",
       label: "backgroundColor",
       valueType: "color",
-      defaultValue: $_133.g
-    }, o.a({}, s.i), {
+      defaultValue: Module_133.g
+    }, Module_6.a({}, Module_33.i), {
       key: "__width",
       label: "width",
       valueType: "number",

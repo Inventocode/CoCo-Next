@@ -6,8 +6,8 @@
 
 "use strict"
 
-var r = require("./1086")
-var o = require("../1282/836")
+var r = require(/* 1086 */"./1086")
+var o = require(/* 836 */"../1282/836")
 module.exports = r ? {}.toString : function () {
   return "[object " + o(this) + "]"
 }

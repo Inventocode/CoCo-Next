@@ -4,7 +4,7 @@
  * 模块 ID：2022
  */
 
-var r = require("./2023/index")
+var r = require(/* 2023 */"./2023/index")
 r.prototype.postfixEval = function (e) {
   "use strict";
 

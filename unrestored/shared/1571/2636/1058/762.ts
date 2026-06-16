@@ -10,7 +10,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.find_caller_blocks = exports.add_procedure_and_generate_rename_map = exports.get_legal_procedure_name = undefined
-var r = require("./173")
+var r = require(/* 173 */"./173")
 function i(e) {
   if (e.length > 15) {
     var t = parseInt(e.substring(0, 15), 10)

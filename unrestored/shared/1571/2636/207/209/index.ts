@@ -10,17 +10,17 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.ProcedureManager = exports.register_procedure_json_generator = exports.register_procedure_generator = exports.PROCEDURE_BLOCK_FIELD_NAMES = exports.PROCEDURE_BLOCK_INPUT_NAMES = exports.PROCEDURE_BLOCK_TYPES = undefined
-var r = require("tslib")
-var i = require("../../1058/125")
-var o = require("../734/387")
-var a = require("../../../../../../src/shared/packages/@crc/blink/src/procedure/blocks")
-var s = require("../../1058/173")
-var c = require("../../228/733/index")
-var u = require("../../228/733/1346")
-var l = require("../734/index")
-var f = require("../../1058/762");
-(0, r.__exportStar)(require("./2146"), exports)
-var d = require("../../1058/173")
+var r = require(/* 93 */"tslib")
+var i = require(/* 125 */"../../1058/125")
+var o = require(/* 387 */"../734/387")
+var a = require(/* 732 */"../../../../../../src/shared/packages/@crc/blink/src/procedure/blocks")
+var s = require(/* 173 */"../../1058/173")
+var c = require(/* 733 */"../../228/733/index")
+var u = require(/* 1346 */"../../228/733/1346")
+var l = require(/* 734 */"../734/index")
+var f = require(/* 762 */"../../1058/762");
+(0, r.__exportStar)(require(/* 2146 */"./2146"), exports)
+var d = require(/* 173 */"../../1058/173")
 Object.defineProperty(exports, "PROCEDURE_BLOCK_TYPES", {
   enumerable: true,
   get: function () {
@@ -39,14 +39,14 @@ Object.defineProperty(exports, "PROCEDURE_BLOCK_FIELD_NAMES", {
     return d.PROCEDURE_BLOCK_FIELD_NAMES
   }
 })
-var h = require("./2147")
+var h = require(/* 2147 */"./2147")
 Object.defineProperty(exports, "register_procedure_generator", {
   enumerable: true,
   get: function () {
     return h.register_procedure_generator
   }
 })
-var p = require("./2148")
+var p = require(/* 2148 */"./2148")
 Object.defineProperty(exports, "register_procedure_json_generator", {
   enumerable: true,
   get: function () {

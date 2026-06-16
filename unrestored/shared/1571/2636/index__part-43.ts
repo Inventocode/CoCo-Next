@@ -9,38 +9,38 @@
 import { Bp } from "./index__part-41"
 import { Wp } from "./index__part-42"
 var Gp
-import * as Fp from "./76"
-import * as Pp from "./95"
-import * as rp from "./61"
-import * as /* [auto-meaningful-name] */$_46_index from "./46/index"
-import * as ep from "./4"
-import * as Jd from "./33"
-import * as Yr from "./53"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
-import * as wn from "./90"
-import * as /* [auto-meaningful-name] */$_133 from "./133"
-import * as Et from "./9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
-import /* [auto-meaningful-name] */Color from "color"
-import * as D from "./6"
-import * as k from "./11"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import /* [auto-meaningful-name] */React from "react"
-import { useRef, useState, useEffect, useMemo } from "react"
+import * as /* [auto-meaningful-name] */Module_76 from /* 76 */"./76"
+import * as /* [auto-meaningful-name] */Module_95 from /* 95 */"./95"
+import * as /* [auto-meaningful-name] */Module_61 from /* 61 */"./61"
+import * as /* [auto-meaningful-name] */Module_46 from /* 46 */"./46/index"
+import * as /* [auto-meaningful-name] */Module_4 from /* 4 */"./4"
+import * as /* [auto-meaningful-name] */Module_33 from /* 33 */"./33"
+import * as /* [auto-meaningful-name] */Module_53 from /* 53 */"./53"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Module_90 from /* 90 */"./90"
+import * as /* [auto-meaningful-name] */Module_133 from /* 133 */"./133"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"./9"
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../src/shared/tools/index"
+import /* [auto-meaningful-name] */Color from /* 51 */"color"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"./6"
+import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"./11"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { useRef, useState, useEffect, useMemo } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_290 from "./290"
-import /* [auto-meaningful-name] */$_2901 from "./290"
+import * as /* [auto-meaningful-name] */Module_290 from /* 290 */"./290"
+import /* [auto-meaningful-name] */Module_2901 from /* 290 */"./290"
 function Vp(e, t) {
   return Color(e).alpha(t).toString()
 }
-var /* [auto-meaningful-name] */Fp$c$OUTLINED_NORMAL = Fp.c.OUTLINED_NORMAL
-var /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types$s$MEDIUM = $$_$$_$$_$$_src_editor_widget_builtIn_types.s.MEDIUM
+var /* [auto-meaningful-name] */Module_76$c$OUTLINED_NORMAL = Module_76.c.OUTLINED_NORMAL
+var /* [auto-meaningful-name] */Src_editor_widget_builtIn_types$s$MEDIUM = Src_editor_widget_builtIn_types.s.MEDIUM
 var Kp = {
-  icon: Pp.b,
+  icon: Module_95.b,
   previewAreaWidgetTitle: "InputWidget.widgetName",
   title: "",
-  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.w,
+  type: Src_editor_widget_builtIn_types.w,
   component: function (e) {
     var t = e.id
     var /* [auto-meaningful-name] */e$position = e.position
@@ -68,11 +68,11 @@ var Kp = {
     var /* [auto-meaningful-name] */e$size$height = e$size.height
     var I = useRef(null)
     var j = useState(false)
-    var R = $_10_index.a(j, 2)
+    var R = Module_10.a(j, 2)
     var x = R[0]
     var M = R[1]
     var L = useState(e$attributes$placeholder)
-    var P = $_10_index.a(L, 2)
+    var P = Module_10.a(L, 2)
     var B = P[0]
     var F = P[1]
     var G = useRef(null)
@@ -92,30 +92,30 @@ var Kp = {
     useEffect(function () {
       F(e$attributes$placeholder)
     }, [e$attributes$placeholder])
-    var W = Et.hb(e$attributes$backgroundImage)
-    var U = $$_$$_$$_$$_src_shared_tools_index.U(e$attributes$backgroundImage) ? e$attributes$backgroundImage : W ? (null === W || undefined === W ? undefined : W.source) || (null === W || undefined === W ? undefined : W.cdnUrl) : Pp.a
+    var W = Module_9.hb(e$attributes$backgroundImage)
+    var U = Src_shared_tools_index.U(e$attributes$backgroundImage) ? e$attributes$backgroundImage : W ? (null === W || undefined === W ? undefined : W.source) || (null === W || undefined === W ? undefined : W.cdnUrl) : Module_95.a
     var H = undefined
     var V = useMemo(function () {
       return function (e, t, n) {
         var r
-        return (r = {}, k.a(r, Fp.c.OUTLINED_NORMAL, {
+        return (r = {}, Module_11.a(r, Module_76.c.OUTLINED_NORMAL, {
           background: "rgba(255, 255, 255)",
           borderRadius: "4px",
           border: "2px solid ".concat(Vp(t, .5)),
           borderColor: Vp(t, .5)
-        }), k.a(r, Fp.c.CONTAINED_NORMAL, {
+        }), Module_11.a(r, Module_76.c.CONTAINED_NORMAL, {
           background: Vp(t, .14),
           borderRadius: "4px"
-        }), k.a(r, Fp.c.CONTAINED_ROUND, {
+        }), Module_11.a(r, Module_76.c.CONTAINED_ROUND, {
           background: Vp(t, .14),
           borderRadius: "".concat(n / 2, "px")
-        }), k.a(r, Fp.c.OUTLINED_FLAT, {
+        }), Module_11.a(r, Module_76.c.OUTLINED_FLAT, {
           borderBottom: "2px solid ".concat(Vp(t, .5)),
           borderBottomColor: Vp(t, .5)
         }), r)[e]
       }(e$attributes$templateMode, e$attributes$backgroundColor, e$size$height)
     }, [e$attributes$backgroundColor, e$size$height, e$attributes$templateMode])
-    if (e$attributes$backgroundMode === Fp.a.IMAGE) {
+    if (e$attributes$backgroundMode === Module_76.a.IMAGE) {
       H = {
         backgroundImage: "url(".concat(U, ")"),
         backgroundRepeat: "no-repeat",
@@ -124,7 +124,7 @@ var Kp = {
         padding: "6px ".concat(20, "px")
       }
     } else {
-      H = D.a(D.a({}, V), {}, {
+      H = Module_6.a(Module_6.a({}, V), {}, {
         padding: "6px ".concat(14, "px")
       })
     }
@@ -132,16 +132,16 @@ var Kp = {
       if (e$attributes$disabled) {
         return function (e) {
           var t
-          return (t = {}, k.a(t, Fp.c.OUTLINED_NORMAL, {
+          return (t = {}, Module_11.a(t, Module_76.c.OUTLINED_NORMAL, {
             color: "#CCCCCC",
             borderColor: "#E9E9E9"
-          }), k.a(t, Fp.c.CONTAINED_NORMAL, {
+          }), Module_11.a(t, Module_76.c.CONTAINED_NORMAL, {
             background: "#E7E7E7",
             color: "#FFFFFF"
-          }), k.a(t, Fp.c.CONTAINED_ROUND, {
+          }), Module_11.a(t, Module_76.c.CONTAINED_ROUND, {
             background: "#E7E7E7",
             color: "#FFFFFF"
-          }), k.a(t, Fp.c.OUTLINED_FLAT, {
+          }), Module_11.a(t, Module_76.c.OUTLINED_FLAT, {
             color: "#CCCCCC",
             borderBottomColor: "#E9E9E9"
           }), t)[e]
@@ -157,27 +157,27 @@ var Kp = {
     }, [t, e$attributes$placeholderColor, z])
     return React.createElement("div", {
       id: t,
-      className: Classnames($_2901.inputWidget, e$attributes$backgroundMode === Fp.a.TEMPLATE && e$attributes$templateMode !== Fp.c.OUTLINED_FLAT && $_2901.inputWidgetUnderpainting, wn.b, k.a({}, $_2901.hide, !e$visible)),
-      "data-role": $$_$$_$$_$$_src_editor_widget_builtIn_types.M,
-      "data-widget-type": $$_$$_$$_$$_src_editor_widget_builtIn_types.w,
-      "data-min-width": Pp.m,
-      "data-min-height": Pp.l,
+      className: Classnames(Module_2901.inputWidget, e$attributes$backgroundMode === Module_76.a.TEMPLATE && e$attributes$templateMode !== Module_76.c.OUTLINED_FLAT && Module_2901.inputWidgetUnderpainting, Module_90.b, Module_11.a({}, Module_2901.hide, !e$visible)),
+      "data-role": Src_editor_widget_builtIn_types.M,
+      "data-widget-type": Src_editor_widget_builtIn_types.w,
+      "data-min-width": Module_95.m,
+      "data-min-height": Module_95.l,
       ref: I,
-      style: D.a(D.a({
+      style: Module_6.a(Module_6.a({
         top: e$position.y,
         left: e$position.x,
         height: e$size$height,
         width: e$size$width,
-        minWidth: "".concat(Pp.m, "px"),
-        minHeight: "".concat(Pp.l, "px"),
+        minWidth: "".concat(Module_95.m, "px"),
+        minHeight: "".concat(Module_95.l, "px"),
         fontSize: e$attributes$fontSize,
         fontFamily: e$attributes$fontFamily,
         color: e$attributes$valueColor,
         opacity: undefined === e$opacity ? undefined : e$opacity / 100,
-        filter: e$attributes$disabled && e$attributes$backgroundMode === Fp.a.IMAGE ? "saturate(0) brightness(1.1)" : undefined
+        filter: e$attributes$disabled && e$attributes$backgroundMode === Module_76.a.IMAGE ? "saturate(0) brightness(1.1)" : undefined
       }, H), z)
     }, React.createElement("div", {
-      className: Classnames($_2901.inputWidgetInputWrapper, {}),
+      className: Classnames(Module_2901.inputWidgetInputWrapper, {}),
       onDoubleClick: function () {
         var /* [auto-meaningful-name] */G$current = G.current
         if (G$current) {
@@ -190,7 +190,7 @@ var Kp = {
         var /* [auto-meaningful-name] */I$current
         var /* [auto-meaningful-name] */I$current1 = I.current
         var /* [auto-meaningful-name] */G$current = G.current
-        if (I$current1 && G$current && e$selected && (null === (I$current = I.current) || undefined === I$current ? undefined : I$current.dataset.clickType) === Yr.h.CLICK) {
+        if (I$current1 && G$current && e$selected && (null === (I$current = I.current) || undefined === I$current ? undefined : I$current.dataset.clickType) === Module_53.h.CLICK) {
           M(true)
         }
       }
@@ -200,7 +200,7 @@ var Kp = {
         var /* [auto-meaningful-name] */I$current = I.current
         F("")
         if (I$current && !e$attributes$disabled) {
-          I$current.classList.add(wn.a, wn.c)
+          I$current.classList.add(Module_90.a, Module_90.c)
         }
       },
       onKeyDown: function (e) {
@@ -214,7 +214,7 @@ var Kp = {
       onBlur: function (e) {
         var /* [auto-meaningful-name] */I$current = I.current
         if (I$current) {
-          I$current.classList.remove(wn.a, wn.c)
+          I$current.classList.remove(Module_90.a, Module_90.c)
         }
         if (e$onChange) {
           e$onChange("value", e.target.value)
@@ -225,52 +225,52 @@ var Kp = {
       placeholder: B,
       style: {
         textAlign: m,
-        color: e$attributes$disabled ? Pp.o : e$attributes$valueColor
+        color: e$attributes$disabled ? Module_95.o : e$attributes$valueColor
       }
     }), !x && React.createElement("div", {
-      className: Classnames($_2901.mask)
+      className: Classnames(Module_2901.mask)
     })))
   },
   editConfig: Bp,
   contentTextField: "placeholder",
   blockConfig: Wp,
-  isInvisibleWidget: Pp.j,
+  isInvisibleWidget: Module_95.j,
   widget: {
-    isGlobalWidget: Pp.i,
-    animationRecord: (Gp = {}, k.a(Gp, Fp.c.OUTLINED_NORMAL, {
+    isGlobalWidget: Module_95.i,
+    animationRecord: (Gp = {}, Module_11.a(Gp, Module_76.c.OUTLINED_NORMAL, {
       focus: "borderColorEnhance",
       error: "defaultOutlineError"
-    }), k.a(Gp, Fp.c.OUTLINED_FLAT, {
+    }), Module_11.a(Gp, Module_76.c.OUTLINED_FLAT, {
       focus: "borderColorEnhance",
       error: "defaultOutlineError"
-    }), k.a(Gp, Fp.c.CONTAINED_NORMAL, {
+    }), Module_11.a(Gp, Module_76.c.CONTAINED_NORMAL, {
       focus: "backgroundColorEnhance",
       error: "defaultContainedError"
-    }), k.a(Gp, Fp.c.CONTAINED_ROUND, {
+    }), Module_11.a(Gp, Module_76.c.CONTAINED_ROUND, {
       focus: "backgroundColorEnhance",
       error: "defaultContainedError"
     }), Gp),
     size: {
-      width: Pp.k,
-      height: Pp.h
+      width: Module_95.k,
+      height: Module_95.h
     },
     attributes: {
       disabled: false,
       value: "",
       placeholder: "%{COCO_defaultInputWidgetContent}",
-      color: Pp.e,
-      sizeType: $$_$$_$$_$$_src_editor_widget_builtIn_types$s$MEDIUM,
-      mode: Fp$c$OUTLINED_NORMAL,
+      color: Module_95.e,
+      sizeType: Src_editor_widget_builtIn_types$s$MEDIUM,
+      mode: Module_76$c$OUTLINED_NORMAL,
       textAlign: "left",
-      placeholderColor: Pp.n,
-      valueColor: Pp.o,
-      fontFamily: Pp.f,
-      fontSize: Pp.g,
-      backgroundMode: Fp.a.TEMPLATE,
-      templateMode: Fp$c$OUTLINED_NORMAL,
-      backgroundColor: Pp.c,
-      backgroundImage: Pp.a,
-      imageResizeMode: Fp.b.CONTAIN
+      placeholderColor: Module_95.n,
+      valueColor: Module_95.o,
+      fontFamily: Module_95.f,
+      fontSize: Module_95.g,
+      backgroundMode: Module_76.a.TEMPLATE,
+      templateMode: Module_76$c$OUTLINED_NORMAL,
+      backgroundColor: Module_95.c,
+      backgroundImage: Module_95.a,
+      imageResizeMode: Module_76.b.CONTAIN
     }
   }
 }
@@ -307,40 +307,40 @@ var Xp = [
   }
 ]
 var Qp = {
-  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.v,
+  type: Src_editor_widget_builtIn_types.v,
   category: {
-    iconId: $_133.a,
-    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_types.v
+    iconId: Module_133.a,
+    blocks: Src_editor_widget_builtIn_types.v
   },
   categoryClass: {
     text: "",
-    iconId: $_133.a,
+    iconId: Module_133.a,
     blocks: []
   },
   getTemplate: function (e) {
     var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>")
     return [
-      "<block type=\"image_on_press\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, "<block type=\"image_set_file_id\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"IMAGE_FILE_ID_SHADOW\">\n        <shadow type=\"image_file_list_dropdown\"> <field name=\"IMAGE_FILE_ID\">").concat(rp.c, "</field></shadow>\n      </value>\n    </block>"), Jd.sb({
+      "<block type=\"image_on_press\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Module_61.d, "<block type=\"image_set_file_id\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"IMAGE_FILE_ID_SHADOW\">\n        <shadow type=\"image_file_list_dropdown\"> <field name=\"IMAGE_FILE_ID\">").concat(Module_61.c, "</field></shadow>\n      </value>\n    </block>"), Module_33.sb({
         property: "backgroundColor",
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.v,
+        widgetType: Src_editor_widget_builtIn_types.v,
         widgetId: e,
         isSetProperty: true
-      }), rp.d, Jd.sb({
+      }), Module_61.d, Module_33.sb({
         property: "__opacity",
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.v,
+        widgetType: Src_editor_widget_builtIn_types.v,
         widgetId: e,
         isSetProperty: true
-      }), "<block type=\"image_set_size\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"SIZE_TYPE\">height</field>\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='0,,1'>100</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"image_set_position\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"POSITION_TYPE\">positionX</field>\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>100</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"image_set_visible\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"VISIBLE\">show</field>\n    </block>"), rp.d, "<block type=\"image_get_file_id\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Jd.sb({
+      }), "<block type=\"image_set_size\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"SIZE_TYPE\">height</field>\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='0,,1'>100</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"image_set_position\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"POSITION_TYPE\">positionX</field>\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>100</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"image_set_visible\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"VISIBLE\">show</field>\n    </block>"), Module_61.d, "<block type=\"image_get_file_id\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Module_33.sb({
         property: "backgroundColor",
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.v,
+        widgetType: Src_editor_widget_builtIn_types.v,
         widgetId: e
-      }), Jd.sb({
+      }), Module_33.sb({
         property: "__opacity",
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.v,
+        widgetType: Src_editor_widget_builtIn_types.v,
         widgetId: e
-      }), "<block type=\"image_get_size\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"SIZE_TYPE\">height</field>\n    </block>"), "<block type=\"image_get_position\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"POSITION_TYPE\">positionX</field>\n    </block>"), rp.d, Jd.sb({
+      }), "<block type=\"image_get_size\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"SIZE_TYPE\">height</field>\n    </block>"), "<block type=\"image_get_position\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"POSITION_TYPE\">positionX</field>\n    </block>"), Module_61.d, Module_33.sb({
         property: "__visible",
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.v,
+        widgetType: Src_editor_widget_builtIn_types.v,
         widgetId: e
       })
     ]
@@ -357,24 +357,24 @@ var Qp = {
       e.insertBlockSnippetGenerator("image_on_press", function (n, r) {
         var /* [auto-meaningful-name] */tNR$widgetId = t(n, r).widgetId
         var i = e.statementToCode(n, r, "DO")
-        return i ? ep.n("onImagePress", [ep.o(tNR$widgetId)], i) : ""
+        return i ? Module_4.n("onImagePress", [Module_4.o(tNR$widgetId)], i) : ""
       })
       e.insertBlockSnippetGenerator("image_file_list_dropdown", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "IMAGE_FILE_ID")
-        return undefined === o || o === rp.a || o === rp.c ? e.quote("") : ep.o(o)
+        return undefined === o || o === Module_61.a || o === Module_61.c ? e.quote("") : Module_4.o(o)
       })
       e.insertBlockSnippetGenerator("icon_file_list_dropdown", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "ICON_FILE_ID")
-        return undefined === o || o === rp.a || o === rp.c ? e.quote("") : ep.o(o)
+        return undefined === o || o === Module_61.a || o === Module_61.c ? e.quote("") : Module_4.o(o)
       })
       e.insertBlockSnippetGenerator("image_set_file_id", function (n, r) {
         var o = t(n, r)
         var /* [auto-meaningful-name] */o$block = o.block
         var /* [auto-meaningful-name] */o$widgetId = o.widgetId
         var s = e.valueToCode(n, r, "IMAGE_FILE_ID_SHADOW", e.ORDER_FUNCTION_CALL)
-        return s ? ep.l(ep.n("setImageWidgetImageId", [ep.o(o$widgetId), s]), o$block, e) : ""
+        return s ? Module_4.l(Module_4.n("setImageWidgetImageId", [Module_4.o(o$widgetId), s]), o$block, e) : ""
       })
       e.insertBlockSnippetGenerator("image_set_size", function (n, r) {
         var o = t(n, r)
@@ -382,7 +382,7 @@ var Qp = {
         var /* [auto-meaningful-name] */o$widgetId = o.widgetId
         var s = e.valueToCode(n, r, "NUM", e.ORDER_FUNCTION_CALL)
         var c = "width" === e.getFieldValue(o$block, "SIZE_TYPE") ? "setImageWidgetWidth" : "setImageWidgetHeight"
-        return ep.l(ep.n(c, [ep.o(o$widgetId), s]), o$block, e)
+        return Module_4.l(Module_4.n(c, [Module_4.o(o$widgetId), s]), o$block, e)
       })
       e.insertBlockSnippetGenerator("image_set_position", function (n, r) {
         var o = t(n, r)
@@ -390,32 +390,32 @@ var Qp = {
         var /* [auto-meaningful-name] */o$widgetId = o.widgetId
         var s = e.valueToCode(n, r, "NUM", e.ORDER_FUNCTION_CALL)
         var c = "positionX" === e.getFieldValue(o$block, "POSITION_TYPE") ? "setImageWidgetPositionX" : "setImageWidgetPositionY"
-        return ep.l(ep.n(c, [ep.o(o$widgetId), s]), o$block, e)
+        return Module_4.l(Module_4.n(c, [Module_4.o(o$widgetId), s]), o$block, e)
       })
       e.insertBlockSnippetGenerator("image_set_visible", function (n, r) {
         var o = t(n, r)
         var /* [auto-meaningful-name] */o$block = o.block
         var /* [auto-meaningful-name] */o$widgetId = o.widgetId
         var s = "show" === e.getFieldValue(o$block, "VISIBLE")
-        return ep.n("setImageWidgetVisible", [ep.o(o$widgetId), s])
+        return Module_4.n("setImageWidgetVisible", [Module_4.o(o$widgetId), s])
       })
       e.insertBlockSnippetGenerator("image_get_size", function (n, r) {
         var o = t(n, r)
         var /* [auto-meaningful-name] */o$block = o.block
         var /* [auto-meaningful-name] */o$widgetId = o.widgetId
         var s = "width" === e.getFieldValue(o$block, "SIZE_TYPE") ? "getImageWidgetWidth" : "getImageWidgetHeight"
-        return ep.s(s, [ep.o(o$widgetId)])
+        return Module_4.s(s, [Module_4.o(o$widgetId)])
       })
       e.insertBlockSnippetGenerator("image_get_position", function (n, r) {
         var o = t(n, r)
         var /* [auto-meaningful-name] */o$block = o.block
         var /* [auto-meaningful-name] */o$widgetId = o.widgetId
         var s = "positionX" === e.getFieldValue(o$block, "POSITION_TYPE") ? "getImageWidgetPositionX" : "getImageWidgetPositionY"
-        return ep.s(s, [ep.o(o$widgetId)])
+        return Module_4.s(s, [Module_4.o(o$widgetId)])
       })
       e.insertBlockSnippetGenerator("image_get_file_id", function (e, n) {
         var /* [auto-meaningful-name] */tEN$widgetId = t(e, n).widgetId
-        return ep.s("getImageWidgetImageId", [ep.o(tEN$widgetId)])
+        return Module_4.s("getImageWidgetImageId", [Module_4.o(tEN$widgetId)])
       })
     },
     setBlockGroupProfile: function (e, t) {
@@ -424,14 +424,14 @@ var Qp = {
         name: "WIDGET_ID",
         custom: true,
         options: function () {
-          return $_46_index.c().getWidgetListByType("IMAGE_WIDGET")
+          return Module_46.c().getWidgetListByType("IMAGE_WIDGET")
         }
       }
       e.insertBlockProfile("image_on_press", {
         type: "image_on_press",
         message0: "%{BKY_IMAGE_ON_PRESS}",
         args0: [
-          ep.e("%{BKY_BLOCK_TAB_ICON}", true), D.a({}, n), {
+          Module_4.e("%{BKY_BLOCK_TAB_ICON}", true), Module_6.a({}, n), {
             type: "input_dummy",
             align: "CENTRE"
           }, {
@@ -446,7 +446,7 @@ var Qp = {
         type: "image_set_file_id",
         message0: "%{BKY_IMAGE_SET_FIELD_ID}",
         args0: [
-          D.a({}, n), {
+          Module_6.a({}, n), {
             type: "input_value",
             name: "IMAGE_FILE_ID_SHADOW",
             check: ["String"]
@@ -467,7 +467,7 @@ var Qp = {
             name: "IMAGE_FILE_ID",
             custom: true,
             options: function () {
-              return $_46_index.c().getImageFiles()
+              return Module_46.c().getImageFiles()
             }
           }
         ],
@@ -483,7 +483,7 @@ var Qp = {
             name: "ICON_FILE_ID",
             custom: true,
             options: function () {
-              return $_46_index.c().getIconFiles()
+              return Module_46.c().getIconFiles()
             }
           }
         ],
@@ -494,7 +494,7 @@ var Qp = {
         type: "image_set_size",
         message0: "%{BKY_IMAGE_SET_PROPERTY}",
         args0: [
-          D.a({}, n), {
+          Module_6.a({}, n), {
             type: "field_coco_dropdown",
             name: "SIZE_TYPE",
             custom: true,
@@ -521,7 +521,7 @@ var Qp = {
         type: "image_set_position",
         message0: "%{BKY_IMAGE_SET_PROPERTY}",
         args0: [
-          D.a({}, n), {
+          Module_6.a({}, n), {
             type: "field_coco_dropdown",
             name: "POSITION_TYPE",
             custom: true,
@@ -546,7 +546,7 @@ var Qp = {
             name: "VISIBLE",
             custom: true,
             options: [[t.Msg.SHOW, "show"], [t.Msg.HIDE, "hide"]]
-          }, D.a({}, n)
+          }, Module_6.a({}, n)
         ],
         previousStatement: true,
         nextStatement: true,
@@ -557,7 +557,7 @@ var Qp = {
         type: "image_get_size",
         message0: "%{BKY_IMAGE_GET_PROPERTY}",
         args0: [
-          D.a({}, n), {
+          Module_6.a({}, n), {
             type: "field_coco_dropdown",
             name: "SIZE_TYPE",
             custom: true,
@@ -572,7 +572,7 @@ var Qp = {
         type: "image_get_position",
         message0: "%{BKY_IMAGE_GET_PROPERTY}",
         args0: [
-          D.a({}, n), {
+          Module_6.a({}, n), {
             type: "field_coco_dropdown",
             name: "POSITION_TYPE",
             custom: true,
@@ -586,7 +586,7 @@ var Qp = {
       e.insertBlockProfile("image_get_file_id", {
         type: "image_get_file_id",
         message0: "%{BKY_IMAGE_GET_FILE_ID}",
-        args0: [D.a({}, n)],
+        args0: [Module_6.a({}, n)],
         output: ["String"],
         colour: "%{BKY_APPEARANCE_HUE}",
         inputsInline: true,

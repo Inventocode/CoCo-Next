@@ -9,15 +9,15 @@
 export { a }
 export { s as b }
 export { c }
-import * as /* [auto-meaningful-name] */$_799_38 from "./799/38"
-import * as /* [auto-meaningful-name] */$_1212_2644 from "./1212/2644"
+import * as /* [auto-meaningful-name] */Module_38 from /* 38 */"./799/38"
+import * as /* [auto-meaningful-name] */Module_2644 from /* 2644 */"./1212/2644"
 function o(e) {
   for (var t = [], n = 1; n < arguments.length; n++) {
     t[n - 1] = arguments[n]
   }
-  var o = $_1212_2644.a()
+  var o = Module_2644.a()
   if (o && o[e]) {
-    return o[e].apply(o, $_799_38.f(t))
+    return o[e].apply(o, Module_38.f(t))
   }
   throw new Error("No hub defined or " + e + " was not found on the hub, please open a bug report.")
 }

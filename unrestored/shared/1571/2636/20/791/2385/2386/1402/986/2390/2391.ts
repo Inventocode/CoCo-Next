@@ -4,7 +4,7 @@
  * 模块 ID：2391
  */
 
-var r = require("../../333/index")
+var r = require(/* 333 */"../../333/index")
 var /* [auto-meaningful-name] */r$Buffer = r.Buffer
 function o(e, t) {
   for (var n in e) t[n] = e[n]

@@ -4,7 +4,7 @@
  * 模块 ID：445
  */
 
-var r = require("../1659/168")
+var r = require(/* 168 */"../1659/168")
 module.exports = function (e) {
   return r(function () {
     var t = ""[e]("\"")

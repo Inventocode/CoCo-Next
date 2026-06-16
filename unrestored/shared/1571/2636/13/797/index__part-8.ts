@@ -9,11 +9,11 @@
 import { b, O } from "./index__part-0"
 import { qt, Jt, An } from "./index__part-5"
 import { Tn, Bn, Dn, Fn, Hn, ii, si, ci, ui, li, fi, di, hi, pi, _i, Ai, gi, vi, mi, yi, bi, wi, Ei, xi } from "./index__part-6"
-import /* [auto-meaningful-name] */$$_$$_50_index from "../../50/index"
-import /* [auto-meaningful-name] */$_101_index from "./101/index"
-import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */$_1507 from "./1507"
-import /* [auto-meaningful-name] */$_15071 from "./1507"
+import /* [auto-meaningful-name] */Module_50 from /* 50 */"../../50/index"
+import /* [auto-meaningful-name] */Module_101 from /* 101 */"./101/index"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_1507 from /* 1507 */"./1507"
+import /* [auto-meaningful-name] */Module_15071 from /* 1507 */"./1507"
 var fo = function (e) {
   var /* [auto-meaningful-name] */e$color = e.color
   var /* [auto-meaningful-name] */e$onClick = e.onClick
@@ -22,7 +22,7 @@ var fo = function (e) {
   var /* [auto-meaningful-name] */e$first = e.first
   var /* [auto-meaningful-name] */e$last = e.last
   var /* [auto-meaningful-name] */e$active = e.active
-  var l = $_101_index({
+  var l = Module_101({
     default: {
       color: {
         width: "40px",
@@ -84,14 +84,14 @@ var fo = function (e) {
     }
   }, React.createElement("div", {
     style: l.check
-  }, React.createElement($_15071, null)))
+  }, React.createElement(Module_15071, null)))
 }
 var ho = function (e) {
   var /* [auto-meaningful-name] */e$onClick = e.onClick
   var /* [auto-meaningful-name] */e$onSwatchHover = e.onSwatchHover
   var /* [auto-meaningful-name] */e$group = e.group
   var /* [auto-meaningful-name] */e$active = e.active
-  var s = $_101_index({
+  var s = Module_101({
     default: {
       group: {
         paddingBottom: "10px",
@@ -126,7 +126,7 @@ var po = function (e) {
   var l = undefined === e$styles ? {} : e$styles
   var /* [auto-meaningful-name] */e$className = e.className
   var d = undefined === e$className ? "" : e$className
-  var h = $_101_index(qt({
+  var h = Module_101(qt({
     default: {
       picker: {
         width: e$width,
@@ -170,10 +170,10 @@ var po = function (e) {
   })))))
 }
 po.propTypes = {
-  width: $$_$$_50_index.oneOfType([$$_$$_50_index.string, $$_$$_50_index.number]),
-  height: $$_$$_50_index.oneOfType([$$_$$_50_index.string, $$_$$_50_index.number]),
-  colors: $$_$$_50_index.arrayOf($$_$$_50_index.arrayOf($$_$$_50_index.string)),
-  styles: $$_$$_50_index.object
+  width: Module_50.oneOfType([Module_50.string, Module_50.number]),
+  height: Module_50.oneOfType([Module_50.string, Module_50.number]),
+  colors: Module_50.arrayOf(Module_50.arrayOf(Module_50.string)),
+  styles: Module_50.object
 }
 po.defaultProps = {
   width: 320,
@@ -193,7 +193,7 @@ var _o = function (e) {
   var l = undefined === e$styles ? {} : e$styles
   var /* [auto-meaningful-name] */e$className = e.className
   var d = undefined === e$className ? "" : e$className
-  var h = $_101_index(qt({
+  var h = Module_101(qt({
     default: {
       card: {
         width: e$width,
@@ -337,10 +337,10 @@ var _o = function (e) {
   })))
 }
 _o.propTypes = {
-  width: $$_$$_50_index.oneOfType([$$_$$_50_index.string, $$_$$_50_index.number]),
-  triangle: $$_$$_50_index.oneOf(["hide", "top-left", "top-right"]),
-  colors: $$_$$_50_index.arrayOf($$_$$_50_index.string),
-  styles: $$_$$_50_index.object
+  width: Module_50.oneOfType([Module_50.string, Module_50.number]),
+  triangle: Module_50.oneOf(["hide", "top-left", "top-right"]),
+  colors: Module_50.arrayOf(Module_50.string),
+  styles: Module_50.object
 }
 _o.defaultProps = {
   width: 276,
@@ -350,7 +350,7 @@ _o.defaultProps = {
 }
 Fn(_o)
 var Ao = function (e) {
-  var t = $_101_index({
+  var t = Module_101({
     default: {
       picker: {
         width: "20px",
@@ -367,11 +367,11 @@ var Ao = function (e) {
   })
 }
 Ao.propTypes = {
-  hsl: $$_$$_50_index.shape({
-    h: $$_$$_50_index.number,
-    s: $$_$$_50_index.number,
-    l: $$_$$_50_index.number,
-    a: $$_$$_50_index.number
+  hsl: Module_50.shape({
+    h: Module_50.number,
+    s: Module_50.number,
+    l: Module_50.number,
+    a: Module_50.number
   })
 }
 Ao.defaultProps = {
@@ -384,7 +384,7 @@ Ao.defaultProps = {
 }
 var go = Ao
 var vo = function (e) {
-  var t = $_101_index({
+  var t = Module_101({
     default: {
       picker: {
         width: "20px",
@@ -401,11 +401,11 @@ var vo = function (e) {
   })
 }
 vo.propTypes = {
-  hsl: $$_$$_50_index.shape({
-    h: $$_$$_50_index.number,
-    s: $$_$$_50_index.number,
-    l: $$_$$_50_index.number,
-    a: $$_$$_50_index.number
+  hsl: Module_50.shape({
+    h: Module_50.number,
+    s: Module_50.number,
+    l: Module_50.number,
+    a: Module_50.number
   })
 }
 vo.defaultProps = {
@@ -484,7 +484,7 @@ var yo = function (e) {
       }
     }
   }
-  var u = $_101_index({
+  var u = Module_101({
     default: {
       wrap: {
         display: "flex",
@@ -625,7 +625,7 @@ var bo = function (e) {
   var f = undefined === e$styles ? {} : e$styles
   var /* [auto-meaningful-name] */e$className = e.className
   var h = undefined === e$className ? "" : e$className
-  var p = $_101_index(qt({
+  var p = Module_101(qt({
     default: {
       picker: {
         width: e$width,
@@ -720,9 +720,9 @@ var bo = function (e) {
   })))
 }
 bo.propTypes = {
-  width: $$_$$_50_index.oneOfType([$$_$$_50_index.string, $$_$$_50_index.number]),
-  styles: $$_$$_50_index.object,
-  header: $$_$$_50_index.string
+  width: Module_50.oneOfType([Module_50.string, Module_50.number]),
+  styles: Module_50.object,
+  header: Module_50.string
 }
 bo.defaultProps = {
   width: 652,

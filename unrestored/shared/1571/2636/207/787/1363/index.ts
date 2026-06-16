@@ -6,9 +6,9 @@
 
 "use strict"
 
-var r = require("../500")
-var i = require("../572/index")
-var o = require("./2245/index")
+var r = require(/* 500 */"../500")
+var i = require(/* 572 */"../572/index")
+var o = require(/* 2245 */"./2245/index")
 var a = function (e, t) {
   for (var n = {}, r = 0, o = Object.entries(e); r < o.length; r++) {
     var a = i(o[r], 2)

@@ -43,14 +43,14 @@ export { b as isOpeningBracketToken }
 export { m as isOpeningParenToken }
 export { ne as isParenthesized }
 export { g as isSemicolonToken }
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_11 from "../../../../11"
-import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_27 from "../../../../27"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_39 from "../../../../39"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_34_465 from "../../../../34/465"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_25_index from "../../../../25/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_47_index from "../../../../47/index"
-import * as /* [auto-meaningful-name] */$$_$$_777_index from "../../777/index"
+import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"../../../../11"
+import * as /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import * as /* [auto-meaningful-name] */Module_27 from /* 27 */"../../../../27"
+import * as /* [auto-meaningful-name] */Module_39 from /* 39 */"../../../../39"
+import * as /* [auto-meaningful-name] */Module_465 from /* 465 */"../../../../34/465"
+import * as /* [auto-meaningful-name] */Module_25 from /* 25 */"../../../../25/index"
+import * as /* [auto-meaningful-name] */Module_47 from /* 47 */"../../../../47/index"
+import * as /* [auto-meaningful-name] */Module_777 from /* 777 */"../../777/index"
 function f(e, t) {
   var n = t.range[0]
   var r = e
@@ -58,7 +58,7 @@ function f(e, t) {
   do {
     i = false
     var o
-    var a = $$_$$_$$_$$_47_index.a(r.childScopes)
+    var a = Module_47.a(r.childScopes)
     try {
       for (a.s(); !(o = a.n()).done;) {
         var /* [auto-meaningful-name] */o$value = o.value
@@ -164,7 +164,7 @@ function L(e, t) {
 }
 var j = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof self ? self : "undefined" !== typeof window ? window : "undefined" !== typeof global ? global : {}
 var U = Object.freeze(new Set(["Array", "ArrayBuffer", "BigInt", "BigInt64Array", "BigUint64Array", "Boolean", "DataView", "Date", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "Float32Array", "Float64Array", "Function", "Infinity", "Int16Array", "Int32Array", "Int8Array", "isFinite", "isNaN", "isPrototypeOf", "JSON", "Map", "Math", "NaN", "Number", "Object", "parseFloat", "parseInt", "Promise", "Proxy", "Reflect", "RegExp", "Set", "String", "Symbol", "Uint16Array", "Uint32Array", "Uint8Array", "Uint8ClampedArray", "undefined", "unescape", "WeakMap", "WeakSet"]))
-var H = new Set([Array.isArray, "function" === typeof BigInt ? BigInt : undefined, Boolean, Date, Date.parse, decodeURI, decodeURIComponent, encodeURI, encodeURIComponent, escape, isFinite, isNaN, isPrototypeOf].concat($$_$$_$$_$$_25_index.a(Object.getOwnPropertyNames(Math).map(function (e) {
+var H = new Set([Array.isArray, "function" === typeof BigInt ? BigInt : undefined, Boolean, Date, Date.parse, decodeURI, decodeURIComponent, encodeURI, encodeURIComponent, escape, isFinite, isNaN, isPrototypeOf].concat(Module_25.a(Object.getOwnPropertyNames(Math).map(function (e) {
   return Math[e]
 }).filter(function (e) {
   return "function" === typeof e
@@ -195,7 +195,7 @@ function z(e, t) {
       if (null == o) {
         return null
       }
-      n.push.apply(n, $$_$$_$$_$$_25_index.a(o.value))
+      n.push.apply(n, Module_25.a(o.value))
     } else {
       var a = W(i, t)
       if (null == a) {
@@ -322,7 +322,7 @@ var Q = Object.freeze({
           var /* [auto-meaningful-name] */o$value = o.value
           if (H.has(i$value[o$value])) {
             return {
-              value: i$value[o$value].apply(i$value, $$_$$_$$_$$_25_index.a(r))
+              value: i$value[o$value].apply(i$value, Module_25.a(r))
             }
           }
           if (V.has(i$value[o$value])) {
@@ -337,7 +337,7 @@ var Q = Object.freeze({
           var /* [auto-meaningful-name] */u$value = u.value
           if (H.has(u$value)) {
             return {
-              value: u$value.apply(undefined, $$_$$_$$_$$_25_index.a(r))
+              value: u$value.apply(undefined, Module_25.a(r))
             }
           }
           if (V.has(u$value)) {
@@ -408,7 +408,7 @@ var Q = Object.freeze({
       var /* [auto-meaningful-name] */n$value = n.value
       if (H.has(n$value)) {
         return {
-          value: $$_$$_$$_$$_34_465.a(n$value, $$_$$_$$_$$_25_index.a(r))
+          value: Module_465.a(n$value, Module_25.a(r))
         }
       }
     }
@@ -417,7 +417,7 @@ var Q = Object.freeze({
   ObjectExpression: function (e, t) {
     var n
     var r = {}
-    var i = $$_$$_$$_$$_47_index.a(e.properties)
+    var i = Module_47.a(e.properties)
     try {
       for (i.s(); !(n = i.n()).done;) {
         var /* [auto-meaningful-name] */n$value = n.value
@@ -469,7 +469,7 @@ var Q = Object.freeze({
       })
       if (n$value === String.raw) {
         return {
-          value: n$value.apply(undefined, [o].concat($$_$$_$$_$$_25_index.a(r)))
+          value: n$value.apply(undefined, [o].concat(Module_25.a(r)))
         }
       }
     }
@@ -609,13 +609,13 @@ var Z = Object.freeze(Object.assign(Object.create(null), {
   $visitChildren: function (e, t, n) {
     var r
     var /* [auto-meaningful-name] */e$type = e.type
-    var o = $$_$$_$$_$$_47_index.a(n[e$type] || $$_$$_777_index.getKeys(e))
+    var o = Module_47.a(n[e$type] || Module_777.getKeys(e))
     try {
       for (o.s(); !(r = o.n()).done;) {
         var a = e[r.value]
         if (Array.isArray(a)) {
           var s
-          var c = $$_$$_$$_$$_47_index.a(a)
+          var c = Module_47.a(a)
           try {
             for (c.s(); !(s = c.n()).done;) {
               var /* [auto-meaningful-name] */s$value = s.value
@@ -691,7 +691,7 @@ function ee(e, t) {
   return Z.$visit(e, {
     considerGetters: i,
     considerImplicitTypeConversion: a
-  }, t.visitorKeys || $$_$$_777_index.KEYS)
+  }, t.visitorKeys || Module_777.KEYS)
 }
 function te(e, t) {
   var /* [auto-meaningful-name] */e$parent = e.parent
@@ -754,7 +754,7 @@ var ae = function () {
     var n = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : {}
     var /* [auto-meaningful-name] */n$escaped = n.escaped
     var i = undefined !== n$escaped && n$escaped
-    $$_$$_$$_$$_27.a(this, e)
+    Module_27.a(this, e)
     if (!(t instanceof RegExp)) {
       throw new TypeError("'pattern' should be a RegExp instance.")
     }
@@ -766,7 +766,7 @@ var ae = function () {
       escaped: Boolean(i)
     })
   }
-  $$_$$_$$_$$_39.a(e, [
+  Module_39.a(e, [
     {
       key: "execAll",
       value: RegeneratorRuntime.mark(function e(t) {
@@ -821,12 +821,12 @@ var ae = function () {
           var r
           var i = []
           var o = 0
-          var a = $$_$$_$$_$$_47_index.a(e.execAll(t))
+          var a = Module_47.a(e.execAll(t))
           try {
             for (a.s(); !(r = a.n()).done;) {
               var /* [auto-meaningful-name] */r$value = r.value
               i.push(t.slice(o, r$value.index))
-              i.push(String(n.apply(undefined, $$_$$_$$_$$_25_index.a(r$value).concat([r$value.index, r$value.input]))))
+              i.push(String(n.apply(undefined, Module_25.a(r$value).concat([r$value.index, r$value.input]))))
               o = r$value.index + r$value[0].length
             }
           } catch (l) {
@@ -856,7 +856,7 @@ var ae = function () {
             }
           }
           var s
-          var c = $$_$$_$$_$$_47_index.a(e.execAll(t))
+          var c = Module_47.a(e.execAll(t))
           try {
             for (c.s(); !(s = c.n()).done;) {
               o = s.value
@@ -884,7 +884,7 @@ var le = Symbol("call")
 var fe = Symbol("construct")
 var de = Symbol("esm")
 var he = {
-  require: $$_$$_$$_$$_11.a({}, le, true)
+  require: Module_11.a({}, le, true)
 }
 function pe(e) {
   return null == e || 0 !== e.defs.length || e.references.some(function (e) {
@@ -911,13 +911,13 @@ var Ae = function () {
     var i = undefined === n$mode ? "strict" : n$mode
     var /* [auto-meaningful-name] */n$globalObjectNames = n.globalObjectNames
     var s = undefined === n$globalObjectNames ? ["global", "self", "window"] : n$globalObjectNames
-    $$_$$_$$_$$_27.a(this, e)
+    Module_27.a(this, e)
     this.variableStack = []
     this.globalScope = t
     this.mode = i
     this.globalObjectNames = s.slice(0)
   }
-  $$_$$_$$_$$_39.a(e, [
+  Module_39.a(e, [
     {
       key: "iterateGlobalReferences",
       value: RegeneratorRuntime.mark(function e(t) {
@@ -955,7 +955,7 @@ var Ae = function () {
                 e.next = 1
                 break
               case 12:
-                l = $$_$$_$$_$$_47_index.a(this.globalObjectNames)
+                l = Module_47.a(this.globalObjectNames)
                 e.prev = 13
                 l.s()
               case 15:
@@ -1004,7 +1004,7 @@ var Ae = function () {
           for (;;) {
             switch (e.prev = e.next) {
               case 0:
-                n = $$_$$_$$_$$_47_index.a(this.iterateGlobalReferences(he))
+                n = Module_47.a(this.iterateGlobalReferences(he))
                 e.prev = 1
                 n.s()
               case 3:
@@ -1079,7 +1079,7 @@ var Ae = function () {
             switch (e.prev = e.next) {
               case 0:
                 this$globalScope$block = this.globalScope.block
-                r = $$_$$_$$_$$_47_index.a(this$globalScope$block.body)
+                r = Module_47.a(this$globalScope$block.body)
                 e.prev = 2
                 r.s()
               case 4:
@@ -1141,7 +1141,7 @@ var Ae = function () {
                 e.next = 69
                 break
               case 29:
-                _ = $$_$$_$$_$$_47_index.a(o$value.specifiers)
+                _ = Module_47.a(o$value.specifiers)
                 e.prev = 30
                 _.s()
               case 32:
@@ -1162,7 +1162,7 @@ var Ae = function () {
                 e.next = 59
                 break
               case 40:
-                y = $$_$$_$$_$$_47_index.a(m)
+                y = Module_47.a(m)
                 e.prev = 41
                 y.s()
               case 43:
@@ -1244,7 +1244,7 @@ var Ae = function () {
               case 2:
                 this.variableStack.push(t)
                 e.prev = 3
-                a = $$_$$_$$_$$_47_index.a(t.references)
+                a = Module_47.a(t.references)
                 e.prev = 5
                 a.s()
               case 7:
@@ -1448,7 +1448,7 @@ var Ae = function () {
                   e.next = 31
                   break
                 }
-                a = $$_$$_$$_$$_47_index.a(t.properties)
+                a = Module_47.a(t.properties)
                 e.prev = 7
                 a.s()
               case 9:

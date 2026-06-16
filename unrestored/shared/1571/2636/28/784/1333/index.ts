@@ -4,9 +4,9 @@
  * 模块 ID：1333
  */
 
-var /* [auto-meaningful-name] */require$_1121_index$FilterCSS = require("./1121/index").FilterCSS
-var /* [auto-meaningful-name] */require$_1121_index$getDefaultWhiteList = require("./1121/index").getDefaultWhiteList
-var o = require("./1122")
+var /* [auto-meaningful-name] */require_1121_$_1121_index$FilterCSS = require(/* 1121 */"./1121/index").FilterCSS
+var /* [auto-meaningful-name] */require_1121_$_1121_index$getDefaultWhiteList = require(/* 1121 */"./1121/index").getDefaultWhiteList
+var o = require(/* 1122 */"./1122")
 function a() {
   return {
     a: ["target", "href", "title"],
@@ -79,7 +79,7 @@ function a() {
     video: ["autoplay", "controls", "crossorigin", "loop", "muted", "playsinline", "poster", "preload", "src", "height", "width"]
   }
 }
-var s = new require$_1121_index$FilterCSS()
+var s = new require_1121_$_1121_index$FilterCSS()
 function c(e) {
   return e.replace(u, "&lt;").replace(l, "&gt;")
 }
@@ -296,4 +296,4 @@ exports.stripBlankChar = function (e) {
 }
 exports.attributeWrapSign = "\""
 exports.cssFilter = s
-exports.getDefaultCSSWhiteList = require$_1121_index$getDefaultWhiteList
+exports.getDefaultCSSWhiteList = require_1121_$_1121_index$getDefaultWhiteList

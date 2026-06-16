@@ -6,19 +6,19 @@
 
 "use strict"
 
-import * as rp from "./61"
-import * as /* [auto-meaningful-name] */$_46_index from "./46/index"
-import * as ep from "./4"
-import * as Jd from "./33"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
-import * as D from "./6"
-import * as /* [auto-meaningful-name] */$_105 from "./105"
-import * as /* [auto-meaningful-name] */$_244 from "./244"
+import * as /* [auto-meaningful-name] */Module_61 from /* 61 */"./61"
+import * as /* [auto-meaningful-name] */Module_46 from /* 46 */"./46/index"
+import * as /* [auto-meaningful-name] */Module_4 from /* 4 */"./4"
+import * as /* [auto-meaningful-name] */Module_33 from /* 33 */"./33"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"./6"
+import * as /* [auto-meaningful-name] */Module_105 from /* 105 */"./105"
+import * as /* [auto-meaningful-name] */Module_244 from /* 244 */"./244"
 var lh = {
-  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.f,
+  type: Src_editor_widget_builtIn_types.f,
   category: {
     iconId: "icon-widget-canvas",
-    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_types.f
+    blocks: Src_editor_widget_builtIn_types.f
   },
   categoryClass: {
     text: "",
@@ -28,43 +28,43 @@ var lh = {
   getTemplate: function (e) {
     var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>")
     return [
-      "<block type=\"canvas_on_canvas_press\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, Jd.cb({
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.f,
+      "<block type=\"canvas_on_canvas_press\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Module_61.d, Module_33.cb({
+        widgetType: Src_editor_widget_builtIn_types.f,
         title: "背景",
         lineId: "background"
-      }), "<block type=\"canvas_set_background_image\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"IMAGE_FILE_ID\">\n        <shadow type=\"image_file_list_dropdown\">\n          <field name=\"IMAGE_FILE_ID\">").concat(rp.c, "</field>\n        </shadow>\n      </value>\n    </block>"), Jd.sb({
+      }), "<block type=\"canvas_set_background_image\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"IMAGE_FILE_ID\">\n        <shadow type=\"image_file_list_dropdown\">\n          <field name=\"IMAGE_FILE_ID\">").concat(Module_61.c, "</field>\n        </shadow>\n      </value>\n    </block>"), Module_33.sb({
         property: "backgroundColor",
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.f,
+        widgetType: Src_editor_widget_builtIn_types.f,
         widgetId: e,
         isSetProperty: true
-      }), Jd.cb({
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.f,
+      }), Module_33.cb({
+        widgetType: Src_editor_widget_builtIn_types.f,
         title: "笔迹",
         lineId: "brush"
-      }), "<block type=\"canvas_clear_all_brush\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Jd.cb({
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.f,
+      }), "<block type=\"canvas_clear_all_brush\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Module_33.cb({
+        widgetType: Src_editor_widget_builtIn_types.f,
         title: "通用",
         lineId: "common"
-      }), Jd.sb({
+      }), Module_33.sb({
         property: "__opacity",
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.f,
+        widgetType: Src_editor_widget_builtIn_types.f,
         widgetId: e,
         isSetProperty: true
-      }), "<block type=\"canvas_set_size\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"SIZE_TYPE\">height</field>\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='").concat($_244.h, ",").concat($_244.f, ",1'>100</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"canvas_set_position\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"POSITION_TYPE\">positionX</field>\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>100</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"canvas_set_visible\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Jd.cb({
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.f,
+      }), "<block type=\"canvas_set_size\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"SIZE_TYPE\">height</field>\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='").concat(Module_244.h, ",").concat(Module_244.f, ",1'>100</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"canvas_set_position\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"POSITION_TYPE\">positionX</field>\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>100</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"canvas_set_visible\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Module_33.cb({
+        widgetType: Src_editor_widget_builtIn_types.f,
         title: "返回值",
         lineId: "getter"
-      }), Jd.sb({
+      }), Module_33.sb({
         property: "backgroundColor",
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.f,
+        widgetType: Src_editor_widget_builtIn_types.f,
         widgetId: e
-      }), "<block type=\"canvas_get_background_image\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Jd.sb({
+      }), "<block type=\"canvas_get_background_image\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Module_33.sb({
         property: "__opacity",
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.f,
+        widgetType: Src_editor_widget_builtIn_types.f,
         widgetId: e
-      }), "<block type=\"canvas_get_position\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"POSITION_TYPE\">positionX</field>\n    </block>"), "<block type=\"canvas_get_size\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"SIZE_TYPE\">height</field>\n    </block>"), "<block type=\"canvas_to_data_url\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, "<block type=\"canvas_check_if_pressed\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Jd.sb({
+      }), "<block type=\"canvas_get_position\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"POSITION_TYPE\">positionX</field>\n    </block>"), "<block type=\"canvas_get_size\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"SIZE_TYPE\">height</field>\n    </block>"), "<block type=\"canvas_to_data_url\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Module_61.d, "<block type=\"canvas_check_if_pressed\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Module_33.sb({
         property: "__visible",
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.f,
+        widgetType: Src_editor_widget_builtIn_types.f,
         widgetId: e
       })
     ]
@@ -89,7 +89,7 @@ var lh = {
         }
         var l = e.valueToCode(n, r, "POSITION_X", e.ORDER_FUNCTION_CALL)
         var u = e.valueToCode(n, r, "POSITION_Y", e.ORDER_FUNCTION_CALL)
-        return "press" === s ? ep.n("argsOnCanvasPress", [ep.o(o$widgetId)], c, [l, u]) : "pressIn" === s ? ep.n("argsOnCanvasPressIn", [ep.o(o$widgetId)], c, [l, u]) : "pressHold" === s ? ep.n("argsOnCanvasPressHold", [ep.o(o$widgetId)], c, [l, u]) : ep.n("argsOnCanvasPressOut", [ep.o(o$widgetId)], c, [l, u])
+        return "press" === s ? Module_4.n("argsOnCanvasPress", [Module_4.o(o$widgetId)], c, [l, u]) : "pressIn" === s ? Module_4.n("argsOnCanvasPressIn", [Module_4.o(o$widgetId)], c, [l, u]) : "pressHold" === s ? Module_4.n("argsOnCanvasPressHold", [Module_4.o(o$widgetId)], c, [l, u]) : Module_4.n("argsOnCanvasPressOut", [Module_4.o(o$widgetId)], c, [l, u])
       })
       e.insertBlockSnippetGenerator("canvas_on_canvas_press_positionX", function () {
         return "canvasPressPositionX"
@@ -100,29 +100,29 @@ var lh = {
       e.insertBlockSnippetGenerator("canvas_on_canvas_swipe", function (n, r) {
         var /* [auto-meaningful-name] */tNR$widgetId = t(n, r).widgetId
         var i = e.statementToCode(n, r, "DO")
-        return i ? ep.n("onCanvasSwipe", [ep.o(tNR$widgetId)], i) : ""
+        return i ? Module_4.n("onCanvasSwipe", [Module_4.o(tNR$widgetId)], i) : ""
       })
       e.insertBlockSnippetGenerator("canvas_clear_all_brush", function (e, n) {
         var /* [auto-meaningful-name] */tEN$widgetId = t(e, n).widgetId
-        return ep.n("clearCanvasBrush", [ep.o(tEN$widgetId)])
+        return Module_4.n("clearCanvasBrush", [Module_4.o(tEN$widgetId)])
       })
       e.insertBlockSnippetGenerator("canvas_to_data_url", function (e, n) {
         var /* [auto-meaningful-name] */tEN$widgetId = t(e, n).widgetId
-        return ep.r("canvasToDataUrl", [ep.o(tEN$widgetId)])
+        return Module_4.r("canvasToDataUrl", [Module_4.o(tEN$widgetId)])
       })
       e.insertBlockSnippetGenerator("canvas_set_background_image", function (n, r) {
         var o = t(n, r)
         var /* [auto-meaningful-name] */o$block = o.block
         var /* [auto-meaningful-name] */o$widgetId = o.widgetId
         var s = e.valueToCode(n, r, "IMAGE_FILE_ID", e.ORDER_FUNCTION_CALL)
-        return s ? ep.l(ep.n("setCanvasBackgroundImageId", [ep.o(o$widgetId), s]), o$block, e) : ""
+        return s ? Module_4.l(Module_4.n("setCanvasBackgroundImageId", [Module_4.o(o$widgetId), s]), o$block, e) : ""
       })
       e.insertBlockSnippetGenerator("canvas_set_visible", function (n, r) {
         var o = t(n, r)
         var /* [auto-meaningful-name] */o$block = o.block
         var /* [auto-meaningful-name] */o$widgetId = o.widgetId
         var s = "show" === e.getFieldValue(o$block, "DISPLAY")
-        return ep.n("setWidgetVisible", [ep.o(o$widgetId), s])
+        return Module_4.n("setWidgetVisible", [Module_4.o(o$widgetId), s])
       })
       e.insertBlockSnippetGenerator("canvas_set_size", function (n, r) {
         var o = t(n, r)
@@ -130,7 +130,7 @@ var lh = {
         var /* [auto-meaningful-name] */o$widgetId = o.widgetId
         var s = e.valueToCode(n, r, "NUM", e.ORDER_FUNCTION_CALL)
         var c = "width" === e.getFieldValue(o$block, "SIZE_TYPE") ? "setWidgetWidth" : "setWidgetHeight"
-        return ep.l(ep.n(c, [ep.o(o$widgetId), s]), o$block, e, true)
+        return Module_4.l(Module_4.n(c, [Module_4.o(o$widgetId), s]), o$block, e, true)
       })
       e.insertBlockSnippetGenerator("canvas_set_position", function (n, r) {
         var o = t(n, r)
@@ -138,40 +138,40 @@ var lh = {
         var /* [auto-meaningful-name] */o$widgetId = o.widgetId
         var s = e.valueToCode(n, r, "NUM", e.ORDER_FUNCTION_CALL)
         var c = "positionX" === e.getFieldValue(o$block, "POSITION_TYPE") ? "setWidgetPositionX" : "setWidgetPositionY"
-        return ep.l(ep.n(c, [ep.o(o$widgetId), s]), o$block, e, true)
+        return Module_4.l(Module_4.n(c, [Module_4.o(o$widgetId), s]), o$block, e, true)
       })
       e.insertBlockSnippetGenerator("canvas_set_background_color", function (n, r) {
         var o = t(n, r)
         var /* [auto-meaningful-name] */o$block = o.block
         var /* [auto-meaningful-name] */o$widgetId = o.widgetId
         var s = e.valueToCode(n, r, "COLOR", e.ORDER_FUNCTION_CALL)
-        return ep.l(ep.n("setWidgetAttribute", [ep.o(o$widgetId), ep.o("backgroundColor"), s]), o$block, e)
+        return Module_4.l(Module_4.n("setWidgetAttribute", [Module_4.o(o$widgetId), Module_4.o("backgroundColor"), s]), o$block, e)
       })
       e.insertBlockSnippetGenerator("canvas_get_size", function (n, r) {
         var o = t(n, r)
         var /* [auto-meaningful-name] */o$block = o.block
         var /* [auto-meaningful-name] */o$widgetId = o.widgetId
         var s = "width" === e.getFieldValue(o$block, "SIZE_TYPE") ? "getWidgetWidth" : "getWidgetHeight"
-        return ep.s(s, [ep.o(o$widgetId)])
+        return Module_4.s(s, [Module_4.o(o$widgetId)])
       })
       e.insertBlockSnippetGenerator("canvas_get_position", function (n, r) {
         var o = t(n, r)
         var /* [auto-meaningful-name] */o$block = o.block
         var /* [auto-meaningful-name] */o$widgetId = o.widgetId
         var s = "positionX" === e.getFieldValue(o$block, "POSITION_TYPE") ? "getWidgetPositionX" : "getWidgetPositionY"
-        return ep.s(s, [ep.o(o$widgetId)])
+        return Module_4.s(s, [Module_4.o(o$widgetId)])
       })
       e.insertBlockSnippetGenerator("canvas_get_background_color", function (e, n) {
         var /* [auto-meaningful-name] */tEN$widgetId = t(e, n).widgetId
-        return ep.s("getWidgetAttribute", [ep.o(tEN$widgetId), ep.o("backgroundColor")])
+        return Module_4.s("getWidgetAttribute", [Module_4.o(tEN$widgetId), Module_4.o("backgroundColor")])
       })
       e.insertBlockSnippetGenerator("canvas_get_background_image", function (e, n) {
         var /* [auto-meaningful-name] */tEN$widgetId = t(e, n).widgetId
-        return ep.s("getCanvasBackgroundImageName", [ep.o(tEN$widgetId)])
+        return Module_4.s("getCanvasBackgroundImageName", [Module_4.o(tEN$widgetId)])
       })
       e.insertBlockSnippetGenerator("canvas_check_if_pressed", function (e, n) {
         var /* [auto-meaningful-name] */tEN$widgetId = t(e, n).widgetId
-        return ep.s("checkIfCanvasPressed", [ep.o(tEN$widgetId)])
+        return Module_4.s("checkIfCanvasPressed", [Module_4.o(tEN$widgetId)])
       })
     },
     setBlockGroupProfile: function (e, t) {
@@ -181,14 +181,14 @@ var lh = {
         name: "WIDGET_ID",
         custom: true,
         options: function () {
-          return $_46_index.c().getWidgetListByType("CANVAS_WIDGET")
+          return Module_46.c().getWidgetListByType("CANVAS_WIDGET")
         }
       }
       e.insertBlockProfile("canvas_on_canvas_press", {
         type: "canvas_on_canvas_press",
         message0: "%{BKY_CANVAS_ON_CANVAS_PRESS_MSG0}",
         args0: [
-          ep.e(BKY_BLOCK_TAB_ICON, true), D.a({}, r), {
+          Module_4.e(BKY_BLOCK_TAB_ICON, true), Module_6.a({}, r), {
             type: "field_coco_dropdown",
             name: "PRESS_EVENT",
             custom: true,
@@ -239,7 +239,7 @@ var lh = {
       e.insertBlockProfile("canvas_on_canvas_swipe", {
         type: "canvas_on_canvas_swipe",
         message0: "%{BKY_CANVAS_ON_CANVAS_SWIPE}",
-        args0: [ep.e(BKY_BLOCK_TAB_ICON, true), D.a({}, r)],
+        args0: [Module_4.e(BKY_BLOCK_TAB_ICON, true), Module_6.a({}, r)],
         message1: "%1",
         args1: [
           {
@@ -253,7 +253,7 @@ var lh = {
       e.insertBlockProfile("canvas_clear_all_brush", {
         type: "canvas_clear_all_brush",
         message0: "%{BKY_CANVAS_CLEAR_ALL_BRUSH}",
-        args0: [D.a({}, r)],
+        args0: [Module_6.a({}, r)],
         previousStatement: true,
         nextStatement: true,
         colour: "%{BKY_APPEARANCE_HUE}"
@@ -261,7 +261,7 @@ var lh = {
       e.insertBlockProfile("canvas_to_data_url", {
         type: "canvas_to_data_url",
         message0: "%{BKY_CANVAS_TO_DATA_URL}",
-        args0: [D.a({}, r)],
+        args0: [Module_6.a({}, r)],
         colour: "%{BKY_APPEARANCE_HUE}",
         output: ["String"]
       })
@@ -269,7 +269,7 @@ var lh = {
         type: "canvas_set_visible",
         message0: "%{BKY_CANVAS_SET_VISIBLE}",
         args0: [
-          D.a({}, r), {
+          Module_6.a({}, r), {
             type: "field_coco_dropdown",
             name: "DISPLAY",
             custom: true,
@@ -284,7 +284,7 @@ var lh = {
         type: "canvas_set_position",
         message0: "%{BKY_CANVAS_SET_PROPERTY}",
         args0: [
-          D.a({}, r), {
+          Module_6.a({}, r), {
             type: "field_coco_dropdown",
             name: "POSITION_TYPE",
             custom: true,
@@ -304,7 +304,7 @@ var lh = {
         type: "canvas_set_size",
         message0: "%{BKY_CANVAS_SET_PROPERTY}",
         args0: [
-          D.a({}, r), {
+          Module_6.a({}, r), {
             type: "field_coco_dropdown",
             name: "SIZE_TYPE",
             custom: true,
@@ -318,7 +318,7 @@ var lh = {
                   i.set_value(t)
                   i.set_constraints(r, n, 1)
                 }
-              }(this, "100", "width" === t ? $_244.g : $_244.f, "width" === t ? $_244.i : $_244.h)
+              }(this, "100", "width" === t ? Module_244.g : Module_244.f, "width" === t ? Module_244.i : Module_244.h)
             }
           }, {
             type: "input_value",
@@ -335,7 +335,7 @@ var lh = {
         type: "canvas_set_background_color",
         message0: "%{BKY_CANVAS_SET_BACKGROUND_COLOR}",
         args0: [
-          D.a({}, r), {
+          Module_6.a({}, r), {
             type: "input_value",
             check: ["Color", "String"],
             name: "COLOR"
@@ -350,7 +350,7 @@ var lh = {
         type: "canvas_set_background_image",
         message0: "%{BKY_CANVAS_SET_BACKGROUND_IMAGE}",
         args0: [
-          D.a({}, r), {
+          Module_6.a({}, r), {
             type: "input_value",
             name: "IMAGE_FILE_ID",
             check: ["String"]
@@ -365,7 +365,7 @@ var lh = {
         type: "canvas_get_size",
         message0: "%{BKY_CANVAS_GET_PROPERTY}",
         args0: [
-          D.a({}, r), {
+          Module_6.a({}, r), {
             type: "field_coco_dropdown",
             name: "SIZE_TYPE",
             custom: true,
@@ -380,7 +380,7 @@ var lh = {
         type: "canvas_get_position",
         message0: "%{BKY_CANVAS_GET_PROPERTY}",
         args0: [
-          D.a({}, r), {
+          Module_6.a({}, r), {
             type: "field_coco_dropdown",
             name: "POSITION_TYPE",
             custom: true,
@@ -394,7 +394,7 @@ var lh = {
       e.insertBlockProfile("canvas_get_background_color", {
         type: "canvas_get_background_color",
         message0: "%{BKY_CANVAS_GET_BACKGROUND_COLOR}",
-        args0: [D.a({}, r)],
+        args0: [Module_6.a({}, r)],
         output: ["String", "Color"],
         colour: "%{BKY_APPEARANCE_HUE}",
         inputsInline: true
@@ -402,7 +402,7 @@ var lh = {
       e.insertBlockProfile("canvas_get_background_image", {
         type: "canvas_get_background_image",
         message0: "%{BKY_CANVAS_GET_BACKGROUND_IMAGE}",
-        args0: [D.a({}, r)],
+        args0: [Module_6.a({}, r)],
         output: ["String"],
         colour: "%{BKY_APPEARANCE_HUE}",
         inputsInline: true
@@ -410,7 +410,7 @@ var lh = {
       e.insertBlockProfile("canvas_check_if_pressed", {
         type: "canvas_check_if_pressed",
         message0: "%{BKY_CANVAS_CHECK_IF_PRESSED}",
-        args0: [D.a({}, r)],
+        args0: [Module_6.a({}, r)],
         output: "Boolean",
         colour: "%{BKY_APPEARANCE_HUE}",
         inputsInline: true
@@ -440,7 +440,7 @@ var uh = [
     type: "WidgetOpacity"
   }, {
     type: "Size",
-    sizeRange: [[$_244.i, $_244.g], [$_244.h, $_244.f]]
+    sizeRange: [[Module_244.i, Module_244.g], [Module_244.h, Module_244.f]]
   }, {
     type: "Coordinate"
   }

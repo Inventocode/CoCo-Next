@@ -11,8 +11,8 @@ export { a as e }
 export { s as b }
 export { c }
 export { l as a }
-import { useSelector } from "react-redux"
-import * as o from "./9"
+import { useSelector } from /* 16 */"react-redux"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"./9"
 function i() {
   return useSelector(function (e) {
     var /* [auto-meaningful-name] */e$project = e.project
@@ -46,11 +46,11 @@ function l() {
   var t = []
   if (e) {
     e.widgetIds.forEach(function (e) {
-      var n = o.Bb(e)
+      var n = Module_9.Bb(e)
       if (n) {
         var /* [auto-meaningful-name] */n$type = n.type
         if (n && !t.includes(n$type)) {
-          var i = o.Db(n.type)
+          var i = Module_9.Db(n.type)
           if (i && i.hasAnyWidget) {
             t.push(n.type)
           }

@@ -4,4 +4,4 @@
  * 模块 ID：1590
  */
 
-require("./1581/442/index")("replace")
+require(/* 442 */"./1581/442/index")("replace")

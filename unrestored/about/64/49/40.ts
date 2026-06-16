@@ -7,7 +7,7 @@
 "use strict"
 
 export { i as a }
-import * as r from "./9"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"./9"
 function i(e, t) {
   try {
     for (var n = e, r = [], i = 0, a = 0, /* [auto-meaningful-name] */$length = " > ".length, u = undefined; n && i++ < 5 && !("html" === (u = o(n, t)) || i > 1 && a + r.length * $length + u.length >= 80);) {
@@ -43,7 +43,7 @@ function o(e, t) {
     d.forEach(function (e) {
       f.push("[" + e[0] + "=\"" + e[1] + "\"]")
     })
-  } else if (c.id && f.push("#" + c.id), (c$className = c.className) && r.k(c$className)) {
+  } else if (c.id && f.push("#" + c.id), (c$className = c.className) && Module_9.k(c$className)) {
     for (a = c$className.split(/\s+/), l = 0; l < a.length; l++) {
       f.push("." + a[l])
     }

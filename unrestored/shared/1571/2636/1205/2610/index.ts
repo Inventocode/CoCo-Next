@@ -10,7 +10,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.init_data_blocks = undefined
-var r = require("./581")
+var r = require(/* 581 */"./581")
 exports.init_data_blocks = function (e, t) {
   var n = [
     {

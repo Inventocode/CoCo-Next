@@ -7,8 +7,8 @@
 "use strict"
 
 var r
-var i = require("../399/index")
-var o = require("./2238")
+var i = require(/* 399 */"../399/index")
+var o = require(/* 2238 */"./2238")
 var a = Object.freeze(Object.keys(o))
 var s = i(a)
 try {

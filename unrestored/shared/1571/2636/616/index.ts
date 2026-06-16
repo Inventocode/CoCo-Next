@@ -6,5 +6,5 @@
 
 "use strict"
 
-var r = require("./802")
+var r = require(/* 802 */"./802")
 exports.a = r.b

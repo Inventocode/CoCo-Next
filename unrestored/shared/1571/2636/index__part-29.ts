@@ -6,85 +6,85 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
-import * as Tn from "./68"
-import * as /* [auto-meaningful-name] */$_133 from "./133"
-import * as Et from "./9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import * as k from "./11"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import * as /* [auto-meaningful-name] */$_748_index from "./748/index"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import { useDispatch, useSelector, batch } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { memo, useState } from "react"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Module_68 from /* 68 */"./68"
+import * as /* [auto-meaningful-name] */Module_133 from /* 133 */"./133"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"./9"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"./11"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import * as /* [auto-meaningful-name] */Module_748 from /* 748 */"./748/index"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import { useDispatch, useSelector, batch } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo, useState } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */Lodash from "lodash"
-import /* [auto-meaningful-name] */Lodash1 from "lodash"
-import * as Qu from "./60"
-import * as /* [auto-meaningful-name] */$_381 from "./381"
-import /* [auto-meaningful-name] */$_3811 from "./381"
+import * as /* [auto-meaningful-name] */Lodash from /* 30 */"lodash"
+import /* [auto-meaningful-name] */Lodash1 from /* 30 */"lodash"
+import * as /* [auto-meaningful-name] */Module_60 from /* 60 */"./60"
+import * as /* [auto-meaningful-name] */Module_381 from /* 381 */"./381"
+import /* [auto-meaningful-name] */Module_3811 from /* 381 */"./381"
 var $u = memo(function () {
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var t = useDispatch()
   var n = useSelector(function (e) {
     return e.project.selectedWidgetId
   })
   return React.createElement("div", {
-    className: $_3811.imageAddon
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.B, {
+    className: Module_3811.imageAddon
+  }, React.createElement(Src_shared_ui_components_index.B, {
     onChange: function (e) {
       if (e && n) {
-        t($$_$$_$$_$$_src_editor_redux_common_actions.Zf(e, function (e) {
-          t($$_$$_$$_$$_src_editor_redux_common_actions.Yf(e[0], n))
+        t(Src_editor_redux_common_actions.Zf(e, function (e) {
+          t(Src_editor_redux_common_actions.Yf(e[0], n))
         }))
       }
     },
-    accept: $_133.f,
-    tooltip: $_710$a$formatMessage({
+    accept: Module_133.f,
+    tooltip: Module_710$a$formatMessage({
       id: "uploadFileByLocal"
     })
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-upload-image",
-    className: Classnames($_3811.item)
+    className: Classnames(Module_3811.item)
   })), React.createElement("div", {
-    className: $_3811.gap
-  }), React.createElement($_748_index.a, {
+    className: Module_3811.gap
+  }), React.createElement(Module_748.a, {
     placement: "right",
-    title: $_710$a$formatMessage({
+    title: Module_710$a$formatMessage({
       id: "resourceLibrary"
     }),
     trigger: ["hover", "click"]
   }, React.createElement("div", {
     onClick: function () {
       if (n) {
-        t($$_$$_$$_$$_src_editor_redux_common_actions.wj(Tn.c.ImageLibrary, function (e) {
+        t(Src_editor_redux_common_actions.wj(Module_68.c.ImageLibrary, function (e) {
           batch(function () {
-            var r = Et.hb(e[0].id)
+            var r = Module_9.hb(e[0].id)
             if (r) {
-              t($$_$$_$$_$$_src_editor_redux_common_actions.Yf(r, n))
+              t(Src_editor_redux_common_actions.Yf(r, n))
             }
-            t($$_$$_$$_$$_src_editor_redux_common_actions.sh())
+            t(Src_editor_redux_common_actions.sh())
           })
         }))
       }
     }
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-image-library",
-    className: Classnames($_3811.item)
+    className: Classnames(Module_3811.item)
   }))))
 })
 var ed = memo(function () {
   var e = useDispatch()
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var n = useSelector(function (e) {
     return e.common.widgetAttributeVisible
   })
-  return React.createElement($_748_index.a, {
+  return React.createElement(Module_748.a, {
     placement: "right",
-    title: $_710$a$formatMessage({
+    title: Module_710$a$formatMessage({
       id: "edit"
     }),
     trigger: ["hover", "click"]
@@ -92,19 +92,19 @@ var ed = memo(function () {
     onClick: function () {
       var t = !n
       batch(function () {
-        e($$_$$_$$_$$_src_editor_redux_common_actions.fj(t))
+        e(Src_editor_redux_common_actions.fj(t))
         if (t) {
-          e($$_$$_$$_$$_src_editor_redux_common_actions.Fj(false))
+          e(Src_editor_redux_common_actions.Fj(false))
         }
       })
     }
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-attribute",
-    className: Classnames($_3811.iconButton, $_3811.editIcon)
+    className: Classnames(Module_3811.iconButton, Module_3811.editIcon)
   })))
 })
 var td = function () {
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var t = useSelector(function (e) {
     return e.project.selectedWidgetId
   })
@@ -112,22 +112,22 @@ var td = function () {
     return e.common.previewAreaUpdatedAt
   })
   var r = useState(0)
-  var o = $_10_index.a(r, 2)
+  var o = Module_10.a(r, 2)
   var i = o[0]
   var a = o[1]
-  var s = Et.Bb(t || "")
+  var s = Module_9.Bb(t || "")
   var c = useDispatch()
-  if (!s || s.type !== $$_$$_$$_$$_src_editor_widget_builtIn_types.C && s.type !== $$_$$_$$_$$_src_editor_widget_builtIn_types.g) {
+  if (!s || s.type !== Src_editor_widget_builtIn_types.C && s.type !== Src_editor_widget_builtIn_types.g) {
     return React.createElement(React.Fragment, null)
   }
   var /* [auto-meaningful-name] */s$attributes$options = s.attributes.options
   return React.createElement("div", {
     "data-should-update": n,
-    className: $_3811.radioActions,
+    className: Module_3811.radioActions,
     "data-should-update-area": i
-  }, React.createElement($_748_index.a, {
+  }, React.createElement(Module_748.a, {
     placement: "bottom",
-    title: $_710$a$formatMessage({
+    title: Module_710$a$formatMessage({
       id: "deleteOption"
     }),
     trigger: ["hover", "click"]
@@ -135,15 +135,15 @@ var td = function () {
     onClick: function () {
       if (s && s$attributes$options.length > 1) {
         a(Date.now())
-        c($$_$$_$$_$$_src_editor_redux_common_actions.Lg(s.id, "options", s$attributes$options.slice(0, -1)))
+        c(Src_editor_redux_common_actions.Lg(s.id, "options", s$attributes$options.slice(0, -1)))
       }
     },
-    className: Classnames(k.a({}, $_3811.disabled, 1 === s$attributes$options.length))
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+    className: Classnames(Module_11.a({}, Module_3811.disabled, 1 === s$attributes$options.length))
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-minus"
-  }))), React.createElement($_748_index.a, {
+  }))), React.createElement(Module_748.a, {
     placement: "bottom",
-    title: $_710$a$formatMessage({
+    title: Module_710$a$formatMessage({
       id: "addOption"
     }),
     trigger: ["hover", "click"]
@@ -154,47 +154,47 @@ var td = function () {
           content: "",
           state: "none"
         })
-        c($$_$$_$$_$$_src_editor_redux_common_actions.Lg(s.id, "options", s$attributes$options))
+        c(Src_editor_redux_common_actions.Lg(s.id, "options", s$attributes$options))
         a(Date.now())
       }
     },
-    className: Classnames(k.a({}, $_3811.disabled, 8 === s$attributes$options.length))
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+    className: Classnames(Module_11.a({}, Module_3811.disabled, 8 === s$attributes$options.length))
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-add"
   }))))
 }
 var nd = function () {
   var e = useDispatch()
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var n = useSelector(function (e) {
     return e.project.selectedWidgetId
   })
-  return React.createElement($_748_index.a, {
+  return React.createElement(Module_748.a, {
     placement: "right",
-    title: $_710$a$formatMessage({
+    title: Module_710$a$formatMessage({
       id: "refresh"
     }),
     trigger: ["hover", "click"]
   }, React.createElement("div", {
     onClick: function () {
       if (n) {
-        e($$_$$_$$_$$_src_editor_redux_common_actions.Lg(n, "refreshTimestamp", Date.now(), true, false))
+        e(Src_editor_redux_common_actions.Lg(n, "refreshTimestamp", Date.now(), true, false))
       }
     },
-    className: $_3811.webViewAction
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+    className: Module_3811.webViewAction
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-refresh",
-    className: Classnames($_3811.iconButton)
+    className: Classnames(Module_3811.iconButton)
   })))
 }
 var rd = function () {
   var e = useSelector(function (e) {
     return e.project.selectedWidgetId
   })
-  var t = Et.Bb(e || "")
+  var t = Module_9.Bb(e || "")
   return t ? React.createElement("div", {
-    className: $_3811.addonBox
-  }, React.createElement(ed, null), t.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.v && React.createElement($u, null), t.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.L && React.createElement(nd, null)) : React.createElement(React.Fragment, null)
+    className: Module_3811.addonBox
+  }, React.createElement(ed, null), t.type === Src_editor_widget_builtIn_types.v && React.createElement($u, null), t.type === Src_editor_widget_builtIn_types.L && React.createElement(nd, null)) : React.createElement(React.Fragment, null)
 }
 var od = {
   name: "MoveableRightAddon",

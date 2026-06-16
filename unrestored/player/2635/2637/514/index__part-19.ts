@@ -6,35 +6,35 @@
 
 "use strict"
 
-import be from "./71"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_components_index from "../../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Module_71 from /* 71 */"./71"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../../src/shared/ui/components/index"
 var ce
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_20_index from "../../../../shared/1571/2636/20/index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_738_70 from "../../../../shared/1571/2636/738/70"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_37_219_index from "../../../../shared/1571/2636/37/219/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_48_72 from "../../../../shared/1571/2636/48/72"
-import { useDispatch, useSelector } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { memo, useState, useEffect } from "react"
+import * as /* [auto-meaningful-name] */Module_20 from /* 20 */"../../../../shared/1571/2636/20/index"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_70 from /* 70 */"../../../../shared/1571/2636/738/70"
+import * as /* [auto-meaningful-name] */Module_219 from /* 219 */"../../../../shared/1571/2636/37/219/index"
+import * as /* [auto-meaningful-name] */Module_72 from /* 72 */"../../../../shared/1571/2636/48/72"
+import { useDispatch, useSelector } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo, useState, useEffect } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_10_index from "../../../../shared/1571/2636/10/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_710 from "../../../../shared/1571/2636/710"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../../../../shared/1571/2636/10/index"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../../../../shared/1571/2636/710"
 var ye = memo(function () {
   var t = useDispatch()
-  var /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_710$a$formatMessage = $$_$$_$$_$$_shared_1571_2636_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var n = useSelector(function (t) {
     return t.emulatorPhoneInfo
   })
   var r = useState(0)
-  var i = $$_$$_$$_$$_shared_1571_2636_10_index.a(r, 2)
+  var i = Module_10.a(r, 2)
   var o = i[0]
   var a = i[1]
   useEffect(function () {
     if (ce) {
       clearInterval(ce)
     }
-    if (n.callingPageVisible && n.callStatus === $$_$$_$$_$$_shared_1571_2636_738_70.b.OFFHOOK) {
+    if (n.callingPageVisible && n.callStatus === Module_70.b.OFFHOOK) {
       var t = 0
       ce = setInterval(function () {
         t++
@@ -54,97 +54,97 @@ var ye = memo(function () {
     return "".concat(e < 10 ? "0" : "").concat(e, " : ").concat(n < 10 ? "0" : "").concat(n)
   }
   var u = function () {
-    t($$_$$_$$_$$_shared_1571_2636_48_72.s({
+    t(Module_72.s({
       callingPageVisible: false,
-      callStatus: $$_$$_$$_$$_shared_1571_2636_738_70.b.IDEL
+      callStatus: Module_70.b.IDEL
     }))
-    $$_$$_$$_$$_shared_1571_2636_20_index.emitWidgetEvent($$_$$_$$_$$_shared_1571_2636_738_70.c, "onPhoneCallEnd", n.phoneDialWidgetId, $$_$$_$$_$$_shared_1571_2636_738_70.a.DIAL_OUT_CALL_END)
-    $$_$$_$$_$$_shared_1571_2636_37_219_index.b({
+    Module_20.emitWidgetEvent(Module_70.c, "onPhoneCallEnd", n.phoneDialWidgetId, Module_70.a.DIAL_OUT_CALL_END)
+    Module_219.b({
       phoneCallInfo: {
         callType: "dialOutCall",
-        callStatus: $$_$$_$$_$$_shared_1571_2636_738_70.b.IDEL
+        callStatus: Module_70.b.IDEL
       }
     })
   }
   var l = function () {
-    $$_$$_$$_$$_shared_1571_2636_20_index.emitWidgetEventType($$_$$_$$_$$_shared_1571_2636_738_70.c, "onPhoneCallEnd", n.callStatus === $$_$$_$$_$$_shared_1571_2636_738_70.b.RINGING ? $$_$$_$$_$$_shared_1571_2636_738_70.a.INCOMING_CALL_REFUSE_END : $$_$$_$$_$$_shared_1571_2636_738_70.a.INCOMING_CALL_CONNECT_END)
-    t($$_$$_$$_$$_shared_1571_2636_48_72.s({
+    Module_20.emitWidgetEventType(Module_70.c, "onPhoneCallEnd", n.callStatus === Module_70.b.RINGING ? Module_70.a.INCOMING_CALL_REFUSE_END : Module_70.a.INCOMING_CALL_CONNECT_END)
+    t(Module_72.s({
       callingPageVisible: false,
-      callStatus: $$_$$_$$_$$_shared_1571_2636_738_70.b.IDEL
+      callStatus: Module_70.b.IDEL
     }))
-    $$_$$_$$_$$_shared_1571_2636_37_219_index.b({
+    Module_219.b({
       phoneCallInfo: {
-        callStatus: $$_$$_$$_$$_shared_1571_2636_738_70.b.IDEL
+        callStatus: Module_70.b.IDEL
       }
     })
   }
   var d = function () {
-    t($$_$$_$$_$$_shared_1571_2636_48_72.s({
-      callStatus: $$_$$_$$_$$_shared_1571_2636_738_70.b.OFFHOOK
+    t(Module_72.s({
+      callStatus: Module_70.b.OFFHOOK
     }))
-    $$_$$_$$_$$_shared_1571_2636_20_index.emitWidgetEventType($$_$$_$$_$$_shared_1571_2636_738_70.c, "onConnectReceivePhoneCall")
-    $$_$$_$$_$$_shared_1571_2636_37_219_index.b({
+    Module_20.emitWidgetEventType(Module_70.c, "onConnectReceivePhoneCall")
+    Module_219.b({
       phoneCallInfo: {
-        callStatus: $$_$$_$$_$$_shared_1571_2636_738_70.b.OFFHOOK
+        callStatus: Module_70.b.OFFHOOK
       }
     })
   }
   return React.createElement("div", {
-    className: Classnames(be.callingBox, !n.callingPageVisible && be.callingBoxHide)
+    className: Classnames(Module_71.callingBox, !n.callingPageVisible && Module_71.callingBoxHide)
   }, "dialOutCall" === n.callType && React.createElement(React.Fragment, null, React.createElement("div", {
-    className: be.phoneNumber
-  }, n.phoneNumber), n.callStatus === $$_$$_$$_$$_shared_1571_2636_738_70.b.RINGING && React.createElement("div", {
-    className: be.phoneStatus
-  }, $$_$$_$$_$$_shared_1571_2636_710$a$formatMessage({
+    className: Module_71.phoneNumber
+  }, n.phoneNumber), n.callStatus === Module_70.b.RINGING && React.createElement("div", {
+    className: Module_71.phoneStatus
+  }, Module_710$a$formatMessage({
     id: "emulator.onRinging"
-  })), n.callStatus === $$_$$_$$_$$_shared_1571_2636_738_70.b.OFFHOOK && React.createElement("div", {
-    className: be.phoneStatus
+  })), n.callStatus === Module_70.b.OFFHOOK && React.createElement("div", {
+    className: Module_71.phoneStatus
   }, s(o)), React.createElement("div", {
-    className: Classnames(be.callBtnBox, be.flexCC)
+    className: Classnames(Module_71.callBtnBox, Module_71.flexCC)
   }, React.createElement("div", {
-    className: be.callBtnItemBox,
+    className: Module_71.callBtnItemBox,
     onClick: u
   }, React.createElement("div", {
-    className: Classnames(be.callBtnItem, be.callEnd)
-  }, React.createElement($$_$$_$$_$$_$$_src_shared_ui_components_index.j, {
+    className: Classnames(Module_71.callBtnItem, Module_71.callEnd)
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-phone-call-disconnect"
   })), React.createElement("span", {
-    className: be.callBtnText
-  }, $$_$$_$$_$$_shared_1571_2636_710$a$formatMessage({
+    className: Module_71.callBtnText
+  }, Module_710$a$formatMessage({
     id: "emulator.callEnd"
   }))))), "incomingCall" === n.callType && React.createElement(React.Fragment, null, React.createElement("div", {
-    className: be.phoneNumber
-  }, n.phoneNumber), n.callStatus === $$_$$_$$_$$_shared_1571_2636_738_70.b.RINGING && React.createElement("div", {
-    className: be.phoneStatus
-  }, $$_$$_$$_$$_shared_1571_2636_710$a$formatMessage({
+    className: Module_71.phoneNumber
+  }, n.phoneNumber), n.callStatus === Module_70.b.RINGING && React.createElement("div", {
+    className: Module_71.phoneStatus
+  }, Module_710$a$formatMessage({
     id: "emulator.phoneNumber"
-  })), n.callStatus === $$_$$_$$_$$_shared_1571_2636_738_70.b.OFFHOOK && React.createElement("div", {
-    className: be.phoneStatus
+  })), n.callStatus === Module_70.b.OFFHOOK && React.createElement("div", {
+    className: Module_71.phoneStatus
   }, s(o)), React.createElement("div", {
-    className: Classnames(be.callBtnBox, n.callStatus === $$_$$_$$_$$_shared_1571_2636_738_70.b.RINGING ? be.flexSC : be.flexCC)
+    className: Classnames(Module_71.callBtnBox, n.callStatus === Module_70.b.RINGING ? Module_71.flexSC : Module_71.flexCC)
   }, React.createElement("div", {
-    className: be.callBtnItemBox,
+    className: Module_71.callBtnItemBox,
     onClick: l
   }, React.createElement("div", {
-    className: Classnames(be.callBtnItem, be.callEnd)
-  }, React.createElement($$_$$_$$_$$_$$_src_shared_ui_components_index.j, {
+    className: Classnames(Module_71.callBtnItem, Module_71.callEnd)
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-phone-call-disconnect"
   })), React.createElement("span", {
-    className: be.callBtnText
-  }, n.callStatus === $$_$$_$$_$$_shared_1571_2636_738_70.b.RINGING ? $$_$$_$$_$$_shared_1571_2636_710$a$formatMessage({
+    className: Module_71.callBtnText
+  }, n.callStatus === Module_70.b.RINGING ? Module_710$a$formatMessage({
     id: "emulator.callRefuse"
-  }) : $$_$$_$$_$$_shared_1571_2636_710$a$formatMessage({
+  }) : Module_710$a$formatMessage({
     id: "emulator.callEnd"
-  }))), n.callStatus === $$_$$_$$_$$_shared_1571_2636_738_70.b.RINGING && React.createElement("div", {
-    className: be.callBtnItemBox,
+  }))), n.callStatus === Module_70.b.RINGING && React.createElement("div", {
+    className: Module_71.callBtnItemBox,
     onClick: d
   }, React.createElement("div", {
-    className: Classnames(be.callBtnItem, be.callConnect)
-  }, React.createElement($$_$$_$$_$$_$$_src_shared_ui_components_index.j, {
+    className: Classnames(Module_71.callBtnItem, Module_71.callConnect)
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-phone-call-dial"
   })), React.createElement("span", {
-    className: be.callBtnText
-  }, $$_$$_$$_$$_shared_1571_2636_710$a$formatMessage({
+    className: Module_71.callBtnText
+  }, Module_710$a$formatMessage({
     id: "emulator.callConnect"
   }))))))
 })

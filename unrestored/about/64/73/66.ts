@@ -7,20 +7,20 @@
 "use strict"
 
 export { l as a }
-import * as r from "./0"
-import * as i from "./15"
-import * as /* [auto-meaningful-name] */$_11_10 from "./11/10"
-import * as a from "./43"
+import * as /* [auto-meaningful-name] */Module_0 from /* 0 */"./0"
+import * as /* [auto-meaningful-name] */Module_15 from /* 15 */"./15"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./11/10"
+import * as /* [auto-meaningful-name] */Module_43 from /* 43 */"./43"
 function s(e, t) {
   return t ? Object.keys(e).reduce(function (n, i) {
     var o
     var a
-    n[i] = (o = e[i], (a = t[i]) ? r.a(r.a(r.a({}, o || {}), a || {}), Object.keys(o).reduce(function (e, t) {
-      e[t] = r.a(r.a({}, o[t]), a[t] || {})
+    n[i] = (o = e[i], (a = t[i]) ? Module_0.a(Module_0.a(Module_0.a({}, o || {}), a || {}), Object.keys(o).reduce(function (e, t) {
+      e[t] = Module_0.a(Module_0.a({}, o[t]), a[t] || {})
       return e
     }, {})) : o)
     return n
-  }, r.a({}, e)) : e
+  }, Module_0.a({}, e)) : e
 }
 function u(e) {
   return {
@@ -54,7 +54,7 @@ var l = function () {
         return t[0].value
       }
       var n = t.reduce(function (e, t) {
-        if (e.length && t.type === a.a.literal && "string" === typeof e[e.length - 1]) {
+        if (e.length && t.type === Module_43.a.literal && "string" === typeof e[e.length - 1]) {
           e[e.length - 1] += t.value
         } else {
           e.push(t.value)
@@ -64,7 +64,7 @@ var l = function () {
       return n.length <= 1 ? n[0] || "" : n
     }
     this.formatToParts = function (e) {
-      return a.b(f.ast, f.locales, f.formatters, f.formats, e, undefined, f.message)
+      return Module_43.b(f.ast, f.locales, f.formatters, f.formats, e, undefined, f.message)
     }
     this.resolvedOptions = function () {
       return {
@@ -95,32 +95,32 @@ var l = function () {
       dateTime: {},
       pluralRules: {}
     }), {
-      getNumberFormat: $_11_10.a(function () {
+      getNumberFormat: Module_10.a(function () {
         for (var /* [auto-meaningful-name] */Intl$NumberFormat, t = [], n = 0; n < arguments.length; n++) {
           t[n] = arguments[n]
         }
-        return new ((Intl$NumberFormat = Intl.NumberFormat).bind.apply(Intl$NumberFormat, r.d([undefined], t)))()
+        return new ((Intl$NumberFormat = Intl.NumberFormat).bind.apply(Intl$NumberFormat, Module_0.d([undefined], t)))()
       }, {
         cache: u(c.number),
-        strategy: $_11_10.b.variadic
+        strategy: Module_10.b.variadic
       }),
-      getDateTimeFormat: $_11_10.a(function () {
+      getDateTimeFormat: Module_10.a(function () {
         for (var /* [auto-meaningful-name] */Intl$DateTimeFormat, t = [], n = 0; n < arguments.length; n++) {
           t[n] = arguments[n]
         }
-        return new ((Intl$DateTimeFormat = Intl.DateTimeFormat).bind.apply(Intl$DateTimeFormat, r.d([undefined], t)))()
+        return new ((Intl$DateTimeFormat = Intl.DateTimeFormat).bind.apply(Intl$DateTimeFormat, Module_0.d([undefined], t)))()
       }, {
         cache: u(c.dateTime),
-        strategy: $_11_10.b.variadic
+        strategy: Module_10.b.variadic
       }),
-      getPluralRules: $_11_10.a(function () {
+      getPluralRules: Module_10.a(function () {
         for (var /* [auto-meaningful-name] */Intl$PluralRules, t = [], n = 0; n < arguments.length; n++) {
           t[n] = arguments[n]
         }
-        return new ((Intl$PluralRules = Intl.PluralRules).bind.apply(Intl$PluralRules, r.d([undefined], t)))()
+        return new ((Intl$PluralRules = Intl.PluralRules).bind.apply(Intl$PluralRules, Module_0.d([undefined], t)))()
       }, {
         cache: u(c.pluralRules),
-        strategy: $_11_10.b.variadic
+        strategy: Module_10.b.variadic
       })
     })
   }
@@ -135,7 +135,7 @@ var l = function () {
     configurable: true
   })
   e.memoizedDefaultLocale = null
-  e.__parse = i.m
+  e.__parse = Module_15.m
   e.formats = {
     number: {
       integer: {

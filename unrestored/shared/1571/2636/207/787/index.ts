@@ -6,37 +6,37 @@
 
 "use strict"
 
-var r = require("regenerator-runtime")
-var i = require("./500")
-var o = require("./180")
-var a = require("./204")
-var s = require("./819")
-var c = require("./572/index")
-var u = require("./711/index")
-var l = require("./399/index")
-var f = require("./1215")
-var d = require("./2227/index")
-var h = require("./777/index")
-var p = require("./1361/index")
-var _ = require("lodash")
-var A = require("./1363/index")
-var g = require("./2247")
-var v = require("./979")
-var m = require("./1133")
-var y = require("./2248/index")
-var b = require("./1373")
-var /* [auto-meaningful-name] */require$_2292_index$SourceCode = require("./2292/index").SourceCode
-var E = require("./2303/index")
-var x = require("./2307")
-var C = require("./2308/index")
-var O = require("./2319/index")
-var k = require("./2321/index")
-var S = require("./1142/index")
-var T = require("./2324")
-var B = require("./2325")
-var D = require("./2326")
-var I = require("./2327")
-var R = require("./818/index")("eslint:linter")
+var r = require(/* 1 */"regenerator-runtime")
+var i = require(/* 500 */"./500")
+var o = require(/* 180 */"./180")
+var a = require(/* 204 */"./204")
+var s = require(/* 819 */"./819")
+var c = require(/* 572 */"./572/index")
+var u = require(/* 711 */"./711/index")
+var l = require(/* 399 */"./399/index")
+var f = require(/* 1215 */"./1215")
+var d = require(/* 2227 */"./2227/index")
+var h = require(/* 777 */"./777/index")
+var p = require(/* 1361 */"./1361/index")
+var _ = require(/* 30 */"lodash")
+var A = require(/* 1363 */"./1363/index")
+var g = require(/* 2247 */"./2247")
+var v = require(/* 979 */"./979")
+var m = require(/* 1133 */"./1133")
+var y = require(/* 2248 */"./2248/index")
+var b = require(/* 1373 */"./1373")
+var /* [auto-meaningful-name] */require_2292_$_2292_index$SourceCode = require(/* 2292 */"./2292/index").SourceCode
+var E = require(/* 2303 */"./2303/index")
+var x = require(/* 2307 */"./2307")
+var C = require(/* 2308 */"./2308/index")
+var O = require(/* 2319 */"./2319/index")
+var k = require(/* 2321 */"./2321/index")
+var S = require(/* 1142 */"./1142/index")
+var T = require(/* 2324 */"./2324")
+var B = require(/* 2325 */"./2325")
+var D = require(/* 2326 */"./2326")
+var I = require(/* 2327 */"./2327")
+var R = require(/* 818 */"./818/index")("eslint:linter")
 var F = new C()
 var P = {
   start: {
@@ -528,7 +528,7 @@ var X = function () {
         var k = o.settings || {}
         if (i.lastSourceCode) {
           if (!i.lastSourceCode.scopeManager) {
-            i.lastSourceCode = new require$_2292_index$SourceCode({
+            i.lastSourceCode = new require_2292_$_2292_index$SourceCode({
               text: i.lastSourceCode.text,
               ast: i.lastSourceCode.ast,
               parserServices: i.lastSourceCode.parserServices,
@@ -563,7 +563,7 @@ var X = function () {
               var l = a.scopeManager || U(a$ast, o, u)
               return {
                 success: true,
-                sourceCode: new require$_2292_index$SourceCode({
+                sourceCode: new require_2292_$_2292_index$SourceCode({
                   text: e,
                   ast: a$ast,
                   parserServices: c,

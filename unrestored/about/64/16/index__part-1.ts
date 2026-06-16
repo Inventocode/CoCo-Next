@@ -7,12 +7,12 @@
 "use strict"
 
 import { i } from "./index__part-0"
-import * as o from "./32"
+import * as /* [auto-meaningful-name] */Module_32 from /* 32 */"./32"
 function a(e) {
   for (var t = [], n = 1; n < arguments.length; n++) {
     t[n - 1] = arguments[n]
   }
-  var r = o.b()
+  var r = Module_32.b()
   if (r && r[e]) {
     return r[e].apply(r, i(t))
   }

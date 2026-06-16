@@ -6,12 +6,12 @@
 
 var t
 var r
-var /* [auto-meaningful-name] */require$_1378_index$parseType
+var /* [auto-meaningful-name] */require_1378_$_1378_index$parseType
 var o
 var a
-t = require("./2310/index")
-r = require("./2316")
-require$_1378_index$parseType = require("./1378/index").parseType
+t = require(/* 2310 */"./2310/index")
+r = require(/* 2316 */"./2316")
+require_1378_$_1378_index$parseType = require(/* 1378 */"./1378/index").parseType
 o = function (e, n, i) {
   if (null == i) {
     i = {}
@@ -25,7 +25,7 @@ o = function (e, n, i) {
   return r(t(e, n, i), e, i)
 }
 a = function (e, t, n) {
-  return o(require$_1378_index$parseType(e), t, n)
+  return o(require_1378_$_1378_index$parseType(e), t, n)
 }
 module.exports = {
   VERSION: "0.3.0",

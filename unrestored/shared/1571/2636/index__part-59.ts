@@ -6,7 +6,7 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$_172 from "./172"
+import * as /* [auto-meaningful-name] */Module_172 from /* 172 */"./172"
 var eh = [
   {
     type: "WidgetTitle",
@@ -25,7 +25,7 @@ var eh = [
     type: "Coordinate"
   }, {
     type: "Size",
-    sizeRange: [[$_172.k, $_172.i], [$_172.j, $_172.h]]
+    sizeRange: [[Module_172.k, Module_172.i], [Module_172.j, Module_172.h]]
   }, {
     type: "ListViewerStyleTemplate"
   }, {

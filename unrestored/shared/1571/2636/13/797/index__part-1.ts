@@ -6,8 +6,8 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_50_index from "../../50/index"
-import /* [auto-meaningful-name] */$$_$$_50_index1 from "../../50/index"
+import * as /* [auto-meaningful-name] */Module_50 from /* 50 */"../../50/index"
+import /* [auto-meaningful-name] */Module_501 from /* 50 */"../../50/index"
 var T = function () {
   this.__data__ = []
   this.size = 0

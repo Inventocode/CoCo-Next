@@ -6,7 +6,7 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_269_2674 from "../../269/2674"
+import * as /* [auto-meaningful-name] */Module_2674 from /* 2674 */"../../269/2674"
 var be = {
   set: function (e, t, n, r) {
     var i = e.get(t)

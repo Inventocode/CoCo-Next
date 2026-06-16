@@ -4,13 +4,13 @@
  * 模块 ID：1100
  */
 
-var r = require("../1785/194")
-var o = require("../1659/168")
-var i = require("../1605/948")
-var /* [auto-meaningful-name] */require$$_1758_257_index$NATIVE_ARRAY_BUFFER_VIEWS = require("../1758/257/index").NATIVE_ARRAY_BUFFER_VIEWS
+var r = require(/* 194 */"../1785/194")
+var o = require(/* 168 */"../1659/168")
+var i = require(/* 948 */"../1605/948")
+var /* [auto-meaningful-name] */require_257_$$_1758_257_index$NATIVE_ARRAY_BUFFER_VIEWS = require(/* 257 */"../1758/257/index").NATIVE_ARRAY_BUFFER_VIEWS
 var /* [auto-meaningful-name] */r$ArrayBuffer = r.ArrayBuffer
 var /* [auto-meaningful-name] */r$Int8Array = r.Int8Array
-module.exports = !require$$_1758_257_index$NATIVE_ARRAY_BUFFER_VIEWS || !o(function () {
+module.exports = !require_257_$$_1758_257_index$NATIVE_ARRAY_BUFFER_VIEWS || !o(function () {
   r$Int8Array(1)
 }) || !o(function () {
   new r$Int8Array(-1)

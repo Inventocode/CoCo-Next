@@ -10,8 +10,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.FlyoutDragger = undefined
-var r = require("tslib")
-var i = require("inversify")
+var r = require(/* 93 */"tslib")
+var i = require(/* 134 */"inversify")
 var o = function (e) {
   function t(t) {
     var n = e.call(this, t.get_workspace()) || this
@@ -29,5 +29,5 @@ var o = function (e) {
     }
   }
   return t = (0, r.__decorate)([(0, i.injectable)()], t)
-}(require("./1348").WorkspaceDragger)
+}(require(/* 1348 */"./1348").WorkspaceDragger)
 exports.FlyoutDragger = o

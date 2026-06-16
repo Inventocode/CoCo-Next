@@ -8,14 +8,14 @@
 
 import { Yh } from "./index__part-68"
 import { Am } from "../../../../src/editor/widget/built-in/http-client-and-timer"
-import * as rp from "./61"
-import * as /* [auto-meaningful-name] */$_46_index from "./46/index"
-import * as ep from "./4"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index from "../../../../src/shared/packages/@crc/blink/src/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
-import * as Et from "./9"
-import * as D from "./6"
-import * as /* [auto-meaningful-name] */$_323 from "./323"
+import * as /* [auto-meaningful-name] */Module_61 from /* 61 */"./61"
+import * as /* [auto-meaningful-name] */Module_46 from /* 46 */"./46/index"
+import * as /* [auto-meaningful-name] */Module_4 from /* 4 */"./4"
+import * as /* [auto-meaningful-name] */Src_shared_packages_Crc_blink_src_index from /* 17 */"../../../../src/shared/packages/@crc/blink/src/index"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"./9"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"./6"
+import * as /* [auto-meaningful-name] */Module_323 from /* 323 */"./323"
 var jm
 !function (e) {
   e[e.SUCCESS = 1] = "SUCCESS"
@@ -49,13 +49,13 @@ var Nm = {
         n = jm.FAILED
       }
     }
-    if (t && (this.updateShape_(), $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.is_enabled())) {
-      var r = ep.c("mutation", {
+    if (t && (this.updateShape_(), Src_shared_packages_Crc_blink_src_index.Blink.events.is_enabled())) {
+      var r = Module_4.c("mutation", {
         block: this,
         old_value: undefined,
         new_value: n
       })
-      $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.fire(r)
+      Src_shared_packages_Crc_blink_src_index.Blink.events.fire(r)
     }
   },
   removeMutation: function (e) {
@@ -70,13 +70,13 @@ var Nm = {
         t = true
       }
     }
-    if (t && (this.updateShape_(), $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.is_enabled())) {
-      var r = ep.c("mutation", {
+    if (t && (this.updateShape_(), Src_shared_packages_Crc_blink_src_index.Blink.events.is_enabled())) {
+      var r = Module_4.c("mutation", {
         block: this,
         old_value: n,
         new_value: undefined
       })
-      $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.fire(r)
+      Src_shared_packages_Crc_blink_src_index.Blink.events.fire(r)
     }
   },
   updateShape_: function () {
@@ -90,7 +90,7 @@ var Nm = {
     var s
     var c
     var l = this
-    $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.disable()
+    Src_shared_packages_Crc_blink_src_index.Blink.events.disable()
     if (this.get_input("ERROR_MSG")) {
       this.remove_input("ERROR_MSG")
     }
@@ -106,13 +106,13 @@ var Nm = {
         l.remove_input(e$inputName)
       }
     })
-    $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.enable()
+    Src_shared_packages_Crc_blink_src_index.Blink.events.enable()
     if (this.get_input("ERROR")) {
       this.failedConnection = null === (e = this.get_input("ERROR")) || undefined === e || null === (e$connection = e.connection) || undefined === e$connection ? undefined : e$connection.target_connection
       if (this.failedStatement_) {
-        $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.disable()
+        Src_shared_packages_Crc_blink_src_index.Blink.events.disable()
         this.remove_input("ERROR")
-        $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.enable()
+        Src_shared_packages_Crc_blink_src_index.Blink.events.enable()
       } else {
         this.remove_input("ERROR")
       }
@@ -122,16 +122,16 @@ var Nm = {
     if (this.get_input("SUCCESS")) {
       this.successConnection = null === (n = this.get_input("SUCCESS")) || undefined === n || null === (n$connection = n.connection) || undefined === n$connection ? undefined : n$connection.target_connection
       if (this.successStatement_) {
-        $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.disable()
+        Src_shared_packages_Crc_blink_src_index.Blink.events.disable()
         this.remove_input("SUCCESS")
-        $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.enable()
+        Src_shared_packages_Crc_blink_src_index.Blink.events.enable()
       } else {
         this.remove_input("SUCCESS")
       }
     } else {
       this.successConnection = null
     }
-    $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.disable()
+    Src_shared_packages_Crc_blink_src_index.Blink.events.disable()
     if (this.get_input("SUCCESS_TEXT")) {
       this.remove_input("SUCCESS_TEXT")
     }
@@ -140,7 +140,7 @@ var Nm = {
     }
     this.append_dummy_input("SUCCESS_MUTATION_BTN")
     if (this.successStatement_) {
-      this.append_dummy_input("SUCCESS_TEXT", "SUCCESS_MUTATION_BTN").append_field($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.Msg.ROOM_SUCCESS_TEXT)
+      this.append_dummy_input("SUCCESS_TEXT", "SUCCESS_MUTATION_BTN").append_field(Src_shared_packages_Crc_blink_src_index.Blink.Msg.ROOM_SUCCESS_TEXT)
       this.successInputList.forEach(function (e) {
         var /* [auto-meaningful-name] */e$inputName = e.inputName
         var /* [auto-meaningful-name] */e$default_shadow = e.default_shadow
@@ -159,7 +159,7 @@ var Nm = {
         this.remove_input("FAILED_MUTATION_BTN")
       }
       this.append_dummy_input("FAILED_MUTATION_BTN")
-      this.append_dummy_input("FAILED_TEXT", "FAILED_MUTATION_BTN").append_field($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.Msg.ROOM_FAILED_TEXT)
+      this.append_dummy_input("FAILED_TEXT", "FAILED_MUTATION_BTN").append_field(Src_shared_packages_Crc_blink_src_index.Blink.Msg.ROOM_FAILED_TEXT)
       this.append_shadow_input("ERROR_MSG", "<shadow type=\"room_error\"/>", "FAILED_MUTATION_BTN")
       var /* [auto-meaningful-name] */f$connection
       var f = this.append_statement_input("ERROR", undefined, "cloud_room_error_DO")
@@ -171,33 +171,33 @@ var Nm = {
     }
     if (this.successStatement_) {
       if (!(null === (o = this.get_input("SUCCESS_MUTATION_BTN")) || undefined === o)) {
-        o.append_field(ep.q(jm.SUCCESS), "mutation_remove_button")
+        o.append_field(Module_4.q(jm.SUCCESS), "mutation_remove_button")
       }
     }
     if (this.failedStatement_) {
       if (!(null === (i = this.get_input("FAILED_MUTATION_BTN")) || undefined === i)) {
-        i.append_field(ep.q(jm.FAILED), "mutation_remove_button")
+        i.append_field(Module_4.q(jm.FAILED), "mutation_remove_button")
       }
     }
     if (!this.successStatement_) {
       if (this.failedStatement_) {
         if (!(null === (a = this.get_input("FAILED_MUTATION_BTN")) || undefined === a)) {
-          a.append_field(ep.p(), "mutation_add_button")
+          a.append_field(Module_4.p(), "mutation_add_button")
         }
       } else {
         if (!(null === (s = this.get_input("SUCCESS_MUTATION_BTN")) || undefined === s)) {
-          s.append_field(ep.p(), "mutation_add_button")
+          s.append_field(Module_4.p(), "mutation_add_button")
         }
       }
     }
     if (!this.failedStatement_) {
       if (this.successStatement_) {
         if (!(null === (c = this.get_input("SUCCESS_MUTATION_BTN")) || undefined === c)) {
-          c.append_field(ep.p(), "")
+          c.append_field(Module_4.p(), "")
         }
       }
     }
-    $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.enable()
+    Src_shared_packages_Crc_blink_src_index.Blink.events.enable()
     this.render()
   },
   domToMutation: function (e) {
@@ -256,14 +256,14 @@ var Dm = Object.assign({}, Nm, {
 })
 var /* [auto-meaningful-name] */BKY_BLOCK_CLOUD_ICON = "%{BKY_BLOCK_CLOUD_ICON}"
 var Lm = {
-  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.i,
+  type: Src_editor_widget_builtIn_types.i,
   category: {
     iconId: "icon-widget-cloud-room",
-    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_types.i
+    blocks: Src_editor_widget_builtIn_types.i
   },
   getTemplate: function (e) {
     var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>")
-    return ["<block type=\"room_receive_message\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"MESSAGE_LIST\">\n        <shadow type=\"array_get\"></shadow>\n      </value>\n    </block>"), "<block type=\"room_receive_room_info\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"room_network_error\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, "<block type=\"room_create_room\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"ROOM_NAME\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\" >").concat($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.Msg.ROOM_DEFAULT_ROOM_NAME, "</field>\n        </shadow>\n      </value>\n      <value name=\"COUNT\">\n        <shadow type=\"math_number\">\n            <field name=\"NUM\" constraints='1,20,1'>2</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"room_create_nickname\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"NICKNAME\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\">").concat($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.Msg.ROOM_DEFAULT_NICKNAME, "</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"room_get_room_list\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"room_enter_room\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"ROOM_NAME\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\">").concat($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.Msg.ROOM_NAME, "</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"room_send_message\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"MESSAGE\">\n        <shadow type=\"array_get\"></shadow>\n      </value>\n    </block>"), "<block type=\"room_exit_room\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, "<block type=\"room_get_current_room_name\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"room_get_current_online_users\" uncache=\"true\">\n      ".concat(t, "\n    </block>")]
+    return ["<block type=\"room_receive_message\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"MESSAGE_LIST\">\n        <shadow type=\"array_get\"></shadow>\n      </value>\n    </block>"), "<block type=\"room_receive_room_info\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"room_network_error\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Module_61.d, "<block type=\"room_create_room\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"ROOM_NAME\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\" >").concat(Src_shared_packages_Crc_blink_src_index.Blink.Msg.ROOM_DEFAULT_ROOM_NAME, "</field>\n        </shadow>\n      </value>\n      <value name=\"COUNT\">\n        <shadow type=\"math_number\">\n            <field name=\"NUM\" constraints='1,20,1'>2</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"room_create_nickname\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"NICKNAME\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\">").concat(Src_shared_packages_Crc_blink_src_index.Blink.Msg.ROOM_DEFAULT_NICKNAME, "</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"room_get_room_list\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"room_enter_room\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"ROOM_NAME\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\">").concat(Src_shared_packages_Crc_blink_src_index.Blink.Msg.ROOM_NAME, "</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"room_send_message\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"MESSAGE\">\n        <shadow type=\"array_get\"></shadow>\n      </value>\n    </block>"), "<block type=\"room_exit_room\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Module_61.d, "<block type=\"room_get_current_room_name\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"room_get_current_online_users\" uncache=\"true\">\n      ".concat(t, "\n    </block>")]
   },
   blockDeclareGroup: {
     setBlockGroupSnippet: function (e) {
@@ -275,7 +275,7 @@ var Lm = {
         var s = e.statementToCode(t, n, "SUCCESS")
         var c = e.valueToCode(t, n, "ERROR_MSG", e.ORDER_FUNCTION_CALL)
         var l = e.statementToCode(t, n, "ERROR")
-        return ep.l(ep.j("createRoom", [r, o, ep.k([i, a], s), ep.k([c], l)]), t.blocks[n], e, true)
+        return Module_4.l(Module_4.j("createRoom", [r, o, Module_4.k([i, a], s), Module_4.k([c], l)]), t.blocks[n], e, true)
       })
       e.insertBlockSnippetGenerator("room_enter_room_name", function () {
         return "roomEnterRoomName"
@@ -292,13 +292,13 @@ var Lm = {
         var i = e.valueToCode(t, n, "NAME", e.ORDER_FUNCTION_CALL)
         var a = e.valueToCode(t, n, "ERROR_MSG", e.ORDER_FUNCTION_CALL)
         var s = e.statementToCode(t, n, "ERROR")
-        return ep.l(ep.j("setRoomNickname", [r, ep.k([i], o), ep.k([a], s)]), t.blocks[n], e, true)
+        return Module_4.l(Module_4.j("setRoomNickname", [r, Module_4.k([i], o), Module_4.k([a], s)]), t.blocks[n], e, true)
       })
       e.insertBlockSnippetGenerator("room_info", function (t, n) {
         var r = e.valueToCode(t, n, "ROOM_NAME", e.ORDER_FUNCTION_CALL)
         var o = e.valueToCode(t, n, "USERS", e.ORDER_FUNCTION_CALL)
         var i = e.statementToCode(t, n, "success")
-        return i ? ep.l(ep.j("EnterRoom", [r, o], i), t.blocks[n], e, true) : ""
+        return i ? Module_4.l(Module_4.j("EnterRoom", [r, o], i), t.blocks[n], e, true) : ""
       })
       e.insertBlockSnippetGenerator("room_user", function () {
         return "user"
@@ -322,7 +322,7 @@ var Lm = {
         return "error"
       })
       var t = function (t, n) {
-        var r = $_323.a(n)
+        var r = Module_323.a(n)
         var o = r.blockId && t.blocks[r.blockId]
         return o && e.getFieldValue(o, "ARRAY") || ""
       }
@@ -332,7 +332,7 @@ var Lm = {
         var i = e.statementToCode(t, n, "SUCCESS")
         var a = e.valueToCode(t, n, "ERROR_MSG", e.ORDER_FUNCTION_CALL)
         var s = e.statementToCode(t, n, "ERROR")
-        return ep.j("roomsList", [ep.k([r, o], i), ep.k([a], s)])
+        return Module_4.j("roomsList", [Module_4.k([r, o], i), Module_4.k([a], s)])
       })
       e.insertBlockSnippetGenerator("room_enter_room", function (t, n) {
         var r = e.valueToCode(t, n, "ROOM_NAME", e.ORDER_FUNCTION_CALL)
@@ -341,41 +341,41 @@ var Lm = {
         var a = e.statementToCode(t, n, "SUCCESS")
         var s = e.valueToCode(t, n, "ERROR_MSG", e.ORDER_FUNCTION_CALL)
         var c = e.statementToCode(t, n, "ERROR")
-        return ep.l(ep.j("joinRoom", [r, ep.k([o, i], a), ep.k([s], c)]), t.blocks[n], e, true)
+        return Module_4.l(Module_4.j("joinRoom", [r, Module_4.k([o, i], a), Module_4.k([s], c)]), t.blocks[n], e, true)
       })
       e.insertBlockSnippetGenerator("room_send_message", function (n, r) {
         var o = e.valueToCode(n, r, "MESSAGE", e.ORDER_FUNCTION_CALL)
         var i = t(n, o)
-        return ep.l(ep.j("sendRoomMessage", [JSON.stringify(i), o]), n.blocks[r], e, true)
+        return Module_4.l(Module_4.j("sendRoomMessage", [JSON.stringify(i), o]), n.blocks[r], e, true)
       })
       e.insertBlockSnippetGenerator("room_receive_message", function (n, r) {
         var o = e.valueToCode(n, r, "MESSAGE_LIST", e.ORDER_FUNCTION_CALL)
         var i = e.statementToCode(n, r, "DO")
         var a = t(n, o)
-        var s = "".concat(ep.a, "msgList")
-        var c = [ep.n("setVariableValue", [JSON.stringify(a), s]), i].join(";\n")
-        return ep.n("argsOnRoomMessage", [JSON.stringify(a), ep.k([s], c)])
+        var s = "".concat(Module_4.a, "msgList")
+        var c = [Module_4.n("setVariableValue", [JSON.stringify(a), s]), i].join(";\n")
+        return Module_4.n("argsOnRoomMessage", [JSON.stringify(a), Module_4.k([s], c)])
       })
       e.insertBlockSnippetGenerator("room_receive_room_info", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "ROOM_INFO") || ""
         var i = e.valueToCode(t, n, "USER", e.ORDER_FUNCTION_CALL)
         var a = e.statementToCode(t, n, "DO")
-        return ep.n("argsOnRoom".concat(o), [ep.k([i], a)])
+        return Module_4.n("argsOnRoom".concat(o), [Module_4.k([i], a)])
       })
       e.insertBlockSnippetGenerator("room_network_error", function (t, n) {
         var r = e.valueToCode(t, n, "NETWORK_ERROR", e.ORDER_FUNCTION_CALL)
         var o = e.statementToCode(t, n, "DO")
-        return ep.n("onRoomError", [ep.k([r], o)])
+        return Module_4.n("onRoomError", [Module_4.k([r], o)])
       })
       e.insertBlockSnippetGenerator("room_exit_room", function () {
-        return ep.j("leaveRoom")
+        return Module_4.j("leaveRoom")
       })
       e.insertBlockSnippetGenerator("room_get_current_room_name", function () {
-        return ep.r("getCurrentRoomName")
+        return Module_4.r("getCurrentRoomName")
       })
       e.insertBlockSnippetGenerator("room_get_current_online_users", function () {
-        return ep.r("getCurrentRoomMembers")
+        return Module_4.r("getCurrentRoomMembers")
       })
     },
     setBlockGroupProfile: function (e, t) {
@@ -506,7 +506,7 @@ var Lm = {
         type: "room_receive_message",
         message0: "%{BKY_ROOM_RECEIVE_MESSAGE}",
         args0: [
-          ep.e(BKY_BLOCK_CLOUD_ICON, true), {
+          Module_4.e(BKY_BLOCK_CLOUD_ICON, true), {
             type: "input_value",
             name: "MESSAGE_LIST",
             check: ["Array"]
@@ -589,7 +589,7 @@ var Lm = {
         type: "room_receive_room_info",
         message0: "%{BKY_ROOM_RECEIVE_ROOM_INFO}",
         args0: [
-          ep.e(BKY_BLOCK_CLOUD_ICON, true), {
+          Module_4.e(BKY_BLOCK_CLOUD_ICON, true), {
             type: "field_coco_dropdown",
             name: "ROOM_INFO",
             custom: true,
@@ -625,7 +625,7 @@ var Lm = {
         type: "room_network_error",
         message0: "%{BKY_ROOM_NETWORK_ERROR}",
         args0: [
-          ep.e(BKY_BLOCK_CLOUD_ICON, true), {
+          Module_4.e(BKY_BLOCK_CLOUD_ICON, true), {
             type: "input_value",
             name: "NETWORK_ERROR",
             default_shadow: "<shadow type=\"room_network_error_value\" />"
@@ -698,7 +698,7 @@ var Lm = {
 var Pm = {
   icon: "icon-widget-cloud-room",
   title: "CloudRoomWidget.widgetName",
-  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.i,
+  type: Src_editor_widget_builtIn_types.i,
   previewAreaWidgetTitle: "CloudRoomWidget.widgetName",
   component: Yh,
   editConfig: Am,
@@ -760,13 +760,13 @@ var Gm = {
         n = Fm.FAILED
       }
     }
-    if (t && (this.updateShape_(), $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.is_enabled())) {
-      var r = ep.c("mutation", {
+    if (t && (this.updateShape_(), Src_shared_packages_Crc_blink_src_index.Blink.events.is_enabled())) {
+      var r = Module_4.c("mutation", {
         block: this,
         old_value: undefined,
         new_value: n
       })
-      $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.fire(r)
+      Src_shared_packages_Crc_blink_src_index.Blink.events.fire(r)
     }
   },
   removeMutation: function (e) {
@@ -781,13 +781,13 @@ var Gm = {
         t = true
       }
     }
-    if (t && (this.updateShape_(), $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.is_enabled())) {
-      var r = ep.c("mutation", {
+    if (t && (this.updateShape_(), Src_shared_packages_Crc_blink_src_index.Blink.events.is_enabled())) {
+      var r = Module_4.c("mutation", {
         block: this,
         old_value: n,
         new_value: undefined
       })
-      $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.fire(r)
+      Src_shared_packages_Crc_blink_src_index.Blink.events.fire(r)
     }
   },
   updateShape_: function () {
@@ -801,7 +801,7 @@ var Gm = {
     var s
     var c
     var l = this
-    $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.disable()
+    Src_shared_packages_Crc_blink_src_index.Blink.events.disable()
     if (this.get_input("ERROR_MSG")) {
       this.remove_input("ERROR_MSG")
     }
@@ -817,13 +817,13 @@ var Gm = {
         l.remove_input(e$inputName)
       }
     })
-    $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.enable()
+    Src_shared_packages_Crc_blink_src_index.Blink.events.enable()
     if (this.get_input("ERROR")) {
       this.failedConnection = null === (e = this.get_input("ERROR")) || undefined === e || null === (e$connection = e.connection) || undefined === e$connection ? undefined : e$connection.target_connection
       if (this.failedStatement_) {
-        $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.disable()
+        Src_shared_packages_Crc_blink_src_index.Blink.events.disable()
         this.remove_input("ERROR")
-        $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.enable()
+        Src_shared_packages_Crc_blink_src_index.Blink.events.enable()
       } else {
         this.remove_input("ERROR")
       }
@@ -833,16 +833,16 @@ var Gm = {
     if (this.get_input("SUCCESS")) {
       this.successConnection = null === (n = this.get_input("SUCCESS")) || undefined === n || null === (n$connection = n.connection) || undefined === n$connection ? undefined : n$connection.target_connection
       if (this.successStatement_) {
-        $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.disable()
+        Src_shared_packages_Crc_blink_src_index.Blink.events.disable()
         this.remove_input("SUCCESS")
-        $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.enable()
+        Src_shared_packages_Crc_blink_src_index.Blink.events.enable()
       } else {
         this.remove_input("SUCCESS")
       }
     } else {
       this.successConnection = null
     }
-    $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.disable()
+    Src_shared_packages_Crc_blink_src_index.Blink.events.disable()
     if (this.get_input("SUCCESS_TEXT")) {
       this.remove_input("SUCCESS_TEXT")
     }
@@ -851,7 +851,7 @@ var Gm = {
     }
     this.append_dummy_input("SUCCESS_MUTATION_BTN")
     if (this.successStatement_) {
-      this.append_dummy_input("SUCCESS_TEXT", "SUCCESS_MUTATION_BTN").append_field($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.Msg.ROOM_SUCCESS_TEXT)
+      this.append_dummy_input("SUCCESS_TEXT", "SUCCESS_MUTATION_BTN").append_field(Src_shared_packages_Crc_blink_src_index.Blink.Msg.ROOM_SUCCESS_TEXT)
       this.successInputList.forEach(function (e) {
         var /* [auto-meaningful-name] */e$inputName = e.inputName
         var /* [auto-meaningful-name] */e$default_shadow = e.default_shadow
@@ -870,7 +870,7 @@ var Gm = {
         this.remove_input("FAILED_MUTATION_BTN")
       }
       this.append_dummy_input("FAILED_MUTATION_BTN")
-      this.append_dummy_input("FAILED_TEXT", "FAILED_MUTATION_BTN").append_field($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.Msg.ROOM_FAILED_TEXT)
+      this.append_dummy_input("FAILED_TEXT", "FAILED_MUTATION_BTN").append_field(Src_shared_packages_Crc_blink_src_index.Blink.Msg.ROOM_FAILED_TEXT)
       this.append_shadow_input("ERROR_MSG", "<shadow type=\"cloudDB_fail_result\"/>", "FAILED_MUTATION_BTN")
       var /* [auto-meaningful-name] */f$connection
       var f = this.append_statement_input("ERROR", undefined, "cloudDB_error_DO")
@@ -882,33 +882,33 @@ var Gm = {
     }
     if (this.successStatement_) {
       if (!(null === (o = this.get_input("SUCCESS_MUTATION_BTN")) || undefined === o)) {
-        o.append_field(ep.q(Fm.SUCCESS), "mutation_remove_button")
+        o.append_field(Module_4.q(Fm.SUCCESS), "mutation_remove_button")
       }
     }
     if (this.failedStatement_) {
       if (!(null === (i = this.get_input("FAILED_MUTATION_BTN")) || undefined === i)) {
-        i.append_field(ep.q(Fm.FAILED), "mutation_remove_button")
+        i.append_field(Module_4.q(Fm.FAILED), "mutation_remove_button")
       }
     }
     if (!this.successStatement_) {
       if (this.failedStatement_) {
         if (!(null === (a = this.get_input("FAILED_MUTATION_BTN")) || undefined === a)) {
-          a.append_field(ep.p(), "mutation_add_button")
+          a.append_field(Module_4.p(), "mutation_add_button")
         }
       } else {
         if (!(null === (s = this.get_input("SUCCESS_MUTATION_BTN")) || undefined === s)) {
-          s.append_field(ep.p(), "mutation_add_button")
+          s.append_field(Module_4.p(), "mutation_add_button")
         }
       }
     }
     if (!this.failedStatement_) {
       if (this.successStatement_) {
         if (!(null === (c = this.get_input("SUCCESS_MUTATION_BTN")) || undefined === c)) {
-          c.append_field(ep.p(), "")
+          c.append_field(Module_4.p(), "")
         }
       }
     }
-    $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.enable()
+    Src_shared_packages_Crc_blink_src_index.Blink.events.enable()
     this.render()
   },
   domToMutation: function (e) {
@@ -946,23 +946,23 @@ var Hm = Object.assign({}, Gm, {
   successDO: "QUERY_BY_COUNT"
 })
 var Vm = {
-  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.h,
+  type: Src_editor_widget_builtIn_types.h,
   category: {
     iconId: "icon-widget-cloud-db",
-    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_types.h
+    blocks: Src_editor_widget_builtIn_types.h
   },
   getTemplate: function (e) {
     var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>")
-    var /* [auto-meaningful-name] */$_46_index$c$getCloudDBColumnListE0$value = $_46_index.c().getCloudDBColumnList(e)[0].value
-    var r = "<field name=\"COLUMNS\">".concat($_46_index$c$getCloudDBColumnListE0$value, "</field>")
-    return ["<block type=\"cloudDB_error\"></block>", rp.d, "<block type=\"cloudDB_insert\" uncache=\"true\">\n      <value name=\"INSERT_ROW\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\" >1,2,3</field>\n        </shadow>\n      </value>\n      ".concat(t, "\n    </block>"), "<block type=\"cloudDB_delete\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"INPUT_COLUMN\">\n        <shadow type=\"cloudDB_all_column_dropdown\">").concat(r, "</shadow>\n      </value>\n      <value name=\"COLUMN_VALUE\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" allow_text=\"true\">123</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"cloudDB_update\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"INPUT_COLUMN\">\n        <shadow type=\"cloudDB_all_column_dropdown\">").concat(r, "</shadow>\n      </value>\n      <value name=\"COLUMN_VALUE\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" allow_text=\"true\">123</field>\n        </shadow>\n      </value>\n      <value name=\"UPDATE_COLUMN\">\n        <shadow type=\"cloudDB_all_column_dropdown\">").concat(r, "</shadow>\n      </value>\n      <value name=\"UPDATE_COLUMN_VALUE\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" allow_text=\"true\">456</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"cloudDB_query_by_column\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"INPUT_COLUMN\">\n        <shadow type=\"cloudDB_all_column_dropdown\">").concat(r, "</shadow>\n      </value>\n      <value name=\"COLUMN_VALUE\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" allow_text=\"true\">123</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"cloudDB_query_by_count\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, "<block type=\"array_foreach\" uncache=\"true\">\n      <value name=\"ARRAY\">\n        <shadow type=\"array_get\"></shadow>\n      </value>\n    </block>"]
+    var /* [auto-meaningful-name] */Module_46$c$getCloudDBColumnListE0$value = Module_46.c().getCloudDBColumnList(e)[0].value
+    var r = "<field name=\"COLUMNS\">".concat(Module_46$c$getCloudDBColumnListE0$value, "</field>")
+    return ["<block type=\"cloudDB_error\"></block>", Module_61.d, "<block type=\"cloudDB_insert\" uncache=\"true\">\n      <value name=\"INSERT_ROW\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\" >1,2,3</field>\n        </shadow>\n      </value>\n      ".concat(t, "\n    </block>"), "<block type=\"cloudDB_delete\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"INPUT_COLUMN\">\n        <shadow type=\"cloudDB_all_column_dropdown\">").concat(r, "</shadow>\n      </value>\n      <value name=\"COLUMN_VALUE\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" allow_text=\"true\">123</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"cloudDB_update\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"INPUT_COLUMN\">\n        <shadow type=\"cloudDB_all_column_dropdown\">").concat(r, "</shadow>\n      </value>\n      <value name=\"COLUMN_VALUE\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" allow_text=\"true\">123</field>\n        </shadow>\n      </value>\n      <value name=\"UPDATE_COLUMN\">\n        <shadow type=\"cloudDB_all_column_dropdown\">").concat(r, "</shadow>\n      </value>\n      <value name=\"UPDATE_COLUMN_VALUE\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" allow_text=\"true\">456</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"cloudDB_query_by_column\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"INPUT_COLUMN\">\n        <shadow type=\"cloudDB_all_column_dropdown\">").concat(r, "</shadow>\n      </value>\n      <value name=\"COLUMN_VALUE\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" allow_text=\"true\">123</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"cloudDB_query_by_count\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Module_61.d, "<block type=\"array_foreach\" uncache=\"true\">\n      <value name=\"ARRAY\">\n        <shadow type=\"array_get\"></shadow>\n      </value>\n    </block>"]
   },
   blockDeclareGroup: {
     setBlockGroupSnippet: function (e) {
       e.insertBlockSnippetGenerator("cloudDB_all_column_dropdown", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "COLUMNS") || ""
-        return o === Et.h ? "" : ep.o(o)
+        return o === Module_9.h ? "" : Module_4.o(o)
       })
       e.insertBlockSnippetGenerator("cloudDB_fail_result", function () {
         return "cloudDBFailResult"
@@ -986,34 +986,34 @@ var Vm = {
         var r = e.valueToCode(t, n, "CLOUD_DB_ERROR_NAME", e.ORDER_FUNCTION_CALL)
         var o = e.valueToCode(t, n, "CLOUD_DB_ERROR_INFO", e.ORDER_FUNCTION_CALL)
         var i = e.statementToCode(t, n, "DO")
-        return ep.n("onCloudDBError", [ep.k([r, o], i)])
+        return Module_4.n("onCloudDBError", [Module_4.k([r, o], i)])
       })
       e.insertBlockSnippetGenerator("cloudDB_insert", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID")
-        var i = Et.W(o)
+        var i = Module_9.W(o)
         var a = e.valueToCode(t, n, "INSERT_ROW", e.ORDER_FUNCTION_CALL)
         var s = e.statementToCode(t, n, "SUCCESS")
         var c = e.valueToCode(t, n, "ERROR_MSG", e.ORDER_FUNCTION_CALL)
         var l = e.statementToCode(t, n, "ERROR")
-        return i ? ep.l(ep.j("cloudDBInsert", [i, a, ep.k([], s), ep.k([c], l)]), t.blocks[n], e, true) : ""
+        return i ? Module_4.l(Module_4.j("cloudDBInsert", [i, a, Module_4.k([], s), Module_4.k([c], l)]), t.blocks[n], e, true) : ""
       })
       e.insertBlockSnippetGenerator("cloudDB_delete", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID")
-        var i = Et.W(o)
+        var i = Module_9.W(o)
         var a = e.valueToCode(t, n, "INPUT_COLUMN", e.ORDER_FUNCTION_CALL) || ""
         var s = e.getFieldValue(r, "OPERATOR") || ""
         var c = e.valueToCode(t, n, "COLUMN_VALUE", e.ORDER_FUNCTION_CALL) || ""
         var l = e.statementToCode(t, n, "SUCCESS")
         var u = e.valueToCode(t, n, "ERROR_MSG", e.ORDER_FUNCTION_CALL)
         var d = e.statementToCode(t, n, "ERROR")
-        return a && i ? ep.l(ep.j("cloudDBDelete", [i, a, "'".concat(s, "'"), c, ep.k([], l), ep.k([u], d)]), t.blocks[n], e, true) : ""
+        return a && i ? Module_4.l(Module_4.j("cloudDBDelete", [i, a, "'".concat(s, "'"), c, Module_4.k([], l), Module_4.k([u], d)]), t.blocks[n], e, true) : ""
       })
       e.insertBlockSnippetGenerator("cloudDB_update", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID")
-        var i = Et.W(o)
+        var i = Module_9.W(o)
         var a = e.valueToCode(t, n, "INPUT_COLUMN", e.ORDER_FUNCTION_CALL) || ""
         var s = e.getFieldValue(r, "OPERATOR") || ""
         var c = e.valueToCode(t, n, "COLUMN_VALUE", e.ORDER_FUNCTION_CALL) || ""
@@ -1022,12 +1022,12 @@ var Vm = {
         var d = e.statementToCode(t, n, "SUCCESS")
         var p = e.valueToCode(t, n, "ERROR_MSG", e.ORDER_FUNCTION_CALL)
         var f = e.statementToCode(t, n, "ERROR")
-        return a && l && i ? ep.l(ep.j("cloudDBUpdate", [i, a, "'".concat(s, "'"), c, l, u, ep.k([], d), ep.k([p], f)]), t.blocks[n], e, true) : ""
+        return a && l && i ? Module_4.l(Module_4.j("cloudDBUpdate", [i, a, "'".concat(s, "'"), c, l, u, Module_4.k([], d), Module_4.k([p], f)]), t.blocks[n], e, true) : ""
       })
       e.insertBlockSnippetGenerator("cloudDB_query_by_column", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID")
-        var i = Et.W(o)
+        var i = Module_9.W(o)
         var a = e.valueToCode(t, n, "INPUT_COLUMN", e.ORDER_FUNCTION_CALL) || ""
         var s = e.getFieldValue(r, "OPERATOR") || ""
         var c = e.valueToCode(t, n, "COLUMN_VALUE", e.ORDER_FUNCTION_CALL)
@@ -1035,12 +1035,12 @@ var Vm = {
         var u = e.statementToCode(t, n, "SUCCESS")
         var d = e.valueToCode(t, n, "ERROR_MSG", e.ORDER_FUNCTION_CALL)
         var p = e.statementToCode(t, n, "ERROR")
-        return a && i ? ep.l(ep.j("cloudDBQuery", [i, a, "'".concat(s, "'"), c, ep.k([l], u), ep.k([d], p)]), t.blocks[n], e, true) : ""
+        return a && i ? Module_4.l(Module_4.j("cloudDBQuery", [i, a, "'".concat(s, "'"), c, Module_4.k([l], u), Module_4.k([d], p)]), t.blocks[n], e, true) : ""
       })
       e.insertBlockSnippetGenerator("cloudDB_query_by_count", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID")
-        var i = Et.W(o)
+        var i = Module_9.W(o)
         var a = e.valueToCode(t, n, "CLOUD_DB_QUERY_BY_COUNT_RESULT", e.ORDER_FUNCTION_CALL)
         var s = e.statementToCode(t, n, "SUCCESS")
         var c = e.valueToCode(t, n, "ERROR_MSG", e.ORDER_FUNCTION_CALL)
@@ -1049,7 +1049,7 @@ var Vm = {
           return ""
         }
         var u = e.getFieldValue(r, "OPTIONS") || ""
-        return ep.l(ep.j("cloudDBQueryByCount", [i, "'".concat(u, "'"), ep.k([a], s), ep.k([c], l)]), t.blocks[n], e, true)
+        return Module_4.l(Module_4.j("cloudDBQueryByCount", [i, "'".concat(u, "'"), Module_4.k([a], s), Module_4.k([c], l)]), t.blocks[n], e, true)
       })
     },
     setBlockGroupProfile: function (e, t) {
@@ -1061,7 +1061,7 @@ var Vm = {
         name: "WIDGET_ID",
         custom: true,
         options: function () {
-          return $_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_types.h)
+          return Module_46.c().getWidgetListByType(Src_editor_widget_builtIn_types.h)
         }
       }
       e.insertBlockProfile("cloudDB_all_column_dropdown", {
@@ -1076,7 +1076,7 @@ var Vm = {
               var /* [auto-meaningful-name] */this$source_block
               var /* [auto-meaningful-name] */this$source_block$parent_block
               var n = (null === (this$source_block = this.source_block) || undefined === this$source_block || null === (this$source_block$parent_block = this$source_block.parent_block) || undefined === this$source_block$parent_block ? undefined : this$source_block$parent_block.get_field_value("WIDGET_ID")) || undefined
-              return $_46_index.c().getCloudDBColumnList(n, this)
+              return Module_46.c().getCloudDBColumnList(n, this)
             }
           }
         ],
@@ -1134,7 +1134,7 @@ var Vm = {
         type: "cloudDB_error",
         message0: "%{BKY_CLOUD_DB_ERROR}",
         args0: [
-          ep.e("%{BKY_BLOCK_CLOUD_ICON}", true), {
+          Module_4.e("%{BKY_BLOCK_CLOUD_ICON}", true), {
             type: "input_value",
             name: "CLOUD_DB_ERROR_NAME",
             default_shadow: "<shadow type=\"cloudDB_error_name\" />"
@@ -1162,7 +1162,7 @@ var Vm = {
             type: "input_value",
             name: "INSERT_ROW",
             check: ["String", "Array"]
-          }, D.a({}, n), {
+          }, Module_6.a({}, n), {
             type: "input_dummy",
             name: "DUMMY"
           }, {
@@ -1183,7 +1183,7 @@ var Vm = {
         type: "cloudDB_delete",
         message0: "%{BKY_CLOUD_DB_DELETE}",
         args0: [
-          D.a({}, n), {
+          Module_6.a({}, n), {
             type: "input_value",
             name: "INPUT_COLUMN",
             check: ["String"]
@@ -1220,7 +1220,7 @@ var Vm = {
         type: "cloudDB_update",
         message0: "%{BKY_CLOUD_DB_UPDATE}",
         args0: [
-          D.a({}, n), {
+          Module_6.a({}, n), {
             type: "input_value",
             name: "INPUT_COLUMN",
             check: ["String"]
@@ -1262,7 +1262,7 @@ var Vm = {
         type: "cloudDB_query_by_column",
         message0: "%{BKY_CLOUD_DB_QUERY_BY_COLUMN}",
         args0: [
-          D.a({}, n), {
+          Module_6.a({}, n), {
             type: "input_value",
             name: "INPUT_COLUMN",
             check: ["String"]
@@ -1299,7 +1299,7 @@ var Vm = {
         type: "cloudDB_query_by_count",
         message0: "%{BKY_CLOUD_DB_QUERY_BY_COUNT}",
         args0: [
-          D.a({}, n), {
+          Module_6.a({}, n), {
             type: "field_coco_dropdown",
             name: "OPTIONS",
             custom: true,
@@ -1339,7 +1339,7 @@ var Vm = {
 var zm = {
   icon: "icon-widget-cloud-db",
   title: "CloudDbWidget.widgetName",
-  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.h,
+  type: Src_editor_widget_builtIn_types.h,
   previewAreaWidgetTitle: "CloudDbWidget.widgetName",
   component: Yh,
   editConfig: Bm,
@@ -1370,16 +1370,16 @@ var Ym = [
   }
 ]
 var Km = {
-  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.y,
+  type: Src_editor_widget_builtIn_types.y,
   category: {
     iconId: "icon-widget-local-storage",
-    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_types.y
+    blocks: Src_editor_widget_builtIn_types.y
   },
   getTemplate: function (e) {
     var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>")
-    var /* [auto-meaningful-name] */$_46_index$c$getLocalDocumentFieldListE0$value = $_46_index.c().getLocalDocumentFieldList(e)[0].value
-    var r = "<field name=\"DOC_KEYS\">".concat($_46_index$c$getLocalDocumentFieldListE0$value, "</field>")
-    return ["<block type=\"local_document_set_field_item\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"DOC_KEYS_WRAPPER\">\n        <shadow type=\"local_document_all_key_field_dropdown\">").concat(r, "</shadow>\n      </value>\n      <value name=\"VALUE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\">0</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"local_document_remove_field_item\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"DOC_KEYS_WRAPPER\">\n        <shadow type=\"local_document_all_key_field_dropdown\">").concat(r, "</shadow>\n      </value>\n    </block>"), "<block type=\"local_document_clear_all_field_items\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, "<block type=\"local_document_get_field_item\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"DOC_KEYS_WRAPPER\">\n        <shadow type=\"local_document_all_key_field_dropdown\">").concat(r, "</shadow>\n      </value>\n    </block>"), "<block type=\"local_document_get_field_key_count\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"local_document_get_all_field_keys\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"DOC_KEYS_WRAPPER\">\n        <shadow type=\"local_document_all_key_field_dropdown\">").concat(r, "</shadow>\n      </value>\n    </block>"), "<block type=\"local_document_check_if_field_key_exists\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"DOC_KEYS_WRAPPER\">\n        <shadow type=\"local_document_all_key_field_dropdown\">").concat(r, "</shadow>\n      </value>\n    </block>")]
+    var /* [auto-meaningful-name] */Module_46$c$getLocalDocumentFieldListE0$value = Module_46.c().getLocalDocumentFieldList(e)[0].value
+    var r = "<field name=\"DOC_KEYS\">".concat(Module_46$c$getLocalDocumentFieldListE0$value, "</field>")
+    return ["<block type=\"local_document_set_field_item\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"DOC_KEYS_WRAPPER\">\n        <shadow type=\"local_document_all_key_field_dropdown\">").concat(r, "</shadow>\n      </value>\n      <value name=\"VALUE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\">0</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"local_document_remove_field_item\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"DOC_KEYS_WRAPPER\">\n        <shadow type=\"local_document_all_key_field_dropdown\">").concat(r, "</shadow>\n      </value>\n    </block>"), "<block type=\"local_document_clear_all_field_items\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Module_61.d, "<block type=\"local_document_get_field_item\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"DOC_KEYS_WRAPPER\">\n        <shadow type=\"local_document_all_key_field_dropdown\">").concat(r, "</shadow>\n      </value>\n    </block>"), "<block type=\"local_document_get_field_key_count\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"local_document_get_all_field_keys\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"DOC_KEYS_WRAPPER\">\n        <shadow type=\"local_document_all_key_field_dropdown\">").concat(r, "</shadow>\n      </value>\n    </block>"), "<block type=\"local_document_check_if_field_key_exists\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"DOC_KEYS_WRAPPER\">\n        <shadow type=\"local_document_all_key_field_dropdown\">").concat(r, "</shadow>\n      </value>\n    </block>")]
   },
   blockDeclareGroup: {
     setBlockGroupSnippet: function (e) {
@@ -1388,14 +1388,14 @@ var Km = {
         var o = e.getFieldValue(r, "DOC_KEYS")
         var i = t.blocks[r.parent_id || ""]
         var a = e.getFieldValue(i, "WIDGET_ID")
-        var s = $_46_index.c().getLocalDocumentFieldList(a).find(function (e) {
+        var s = Module_46.c().getLocalDocumentFieldList(a).find(function (e) {
           return e.value === o
         })
         var c = ""
         if (s) {
           c = s.text
         }
-        return ep.o(c)
+        return Module_4.o(c)
       })
       e.insertBlockSnippetGenerator("local_document_set_field_item", function (t, n) {
         var r = t.blocks[n]
@@ -1406,7 +1406,7 @@ var Km = {
         }
         var a = e.valueToCode(t, n, "DOC_KEYS_WRAPPER", e.ORDER_FUNCTION_CALL) || ""
         var s = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL) || ""
-        return ep.l(ep.j("setLocalDocumentFieldItem", [ep.o(i), ep.o(o), a, s]), r, e, true)
+        return Module_4.l(Module_4.j("setLocalDocumentFieldItem", [Module_4.o(i), Module_4.o(o), a, s]), r, e, true)
       })
       e.insertBlockSnippetGenerator("local_document_remove_field_item", function (t, n) {
         var r = t.blocks[n]
@@ -1416,39 +1416,39 @@ var Km = {
           return ""
         }
         var a = e.valueToCode(t, n, "DOC_KEYS_WRAPPER", e.ORDER_FUNCTION_CALL) || ""
-        return ep.l(ep.n("removeLocalDocumentFieldItem", [ep.o(i), ep.o(o), a]), r, e, true)
+        return Module_4.l(Module_4.n("removeLocalDocumentFieldItem", [Module_4.o(i), Module_4.o(o), a]), r, e, true)
       })
       e.insertBlockSnippetGenerator("local_document_clear_all_field_items", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID")
         var i = e.getDynamicValue("__CURRENT_PROJECT_ID__")
-        return o ? ep.n("clearLocalDocumentAllFieldItems", [ep.o(i), ep.o(o)]) : ""
+        return o ? Module_4.n("clearLocalDocumentAllFieldItems", [Module_4.o(i), Module_4.o(o)]) : ""
       })
       e.insertBlockSnippetGenerator("local_document_get_field_item", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID")
         var i = e.getDynamicValue("__CURRENT_PROJECT_ID__")
         var a = e.valueToCode(t, n, "DOC_KEYS_WRAPPER", e.ORDER_FUNCTION_CALL) || ""
-        return o ? ep.l(ep.s("getLocalDocumentFieldItem", [ep.o(i), ep.o(o), a]), r, e, false, true) : ""
+        return o ? Module_4.l(Module_4.s("getLocalDocumentFieldItem", [Module_4.o(i), Module_4.o(o), a]), r, e, false, true) : ""
       })
       e.insertBlockSnippetGenerator("local_document_get_all_field_keys", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID")
         var i = e.getDynamicValue("__CURRENT_PROJECT_ID__")
-        return o ? ep.s("getLocalDocumentAllFieldKeys", [ep.o(i), ep.o(o)]) : ""
+        return o ? Module_4.s("getLocalDocumentAllFieldKeys", [Module_4.o(i), Module_4.o(o)]) : ""
       })
       e.insertBlockSnippetGenerator("local_document_check_if_field_key_exists", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID")
         var i = e.getDynamicValue("__CURRENT_PROJECT_ID__")
         var a = e.valueToCode(t, n, "DOC_KEYS_WRAPPER", e.ORDER_FUNCTION_CALL) || ""
-        return o ? ep.l(ep.s("checkIfDocumentFieldKeyExists", [ep.o(i), ep.o(o), a]), r, e, true, true) : ""
+        return o ? Module_4.l(Module_4.s("checkIfDocumentFieldKeyExists", [Module_4.o(i), Module_4.o(o), a]), r, e, true, true) : ""
       })
       e.insertBlockSnippetGenerator("local_document_get_field_key_count", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID")
         var i = e.getDynamicValue("__CURRENT_PROJECT_ID__")
-        return o ? ep.s("getLocalDocumentFieldKeyCount", [ep.o(i), ep.o(o)]) : ""
+        return o ? Module_4.s("getLocalDocumentFieldKeyCount", [Module_4.o(i), Module_4.o(o)]) : ""
       })
     },
     setBlockGroupProfile: function (e, t) {
@@ -1457,7 +1457,7 @@ var Km = {
         name: "WIDGET_ID",
         custom: true,
         options: function () {
-          return $_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_types.y)
+          return Module_46.c().getWidgetListByType(Src_editor_widget_builtIn_types.y)
         }
       }
       e.insertBlockProfile("local_document_all_key_field_dropdown", {
@@ -1472,7 +1472,7 @@ var Km = {
               var /* [auto-meaningful-name] */this$source_block
               var /* [auto-meaningful-name] */this$source_block$parent_block
               var n = (null === (this$source_block = this.source_block) || undefined === this$source_block || null === (this$source_block$parent_block = this$source_block.parent_block) || undefined === this$source_block$parent_block ? undefined : this$source_block$parent_block.get_field_value("WIDGET_ID")) || undefined
-              return $_46_index.c().getLocalDocumentFieldList(n, this)
+              return Module_46.c().getLocalDocumentFieldList(n, this)
             }
           }
         ],
@@ -1482,7 +1482,7 @@ var Km = {
         type: "local_document_set_field_item",
         message0: "%{BKY_LOCAL_STORAGE_SET_VALUE_BY_KEY}",
         args0: [
-          D.a({}, n), {
+          Module_6.a({}, n), {
             type: "input_value",
             name: "DOC_KEYS_WRAPPER",
             check: ["String", "Number", "Array", "Boolean"]
@@ -1503,7 +1503,7 @@ var Km = {
         type: "local_document_remove_field_item",
         message0: "%{BKY_LOCAL_STORAGE_DELETE_ITEM}",
         args0: [
-          D.a({}, n), {
+          Module_6.a({}, n), {
             type: "input_value",
             name: "DOC_KEYS_WRAPPER",
             check: ["String", "Number", "Array", "Boolean"]
@@ -1518,7 +1518,7 @@ var Km = {
       e.insertBlockProfile("local_document_clear_all_field_items", {
         type: "local_document_clear_all_field_items",
         message0: "%{BKY_LOCAL_STORAGE_CLEAR_ALL_DATA}",
-        args0: [D.a({}, n)],
+        args0: [Module_6.a({}, n)],
         inputsInline: true,
         previousStatement: true,
         nextStatement: true,
@@ -1528,7 +1528,7 @@ var Km = {
         type: "local_document_get_field_item",
         message0: "%{BKY_LOCAL_STORAGE_GET_VALUE_BY_KEY}",
         args0: [
-          D.a({}, n), {
+          Module_6.a({}, n), {
             type: "input_value",
             name: "DOC_KEYS_WRAPPER",
             check: ["String", "Number", "Array", "Boolean"]
@@ -1542,7 +1542,7 @@ var Km = {
       e.insertBlockProfile("local_document_get_field_key_count", {
         type: "local_document_get_field_key_count",
         message0: "%{BKY_LOCAL_STORAGE_GET_KEY_VALUE_COUNT}",
-        args0: [D.a({}, n)],
+        args0: [Module_6.a({}, n)],
         output: ["Number"],
         colour: "%{BKY_VARIABLES_HUE}",
         inputsInline: true
@@ -1550,7 +1550,7 @@ var Km = {
       e.insertBlockProfile("local_document_get_all_field_keys", {
         type: "local_document_get_all_field_keys",
         message0: "%{BKY_LOCAL_STORAGE_GET_ALL_FIELD_KEYS}",
-        args0: [D.a({}, n)],
+        args0: [Module_6.a({}, n)],
         output: ["Array"],
         colour: "%{BKY_VARIABLES_HUE}",
         inputsInline: true
@@ -1563,7 +1563,7 @@ var Km = {
             type: "input_value",
             name: "DOC_KEYS_WRAPPER",
             check: ["String", "Number", "Array", "Boolean"]
-          }, D.a({}, n)
+          }, Module_6.a({}, n)
         ],
         output: ["Boolean"],
         colour: "%{BKY_VARIABLES_HUE}",
@@ -1586,7 +1586,7 @@ var Km = {
 var qm = {
   icon: "icon-widget-local-storage",
   title: "LocalStorageWidget.widgetName",
-  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.y,
+  type: Src_editor_widget_builtIn_types.y,
   previewAreaWidgetTitle: "LocalStorageWidget.widgetName",
   component: Yh,
   editConfig: Ym,
@@ -1615,16 +1615,16 @@ var Xm = [
   }
 ]
 var $m = {
-  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.B,
+  type: Src_editor_widget_builtIn_types.B,
   category: {
     iconId: "icon-widget-local-storage",
-    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_types.B
+    blocks: Src_editor_widget_builtIn_types.B
   },
   getTemplate: function (e) {
     var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>")
-    var /* [auto-meaningful-name] */$_46_index$c$getLocalDocumentFieldListE0$value = $_46_index.c().getLocalDocumentFieldList(e)[0].value
-    var r = "<field name=\"DOC_KEYS\">".concat($_46_index$c$getLocalDocumentFieldListE0$value, "</field>")
-    return ["<block type=\"new_local_document_set_field_item\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"DOC_KEYS_WRAPPER\">\n        <shadow type=\"new_local_document_all_key_field_dropdown\">").concat(r, "</shadow>\n      </value>\n      <value name=\"VALUE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\">0</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"new_local_document_remove_field_item\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"DOC_KEYS_WRAPPER\">\n        <shadow type=\"new_local_document_all_key_field_dropdown\">").concat(r, "</shadow>\n      </value>\n    </block>"), "<block type=\"new_local_document_clear_all_field_items\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, "<block type=\"new_local_document_get_field_item\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"DOC_KEYS_WRAPPER\">\n        <shadow type=\"new_local_document_all_key_field_dropdown\">").concat(r, "</shadow>\n      </value>\n    </block>"), "<block type=\"new_local_document_get_all_field_keys\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"DOC_KEYS_WRAPPER\">\n        <shadow type=\"new_local_document_all_key_field_dropdown\">").concat(r, "</shadow>\n      </value>\n    </block>"), "<block type=\"new_local_document_get_field_key_count\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, "<block type=\"new_local_document_check_if_field_key_exists\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"DOC_KEYS_WRAPPER\">\n        <shadow type=\"new_local_document_all_key_field_dropdown\">").concat(r, "</shadow>\n      </value>\n    </block>")]
+    var /* [auto-meaningful-name] */Module_46$c$getLocalDocumentFieldListE0$value = Module_46.c().getLocalDocumentFieldList(e)[0].value
+    var r = "<field name=\"DOC_KEYS\">".concat(Module_46$c$getLocalDocumentFieldListE0$value, "</field>")
+    return ["<block type=\"new_local_document_set_field_item\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"DOC_KEYS_WRAPPER\">\n        <shadow type=\"new_local_document_all_key_field_dropdown\">").concat(r, "</shadow>\n      </value>\n      <value name=\"VALUE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\">0</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"new_local_document_remove_field_item\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"DOC_KEYS_WRAPPER\">\n        <shadow type=\"new_local_document_all_key_field_dropdown\">").concat(r, "</shadow>\n      </value>\n    </block>"), "<block type=\"new_local_document_clear_all_field_items\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Module_61.d, "<block type=\"new_local_document_get_field_item\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"DOC_KEYS_WRAPPER\">\n        <shadow type=\"new_local_document_all_key_field_dropdown\">").concat(r, "</shadow>\n      </value>\n    </block>"), "<block type=\"new_local_document_get_all_field_keys\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"DOC_KEYS_WRAPPER\">\n        <shadow type=\"new_local_document_all_key_field_dropdown\">").concat(r, "</shadow>\n      </value>\n    </block>"), "<block type=\"new_local_document_get_field_key_count\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Module_61.d, "<block type=\"new_local_document_check_if_field_key_exists\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"DOC_KEYS_WRAPPER\">\n        <shadow type=\"new_local_document_all_key_field_dropdown\">").concat(r, "</shadow>\n      </value>\n    </block>")]
   },
   blockDeclareGroup: {
     setBlockGroupSnippet: function (e) {
@@ -1633,14 +1633,14 @@ var $m = {
         var o = e.getFieldValue(r, "DOC_KEYS")
         var i = t.blocks[r.parent_id || ""]
         var a = e.getFieldValue(i, "WIDGET_ID")
-        var s = $_46_index.c().getLocalDocumentFieldList(a).find(function (e) {
+        var s = Module_46.c().getLocalDocumentFieldList(a).find(function (e) {
           return e.value === o
         })
         var c = ""
         if (s) {
           c = s.text
         }
-        return ep.o(c)
+        return Module_4.o(c)
       })
       e.insertBlockSnippetGenerator("new_local_document_set_field_item", function (t, n) {
         var r = t.blocks[n]
@@ -1651,7 +1651,7 @@ var $m = {
         }
         var a = e.valueToCode(t, n, "DOC_KEYS_WRAPPER", e.ORDER_FUNCTION_CALL) || ""
         var s = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL) || ""
-        return ep.l(ep.j("setLocalDocumentFieldItem", [ep.o(i), ep.o(o), a, s]), r, e, true)
+        return Module_4.l(Module_4.j("setLocalDocumentFieldItem", [Module_4.o(i), Module_4.o(o), a, s]), r, e, true)
       })
       e.insertBlockSnippetGenerator("new_local_document_remove_field_item", function (t, n) {
         var r = t.blocks[n]
@@ -1661,39 +1661,39 @@ var $m = {
           return ""
         }
         var a = e.valueToCode(t, n, "DOC_KEYS_WRAPPER", e.ORDER_FUNCTION_CALL) || ""
-        return ep.l(ep.n("removeLocalDocumentFieldItem", [ep.o(i), ep.o(o), a]), r, e, true)
+        return Module_4.l(Module_4.n("removeLocalDocumentFieldItem", [Module_4.o(i), Module_4.o(o), a]), r, e, true)
       })
       e.insertBlockSnippetGenerator("new_local_document_clear_all_field_items", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID")
         var i = e.getDynamicValue("__CURRENT_PROJECT_ID__")
-        return o ? ep.n("clearLocalDocumentAllFieldItems", [ep.o(i), ep.o(o)]) : ""
+        return o ? Module_4.n("clearLocalDocumentAllFieldItems", [Module_4.o(i), Module_4.o(o)]) : ""
       })
       e.insertBlockSnippetGenerator("new_local_document_get_field_item", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID")
         var i = e.getDynamicValue("__CURRENT_PROJECT_ID__")
         var a = e.valueToCode(t, n, "DOC_KEYS_WRAPPER", e.ORDER_FUNCTION_CALL) || ""
-        return o ? ep.l(ep.s("getLocalDocumentFieldItem", [ep.o(i), ep.o(o), a]), r, e, false, true) : ""
+        return o ? Module_4.l(Module_4.s("getLocalDocumentFieldItem", [Module_4.o(i), Module_4.o(o), a]), r, e, false, true) : ""
       })
       e.insertBlockSnippetGenerator("new_local_document_get_all_field_keys", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID")
         var i = e.getDynamicValue("__CURRENT_PROJECT_ID__")
-        return o ? ep.s("getLocalDocumentAllFieldKeys", [ep.o(i), ep.o(o)]) : ""
+        return o ? Module_4.s("getLocalDocumentAllFieldKeys", [Module_4.o(i), Module_4.o(o)]) : ""
       })
       e.insertBlockSnippetGenerator("new_local_document_check_if_field_key_exists", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID")
         var i = e.getDynamicValue("__CURRENT_PROJECT_ID__")
         var a = e.valueToCode(t, n, "DOC_KEYS_WRAPPER", e.ORDER_FUNCTION_CALL) || ""
-        return o ? ep.l(ep.s("checkIfDocumentFieldKeyExists", [ep.o(i), ep.o(o), a]), r, e, true, true) : ""
+        return o ? Module_4.l(Module_4.s("checkIfDocumentFieldKeyExists", [Module_4.o(i), Module_4.o(o), a]), r, e, true, true) : ""
       })
       e.insertBlockSnippetGenerator("new_local_document_get_field_key_count", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID")
         var i = e.getDynamicValue("__CURRENT_PROJECT_ID__")
-        return o ? ep.s("getLocalDocumentFieldKeyCount", [ep.o(i), ep.o(o)]) : ""
+        return o ? Module_4.s("getLocalDocumentFieldKeyCount", [Module_4.o(i), Module_4.o(o)]) : ""
       })
     },
     setBlockGroupProfile: function (e, t) {
@@ -1702,7 +1702,7 @@ var $m = {
         name: "WIDGET_ID",
         custom: true,
         options: function () {
-          return $_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_types.B)
+          return Module_46.c().getWidgetListByType(Src_editor_widget_builtIn_types.B)
         }
       }
       e.insertBlockProfile("new_local_document_all_key_field_dropdown", {
@@ -1717,7 +1717,7 @@ var $m = {
               var /* [auto-meaningful-name] */this$source_block
               var /* [auto-meaningful-name] */this$source_block$parent_block
               var n = (null === (this$source_block = this.source_block) || undefined === this$source_block || null === (this$source_block$parent_block = this$source_block.parent_block) || undefined === this$source_block$parent_block ? undefined : this$source_block$parent_block.get_field_value("WIDGET_ID")) || undefined
-              return $_46_index.c().getLocalDocumentFieldList(n, this)
+              return Module_46.c().getLocalDocumentFieldList(n, this)
             }
           }
         ],
@@ -1727,7 +1727,7 @@ var $m = {
         type: "new_local_document_set_field_item",
         message0: "%{BKY_LOCAL_STORAGE_SET_VALUE_BY_KEY}",
         args0: [
-          D.a({}, n), {
+          Module_6.a({}, n), {
             type: "input_value",
             name: "DOC_KEYS_WRAPPER",
             check: ["String", "Number", "Array", "Boolean"]
@@ -1748,7 +1748,7 @@ var $m = {
         type: "new_local_document_remove_field_item",
         message0: "%{BKY_LOCAL_STORAGE_DELETE_ITEM}",
         args0: [
-          D.a({}, n), {
+          Module_6.a({}, n), {
             type: "input_value",
             name: "DOC_KEYS_WRAPPER",
             check: ["String", "Number", "Array", "Boolean"]
@@ -1763,7 +1763,7 @@ var $m = {
       e.insertBlockProfile("new_local_document_clear_all_field_items", {
         type: "new_local_document_clear_all_field_items",
         message0: "%{BKY_LOCAL_STORAGE_CLEAR_ALL_DATA}",
-        args0: [D.a({}, n)],
+        args0: [Module_6.a({}, n)],
         inputsInline: true,
         previousStatement: true,
         nextStatement: true,
@@ -1773,7 +1773,7 @@ var $m = {
         type: "new_local_document_get_field_item",
         message0: "%{BKY_LOCAL_STORAGE_GET_VALUE_BY_KEY}",
         args0: [
-          D.a({}, n), {
+          Module_6.a({}, n), {
             type: "input_value",
             name: "DOC_KEYS_WRAPPER",
             check: ["String", "Number", "Array", "Boolean"]
@@ -1787,7 +1787,7 @@ var $m = {
       e.insertBlockProfile("new_local_document_get_field_key_count", {
         type: "new_local_document_get_field_key_count",
         message0: "%{BKY_LOCAL_STORAGE_GET_KEY_VALUE_COUNT}",
-        args0: [D.a({}, n)],
+        args0: [Module_6.a({}, n)],
         output: ["Number"],
         colour: "%{BKY_VARIABLES_HUE}",
         inputsInline: true
@@ -1795,7 +1795,7 @@ var $m = {
       e.insertBlockProfile("new_local_document_get_all_field_keys", {
         type: "new_local_document_get_all_field_keys",
         message0: "%{BKY_NEW_LOCAL_STORAGE_GET_ALL_FIELD_KEYS}",
-        args0: [ep.d("%{BKY_BLOCK_LIST_ICON}"), D.a({}, n)],
+        args0: [Module_4.d("%{BKY_BLOCK_LIST_ICON}"), Module_6.a({}, n)],
         output: ["Array"],
         colour: "%{BKY_VARIABLES_HUE}",
         inputsInline: true
@@ -1808,7 +1808,7 @@ var $m = {
             type: "input_value",
             name: "DOC_KEYS_WRAPPER",
             check: ["String", "Number", "Array", "Boolean"]
-          }, D.a({}, n)
+          }, Module_6.a({}, n)
         ],
         output: ["Boolean"],
         colour: "%{BKY_VARIABLES_HUE}",
@@ -1831,7 +1831,7 @@ var $m = {
 var eg = {
   icon: "icon-widget-local-storage",
   title: "LocalStorageWidget.widgetName",
-  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.B,
+  type: Src_editor_widget_builtIn_types.B,
   previewAreaWidgetTitle: "LocalStorageWidget.widgetName",
   component: Yh,
   editConfig: Xm,

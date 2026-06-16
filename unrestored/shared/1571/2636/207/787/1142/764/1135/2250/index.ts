@@ -6,11 +6,11 @@
 
 "use strict"
 
-var r = require("../../../../399/index")
-var i = require("./2251/index")
-var o = require("../../../../1361/index")
-var a = require("lodash")
-var s = require("../../../../979")
+var r = require(/* 399 */"../../../../399/index")
+var i = require(/* 2251 */"./2251/index")
+var o = require(/* 1361 */"../../../../1361/index")
+var a = require(/* 30 */"lodash")
+var s = require(/* 979 */"../../../../979")
 var /* [auto-meaningful-name] */s$breakableTypePattern = s.breakableTypePattern
 var /* [auto-meaningful-name] */s$createGlobalLinebreakMatcher = s.createGlobalLinebreakMatcher
 var /* [auto-meaningful-name] */s$lineBreakPattern = s.lineBreakPattern

@@ -6,10 +6,10 @@
 
 "use strict"
 
-var r = require("./965/index")
-var i = require("./1811/index")
-var o = require("./1815")
-var a = require("./1816") || 0
+var r = require(/* 965 */"./965/index")
+var i = require(/* 1811 */"./1811/index")
+var o = require(/* 1815 */"./1815")
+var a = require(/* 1816 */"./1816") || 0
 function s() {
   return i(a)
 }

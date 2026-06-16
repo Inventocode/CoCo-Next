@@ -7,8 +7,8 @@
 "use strict"
 
 export { o as a }
-import * as /* [auto-meaningful-name] */ReactDom from "react-dom"
-import /* [auto-meaningful-name] */ReactDom1 from "react-dom"
+import * as /* [auto-meaningful-name] */ReactDom from /* 80 */"react-dom"
+import /* [auto-meaningful-name] */ReactDom1 from /* 80 */"react-dom"
 function o(e) {
   return e instanceof HTMLElement ? e : ReactDom1.findDOMNode(e)
 }

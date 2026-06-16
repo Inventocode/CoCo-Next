@@ -6,23 +6,23 @@
 
 "use strict"
 
-import * as r from "../6"
-import * as /* [auto-meaningful-name] */$$_11 from "../11"
-import { useRef, useMemo } from "react"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"../6"
+import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"../11"
+import { useRef, useMemo } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */Color from "color"
-import /* [auto-meaningful-name] */Color1 from "color"
-import * as /* [auto-meaningful-name] */Classnames from "classnames"
-import /* [auto-meaningful-name] */Classnames1 from "classnames"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_tools_index from "../../../../../src/shared/tools/index"
-import * as /* [auto-meaningful-name] */$$_33 from "../33"
-import * as /* [auto-meaningful-name] */$$_90 from "../90"
-import * as /* [auto-meaningful-name] */$$_322 from "../322"
-import * as /* [auto-meaningful-name] */$$_83 from "../83"
-import * as /* [auto-meaningful-name] */$_380 from "./380"
-import /* [auto-meaningful-name] */$_3801 from "./380"
+import /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Color from /* 51 */"color"
+import /* [auto-meaningful-name] */Color1 from /* 51 */"color"
+import * as /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import /* [auto-meaningful-name] */Classnames1 from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */Module_33 from /* 33 */"../33"
+import * as /* [auto-meaningful-name] */Module_90 from /* 90 */"../90"
+import * as /* [auto-meaningful-name] */Module_322 from /* 322 */"../322"
+import * as /* [auto-meaningful-name] */Module_83 from /* 83 */"../83"
+import * as /* [auto-meaningful-name] */Module_380 from /* 380 */"./380"
+import /* [auto-meaningful-name] */Module_3801 from /* 380 */"./380"
 var _a
 _a = function (e) {
   var /* [auto-meaningful-name] */e$position = e.position
@@ -43,45 +43,45 @@ _a = function (e) {
   var /* [auto-meaningful-name] */e$attributes$iconId = e$attributes.iconId
   var N = useRef(null)
   var R = useRef(null)
-  var k = $$_33.O(e$attributes$mode) === $$_83.a.ICON
+  var k = Module_33.O(e$attributes$mode) === Module_83.a.ICON
   var x = useMemo(function () {
     var e = function (e, t) {
       var n
       var r = Color1(t).toString()
-      return (n = {}, $$_11.a(n, $$_83.b.CONTAINED_TEXT, {
+      return (n = {}, Module_11.a(n, Module_83.b.CONTAINED_TEXT, {
         default: {
           backgroundColor: r,
-          color: $$_$$_$$_$$_$$_src_shared_tools_index.Z(r) ? $$_$$_$$_$$_$$_src_shared_tools_index.a : "#ffffff"
+          color: Src_shared_tools_index.Z(r) ? Src_shared_tools_index.a : "#ffffff"
         },
         disabled: {
           backgroundColor: "#cccccc",
           color: "#e6e6e6"
         }
-      }), $$_11.a(n, $$_83.b.OUTLINED_TEXT, {
+      }), Module_11.a(n, Module_83.b.OUTLINED_TEXT, {
         default: {
           borderColor: r,
           color: r,
-          background: $$_$$_$$_$$_$$_src_shared_tools_index.Z(r) ? $$_$$_$$_$$_$$_src_shared_tools_index.a : "#ffffff"
+          background: Src_shared_tools_index.Z(r) ? Src_shared_tools_index.a : "#ffffff"
         },
         disabled: {
           background: "#ffffff",
           borderColor: "#e9e9e9",
           color: "#e9e9e9"
         }
-      }), $$_11.a(n, $$_83.b.CONTAINED_ICON, {
+      }), Module_11.a(n, Module_83.b.CONTAINED_ICON, {
         default: {
           backgroundColor: r,
-          color: $$_$$_$$_$$_$$_src_shared_tools_index.Z(r) ? $$_$$_$$_$$_$$_src_shared_tools_index.a : "#ffffff"
+          color: Src_shared_tools_index.Z(r) ? Src_shared_tools_index.a : "#ffffff"
         },
         disabled: {
           backgroundColor: "#cccccc",
           color: "#e6e6e6"
         }
-      }), $$_11.a(n, $$_83.b.OUTLINED_ICON, {
+      }), Module_11.a(n, Module_83.b.OUTLINED_ICON, {
         default: {
           borderColor: r,
           color: r,
-          background: $$_$$_$$_$$_$$_src_shared_tools_index.Z(r) ? $$_$$_$$_$$_$$_src_shared_tools_index.a : "#ffffff"
+          background: Src_shared_tools_index.Z(r) ? Src_shared_tools_index.a : "#ffffff"
         },
         disabled: {
           background: "#ffffff",
@@ -93,7 +93,7 @@ _a = function (e) {
     return e$attributes$disabled ? e.disabled : e.default
   }, [e$attributes$mode, e$attributes$color, e$attributes$disabled])
   var D = useMemo(function () {
-    return $$_33.Q(e$attributes$sizeType, e$attributes$mode)
+    return Module_33.Q(e$attributes$sizeType, e$attributes$mode)
   }, [e$attributes$mode, e$attributes$sizeType])
   var /* [auto-meaningful-name] */D$height = D.height
   var /* [auto-meaningful-name] */D$fontSize = D.fontSize
@@ -101,9 +101,9 @@ _a = function (e) {
   var /* [auto-meaningful-name] */D$maxWidth = D.maxWidth
   return React1.createElement("button", {
     id: s,
-    className: Classnames1($$_90.b, $_3801.buttonWidget, $$_11.a({}, $_3801.hide, !e$visible)),
-    "data-role": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.M,
-    "data-widget-type": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.d,
+    className: Classnames1(Module_90.b, Module_3801.buttonWidget, Module_11.a({}, Module_3801.hide, !e$visible)),
+    "data-role": Src_editor_widget_builtIn_types.M,
+    "data-widget-type": Src_editor_widget_builtIn_types.d,
     "data-lock-height": true,
     "data-min-width": D$minWidth,
     "data-max-width": D$maxWidth,
@@ -124,7 +124,7 @@ _a = function (e) {
         e$onMouseUp()
       }
     },
-    style: r.a({
+    style: Module_6.a({
       borderRadius: k ? D$height / 2 : D$height / 4,
       top: e$position.y,
       left: e$position.x,
@@ -133,12 +133,12 @@ _a = function (e) {
       fontSize: D$fontSize,
       opacity: undefined === e$opacity ? undefined : e$opacity / 100
     }, x)
-  }, k ? React1.createElement($$_322.a, {
-    icon: e$iconFile || $$_33.fb(e$attributes$iconId)
+  }, k ? React1.createElement(Module_322.a, {
+    icon: e$iconFile || Module_33.fb(e$attributes$iconId)
   }) : React1.createElement("div", {
-    className: Classnames1($_3801.inputWrapper)
+    className: Classnames1(Module_3801.inputWrapper)
   }, React1.createElement("div", {
-    className: $_3801.text,
+    className: Module_3801.text,
     ref: R
   }, e$attributes$text)))
 }

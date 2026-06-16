@@ -18,9 +18,9 @@ exports.createWoodParentApi = function (e, t) {
 exports.getWoodIframeUrl = function (e) {
   return "".concat((0, i.getServiceOrigin)(e, "lunar-turtle.codemao.cn"), "?sidebar=true")
 }
-var r = require("../772")
-var o = require("../773/index")
-var i = require("./885")
+var r = require(/* 772 */"../772")
+var o = require(/* 773 */"../773/index")
+var i = require(/* 885 */"./885")
 var a = new r.ApiSpec("wood", {
   setCurrentWoodProjectById: new r.MethodType(),
   setCurrentWoodProjectByUrl: new r.MethodType(),

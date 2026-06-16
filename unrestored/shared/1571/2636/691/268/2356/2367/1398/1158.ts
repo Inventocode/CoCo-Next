@@ -9,8 +9,8 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 })
-var r = require("./1157")
-var i = require("../../../1399/index")
+var r = require(/* 1157 */"./1157")
+var i = require(/* 1399 */"../../../1399/index")
 var o = function () {
   function e(e) {
     this._binding = e

@@ -6,30 +6,30 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import { useDispatch } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { useState } from "react"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import { useDispatch } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { useState } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_938 from "./938"
-import /* [auto-meaningful-name] */$_9381 from "./938"
+import * as /* [auto-meaningful-name] */Module_938 from /* 938 */"./938"
+import /* [auto-meaningful-name] */Module_9381 from /* 938 */"./938"
 var aN = function (e) {
   var /* [auto-meaningful-name] */e$onSuccess = e.onSuccess
   var /* [auto-meaningful-name] */e$className = e.className
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$isEmpty = e.isEmpty
   var i = useState(false)
-  var a = $_10_index.a(i, 2)
+  var a = Module_10.a(i, 2)
   var s = a[0]
   var c = a[1]
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var u = useDispatch()
   return React.createElement("div", {
-    className: Classnames($_9381.ImageDragContainer, s && $_9381.isDragging),
+    className: Classnames(Module_9381.ImageDragContainer, s && Module_9381.isDragging),
     onDragEnter: function (t) {
       if (!e.isReadOnly) {
         c(true)
@@ -44,21 +44,21 @@ var aN = function (e) {
       var /* [auto-meaningful-name] */n$dataTransfer
       var /* [auto-meaningful-name] */n$dataTransfer$files
       if (!(e.isReadOnly || 0 === (null === n || undefined === n || null === (n$dataTransfer = n.dataTransfer) || undefined === n$dataTransfer || null === (n$dataTransfer$files = n$dataTransfer.files) || undefined === n$dataTransfer$files ? undefined : n$dataTransfer$files.length))) {
-        u($$_$$_$$_$$_src_editor_redux_common_actions.Zf(n.dataTransfer.files, e$onSuccess, true))
+        u(Src_editor_redux_common_actions.Zf(n.dataTransfer.files, e$onSuccess, true))
         c(false)
       }
     }
   }, e$children, e$isEmpty && React.createElement("div", {
-    className: Classnames($_9381.ImageLayoutEmpty, e$className)
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+    className: Classnames(Module_9381.ImageLayoutEmpty, e$className)
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-image-upload"
-  }), React.createElement("h5", null, $_710$a$formatMessage({
+  }), React.createElement("h5", null, Module_710$a$formatMessage({
     id: "emptyImageLibraryTitle"
   })), React.createElement("div", {
-    className: $_9381.emptyContent
-  }, $_710$a$formatMessage({
+    className: Module_9381.emptyContent
+  }, Module_710$a$formatMessage({
     id: "emptyImageLibraryTips1"
-  }), " ", React.createElement("br", null), $_710$a$formatMessage({
+  }), " ", React.createElement("br", null), Module_710$a$formatMessage({
     id: "emptyImageLibraryTips2"
   }), " ", React.createElement("br", null))))
 }

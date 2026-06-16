@@ -4,8 +4,8 @@
  * 模块 ID：DtRx
  */
 
-var rng = require("./rng-i4uy")
-var bytesToUuid = require("./bytesToUuid-MAlW")
+var rng = require(/* i4uy */"./rng-i4uy")
+var bytesToUuid = require(/* MAlW */"./bytesToUuid-MAlW")
 function v4(options, buf, offset) {
   var i = buf && offset || 0
   if (typeof options == "string") {

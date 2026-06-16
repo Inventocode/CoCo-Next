@@ -10,8 +10,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.default = undefined
-var r = require("./1473")
-var o = require("./1474")
+var r = require(/* 1473 */"./1473")
+var o = require(/* 1474 */"./1474")
 var i = {
   blocks: function (e) {
     for (var t = [], /* [auto-meaningful-name] */e$data$length = e.data.length, r = 0, i = (0, o.readByte)()(e); 0 !== i && i; i = (0, o.readByte)()(e)) {

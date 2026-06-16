@@ -4,8 +4,8 @@
  * 模块 ID：947
  */
 
-var r = require("./240")
-var o = require("./835")
+var r = require(/* 240 */"./240")
+var o = require(/* 835 */"./835")
 module.exports = function (e, t) {
   var n = arguments.length < 2 ? o(e) : t
   if ("function" != typeof n) {

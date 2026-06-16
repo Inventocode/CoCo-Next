@@ -7,22 +7,22 @@
 "use strict"
 
 import { fA } from "./index__part-163"
-import * as /* [auto-meaningful-name] */$_431_index from "./431/index"
-import * as Et from "./9"
-import * as /* [auto-meaningful-name] */$_190 from "./190"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import { useDispatch } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { memo, useState, useEffect } from "react"
+import * as /* [auto-meaningful-name] */Module_431 from /* 431 */"./431/index"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"./9"
+import * as /* [auto-meaningful-name] */Module_190 from /* 190 */"./190"
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import { useDispatch } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo, useState, useEffect } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_341 from "./341"
-import /* [auto-meaningful-name] */$_3411 from "./341"
-var /* [auto-meaningful-name] */$_431_index$a$AudioPlayer = $_431_index.a.AudioPlayer
+import * as /* [auto-meaningful-name] */Module_341 from /* 341 */"./341"
+import /* [auto-meaningful-name] */Module_3411 from /* 341 */"./341"
+var /* [auto-meaningful-name] */Module_431$a$AudioPlayer = Module_431.a.AudioPlayer
 var bA = {}
 var yA = {}
 var EA = memo(function (e) {
@@ -32,14 +32,14 @@ var EA = memo(function (e) {
   var /* [auto-meaningful-name] */e$source = e.source
   var /* [auto-meaningful-name] */e$duration = e.duration
   var /* [auto-meaningful-name] */e$isPlaying = e.isPlaying
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var c = useDispatch()
   var l = useState(0)
-  var u = $_10_index.a(l, 2)
+  var u = Module_10.a(l, 2)
   var d = u[0]
   var p = u[1]
   function m(e) {
-    c($$_$$_$$_$$_src_editor_redux_common_actions.og(e))
+    c(Src_editor_redux_common_actions.og(e))
   }
   function g(n) {
     e.setSoundPlayingId(n ? e.id : "")
@@ -48,7 +48,7 @@ var EA = memo(function (e) {
     }
   }
   function v(e) {
-    var t = $$_$$_$$_$$_src_shared_tools_index.I(e)
+    var t = Src_shared_tools_index.I(e)
     return [e.slice(0, e.lastIndexOf(t)), t]
   }
   useEffect(function () {
@@ -72,26 +72,26 @@ var EA = memo(function (e) {
   }, [e$isPlaying, t])
   return React.createElement("li", {
     key: t,
-    className: $_3411.SoundLayoutItem
+    className: Module_3411.SoundLayoutItem
   }, React.createElement("div", {
-    className: $_3411.soundBoxWrapper
+    className: Module_3411.soundBoxWrapper
   }, React.createElement("div", {
-    className: $_3411.delete,
+    className: Module_3411.delete,
     onClick: function (e) {
-      var t = Et.ub("SOUND_FILE_ID", e)
-      if (t.length > 0 || Et.Yb(e)) {
-        c($$_$$_$$_$$_src_editor_redux_common_actions.zh({
+      var t = Module_9.ub("SOUND_FILE_ID", e)
+      if (t.length > 0 || Module_9.Yb(e)) {
+        c(Src_editor_redux_common_actions.zh({
           isDangerous: true,
           onConfirm: m.bind(null, e),
-          allowText: $_710$a$formatMessage({
+          allowText: Module_710$a$formatMessage({
             id: "delete"
           }),
-          title: $_710$a$formatMessage({
+          title: Module_710$a$formatMessage({
             id: "deleteSoundFileTitle"
           }, {
-            name: $_190.f(e$name || "", 10)
+            name: Module_190.f(e$name || "", 10)
           }),
-          content: $_710$a$formatMessage({
+          content: Module_710$a$formatMessage({
             id: "deleteSoundFileTips"
           }, {
             name: t.join("、")
@@ -101,10 +101,10 @@ var EA = memo(function (e) {
         m(e)
       }
     }.bind(null, t)
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-delete"
   })), React.createElement("div", {
-    className: $_3411.soundBox,
+    className: Module_3411.soundBox,
     onClick: function (e) {
       e.stopPropagation()
       if (e$isPlaying) {
@@ -115,7 +115,7 @@ var EA = memo(function (e) {
       }
       p(0)
       if (!yA[t]) {
-        yA[t] = $_431_index$a$AudioPlayer.load(t, e$cdnUrl || e$source || "", true)
+        yA[t] = Module_431$a$AudioPlayer.load(t, e$cdnUrl || e$source || "", true)
       }
       yA[t].play()
       yA[t].on("play", function () {
@@ -138,38 +138,38 @@ var EA = memo(function (e) {
     src: e$cdnUrl || e$source,
     preload: "none"
   }), e$isPlaying ? React.createElement("div", {
-    className: $_3411.soundPauseIconBox
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+    className: Module_3411.soundPauseIconBox
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-sound-pause",
-    className: $_3411.soundDefaultIcon
+    className: Module_3411.soundDefaultIcon
   }), React.createElement("div", {
-    className: Classnames($_3411.progressWrapper, $_3411.rightWrapper)
+    className: Classnames(Module_3411.progressWrapper, Module_3411.rightWrapper)
   }, React.createElement("div", {
-    className: Classnames($_3411.circleProgress, $_3411.rightCircle),
+    className: Classnames(Module_3411.circleProgress, Module_3411.rightCircle),
     style: {
       animationDuration: "".concat(e$duration, "s")
     }
   })), React.createElement("div", {
-    className: Classnames($_3411.progressWrapper, $_3411.leftWrapper)
+    className: Classnames(Module_3411.progressWrapper, Module_3411.leftWrapper)
   }, React.createElement("div", {
-    className: Classnames($_3411.circleProgress, $_3411.leftCircle),
+    className: Classnames(Module_3411.circleProgress, Module_3411.leftCircle),
     style: {
       animationDuration: "".concat(e$duration, "s")
     }
   }))) : React.createElement("div", {
-    className: $_3411.soundIconBox
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+    className: Module_3411.soundIconBox
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-music",
-    className: $_3411.soundDefaultIcon
+    className: Module_3411.soundDefaultIcon
   }), React.createElement("div", {
-    className: $_3411.soundPlayIconBox
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+    className: Module_3411.soundPlayIconBox
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-sound-play",
-    className: $_3411.soundPlayIcon
+    className: Module_3411.soundPlayIcon
   })))), React.createElement("div", {
-    className: $_3411.soundDuration
-  }, $$_$$_$$_$$_src_shared_tools_index.w(e$isPlaying ? d : e$duration))), React.createElement("div", {
-    className: $_3411.fileItemName
+    className: Module_3411.soundDuration
+  }, Src_shared_tools_index.w(e$isPlaying ? d : e$duration))), React.createElement("div", {
+    className: Module_3411.fileItemName
   }, React.createElement(fA, {
     suffix: v(e$name)[1],
     isTrimmed: true,
@@ -177,14 +177,14 @@ var EA = memo(function (e) {
     onBlur: function (e, n, r, o) {
       if (r) {
         if (r === e || function (e) {
-          return Et.xb().some(function (t) {
+          return Module_9.xb().some(function (t) {
             return t.name === e
           })
         }(r + n)) {
           o.target.value = e
           if (r !== e) {
-            c($$_$$_$$_$$_src_editor_redux_common_actions.mj({
-              message: $_710$a$formatMessage({
+            c(Src_editor_redux_common_actions.mj({
+              message: Module_710$a$formatMessage({
                 id: "renameFileNameRepeatTips"
               })
             }))
@@ -194,7 +194,7 @@ var EA = memo(function (e) {
             yA[t].stop()
           }
           g(false)
-          c($$_$$_$$_$$_src_editor_redux_common_actions.qg(t, e + n, r + n))
+          c(Src_editor_redux_common_actions.qg(t, e + n, r + n))
         }
       } else {
         o.target.value = e

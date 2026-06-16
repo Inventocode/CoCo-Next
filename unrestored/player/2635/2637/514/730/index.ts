@@ -7,5 +7,5 @@
 import "./index__part-0"
 import "./index__part-1"
 import "./index__part-2"
-import * as /* [auto-meaningful-name] */$_907 from "./907"
+import * as /* [auto-meaningful-name] */Module_907 from /* 907 */"./907"
 export { a as BrowserQRCodeReader } from "./907"

@@ -10,12 +10,12 @@ import { i, a, u, f } from "./index__part-0"
 import { z, B } from "./index__part-3"
 import { ve } from "./index__part-4"
 import { Oe } from "./index__part-5"
-import * as /* [auto-meaningful-name] */$$_49_50 from "../49/50"
-import * as /* [auto-meaningful-name] */$$_49_25 from "../49/25"
-import * as /* [auto-meaningful-name] */$$_49_14 from "../49/14"
-import * as /* [auto-meaningful-name] */$$_49_8 from "../49/8"
-import * as /* [auto-meaningful-name] */$$_16_32 from "../16/32"
-import * as /* [auto-meaningful-name] */$$_49_40 from "../49/40"
+import * as /* [auto-meaningful-name] */Module_50 from /* 50 */"../49/50"
+import * as /* [auto-meaningful-name] */Module_25 from /* 25 */"../49/25"
+import * as /* [auto-meaningful-name] */Module_14 from /* 14 */"../49/14"
+import * as /* [auto-meaningful-name] */Module_8 from /* 8 */"../49/8"
+import * as /* [auto-meaningful-name] */Module_32 from /* 32 */"../16/32"
+import * as /* [auto-meaningful-name] */Module_40 from /* 40 */"../49/40"
 var Se = function () {
   function e(t) {
     this.name = e.id
@@ -30,11 +30,11 @@ var Se = function () {
   }
   e.prototype.addSentryBreadcrumb = function (e) {
     if (this._options.sentry) {
-      $$_16_32.b().addBreadcrumb({
+      Module_32.b().addBreadcrumb({
         category: "sentry." + ("transaction" === e.type ? "transaction" : "event"),
         event_id: e.event_id,
         level: e.level,
-        message: $$_49_14.d(e)
+        message: Module_14.d(e)
       }, {
         event: e
       })
@@ -43,7 +43,7 @@ var Se = function () {
   e.prototype.setupOnce = function () {
     var e = this
     if (this._options.console) {
-      $$_49_50.a({
+      Module_50.a({
         callback: function () {
           for (var t = [], n = 0; n < arguments.length; n++) {
             t[n] = arguments[n]
@@ -54,7 +54,7 @@ var Se = function () {
       })
     }
     if (this._options.dom) {
-      $$_49_50.a({
+      Module_50.a({
         callback: function () {
           for (var t = [], n = 0; n < arguments.length; n++) {
             t[n] = arguments[n]
@@ -65,7 +65,7 @@ var Se = function () {
       })
     }
     if (this._options.xhr) {
-      $$_49_50.a({
+      Module_50.a({
         callback: function () {
           for (var t = [], n = 0; n < arguments.length; n++) {
             t[n] = arguments[n]
@@ -76,7 +76,7 @@ var Se = function () {
       })
     }
     if (this._options.fetch) {
-      $$_49_50.a({
+      Module_50.a({
         callback: function () {
           for (var t = [], n = 0; n < arguments.length; n++) {
             t[n] = arguments[n]
@@ -87,7 +87,7 @@ var Se = function () {
       })
     }
     if (this._options.history) {
-      $$_49_50.a({
+      Module_50.a({
         callback: function () {
           for (var t = [], n = 0; n < arguments.length; n++) {
             t[n] = arguments[n]
@@ -106,16 +106,16 @@ var Se = function () {
         logger: "console"
       },
       level: B.fromString(e.level),
-      message: $$_49_25.b(e.args, " ")
+      message: Module_25.b(e.args, " ")
     }
     if ("assert" === e.level) {
       if (false !== e.args[0]) {
         return
       }
-      t.message = "Assertion failed: " + ($$_49_25.b(e.args.slice(1), " ") || "console.assert")
+      t.message = "Assertion failed: " + (Module_25.b(e.args.slice(1), " ") || "console.assert")
       t.data.arguments = e.args.slice(1)
     }
-    $$_16_32.b().addBreadcrumb(t, {
+    Module_32.b().addBreadcrumb(t, {
       input: e.args,
       level: e.level
     })
@@ -127,12 +127,12 @@ var Se = function () {
       n = [n]
     }
     try {
-      t = e.event.target ? $$_49_40.a(e.event.target, n) : $$_49_40.a(e.event, n)
+      t = e.event.target ? Module_40.a(e.event.target, n) : Module_40.a(e.event, n)
     } catch (r) {
       t = "<unknown>"
     }
     if (0 !== t.length) {
-      $$_16_32.b().addBreadcrumb({
+      Module_32.b().addBreadcrumb({
         category: "ui." + e.name,
         message: t
       }, {
@@ -152,7 +152,7 @@ var Se = function () {
       var /* [auto-meaningful-name] */t$url = t.url
       var /* [auto-meaningful-name] */t$status_code = t.status_code
       var /* [auto-meaningful-name] */t$body = t.body
-      $$_16_32.b().addBreadcrumb({
+      Module_32.b().addBreadcrumb({
         category: "xhr",
         data: {
           method: t$method,
@@ -172,7 +172,7 @@ var Se = function () {
     if (e.endTimestamp) {
       if (!(e.fetchData.url.match(/sentry_key/) && "POST" === e.fetchData.method)) {
         if (e.error) {
-          $$_16_32.b().addBreadcrumb({
+          Module_32.b().addBreadcrumb({
             category: "fetch",
             data: e.fetchData,
             level: B.Error,
@@ -182,7 +182,7 @@ var Se = function () {
             input: e.args
           })
         } else {
-          $$_16_32.b().addBreadcrumb({
+          Module_32.b().addBreadcrumb({
             category: "fetch",
             data: u(u({}, e.fetchData), {
               status_code: e.response.status
@@ -197,12 +197,12 @@ var Se = function () {
     }
   }
   e.prototype._historyBreadcrumb = function (e) {
-    var t = $$_49_14.e()
+    var t = Module_14.e()
     var /* [auto-meaningful-name] */e$from = e.from
     var r = e.to
-    var i = $$_49_14.h(t.location.href)
-    var o = $$_49_14.h(e$from)
-    var a = $$_49_14.h(r)
+    var i = Module_14.h(t.location.href)
+    var o = Module_14.h(e$from)
+    var a = Module_14.h(r)
     if (!o.path) {
       o = i
     }
@@ -212,7 +212,7 @@ var Se = function () {
     if (i.protocol === o.protocol && i.host === o.host) {
       e$from = o.relative
     }
-    $$_16_32.b().addBreadcrumb({
+    Module_32.b().addBreadcrumb({
       category: "navigation",
       data: {
         from: e$from,
@@ -246,13 +246,13 @@ var ke = function (e) {
     if (undefined === e) {
       e = {}
     }
-    if ($$_49_14.e().document) {
+    if (Module_14.e().document) {
       if (this._isEnabled()) {
         Oe(u(u({}, e), {
           dsn: e.dsn || this.getDsn()
         }))
       } else {
-        $$_49_8.a.error("Trying to call showReportDialog with Sentry Client disabled")
+        Module_8.a.error("Trying to call showReportDialog with Sentry Client disabled")
       }
     }
   }

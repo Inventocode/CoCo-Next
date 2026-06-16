@@ -10,20 +10,20 @@ import { r } from "./index__part-0"
 import { O } from "./index__part-3"
 import { Q, W, te, ie, se, me } from "./index__part-5"
 import { we, xe, Ce } from "./index__part-6"
-import * as /* [auto-meaningful-name] */$_1008 from "./1008"
-import * as /* [auto-meaningful-name] */$_564_index from "./564/index"
-import * as /* [auto-meaningful-name] */$_306 from "./306"
-import * as /* [auto-meaningful-name] */$_746 from "./746"
-import * as /* [auto-meaningful-name] */$_395 from "./395"
-import * as /* [auto-meaningful-name] */$_918 from "./918"
-import * as /* [auto-meaningful-name] */$_2644 from "./2644"
-import * as /* [auto-meaningful-name] */$_1049 from "./1049"
-import * as /* [auto-meaningful-name] */$$_799_38 from "../799/38"
-import * as /* [auto-meaningful-name] */$_1195 from "./1195"
+import * as /* [auto-meaningful-name] */Module_1008 from /* 1008 */"./1008"
+import * as /* [auto-meaningful-name] */Module_564 from /* 564 */"./564/index"
+import * as /* [auto-meaningful-name] */Module_306 from /* 306 */"./306"
+import * as /* [auto-meaningful-name] */Module_746 from /* 746 */"./746"
+import * as /* [auto-meaningful-name] */Module_395 from /* 395 */"./395"
+import * as /* [auto-meaningful-name] */Module_918 from /* 918 */"./918"
+import * as /* [auto-meaningful-name] */Module_2644 from /* 2644 */"./2644"
+import * as /* [auto-meaningful-name] */Module_1049 from /* 1049 */"./1049"
+import * as /* [auto-meaningful-name] */Module_38 from /* 38 */"../799/38"
+import * as /* [auto-meaningful-name] */Module_1195 from /* 1195 */"./1195"
 var ke = function () {
   function e(t) {
     this.name = e.id
-    this._options = $$_799_38.a({
+    this._options = Module_38.a({
       console: true,
       dom: true,
       fetch: true,
@@ -34,11 +34,11 @@ var ke = function () {
   }
   e.prototype.addSentryBreadcrumb = function (e) {
     if (this._options.sentry) {
-      $_2644.a().addBreadcrumb({
+      Module_2644.a().addBreadcrumb({
         category: "sentry." + ("transaction" === e.type ? "transaction" : "event"),
         event_id: e.event_id,
         level: e.level,
-        message: $_395.d(e)
+        message: Module_395.d(e)
       }, {
         event: e
       })
@@ -52,7 +52,7 @@ var ke = function () {
           for (var t = [], n = 0; n < arguments.length; n++) {
             t[n] = arguments[n]
           }
-          e._consoleBreadcrumb.apply(e, $$_799_38.f(t))
+          e._consoleBreadcrumb.apply(e, Module_38.f(t))
         },
         type: "console"
       })
@@ -63,7 +63,7 @@ var ke = function () {
           for (var t = [], n = 0; n < arguments.length; n++) {
             t[n] = arguments[n]
           }
-          e._domBreadcrumb.apply(e, $$_799_38.f(t))
+          e._domBreadcrumb.apply(e, Module_38.f(t))
         },
         type: "dom"
       })
@@ -74,7 +74,7 @@ var ke = function () {
           for (var t = [], n = 0; n < arguments.length; n++) {
             t[n] = arguments[n]
           }
-          e._xhrBreadcrumb.apply(e, $$_799_38.f(t))
+          e._xhrBreadcrumb.apply(e, Module_38.f(t))
         },
         type: "xhr"
       })
@@ -85,7 +85,7 @@ var ke = function () {
           for (var t = [], n = 0; n < arguments.length; n++) {
             t[n] = arguments[n]
           }
-          e._fetchBreadcrumb.apply(e, $$_799_38.f(t))
+          e._fetchBreadcrumb.apply(e, Module_38.f(t))
         },
         type: "fetch"
       })
@@ -96,7 +96,7 @@ var ke = function () {
           for (var t = [], n = 0; n < arguments.length; n++) {
             t[n] = arguments[n]
           }
-          e._historyBreadcrumb.apply(e, $$_799_38.f(t))
+          e._historyBreadcrumb.apply(e, Module_38.f(t))
         },
         type: "history"
       })
@@ -110,16 +110,16 @@ var ke = function () {
         logger: "console"
       },
       level: W.fromString(e.level),
-      message: $_746.b(e.args, " ")
+      message: Module_746.b(e.args, " ")
     }
     if ("assert" === e.level) {
       if (false !== e.args[0]) {
         return
       }
-      t.message = "Assertion failed: " + ($_746.b(e.args.slice(1), " ") || "console.assert")
+      t.message = "Assertion failed: " + (Module_746.b(e.args.slice(1), " ") || "console.assert")
       t.data.arguments = e.args.slice(1)
     }
-    $_2644.a().addBreadcrumb(t, {
+    Module_2644.a().addBreadcrumb(t, {
       input: e.args,
       level: e.level
     })
@@ -131,12 +131,12 @@ var ke = function () {
       n = [n]
     }
     try {
-      t = e.event.target ? $_1195.a(e.event.target, n) : $_1195.a(e.event, n)
+      t = e.event.target ? Module_1195.a(e.event.target, n) : Module_1195.a(e.event, n)
     } catch (r) {
       t = "<unknown>"
     }
     if (0 !== t.length) {
-      $_2644.a().addBreadcrumb({
+      Module_2644.a().addBreadcrumb({
         category: "ui." + e.name,
         message: t
       }, {
@@ -156,7 +156,7 @@ var ke = function () {
       var /* [auto-meaningful-name] */t$url = t.url
       var /* [auto-meaningful-name] */t$status_code = t.status_code
       var /* [auto-meaningful-name] */t$body = t.body
-      $_2644.a().addBreadcrumb({
+      Module_2644.a().addBreadcrumb({
         category: "xhr",
         data: {
           method: t$method,
@@ -176,7 +176,7 @@ var ke = function () {
     if (e.endTimestamp) {
       if (!(e.fetchData.url.match(/sentry_key/) && "POST" === e.fetchData.method)) {
         if (e.error) {
-          $_2644.a().addBreadcrumb({
+          Module_2644.a().addBreadcrumb({
             category: "fetch",
             data: e.fetchData,
             level: W.Error,
@@ -186,9 +186,9 @@ var ke = function () {
             input: e.args
           })
         } else {
-          $_2644.a().addBreadcrumb({
+          Module_2644.a().addBreadcrumb({
             category: "fetch",
-            data: $$_799_38.a($$_799_38.a({}, e.fetchData), {
+            data: Module_38.a(Module_38.a({}, e.fetchData), {
               status_code: e.response.status
             }),
             type: "http"
@@ -201,12 +201,12 @@ var ke = function () {
     }
   }
   e.prototype._historyBreadcrumb = function (e) {
-    var t = $_395.e()
+    var t = Module_395.e()
     var /* [auto-meaningful-name] */e$from = e.from
     var r = e.to
-    var i = $_395.h(t.location.href)
-    var o = $_395.h(e$from)
-    var a = $_395.h(r)
+    var i = Module_395.h(t.location.href)
+    var o = Module_395.h(e$from)
+    var a = Module_395.h(r)
     if (!o.path) {
       o = i
     }
@@ -216,7 +216,7 @@ var ke = function () {
     if (i.protocol === o.protocol && i.host === o.host) {
       e$from = o.relative
     }
-    $_2644.a().addBreadcrumb({
+    Module_2644.a().addBreadcrumb({
       category: "navigation",
       data: {
         from: e$from,
@@ -245,18 +245,18 @@ var Se = function (e) {
     }
     return e.call(this, me, t) || this
   }
-  $$_799_38.c(t, e)
+  Module_38.c(t, e)
   t.prototype.showReportDialog = function (e) {
     if (undefined === e) {
       e = {}
     }
-    if ($_395.e().document) {
+    if (Module_395.e().document) {
       if (this._isEnabled()) {
-        Ce($$_799_38.a($$_799_38.a({}, e), {
+        Ce(Module_38.a(Module_38.a({}, e), {
           dsn: e.dsn || this.getDsn()
         }))
       } else {
-        $_918.a.error("Trying to call showReportDialog with Sentry Client disabled")
+        Module_918.a.error("Trying to call showReportDialog with Sentry Client disabled")
       }
     }
   }
@@ -277,7 +277,7 @@ var Te = ["EventTarget", "Window", "Node", "ApplicationCache", "AudioTrackList",
 var Be = function () {
   function e(t) {
     this.name = e.id
-    this._options = $$_799_38.a({
+    this._options = Module_38.a({
       XMLHttpRequest: true,
       eventTarget: true,
       requestAnimationFrame: true,
@@ -286,18 +286,18 @@ var Be = function () {
     }, t)
   }
   e.prototype.setupOnce = function () {
-    var e = $_395.e()
+    var e = Module_395.e()
     if (this._options.setTimeout) {
-      $_564_index.c(e, "setTimeout", this._wrapTimeFunction.bind(this))
+      Module_564.c(e, "setTimeout", this._wrapTimeFunction.bind(this))
     }
     if (this._options.setInterval) {
-      $_564_index.c(e, "setInterval", this._wrapTimeFunction.bind(this))
+      Module_564.c(e, "setInterval", this._wrapTimeFunction.bind(this))
     }
     if (this._options.requestAnimationFrame) {
-      $_564_index.c(e, "requestAnimationFrame", this._wrapRAF.bind(this))
+      Module_564.c(e, "requestAnimationFrame", this._wrapRAF.bind(this))
     }
     if (this._options.XMLHttpRequest && "XMLHttpRequest" in e) {
-      $_564_index.c(XMLHttpRequest.prototype, "send", this._wrapXHR.bind(this))
+      Module_564.c(XMLHttpRequest.prototype, "send", this._wrapXHR.bind(this))
     }
     if (this._options.eventTarget) {
       (Array.isArray(this._options.eventTarget) ? this._options.eventTarget : Te).forEach(this._wrapEventTarget.bind(this))
@@ -312,7 +312,7 @@ var Be = function () {
       t[0] = xe(r, {
         mechanism: {
           data: {
-            function: $_1008.a(e)
+            function: Module_1008.a(e)
           },
           handled: true,
           type: "instrument"
@@ -327,7 +327,7 @@ var Be = function () {
         mechanism: {
           data: {
             function: "requestAnimationFrame",
-            handler: $_1008.a(e)
+            handler: Module_1008.a(e)
           },
           handled: true,
           type: "instrument"
@@ -336,10 +336,10 @@ var Be = function () {
     }
   }
   e.prototype._wrapEventTarget = function (e) {
-    var t = $_395.e()
+    var t = Module_395.e()
     var n = t[e] && t[e].prototype
     if (n && n.hasOwnProperty && n.hasOwnProperty("addEventListener")) {
-      $_564_index.c(n, "addEventListener", function (t) {
+      Module_564.c(n, "addEventListener", function (t) {
         return function (n, r, i) {
           try {
             if ("function" === typeof r.handleEvent) {
@@ -347,7 +347,7 @@ var Be = function () {
                 mechanism: {
                   data: {
                     function: "handleEvent",
-                    handler: $_1008.a(r),
+                    handler: Module_1008.a(r),
                     target: e
                   },
                   handled: true,
@@ -360,7 +360,7 @@ var Be = function () {
             mechanism: {
               data: {
                 function: "addEventListener",
-                handler: $_1008.a(r),
+                handler: Module_1008.a(r),
                 target: e
               },
               handled: true,
@@ -369,7 +369,7 @@ var Be = function () {
           }), i)
         }
       })
-      $_564_index.c(n, "removeEventListener", function (e) {
+      Module_564.c(n, "removeEventListener", function (e) {
         return function (t, n, r) {
           var i
           var o = n
@@ -393,19 +393,19 @@ var Be = function () {
       var i = ["onload", "onerror", "onprogress", "onreadystatechange"]
       i.forEach(function (e) {
         if (e in r && "function" === typeof r[e]) {
-          $_564_index.c(r, e, function (t) {
+          Module_564.c(r, e, function (t) {
             var n = {
               mechanism: {
                 data: {
                   function: e,
-                  handler: $_1008.a(t)
+                  handler: Module_1008.a(t)
                 },
                 handled: true,
                 type: "instrument"
               }
             }
             if (t.__sentry_original__) {
-              n.mechanism.data.handler = $_1008.a(t.__sentry_original__)
+              n.mechanism.data.handler = Module_1008.a(t.__sentry_original__)
             }
             return xe(t, n)
           })
@@ -422,7 +422,7 @@ var De = function () {
     this.name = e.id
     this._onErrorHandlerInstalled = false
     this._onUnhandledRejectionHandlerInstalled = false
-    this._options = $$_799_38.a({
+    this._options = Module_38.a({
       onerror: true,
       onunhandledrejection: true
     }, t)
@@ -430,11 +430,11 @@ var De = function () {
   e.prototype.setupOnce = function () {
     Error.stackTraceLimit = 50
     if (this._options.onerror) {
-      $_918.a.log("Global Handler attached: onerror")
+      Module_918.a.log("Global Handler attached: onerror")
       this._installGlobalOnErrorHandler()
     }
     if (this._options.onunhandledrejection) {
-      $_918.a.log("Global Handler attached: onunhandledrejection")
+      Module_918.a.log("Global Handler attached: onunhandledrejection")
       this._installGlobalOnUnhandledRejectionHandler()
     }
   }
@@ -444,16 +444,16 @@ var De = function () {
       O({
         callback: function (n) {
           var /* [auto-meaningful-name] */n$error = n.error
-          var i = $_2644.a()
+          var i = Module_2644.a()
           var o = i.getIntegration(e)
           var a = n$error && true === n$error.__sentry_own_request__
           if (o && !we() && !a) {
             var s = i.getClient()
-            var u = undefined === n$error && $_306.k(n.msg) ? t._eventFromIncompleteOnError(n.msg, n.url, n.line, n.column) : t._enhanceEventWithInitialFrame(se(n$error || n.msg, undefined, {
+            var u = undefined === n$error && Module_306.k(n.msg) ? t._eventFromIncompleteOnError(n.msg, n.url, n.line, n.column) : t._enhanceEventWithInitialFrame(se(n$error || n.msg, undefined, {
               attachStacktrace: s && s.getOptions().attachStacktrace,
               rejection: false
             }), n.url, n.line, n.column)
-            $_395.a(u, {
+            Module_395.a(u, {
               handled: false,
               type: "onerror"
             })
@@ -482,19 +482,19 @@ var De = function () {
               }
             }
           } catch (f) {}
-          var i = $_2644.a()
+          var i = Module_2644.a()
           var o = i.getIntegration(e)
           var a = r && true === r.__sentry_own_request__
           if (!o || we() || a) {
             return true
           }
           var s = i.getClient()
-          var u = $_306.i(r) ? t._eventFromRejectionWithPrimitive(r) : se(r, undefined, {
+          var u = Module_306.i(r) ? t._eventFromRejectionWithPrimitive(r) : se(r, undefined, {
             attachStacktrace: s && s.getOptions().attachStacktrace,
             rejection: true
           })
           u.level = W.Error
-          $_395.a(u, {
+          Module_395.a(u, {
             handled: false,
             type: "onunhandledrejection"
           })
@@ -509,7 +509,7 @@ var De = function () {
   }
   e.prototype._eventFromIncompleteOnError = function (e, t, n, r) {
     var i
-    var o = $_306.e(e) ? e.message : e
+    var o = Module_306.e(e) ? e.message : e
     var a = o.match(/^(?:[Uu]ncaught (?:exception: )?)?(?:((?:Eval|Internal|Range|Reference|Syntax|Type|URI|)Error): )?(.*)$/i)
     if (a) {
       i = a[1]
@@ -547,7 +547,7 @@ var De = function () {
     e.exception.values[0].stacktrace.frames = e.exception.values[0].stacktrace.frames || []
     var i = isNaN(parseInt(r, 10)) ? undefined : r
     var o = isNaN(parseInt(n, 10)) ? undefined : n
-    var a = $_306.k(t) && t.length > 0 ? t : $_395.f()
+    var a = Module_306.k(t) && t.length > 0 ? t : Module_395.f()
     if (0 === e.exception.values[0].stacktrace.frames.length) {
       e.exception.values[0].stacktrace.frames.push({
         colno: i,
@@ -572,8 +572,8 @@ var Ie = function () {
     this._limit = t.limit || 5
   }
   e.prototype.setupOnce = function () {
-    $_1049.b(function (t, n) {
-      var r = $_2644.a().getIntegration(e)
+    Module_1049.b(function (t, n) {
+      var r = Module_2644.a().getIntegration(e)
       if (r) {
         var i = r._handler && r._handler.bind(r)
         return "function" === typeof i ? i(t, n) : t
@@ -582,22 +582,22 @@ var Ie = function () {
     })
   }
   e.prototype._handler = function (e, t) {
-    if (!e.exception || !e.exception.values || !t || !$_306.g(t.originalException, Error)) {
+    if (!e.exception || !e.exception.values || !t || !Module_306.g(t.originalException, Error)) {
       return e
     }
     var n = this._walkErrorTree(t.originalException, this._key)
-    e.exception.values = $$_799_38.f(n, e.exception.values)
+    e.exception.values = Module_38.f(n, e.exception.values)
     return e
   }
   e.prototype._walkErrorTree = function (e, t, n) {
     if (undefined === n) {
       n = []
     }
-    if (!$_306.g(e[t], Error) || n.length + 1 >= this._limit) {
+    if (!Module_306.g(e[t], Error) || n.length + 1 >= this._limit) {
       return n
     }
     var r = ie(te(e[t]))
-    return this._walkErrorTree(e[t], t, $$_799_38.f([r], n))
+    return this._walkErrorTree(e[t], t, Module_38.f([r], n))
   }
   e.id = "LinkedErrors"
   return e
@@ -612,7 +612,7 @@ var Re = function () {
       if (r) {
         try {
           if (r._shouldDropEvent(t, r._previousEvent)) {
-            $_918.a.warn("Event dropped due to being a duplicate of previously captured event.")
+            Module_918.a.warn("Event dropped due to being a duplicate of previously captured event.")
             return null
           }
         } catch (i) {
@@ -693,34 +693,34 @@ var Re = function () {
   e.id = "Dedupe"
   return e
 }()
-var Fe = $_395.e()
+var Fe = Module_395.e()
 var Pe = function () {
   function e() {
     this.name = e.id
   }
   e.prototype.setupOnce = function () {
-    $_1049.b(function (t) {
+    Module_1049.b(function (t) {
       var /* [auto-meaningful-name] */t$request
       var /* [auto-meaningful-name] */Fe$location
       var /* [auto-meaningful-name] */t$request1
-      if ($_2644.a().getIntegration(e)) {
+      if (Module_2644.a().getIntegration(e)) {
         if (!Fe.navigator && !Fe.location && !Fe.document) {
           return t
         }
         var a = (null === (t$request = t.request) || undefined === t$request ? undefined : t$request.url) || (null === (Fe$location = Fe.location) || undefined === Fe$location ? undefined : Fe$location.href)
         var /* [auto-meaningful-name] */Fe$document$referrer = (Fe.document || {}).referrer
         var /* [auto-meaningful-name] */Fe$navigator$userAgent = (Fe.navigator || {}).userAgent
-        var l = $$_799_38.a($$_799_38.a($$_799_38.a({}, null === (t$request1 = t.request) || undefined === t$request1 ? undefined : t$request1.headers), Fe$document$referrer && {
+        var l = Module_38.a(Module_38.a(Module_38.a({}, null === (t$request1 = t.request) || undefined === t$request1 ? undefined : t$request1.headers), Fe$document$referrer && {
           Referer: Fe$document$referrer
         }), Fe$navigator$userAgent && {
           "User-Agent": Fe$navigator$userAgent
         })
-        var f = $$_799_38.a($$_799_38.a({}, a && {
+        var f = Module_38.a(Module_38.a({}, a && {
           url: a
         }), {
           headers: l
         })
-        return $$_799_38.a($$_799_38.a({}, t), {
+        return Module_38.a(Module_38.a({}, t), {
           request: f
         })
       }
@@ -739,7 +739,7 @@ function Me(e) {
     e.defaultIntegrations = Ne
   }
   if (undefined === e.release) {
-    var t = $_395.e()
+    var t = Module_395.e()
     if (t.SENTRY_RELEASE && t.SENTRY_RELEASE.id) {
       e.release = t.SENTRY_RELEASE.id
     }
@@ -750,9 +750,9 @@ function Me(e) {
   (function (e, t) {
     var n
     if (true === t.debug) {
-      $_918.a.enable()
+      Module_918.a.enable()
     }
-    var r = $_2644.a()
+    var r = Module_2644.a()
     if (!(null === (n = r.getScope()) || undefined === n)) {
       n.update(t.initialScope)
     }
@@ -761,10 +761,10 @@ function Me(e) {
   })(Se, e)
   if (e.autoSessionTracking) {
     (function () {
-      if ("undefined" === typeof $_395.e().document) {
-        return void $_918.a.warn("Session tracking in non-browser environment with @sentry/browser is not supported.")
+      if ("undefined" === typeof Module_395.e().document) {
+        return void Module_918.a.warn("Session tracking in non-browser environment with @sentry/browser is not supported.")
       }
-      var e = $_2644.a()
+      var e = Module_2644.a()
       if ("function" !== typeof e.startSession || "function" !== typeof e.captureSession) {
         return
       }

@@ -12,34 +12,34 @@ import { Pj } from "./index__part-186"
 import { Hj } from "./index__part-187"
 import { Yj } from "./index__part-188"
 import { Xj } from "./index__part-189"
-import /* [auto-meaningful-name] */$_164 from "./164"
+import /* [auto-meaningful-name] */Module_164 from /* 164 */"./164"
 var Nj
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_dialog_index from "../../../../src/shared/ui/components/dialog/index"
-import * as ng from "./64"
-import * as /* [auto-meaningful-name] */Lodash from "lodash"
-import * as ro from "./39"
-import * as Tn from "./68"
-import * as Et from "./9"
-import /* [auto-meaningful-name] */Axios from "axios"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_env from "../../../../src/shared/env"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
-import * as X from "./27"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
-import * as k from "./11"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as O from "./7"
-import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import { useSelector, useDispatch } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { memo, useState, useRef, useLayoutEffect, useEffect, useMemo } from "react"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_dialog_index from /* 540 */"../../../../src/shared/ui/components/Dialog/index"
+import * as /* [auto-meaningful-name] */Module_64 from /* 64 */"./64"
+import * as /* [auto-meaningful-name] */Lodash from /* 30 */"lodash"
+import * as /* [auto-meaningful-name] */Module_39 from /* 39 */"./39"
+import * as /* [auto-meaningful-name] */Module_68 from /* 68 */"./68"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"./9"
+import /* [auto-meaningful-name] */Axios from /* 129 */"axios"
+import * as /* [auto-meaningful-name] */Src_shared_env from /* 57 */"../../../../src/shared/env"
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */Module_27 from /* 27 */"./27"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */Module_25 from /* 25 */"./25/index"
+import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"./11"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"./7"
+import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import { useSelector, useDispatch } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo, useState, useRef, useLayoutEffect, useEffect, useMemo } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_1528 from "./1528"
-import /* [auto-meaningful-name] */$_15281 from "./1528"
-var Jj = ["staging", "press", "production"].includes($$_$$_$$_$$_src_shared_env.b()) ? {
+import * as /* [auto-meaningful-name] */Module_1528 from /* 1528 */"./1528"
+import /* [auto-meaningful-name] */Module_15281 from /* 1528 */"./1528"
+var Jj = ["staging", "press", "production"].includes(Src_shared_env.b()) ? {
   icon: ["https://creation.codemao.cn/884/l4zcboqu.json", "https://creation.codemao.cn/884/l4zcbf62.json", "https://creation.codemao.cn/884/l4zcb9gi.json"],
   sound: ["https://creation.codemao.cn/884/l4zcb0p4.json", "https://creation.codemao.cn/884/l4zcb365.json"],
   image: ["https://creation.codemao.cn/884/l4zc64z0.json", "https://creation.codemao.cn/884/l4zc6s4c.json", "https://creation.codemao.cn/884/l4zc7haq.json", "https://creation.codemao.cn/884/l4zc8el6.json", "https://creation.codemao.cn/884/l4zc8tz0.json", "https://creation.codemao.cn/884/1epopn5u3oyo00.json", "https://creation.codemao.cn/884/l9wg26l9.json", "https://creation.codemao.cn/884/l4zcaecb.json"]
@@ -53,7 +53,7 @@ var $j = function (e) {
 }
 var eN = new (function () {
   function e() {
-    X.a(this, e)
+    Module_27.a(this, e)
     this.isInited = false
     this.materialFilter = {
       icon: ["全部"],
@@ -66,11 +66,11 @@ var eN = new (function () {
       image: []
     }
   }
-  ro.a(e, [
+  Module_39.a(e, [
     {
       key: "init",
       value: function () {
-        var e = O.a(RegeneratorRuntime.mark(function e() {
+        var e = Module_7.a(RegeneratorRuntime.mark(function e() {
           return RegeneratorRuntime.wrap(function (e) {
             for (;;) {
               switch (e.prev = e.next) {
@@ -99,7 +99,7 @@ var eN = new (function () {
     }, {
       key: "setMaterialList",
       value: function () {
-        var e = O.a(RegeneratorRuntime.mark(function e(t) {
+        var e = Module_7.a(RegeneratorRuntime.mark(function e(t) {
           var n
           var r
           var /* [auto-meaningful-name] */e$sent
@@ -124,7 +124,7 @@ var eN = new (function () {
                       return {
                         id: "".concat(e$data.name, "/").concat(e.name),
                         name: e.name,
-                        md5: e.md5 || $_15281("".concat(e$data.name, "/").concat(e.name)),
+                        md5: e.md5 || Module_15281("".concat(e$data.name, "/").concat(e.name)),
                         subtitle: e$data.name,
                         cdnUrl: e.urls[0],
                         duration: e.duration,
@@ -179,13 +179,13 @@ var eN = new (function () {
 var tN = [
   {
     name: "Image",
-    type: Tn.d.IMAGE
+    type: Module_68.d.IMAGE
   }, {
     name: "Icon",
-    type: Tn.d.ICON
+    type: Module_68.d.ICON
   }, {
     name: "Sound",
-    type: Tn.d.SOUND
+    type: Module_68.d.SOUND
   }
 ]
 var nN = memo(function (e) {
@@ -196,41 +196,41 @@ var nN = memo(function (e) {
   var /* [auto-meaningful-name] */e$searchName = e.searchName
   var /* [auto-meaningful-name] */e$clearSearchHandler = e.clearSearchHandler
   var /* [auto-meaningful-name] */e$canShowMultiply = e.canShowMultiply
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
-  var l = $_710$a$formatMessage({
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
+  var l = Module_710$a$formatMessage({
     id: "allType"
   })
-  var u = $_710$a$formatMessage({
+  var u = Module_710$a$formatMessage({
     id: "Resource.Image"
   })
-  var d = $_710$a$formatMessage({
+  var d = Module_710$a$formatMessage({
     id: "Resource.Icon"
   })
-  var p = $_710$a$formatMessage({
+  var p = Module_710$a$formatMessage({
     id: "Resource.Sound"
   })
   var m = useState(e.sidebarType || Z(e.mode))
-  var g = $_10_index.a(m, 2)
+  var g = Module_10.a(m, 2)
   var v = g[0]
   var b = g[1]
   var y = useState("")
-  var w = $_10_index.a(y, 2)
+  var w = Module_10.a(y, 2)
   var C = w[0]
   var T = w[1]
   var A = useState(l)
-  var j = $_10_index.a(A, 2)
+  var j = Module_10.a(A, 2)
   var R = j[0]
   var x = j[1]
   var D = useState(6)
-  var M = $_10_index.a(D, 2)
+  var M = Module_10.a(D, 2)
   var L = M[0]
   var P = M[1]
   var B = useState(1)
-  var F = $_10_index.a(B, 2)
+  var F = Module_10.a(B, 2)
   var G = F[0]
   var W = F[1]
   var U = useState(false)
-  var H = $_10_index.a(U, 2)
+  var H = Module_10.a(U, 2)
   var V = H[0]
   var Y = H[1]
   var K = useRef(null)
@@ -243,19 +243,19 @@ var nN = memo(function (e) {
   })
   function Z(e) {
     switch (e) {
-      case Tn.c.IconLibrary:
-        return Tn.d.ICON
-      case Tn.c.SoundLibrary:
-        return Tn.d.SOUND
+      case Module_68.c.IconLibrary:
+        return Module_68.d.ICON
+      case Module_68.c.SoundLibrary:
+        return Module_68.d.SOUND
       default:
-        return Tn.d.IMAGE
+        return Module_68.d.IMAGE
     }
   }
   useLayoutEffect(function () {
     var e = true
     if (e$visible && !V) {
       (function () {
-        var t = O.a(RegeneratorRuntime.mark(function t() {
+        var t = Module_7.a(RegeneratorRuntime.mark(function t() {
           return RegeneratorRuntime.wrap(function (t) {
             for (;;) {
               switch (t.prev = t.next) {
@@ -337,9 +337,9 @@ var nN = memo(function (e) {
     })
   }
   t = {}
-  k.a(t, Tn.d.IMAGE, [eN.materialResources.image, Et.jb(), ee])
-  k.a(t, Tn.d.ICON, [eN.materialResources.icon, Q, te])
-  k.a(t, Tn.d.SOUND, [eN.materialResources.sound, X, ne])
+  Module_11.a(t, Module_68.d.IMAGE, [eN.materialResources.image, Module_9.jb(), ee])
+  Module_11.a(t, Module_68.d.ICON, [eN.materialResources.icon, Q, te])
+  Module_11.a(t, Module_68.d.SOUND, [eN.materialResources.sound, X, ne])
   var re = t
   var oe = useMemo(function () {
     if (e$searchName) {
@@ -368,7 +368,7 @@ var nN = memo(function (e) {
       var /* [auto-meaningful-name] */oe$image = oe.image
       var /* [auto-meaningful-name] */oe$icon = oe.icon
       var /* [auto-meaningful-name] */oe$sound = oe.sound
-      var o = ie([oe$image, Et.jb(), ee])
+      var o = ie([oe$image, Module_9.jb(), ee])
       var i = ie([oe$icon, Q, te])
       var a = ie([oe$sound, X, ne])
       switch (e.mode) {
@@ -416,11 +416,11 @@ var nN = memo(function (e) {
   useEffect(function () {
     se()
   })
-  return React.createElement(React.Fragment, null, e.mode !== Tn.c.ResourceLibrary ? null : React.createElement("div", {
-    className: $_164.sidebar
+  return React.createElement(React.Fragment, null, e.mode !== Module_68.c.ResourceLibrary ? null : React.createElement("div", {
+    className: Module_164.sidebar
   }, tN.map(function (e) {
     return React.createElement("div", {
-      className: Classnames($_164.item, e.type === v && !e$searchName && $_164.selected),
+      className: Classnames(Module_164.item, e.type === v && !e$searchName && Module_164.selected),
       key: e.name,
       onClick: function () {
         !function (e) {
@@ -434,26 +434,26 @@ var nN = memo(function (e) {
           W(1)
         }(e.type)
       }
-    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+    }, React.createElement(Src_shared_ui_components_index.j, {
       type: "icon-".concat(e.name),
-      className: $_164.icon
-    }), $_710$a$formatMessage({
+      className: Module_164.icon
+    }), Module_710$a$formatMessage({
       id: "Resource.".concat(e.name)
     }))
   }), React.createElement("a", {
-    className: $_164.help,
+    className: Module_164.help,
     href: "https://codemao-guide.yuque.com/bfiekm/sbo5kh/xgm6rd",
     target: "_blank",
     rel: "noopener noreferrer"
-  }, $_710$a$formatMessage({
+  }, Module_710$a$formatMessage({
     id: "Resource.HowFindMaterial"
   }))), React.createElement("div", {
-    className: Classnames($_164.itemContent, e.mode === Tn.c.ResourceLibrary && $_164.sidebarShow)
+    className: Classnames(Module_164.itemContent, e.mode === Module_68.c.ResourceLibrary && Module_164.sidebarShow)
   }, function () {
-    var t = e$searchName && 3 === e.mode ? [l, u, d, p] : v === Tn.d.ICON ? eN.getMaterialFilter().icon : v === Tn.d.IMAGE ? eN.getMaterialFilter().image : v === Tn.d.SOUND ? eN.getMaterialFilter().sound : []
+    var t = e$searchName && 3 === e.mode ? [l, u, d, p] : v === Module_68.d.ICON ? eN.getMaterialFilter().icon : v === Module_68.d.IMAGE ? eN.getMaterialFilter().image : v === Module_68.d.SOUND ? eN.getMaterialFilter().sound : []
     return React.createElement("div", {
       ref: K,
-      className: $_164.filter
+      className: Module_164.filter
     }, t.map(function (e) {
       return React.createElement("div", {
         onClick: function () {
@@ -468,12 +468,12 @@ var nN = memo(function (e) {
             }
           }(e)
         },
-        className: Classnames($_164.filter_item, R === e && $_164.selected),
+        className: Classnames(Module_164.filter_item, R === e && Module_164.selected),
         key: e
       }, e)
     }))
   }(), ae.length > 0 ? React.createElement("ul", {
-    className: $_164.itemListWrap,
+    className: Module_164.itemListWrap,
     ref: q,
     onScrollCapture: function (e) {
       var /* [auto-meaningful-name] */e$currentTarget = e.currentTarget
@@ -486,7 +486,7 @@ var nN = memo(function (e) {
       marginTop: 224
     }
   }, React.createElement(we, {
-    text: $_710$a$formatMessage({
+    text: Module_710$a$formatMessage({
       id: "material.materialNotFound"
     }),
     type: "image-text"
@@ -506,41 +506,41 @@ var rN = memo(function () {
   var /* [auto-meaningful-name] */e$mode = e.mode
   var /* [auto-meaningful-name] */e$sidebarType = e.sidebarType
   var /* [auto-meaningful-name] */e$setTab = e.setTab
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var c = useDispatch()
   var l = function () {
     Q()
-    c($$_$$_$$_$$_src_editor_redux_common_actions.sh())
+    c(Src_editor_redux_common_actions.sh())
   }
   var u = useState(false)
-  var d = $_10_index.a(u, 2)
+  var d = Module_10.a(u, 2)
   var p = d[0]
   var m = d[1]
   var g = useState("")
-  var v = $_10_index.a(g, 2)
+  var v = Module_10.a(g, 2)
   var b = v[0]
   var y = v[1]
   var E = useState(Nj.Mall)
-  var O = $_10_index.a(E, 2)
+  var O = Module_10.a(E, 2)
   var w = O[0]
   var C = O[1]
   var T = useState([])
-  var A = $_10_index.a(T, 2)
+  var A = Module_10.a(T, 2)
   var j = A[0]
   var R = A[1]
   var k = useState(false)
-  var D = $_10_index.a(k, 2)
+  var D = Module_10.a(k, 2)
   var M = D[0]
   var L = D[1]
   var P = useState(false)
-  var B = $_10_index.a(P, 2)
+  var B = Module_10.a(P, 2)
   var F = B[0]
   var G = B[1]
   var W = useRef(null)
   var U = useRef(null)
   var H = useRef(true)
   useLayoutEffect(function () {
-    if (e$mode === Tn.c.ResourceLibrary) {
+    if (e$mode === Module_68.c.ResourceLibrary) {
       m(false)
       C(Nj.Mall)
     } else {
@@ -593,7 +593,7 @@ var rN = memo(function () {
     }
   }
   var Z = function () {
-    return e$mode === Tn.c.ResourceLibrary || e$multiple
+    return e$mode === Module_68.c.ResourceLibrary || e$multiple
   }
   var J = function (e, t) {
     return j.some(function (n) {
@@ -601,7 +601,7 @@ var rN = memo(function () {
     })
   }
   var $ = function (e, t) {
-    var n = $_25_index.a(j)
+    var n = Module_25.a(j)
     if (!Z()) {
       return j.length > 0 ? J(e.id, e.cdnUrl) ? void R([]) : void R([e]) : (n.push(e), void R(n))
     }
@@ -644,15 +644,15 @@ var rN = memo(function () {
     return t
   }
   var ne = function (e, t, n) {
-    var r = "".concat(e, "-").concat(t + 1).concat($$_$$_$$_$$_src_shared_tools_index.I(n))
-    var o = Et.ib(e, t)
+    var r = "".concat(e, "-").concat(t + 1).concat(Src_shared_tools_index.I(n))
+    var o = Module_9.ib(e, t)
     return {
-      id: o ? o.id : Et.z(r),
+      id: o ? o.id : Module_9.z(r),
       cdnUrl: n,
       md5: "",
       groupId: e,
       groupImageIndex: t,
-      extension: $$_$$_$$_$$_src_shared_tools_index.I(n)
+      extension: Src_shared_tools_index.I(n)
     }
   }
   var re = function (e) {
@@ -668,7 +668,7 @@ var rN = memo(function () {
       return e.type === fj.Icon
     }).map(function (e) {
       return {
-        id: e.selectFrom === hj.Mall ? ng.a("ICON") : e.id,
+        id: e.selectFrom === hj.Mall ? Module_64.a("ICON") : e.id,
         md5: e.md5,
         name: e.name,
         cdnUrl: e.cdnUrl
@@ -681,9 +681,9 @@ var rN = memo(function () {
       return e.type === fj.Sound
     }).map(function (e) {
       return {
-        id: e.selectFrom === hj.Mall ? ng.a("SOUND") : e.id,
+        id: e.selectFrom === hj.Mall ? Module_64.a("SOUND") : e.id,
         md5: e.md5,
-        name: "".concat(e.name).concat(e.selectFrom === hj.Mall ? $$_$$_$$_$$_src_shared_tools_index.I(e.cdnUrl) : ""),
+        name: "".concat(e.name).concat(e.selectFrom === hj.Mall ? Src_shared_tools_index.I(e.cdnUrl) : ""),
         cdnUrl: e.cdnUrl,
         duration: e.duration
       }
@@ -695,7 +695,7 @@ var rN = memo(function () {
       return e.type === fj.Image
     })
     var p = d.map(function (e) {
-      var t = e.urls && e.urls.length > 1 ? "" : $$_$$_$$_$$_src_shared_tools_index.I(e.cdnUrl)
+      var t = e.urls && e.urls.length > 1 ? "" : Src_shared_tools_index.I(e.cdnUrl)
       return {
         id: e.selectFrom === hj.Mall ? "".concat(e.name).concat(t) : e.id,
         cdnUrl: e.cdnUrl,
@@ -719,22 +719,22 @@ var rN = memo(function () {
       }
     })
     var f = p.filter(function (n) {
-      return !e.includes(n.id) && !t.includes(n.id) && !Et.hb(n.id)
+      return !e.includes(n.id) && !t.includes(n.id) && !Module_9.hb(n.id)
     })
-    c($$_$$_$$_$$_src_editor_redux_common_actions.qf(i))
-    c($$_$$_$$_$$_src_editor_redux_common_actions.vf(u))
-    c($$_$$_$$_$$_src_editor_redux_common_actions.sf(f))
-    if (e$mode === Tn.c.SoundLibrary) {
+    c(Src_editor_redux_common_actions.qf(i))
+    c(Src_editor_redux_common_actions.vf(u))
+    c(Src_editor_redux_common_actions.sf(f))
+    if (e$mode === Module_68.c.SoundLibrary) {
       if (e$onSelect) {
         e$onSelect(s)
       }
     } else {
-      if (e$mode === Tn.c.IconLibrary) {
+      if (e$mode === Module_68.c.IconLibrary) {
         if (e$onSelect) {
           e$onSelect(r)
         }
       } else {
-        if (e$mode === Tn.c.ImageLibrary && e$onSelect) {
+        if (e$mode === Module_68.c.ImageLibrary && e$onSelect) {
           e$onSelect(p.filter(function (e) {
             return !(e.urls && e.urls.length > 1)
           }))
@@ -747,53 +747,53 @@ var rN = memo(function () {
     R([])
     l()
   }
-  return React.createElement($$_$$_$$_$$_src_shared_ui_components_dialog_index.a, {
+  return React.createElement(Src_shared_ui_components_dialog_index.a, {
     withPortal: true,
     visible: e$visible,
-    className: Classnames($_164.imageLibrary, e$mode === Tn.c.ResourceLibrary && $_164.mall),
+    className: Classnames(Module_164.imageLibrary, e$mode === Module_68.c.ResourceLibrary && Module_164.mall),
     showCloseButton: true,
     onClose: l
   }, e$visible && React.createElement("div", {
-    className: $_164.LibraryHeader
+    className: Module_164.LibraryHeader
   }, React.createElement("div", {
-    className: $_164.title
-  }, e$mode === Tn.c.ResourceLibrary ? $_710$a$formatMessage({
+    className: Module_164.title
+  }, e$mode === Module_68.c.ResourceLibrary ? Module_710$a$formatMessage({
     id: "Resource.ResourceMall"
-  }) : e$mode === Tn.c.ImageLibrary ? $_710$a$formatMessage({
+  }) : e$mode === Module_68.c.ImageLibrary ? Module_710$a$formatMessage({
     id: "Resource.ImageLibrary"
-  }) : e$mode === Tn.c.SoundLibrary ? $_710$a$formatMessage({
+  }) : e$mode === Module_68.c.SoundLibrary ? Module_710$a$formatMessage({
     id: "Resource.SoundLibrary"
-  }) : e$mode === Tn.c.IconLibrary ? $_710$a$formatMessage({
+  }) : e$mode === Module_68.c.IconLibrary ? Module_710$a$formatMessage({
     id: "Resource.IconLibrary"
   }) : ""), p && React.createElement("div", {
-    className: $_164.tab
+    className: Module_164.tab
   }, React.createElement("div", {
-    className: Classnames($_164.tabItem, w === Nj.Library && $_164.selected),
+    className: Classnames(Module_164.tabItem, w === Nj.Library && Module_164.selected),
     onClick: function () {
       C(Nj.Library)
       Q()
     }
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-project-resources",
-    className: $_164.icon
-  }), $_710$a$formatMessage({
+    className: Module_164.icon
+  }), Module_710$a$formatMessage({
     id: "Resource.ProjectLibrary"
   })), React.createElement("div", {
-    className: Classnames($_164.tabItem, w === Nj.Mall && $_164.selected),
+    className: Classnames(Module_164.tabItem, w === Nj.Mall && Module_164.selected),
     onClick: function () {
       C(Nj.Mall)
       Q()
     }
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-material-store",
-    className: $_164.icon
-  }), $_710$a$formatMessage({
+    className: Module_164.icon
+  }), Module_710$a$formatMessage({
     id: "Resource.ResourceMall"
-  }))), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.k, {
+  }))), React.createElement(Src_shared_ui_components_index.k, {
     ref: U,
     onClearCallback: Q,
-    className: $_164.searchInput,
-    placeholder: $_710$a$formatMessage({
+    className: Module_164.searchInput,
+    placeholder: Module_710$a$formatMessage({
       id: "Resource.search"
     }),
     onKeyDown: X,
@@ -801,11 +801,11 @@ var rN = memo(function () {
     onCompositionStart: V,
     onCompositionEnd: K,
     clearButtonVisible: !!b,
-    before: React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+    before: React.createElement(Src_shared_ui_components_index.j, {
       type: "icon-material-search"
     })
   })), React.createElement("div", {
-    className: Classnames($_164.LibraryContent, j.length > 0 && $_164.footerShow, j.length > 0 && Z() && $_164.selectBarShow)
+    className: Classnames(Module_164.LibraryContent, j.length > 0 && Module_164.footerShow, j.length > 0 && Z() && Module_164.selectBarShow)
   }, w === Nj.Library && React.createElement(Pj, {
     mode: e$mode,
     searchName: b,
@@ -822,22 +822,22 @@ var rN = memo(function () {
     sidebarType: e$sidebarType,
     canShowMultiply: Z()
   })), Z() ? 0 === j.length ? F ? null : React.createElement("div", {
-    className: Classnames($_164.selectBar, e$mode === Tn.c.ResourceLibrary && $_164.sidebarShow, $_164.fade),
+    className: Classnames(Module_164.selectBar, e$mode === Module_68.c.ResourceLibrary && Module_164.sidebarShow, Module_164.fade),
     onAnimationEnd: function () {
       return G(true)
     }
   }) : React.createElement("div", {
     ref: W,
-    className: Classnames($_164.selectBar, e$mode === Tn.c.ResourceLibrary && $_164.sidebarShow)
+    className: Classnames(Module_164.selectBar, e$mode === Module_68.c.ResourceLibrary && Module_164.sidebarShow)
   }, j.map(function (e) {
     return React.createElement("div", {
       key: e.id,
-      className: Classnames($_164.selectedItem)
+      className: Classnames(Module_164.selectedItem)
     }, React.createElement("div", {
-      className: $_164.delete,
+      className: Module_164.delete,
       onClick: function () {
         return function (e, t) {
-          var n = $_25_index.a(j)
+          var n = Module_25.a(j)
           if (J(e, t)) {
             var r = n.filter(function (t) {
               return t.id !== e
@@ -846,61 +846,61 @@ var rN = memo(function () {
           }
         }(e.id, e.cdnUrl)
       }
-    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+    }, React.createElement(Src_shared_ui_components_index.j, {
       type: "icon-close",
-      className: $_164.iconDelete
+      className: Module_164.iconDelete
     })), React.createElement("div", {
-      className: $_164.content
+      className: Module_164.content
     }, e.type === fj.Image && React.createElement("img", {
       alt: "",
-      className: $_164.imageContent,
+      className: Module_164.imageContent,
       src: e.cdnUrl
     }), e.type === fj.Icon && React.createElement("img", {
       alt: "",
-      className: $_164.iconContent,
+      className: Module_164.iconContent,
       src: e.cdnUrl
-    }), e.type === fj.Sound && React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+    }), e.type === fj.Sound && React.createElement(Src_shared_ui_components_index.j, {
       type: "icon-music",
-      className: $_164.soundContent
+      className: Module_164.soundContent
     })), React.createElement("div", {
-      className: $_164.name
+      className: Module_164.name
     }, e.name))
   })) : null, 0 === j.length ? M ? null : React.createElement("div", {
-    className: Classnames($_164.footer, $_164.fade),
+    className: Classnames(Module_164.footer, Module_164.fade),
     onAnimationEnd: function () {
       return L(true)
     }
   }) : Z() ? React.createElement("div", {
-    className: $_164.footer
+    className: Module_164.footer
   }, React.createElement("div", {
-    className: $_164.btns
+    className: Module_164.btns
   }, React.createElement("div", {
-    className: Classnames($_164.btn, $_164.btnCancel),
+    className: Classnames(Module_164.btn, Module_164.btnCancel),
     onClick: function () {
       return re(false)
     }
-  }, $_710$a$formatMessage({
+  }, Module_710$a$formatMessage({
     id: "Resource.Clear"
   })), React.createElement("div", {
-    className: Classnames($_164.btn, $_164.btnConfirm),
+    className: Classnames(Module_164.btn, Module_164.btnConfirm),
     onClick: oe
-  }, $_710$a$formatMessage({
+  }, Module_710$a$formatMessage({
     id: "Resource.Add"
   }), "(", j.length, ")"))) : React.createElement("div", {
-    className: $_164.footer
+    className: Module_164.footer
   }, React.createElement("div", {
-    className: $_164.btns
+    className: Module_164.btns
   }, React.createElement("div", {
-    className: Classnames($_164.btn, $_164.btnCancel),
+    className: Classnames(Module_164.btn, Module_164.btnCancel),
     onClick: function () {
       return re(true)
     }
-  }, $_710$a$formatMessage({
+  }, Module_710$a$formatMessage({
     id: "Resource.Cancel"
   })), React.createElement("div", {
-    className: Classnames($_164.btn, $_164.btnConfirm),
+    className: Classnames(Module_164.btn, Module_164.btnConfirm),
     onClick: oe
-  }, $_710$a$formatMessage({
+  }, Module_710$a$formatMessage({
     id: "Resource.Apply"
   })))))
 })

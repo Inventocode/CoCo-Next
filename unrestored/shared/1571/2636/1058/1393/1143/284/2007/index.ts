@@ -4,8 +4,8 @@
  * 模块 ID：2007
  */
 
-var r = require("./2008")
-var i = require("../../../../../207/787/2292/2293/1329")
+var r = require(/* 2008 */"./2008")
+var i = require(/* 1329 */"../../../../../207/787/2292/2293/1329")
 module.exports = function (e, t) {
   return !t || "object" !== r(t) && "function" !== typeof t ? i(e) : t
 }

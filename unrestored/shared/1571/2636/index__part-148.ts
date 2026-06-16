@@ -8,23 +8,23 @@
 
 import { gT, _T, vT } from "./index__part-146"
 import { OT } from "./index__part-147"
-import qC from "./99"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index from "../../../../src/shared/packages/@crc/blink/src/index"
-import * as Et from "./9"
-import * as K from "./18"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import { useDispatch, useSelector } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { memo, useMemo, useRef, useState, useEffect } from "react"
+import /* [auto-meaningful-name] */Module_99 from /* 99 */"./99"
+import * as /* [auto-meaningful-name] */Src_shared_packages_Crc_blink_src_index from /* 17 */"../../../../src/shared/packages/@crc/blink/src/index"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"./9"
+import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"./18"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import { useDispatch, useSelector } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo, useMemo, useRef, useState, useEffect } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_935 from "./935"
-import /* [auto-meaningful-name] */$_9351 from "./935"
+import * as /* [auto-meaningful-name] */Module_935 from /* 935 */"./935"
+import /* [auto-meaningful-name] */Module_9351 from /* 935 */"./935"
 var TT = memo(function () {
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var t = useDispatch()
   var n = useSelector(function (e) {
     return e.block.dropdown
@@ -33,73 +33,73 @@ var TT = memo(function () {
     return n.options.some(function (e) {
       var /* [auto-meaningful-name] */e$icon
       var n
-      return $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.BU.base.is_old_dropdown_option(e) ? "string" === typeof (null === (n = e[2]) || undefined === n ? undefined : n.src) : "basic" === e.type && "string" === typeof (null === (e$icon = e.icon) || undefined === e$icon ? undefined : e$icon.src)
+      return Src_shared_packages_Crc_blink_src_index.BU.base.is_old_dropdown_option(e) ? "string" === typeof (null === (n = e[2]) || undefined === n ? undefined : n.src) : "basic" === e.type && "string" === typeof (null === (e$icon = e.icon) || undefined === e$icon ? undefined : e$icon.src)
     })
   }, [n])
-  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.w, {
-    className: Classnames(qC.dynamicDataList, r && qC.imageTextDataList),
+  return React.createElement(Src_shared_ui_components_index.w, {
+    className: Classnames(Module_99.dynamicDataList, r && Module_99.imageTextDataList),
     open: n.visible,
     value: n.value,
     onChange: function (e) {
       if ("__EMPTY_VALUE__" !== e) {
         n.setValue(e)
       }
-      t($$_$$_$$_$$_src_editor_redux_common_actions.gh())
+      t(Src_editor_redux_common_actions.gh())
     }
   }, n.options.map(function (t, n) {
     var r
-    if ($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.BU.base.is_old_dropdown_option(t)) {
-      return t[1] === Et.h && t[0] === Et.g ? React.createElement("div", {
-        className: qC.nullItem
-      }, $_710$a$formatMessage({
+    if (Src_shared_packages_Crc_blink_src_index.BU.base.is_old_dropdown_option(t)) {
+      return t[1] === Module_9.h && t[0] === Module_9.g ? React.createElement("div", {
+        className: Module_99.nullItem
+      }, Module_710$a$formatMessage({
         id: "closeHeadline"
-      })) : React.createElement($$_$$_$$_$$_src_shared_ui_components_index.p, {
+      })) : React.createElement(Src_shared_ui_components_index.p, {
         value: t[1],
         key: n,
-        className: qC.dropdownOption
+        className: Module_99.dropdownOption
       }, t[2] && "string" === typeof (null === (r = t[2]) || undefined === r ? undefined : r.src) && React.createElement("div", {
-        className: qC.dropdownImageBox
+        className: Module_99.dropdownImageBox
       }, React.createElement("img", {
         src: t[2].src,
-        className: qC.image,
+        className: Module_99.image,
         alt: ""
       })), React.createElement("span", null, t[0]))
     }
     if ("line" === t.type) {
       return React.createElement("div", {
-        className: qC.line,
+        className: Module_99.line,
         key: n
       })
     }
     if ("basic" === t.type) {
       var /* [auto-meaningful-name] */t$icon
       var /* [auto-meaningful-name] */t$icon1
-      if (t.value === Et.h && t.text === Et.g) {
+      if (t.value === Module_9.h && t.text === Module_9.g) {
         return
       }
-      return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.p, {
+      return React.createElement(Src_shared_ui_components_index.p, {
         value: t.value,
         key: n,
-        className: qC.dropdownOption
+        className: Module_99.dropdownOption
       }, "nextScreen" !== t.value && "prevScreen" !== t.value && React.createElement("div", {
-        className: $_9351.screenIndex
+        className: Module_9351.screenIndex
       }, n + 1, "."), ("nextScreen" === t.value || "prevScreen" === t.value) && React.createElement("div", {
-        className: $_9351.screenIndex
+        className: Module_9351.screenIndex
       }, ""), "string" === typeof (null === (t$icon = t.icon) || undefined === t$icon ? undefined : t$icon.src) && React.createElement("div", {
-        className: qC.dropdownImageBox
-      }, "nextScreen" === t.value && React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
-        className: $_9351.dropdownImageScreen,
+        className: Module_99.dropdownImageBox
+      }, "nextScreen" === t.value && React.createElement(Src_shared_ui_components_index.j, {
+        className: Module_9351.dropdownImageScreen,
         type: "icon-prev-screen"
-      }), "prevScreen" === t.value && React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
-        className: $_9351.dropdownImageScreen,
+      }), "prevScreen" === t.value && React.createElement(Src_shared_ui_components_index.j, {
+        className: Module_9351.dropdownImageScreen,
         type: "icon-next-screen"
       }), React.createElement("img", {
         src: t.icon.src,
-        className: qC.image,
+        className: Module_99.image,
         alt: ""
       })), "object" === typeof (null === (t$icon1 = t.icon) || undefined === t$icon1 ? undefined : t$icon1.src) && React.createElement("div", {
-        className: qC.dropdownIconBox
-      }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+        className: Module_99.dropdownIconBox
+      }, React.createElement(Src_shared_ui_components_index.j, {
         type: "icon-screen-variable"
       })), React.createElement("span", null, t.text))
     }
@@ -114,11 +114,11 @@ var ST = memo(function () {
   var /* [auto-meaningful-name] */n$position = n.position
   var /* [auto-meaningful-name] */n$blockInfo = n.blockInfo
   var i = useState(0)
-  var a = $_10_index.a(i, 2)
+  var a = Module_10.a(i, 2)
   var s = a[0]
   var c = a[1]
   var l = useState(-1e3)
-  var u = $_10_index.a(l, 2)
+  var u = Module_10.a(l, 2)
   var d = u[0]
   var p = u[1]
   useEffect(function () {
@@ -146,7 +146,7 @@ var ST = memo(function () {
       var /* [auto-meaningful-name] */n$target = n.target
       var /* [auto-meaningful-name] */e$current = e.current
       if (!(e$current && e$current.contains(n$target))) {
-        t($$_$$_$$_$$_src_editor_redux_common_actions.gh())
+        t(Src_editor_redux_common_actions.gh())
         document.body.removeEventListener("mousedown", r, {
           capture: true
         })
@@ -165,7 +165,7 @@ var ST = memo(function () {
   }, [t, n])
   return React.createElement("div", {
     ref: e,
-    className: qC.blockDropdown,
+    className: Module_99.blockDropdown,
     style: {
       position: "fixed",
       top: s,
@@ -174,8 +174,8 @@ var ST = memo(function () {
       transform: "scale(".concat(n.blockInfo.scale, ")"),
       zIndex: 2
     }
-  }, [K.a.IMAGE_DROPDOWN, K.a.ICON_DROPDOWN].includes(n.type) && React.createElement(_T, {
+  }, [Module_18.a.IMAGE_DROPDOWN, Module_18.a.ICON_DROPDOWN].includes(n.type) && React.createElement(_T, {
     type: n.type
-  }), n.type === K.a.SOUND_DROPDOWN && React.createElement(vT, null), n.type === K.a.DYNAMIC_DROPDOWN && React.createElement(gT, null), n.type === K.a.ACTOR_STYLE_DROPDOWN && React.createElement(OT, null), n.type === K.a.SCREEN_DROPDOWN && React.createElement(TT, null))
+  }), n.type === Module_18.a.SOUND_DROPDOWN && React.createElement(vT, null), n.type === Module_18.a.DYNAMIC_DROPDOWN && React.createElement(gT, null), n.type === Module_18.a.ACTOR_STYLE_DROPDOWN && React.createElement(OT, null), n.type === Module_18.a.SCREEN_DROPDOWN && React.createElement(TT, null))
 })
 export { ST }

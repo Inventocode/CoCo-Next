@@ -4,9 +4,9 @@
  * 模块 ID：1669
  */
 
-var r = require("./1662/86")
-var o = require("./1659/168")
-var /* [auto-meaningful-name] */require$_1581_1083$f = require("./1581/1083").f
+var r = require(/* 86 */"./1662/86")
+var o = require(/* 168 */"./1659/168")
+var /* [auto-meaningful-name] */require_1083_$_1581_1083$f = require(/* 1083 */"./1581/1083").f
 r({
   target: "Object",
   stat: true,
@@ -14,5 +14,5 @@ r({
     return !Object.getOwnPropertyNames(1)
   })
 }, {
-  getOwnPropertyNames: require$_1581_1083$f
+  getOwnPropertyNames: require_1083_$_1581_1083$f
 })

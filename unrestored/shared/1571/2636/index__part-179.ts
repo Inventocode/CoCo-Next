@@ -7,27 +7,27 @@
 "use strict"
 
 import { rj } from "./index__part-178"
-import * as /* [auto-meaningful-name] */$_48_index from "./48/index"
-import * as GI from "./91"
-import * as /* [auto-meaningful-name] */$_796_index from "./796/index"
-import * as /* [auto-meaningful-name] */$_174 from "./174"
-import * as /* [auto-meaningful-name] */$_20_index from "./20/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index from "../../../../src/shared/packages/@crc/blink/src/index"
-import * as /* [auto-meaningful-name] */Lodash from "lodash"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
-import * as Tn from "./68"
-import * as /* [auto-meaningful-name] */$_26_index from "./26/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import * as D from "./6"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import { useSelector, useDispatch } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { memo, useState, useEffect } from "react"
+import * as /* [auto-meaningful-name] */Module_48 from /* 48 */"./48/index"
+import * as /* [auto-meaningful-name] */Module_91 from /* 91 */"./91"
+import * as /* [auto-meaningful-name] */Module_796 from /* 796 */"./796/index"
+import * as /* [auto-meaningful-name] */Module_174 from /* 174 */"./174"
+import * as /* [auto-meaningful-name] */Module_20 from /* 20 */"./20/index"
+import * as /* [auto-meaningful-name] */Src_shared_packages_Crc_blink_src_index from /* 17 */"../../../../src/shared/packages/@crc/blink/src/index"
+import * as /* [auto-meaningful-name] */Lodash from /* 30 */"lodash"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Module_68 from /* 68 */"./68"
+import * as /* [auto-meaningful-name] */Module_26 from /* 26 */"./26/index"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"./6"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import { useSelector, useDispatch } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo, useState, useEffect } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_814 from "./814"
-import /* [auto-meaningful-name] */$_8141 from "./814"
+import * as /* [auto-meaningful-name] */Module_814 from /* 814 */"./814"
+import /* [auto-meaningful-name] */Module_8141 from /* 814 */"./814"
 var aj = memo(function () {
   var e = useSelector(function (e) {
     return e.common.tableDataDialog
@@ -36,43 +36,43 @@ var aj = memo(function () {
   var /* [auto-meaningful-name] */e$grid = e.grid
   var /* [auto-meaningful-name] */e$onClose = e.onClose
   var /* [auto-meaningful-name] */e$isCreateNewGrid = e.isCreateNewGrid
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var a = useDispatch()
   var s = useState(false)
-  var c = $_10_index.a(s, 2)
+  var c = Module_10.a(s, 2)
   var l = c[0]
   var u = c[1]
   var d = useState()
-  var p = $_10_index.a(d, 2)
+  var p = Module_10.a(d, 2)
   var m = p[0]
   var g = p[1]
   var v = useState("")
-  var b = $_10_index.a(v, 2)
+  var b = Module_10.a(v, 2)
   var y = b[0]
   var E = b[1]
   var O = useState({})
-  var w = $_10_index.a(O, 2)
+  var w = Module_10.a(O, 2)
   var C = w[0]
   var T = w[1]
   var A = useState([])
-  var j = $_10_index.a(A, 2)
+  var j = Module_10.a(A, 2)
   var N = j[0]
   var R = j[1]
   var k = useState(false)
-  var x = $_10_index.a(k, 2)
+  var x = Module_10.a(k, 2)
   var M = x[0]
   var L = x[1]
   var P = useState(2)
-  var B = $_10_index.a(P, 2)
+  var B = Module_10.a(P, 2)
   var F = B[0]
   var G = B[1]
   var W = useState(2)
-  var U = $_10_index.a(W, 2)
+  var U = Module_10.a(W, 2)
   var H = U[0]
   var V = U[1]
   useEffect(function () {
     if (e$visible) {
-      a($$_$$_$$_$$_src_editor_redux_common_actions.ki("grid"))
+      a(Src_editor_redux_common_actions.ki("grid"))
       E(e$grid.name)
       T(Lodash.cloneDeep(e$grid.header))
       R(Lodash.cloneDeep(e$grid.data))
@@ -108,10 +108,10 @@ var aj = memo(function () {
     }
   }
   var q = function () {
-    a($$_$$_$$_$$_src_editor_redux_common_actions.oi(""))
-    a($$_$$_$$_$$_src_editor_redux_common_actions.ri("", ""))
-    a($$_$$_$$_$$_src_editor_redux_common_actions.ni("", ""))
-    a($$_$$_$$_$$_src_editor_redux_common_actions.mi(false))
+    a(Src_editor_redux_common_actions.oi(""))
+    a(Src_editor_redux_common_actions.ri("", ""))
+    a(Src_editor_redux_common_actions.ni("", ""))
+    a(Src_editor_redux_common_actions.mi(false))
   }
   var X = function () {
     q()
@@ -122,7 +122,7 @@ var aj = memo(function () {
         isCreateNewGrid: e$isCreateNewGrid
       })
     }
-    a($$_$$_$$_$$_src_editor_redux_common_actions.wh())
+    a(Src_editor_redux_common_actions.wh())
   }
   var Q = function () {
     if (!(null === m || undefined === m)) {
@@ -144,49 +144,49 @@ var aj = memo(function () {
           c.push(u)
         }
       }
-      a($$_$$_$$_$$_src_editor_redux_common_actions.Lg(e$grid.id, "db", {
+      a(Src_editor_redux_common_actions.Lg(e$grid.id, "db", {
         header: e$header,
         data: e$data
       }, false, false, true))
     }
     if (null === c || undefined === c ? undefined : c.length) {
-      a($$_$$_$$_$$_src_editor_redux_common_actions.rg(e$grid.id, c))
+      a(Src_editor_redux_common_actions.rg(e$grid.id, c))
       c.forEach(function (e) {
-        $_26_index.q($_26_index.c.TABLE_DATA_COLUMN, e)
+        Module_26.q(Module_26.c.TABLE_DATA_COLUMN, e)
       })
     }
     if (s) {
-      for (var d in e$header) $_26_index.m($_26_index.c.TABLE_DATA_COLUMN, d, e$header[d].field)
-      $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_all_blocks().forEach(function (e) {
+      for (var d in e$header) Module_26.m(Module_26.c.TABLE_DATA_COLUMN, d, e$header[d].field)
+      Src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_all_blocks().forEach(function (e) {
         if ("table_data_insert_row_data" === e.type && e.get_field_value("WIDGET_ID") === e$grid.id && e.updateShape_) {
           e.updateShape_(e$grid.id)
         }
       })
     }
-    $_174.a.get(e$grid.id).then(function (e) {
+    Module_174.a.get(e$grid.id).then(function (e) {
       if (e) {
-        $_20_index.TableDataSynchronizeIndexedDB(e$grid.id, e$grid, D.a({
+        Module_20.TableDataSynchronizeIndexedDB(e$grid.id, e$grid, Module_6.a({
           id: e$grid.id,
           name: e$grid.name
         }, K())).then(function (e) {
-          GI.a({
-            type: Tn.b.PLAYER_DATA_WATCH,
+          Module_91.a({
+            type: Module_68.b.PLAYER_DATA_WATCH,
             data: {
-              screenId: $_48_index.a().getState().currentScreenId,
-              tab: $$_$$_$$_$$_src_editor_widget_builtIn_types.G,
+              screenId: Module_48.a().getState().currentScreenId,
+              tab: Src_editor_widget_builtIn_types.G,
               id: e$grid.id,
               value: e
             }
           })
         })
       } else {
-        GI.a({
-          type: Tn.b.PLAYER_DATA_WATCH,
+        Module_91.a({
+          type: Module_68.b.PLAYER_DATA_WATCH,
           data: {
-            screenId: $_48_index.a().getState().currentScreenId,
-            tab: $$_$$_$$_$$_src_editor_widget_builtIn_types.G,
+            screenId: Module_48.a().getState().currentScreenId,
+            tab: Src_editor_widget_builtIn_types.G,
             id: e$grid.id,
-            value: D.a({
+            value: Module_6.a({
               id: e$grid.id,
               name: e$grid.name
             }, K())
@@ -203,25 +203,25 @@ var aj = memo(function () {
         header: e$header
       })
     }
-    a($$_$$_$$_$$_src_editor_redux_common_actions.wh())
+    a(Src_editor_redux_common_actions.wh())
   }
   var Z = React.createElement("div", {
-    className: $_8141.footer
-  }, React.createElement("span", null, $_710$a$formatMessage({
+    className: Module_8141.footer
+  }, React.createElement("span", null, Module_710$a$formatMessage({
     id: "gridSupportTypeTips"
-  })), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
+  })), React.createElement(Src_shared_ui_components_index.d, {
     type: "primary",
     disabled: l,
     onClick: Q
-  }, $_710$a$formatMessage({
+  }, Module_710$a$formatMessage({
     id: "save"
   })))
-  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.f, {
+  return React.createElement(Src_shared_ui_components_index.f, {
     visible: e$visible,
-    className: $_8141.tableDataDialog,
+    className: Module_8141.tableDataDialog,
     title: React.createElement("div", null, y, React.createElement("span", {
-      className: $_8141.defaultData
-    }, "— ", $_710$a$formatMessage({
+      className: Module_8141.defaultData
+    }, "— ", Module_710$a$formatMessage({
       id: "TableDataWidget.data"
     }))),
     footer: Z,
@@ -239,12 +239,12 @@ var aj = memo(function () {
       }
     }
   }, React.createElement("div", {
-    className: $_8141.rowAndColumnCount
+    className: Module_8141.rowAndColumnCount
   }, React.createElement("span", {
-    className: $_8141.itemCount
-  }, $_710$a$formatMessage({
+    className: Module_8141.itemCount
+  }, Module_710$a$formatMessage({
     id: "column"
-  }), ": ", H), React.createElement("span", null, $_710$a$formatMessage({
+  }), ": ", H), React.createElement("span", null, Module_710$a$formatMessage({
     id: "row"
   }), ": ", F)), e$visible && React.createElement(rj, {
     id: e$grid.id,
@@ -266,7 +266,7 @@ var aj = memo(function () {
     setSaveDisabled: function (e) {
       u(e)
     }
-  }), M && React.createElement($_796_index.a, {
+  }), M && React.createElement(Module_796.a, {
     onCancel: X,
     onOk: Q
   }))

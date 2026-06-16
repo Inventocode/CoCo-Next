@@ -4,7 +4,7 @@
  * 模块 ID：2596
  */
 
-var r = require("../1463")
+var r = require(/* 1463 */"../1463")
 function o(e, t) {
   this.totalCount = e
   this.dataCount = t

@@ -6,13 +6,13 @@
 
 "use strict"
 
-var r = require("../../../../../../207/787/500")
-var i = require("regenerator-runtime")
-var o = require("../../../../../../207/787/399/index")
-var a = require("../../1410/1159/984/index")
-var s = require("../../1410/1159/985/index")
-var c = require("process")
-var u = require("../../1410/311")
+var r = require(/* 500 */"../../../../../../207/787/500")
+var i = require(/* 1 */"regenerator-runtime")
+var o = require(/* 399 */"../../../../../../207/787/399/index")
+var a = require(/* 984 */"../../1410/1159/984/index")
+var s = require(/* 985 */"../../1410/1159/985/index")
+var c = require(/* 298 */"process")
+var u = require(/* 311 */"../../1410/311")
 var /* [auto-meaningful-name] */u$ArrayPrototypeIndexOf = u.ArrayPrototypeIndexOf
 var /* [auto-meaningful-name] */u$NumberIsInteger = u.NumberIsInteger
 var /* [auto-meaningful-name] */u$NumberIsNaN = u.NumberIsNaN
@@ -27,22 +27,22 @@ var /* [auto-meaningful-name] */u$SymbolAsyncIterator = u.SymbolAsyncIterator
 var /* [auto-meaningful-name] */u$Symbol = u.Symbol
 module.exports = J
 J.ReadableState = $
-var /* [auto-meaningful-name] */require$$_1160_983$EventEmitter = require("../1160/983").EventEmitter
-var E = require("../1160/index")
+var /* [auto-meaningful-name] */require_983_$$_1160_983$EventEmitter = require(/* 983 */"../1160/983").EventEmitter
+var E = require(/* 1160 */"../1160/index")
 var /* [auto-meaningful-name] */E$Stream = E.Stream
 var /* [auto-meaningful-name] */E$prependListener = E.prependListener
-var /* [auto-meaningful-name] */require$$_333_index$Buffer = require("../333/index").Buffer
-var /* [auto-meaningful-name] */require$$_987$addAbortSignal = require("../987").addAbortSignal
-var S = require("../../1410/650")
-var T = require("../427").debuglog("stream", function (e) {
+var /* [auto-meaningful-name] */require_333_$$_333_index$Buffer = require(/* 333 */"../333/index").Buffer
+var /* [auto-meaningful-name] */require_987_$$_987$addAbortSignal = require(/* 987 */"../987").addAbortSignal
+var S = require(/* 650 */"../../1410/650")
+var T = require(/* 427 */"../427").debuglog("stream", function (e) {
   T = e
 })
-var B = require("./2389")
-var D = require("../769")
-var I = require("../988")
+var B = require(/* 2389 */"./2389")
+var D = require(/* 769 */"../769")
+var I = require(/* 988 */"../988")
 var /* [auto-meaningful-name] */I$getHighWaterMark = I.getHighWaterMark
 var /* [auto-meaningful-name] */I$getDefaultHighWaterMark = I.getDefaultHighWaterMark
-var P = require("../402/index")
+var P = require(/* 402 */"../402/index")
 var /* [auto-meaningful-name] */P$aggregateTwoErrors = P.aggregateTwoErrors
 var /* [auto-meaningful-name] */P$codes = P.codes
 var /* [auto-meaningful-name] */P$codes$ERR_INVALID_ARG_TYPE = P$codes.ERR_INVALID_ARG_TYPE
@@ -51,10 +51,10 @@ var /* [auto-meaningful-name] */P$codes$ERR_OUT_OF_RANGE = P$codes.ERR_OUT_OF_RA
 var /* [auto-meaningful-name] */P$codes$ERR_STREAM_PUSH_AFTER_EOF = P$codes.ERR_STREAM_PUSH_AFTER_EOF
 var /* [auto-meaningful-name] */P$codes$ERR_STREAM_UNSHIFT_AFTER_END_EVENT = P$codes.ERR_STREAM_UNSHIFT_AFTER_END_EVENT
 var /* [auto-meaningful-name] */P$AbortError = P.AbortError
-var /* [auto-meaningful-name] */require$$_$$_1410_1159_858$validateObject = require("../../1410/1159/858").validateObject
+var /* [auto-meaningful-name] */require_858_$$_$$_1410_1159_858$validateObject = require(/* 858 */"../../1410/1159/858").validateObject
 var Q = u$Symbol("kPaused")
-var /* [auto-meaningful-name] */require$_2390_index$StringDecoder = require("./2390/index").StringDecoder
-var K = require("./1407")
+var /* [auto-meaningful-name] */require_2390_$_2390_index$StringDecoder = require(/* 2390 */"./2390/index").StringDecoder
+var K = require(/* 1407 */"./1407")
 u$ObjectSetPrototypeOf(J.prototype, E$Stream.prototype)
 u$ObjectSetPrototypeOf(J, E$Stream)
 var X = function () {}
@@ -76,7 +76,7 @@ function q(e) {
 }
 function $(e, t, r) {
   if ("boolean" !== typeof r) {
-    r = t instanceof require("../584/index")
+    r = t instanceof require(/* 584 */"../584/index")
   }
   this.state = 6192
   if (e && e.objectMode) {
@@ -103,7 +103,7 @@ function $(e, t, r) {
   this.decoder = null
   this.encoding = null
   if (e && e.encoding) {
-    this.decoder = new require$_2390_index$StringDecoder(e.encoding)
+    this.decoder = new require_2390_$_2390_index$StringDecoder(e.encoding)
     this.encoding = e.encoding
   }
 }
@@ -112,7 +112,7 @@ function J(e) {
   if (!(this instanceof J)) {
     return new J(e)
   }
-  var r = this instanceof require("../584/index")
+  var r = this instanceof require(/* 584 */"../584/index")
   this._readableState = new $(e, this, r)
   if (e) {
     if ("function" === typeof e.read) {
@@ -125,7 +125,7 @@ function J(e) {
       this._construct = e.construct
     }
     if (e.signal && !r) {
-      require$$_987$addAbortSignal(e.signal, this)
+      require_987_$$_987$addAbortSignal(e.signal, this)
     }
   }
   E$Stream.call(this, e)
@@ -144,14 +144,14 @@ function Z(e, t, n, r) {
       n = n || e$_readableState.defaultEncoding
       if (e$_readableState.encoding !== n) {
         if (r && e$_readableState.encoding) {
-          t = require$$_333_index$Buffer.from(t, n).toString(e$_readableState.encoding)
+          t = require_333_$$_333_index$Buffer.from(t, n).toString(e$_readableState.encoding)
         } else {
-          t = require$$_333_index$Buffer.from(t, n)
+          t = require_333_$$_333_index$Buffer.from(t, n)
           n = ""
         }
       }
     } else {
-      if (t instanceof require$$_333_index$Buffer) {
+      if (t instanceof require_333_$$_333_index$Buffer) {
         n = ""
       } else {
         if (E$Stream._isUint8Array(t)) {
@@ -272,7 +272,7 @@ J.prototype._undestroy = D.undestroy
 J.prototype._destroy = function (e, t) {
   t(e)
 }
-J.prototype[require$$_1160_983$EventEmitter.captureRejectionSymbol] = function (e) {
+J.prototype[require_983_$$_1160_983$EventEmitter.captureRejectionSymbol] = function (e) {
   this.destroy(e)
 }
 J.prototype[u$SymbolAsyncDispose] = function () {
@@ -299,7 +299,7 @@ J.prototype.isPaused = function () {
   return true === this$_readableState[Q] || false === this$_readableState.flowing
 }
 J.prototype.setEncoding = function (e) {
-  var t = new require$_2390_index$StringDecoder(e)
+  var t = new require_2390_$_2390_index$StringDecoder(e)
   this._readableState.decoder = t
   this._readableState.encoding = this._readableState.decoder.encoding
   var n
@@ -894,7 +894,7 @@ J.prototype[u$SymbolAsyncIterator] = function () {
 }
 J.prototype.iterator = function (e) {
   if (undefined !== e) {
-    require$$_$$_1410_1159_858$validateObject(e, "options")
+    require_858_$$_$$_1410_1159_858$validateObject(e, "options")
   }
   return fe(this, e)
 }

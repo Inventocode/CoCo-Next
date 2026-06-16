@@ -6,10 +6,10 @@
 
 "use strict"
 
-var r = require("../1282/476")
-var o = require("../1662/300/index")
-var i = require("../1282/246/index")
-var a = require("../1662/271")
+var r = require(/* 476 */"../1282/476")
+var o = require(/* 300 */"../1662/300/index")
+var i = require(/* 246 */"../1282/246/index")
+var a = require(/* 271 */"../1662/271")
 var s = i("species")
 module.exports = function (e) {
   var t = r(e)

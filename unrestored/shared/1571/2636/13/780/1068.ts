@@ -4,7 +4,7 @@
  * 模块 ID：1068
  */
 
-var r = require("./1070/1102")
+var r = require(/* 1102 */"./1070/1102")
 function i() {
   if ("function" !== typeof WeakMap) {
     return null

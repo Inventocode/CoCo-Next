@@ -7,8 +7,8 @@
 "use strict"
 
 import { p } from "./index__part-2"
-import * as /* [auto-meaningful-name] */$_689 from "./689"
-import * as /* [auto-meaningful-name] */$$_$$_$$_37_1412_index from "../../../37/1412/index"
+import * as /* [auto-meaningful-name] */Module_689 from /* 689 */"./689"
+import * as /* [auto-meaningful-name] */Module_1412 from /* 1412 */"../../../37/1412/index"
 function O(e, t, n, r) {
   switch (e) {
     case 0:
@@ -72,7 +72,7 @@ var C = p("v5", 80, function (e) {
 })
 var /* [auto-meaningful-name] */_00000000000000000000000000000000 = "00000000-0000-0000-0000-000000000000"
 var S = function (e) {
-  if (!$_689.a(e)) {
+  if (!Module_689.a(e)) {
     throw TypeError("Invalid UUID")
   }
   return parseInt(e.substr(14, 1), 16)

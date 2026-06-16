@@ -4,8 +4,8 @@
  * 模块 ID：1085
  */
 
-var r = require("../../1282/246/index")
-var o = require("../../949/834")
+var r = require(/* 246 */"../../1282/246/index")
+var o = require(/* 834 */"../../949/834")
 var i = r("iterator")
 var /* [auto-meaningful-name] */Array$prototype = Array.prototype
 module.exports = function (e) {

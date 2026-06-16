@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("./108")
+var r = require(/* 108 */"./108")
 var i = function () {
   function t() {
     this.maskPattern = -1

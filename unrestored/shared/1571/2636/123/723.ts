@@ -10,9 +10,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.adjust_bboxes_for_rtl = exports.get_computed_style = exports.get_style = exports.get_size = exports.get_viewport_page_offset = undefined
-var r = require("@kitten-team/gl-matrix")
-var i = require("./index")
-var o = require("./478")
+var r = require(/* 258 */"@kitten-team/gl-matrix")
+var i = require(/* 123 */"./index")
+var o = require(/* 478 */"./478")
 function a(e) {
   var /* [auto-meaningful-name] */e$offsetWidth = e.offsetWidth
   var /* [auto-meaningful-name] */e$offsetHeight = e.offsetHeight

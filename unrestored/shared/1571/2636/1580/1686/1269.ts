@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("../1662/443")
+var r = require(/* 443 */"../1662/443")
 var o = function (e) {
   var t
   var n

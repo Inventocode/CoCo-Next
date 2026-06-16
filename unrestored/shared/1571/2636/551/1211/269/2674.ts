@@ -7,7 +7,7 @@
 "use strict"
 
 export { i as a }
-import * as /* [auto-meaningful-name] */$$_$$_$$_19 from "../../../19"
+import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"../../../19"
 function i() {
   var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : {}
   var /* [auto-meaningful-name] */e$baseClasses = e.baseClasses
@@ -16,7 +16,7 @@ function i() {
   if (!e$newClasses) {
     return e$baseClasses
   }
-  var i = $$_$$_$$_19.a({}, e$baseClasses)
+  var i = Module_19.a({}, e$baseClasses)
   Object.keys(e$newClasses).forEach(function (e) {
     if (e$newClasses[e]) {
       i[e] = "".concat(e$baseClasses[e], " ").concat(e$newClasses[e])

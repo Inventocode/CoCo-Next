@@ -7,11 +7,11 @@
 "use strict"
 
 export { l as a }
-import * as /* [auto-meaningful-name] */$_32_index from "./32/index"
-import * as /* [auto-meaningful-name] */$_119 from "./119"
-import * as o from "./65"
-import * as /* [auto-meaningful-name] */$_126 from "./126"
-import * as /* [auto-meaningful-name] */$_471 from "./471"
+import * as /* [auto-meaningful-name] */Module_32 from /* 32 */"./32/index"
+import * as /* [auto-meaningful-name] */Module_119 from /* 119 */"./119"
+import * as /* [auto-meaningful-name] */Module_65 from /* 65 */"./65"
+import * as /* [auto-meaningful-name] */Module_126 from /* 126 */"./126"
+import * as /* [auto-meaningful-name] */Module_471 from /* 471 */"./471"
 var c = {
   fontFamily: ["NotoSansCJKsc-Medium", "NotoSansCJKsc"],
   fontSize: "19px",
@@ -52,14 +52,14 @@ var l = function () {
     var l = this
     this.is_in_pivot_mode = false
     this.is_dragging_scale_btn = false
-    this.old_scale = new $_32_index.o()
+    this.old_scale = new Module_32.o()
     this.old_mouse_r = 0
     this.is_dragging_rotate_btn = false
     this.old_mouse_rotation = 0
-    this.old_position = new $_32_index.o()
-    this.old_rotate_center_pos = new $_32_index.o()
+    this.old_position = new Module_32.o()
+    this.old_rotate_center_pos = new Module_32.o()
     this.is_dragging_rotate_center = false
-    this.old_mouse_pos = new $_32_index.o()
+    this.old_mouse_pos = new Module_32.o()
     this.is_dragging_actor = false
     this.is_mouse_in = false
     this.BTN_SIZE = 32
@@ -73,7 +73,7 @@ var l = function () {
       l.editor.setParent(e)
     }
     this.on_actor_change = function (e) {
-      if (l.target && o.l(l.target)) {
+      if (l.target && Module_65.l(l.target)) {
         if (undefined !== e.visible) {
           l.editor.visible = e.visible
         }
@@ -87,7 +87,7 @@ var l = function () {
       }
     }
     this.on_video_change = function (e) {
-      if (l.target && $_471.b(l.target)) {
+      if (l.target && Module_471.b(l.target)) {
         if (undefined === e.visible) {
           if (e.scale) {
             l.draw_editor(l.target)
@@ -107,20 +107,20 @@ var l = function () {
     this.drag_start = function (e) {
       if (l.editor.name) {
         if (l.is_in_pivot_mode) {
-          if (e.target && e.target.name === $_126.b.ROTATION_CENTER) {
+          if (e.target && e.target.name === Module_126.b.ROTATION_CENTER) {
             l.drag_start_rotate_center(e)
           }
         } else {
           var t = e.data.getLocalPosition(l.app.get_app().stage)
           var n = e.data.getLocalPosition(l.hover_container)
           switch (e.target.name) {
-            case $_126.b.SCALE_BTN:
+            case Module_126.b.SCALE_BTN:
               l.set_btn_drag_start_status("cursor_scale", n)
               return void l.drag_start_scale_btn(t)
-            case $_126.b.ROTATE_BTN:
+            case Module_126.b.ROTATE_BTN:
               l.set_btn_drag_start_status("cursor_rotate", n)
               return void l.drag_start_rotate_btn(t)
-            case $_126.b.MENU_BTN:
+            case Module_126.b.MENU_BTN:
               return void l.events.fire("editor_menu_btn:selected", {
                 target_id: l.editor.name,
                 data: {
@@ -130,7 +130,7 @@ var l = function () {
                   }
                 }
               })
-            case $_126.b.BORDER_LINE:
+            case Module_126.b.BORDER_LINE:
               return void (l.target && l.target.drag_start(e))
           }
           var r = l.get_hit_target(e)
@@ -142,14 +142,14 @@ var l = function () {
     }
     this.set_cursor_when_hover = function (e) {
       if (!l.is_dragging_rotate_btn && !l.is_dragging_scale_btn) {
-        if (e.target && (e.target.name === $_126.b.ROTATE_BTN || e.target.name === $_126.b.SCALE_BTN)) {
+        if (e.target && (e.target.name === Module_126.b.ROTATE_BTN || e.target.name === Module_126.b.SCALE_BTN)) {
           var t = e.data.getLocalPosition(l.hover_container)
           switch (e.target.name) {
-            case $_126.b.ROTATE_BTN:
+            case Module_126.b.ROTATE_BTN:
               l.cursor_rotate.visible = true
               l.cursor_rotate.position.set(t.x, t.y)
               return void l.app.render()
-            case $_126.b.SCALE_BTN:
+            case Module_126.b.SCALE_BTN:
               l.cursor_scale.visible = true
               l.cursor_scale.position.set(t.x, t.y)
               return void l.app.render()
@@ -178,7 +178,7 @@ var l = function () {
     }
     this.drag_end = function (e) {
       if (l.target) {
-        if (o.l(l.target)) {
+        if (Module_65.l(l.target)) {
           if (l.is_in_pivot_mode) {
             if (l.is_dragging_rotate_center) {
               l.is_dragging_rotate_center = false
@@ -211,7 +211,7 @@ var l = function () {
         if (l.is_dragging_scale_btn) {
           l.is_dragging_scale_btn = false
           l.set_btn_drag_end_status("cursor_scale", e)
-          if (o.l(l.target)) {
+          if (Module_65.l(l.target)) {
             l.events.fire("actor:update", {
               target_id: l.target.id,
               data: {
@@ -220,7 +220,7 @@ var l = function () {
               }
             })
           }
-          if ($_471.b(l.target)) {
+          if (Module_471.b(l.target)) {
             l.events.fire("video_scale_btn:drag_end", {
               target_id: l.target.id,
               data: {
@@ -242,10 +242,10 @@ var l = function () {
     }
     this.on_mouse_move_fake_actor_over_out = function (e) {
       if (!(!l.is_mouse_in || l.is_in_pivot_mode || l.is_dragging_actor || l.is_dragging_scale_btn || l.is_dragging_rotate_btn)) {
-        if (!e.target || e.target.name !== $_126.b.BORDER_LINE && e.target.name !== $_126.b.MENU_BTN && e.target.name !== $_126.b.ROTATE_BTN && e.target.name !== $_126.b.SCALE_BTN && e.target.name !== $_126.b.ROTATION_CENTER) {
+        if (!e.target || e.target.name !== Module_126.b.BORDER_LINE && e.target.name !== Module_126.b.MENU_BTN && e.target.name !== Module_126.b.ROTATE_BTN && e.target.name !== Module_126.b.SCALE_BTN && e.target.name !== Module_126.b.ROTATION_CENTER) {
           var t
           var n = l.app.get_interaction_manager().hitTest(e.data.global, l.app.get_scene_container())
-          if (o.l(n)) {
+          if (Module_65.l(n)) {
             t = l.data.get_internal_actor(n.id)
           }
           var r = t === l.target
@@ -311,24 +311,24 @@ var l = function () {
     this.events = i
     this.loader = u
     this.MOVE_CURSOR = e.cursor_move_url
-    this.editor = new $_32_index.f()
+    this.editor = new Module_32.f()
     this.editor.visible = false
     this.editor.interactive = true
-    this.editor_box_border1 = new $_32_index.j()
+    this.editor_box_border1 = new Module_32.j()
     this.editor_box_border1.interactive = false
     this.editor.addChild(this.editor_box_border1)
-    this.editor_box_border2 = new $_32_index.j()
+    this.editor_box_border2 = new Module_32.j()
     this.editor_box_border2.interactive = false
     this.editor.addChild(this.editor_box_border2)
-    this.editor_box = new $_32_index.j()
+    this.editor_box = new Module_32.j()
     this.editor_box.interactive = true
     this.editor_box.cursor = "url(" + this.MOVE_CURSOR + ") 8 8, auto"
     this.editor.addChild(this.editor_box)
-    this.left_border = new $_32_index.j()
-    this.right_border = new $_32_index.j()
-    this.top_border = new $_32_index.j()
-    this.bottom_border = new $_32_index.j()
-    var f = new $_32_index.h({
+    this.left_border = new Module_32.j()
+    this.right_border = new Module_32.j()
+    this.top_border = new Module_32.j()
+    this.bottom_border = new Module_32.j()
+    var f = new Module_32.h({
       rotation: 0,
       distance: 0,
       alpha: .3,
@@ -339,40 +339,40 @@ var l = function () {
     this.init_border_line(this.right_border, f)
     this.init_border_line(this.top_border, f)
     this.init_border_line(this.bottom_border, f)
-    this.scale_btn = new $_32_index.t()
-    this.scale_btn.name = $_126.b.SCALE_BTN
+    this.scale_btn = new Module_32.t()
+    this.scale_btn.name = Module_126.b.SCALE_BTN
     this.init_btn(this.scale_btn)
     this.scale_btn.cursor = "none"
-    this.rotate_btn = new $_32_index.t()
-    this.rotate_btn.name = $_126.b.ROTATE_BTN
+    this.rotate_btn = new Module_32.t()
+    this.rotate_btn.name = Module_126.b.ROTATE_BTN
     this.init_btn(this.rotate_btn)
     this.rotate_btn.cursor = "none"
-    this.menu_btn = new $_32_index.t()
-    this.menu_btn.name = $_126.b.MENU_BTN
+    this.menu_btn = new Module_32.t()
+    this.menu_btn.name = Module_126.b.MENU_BTN
     this.init_btn(this.menu_btn)
     this.menu_btn.cursor = "pointer"
-    this.rotation_center = new $_32_index.j()
-    this.rotation_center.name = $_126.b.ROTATION_CENTER
+    this.rotation_center = new Module_32.j()
+    this.rotation_center.name = Module_126.b.ROTATION_CENTER
     this.rotation_center.cursor = "url(" + this.MOVE_CURSOR + ") 8 8, auto"
-    this.rotation_center.hitArea = new $_32_index.q(-this.ROTATION_CENTER_HIT_SIZE / 2, -this.ROTATION_CENTER_HIT_SIZE / 2, this.ROTATION_CENTER_HIT_SIZE, this.ROTATION_CENTER_HIT_SIZE)
+    this.rotation_center.hitArea = new Module_32.q(-this.ROTATION_CENTER_HIT_SIZE / 2, -this.ROTATION_CENTER_HIT_SIZE / 2, this.ROTATION_CENTER_HIT_SIZE, this.ROTATION_CENTER_HIT_SIZE)
     this.draw_rotate_center("default")
     this.editor.addChild(this.rotation_center)
-    this.hover_container = new $_32_index.f()
+    this.hover_container = new Module_32.f()
     this.editor.addChild(this.hover_container)
-    this.cursor_scale = new $_32_index.t()
+    this.cursor_scale = new Module_32.t()
     this.cursor_scale.anchor.set(.5)
     this.cursor_scale.visible = false
     this.hover_container.addChild(this.cursor_scale)
-    this.cursor_rotate = new $_32_index.t()
+    this.cursor_rotate = new Module_32.t()
     this.cursor_rotate.anchor.set(.5)
     this.cursor_rotate.visible = false
     this.hover_container.addChild(this.cursor_rotate)
-    this.value_bar = new $_32_index.j()
+    this.value_bar = new Module_32.j()
     this.value_bar.visible = false
     this.value_bar.beginFill(4868682, 1)
     this.value_bar.drawRoundedRect(0, 0, this.DISPLAY_WIDTH, this.DISPLAY_HEIGHT, this.DISPLAY_RADIUS)
     this.value_bar.endFill()
-    this.value = new $_32_index.v("", c)
+    this.value = new Module_32.v("", c)
     this.value.anchor.set(.5)
     this.value.position.set(this.DISPLAY_WIDTH / 2, this.DISPLAY_HEIGHT / 2)
     this.hover_container.addChild(this.value_bar)
@@ -398,17 +398,17 @@ var l = function () {
       }
     })
     this.editor.addListener("mousedown", this.drag_start)
-    this.editor.addListener("mousemove", o.w(this.drag_move, o.a))
+    this.editor.addListener("mousemove", Module_65.w(this.drag_move, Module_65.a))
     this.editor.addListener("mouseup", this.drag_end)
     this.editor.addListener("mouseupoutside", this.drag_end)
     this.editor.addListener("mousemove", this.set_cursor_when_hover)
     this.editor.addListener("touchstart", this.drag_start)
-    this.editor.addListener("touchmove", o.w(this.drag_move, o.a))
+    this.editor.addListener("touchmove", Module_65.w(this.drag_move, Module_65.a))
     this.editor.addListener("touchend", this.drag_end)
     this.editor.addListener("touchendoutside", this.drag_end)
     this.editor.addListener("mouseover", this.on_mouse_in)
     this.editor.addListener("mouseout", this.on_mouse_out)
-    this.editor.addListener("mousemove", o.w(this.on_mouse_move_fake_actor_over_out, o.a))
+    this.editor.addListener("mousemove", Module_65.w(this.on_mouse_move_fake_actor_over_out, Module_65.a))
     this.editor.addListener("rightclick", this.on_right_click)
     this.events.event_emitter.addListener("break", this.on_break)
     this.events.add_listener("actor:drag_start", this.on_actor_drag_start)
@@ -423,10 +423,10 @@ var l = function () {
     })
   }
   e.prototype.destroy = function () {
-    if (o.l(this.target)) {
+    if (Module_65.l(this.target)) {
       this.target.remove_listener("destroy", this.on_target_destroy)
     }
-    if ($_471.b(this.target)) {
+    if (Module_471.b(this.target)) {
       this.target.remove_listener("destroy", this.on_target_destroy)
     }
     this.events.event_emitter.removeListener("break", this.on_break)
@@ -441,14 +441,14 @@ var l = function () {
   e.prototype.set_target_actor = function (e) {
     var t = this.data.get_internal_actor(e)
     if (!t) {
-      return new $_119.a("Cannot find actor " + e)
+      return new Module_119.a("Cannot find actor " + e)
     }
     if (this.target !== t) {
       if (this.get_displayed()) {
         this.hide()
       }
       this.target = t
-      this.target_type = $_126.f.Actor
+      this.target_type = Module_126.f.Actor
       this.editor.name = t.get_id()
       this.editor.visible = this.target.get_visible()
       this.draw_editor(this.target)
@@ -461,12 +461,12 @@ var l = function () {
     }
   }
   e.prototype.set_target_video = function (e) {
-    if ($_471.b(e) && e !== this.target) {
+    if (Module_471.b(e) && e !== this.target) {
       if (this.get_displayed()) {
         this.hide()
       }
       this.target = e
-      this.target_type = $_126.f.Video
+      this.target_type = Module_126.f.Video
       this.editor.name = e.get_id()
       this.editor.visible = this.target.get_visible()
       this.draw_editor(this.target)
@@ -483,10 +483,10 @@ var l = function () {
   }
   e.prototype.hide = function () {
     if (this.target) {
-      if (o.l(this.target)) {
+      if (Module_65.l(this.target)) {
         this.target.remove_listener("change", this.on_actor_change)
       }
-      if ($_471.b(this.target)) {
+      if (Module_471.b(this.target)) {
         this.target.remove_listener("change", this.on_video_change)
       }
       this.target.removeListener("destroy", this.on_target_destroy)
@@ -552,7 +552,7 @@ var l = function () {
     var n = Math.max(e.height, this.MIN_EDITOR_BOX)
     this.editor_box_border1.clear()
     this.editor_box_border2.clear()
-    if (this.app.get_app().renderer.type === $_32_index.p.CANVAS) {
+    if (this.app.get_app().renderer.type === Module_32.p.CANVAS) {
       var i = t / 2
       var o = n / 2
       var a = 1
@@ -579,20 +579,20 @@ var l = function () {
     this.left_border.beginFill(16777215)
     this.left_border.drawRect(-t / 2 - 3, -n / 2, 3, n)
     this.left_border.endFill()
-    this.left_border.hitArea = new $_32_index.q(-t / 2 - 6, -n / 2, 6, n)
+    this.left_border.hitArea = new Module_32.q(-t / 2 - 6, -n / 2, 6, n)
     this.right_border.beginFill(16777215)
     this.right_border.drawRect(t / 2, -n / 2, 3, n)
     this.right_border.endFill()
-    this.right_border.hitArea = new $_32_index.q(t / 2 - 3, -n / 2, 6, n)
+    this.right_border.hitArea = new Module_32.q(t / 2 - 3, -n / 2, 6, n)
     this.top_border.beginFill(16777215)
     this.top_border.drawRect(-t / 2 - 3, -n / 2 - 3, t + 6, 3)
     this.top_border.endFill()
-    this.top_border.hitArea = new $_32_index.q(-t / 2 - 3, -n / 2 - 6, t + 6, 6)
+    this.top_border.hitArea = new Module_32.q(-t / 2 - 3, -n / 2 - 6, t + 6, 6)
     this.bottom_border.beginFill(16777215)
     this.bottom_border.drawRect(-t / 2 - 3, n / 2, t + 6, 3)
     this.bottom_border.endFill()
-    this.bottom_border.hitArea = new $_32_index.q(-t / 2 - 3, n / 2 - 3, t + 6, 6)
-    this.editor_box.hitArea = new $_32_index.q(-t / 2, -n / 2, t, n)
+    this.bottom_border.hitArea = new Module_32.q(-t / 2 - 3, n / 2 - 3, t + 6, 6)
+    this.editor_box.hitArea = new Module_32.q(-t / 2, -n / 2, t, n)
     var s = (t + 3) / 2
     var c = (n + 3) / 2
     this.scale_btn.position.set(s, c)
@@ -609,7 +609,7 @@ var l = function () {
   e.prototype.drag_start_scale_btn = function (e) {
     if (this.target) {
       this.is_dragging_scale_btn = true
-      var t = o.l(this.target) ? o.d(this.target, this.target.position) : this.target.get_pixi_position()
+      var t = Module_65.l(this.target) ? Module_65.d(this.target, this.target.position) : this.target.get_pixi_position()
       this.old_mouse_r = Math.hypot(e.x - t.x, e.y - t.y)
       this.old_scale.set(this.target.scale.x, this.target.scale.y)
       this.value.text = "" + Math.round(100 * this.target.get_scale().x)
@@ -623,11 +623,11 @@ var l = function () {
     this.is_dragging_rotate_btn = true
     var t = this.editor.name && this.data.get_internal_actor(this.editor.name)
     if (t) {
-      var n = this.app.get_app().stage.toLocal(new $_32_index.o(0, 0), t)
+      var n = this.app.get_app().stage.toLocal(new Module_32.o(0, 0), t)
       this.old_rotate_center_pos.set(n.x, n.y)
-      this.old_mouse_rotation = o.u(e.x - n.x, e.y - n.y)
+      this.old_mouse_rotation = Module_65.u(e.x - n.x, e.y - n.y)
       this.old_position.set(t.position.x, t.position.y)
-      this.value.text = Math.round(o.v(t.rotation_value)) + "°"
+      this.value.text = Math.round(Module_65.v(t.rotation_value)) + "°"
       this.events.fire("editor_rotate_btn:drag_start", {
         target_id: t.id
       })
@@ -642,7 +642,7 @@ var l = function () {
   e.prototype.drag_move_scale_btn = function (e) {
     if (this.target) {
       var t = Math.hypot(this.target.width / this.target.scale.x / 2, this.target.height / this.target.scale.y / 2)
-      var n = o.l(this.target) ? o.d(this.target, this.target.position) : this.target.get_pixi_position()
+      var n = Module_65.l(this.target) ? Module_65.d(this.target, this.target.position) : this.target.get_pixi_position()
       var i = (Math.hypot(e.x - n.x, e.y - n.y) - this.old_mouse_r) / t
       var a = function (e) {
         var t = Math.max(Math.abs(e) + i, .01)
@@ -650,16 +650,16 @@ var l = function () {
       }
       var c = a(this.old_scale.x)
       var u = a(this.old_scale.y)
-      if ($_471.b(this.target)) {
+      if (Module_471.b(this.target)) {
         this.target.set_pixi_scale(c, u)
       } else {
-        var l = new $_32_index.o(this.target.pivot.x / this.target.scale.x * c, this.target.pivot.y / this.target.scale.y * u)
+        var l = new Module_32.o(this.target.pivot.x / this.target.scale.x * c, this.target.pivot.y / this.target.scale.y * u)
         var f = this.app.get_app().stage.toLocal(l, this.target)
         this.target.set_pixi_position(f.x, f.y)
         this.target.set_pixi_scale(c, u)
       }
       this.value.text = "" + Math.round(100 * this.target.get_scale().x)
-      if (o.l(this.target)) {
+      if (Module_65.l(this.target)) {
         this.events.fire("actor:update", {
           target_id: this.target.id,
           data: {
@@ -677,17 +677,17 @@ var l = function () {
   e.prototype.drag_move_rotate_btn = function (e) {
     var t = this.editor.name && this.data.get_internal_actor(this.editor.name)
     if (t) {
-      var n = o.u(e.x - this.old_rotate_center_pos.x, e.y - this.old_rotate_center_pos.y)
+      var n = Module_65.u(e.x - this.old_rotate_center_pos.x, e.y - this.old_rotate_center_pos.y)
       var r = n - this.old_mouse_rotation
       this.old_mouse_rotation = n
-      var i = o.p(this.old_position, this.old_rotate_center_pos, r)
+      var i = Module_65.p(this.old_position, this.old_rotate_center_pos, r)
       this.old_position.set(i.x, i.y)
       t.set_pixi_position(i.x, i.y)
-      var a = o.s(-t.rotation - r)
-      var s = t.is_rotation_flipped ? o.s(a + Math.PI) : a
+      var a = Module_65.s(-t.rotation - r)
+      var s = t.is_rotation_flipped ? Module_65.s(a + Math.PI) : a
       t.set_rotation_value(s)
       t.set_pixi_rotation(-a)
-      this.value.text = Math.round(o.v(t.rotation_value)) + "°"
+      this.value.text = Math.round(Module_65.v(t.rotation_value)) + "°"
       this.events.fire("actor:update", {
         target_id: t.id,
         data: {
@@ -705,7 +705,7 @@ var l = function () {
     var t = e.data.getLocalPosition(this.editor)
     this.rotation_center.position.set(this.rotation_center.x + t.x - this.old_mouse_pos.x, this.rotation_center.y + t.y - this.old_mouse_pos.y)
     this.old_mouse_pos.set(t.x, t.y)
-    if (o.l(this.target)) {
+    if (Module_65.l(this.target)) {
       var n = this.app.get_app().stage.toLocal(this.rotation_center.position, this.editor)
       this.target.set_pivot_by_stage_point(n.x, -n.y)
       this.events.fire("actor:update", {
@@ -727,7 +727,7 @@ var l = function () {
     this.set_btns_visible(false)
   }
   e.prototype.update_value_bar = function (e) {
-    var t = o.p({
+    var t = Module_65.p({
       x: e.x + this.DISPLAY_OFFSET,
       y: e.y + this.DISPLAY_OFFSET
     }, {
@@ -743,17 +743,17 @@ var l = function () {
     this$app$get_app$stage.cursor = "default"
     this.set_box_cursor("move")
     this.value_bar.visible = false
-    if (o.l(this.target)) {
+    if (Module_65.l(this.target)) {
       this.set_btns_visible(true)
     } else {
       this.scale_btn.visible = true
     }
     var i = t && r.hitTest(t.data.global, this.editor)
-    var s = "cursor_scale" === e ? $_126.b.SCALE_BTN : $_126.b.ROTATE_BTN
+    var s = "cursor_scale" === e ? Module_126.b.SCALE_BTN : Module_126.b.ROTATE_BTN
     var c = i && i.name === s
     this[e].visible = !!c
     var u = t && r.hitTest(t.data.global, this.app.get_scene_container())
-    var l = o.l(u) && this.data.get_internal_actor(u.id)
+    var l = Module_65.l(u) && this.data.get_internal_actor(u.id)
     if (!c && l && l !== this.target) {
       this.events.fire("actor:mouseover", {
         target_id: l.id
@@ -763,14 +763,14 @@ var l = function () {
   }
   e.prototype.get_hit_target = function (e) {
     var t = this.app.get_interaction_manager().hitTest(e.data.global, this.app.get_scene_container())
-    if (o.l(t)) {
+    if (Module_65.l(t)) {
       var n = this.data.get_internal_actor(t.id)
       if (n) {
         this.set_target_actor(n.id)
         return n
       }
     }
-    return $_471.b(t) ? (this.set_target_video(t), t) : this.editor.name ? this.data.get_internal_actor(this.editor.name) : undefined
+    return Module_471.b(t) ? (this.set_target_video(t), t) : this.editor.name ? this.data.get_internal_actor(this.editor.name) : undefined
   }
   e.prototype.check_mouse_pos_is_in_stage = function (e) {
     var t = e.data.getLocalPosition(this.app.get_app().stage)
@@ -780,7 +780,7 @@ var l = function () {
     return !(t.x > this$app$get_app$view$width / 2 || t.x < -this$app$get_app$view$width / 2 || t.y > this$app$get_app$view$height / 2 || t.y < -this$app$get_app$view$height / 2)
   }
   e.prototype.init_border_line = function (e, t) {
-    e.name = $_126.b.BORDER_LINE
+    e.name = Module_126.b.BORDER_LINE
     e.interactive = true
     e.cursor = "url(" + this.MOVE_CURSOR + ") 8 8, auto"
     e.filters = [t]

@@ -8,17 +8,17 @@
 
 import { tt } from "./index__part-5"
 var et
-import * as /* [auto-meaningful-name] */Animejs from "animejs"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_189 from "../../../../shared/1571/2636/189"
-import /* [auto-meaningful-name] */Color from "color"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import /* [auto-meaningful-name] */ReactDom from "react-dom"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_tools_index from "../../../../../src/shared/tools/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_37_1412_index from "../../../../shared/1571/2636/37/1412/index"
-import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_232_324 from "../../../../shared/1571/2636/232/324"
-import * as /* [auto-meaningful-name] */$_138 from "./138"
-import /* [auto-meaningful-name] */$_1381 from "./138"
+import * as /* [auto-meaningful-name] */Animejs from /* 205 */"animejs"
+import * as /* [auto-meaningful-name] */Module_189 from /* 189 */"../../../../shared/1571/2636/189"
+import /* [auto-meaningful-name] */Color from /* 51 */"color"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import /* [auto-meaningful-name] */ReactDom from /* 80 */"react-dom"
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */Module_1412 from /* 1412 */"../../../../shared/1571/2636/37/1412/index"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_324 from /* 324 */"../../../../shared/1571/2636/232/324"
+import * as /* [auto-meaningful-name] */Module_138 from /* 138 */"./138"
+import /* [auto-meaningful-name] */Module_1381 from /* 138 */"./138"
 var /* [auto-meaningful-name] */COCO_PLAYER_DIALOG = "COCO_PLAYER_DIALOG"
 !function (t) {
   t.MESSAGE = "MESSAGE"
@@ -26,12 +26,12 @@ var /* [auto-meaningful-name] */COCO_PLAYER_DIALOG = "COCO_PLAYER_DIALOG"
   t.PROMPT = "PROMPT"
 }(et || (et = {}))
 var at = {
-  style: $$_$$_$$_$$_shared_1571_2636_189.b.styleA,
+  style: Module_189.b.styleA,
   currentDialogId: "",
   dialogArr: [],
   dialogPropMap: new Map(),
   addDialog: function (t) {
-    var e = $$_$$_$$_$$_shared_1571_2636_37_1412_index.a()
+    var e = Module_1412.a()
     this.dialogArr.push(e)
     this.dialogPropMap.set(e, t)
     if (1 === this.dialogArr.length) {
@@ -62,9 +62,9 @@ var at = {
     at.style = t
   },
   setThemeColor: function (t) {
-    var e = $$_$$_$$_$$_$$_src_shared_tools_index.hb(t, .4)
-    var n = $$_$$_$$_$$_$$_src_shared_tools_index.hb(t, .04)
-    var r = $$_$$_$$_$$_$$_src_shared_tools_index.ib(t, .3)
+    var e = Src_shared_tools_index.hb(t, .4)
+    var n = Src_shared_tools_index.hb(t, .04)
+    var r = Src_shared_tools_index.ib(t, .3)
     var i = Color(t).toString()
     document.documentElement.style.setProperty("--dialog-theme-color", i)
     document.documentElement.style.setProperty("--dialog-theme-color-medium", e)
@@ -75,13 +75,13 @@ var at = {
     var t = document.getElementById("COCO_PLAYER_DIALOG_CONTAINER")
     if (!t) {
       (t = document.createElement("div")).id = "COCO_PLAYER_DIALOG_CONTAINER"
-      var e = document.getElementById($$_$$_$$_$$_shared_1571_2636_232_324.a)
+      var e = document.getElementById(Module_324.a)
       if (e) {
         e.appendChild(t)
       }
     }
     t.style.opacity = "1"
-    t.className = $_1381.container
+    t.className = Module_1381.container
     return t
   },
   cancel: function (t) {
@@ -129,7 +129,7 @@ var at = {
         var e
         COCO_PLAYER_DIALOG_CONTAINER = "COCO_PLAYER_DIALOG_CONTAINER"
         e = function () {
-          n.classList.remove($_1381.container)
+          n.classList.remove(Module_1381.container)
         }
         Animejs.default({
           targets: "#".concat(COCO_PLAYER_DIALOG_CONTAINER),
@@ -155,47 +155,47 @@ var at = {
       a = 0 === s || 1 === s
     }
     var u = ""
-    u = this.style === $$_$$_$$_$$_shared_1571_2636_189.b.styleA ? t === et.SELECT ? i ? "346px" : "400px" : "454px" : "472px"
+    u = this.style === Module_189.b.styleA ? t === et.SELECT ? i ? "346px" : "400px" : "454px" : "472px"
     var c = ""
-    c = a ? this.style === $$_$$_$$_$$_shared_1571_2636_189.b.styleA ? "39px 0" : "42px 0" : e ? "16px 0" : "24px 0 16px 0"
+    c = a ? this.style === Module_189.b.styleA ? "39px 0" : "42px 0" : e ? "16px 0" : "24px 0 16px 0"
     return React.createElement("div", {
       style: {
         maxHeight: u,
         padding: c
       },
-      className: Classnames(a && $_1381.singleElementContentBox, !a && $_1381.contentBox)
+      className: Classnames(a && Module_1381.singleElementContentBox, !a && Module_1381.contentBox)
     }, e && React.createElement("div", {
       style: {
         background: "url(".concat(e, ") no-repeat"),
         backgroundSize: "cover",
         backgroundPosition: "center"
       },
-      className: $_1381.imageBox
+      className: Module_1381.imageBox
     }), n && React.createElement("p", {
-      className: Classnames($_1381.title)
+      className: Classnames(Module_1381.title)
     }, n), r && React.createElement("p", {
-      className: $_1381.textBox
+      className: Module_1381.textBox
     }, React.createElement("span", {
-      className: $_1381.text
+      className: Module_1381.text
     }, r)), t === et.PROMPT && React.createElement("div", {
-      className: $_1381.inputBox
+      className: Module_1381.inputBox
     }, React.createElement("input", {
       id: "COCO_PLAYER_DIALOG_INPUT",
-      className: $_1381.dialogInput,
+      className: Module_1381.dialogInput,
       placeholder: o
     })))
   },
   getButtonBox: function (t, e, n) {
     var r = t === et.MESSAGE ? n || "" : "确定"
     return React.createElement("div", {
-      className: $_1381.buttonBox
+      className: Module_1381.buttonBox
     }, e && React.createElement("button", {
-      className: Classnames($_1381.button, $_1381.cancelButton),
+      className: Classnames(Module_1381.button, Module_1381.cancelButton),
       onClick: this.cancel.bind(null, "取消")
     }, React.createElement("span", null, "取消")), React.createElement("button", {
-      className: Classnames($_1381.button, $_1381.mainButton),
+      className: Classnames(Module_1381.button, Module_1381.mainButton),
       style: {
-        width: this.style === $$_$$_$$_$$_shared_1571_2636_189.b.styleA ? e ? "133px" : "100%" : "fit-content"
+        width: this.style === Module_189.b.styleA ? e ? "133px" : "100%" : "fit-content"
       },
       onClick: t === et.PROMPT ? this.submit : this.confirm.bind(null, r)
     }, React.createElement("span", null, r)))
@@ -220,7 +220,7 @@ var at = {
     var c = this.getButtonBox(et.MESSAGE, t$params$showCancelButton, t$params$confirmButtonText)
     var l = React.createElement("div", {
       id: COCO_PLAYER_DIALOG,
-      className: Classnames($_1381.dialog, this.style === $$_$$_$$_$$_shared_1571_2636_189.b.styleA ? $_1381.styleA : $_1381.styleB)
+      className: Classnames(Module_1381.dialog, this.style === Module_189.b.styleA ? Module_1381.styleA : Module_1381.styleB)
     }, u, c)
     ReactDom.render(l, s)
   },
@@ -243,24 +243,24 @@ var at = {
     var u = this.getContentBox(et.SELECT, "", t$params$title, t$params$text, t$params$showCancelButton)
     var c = React.createElement("div", {
       id: COCO_PLAYER_DIALOG,
-      className: Classnames($_1381.dialog, this.style === $$_$$_$$_$$_shared_1571_2636_189.b.styleA ? $_1381.styleA : $_1381.styleB)
+      className: Classnames(Module_1381.dialog, this.style === Module_189.b.styleA ? Module_1381.styleA : Module_1381.styleB)
     }, u, React.createElement("div", {
-      className: $_1381.optionButtonBox,
+      className: Module_1381.optionButtonBox,
       style: {
-        height: this.style === $$_$$_$$_$$_shared_1571_2636_189.b.styleA ? t$params$showCancelButton ? "174px" : "120px" : "48px",
-        justifyContent: this.style !== $$_$$_$$_$$_shared_1571_2636_189.b.styleB || t$params$showCancelButton ? undefined : "flex-end"
+        height: this.style === Module_189.b.styleA ? t$params$showCancelButton ? "174px" : "120px" : "48px",
+        justifyContent: this.style !== Module_189.b.styleB || t$params$showCancelButton ? undefined : "flex-end"
       }
-    }, t$params$showCancelButton && this.style === $$_$$_$$_$$_shared_1571_2636_189.b.styleB && React.createElement("button", {
-      className: Classnames($_1381.button, $_1381.cancelButton),
+    }, t$params$showCancelButton && this.style === Module_189.b.styleB && React.createElement("button", {
+      className: Classnames(Module_1381.button, Module_1381.cancelButton),
       onClick: this.cancel.bind(null, "")
     }, React.createElement("span", null, "取消")), React.createElement("div", null, React.createElement("button", {
-      className: Classnames($_1381.button, $_1381.mainButton),
+      className: Classnames(Module_1381.button, Module_1381.mainButton),
       onClick: this.confirm.bind(null, t$params$option1)
     }, React.createElement("span", null, t$params$option1)), React.createElement("button", {
-      className: Classnames($_1381.button, $_1381.mainButton),
+      className: Classnames(Module_1381.button, Module_1381.mainButton),
       onClick: this.confirm.bind(null, t$params$option2)
-    }, React.createElement("span", null, t$params$option2))), t$params$showCancelButton && this.style === $$_$$_$$_$$_shared_1571_2636_189.b.styleA && React.createElement("button", {
-      className: Classnames($_1381.button, $_1381.cancelButton),
+    }, React.createElement("span", null, t$params$option2))), t$params$showCancelButton && this.style === Module_189.b.styleA && React.createElement("button", {
+      className: Classnames(Module_1381.button, Module_1381.cancelButton),
       onClick: this.cancel.bind(null, "")
     }, React.createElement("span", null, "取消"))))
     ReactDom.render(c, s)
@@ -284,7 +284,7 @@ var at = {
     var u = this.getButtonBox(et.PROMPT, t$params$showCancelButton)
     var c = React.createElement("div", {
       id: COCO_PLAYER_DIALOG,
-      className: Classnames($_1381.dialog, this.style === $$_$$_$$_$$_shared_1571_2636_189.b.styleA ? $_1381.styleA : $_1381.styleB)
+      className: Classnames(Module_1381.dialog, this.style === Module_189.b.styleA ? Module_1381.styleA : Module_1381.styleB)
     }, s, u)
     ReactDom.render(c, a)
   }

@@ -6,8 +6,8 @@
 
 "use strict"
 
-var r = require("../1758/257/index")
-var o = require("./1251")
+var r = require(/* 257 */"../1758/257/index")
+var o = require(/* 1251 */"./1251")
 var /* [auto-meaningful-name] */r$aTypedArray = r.aTypedArray;
 (0, r.exportTypedArrayMethod)("lastIndexOf", function (e) {
   return o.apply(r$aTypedArray(this), arguments)

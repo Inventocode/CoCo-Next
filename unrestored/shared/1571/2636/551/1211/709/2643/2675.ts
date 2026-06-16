@@ -7,16 +7,16 @@
 "use strict"
 
 export { a }
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_19 from "../../../../19"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_107 from "../../../../107"
+import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"../../../../19"
+import * as /* [auto-meaningful-name] */Module_107 from /* 107 */"../../../../107"
 function o(e) {
-  return e && "object" === $$_$$_$$_$$_107.a(e) && e.constructor === Object
+  return e && "object" === Module_107.a(e) && e.constructor === Object
 }
 function a(e, t) {
   var n = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : {
     clone: true
   }
-  var i = n.clone ? $$_$$_$$_$$_19.a({}, e) : e
+  var i = n.clone ? Module_19.a({}, e) : e
   if (o(e) && o(t)) {
     Object.keys(t).forEach(function (r) {
       if ("__proto__" !== r) {

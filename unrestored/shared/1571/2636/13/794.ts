@@ -843,4 +843,4 @@ module.exports = function (e, t) {
     disableCanvasRotation: true
   })
   return x
-}(require("../50/index"), require("react"))
+}(require(/* 50 */"../50/index"), require(/* 0 */"react"))

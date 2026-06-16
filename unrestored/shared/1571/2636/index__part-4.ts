@@ -7,33 +7,33 @@
 "use strict"
 
 var V
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */$_97_index from "./97/index"
-import * as /* [auto-meaningful-name] */$_525 from "./525"
-import /* [auto-meaningful-name] */$_5251 from "./525"
-import * as /* [auto-meaningful-name] */$_1213 from "./1213"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_97 from /* 97 */"./97/index"
+import * as /* [auto-meaningful-name] */Module_525 from /* 525 */"./525"
+import /* [auto-meaningful-name] */Module_5251 from /* 525 */"./525"
+import * as /* [auto-meaningful-name] */Module_1213 from /* 1213 */"./1213"
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../src/shared/tools/index"
 !function (e) {
   e[e.SAVE_BTN = 0] = "SAVE_BTN"
   e[e.MY_PROJECT = 1] = "MY_PROJECT"
 }(V || (V = {}))
 var ne = React.memo(function (e) {
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var /* [auto-meaningful-name] */e$time = e.time
   var /* [auto-meaningful-name] */e$currentTime = e.currentTime
   var /* [auto-meaningful-name] */e$renderType = e.renderType
   var i = function (e) {
-    return $_710$a$formatMessage({
+    return Module_710$a$formatMessage({
       id: e
     })
   }
   var a = e$time
   var s = e$currentTime
   var c = s - a
-  var l = $$_$$_$$_$$_src_shared_tools_index.G(s, 0)
-  var u = $$_$$_$$_$$_src_shared_tools_index.G(s, -1)
-  var d = $$_$$_$$_$$_src_shared_tools_index.G(s, -2)
+  var l = Src_shared_tools_index.G(s, 0)
+  var u = Src_shared_tools_index.G(s, -1)
+  var d = Src_shared_tools_index.G(s, -2)
   var p = new Date(a)
   var f = ""
   var m = "".concat(i("MyProject.lastSaved"), " ")
@@ -64,13 +64,13 @@ var ne = React.memo(function (e) {
       f = m + f
     }
   } else if (a > u) {
-    f = i("MyProject.yesterday") + $$_$$_$$_$$_src_shared_tools_index.K(p)
+    f = i("MyProject.yesterday") + Src_shared_tools_index.K(p)
     if (e$renderType === V.SAVE_BTN) {
       f = m + f
     }
   } else {
     if (a > d) {
-      f = i("MyProject.theDayBeforeYesterday") + $$_$$_$$_$$_src_shared_tools_index.K(p)
+      f = i("MyProject.theDayBeforeYesterday") + Src_shared_tools_index.K(p)
       if (e$renderType === V.SAVE_BTN) {
         f = m + f
       }

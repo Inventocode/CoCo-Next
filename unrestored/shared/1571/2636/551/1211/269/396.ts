@@ -11,7 +11,7 @@ export { u as c }
 export { l as a }
 export { f as b }
 export { d as e }
-import * as /* [auto-meaningful-name] */$_1547 from "./1547"
+import * as /* [auto-meaningful-name] */Module_1547 from /* 1547 */"./1547"
 function i(e) {
   var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : 0
   var n = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : 1
@@ -39,7 +39,7 @@ function o(e) {
   var t = e.indexOf("(")
   var n = e.substring(0, t)
   if (-1 === ["rgb", "rgba", "hsl", "hsla"].indexOf(n)) {
-    throw new Error($_1547.a(3, e))
+    throw new Error(Module_1547.a(3, e))
   }
   var i = e.substring(t + 1, e.length - 1).split(",")
   return {

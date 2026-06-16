@@ -6,23 +6,23 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */$_934 from "./934"
-import /* [auto-meaningful-name] */$_9341 from "./934"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_934 from /* 934 */"./934"
+import /* [auto-meaningful-name] */Module_9341 from /* 934 */"./934"
 var _C = function (e) {
   var /* [auto-meaningful-name] */e$formConfig = e.formConfig
   return React.createElement("div", {
-    className: $_9341.warnBox
+    className: Module_9341.warnBox
   }, React.createElement("div", {
-    className: $_9341.content
+    className: Module_9341.content
   }, React.createElement("span", null, React.createElement("div", {
-    className: $_9341.icon
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+    className: Module_9341.icon
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-trumpet"
   })), "将在2023年12月31日停止服务，建议使用新的", React.createElement("a", {
     target: "_blank",
-    className: $_9341.link,
+    className: Module_9341.link,
     href: e$formConfig.url
   }, e$formConfig.label), "控件")))
 }

@@ -6,7 +6,7 @@
 
 "use strict"
 
-var a = require("../../../../13/780/571")
+var a = require(/* 571 */"../../../../13/780/571")
 Object.defineProperty(exports, "__esModule", {
   value: true
 })
@@ -19,8 +19,8 @@ exports.default = function () {
   }
 }
 exports.operationReducer = exports.playerReducer = undefined
-var r = a(require("./3311"))
-var o = a(require("./3312"))
+var r = a(require(/* 3311 */"./3311"))
+var o = a(require(/* 3312 */"./3312"))
 var /* [auto-meaningful-name] */r$default = r.default
 exports.playerReducer = r$default
 var /* [auto-meaningful-name] */o$default = o.default

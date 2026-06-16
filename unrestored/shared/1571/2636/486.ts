@@ -7,9 +7,9 @@
 "use strict"
 
 export { i as a }
-import * as r from "./21"
+import * as /* [auto-meaningful-name] */Module_21 from /* 21 */"./21"
 function i(e, t) {
-  var n = r.a({}, e)
+  var n = Module_21.a({}, e)
   if (Array.isArray(t)) {
     t.forEach(function (e) {
       delete n[e]

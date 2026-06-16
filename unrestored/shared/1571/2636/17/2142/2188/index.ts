@@ -10,11 +10,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.AngleController = undefined
-var r = require("tslib")
-var i = require("inversify")
-var o = require("./1351")
-var a = require("../../../123/index")
-var s = require("../../../1022/579")
+var r = require(/* 93 */"tslib")
+var i = require(/* 134 */"inversify")
+var o = require(/* 1351 */"./1351")
+var a = require(/* 123 */"../../../123/index")
+var s = require(/* 579 */"../../../1022/579")
 var c = function (e) {
   function t() {
     var t = e.call(this) || this
@@ -209,5 +209,5 @@ var c = function (e) {
     }
   }
   return t = (0, r.__decorate)([(0, i.injectable)()], t)
-}(require("./1127").Controller)
+}(require(/* 1127 */"./1127").Controller)
 exports.AngleController = c

@@ -6,34 +6,34 @@
 
 "use strict"
 
-import /* [auto-meaningful-name] */$_208 from "./208"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import /* [auto-meaningful-name] */React from "react"
-import { memo, useRef, useState, useEffect } from "react"
+import /* [auto-meaningful-name] */Module_208 from /* 208 */"./208"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo, useRef, useState, useEffect } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_557 from "./557"
-import * as /* [auto-meaningful-name] */$_807 from "./807"
+import * as /* [auto-meaningful-name] */Module_557 from /* 557 */"./557"
+import * as /* [auto-meaningful-name] */Module_807 from /* 807 */"./807"
 var ow = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "header" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var i = e$getValue(n)
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var s = useRef(-1)
   var c = useState([])
-  var l = $_10_index.a(c, 2)
+  var l = Module_10.a(c, 2)
   var u = l[0]
   var d = l[1]
   var p = useState(-1)
-  var m = $_10_index.a(p, 2)
+  var m = Module_10.a(p, 2)
   var g = m[0]
   var _ = m[1]
   var v = useState(0)
-  var b = $_10_index.a(v, 2)
+  var b = Module_10.a(v, 2)
   var y = b[0]
   var E = b[1]
   function O(e) {
@@ -65,31 +65,31 @@ var ow = memo(function (e) {
     var t = document.querySelector(".".concat("HTTP_HEADER_KEY_VALUE_INPUT_SERIAL_" + e, " input"))
     if (t instanceof HTMLInputElement) {
       s.current = e
-      $_807.a(t, false)
+      Module_807.a(t, false)
     }
   }, [g])
   return React.createElement("div", {
-    className: Classnames($_208.formItemWrapper, $_208.httpHeader)
+    className: Classnames(Module_208.formItemWrapper, Module_208.httpHeader)
   }, React.createElement("div", {
-    className: $_208.title
-  }, React.createElement("div", null, $_710$a$formatMessage({
+    className: Module_208.title
+  }, React.createElement("div", null, Module_710$a$formatMessage({
     id: "HttpClientWidget.header"
   }))), React.createElement("div", {
-    className: $_208.list
+    className: Module_208.list
   }, React.createElement("div", {
-    className: $_208.listHeader
+    className: Module_208.listHeader
   }, React.createElement("div", {
-    className: $_208.column1
-  }, $_710$a$formatMessage({
+    className: Module_208.column1
+  }, Module_710$a$formatMessage({
     id: "key"
   })), React.createElement("div", {
-    className: $_208.column2
-  }, $_710$a$formatMessage({
+    className: Module_208.column2
+  }, Module_710$a$formatMessage({
     id: "value"
   })), React.createElement("div", {
-    className: $_208.column3
+    className: Module_208.column3
   })), React.createElement("div", {
-    className: $_208.itemWrapper,
+    className: Module_208.itemWrapper,
     onKeyDown: function (e) {
       var /* [auto-meaningful-name] */e$target = e.target
       var /* [auto-meaningful-name] */s$current = s.current
@@ -117,12 +117,12 @@ var ow = memo(function (e) {
           var a = document.querySelector(".".concat("HTTP_HEADER_KEY_VALUE_INPUT_SERIAL_" + o, " input"))
           if (a && a instanceof HTMLInputElement) {
             s.current = o
-            $_807.a(a, i)
+            Module_807.a(a, i)
           }
         }
       }
     }
-  }, i && i.length > 0 && React.createElement($_557.a, {
+  }, i && i.length > 0 && React.createElement(Module_557.a, {
     width: "auto",
     height: 44 * (i.length > 5 ? 5 : i.length),
     itemCount: i.length,
@@ -130,15 +130,15 @@ var ow = memo(function (e) {
       var /* [auto-meaningful-name] */e$index = e.index
       var /* [auto-meaningful-name] */e$style = e.style
       return React.createElement("div", {
-        className: $_208.listItem,
+        className: Module_208.listItem,
         key: e$index,
         style: e$style
       }, React.createElement("div", {
-        className: $_208.column1
-      }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.k, {
+        className: Module_208.column1
+      }, React.createElement(Src_shared_ui_components_index.k, {
         type: "text",
         isTrimmed: true,
-        className: Classnames($_208.listInput, "HTTP_HEADER_KEY_VALUE_INPUT_SERIAL_" + 2 * e$index),
+        className: Classnames(Module_208.listInput, "HTTP_HEADER_KEY_VALUE_INPUT_SERIAL_" + 2 * e$index),
         maxLength: 100,
         onClick: O,
         defaultValue: i[e$index].key,
@@ -146,10 +146,10 @@ var ow = memo(function (e) {
         onBlur: C.bind(null, e$index),
         dependency: i[e$index].key
       })), React.createElement("div", {
-        className: $_208.column2
-      }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.k, {
+        className: Module_208.column2
+      }, React.createElement(Src_shared_ui_components_index.k, {
         type: "text",
-        className: Classnames($_208.listInput, "HTTP_HEADER_KEY_VALUE_INPUT_SERIAL_" + (2 * e$index + 1)),
+        className: Classnames(Module_208.listInput, "HTTP_HEADER_KEY_VALUE_INPUT_SERIAL_" + (2 * e$index + 1)),
         maxLength: 3e3,
         isTrimmed: true,
         onClick: O,
@@ -158,9 +158,9 @@ var ow = memo(function (e) {
         onBlur: T.bind(null, e$index),
         dependency: i[e$index].value
       })), React.createElement("div", {
-        className: Classnames($_208.inputClose, $_208.column3),
+        className: Classnames(Module_208.inputClose, Module_208.column3),
         onClick: A.bind(null, e$index)
-      }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+      }, React.createElement(Src_shared_ui_components_index.j, {
         type: "icon-close"
       })))
     },
@@ -168,9 +168,9 @@ var ow = memo(function (e) {
     itemSize: 44,
     className: "VirtualList"
   }))), React.createElement("div", {
-    className: $_208.addBtnBox
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
-    className: $_208.addBtn,
+    className: Module_208.addBtnBox
+  }, React.createElement(Src_shared_ui_components_index.d, {
+    className: Module_208.addBtn,
     onClick: function () {
       u.push({
         key: "",
@@ -180,7 +180,7 @@ var ow = memo(function (e) {
       _(u.length - 1)
       E(u.length - 1)
     }
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-add"
   }))))
 })
@@ -190,18 +190,18 @@ var iw = memo(function (e) {
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var i = e$getValue(n)
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var s = useRef(-1)
   var c = useState([])
-  var l = $_10_index.a(c, 2)
+  var l = Module_10.a(c, 2)
   var u = l[0]
   var d = l[1]
   var p = useState(-1)
-  var m = $_10_index.a(p, 2)
+  var m = Module_10.a(p, 2)
   var g = m[0]
   var _ = m[1]
   var v = useState(0)
-  var b = $_10_index.a(v, 2)
+  var b = Module_10.a(v, 2)
   var y = b[0]
   var E = b[1]
   function O(e) {
@@ -233,31 +233,31 @@ var iw = memo(function (e) {
     var t = document.querySelector(".".concat("HTTP_PARAM_KEY_VALUE_INPUT_SERIAL_" + e, " input"))
     if (t instanceof HTMLInputElement) {
       s.current = e
-      $_807.a(t, false)
+      Module_807.a(t, false)
     }
   }, [g])
   return React.createElement("div", {
-    className: Classnames($_208.formItemWrapper, $_208.httpParams)
+    className: Classnames(Module_208.formItemWrapper, Module_208.httpParams)
   }, React.createElement("div", {
-    className: $_208.title
-  }, React.createElement("div", null, $_710$a$formatMessage({
+    className: Module_208.title
+  }, React.createElement("div", null, Module_710$a$formatMessage({
     id: "HttpClientWidget.params"
   }))), React.createElement("div", {
-    className: $_208.list
+    className: Module_208.list
   }, React.createElement("div", {
-    className: $_208.listHeader
+    className: Module_208.listHeader
   }, React.createElement("div", {
-    className: $_208.column1
-  }, $_710$a$formatMessage({
+    className: Module_208.column1
+  }, Module_710$a$formatMessage({
     id: "key"
   })), React.createElement("div", {
-    className: $_208.column2
-  }, $_710$a$formatMessage({
+    className: Module_208.column2
+  }, Module_710$a$formatMessage({
     id: "value"
   })), React.createElement("div", {
-    className: $_208.column3
+    className: Module_208.column3
   })), React.createElement("div", {
-    className: $_208.itemWrapper,
+    className: Module_208.itemWrapper,
     onKeyDown: function (e) {
       var /* [auto-meaningful-name] */e$target = e.target
       var /* [auto-meaningful-name] */s$current = s.current
@@ -285,12 +285,12 @@ var iw = memo(function (e) {
           var a = document.querySelector(".".concat("HTTP_PARAM_KEY_VALUE_INPUT_SERIAL_" + o, " input"))
           if (a && a instanceof HTMLInputElement) {
             s.current = o
-            $_807.a(a, i)
+            Module_807.a(a, i)
           }
         }
       }
     }
-  }, i && i.length > 0 && React.createElement($_557.a, {
+  }, i && i.length > 0 && React.createElement(Module_557.a, {
     width: "auto",
     height: 44 * (i.length > 5 ? 5 : i.length),
     itemCount: i.length,
@@ -298,15 +298,15 @@ var iw = memo(function (e) {
       var /* [auto-meaningful-name] */e$index = e.index
       var /* [auto-meaningful-name] */e$style = e.style
       return React.createElement("div", {
-        className: $_208.listItem,
+        className: Module_208.listItem,
         key: e$index,
         style: e$style
       }, React.createElement("div", {
-        className: $_208.column1
-      }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.k, {
+        className: Module_208.column1
+      }, React.createElement(Src_shared_ui_components_index.k, {
         type: "text",
         isTrimmed: true,
-        className: Classnames($_208.listInput, "HTTP_PARAM_KEY_VALUE_INPUT_SERIAL_" + 2 * e$index),
+        className: Classnames(Module_208.listInput, "HTTP_PARAM_KEY_VALUE_INPUT_SERIAL_" + 2 * e$index),
         maxLength: 100,
         onClick: O,
         defaultValue: i[e$index].key,
@@ -314,10 +314,10 @@ var iw = memo(function (e) {
         onBlur: C.bind(null, e$index),
         dependency: i[e$index].key
       })), React.createElement("div", {
-        className: $_208.column2
-      }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.k, {
+        className: Module_208.column2
+      }, React.createElement(Src_shared_ui_components_index.k, {
         type: "text",
-        className: Classnames($_208.listInput, "HTTP_PARAM_KEY_VALUE_INPUT_SERIAL_" + (2 * e$index + 1)),
+        className: Classnames(Module_208.listInput, "HTTP_PARAM_KEY_VALUE_INPUT_SERIAL_" + (2 * e$index + 1)),
         maxLength: 3e3,
         isTrimmed: true,
         onClick: O,
@@ -326,9 +326,9 @@ var iw = memo(function (e) {
         onBlur: T.bind(null, e$index),
         dependency: i[e$index].value
       })), React.createElement("div", {
-        className: Classnames($_208.inputClose, $_208.column3),
+        className: Classnames(Module_208.inputClose, Module_208.column3),
         onClick: A.bind(null, e$index)
-      }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+      }, React.createElement(Src_shared_ui_components_index.j, {
         type: "icon-close"
       })))
     },
@@ -336,9 +336,9 @@ var iw = memo(function (e) {
     itemSize: 44,
     className: "VirtualList"
   }))), React.createElement("div", {
-    className: $_208.addBtnBox
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
-    className: $_208.addBtn,
+    className: Module_208.addBtnBox
+  }, React.createElement(Src_shared_ui_components_index.d, {
+    className: Module_208.addBtn,
     onClick: function () {
       u.push({
         key: "",
@@ -348,7 +348,7 @@ var iw = memo(function (e) {
       _(u.length - 1)
       E(u.length - 1)
     }
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-add"
   }))))
 })

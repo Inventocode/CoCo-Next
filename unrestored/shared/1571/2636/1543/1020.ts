@@ -6,10 +6,10 @@
 
 "use strict"
 
-import { forwardRef, useRef, useImperativeHandle, useEffect } from "react"
-import * as /* [auto-meaningful-name] */ReactDom from "react-dom"
-import /* [auto-meaningful-name] */ReactDom1 from "react-dom"
-import * as /* [auto-meaningful-name] */$_378 from "./378"
+import { forwardRef, useRef, useImperativeHandle, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */ReactDom from /* 80 */"react-dom"
+import /* [auto-meaningful-name] */ReactDom1 from /* 80 */"react-dom"
+import * as /* [auto-meaningful-name] */Module_378 from /* 378 */"./378"
 var s = forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$didUpdate = e.didUpdate
   var /* [auto-meaningful-name] */e$getContainer = e.getContainer
@@ -19,7 +19,7 @@ var s = forwardRef(function (e, t) {
     return {}
   })
   var u = useRef(false)
-  if (!u.current && $_378.a()) {
+  if (!u.current && Module_378.a()) {
     c.current = e$getContainer()
     u.current = true
   }

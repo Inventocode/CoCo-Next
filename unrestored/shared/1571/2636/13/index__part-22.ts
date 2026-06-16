@@ -6,4 +6,4 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_322 from "../322"
+import * as /* [auto-meaningful-name] */Module_322 from /* 322 */"../322"

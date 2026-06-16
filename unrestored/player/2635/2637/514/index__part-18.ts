@@ -6,23 +6,23 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_20_index from "../../../../shared/1571/2636/20/index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_738_70 from "../../../../shared/1571/2636/738/70"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_37_219_index from "../../../../shared/1571/2636/37/219/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_48_72 from "../../../../shared/1571/2636/48/72"
-import { useDispatch, useSelector } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { memo, useState, useEffect } from "react"
+import * as /* [auto-meaningful-name] */Module_20 from /* 20 */"../../../../shared/1571/2636/20/index"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_70 from /* 70 */"../../../../shared/1571/2636/738/70"
+import * as /* [auto-meaningful-name] */Module_219 from /* 219 */"../../../../shared/1571/2636/37/219/index"
+import * as /* [auto-meaningful-name] */Module_72 from /* 72 */"../../../../shared/1571/2636/48/72"
+import { useDispatch, useSelector } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo, useState, useEffect } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_10_index from "../../../../shared/1571/2636/10/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_externalModule from "../../../../../src/shared/widget/custom/external-module"
-import "./1187"
-import "./1188"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_2681_index from "../../../../shared/1571/2636/2681/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_components_index from "../../../../../src/shared/ui/components/index"
-import * as me from "./71"
-import be from "./71"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../../../../shared/1571/2636/10/index"
+import * as /* [auto-meaningful-name] */Src_shared_widget_custom_externalModule from /* 347 */"../../../../../src/shared/widget/custom/external-module"
+import /* 1187 */"./1187"
+import /* 1188 */"./1188"
+import * as /* [auto-meaningful-name] */Module_2681 from /* 2681 */"../../../../shared/1571/2636/2681/index"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */Module_71 from /* 71 */"./71"
+import /* [auto-meaningful-name] */Module_711 from /* 71 */"./71"
 var ge = [
   {
     number: 1,
@@ -68,7 +68,7 @@ var ve = memo(function () {
     return t.emulatorPhoneInfo
   })
   var n = useState("")
-  var r = $$_$$_$$_$$_shared_1571_2636_10_index.a(n, 2)
+  var r = Module_10.a(n, 2)
   var i = r[0]
   var o = r[1]
   useEffect(function () {
@@ -78,59 +78,59 @@ var ve = memo(function () {
     o(i + "" + t)
   }
   return React.createElement("div", {
-    className: Classnames(be.dialerBox, !e.dialPageVisible && be.dialerBoxHide)
+    className: Classnames(Module_711.dialerBox, !e.dialPageVisible && Module_711.dialerBoxHide)
   }, React.createElement("div", {
-    className: be.backBox,
+    className: Module_711.backBox,
     onClick: function () {
-      t($$_$$_$$_$$_shared_1571_2636_48_72.s({
+      t(Module_72.s({
         dialPageVisible: false
       }))
     }
-  }, React.createElement($$_$$_$$_$$_$$_src_shared_ui_components_index.j, {
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-phone-nav-back"
   })), React.createElement("div", {
-    className: be.dialNumber
+    className: Module_711.dialNumber
   }, i), React.createElement("div", {
-    className: be.numberBox
+    className: Module_711.numberBox
   }, ge.map(function (t) {
     return React.createElement("div", {
       key: t.number,
-      className: Classnames(be.keyItem, be.numberKey),
+      className: Classnames(Module_711.keyItem, Module_711.numberKey),
       onClick: a.bind(null, t.number)
     }, React.createElement("div", {
-      className: be.number
+      className: Module_711.number
     }, t.number), React.createElement("div", {
-      className: be.letter
+      className: Module_711.letter
     }, t.letter))
   }), React.createElement("div", {
-    className: Classnames(be.keyItem, be.white)
+    className: Classnames(Module_711.keyItem, Module_711.white)
   }), React.createElement("div", {
-    className: Classnames(be.keyItem, be.callBtn),
+    className: Classnames(Module_711.keyItem, Module_711.callBtn),
     onClick: function () {
       if (i) {
-        t($$_$$_$$_$$_shared_1571_2636_48_72.s({
+        t(Module_72.s({
           dialPageVisible: false,
           callingPageVisible: true,
           callType: "dialOutCall",
           phoneNumber: i,
-          callStatus: $$_$$_$$_$$_shared_1571_2636_738_70.b.RINGING
+          callStatus: Module_70.b.RINGING
         }))
-        $$_$$_$$_$$_shared_1571_2636_20_index.emitWidgetEvent($$_$$_$$_$$_shared_1571_2636_738_70.c, "onPhoneCallStart", e.phoneDialWidgetId)
-        $$_$$_$$_$$_shared_1571_2636_37_219_index.b({
+        Module_20.emitWidgetEvent(Module_70.c, "onPhoneCallStart", e.phoneDialWidgetId)
+        Module_219.b({
           phoneCallInfo: {
             callType: "dialOutCall",
             dialOutPhoneNumber: i,
-            callStatus: $$_$$_$$_$$_shared_1571_2636_738_70.b.RINGING
+            callStatus: Module_70.b.RINGING
           }
         })
       }
     }
-  }, React.createElement($$_$$_$$_$$_$$_src_shared_ui_components_index.j, {
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-phone-call-dial"
   })), React.createElement("div", {
-    className: Classnames(be.keyItem, be.white)
+    className: Classnames(Module_711.keyItem, Module_711.white)
   }, React.createElement("div", {
-    className: be.deleteBtn,
+    className: Module_711.deleteBtn,
     onClick: function () {
       if (i) {
         o(i.substr(0, i.length - 1))

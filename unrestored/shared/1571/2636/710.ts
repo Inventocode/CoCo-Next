@@ -7,12 +7,12 @@
 "use strict"
 
 export { a }
-import { useContext } from "react"
-import * as /* [auto-meaningful-name] */$_2681_1009_index from "./2681/1009/index"
-import * as /* [auto-meaningful-name] */$_2681_273 from "./2681/273"
+import { useContext } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_1009 from /* 1009 */"./2681/1009/index"
+import * as /* [auto-meaningful-name] */Module_273 from /* 273 */"./2681/273"
 function a() {
-  var e = useContext($_2681_1009_index.a)
-  $_2681_273.g(e)
+  var e = useContext(Module_1009.a)
+  Module_273.g(e)
   return e
 }
 export default a

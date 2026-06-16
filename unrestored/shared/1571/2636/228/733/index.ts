@@ -10,14 +10,14 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.register_default_procedure_events = undefined
-var r = require("tslib")
-var i = require("../../1058/125")
-var o = (0, r.__importStar)(require("../../17/536"))
-var a = require("../../207/734/387")
-var s = require("../../1022/214")
-var c = require("../../1058/173")
-var u = require("../../1058/762")
-var l = require("./1346")
+var r = require(/* 93 */"tslib")
+var i = require(/* 125 */"../../1058/125")
+var o = (0, r.__importStar)(require(/* 536 */"../../17/536"))
+var a = require(/* 387 */"../../207/734/387")
+var s = require(/* 214 */"../../1022/214")
+var c = require(/* 173 */"../../1058/173")
+var u = require(/* 762 */"../../1058/762")
+var l = require(/* 1346 */"./1346")
 exports.register_default_procedure_events = function (e, t) {
   var n = (0, i.get_instance)().get(i.BINDING.events)
   var r = (0, i.get_instance)().get(i.BINDING.ChangeEvent)

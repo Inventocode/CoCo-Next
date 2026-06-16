@@ -7,29 +7,29 @@
 "use strict"
 
 var RP
-import * as /* [auto-meaningful-name] */$_238 from "./238"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import * as /* [auto-meaningful-name] */$_748_index from "./748/index"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as O from "./7"
-import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import { useSelector, useDispatch } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { memo, useState, useEffect } from "react"
+import * as /* [auto-meaningful-name] */Module_238 from /* 238 */"./238"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import * as /* [auto-meaningful-name] */Module_748 from /* 748 */"./748/index"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"./7"
+import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import { useSelector, useDispatch } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo, useState, useEffect } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_1538 from "./1538"
-import /* [auto-meaningful-name] */$_15381 from "./1538"
-import * as /* [auto-meaningful-name] */$_1539 from "./1539"
-import /* [auto-meaningful-name] */$_15391 from "./1539"
-import * as /* [auto-meaningful-name] */$_1540 from "./1540"
-import /* [auto-meaningful-name] */$_15401 from "./1540"
-import * as /* [auto-meaningful-name] */$_282 from "./282"
-import /* [auto-meaningful-name] */$_2821 from "./282"
+import * as /* [auto-meaningful-name] */Module_1538 from /* 1538 */"./1538"
+import /* [auto-meaningful-name] */Module_15381 from /* 1538 */"./1538"
+import * as /* [auto-meaningful-name] */Module_1539 from /* 1539 */"./1539"
+import /* [auto-meaningful-name] */Module_15391 from /* 1539 */"./1539"
+import * as /* [auto-meaningful-name] */Module_1540 from /* 1540 */"./1540"
+import /* [auto-meaningful-name] */Module_15401 from /* 1540 */"./1540"
+import * as /* [auto-meaningful-name] */Module_282 from /* 282 */"./282"
+import /* [auto-meaningful-name] */Module_2821 from /* 282 */"./282"
 !function (e) {
   e.TABLE_DATA = "TABLE_DATA"
   e.CLOUD_SPACE_TABLE = "CLOUD_SPACE_TABLE"
@@ -43,17 +43,17 @@ var zP = memo(function () {
   })
   var /* [auto-meaningful-name] */e$visible = e.visible
   var /* [auto-meaningful-name] */e$onConfirm = e.onConfirm
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var i = useState(RP.TABLE_DATA)
-  var a = $_10_index.a(i, 2)
+  var a = Module_10.a(i, 2)
   var s = a[0]
   var c = a[1]
   var l = useState(false)
-  var u = $_10_index.a(l, 2)
+  var u = Module_10.a(l, 2)
   var d = u[0]
   var p = u[1]
   var m = useDispatch()
-  var g = $_238.d()
+  var g = Module_238.d()
   useEffect(function () {
     if (e$visible) {
       p(false)
@@ -61,7 +61,7 @@ var zP = memo(function () {
     }
   }, [e$visible])
   var v = function () {
-    var e = O.a(RegeneratorRuntime.mark(function e() {
+    var e = Module_7.a(RegeneratorRuntime.mark(function e() {
       var /* [auto-meaningful-name] */e$sent
       return RegeneratorRuntime.wrap(function (e) {
         for (;;) {
@@ -75,7 +75,7 @@ var zP = memo(function () {
               return e.abrupt("return")
             case 3:
               e.next = 5
-              return $$_$$_$$_$$_src_editor_redux_common_actions.Nf(m, $$_$$_$$_$$_src_editor_redux_common_actions.hg((null === g || undefined === g ? undefined : g.id) || "", $$_$$_$$_$$_src_editor_widget_builtIn_types.G, {
+              return Src_editor_redux_common_actions.Nf(m, Src_editor_redux_common_actions.hg((null === g || undefined === g ? undefined : g.id) || "", Src_editor_widget_builtIn_types.G, {
                 x: 0,
                 y: 0
               }))
@@ -84,7 +84,7 @@ var zP = memo(function () {
               if (e$onConfirm) {
                 e$onConfirm(e$sent)
               }
-              m($$_$$_$$_$$_src_editor_redux_common_actions.mh())
+              m(Src_editor_redux_common_actions.mh())
             case 8:
             case "end":
               return e.stop()
@@ -101,102 +101,102 @@ var zP = memo(function () {
       c(e)
     }
   }
-  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.f, {
+  return React.createElement(Src_shared_ui_components_index.f, {
     visible: e$visible,
     withPortal: true,
     onClose: function () {
-      m($$_$$_$$_$$_src_editor_redux_common_actions.mh())
+      m(Src_editor_redux_common_actions.mh())
     }
   }, d && React.createElement(React.Fragment, null, React.createElement("div", {
-    className: $_2821.tableDataTitle
+    className: Module_2821.tableDataTitle
   }, React.createElement("div", {
     onClick: function () {
       p(false)
     }
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-arrow-down",
-    className: $_2821.backIcon
-  })), $_710$a$formatMessage({
+    className: Module_2821.backIcon
+  })), Module_710$a$formatMessage({
     id: "ListViewerWidget.createCloudTable"
   })), React.createElement("div", {
-    className: $_2821.cloudSpaceTipsContent
+    className: Module_2821.cloudSpaceTipsContent
   }, React.createElement("div", {
-    className: $_2821.imageBox
+    className: Module_2821.imageBox
   }, React.createElement("img", {
-    className: $_2821.logoImage,
-    src: $_15381,
+    className: Module_2821.logoImage,
+    src: Module_15381,
     alt: ""
   }), React.createElement("img", {
-    className: $_2821.arrowImage,
-    src: $_15391,
+    className: Module_2821.arrowImage,
+    src: Module_15391,
     alt: ""
   }), React.createElement("img", {
-    className: $_2821.logoImage,
-    src: $_15401,
+    className: Module_2821.logoImage,
+    src: Module_15401,
     alt: ""
-  })), React.createElement("div", null, $_710$a$formatMessage({
+  })), React.createElement("div", null, Module_710$a$formatMessage({
     id: "ListViewerWidget.toCloudSpaceDomainTips"
   }))), React.createElement("div", {
-    className: Classnames($_2821.confirmBox, $_2821.cloudSpaceConfirm)
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
+    className: Classnames(Module_2821.confirmBox, Module_2821.cloudSpaceConfirm)
+  }, React.createElement(Src_shared_ui_components_index.d, {
     onClick: function () {
-      window.open("".concat($$_$$_$$_$$_src_shared_tools_index.A(), "/dashboard/?createType=Table"), "_blank")
-      m($$_$$_$$_$$_src_editor_redux_common_actions.mh())
+      window.open("".concat(Src_shared_tools_index.A(), "/dashboard/?createType=Table"), "_blank")
+      m(Src_editor_redux_common_actions.mh())
     },
     type: "primary"
-  }, $_710$a$formatMessage({
+  }, Module_710$a$formatMessage({
     id: "ListViewerWidget.toCloudSpaceDomain"
   })))), !d && React.createElement(React.Fragment, null, React.createElement("p", {
-    className: $_2821.tableDataTitle
-  }, $_710$a$formatMessage({
+    className: Module_2821.tableDataTitle
+  }, Module_710$a$formatMessage({
     id: "ListViewerWidget.createDataSource"
   })), React.createElement("div", {
-    className: $_2821.tableDataList
+    className: Module_2821.tableDataList
   }, React.createElement("div", {
     onClick: b.bind(null, RP.TABLE_DATA),
-    className: Classnames($_2821.tableDataItem, $_2821.yellow, RP.TABLE_DATA === s && $_2821.active)
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+    className: Classnames(Module_2821.tableDataItem, Module_2821.yellow, RP.TABLE_DATA === s && Module_2821.active)
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-source-table-data",
-    className: $_2821.icon
+    className: Module_2821.icon
   }), React.createElement("div", {
-    className: $_2821.name
-  }, $_710$a$formatMessage({
+    className: Module_2821.name
+  }, Module_710$a$formatMessage({
     id: "ListViewerWidget.tableData"
   })), React.createElement("div", {
-    className: $_2821.desc
-  }, $_710$a$formatMessage({
+    className: Module_2821.desc
+  }, Module_710$a$formatMessage({
     id: "ListViewerWidget.tableDataDesc"
   }))), React.createElement("div", {
     onClick: b.bind(null, RP.CLOUD_SPACE_TABLE),
-    className: Classnames($_2821.tableDataItem, t ? $_2821.blue : $_2821.disable, RP.CLOUD_SPACE_TABLE === s && $_2821.active)
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+    className: Classnames(Module_2821.tableDataItem, t ? Module_2821.blue : Module_2821.disable, RP.CLOUD_SPACE_TABLE === s && Module_2821.active)
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-source-cloud-data",
-    className: $_2821.icon
+    className: Module_2821.icon
   }), t ? React.createElement("div", {
-    className: $_2821.name
-  }, $_710$a$formatMessage({
+    className: Module_2821.name
+  }, Module_710$a$formatMessage({
     id: "ListViewerWidget.cloudTable"
-  })) : React.createElement($_748_index.a, {
+  })) : React.createElement(Module_748.a, {
     placement: "bottom",
-    title: $_710$a$formatMessage({
+    title: Module_710$a$formatMessage({
       id: "ListViewerWidget.cloudTableOtTips"
     })
   }, React.createElement("div", {
-    className: $_2821.name
-  }, $_710$a$formatMessage({
+    className: Module_2821.name
+  }, Module_710$a$formatMessage({
     id: "ListViewerWidget.cloudTable"
-  }), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+  }), React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-locked"
   }))), React.createElement("div", {
-    className: $_2821.desc
-  }, $_710$a$formatMessage({
+    className: Module_2821.desc
+  }, Module_710$a$formatMessage({
     id: "ListViewerWidget.cloudTableDesc"
   })))), React.createElement("div", {
-    className: $_2821.confirmBox
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
+    className: Module_2821.confirmBox
+  }, React.createElement(Src_shared_ui_components_index.d, {
     onClick: v,
     type: "primary"
-  }, $_710$a$formatMessage({
+  }, Module_710$a$formatMessage({
     id: "confirm"
   })))))
 })

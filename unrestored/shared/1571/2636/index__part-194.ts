@@ -9,36 +9,36 @@
 import { aN } from "./index__part-191"
 import { ID, uM, mM } from "./index__part-192"
 import { yM } from "./index__part-193"
-import /* [auto-meaningful-name] */$_137 from "./137"
-import * as /* [auto-meaningful-name] */$_796_index from "./796/index"
-import /* [auto-meaningful-name] */$_1039 from "./1039"
-import * as ng from "./64"
-import * as /* [auto-meaningful-name] */$_144 from "./144"
-import * as /* [auto-meaningful-name] */Lodash from "lodash"
-import * as Tn from "./68"
-import * as /* [auto-meaningful-name] */$_47_index from "./47/index"
-import * as /* [auto-meaningful-name] */$_133 from "./133"
-import * as Et from "./9"
-import * as /* [auto-meaningful-name] */$_26_index from "./26/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import * as D from "./6"
-import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as O from "./7"
-import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import { useDispatch, useSelector } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { memo, useState, useRef, useEffect, useCallback } from "react"
+import /* [auto-meaningful-name] */Module_137 from /* 137 */"./137"
+import * as /* [auto-meaningful-name] */Module_796 from /* 796 */"./796/index"
+import /* [auto-meaningful-name] */Module_1039 from /* 1039 */"./1039"
+import * as /* [auto-meaningful-name] */Module_64 from /* 64 */"./64"
+import * as /* [auto-meaningful-name] */Module_144 from /* 144 */"./144"
+import * as /* [auto-meaningful-name] */Lodash from /* 30 */"lodash"
+import * as /* [auto-meaningful-name] */Module_68 from /* 68 */"./68"
+import * as /* [auto-meaningful-name] */Module_47 from /* 47 */"./47/index"
+import * as /* [auto-meaningful-name] */Module_133 from /* 133 */"./133"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"./9"
+import * as /* [auto-meaningful-name] */Module_26 from /* 26 */"./26/index"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"./6"
+import * as /* [auto-meaningful-name] */Module_25 from /* 25 */"./25/index"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"./7"
+import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import { useDispatch, useSelector } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo, useState, useRef, useEffect, useCallback } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_1208_index from "./1208/index"
+import * as /* [auto-meaningful-name] */Module_1208 from /* 1208 */"./1208/index"
 function OM(e) {
   return wM.apply(this, arguments)
 }
 function wM() {
-  return (wM = O.a(RegeneratorRuntime.mark(function e(t) {
+  return (wM = Module_7.a(RegeneratorRuntime.mark(function e(t) {
     var n
     return RegeneratorRuntime.wrap(function (e) {
       for (;;) {
@@ -77,11 +77,11 @@ function wM() {
                       return e$sent.arrayBuffer()
                     case 10:
                       e$sent1 = e.sent
-                      l = $_1208_index.parseGIF(e$sent1)
-                      u = $_1208_index.decompressFrames(l, true)
+                      l = Module_1208.parseGIF(e$sent1)
+                      u = Module_1208.decompressFrames(l, true)
                       i.width = u[0].dims.width
                       i.height = u[0].dims.height
-                      p = $_47_index.a(u)
+                      p = Module_47.a(u)
                       try {
                         for (p.s(); !(f = p.n()).done;) {
                           if ((f$value = f.value).disposalType >= 2) {
@@ -145,7 +145,7 @@ function CM(e, t) {
   var r = []
   e.forEach(function (e, o) {
     if (e) {
-      r.push(new File([e], Et.z(t + "-" + (o + 1) + ".png"), {
+      r.push(new File([e], Module_9.z(t + "-" + (o + 1) + ".png"), {
         type: n
       }))
     }
@@ -172,14 +172,14 @@ var SM = memo(function (e) {
   var /* [auto-meaningful-name] */e$actionInterval = e.actionInterval
   var /* [auto-meaningful-name] */e$onIntervalChange = e.onIntervalChange
   var /* [auto-meaningful-name] */e$setEditingStyleId = e.setEditingStyleId
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var c = useState(e$actionInterval.toString() || "200")
-  var l = $_10_index.a(c, 2)
+  var l = Module_10.a(c, 2)
   var u = l[0]
   var d = l[1]
   var p = useRef(200)
   var m = useState(false)
-  var g = $_10_index.a(m, 2)
+  var g = Module_10.a(m, 2)
   var _ = g[0]
   var v = g[1]
   useEffect(function () {
@@ -191,9 +191,9 @@ var SM = memo(function (e) {
     }
   }, [u])
   return React.createElement("div", {
-    className: $_137.playerContainer
+    className: Module_137.playerContainer
   }, React.createElement("div", {
-    className: Classnames($_137.playButton, !e$styleList.length && $_137.disabled),
+    className: Classnames(Module_137.playButton, !e$styleList.length && Module_137.disabled),
     onClick: function () {
       var /* [auto-meaningful-name] */e$styleList$length = e$styleList.length
       if (e$styleList$length) {
@@ -211,7 +211,7 @@ var SM = memo(function (e) {
           }, t)
           document.addEventListener("mousedown", function (e) {
             clearInterval(i)
-            if (!(e.target instanceof Element && e.target.closest("." + $_137.playButton))) {
+            if (!(e.target instanceof Element && e.target.closest("." + Module_137.playButton))) {
               v(false)
             }
           }, {
@@ -220,19 +220,19 @@ var SM = memo(function (e) {
         }
       }
     }
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: _ ? "icon-pause" : "icon-play"
   })), React.createElement("div", {
-    className: $_137.intervalContainer
-  }, React.createElement("label", null, $_710$a$formatMessage({
+    className: Module_137.intervalContainer
+  }, React.createElement("label", null, Module_710$a$formatMessage({
     id: "actor.interval"
   })), React.createElement("input", {
     type: "number",
     value: u,
     onChange: function (e) {
       var /* [auto-meaningful-name] */e$target = e.target
-      if (Number(e$target.value) > $_144.b) {
-        d($_144.b.toString())
+      if (Number(e$target.value) > Module_144.b) {
+        d(Module_144.b.toString())
       } else {
         d(e$target.value)
       }
@@ -244,22 +244,22 @@ var SM = memo(function (e) {
         n = p.current
       }
       p.current = n
-      d(Math.max($_144.d, Math.min(n, $_144.b)).toFixed())
+      d(Math.max(Module_144.d, Math.min(n, Module_144.b)).toFixed())
     }
   }), React.createElement("span", {
-    className: $_137.tips
-  }, u, "ms"), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.g, {
-    className: $_137.dropdown,
-    overlay: React.createElement($$_$$_$$_$$_src_shared_ui_components_index.l, {
+    className: Module_137.tips
+  }, u, "ms"), React.createElement(Src_shared_ui_components_index.g, {
+    className: Module_137.dropdown,
+    overlay: React.createElement(Src_shared_ui_components_index.l, {
       onClick: function (e) {
         d(e)
       }
     }, [100, 200, 500, 1e3].map(function (e) {
-      return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.m, {
+      return React.createElement(Src_shared_ui_components_index.m, {
         key: e,
         value: e.toString()
       }, React.createElement("div", {
-        className: Classnames(u === e.toString() && $_137.selected)
+        className: Classnames(u === e.toString() && Module_137.selected)
       }, e, "ms"))
     }))
   })))
@@ -295,7 +295,7 @@ function IM(e) {
   useEffect(function () {
     var e = document.getElementById("THE_STYLE_LIST")
     if (e instanceof HTMLUListElement) {
-      var t = e.querySelector("." + $_137.selected)
+      var t = e.querySelector("." + Module_137.selected)
       if (t instanceof HTMLLIElement) {
         var n = t.offsetLeft - e.offsetLeft
         if (n < e.scrollLeft) {
@@ -312,19 +312,19 @@ function IM(e) {
     var e = document.getElementById("THE_STYLE_LIST")
     if (e instanceof HTMLUListElement) {
       if (0 === e.scrollLeft) {
-        e.classList.remove($_137.leftScrollable)
+        e.classList.remove(Module_137.leftScrollable)
         if (e.scrollLeft < e.scrollWidth) {
-          e.classList.add($_137.rightScrollable)
+          e.classList.add(Module_137.rightScrollable)
         }
       } else {
         if (e.scrollLeft === e.scrollWidth - e.offsetWidth) {
-          e.classList.remove($_137.rightScrollable)
+          e.classList.remove(Module_137.rightScrollable)
           if (e.scrollLeft > 0) {
-            e.classList.add($_137.leftScrollable)
+            e.classList.add(Module_137.leftScrollable)
           }
         } else {
-          e.classList.add($_137.rightScrollable)
-          e.classList.add($_137.leftScrollable)
+          e.classList.add(Module_137.rightScrollable)
+          e.classList.add(Module_137.leftScrollable)
         }
       }
     }
@@ -333,7 +333,7 @@ function IM(e) {
     onDragEnd: function (e) {
       var n = document.querySelector("li." + e.draggableId)
       if (n instanceof HTMLLIElement) {
-        n.classList.remove($_137.hovering)
+        n.classList.remove(Module_137.hovering)
       }
       var /* [auto-meaningful-name] */e$source = e.source
       var /* [auto-meaningful-name] */e$destination = e.destination
@@ -351,7 +351,7 @@ function IM(e) {
     onBeforeDragStart: function (e) {
       var t = document.querySelector("li." + e.draggableId)
       if (t instanceof HTMLLIElement) {
-        t.classList.add($_137.hovering)
+        t.classList.add(Module_137.hovering)
       }
       c()
     }
@@ -362,12 +362,12 @@ function IM(e) {
   }, function (e) {
     return React.createElement("ul", Object.assign({
       id: "THE_STYLE_LIST",
-      className: $_137.styleList,
+      className: Module_137.styleList,
       onScroll: l,
       ref: e.innerRef
     }, e.droppableProps), e$styleList.map(function (e, t) {
       return function (e, t) {
-        var a = Et.mb(e.source) || ""
+        var a = Module_9.mb(e.source) || ""
         if (!a) {
           console.warn("renderStyleItem imageUrl error")
         }
@@ -391,30 +391,30 @@ function IM(e) {
           return React.createElement("li", Object.assign({
             ref: c$innerRef,
             key: e.id,
-            className: Classnames($_137.styleItem, e.id, e$editingStyleId === e.id && $_137.selected),
+            className: Classnames(Module_137.styleItem, e.id, e$editingStyleId === e.id && Module_137.selected),
             onClick: function () {
               e$setEditingStyleId(e.id)
             }
           }, c$draggableProps, c$dragHandleProps), React.createElement("div", {
-            className: $_137.deleteStyle,
+            className: Module_137.deleteStyle,
             onClick: function (e) {
               e$deleteStyle(e, t)
             }
-          }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+          }, React.createElement(Src_shared_ui_components_index.j, {
             type: "icon-close-bold"
           })), React.createElement("div", {
-            className: $_137.copyStyle,
+            className: Module_137.copyStyle,
             onClick: function (e) {
               e$copyStyle(e, t)
             }
-          }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+          }, React.createElement(Src_shared_ui_components_index.j, {
             type: "icon-copy"
           })), React.createElement("img", {
-            className: $_137.image,
-            src: a || $_1039,
+            className: Module_137.image,
+            src: a || Module_1039,
             alt: ""
           }), React.createElement("span", {
-            className: $_137.seq
+            className: Module_137.seq
           }, t + 1))
         })
       }(e, t)
@@ -441,11 +441,11 @@ function RM(e) {
 var kM = memo(function () {
   var e
   var t = useDispatch()
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var r = useRef(true)
   var o = useRef(undefined)
   var i = useState(false)
-  var a = $_10_index.a(i, 2)
+  var a = Module_10.a(i, 2)
   var s = a[0]
   var c = a[1]
   var l = useSelector(function (e) {
@@ -454,27 +454,27 @@ var kM = memo(function () {
   var u = useSelector(function (e) {
     return e.project.styleDialog.onSelect
   })
-  var /* [auto-meaningful-name] */Et$BbL$attributes = Et.Bb(l).attributes
-  var /* [auto-meaningful-name] */Et$BbL$attributes$selectedStyleId = Et$BbL$attributes.selectedStyleId
-  var /* [auto-meaningful-name] */Et$BbL$attributes$actionList = Et$BbL$attributes.actionList
-  var g = useState(Et$BbL$attributes$selectedStyleId)
-  var v = $_10_index.a(g, 2)
+  var /* [auto-meaningful-name] */Module_9$BbL$attributes = Module_9.Bb(l).attributes
+  var /* [auto-meaningful-name] */Module_9$BbL$attributes$selectedStyleId = Module_9$BbL$attributes.selectedStyleId
+  var /* [auto-meaningful-name] */Module_9$BbL$attributes$actionList = Module_9$BbL$attributes.actionList
+  var g = useState(Module_9$BbL$attributes$selectedStyleId)
+  var v = Module_10.a(g, 2)
   var b = v[0]
   var y = v[1]
-  var w = useState(Lodash.cloneDeep(Et$BbL$attributes$actionList))
-  var C = $_10_index.a(w, 2)
+  var w = useState(Lodash.cloneDeep(Module_9$BbL$attributes$actionList))
+  var C = Module_10.a(w, 2)
   var T = C[0]
   var A = C[1]
   var j = null === (e = T[0]) || undefined === e ? undefined : e.id
   var N = useState(j)
-  var R = $_10_index.a(N, 2)
+  var R = Module_10.a(N, 2)
   var k = R[0]
   var M = R[1]
   var L = T.find(function (e) {
     return e.id === k
   })
   var P = useState(undefined)
-  var B = $_10_index.a(P, 2)
+  var B = Module_10.a(P, 2)
   var F = B[0]
   var G = B[1]
   var W = (null === L || undefined === L ? undefined : L.styleList) || []
@@ -506,24 +506,24 @@ var kM = memo(function () {
   var K = W.find(function (e) {
     return e.id === F
   })
-  var q = Et.mb((null === K || undefined === K ? undefined : K.source) || "")
-  var X = Et.hb((null === K || undefined === K ? undefined : K.source) || "")
+  var q = Module_9.mb((null === K || undefined === K ? undefined : K.source) || "")
+  var X = Module_9.hb((null === K || undefined === K ? undefined : K.source) || "")
   var Q = function (e) {
     e.forEach(function (t, n) {
-      var r = ng.a("STYLE")
+      var r = Module_64.a("STYLE")
       var o = {
         id: r,
         source: t.id,
         cdnUrl: t.cdnUrl
       }
       if (L && (L.styleList.push(o), n === e.length - 1)) {
-        var i = $_25_index.a(T)
+        var i = Module_25.a(T)
         A(i)
         G(r)
         setTimeout(function () {
           var /* [auto-meaningful-name] */V$current
           var t
-          if (!(null === (V$current = V.current) || undefined === V$current || null === (t = V$current.querySelector("." + $_137.styleList)) || undefined === t)) {
+          if (!(null === (V$current = V.current) || undefined === V$current || null === (t = V$current.querySelector("." + Module_137.styleList)) || undefined === t)) {
             t.scrollBy({
               left: 1e4,
               behavior: "smooth"
@@ -538,7 +538,7 @@ var kM = memo(function () {
       var a = setTimeout(function () {
         i(new Error("UploadFile time out."))
       }, 10 * e.length * 1e3)
-      t($$_$$_$$_$$_src_editor_redux_common_actions.Zf(e, function (e) {
+      t(Src_editor_redux_common_actions.Zf(e, function (e) {
         e[0].groupId = n
         e[0].groupImageIndex = r
         Q(e)
@@ -551,7 +551,7 @@ var kM = memo(function () {
     return $.apply(this, arguments)
   }
   function $() {
-    return ($ = O.a(RegeneratorRuntime.mark(function e(t) {
+    return ($ = Module_7.a(RegeneratorRuntime.mark(function e(t) {
       var n
       var o
       var /* [auto-meaningful-name] */o$value
@@ -569,7 +569,7 @@ var kM = memo(function () {
         for (;;) {
           switch (e.prev = e.next) {
             case 0:
-              n = $_47_index.a(t)
+              n = Module_47.a(t)
               e.prev = 1
               n.s()
             case 3:
@@ -584,7 +584,7 @@ var kM = memo(function () {
               e$sent = e.sent
               s = CM(e$sent, o$value.name)
               c = []
-              l = $_47_index.a(TM(s, 1).entries())
+              l = Module_47.a(TM(s, 1).entries())
               e.prev = 11
               l.s()
             case 13:
@@ -592,7 +592,7 @@ var kM = memo(function () {
                 e.next = 31
                 break
               }
-              if (d = $_10_index.a(u.value, 2), p = d[0], f = d[1], false !== r.current) {
+              if (d = Module_10.a(u.value, 2), p = d[0], f = d[1], false !== r.current) {
                 e.next = 17
                 break
               }
@@ -611,10 +611,10 @@ var kM = memo(function () {
                 extension: "",
                 urls: c
               }
-              if (Et.hb(o$value.name)) {
-                Et.bc(o$value.name, m.cdnUrl)
+              if (Module_9.hb(o$value.name)) {
+                Module_9.bc(o$value.name, m.cdnUrl)
               } else {
-                Et.Tb(m)
+                Module_9.Tb(m)
               }
               e.next = 29
               break
@@ -672,11 +672,11 @@ var kM = memo(function () {
       }
     })
     Q(n)
-    t($$_$$_$$_$$_src_editor_redux_common_actions.sh())
+    t(Src_editor_redux_common_actions.sh())
     J(r)
   }
   var te = function () {
-    var e = O.a(RegeneratorRuntime.mark(function e() {
+    var e = Module_7.a(RegeneratorRuntime.mark(function e() {
       var n
       var r
       return RegeneratorRuntime.wrap(function (e) {
@@ -689,13 +689,13 @@ var kM = memo(function () {
                   n = r.id
                 }
               }
-              t($$_$$_$$_$$_src_editor_redux_common_actions.Lg(l, "actionList", T))
-              t($$_$$_$$_$$_src_editor_redux_common_actions.Lg(l, "selectedStyleId", n))
+              t(Src_editor_redux_common_actions.Lg(l, "actionList", T))
+              t(Src_editor_redux_common_actions.Lg(l, "selectedStyleId", n))
               if (u) {
                 u(k, F)
               }
               ne()
-              $_26_index.l()
+              Module_26.l()
             case 7:
             case "end":
               return e.stop()
@@ -708,7 +708,7 @@ var kM = memo(function () {
     }
   }()
   var ne = function () {
-    t($$_$$_$$_$$_src_editor_redux_common_actions.vh())
+    t(Src_editor_redux_common_actions.vh())
   }
   useEffect(function () {
     if (undefined === o.current) {
@@ -723,10 +723,10 @@ var kM = memo(function () {
       r.current = false
     }
   }, [])
-  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.f, {
+  return React.createElement(Src_shared_ui_components_index.f, {
     withPortal: true,
     visible: true,
-    className: $_137.container,
+    className: Module_137.container,
     onClose: function () {
       if (o.current) {
         c(true)
@@ -736,13 +736,13 @@ var kM = memo(function () {
       }
     }
   }, React.createElement("h3", {
-    className: $_137.title
-  }, $_710$a$formatMessage({
+    className: Module_137.title
+  }, Module_710$a$formatMessage({
     id: "ActorStyleDialog.dialogTitle"
   })), React.createElement("div", {
-    className: $_137.content
+    className: Module_137.content
   }, React.createElement("div", {
-    className: $_137.actionBar
+    className: Module_137.actionBar
   }, React.createElement(yM, {
     actionList: T,
     selectedActionId: k,
@@ -752,7 +752,7 @@ var kM = memo(function () {
     },
     handleActionChange: function (e, t) {
       T.splice(e, 1, t)
-      A($_25_index.a(T))
+      A(Module_25.a(T))
     },
     handleActionDelete: function (e) {
       var t = T[e]
@@ -771,34 +771,34 @@ var kM = memo(function () {
       })) {
         y(undefined)
       }
-      A($_25_index.a(T))
+      A(Module_25.a(T))
     },
     handleActionCopy: function (e) {
       var t = T.map(function (e) {
         return e.name
       })
       var n = T[e]
-      var r = D.a(D.a({}, n), {}, {
-        id: ng.a($_144.a),
-        name: Et.ac(n.name, t),
+      var r = Module_6.a(Module_6.a({}, n), {}, {
+        id: Module_64.a(Module_144.a),
+        name: Module_9.ac(n.name, t),
         styleList: n.styleList.map(function (e) {
-          return D.a(D.a({}, e), {}, {
-            id: ng.a("STYLE")
+          return Module_6.a(Module_6.a({}, e), {}, {
+            id: Module_64.a("STYLE")
           })
         })
       })
       T.splice(e + 1, 0, r)
-      A($_25_index.a(T))
+      A(Module_25.a(T))
       M(r.id)
     },
     onActionListChange: function (e) {
       A(e)
     }
   }), React.createElement("div", {
-    className: $_137.addAction,
+    className: Module_137.addAction,
     onClick: function () {
-      var e = ng.a($_144.a)
-      var t = $_710$a$formatMessage({
+      var e = Module_64.a(Module_144.a)
+      var t = Module_710$a$formatMessage({
         id: "ActorStyleDialog.actionName"
       })
       var r = T.map(function (e) {
@@ -806,62 +806,62 @@ var kM = memo(function () {
       })
       var o = {
         id: e,
-        name: Et.ac(t, r),
+        name: Module_9.ac(t, r),
         styleList: [],
         interval: 200
       }
-      A([].concat($_25_index.a(T), [o]))
+      A([].concat(Module_25.a(T), [o]))
       M(e)
       H.current = RM(e)
     }
   }, React.createElement("span", {
-    className: $_137.addActionIcon
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+    className: Module_137.addActionIcon
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-add"
-  })), React.createElement("span", null, $_710$a$formatMessage({
+  })), React.createElement("span", null, Module_710$a$formatMessage({
     id: "ActorStyleDialog.addAction"
   })))), React.createElement("div", {
-    className: $_137.main
+    className: Module_137.main
   }, React.createElement("div", {
-    className: $_137.imageEditorContainer
+    className: Module_137.imageEditorContainer
   }, React.createElement("div", {
-    className: $_137.imageDragContainer
+    className: Module_137.imageDragContainer
   }, React.createElement(aN, {
     isEmpty: !(q && X),
     onSuccess: ee,
-    className: $_137.imageDragLayout
+    className: Module_137.imageDragLayout
   }, q && X && React.createElement("div", {
-    className: $_137.imageEditor
+    className: Module_137.imageEditor
   }, React.createElement("div", {
-    className: $_137.imageContainer
+    className: Module_137.imageContainer
   }, React.createElement("img", {
     draggable: false,
     src: q,
     alt: X.id
   })), React.createElement("div", {
-    className: $_137.ctrlBtnBar
+    className: Module_137.ctrlBtnBar
   }, q ? F === b ? React.createElement("button", {
-    className: $_137.selected,
+    className: Module_137.selected,
     type: "button"
   }, React.createElement("div", {
-    className: $_137.checkbox
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+    className: Module_137.checkbox
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-style-selected",
-    className: $_137.selectedIcon
-  })), $_710$a$formatMessage({
+    className: Module_137.selectedIcon
+  })), Module_710$a$formatMessage({
     id: "ActorStyleDialog.defaultStyle"
   })) : React.createElement("button", {
     onClick: function () {
       y(F)
     }
   }, React.createElement("div", {
-    className: $_137.checkbox
-  }), $_710$a$formatMessage({
+    className: Module_137.checkbox
+  }), Module_710$a$formatMessage({
     id: "ActorStyleDialog.defaultStyle"
   })) : null))))), React.createElement("div", {
-    className: $_137.styleContainer
+    className: Module_137.styleContainer
   }, React.createElement("div", {
-    className: $_137.styleListContainer,
+    className: Module_137.styleListContainer,
     ref: V
   }, React.createElement(SM, {
     actionId: k,
@@ -874,7 +874,7 @@ var kM = memo(function () {
         return t.id === e
       })) || undefined === n ? undefined : n.interval) !== t) {
         A(T.slice(0).map(function (n) {
-          return n.id === e ? D.a(D.a({}, n), {}, {
+          return n.id === e ? Module_6.a(Module_6.a({}, n), {}, {
             interval: t
           }) : n
         }))
@@ -890,7 +890,7 @@ var kM = memo(function () {
       var n
       var r = W[t]
       W.splice(t, 1)
-      A($_25_index.a(T))
+      A(Module_25.a(T))
       if (r.id === F) {
         if (W[t]) {
           n = W[t].id
@@ -908,37 +908,37 @@ var kM = memo(function () {
     copyStyle: function (e, t) {
       e.stopPropagation()
       var n = W[t]
-      var r = D.a(D.a({}, n), {}, {
-        id: ng.a("STYLE")
+      var r = Module_6.a(Module_6.a({}, n), {}, {
+        id: Module_64.a("STYLE")
       })
       W.splice(t + 1, 0, r)
-      A($_25_index.a(T))
+      A(Module_25.a(T))
       G(r.id)
     },
     onStyleListChange: function (e, t) {
       var n = t || F
       A(T.map(function (t) {
-        return t.id === k ? D.a(D.a({}, t), {}, {
+        return t.id === k ? Module_6.a(Module_6.a({}, t), {}, {
           styleList: e
         }) : t
       }))
       G(n)
     }
-  }), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.g, {
-    className: $_137.addStyleContainer,
+  }), React.createElement(Src_shared_ui_components_index.g, {
+    className: Module_137.addStyleContainer,
     showDropdownIcon: false,
-    overlay: React.createElement($$_$$_$$_$$_src_shared_ui_components_index.l, {
+    overlay: React.createElement(Src_shared_ui_components_index.l, {
       onClick: function (e) {
         if (e === jM.OPEN_RESOURCE_LIBRARY) {
-          t($$_$$_$$_$$_src_editor_redux_common_actions.wj(Tn.c.ImageLibrary, function (e) {
+          t(Src_editor_redux_common_actions.wj(Module_68.c.ImageLibrary, function (e) {
             ee(e)
           }, true))
         }
       }
-    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.m, {
+    }, React.createElement(Src_shared_ui_components_index.m, {
       value: jM.UPLOAD_FILE
-    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.B, {
-      className: $_137.uploadBtn,
+    }, React.createElement(Src_shared_ui_components_index.B, {
+      className: Module_137.uploadBtn,
       multiple: true,
       onChange: function (e) {
         if (e) {
@@ -949,14 +949,14 @@ var kM = memo(function () {
             if (e.name.endsWith(".gif")) {
               r.push({
                 url: URL.createObjectURL(e),
-                name: Et.z(e.name.slice(0, -4))
+                name: Module_9.z(e.name.slice(0, -4))
               })
             } else {
               n.push(e)
             }
           })
           if (0 !== n.length) {
-            t($$_$$_$$_$$_src_editor_redux_common_actions.Zf(n, function (e) {
+            t(Src_editor_redux_common_actions.Zf(n, function (e) {
               Q(e)
               J(r)
             }, true))
@@ -967,35 +967,35 @@ var kM = memo(function () {
           console.error("handleUploadFileChange error, files is null")
         }
       },
-      accept: $_133.f
-    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+      accept: Module_133.f
+    }, React.createElement(Src_shared_ui_components_index.j, {
       type: "icon-upload-image",
-      className: $_137.btnIcon
-    }), $_710$a$formatMessage({
+      className: Module_137.btnIcon
+    }), Module_710$a$formatMessage({
       id: "uploadImageFile"
-    }))), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.m, {
+    }))), React.createElement(Src_shared_ui_components_index.m, {
       value: jM.OPEN_RESOURCE_LIBRARY
-    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+    }, React.createElement(Src_shared_ui_components_index.j, {
       type: "icon-image-library",
-      className: $_137.btnIcon
-    }), $_710$a$formatMessage({
+      className: Module_137.btnIcon
+    }), Module_710$a$formatMessage({
       id: "resourceLibrary"
     })))
   }, React.createElement("div", {
-    className: $_137.addStyle
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
-    className: $_137.addIcon,
+    className: Module_137.addStyle
+  }, React.createElement(Src_shared_ui_components_index.j, {
+    className: Module_137.addIcon,
     type: "icon-add"
-  }), React.createElement("span", null, $_710$a$formatMessage({
+  }), React.createElement("span", null, Module_710$a$formatMessage({
     id: "ActorStyleDialog.addStyle"
   })))))))), React.createElement("footer", {
-    className: $_137.footer
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
+    className: Module_137.footer
+  }, React.createElement(Src_shared_ui_components_index.d, {
     type: "primary",
     onClick: te
-  }, $_710$a$formatMessage({
+  }, Module_710$a$formatMessage({
     id: "save"
-  }))), s && React.createElement($_796_index.a, {
+  }))), s && React.createElement(Module_796.a, {
     onCancel: ne,
     onOk: te
   }))

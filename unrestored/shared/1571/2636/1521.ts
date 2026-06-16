@@ -7,8 +7,8 @@
 "use strict"
 
 export { i as a }
-import * as /* [auto-meaningful-name] */$_40_index from "./40/index"
-import { useState, useRef, useEffect } from "react"
+import * as /* [auto-meaningful-name] */Module_40 from /* 40 */"./40/index"
+import { useState, useRef, useEffect } from /* 0 */"react"
 function i(e, t) {
   var n = t || {}
   var /* [auto-meaningful-name] */n$defaultValue = n.defaultValue
@@ -18,7 +18,7 @@ function i(e, t) {
   var l = useState(function () {
     return undefined !== n$value ? n$value : undefined !== n$defaultValue ? "function" === typeof n$defaultValue ? n$defaultValue() : n$defaultValue : "function" === typeof e ? e() : e
   })
-  var u = $_40_index.a(l, 2)
+  var u = Module_40.a(l, 2)
   var d = u[0]
   var p = u[1]
   var f = undefined !== n$value ? n$value : d

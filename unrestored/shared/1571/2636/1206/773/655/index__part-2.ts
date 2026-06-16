@@ -6,10 +6,10 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_37_1412_675 from "../../../37/1412/675"
-import * as /* [auto-meaningful-name] */$_689 from "./689"
+import * as /* [auto-meaningful-name] */Module_675 from /* 675 */"../../../37/1412/675"
+import * as /* [auto-meaningful-name] */Module_689 from /* 689 */"./689"
 var d = function (e) {
-  if (!$_689.a(e)) {
+  if (!Module_689.a(e)) {
     throw TypeError("Invalid UUID")
   }
   var t
@@ -61,7 +61,7 @@ var p = function (e, t, n) {
       }
       return o
     }
-    return $$_$$_$$_37_1412_675.a(s)
+    return Module_675.a(s)
   }
   try {
     r.name = e

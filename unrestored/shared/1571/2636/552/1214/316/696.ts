@@ -7,7 +7,7 @@
 "use strict"
 
 export { o as b }
-import * as /* [auto-meaningful-name] */$$_$$_$$_54 from "../../../54"
+import * as /* [auto-meaningful-name] */Module_54 from /* 54 */"../../../54"
 var i = {
   easeInOut: "cubic-bezier(0.4, 0, 0.2, 1)",
   easeOut: "cubic-bezier(0.0, 0, 0.2, 1)",
@@ -39,7 +39,7 @@ _a = {
     var u = undefined === t$easing ? i.easeInOut : t$easing
     var /* [auto-meaningful-name] */t$delay = t.delay
     var f = undefined === t$delay ? 0 : t$delay
-    $$_$$_$$_54.a(t, ["duration", "easing", "delay"])
+    Module_54.a(t, ["duration", "easing", "delay"])
     return (Array.isArray(e) ? e : [e]).map(function (e) {
       return "".concat(e, " ").concat("string" === typeof s ? s : a(s), " ").concat(u, " ").concat("string" === typeof f ? f : a(f))
     }).join(",")

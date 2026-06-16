@@ -7,21 +7,21 @@
 "use strict"
 
 import { u } from "./index__part-0"
-import { Component } from "react"
-import * as /* [auto-meaningful-name] */$$_$$_140 from "../../140"
-import * as /* [auto-meaningful-name] */$$_$$_120 from "../../120"
-import * as /* [auto-meaningful-name] */$$_$$_106 from "../../106"
-import * as /* [auto-meaningful-name] */$$_$$_103 from "../../103"
-import * as /* [auto-meaningful-name] */$$_$$_19 from "../../19"
-import * as /* [auto-meaningful-name] */$_923 from "./923"
+import { Component } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_140 from /* 140 */"../../140"
+import * as /* [auto-meaningful-name] */Module_120 from /* 120 */"../../120"
+import * as /* [auto-meaningful-name] */Module_106 from /* 106 */"../../106"
+import * as /* [auto-meaningful-name] */Module_103 from /* 103 */"../../103"
+import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"../../19"
+import * as /* [auto-meaningful-name] */Module_923 from /* 923 */"./923"
 var f = function (e) {
-  $$_$$_120.a(n, e)
-  var t = $$_$$_140.a(n)
+  Module_120.a(n, e)
+  var t = Module_140.a(n)
   function n() {
-    $$_$$_103.a(this, n)
+    Module_103.a(this, n)
     return t.apply(this, arguments)
   }
-  $$_$$_106.a(n, [
+  Module_106.a(n, [
     {
       key: "getLocale",
       value: function () {
@@ -30,7 +30,7 @@ var f = function (e) {
         var n = this$props.defaultLocale || u[null !== this$props$componentName && undefined !== this$props$componentName ? this$props$componentName : "global"]
         var /* [auto-meaningful-name] */this$context = this.context
         var o = this$props$componentName && this$context ? this$context[this$props$componentName] : {}
-        return $$_$$_19.a($$_$$_19.a({}, n instanceof Function ? n() : n), o || {})
+        return Module_19.a(Module_19.a({}, n instanceof Function ? n() : n), o || {})
       }
     }, {
       key: "getLocaleCode",
@@ -51,5 +51,5 @@ var f = function (e) {
 f.defaultProps = {
   componentName: "global"
 }
-f.contextType = $_923.a
+f.contextType = Module_923.a
 export { f }

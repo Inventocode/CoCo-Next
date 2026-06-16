@@ -6,11 +6,11 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */Color from "color"
-import /* [auto-meaningful-name] */Color1 from "color"
-import * as /* [auto-meaningful-name] */Lodash from "lodash"
-import * as /* [auto-meaningful-name] */$_13_226 from "./13/226"
-import /* [auto-meaningful-name] */$_13_2261 from "./13/226"
+import * as /* [auto-meaningful-name] */Color from /* 51 */"color"
+import /* [auto-meaningful-name] */Color1 from /* 51 */"color"
+import * as /* [auto-meaningful-name] */Lodash from /* 30 */"lodash"
+import * as /* [auto-meaningful-name] */Module_226 from /* 226 */"./13/226"
+import /* [auto-meaningful-name] */Module_2261 from /* 226 */"./13/226"
 var /* [auto-meaningful-name] */B3B3B3 = "#B3B3B3"
 var _ = function (e) {
   return "#00000000" === e || "rgba(0,0,0,0)" === e || "transparent" === e
@@ -75,7 +75,7 @@ var S = function (e) {
   return t === n && e
 }
 var A = function (e, t) {
-  var n = e.HEX ? $_13_2261(e.HEX) : $_13_2261(e)
+  var n = e.HEX ? Module_2261(e.HEX) : Module_2261(e)
   var r = n.toHsl()
   var o = n.toHsv()
   var i = n.toRgb()

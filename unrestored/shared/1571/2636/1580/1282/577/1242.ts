@@ -4,5 +4,5 @@
  * 模块 ID：1242
  */
 
-var r = require("../476")
+var r = require(/* 476 */"../476")
 module.exports = r("document", "documentElement")

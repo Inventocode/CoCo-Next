@@ -4,9 +4,9 @@
  * 模块 ID：1719
  */
 
-require("./1662/86")({
+require(/* 86 */"./1662/86")({
   target: "String",
   proto: true
 }, {
-  repeat: require("./1659/1092")
+  repeat: require(/* 1092 */"./1659/1092")
 })

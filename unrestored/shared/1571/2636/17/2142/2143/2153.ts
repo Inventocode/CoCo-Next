@@ -10,11 +10,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.MoveEvent = undefined
-var r = require("tslib")
-var i = require("@kitten-team/gl-matrix")
-var o = require("inversify")
-var a = require("../../../123/195/index")
-var s = require("../../../1022/214")
+var r = require(/* 93 */"tslib")
+var i = require(/* 258 */"@kitten-team/gl-matrix")
+var o = require(/* 134 */"inversify")
+var a = require(/* 195 */"../../../123/195/index")
+var s = require(/* 214 */"../../../1022/214")
 var c = function (e) {
   function t(t) {
     var n = e.call(this, t.block) || this
@@ -167,5 +167,5 @@ var c = function (e) {
     this.new_coordinate = e.coordinate
   }
   return t = (0, r.__decorate)([(0, o.injectable)()], t)
-}(require("./647").BlockEvent)
+}(require(/* 647 */"./647").BlockEvent)
 exports.MoveEvent = c

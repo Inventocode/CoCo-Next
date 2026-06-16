@@ -63,9 +63,9 @@ exports.getCodemaoLoginIframeUrl = function (e) {
   var r = n ? "?".concat(n) : ""
   return (0, i.getServiceOrigin)("development" === e.env ? "dev" : e.env, "shequ.codemao.cn/codemao_login".concat(r))
 }
-var r = require("./772")
-var o = require("./773/index")
-var i = require("./2618/885")
+var r = require(/* 772 */"./772")
+var o = require(/* 773 */"./773/index")
+var i = require(/* 885 */"./2618/885")
 var a = new r.ApiSpec("codemao-login", {})
 var s = new r.ApiSpec(a.namespace, {
   onEvent: new r.MethodType()

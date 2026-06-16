@@ -4,9 +4,9 @@
  * 模块 ID：1440
  */
 
-var r = require("./2508/index")
-var i = require("./2511")
-var o = require("./2512")
+var r = require(/* 2508 */"./2508/index")
+var i = require(/* 2511 */"./2511")
+var o = require(/* 2512 */"./2512")
 module.exports = function (e, t, n, a, s, c) {
   var u = 1 & n
   var /* [auto-meaningful-name] */e$length = e.length

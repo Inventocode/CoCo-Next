@@ -6,12 +6,12 @@
 
 "use strict"
 
-import /* [auto-meaningful-name] */React from "react"
-import { memo } from "react"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import i from "classnames"
-import * as /* [auto-meaningful-name] */$$_11 from "../11"
-import "./652"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"../11"
+import /* 652 */"./652"
 var ae = memo(function (e) {
   var t
   var /* [auto-meaningful-name] */e$children = e.children
@@ -21,7 +21,7 @@ var ae = memo(function (e) {
   var /* [auto-meaningful-name] */e$label = e.label
   return React.createElement("div", {
     "data-row-label": e$label,
-    className: i("coco-row", e$className, (t = {}, $$_11.a(t, "coco-row-".concat(e$align), e$align), $$_11.a(t, "coco-row-".concat(e$justify), e$justify), t))
+    className: Classnames("coco-row", e$className, (t = {}, Module_11.a(t, "coco-row-".concat(e$align), e$align), Module_11.a(t, "coco-row-".concat(e$justify), e$justify), t))
   }, e$children)
 })
 var se = memo(function (e) {
@@ -32,7 +32,7 @@ var se = memo(function (e) {
     e$span = isNaN(r) ? undefined : 48 * r / 100
   }
   return React.createElement("div", {
-    className: i("coco-col", $$_11.a({}, "coco-col-".concat(e$span), undefined !== e$span))
+    className: Classnames("coco-col", Module_11.a({}, "coco-col-".concat(e$span), undefined !== e$span))
   }, e$children)
 })
 export { ae }

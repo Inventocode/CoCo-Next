@@ -6,8 +6,8 @@
 
 "use strict"
 
-var r = require("../180")
-var i = require("../204")
+var r = require(/* 180 */"../180")
+var i = require(/* 204 */"../204")
 var o = function () {
   function e(t) {
     r(this, e)

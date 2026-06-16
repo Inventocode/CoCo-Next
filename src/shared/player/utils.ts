@@ -7,17 +7,17 @@
 "use strict"
 
 import { m } from "../../../unrestored/shared/1571/2636/28/index__part-0"
-import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_20_128 from "../../../unrestored/shared/1571/2636/20/128"
-import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_28_657 from "../../../unrestored/shared/1571/2636/28/657"
+import * as /* [auto-meaningful-name] */Module_128 from /* 128 */"../../../unrestored/shared/1571/2636/20/128"
+import * as /* [auto-meaningful-name] */Module_657 from /* 657 */"../../../unrestored/shared/1571/2636/28/657"
 import * as /* [auto-meaningful-name] */AntdMobile from "antd-mobile"
-import /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_13_303_index from "../../../unrestored/shared/1571/2636/13/303/index"
+import /* [auto-meaningful-name] */Module_303 from /* 303 */"../../../unrestored/shared/1571/2636/13/303/index"
 import * as /* [auto-meaningful-name] */Lodash from "lodash"
-import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_28_784_index from "../../../unrestored/shared/1571/2636/28/784/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_7 from "../../../unrestored/shared/1571/2636/7"
+import * as /* [auto-meaningful-name] */Module_784 from /* 784 */"../../../unrestored/shared/1571/2636/28/784/index"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../../../unrestored/shared/1571/2636/7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_20_index from "../../../unrestored/shared/1571/2636/20/index"
+import * as /* [auto-meaningful-name] */Module_20 from /* 20 */"../../../unrestored/shared/1571/2636/20/index"
 function v(e) {
-  return e + "_" + $$_$$_$$_unrestored_shared_1571_2636_13_303_index.generate()
+  return e + "_" + Module_303.generate()
 }
 function b() {
   var e = document.getElementById("rootPlayer")
@@ -63,7 +63,7 @@ export function isOnWeb() {
 }
 
 function N(e) {
-  return $$_$$_$$_unrestored_shared_1571_2636_28_657.findIndex(function (t) {
+  return Module_657.findIndex(function (t) {
     return e.includes(t)
   }) > -1
 }
@@ -98,10 +98,10 @@ function k(e, t, n) {
   return i || ""
 }
 function x(e) {
-  return $$_$$_$$_unrestored_shared_1571_2636_28_784_index.filterXSS(e)
+  return Module_784.filterXSS(e)
 }
 function D() {
-  switch ($$_$$_$$_unrestored_shared_1571_2636_20_128.a.env) {
+  switch (Module_128.a.env) {
     case "dev":
       return "development"
     case "test":
@@ -117,7 +117,7 @@ function M() {
   return L.apply(this, arguments)
 }
 function L() {
-  return (L = $$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e() {
+  return (L = Module_7.a(RegeneratorRuntime.mark(function e() {
     var t
     var /* [auto-meaningful-name] */e$sent
     var r = arguments
@@ -139,7 +139,7 @@ function L() {
                 content: "已登录"
               })
             }
-            $$_$$_$$_unrestored_shared_1571_2636_20_index.setUserId(null === e$sent || undefined === e$sent ? undefined : e$sent.id)
+            Module_20.setUserId(null === e$sent || undefined === e$sent ? undefined : e$sent.id)
             return e.abrupt("return", null === e$sent || undefined === e$sent ? undefined : e$sent.id)
           case 9:
             e.next = 13
@@ -159,7 +159,7 @@ function P() {
   return B.apply(this, arguments)
 }
 function B() {
-  return (B = $$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e() {
+  return (B = Module_7.a(RegeneratorRuntime.mark(function e() {
     var t
     var n
     return RegeneratorRuntime.wrap(function (e) {
@@ -175,7 +175,7 @@ function B() {
             }
             return e.abrupt("return")
           case 5:
-            t = "".concat($$_$$_$$_unrestored_shared_1571_2636_20_128.a.shequHost, "/codemao_login?onlyLogin=false&language=zh&disableThirdParty=true&ageLimit=false&pageView=login&theme=violet&env=").concat(D(), "&pid=7KeVbBdw&productCode=appcraft&platform=mobile");
+            t = "".concat(Module_128.a.shequHost, "/codemao_login?onlyLogin=false&language=zh&disableThirdParty=true&ageLimit=false&pageView=login&theme=violet&env=").concat(D(), "&pid=7KeVbBdw&productCode=appcraft&platform=mobile");
             (n = document.createElement("iframe")).src = t
             n.title = "codemao-login iframe"
             n.style.cssText = "position: fixed;\n  left: 0;\n  top: 0;\n  bottom: 0;\n  width: 100vw;\n  height: 100vh;\n  z-index: 999;\n  "
@@ -295,7 +295,7 @@ function B() {
     }, e)
   }))).apply(this, arguments)
 }
-$$_$$_$$_unrestored_shared_1571_2636_13_303_index.characters("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_")
+Module_303.characters("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_")
 export { v }
 export { b }
 export { y }

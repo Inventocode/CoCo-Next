@@ -4,7 +4,7 @@
  * 模块 ID：2316
  */
 
-var /* [auto-meaningful-name] */require$_1378_index$parsedTypeCheck
+var /* [auto-meaningful-name] */require_1378_$_1378_index$parsedTypeCheck
 var r
 var /* [auto-meaningful-name] */$toString = {}.toString
 function o(e, t, n) {
@@ -113,7 +113,7 @@ function c(e, n, r) {
   for (i = 0, n$length = n.length; i < n$length; ++i) {
     CSEANIR$type = (c = s(e, a = n[i], r)).type
     c$value = c.value
-    if ("Nothing" !== CSEANIR$type && require$_1378_index$parsedTypeCheck([a], c$value, {
+    if ("Nothing" !== CSEANIR$type && require_1378_$_1378_index$parsedTypeCheck([a], c$value, {
       customTypes: r.customTypes
     })) {
       return c$value
@@ -121,7 +121,7 @@ function c(e, n, r) {
   }
   throw new Error("Value " + JSON.stringify(e) + " does not type check against " + JSON.stringify(n) + ".")
 }
-require$_1378_index$parsedTypeCheck = require("./1378/index").parsedTypeCheck
+require_1378_$_1378_index$parsedTypeCheck = require(/* 1378 */"./1378/index").parsedTypeCheck
 r = {
   "*": function (e, t) {
     switch ($toString.call(e).slice(8, -1)) {

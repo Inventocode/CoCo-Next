@@ -7,8 +7,8 @@
 "use strict"
 
 var r
-import * as o from "./11"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"./11"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../src/editor/widget/built-in/types"
 var /* [auto-meaningful-name] */IconWidgetInput = "icon-widget-input"
 var /* [auto-meaningful-name] */_148cefff = "#148cefff"
 var /* [auto-meaningful-name] */C1c1c1 = "#c1c1c1"
@@ -25,19 +25,19 @@ var /* [auto-meaningful-name] */SansSerif = "sans-serif"
 var b = 14
 var /* [auto-meaningful-name] */Https__static$bcmcdn$com_coco_image_defaultInputBackground$png = "https://static.bcmcdn.com/coco/image/default-input-background.png"
 r = {}
-o.a(r, $$_$$_$$_$$_src_editor_widget_builtIn_types.s.SMALL, {
+Module_11.a(r, Src_editor_widget_builtIn_types.s.SMALL, {
   fontSize: 14,
   minWidth: 44,
   maxWidth: 360,
   height: 32
 })
-o.a(r, $$_$$_$$_$$_src_editor_widget_builtIn_types.s.MEDIUM, {
+Module_11.a(r, Src_editor_widget_builtIn_types.s.MEDIUM, {
   fontSize: 16,
   minWidth: 56,
   maxWidth: 360,
   height: 48
 })
-o.a(r, $$_$$_$$_$$_src_editor_widget_builtIn_types.s.LARGE, {
+Module_11.a(r, Src_editor_widget_builtIn_types.s.LARGE, {
   fontSize: 18,
   minWidth: 78,
   maxWidth: 360,

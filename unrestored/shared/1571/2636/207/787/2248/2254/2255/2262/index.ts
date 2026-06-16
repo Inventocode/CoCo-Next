@@ -6,8 +6,8 @@
 
 "use strict"
 
-var r = require("./2263/index")
-var /* [auto-meaningful-name] */require$$_765_index$toHash = require("../765/index").toHash
+var r = require(/* 2263 */"./2263/index")
+var /* [auto-meaningful-name] */require_765_$$_765_index$toHash = require(/* 765 */"../765/index").toHash
 module.exports = function () {
   var e = [
     {
@@ -37,8 +37,8 @@ module.exports = function () {
     }
   ]
   var t = ["type", "$comment"]
-  e.all = require$$_765_index$toHash(t)
-  e.types = require$$_765_index$toHash(["number", "integer", "string", "array", "object", "boolean", "null"])
+  e.all = require_765_$$_765_index$toHash(t)
+  e.types = require_765_$$_765_index$toHash(["number", "integer", "string", "array", "object", "boolean", "null"])
   e.forEach(function (n) {
     n.rules = n.rules.map(function (n) {
       var i
@@ -66,7 +66,7 @@ module.exports = function () {
       e.types[n.type] = n
     }
   })
-  e.keywords = require$$_765_index$toHash(t.concat(["$schema", "$id", "id", "$data", "$async", "title", "description", "default", "definitions", "examples", "readOnly", "writeOnly", "contentMediaType", "contentEncoding", "additionalItems", "then", "else"]))
+  e.keywords = require_765_$$_765_index$toHash(t.concat(["$schema", "$id", "id", "$data", "$async", "title", "description", "default", "definitions", "examples", "readOnly", "writeOnly", "contentMediaType", "contentEncoding", "additionalItems", "then", "else"]))
   e.custom = {}
   return e
 }

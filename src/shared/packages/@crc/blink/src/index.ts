@@ -8,9 +8,14 @@ export * as I from "../../../../../../unrestored/shared/1571/2636/17/536"
 import * as container_1 from "../../../../../../unrestored/shared/1571/2636/17/644"
 import * as di_symbols_1 from "../../../../../../unrestored/shared/1571/2636/17/646"
 import * as di_bind_1 from "../../../../../../unrestored/shared/1571/2636/17/2142/index"
-var __BLINK_VERSION__ = require("../package.json").version
+const __BLINK_VERSION__ = require("../package.json").version
 // [CoCo Next] Codemao 已死，Oldsquaw 当立！🤣🤣🤣😂😂😂😥😥😥😅😅😅
-// console.log("%c⭐️ Codemao Blink - v" + __BLINK_VERSION__ + " ⭐️", "\n  color: #FFDB29;\n  text-shadow: 0 1px 0 #BF7000;\n  padding: 140px 10px 20px 35px;\n  background: no-repeat left / 150px 150px url(\"http://kn-cdn.codemao.cn/blink/blink-main-compressed.jpeg\");\n  ")
+// console.log("%c⭐️ Codemao Blink - v" + __BLINK_VERSION__ + " ⭐️", `
+//   color: #FFDB29;
+//   text-shadow: 0 1px 0 #BF7000;
+//   padding: 140px 10px 20px 35px;
+//   background: no-repeat left / 150px 150px url("http://kn-cdn.codemao.cn/blink/blink-main-compressed.jpeg");
+// `)
 console.log("%c⭐️ Oldsquaw Blink - v" + __BLINK_VERSION__ + " ⭐️", `
   color: #FFDB29;
   text-shadow: 0 1px 0 #BF7000;

@@ -6,30 +6,30 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$_392_index from "./392/index"
-import * as /* [auto-meaningful-name] */$_2646_index from "./2646/index"
-import /* [auto-meaningful-name] */$_266 from "./266"
-import /* [auto-meaningful-name] */Axios from "axios"
-import * as /* [auto-meaningful-name] */$_141_index from "./141/index"
-import * as /* [auto-meaningful-name] */$_97_index from "./97/index"
-import * as K from "./18"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import * as /* [auto-meaningful-name] */$_627_index from "./627/index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import * as /* [auto-meaningful-name] */$_188 from "./188"
-import * as O from "./7"
-import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import { useDispatch, useSelector } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { memo } from "react"
+import * as /* [auto-meaningful-name] */Module_392 from /* 392 */"./392/index"
+import * as /* [auto-meaningful-name] */Module_2646 from /* 2646 */"./2646/index"
+import /* [auto-meaningful-name] */Module_266 from /* 266 */"./266"
+import /* [auto-meaningful-name] */Axios from /* 129 */"axios"
+import * as /* [auto-meaningful-name] */Module_141 from /* 141 */"./141/index"
+import * as /* [auto-meaningful-name] */Module_97 from /* 97 */"./97/index"
+import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"./18"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */Module_627 from /* 627 */"./627/index"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import * as /* [auto-meaningful-name] */Module_188 from /* 188 */"./188"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"./7"
+import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import { useDispatch, useSelector } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_475 from "./475"
-import /* [auto-meaningful-name] */$_4751 from "./475"
+import * as /* [auto-meaningful-name] */Module_475 from /* 475 */"./475"
+import /* [auto-meaningful-name] */Module_4751 from /* 475 */"./475"
 var ZP = memo(function () {
   var e = useDispatch()
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var n = useSelector(function (e) {
     return e.common.courseList
   })
@@ -42,9 +42,9 @@ var ZP = memo(function () {
   var i = useSelector(function (e) {
     return e.project.id
   })
-  var a = $_97_index.a(i)
+  var a = Module_97.a(i)
   var s = function () {
-    var t = O.a(RegeneratorRuntime.mark(function t(n) {
+    var t = Module_7.a(RegeneratorRuntime.mark(function t(n) {
       return RegeneratorRuntime.wrap(function (t) {
         for (;;) {
           switch (t.prev = t.next) {
@@ -55,7 +55,7 @@ var ZP = memo(function () {
               }
               t.prev = 1
               t.next = 4
-              return $$_$$_$$_$$_src_editor_redux_common_actions.Nf(e, $$_$$_$$_$$_src_editor_redux_common_actions.tg({
+              return Src_editor_redux_common_actions.Nf(e, Src_editor_redux_common_actions.tg({
                 isUpdate: a,
                 isAutoSave: true,
                 isNeedReport: false
@@ -72,18 +72,18 @@ var ZP = memo(function () {
                 t.next = 12
                 break
               }
-              e($$_$$_$$_$$_src_editor_redux_common_actions.Ri({
+              e(Src_editor_redux_common_actions.Ri({
                 visible: true,
                 openFrom: "course",
                 onSave: function () {
-                  var t = O.a(RegeneratorRuntime.mark(function t() {
+                  var t = Module_7.a(RegeneratorRuntime.mark(function t() {
                     return RegeneratorRuntime.wrap(function (t) {
                       for (;;) {
                         switch (t.prev = t.next) {
                           case 0:
                             t.prev = 0
                             t.next = 3
-                            return $$_$$_$$_$$_src_editor_redux_common_actions.Nf(e, $$_$$_$$_$$_src_editor_redux_common_actions.tg({
+                            return Src_editor_redux_common_actions.Nf(e, Src_editor_redux_common_actions.tg({
                               isUpdate: a,
                               isAutoSave: true,
                               isNeedReport: false
@@ -125,7 +125,7 @@ var ZP = memo(function () {
     }
   }()
   var c = function () {
-    var t = O.a(RegeneratorRuntime.mark(function t(r) {
+    var t = Module_7.a(RegeneratorRuntime.mark(function t(r) {
       var o
       var /* [auto-meaningful-name] */o$bcmUrl
       var /* [auto-meaningful-name] */o$title
@@ -142,7 +142,7 @@ var ZP = memo(function () {
                 t.next = 5
                 break
               }
-              e($$_$$_$$_$$_src_editor_redux_common_actions.mj({
+              e(Src_editor_redux_common_actions.mj({
                 message: "未获取到教程信息"
               }))
               return t.abrupt("return")
@@ -155,37 +155,37 @@ var ZP = memo(function () {
             case 8:
               if ((t$sent = t.sent).data) {
                 t$sent$data = t$sent.data
-                e($$_$$_$$_$$_src_editor_redux_common_actions.Gf({
+                e(Src_editor_redux_common_actions.Gf({
                   json: t$sent$data,
-                  jsonFrom: K.d.COURSE,
-                  sourceTag: K.g.COURSE,
+                  jsonFrom: Module_18.d.COURSE,
+                  sourceTag: Module_18.g.COURSE,
                   sourceId: r.toString()
                 }))
               }
-              $_627_index.a.load({
+              Module_627.a.load({
                 onPlayerInit: function () {},
                 title: React.createElement("div", null, React.createElement("span", {
                   style: {
                     position: "relative",
                     right: 5
                   }
-                }, React.createElement($_2646_index.a, {
+                }, React.createElement(Module_2646.a, {
                   size: "esm",
                   type: "transparent-fb",
                   width: 26,
                   height: 14,
-                  onClick: O.a(RegeneratorRuntime.mark(function t() {
+                  onClick: Module_7.a(RegeneratorRuntime.mark(function t() {
                     return RegeneratorRuntime.wrap(function (t) {
                       for (;;) {
                         switch (t.prev = t.next) {
                           case 0:
-                            $_627_index.a.close({
+                            Module_627.a.close({
                               closeAnimationPos: {
                                 x: 150,
                                 y: 30
                               }
                             })
-                            e($$_$$_$$_$$_src_editor_redux_common_actions.fi(true))
+                            e(Src_editor_redux_common_actions.fi(true))
                           case 2:
                           case "end":
                             return t.stop()
@@ -193,7 +193,7 @@ var ZP = memo(function () {
                       }
                     }, t)
                   }))
-                }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+                }, React.createElement(Src_shared_ui_components_index.j, {
                   type: "icon-btn-fallback",
                   className: "coco-video-back"
                 }))), o$title),
@@ -203,15 +203,15 @@ var ZP = memo(function () {
                 useConfirmMask: true,
                 confirmPercent: .9,
                 onMinimizeBtnClick: function () {
-                  $_627_index.a.hide()
-                  e($$_$$_$$_$$_src_editor_redux_common_actions.Qh($_392_index.a, {
-                    name: $_392_index.a,
-                    content: React.createElement($_392_index.b, null),
+                  Module_627.a.hide()
+                  e(Src_editor_redux_common_actions.Qh(Module_392.a, {
+                    name: Module_392.a,
+                    content: React.createElement(Module_392.b, null),
                     visible: true
                   }))
                 },
                 onClose: function () {
-                  $_627_index.a.close({
+                  Module_627.a.close({
                     closeAnimationPos: {
                       x: 150,
                       y: 30
@@ -219,7 +219,7 @@ var ZP = memo(function () {
                   })
                 }
               })
-              $_141_index.a("CourseClick", {
+              Module_141.a("CourseClick", {
                 courseId: r
               })
             case 12:
@@ -234,55 +234,55 @@ var ZP = memo(function () {
     }
   }()
   var l = function () {
-    e($$_$$_$$_$$_src_editor_redux_common_actions.fi(false))
+    e(Src_editor_redux_common_actions.fi(false))
   }
-  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.f, {
-    title: $_710$a$formatMessage({
+  return React.createElement(Src_shared_ui_components_index.f, {
+    title: Module_710$a$formatMessage({
       id: "courseVideo"
     }),
     withPortal: true,
     visible: r,
-    className: $_4751.courseDialog,
+    className: Module_4751.courseDialog,
     onClose: l
   }, React.createElement("div", {
-    className: $_4751.courseList
+    className: Module_4751.courseList
   }, n.map(function (e) {
     return React.createElement("div", {
-      className: $_4751.courseItem,
+      className: Module_4751.courseItem,
       key: e.id,
       onClick: function () {
         return s(e.id)
       }
     }, React.createElement("div", {
-      className: $_4751.courseImage
+      className: Module_4751.courseImage
     }, React.createElement("div", {
-      className: $_4751.image,
+      className: Module_4751.image,
       style: {
         backgroundImage: "url(".concat(e.preview, ")")
       }
     }), React.createElement("div", {
-      className: $_4751.mask
+      className: Module_4751.mask
     }, React.createElement("div", {
-      className: $_4751.playBox
-    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+      className: Module_4751.playBox
+    }, React.createElement(Src_shared_ui_components_index.j, {
       type: "icon-sound-play"
     })))), React.createElement("div", {
-      className: $_4751.courseName
+      className: Module_4751.courseName
     }, e.title), React.createElement("div", {
-      className: $_4751.courseDesc
+      className: Module_4751.courseDesc
     }, e.courseIntro))
   }), React.createElement("div", {
-    className: $_4751.courseMore
+    className: Module_4751.courseMore
   }, React.createElement("div", {
-    className: $_4751.moreImage
+    className: Module_4751.moreImage
   }), React.createElement("div", {
-    className: $_4751.moreTips
-  }, $_710$a$formatMessage({
+    className: Module_4751.moreTips
+  }, Module_710$a$formatMessage({
     id: "moreCourseTips"
   })))))
 })
 var JP = memo(function (e) {
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var n = useDispatch()
   var r = useSelector(function (e) {
     return e.common.projectSavePrompt
@@ -298,7 +298,7 @@ var JP = memo(function (e) {
     l()
   }
   var l = function () {
-    n($$_$$_$$_$$_src_editor_redux_common_actions.Ri({
+    n(Src_editor_redux_common_actions.Ri({
       visible: false,
       openFrom: ""
     }))
@@ -311,40 +311,40 @@ var JP = memo(function (e) {
       WhetherKeepWorksTitle = "whetherKeepWorksTitleWhenOpenCourse"
     }
   }
-  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.f, {
+  return React.createElement(Src_shared_ui_components_index.f, {
     visible: r$visible,
     showCloseButton: false,
     onClose: l,
     maskClosable: false,
-    className: Classnames($_266.dialog, $_266.dialogSecondary)
-  }, React.createElement("h3", null, $_710$a$formatMessage({
+    className: Classnames(Module_266.dialog, Module_266.dialogSecondary)
+  }, React.createElement("h3", null, Module_710$a$formatMessage({
     id: WhetherKeepWorksTitle
-  })), React.createElement("span", null, $_710$a$formatMessage({
+  })), React.createElement("span", null, Module_710$a$formatMessage({
     id: "whetherKeepWorksDescription"
-  })), React.createElement($_188.a, null, React.createElement($_188.b, {
+  })), React.createElement(Module_188.a, null, React.createElement(Module_188.b, {
     keys: "enter",
     callback: c
   })), React.createElement("div", {
-    className: Classnames($_266.dialogButtons)
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
+    className: Classnames(Module_266.dialogButtons)
+  }, React.createElement(Src_shared_ui_components_index.d, {
     onClick: l,
-    className: $_266.cancel
-  }, $_710$a$formatMessage({
+    className: Module_266.cancel
+  }, Module_710$a$formatMessage({
     id: "cancel"
-  })), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
+  })), React.createElement(Src_shared_ui_components_index.d, {
     onClick: function () {
       if (r$onImport) {
         r$onImport()
       }
       l()
     },
-    className: $_266.denyButton
-  }, $_710$a$formatMessage({
+    className: Module_266.denyButton
+  }, Module_710$a$formatMessage({
     id: "notSave"
-  })), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
+  })), React.createElement(Src_shared_ui_components_index.d, {
     type: "primary",
     onClick: c
-  }, $_710$a$formatMessage({
+  }, Module_710$a$formatMessage({
     id: "save"
   }))))
 })

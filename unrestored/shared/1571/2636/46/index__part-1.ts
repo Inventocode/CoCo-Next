@@ -7,16 +7,16 @@
 "use strict"
 
 import { i } from "./index__part-0"
-import * as /* [auto-meaningful-name] */$$_39 from "../39"
-import * as /* [auto-meaningful-name] */$$_27 from "../27"
-import * as /* [auto-meaningful-name] */$_613_index from "./613/index"
-import * as s from "../4"
+import * as /* [auto-meaningful-name] */Module_39 from /* 39 */"../39"
+import * as /* [auto-meaningful-name] */Module_27 from /* 27 */"../27"
+import * as /* [auto-meaningful-name] */Module_613 from /* 613 */"./613/index"
+import * as /* [auto-meaningful-name] */Module_4 from /* 4 */"../4"
 var c = function () {
   function e() {
     var t = this
-    $$_27.a(this, e)
+    Module_27.a(this, e)
     this.dynamicValueMap = new Map()
-    this.generator = new $_613_index.JsonJavaScriptGenerator()
+    this.generator = new Module_613.JsonJavaScriptGenerator()
     this.getFieldValue = this.generator.get_field_value.bind(this.generator)
     this.quote = this.generator.quote.bind(this.generator)
     this.registerDelegate = this.generator.register.bind(this.generator)
@@ -33,7 +33,7 @@ var c = function () {
           if (a) {
             c.widgetId = a
           }
-          return s.h(o, c)
+          return Module_4.h(o, c)
         }
         return o
       })
@@ -73,9 +73,9 @@ var c = function () {
     this.ORDER_ASSIGNMENT = this.generator.ORDER_ASSIGNMENT
     this.ORDER_COMMA = this.generator.ORDER_COMMA
     this.ORDER_NONE = this.generator.ORDER_NONE
-    $_613_index.load_basic_blocks_json_js_generators(this.generator)
+    Module_613.load_basic_blocks_json_js_generators(this.generator)
   }
-  $$_39.a(e, [
+  Module_39.a(e, [
     {
       key: "getDynamicValue",
       value: function (e) {
@@ -104,10 +104,10 @@ var c = function () {
 }()
 var l = function () {
   function e() {
-    $$_27.a(this, e)
+    Module_27.a(this, e)
     this.xmlMap = new Map()
   }
-  $$_39.a(e, [
+  Module_39.a(e, [
     {
       key: "insertBlockXML",
       value: function (e) {

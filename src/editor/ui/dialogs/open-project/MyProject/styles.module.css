@@ -1,0 +1,166 @@
+/**
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：418
+ */
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.main {
+    width: 100%
+}
+
+.main :global(.coco-scroll-paginate) {
+    display: grid;
+    justify-content: space-between;
+    grid-row-gap: 24px;
+    grid-template-columns: repeat(5, 133px);
+    padding: 0 38px;
+    grid-template-rows: 290px
+}
+
+.emptyContainer {
+    height: 100%;
+    text-align: center;
+    padding-top: 120px;
+    margin: 0 auto
+}
+
+.item {
+    width: 133px;
+    cursor: pointer;
+    position: relative
+}
+
+.item .cover {
+    height: 235px;
+    border: 1px solid #dddfe4;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    position: relative;
+    overflow: hidden
+}
+
+.item .cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: relative;
+    z-index: 2
+}
+
+.item:hover .cover {
+    border: 1px solid #6e4ff4
+}
+
+.item .name {
+    height: 22px;
+    line-height: 22px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #232126;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-bottom: 4px
+}
+
+.item .time {
+    font-size: 14px;
+    color: #b1a3bf;
+    margin: 0
+}
+
+.item:hover .menu {
+    display: block
+}
+
+.filter {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    padding: 0 38px
+}
+
+.filter .filterItem {
+    width: 80px;
+    height: 24px;
+    background: #f5f3fe;
+    box-shadow: 0 0 4px 0 rgba(148, 41, 255, .24);
+    border-radius: 12px;
+    text-align: center;
+    line-height: 24px;
+    margin-bottom: 16px;
+    margin-right: 16px;
+    color: #6e4ff4;
+    cursor: pointer;
+    box-shadow: none
+}
+
+.filter .filterItem:hover {
+    background: #e9e4ff
+}
+
+.filter .filterItem.active {
+    background: #6e4ff4;
+    color: #fff
+}
+
+.menuContainer {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 28px;
+    height: 28px;
+    background: #6e4ff4;
+    border-radius: 0 8px 0 22px;
+    color: #fff;
+    z-index: 10
+}
+
+.menuContainer i {
+    transform: translate(7px, 4px);
+    font-size: 18px
+}
+
+.menuContent {
+    width: 110px;
+    color: #61626b
+}
+
+.menuContent :global(.coco-menu) {
+    padding: 6px 0
+}
+
+.menuContent :global(.coco-menu-item) {
+    padding: 7px 17px
+}
+
+.menuPopover :global(.ant-popover-inner) {
+    transform: translate(-20px, 20px);
+    border-radius: 4px
+}
+
+.badgeWrapper {
+    position: absolute;
+    top: 208px;
+    right: 5px;
+    z-index: 2;
+    display: flex
+}
+
+.badgeWrapper i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px;
+    width: 27px;
+    color: #fff;
+    height: 22px;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, .4)
+}

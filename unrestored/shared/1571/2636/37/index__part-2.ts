@@ -6,13 +6,13 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_738_66 from "../738/66"
-import * as a from "../6"
-import * as /* [auto-meaningful-name] */$$_47_index from "../47/index"
-var Ne = $$_738_66.a.Record({
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Module_66 from /* 66 */"../738/66"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"../6"
+import * as /* [auto-meaningful-name] */Module_47 from /* 47 */"../47/index"
+var Ne = Module_66.a.Record({
   configs: {},
-  variableList: $$_738_66.a.List([]),
+  variableList: Module_66.a.List([]),
   tableDataDialog: {
     visible: false
   },
@@ -24,7 +24,7 @@ function Re(e, t) {
   var /* [auto-meaningful-name] */t$payload = t.payload
   var /* [auto-meaningful-name] */t$payload$configs = t$payload.configs
   var /* [auto-meaningful-name] */t$payload$variableList = t$payload.variableList
-  return e.set("variableList", $$_738_66.a.List(t$payload$variableList)).set("configs", t$payload$configs)
+  return e.set("variableList", Module_66.a.List(t$payload$variableList)).set("configs", t$payload$configs)
 }
 function ke(e) {
   var t = ["PRIMITIVE", "DICT", "LIST"]
@@ -67,11 +67,11 @@ function Me(e, t) {
 }
 function Le(e, t) {
   if (t.payload) {
-    return e.setIn(["variableList"], $$_738_66.a.List())
+    return e.setIn(["variableList"], Module_66.a.List())
   }
   var n
   var r = e.get("variableList")
-  var o = $$_47_index.a(r)
+  var o = Module_47.a(r)
   try {
     for (o.s(); !(n = o.n()).done;) {
       n.value.isWatching = false
@@ -87,27 +87,27 @@ var Pe = function () {
   var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : Ne
   var t = arguments.length > 1 ? arguments[1] : undefined
   switch (t.type) {
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Cc:
+    case Src_editor_redux_common_actions.Cc:
       return Re(e, t)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.ad:
+    case Src_editor_redux_common_actions.ad:
       return ke(e)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.c:
+    case Src_editor_redux_common_actions.c:
       return xe(e, t)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.gc:
+    case Src_editor_redux_common_actions.gc:
       return De(e, t)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Pe:
+    case Src_editor_redux_common_actions.Pe:
       return Me(e, t)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Ub:
+    case Src_editor_redux_common_actions.Ub:
       return Le(e, t)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.fe:
-      return e.set("tableDataDialog", a.a({}, t.payload))
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.ue:
+    case Src_editor_redux_common_actions.fe:
+      return e.set("tableDataDialog", Module_6.a({}, t.payload))
+    case Src_editor_redux_common_actions.ue:
       return e.set("dataWatchToast", {
         visible: true,
         toast: t.payload.toast,
         showIcon: t.payload.showIcon || false
       })
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.sc:
+    case Src_editor_redux_common_actions.sc:
       return e.set("dataWatchToast", {
         visible: false
       })

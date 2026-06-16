@@ -6,11 +6,11 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$_119 from "./119"
-import * as c from "./65"
-import * as /* [auto-meaningful-name] */$_32_index from "./32/index"
-import * as /* [auto-meaningful-name] */$$_105 from "../105"
-import * as /* [auto-meaningful-name] */$_1023 from "./1023"
+import * as /* [auto-meaningful-name] */Module_119 from /* 119 */"./119"
+import * as /* [auto-meaningful-name] */Module_65 from /* 65 */"./65"
+import * as /* [auto-meaningful-name] */Module_32 from /* 32 */"./32/index"
+import * as /* [auto-meaningful-name] */Module_105 from /* 105 */"../105"
+import * as /* [auto-meaningful-name] */Module_1023 from /* 1023 */"./1023"
 var ne = function () {
   var e = function (t, n) {
     return (e = Object.setPrototypeOf || {
@@ -34,8 +34,8 @@ var ne = function () {
 var re = function (e) {
   function t(t, n, r, i, o, a, s, c, u) {
     var l = e.call(this, t, r, i) || this
-    l.type = $$_105.d.Background
-    l.rotation_type = $$_105.e.ALL
+    l.type = Module_105.d.Background
+    l.rotation_type = Module_105.e.ALL
     l.rotation_value = 0
     l.is_horizontal_flipped = false
     l.is_vertical_flipped = false
@@ -132,19 +132,19 @@ var re = function (e) {
     }
   }
   t.prototype.set_rotation = function (e) {
-    var t = c.s(e)
+    var t = Module_65.s(e)
     this.rotation_value = t
     var n = false
     switch (this.rotation_type) {
-      case $$_105.e.ALL:
+      case Module_105.e.ALL:
         this.set_pixi_rotation(-this.rotation_value)
         n = this.is_rotation_flipped
         break
-      case $$_105.e.LEFT_RIGHT:
+      case Module_105.e.LEFT_RIGHT:
         this.set_pixi_rotation(0)
         n = (this.rotation_value >= Math.PI / 2 || this.rotation_value < -Math.PI / 2) !== this.is_rotation_flipped
         break
-      case $$_105.e.NONE:
+      case Module_105.e.NONE:
         this.set_pixi_rotation(0)
         n = this.is_rotation_flipped
     }
@@ -209,7 +209,7 @@ var re = function (e) {
   t.prototype.set_texture = function (e, t) {
     var n = this.data.get_texture(e)
     if (!n) {
-      return new $_119.a("Cannot find texture " + e + ". Please load texture first")
+      return new Module_119.a("Cannot find texture " + e + ". Please load texture first")
     }
     this.texture = n
     this.texture_id = e
@@ -232,7 +232,7 @@ var re = function (e) {
       var i = e$height / this.texture.height
       var o = undefined
       switch (this.adaption) {
-        case $$_105.a.CONTAIN:
+        case Module_105.a.CONTAIN:
           o = Math.min(r, i)
           this.adaptive_scale = {
             x: o,
@@ -245,7 +245,7 @@ var re = function (e) {
             y: this.height / 2
           }
           break
-        case $$_105.a.COVER:
+        case Module_105.a.COVER:
           o = Math.max(r, i)
           this.adaptive_scale = {
             x: o,
@@ -258,7 +258,7 @@ var re = function (e) {
             y: e$height / 2
           }
           break
-        case $$_105.a.STRETCH:
+        case Module_105.a.STRETCH:
           this.adaptive_scale = {
             x: r,
             y: i
@@ -301,7 +301,7 @@ var re = function (e) {
     e.prototype.destroy.call(this)
   }
   return t
-}($_32_index.z)
+}(Module_32.z)
 var ie = function (e) {
   function t(t, n, r, i, o, a, s, c, u) {
     var l = e.call(this, t, n, r, i, o, a, s, c, u) || this
@@ -461,7 +461,7 @@ var oe = function () {
 var ae = function (e) {
   function t(t, n, r, i, o, s) {
     var c = e.call(this) || this
-    c.type = $$_105.d.Scene
+    c.type = Module_105.d.Scene
     c.brush_canvas = document.createElement("canvas")
     c.brush_ctx = c.brush_canvas.getContext("2d")
     c.should_update_brush_texture = false
@@ -492,18 +492,18 @@ var ae = function (e) {
     var d = c.app.get_app_view_resolution()
     c.visible = false
     c.interactive = true
-    var h = c.app.get_renderer_type() === $_32_index.p.WEBGL
+    var h = c.app.get_renderer_type() === Module_32.p.WEBGL
     var p = c.emit_event.bind(c)
     c.background = new ie(n, r, c$app$get_app$view$width, c$app$get_app$view$height, p, o, i, s, t)
     c.addChildAt(c.background, 0)
     c.brush_canvas.width = c$app$get_app$view$width
     c.brush_canvas.height = c$app$get_app$view$height
-    c.brush_sprite = $_32_index.t.from(c.brush_canvas)
+    c.brush_sprite = Module_32.t.from(c.brush_canvas)
     c.brush_sprite.anchor.set(.5)
     c.brush_sprite.position.set(0, 0)
     c.brush_sprite.scale.set(1 / d)
     c.addChildAt(c.brush_sprite, 1)
-    c.actor_container = new $_32_index.f()
+    c.actor_container = new Module_32.f()
     c.actor_container.name = "actor_container"
     c.addChildAt(c.actor_container, 2)
     c.background.addListener("mousedown", function () {
@@ -533,7 +533,7 @@ var ae = function (e) {
     c.events.add_listener("stage:resize", c.on_resize)
     c.app.get_app().ticker.add(c.on_tick)
     if (h) {
-      c.effects = new $_1023.a(c.app, c)
+      c.effects = new Module_1023.a(c.app, c)
     }
     return c
   }
@@ -575,7 +575,7 @@ var ae = function (e) {
       return t.push(e.id)
     }
     this.actor_container.children.forEach(function (e) {
-      if (c.k(e)) {
+      if (Module_65.k(e)) {
         n(e.get_actor())
       }
     })
@@ -615,13 +615,13 @@ var ae = function (e) {
     })
   }
   t.prototype.get_effects = function () {
-    return this.effects ? $_119.b.success(this.effects) : $_119.b.error("Effect not available. It needs support of WebGL.")
+    return this.effects ? Module_119.b.success(this.effects) : Module_119.b.error("Effect not available. It needs support of WebGL.")
   }
   t.prototype.set_brush_target = function (e) {
     var t = this
     var n = this.data.get_internal_actor(e, [this.get_id()])
     if (!n) {
-      return new $_119.a("Cannot find actor " + e + " in scene " + this.id)
+      return new Module_119.a("Cannot find actor " + e + " in scene " + this.id)
     }
     n.wrapper.addChild(this.brush_sprite)
     this.brush_unset_listener = function () {
@@ -630,13 +630,13 @@ var ae = function (e) {
     n.add_listener("destroy", this.brush_unset_listener)
   }
   t.prototype.get_brush_target = function () {
-    if (c.k(this.brush_sprite.parent)) {
+    if (Module_65.k(this.brush_sprite.parent)) {
       return this.brush_sprite.parent.get_actor()
     }
   }
   t.prototype.unset_brush_target = function () {
     var /* [auto-meaningful-name] */this$brush_sprite$parent = this.brush_sprite.parent
-    if (c.k(this$brush_sprite$parent)) {
+    if (Module_65.k(this$brush_sprite$parent)) {
       this.addChildAt(this.brush_sprite, 1)
       if (this.brush_unset_listener) {
         this$brush_sprite$parent.get_actor().remove_listener("destroy", this.brush_unset_listener)
@@ -645,7 +645,7 @@ var ae = function (e) {
     }
   }
   return t
-}($_32_index.f)
+}(Module_32.f)
 var se = function () {
   function e(e, t, n, r, i) {
     this.transition_type = "none"
@@ -657,21 +657,21 @@ var se = function () {
   }
   e.prototype.load_scene = function (e, t) {
     if (this.data.get_internal_scene(e)) {
-      return $_119.b.error("Scene " + e + " already exists. Please use new scene id")
+      return Module_119.b.error("Scene " + e + " already exists. Please use new scene id")
     }
-    var n = t ? this.data.get_texture(t) : $_32_index.y.EMPTY
+    var n = t ? this.data.get_texture(t) : Module_32.y.EMPTY
     if (!n) {
-      return $_119.b.error("Cannot find texture " + t + ". Please load texture first")
+      return Module_119.b.error("Cannot find texture " + t + ". Please load texture first")
     }
     var r = this.scene(e, n, t || "", this.data, this.app)
     this.app.get_scene_container().addChild(r)
-    return $_119.b.success(r)
+    return Module_119.b.success(r)
   }
   e.prototype.set_current_scene = function (e, t) {
     var n = this
     var r = this.data.get_internal_scene(e)
     if (!r) {
-      return new $_119.a("Cannot find scene " + e)
+      return new Module_119.a("Cannot find scene " + e)
     }
     if (this.current_scene !== e) {
       if (!this.current_scene) {
@@ -681,7 +681,7 @@ var se = function () {
       }
       var i = this.data.get_internal_scene(this.current_scene)
       if (!i) {
-        return new $_119.a("Cannot find out scene " + this.current_scene)
+        return new Module_119.a("Cannot find out scene " + this.current_scene)
       }
       this.current_scene = e
       this.transition.set_transition(this.transition_type, i, r, function () {
@@ -698,7 +698,7 @@ var se = function () {
   e.prototype.destroy_scene = function (e) {
     var t = this.data.get_internal_scene(e)
     if (!t) {
-      return $_119.b.error("Cannot find scene " + e)
+      return Module_119.b.error("Cannot find scene " + e)
     }
     t.destroy()
     if (this.current_scene === e) {
@@ -707,11 +707,11 @@ var se = function () {
     var /* [auto-meaningful-name] */this$app$get_scene_container$children = this.app.get_scene_container().children
     var r = []
     this$app$get_scene_container$children.forEach(function (e) {
-      if (c.m(e)) {
+      if (Module_65.m(e)) {
         r.push(e.id)
       }
     })
-    return $_119.b.success({
+    return Module_119.b.success({
       scene_ids: r
     })
   }
@@ -719,10 +719,10 @@ var se = function () {
     var t = this
     var n = this.data.get_internal_scene(e)
     if (!n) {
-      return new $_119.a("Cannot find scene " + e)
+      return new Module_119.a("Cannot find scene " + e)
     }
     n.get_actor_container().removeChildren().forEach(function (e) {
-      if (c.k(e)) {
+      if (Module_65.k(e)) {
         var n = e.get_actor()
         n.destroy()
         t.data.clear_actor_cache(n.get_id())
@@ -743,7 +743,7 @@ var se = function () {
   e.prototype.get_scene_ids = function () {
     var e = []
     this.app.get_scene_container().children.forEach(function (t) {
-      if (c.m(t)) {
+      if (Module_65.m(t)) {
         e.push(t.id)
       }
     })
@@ -751,7 +751,7 @@ var se = function () {
   }
   e.prototype.set_one_scene_visible = function (e) {
     this.app.get_scene_container().children.forEach(function (t) {
-      if (c.m(t)) {
+      if (Module_65.m(t)) {
         if (t.id === e) {
           t.visible = true
         } else {
@@ -762,14 +762,14 @@ var se = function () {
     this.events.fire("scene:current_scene_changed", e)
   }
   e.prototype.set_transition_type = function (e) {
-    if ("distort" === e && this.app.get_renderer_type() !== $_32_index.p.WEBGL) {
-      return new $_119.a("Only WEBGL support distort transition")
+    if ("distort" === e && this.app.get_renderer_type() !== Module_32.p.WEBGL) {
+      return new Module_119.a("Only WEBGL support distort transition")
     }
     this.transition_type = e
   }
   e.prototype.get_scene = function (e) {
     var t = this.data.get_internal_scene(e)
-    return t ? $_119.b.success(t) : $_119.b.error("Cannot find scene " + e)
+    return t ? Module_119.b.success(t) : Module_119.b.error("Cannot find scene " + e)
   }
   return e
 }()

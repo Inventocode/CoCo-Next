@@ -4,12 +4,12 @@
  * 模块 ID：2020
  */
 
-var /* [auto-meaningful-name] */require$_1333_1121_index$FilterCSS = require("./1333/1121/index").FilterCSS
-var i = require("./1333/index")
-var o = require("./1336")
+var /* [auto-meaningful-name] */require_1121_$_1333_1121_index$FilterCSS = require(/* 1121 */"./1333/1121/index").FilterCSS
+var i = require(/* 1333 */"./1333/index")
+var o = require(/* 1336 */"./1336")
 var /* [auto-meaningful-name] */o$parseTag = o.parseTag
 var /* [auto-meaningful-name] */o$parseAttr = o.parseAttr
-var c = require("./1333/1122")
+var c = require(/* 1122 */"./1333/1122")
 function u(e) {
   return undefined === e || null === e
 }
@@ -51,7 +51,7 @@ function l(e) {
     this.cssFilter = false
   } else {
     e.css = e.css || {}
-    this.cssFilter = new require$_1333_1121_index$FilterCSS(e.css)
+    this.cssFilter = new require_1121_$_1333_1121_index$FilterCSS(e.css)
   }
 }
 l.prototype.process = function (e) {

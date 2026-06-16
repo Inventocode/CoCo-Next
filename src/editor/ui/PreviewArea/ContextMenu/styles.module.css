@@ -1,0 +1,97 @@
+/**
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：472
+ */
+
+.wrapper {
+    position: fixed;
+    width: 150px;
+    height: auto;
+    background: #fff;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.15);
+    border-radius: 6px;
+    padding: 5px 0;
+    z-index: 50
+}
+
+.menuItem {
+    height: 38px;
+    line-height: 38px;
+    padding: 0 16px;
+    color: var(--dark-text-color-t7);
+    cursor: pointer
+}
+
+.menuItem:hover {
+    background-color: var(--primary-color-8)
+}
+
+.copyTo {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.delete {
+    color: #ff2f2f
+}
+
+.screens {
+    position: absolute;
+    width: 152px;
+    max-height: calc(100vh - 120px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    background: #fff;
+    left: 100%;
+    padding: 6px 0;
+    box-shadow: 0 1px 6px 0 rgba(0,0,0,.15);
+    border-radius: 4px
+}
+
+.screens > li {
+    height: 40px;
+    padding: 6px 0 6px 10px;
+    display: flex;
+    align-items: center
+}
+
+.screens > li span {
+    width: 20px;
+    display: inline-block;
+    text-align: right;
+    color: var(--primary-color-0)
+}
+
+.screens > li p {
+    width: 75px;
+    overflow: hidden;
+    margin: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.screens > li:hover {
+    background-color: var(--primary-color-8)
+}
+
+.screenSnapshot {
+    width: 28px;
+    height: 28px;
+    border-radius: 4px;
+    border: 1px solid #eddbff;
+    overflow: hidden;
+    margin: 0 8px;
+    position: relative
+}
+
+.screenSnapshot img {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 100%
+}

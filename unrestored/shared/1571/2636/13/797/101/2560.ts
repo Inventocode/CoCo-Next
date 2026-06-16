@@ -20,7 +20,7 @@ var i = Object.assign || function (e) {
   }
   return e
 }
-var o = require("react")
+var o = require(/* 0 */"react")
 var a = (r = o) && r.__esModule ? r : {
   default: r
 }

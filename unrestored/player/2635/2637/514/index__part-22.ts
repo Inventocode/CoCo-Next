@@ -7,10 +7,10 @@
 "use strict"
 
 import { Ce } from "./index__part-21"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_232_324 from "../../../../shared/1571/2636/232/324"
-import { useSelector } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_20_428_67_413 from "../../../../shared/1571/2636/20/428/67/413"
+import * as /* [auto-meaningful-name] */Module_324 from /* 324 */"../../../../shared/1571/2636/232/324"
+import { useSelector } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_413 from /* 413 */"../../../../shared/1571/2636/20/428/67/413"
 var Me = function () {
   return React.createElement("svg", {
     "aria-hidden": "true",
@@ -79,7 +79,7 @@ var ke = React.memo(function () {
     console.error("The currentScreen id is undefined")
   }
   return React.createElement("div", {
-    id: $$_$$_$$_$$_shared_1571_2636_232_324.a,
+    id: Module_324.a,
     style: {
       width: "100%",
       height: "100%"
@@ -87,7 +87,7 @@ var ke = React.memo(function () {
     onClick: function (t) {
       return t.stopPropagation()
     }
-  }, React.createElement($$_$$_$$_$$_shared_1571_2636_20_428_67_413.a, {
+  }, React.createElement(Module_413.a, {
     id: t || ""
   }), React.createElement(Me, null), React.createElement(Ce, null))
 })

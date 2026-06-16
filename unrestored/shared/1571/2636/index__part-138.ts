@@ -8,24 +8,24 @@
 
 import { py } from "./index__part-102"
 import { Mw, aC, sC, cC } from "./index__part-137"
-import * as Et from "./9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import * as /* [auto-meaningful-name] */$_748_index from "./748/index"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import { useDispatch, useSelector } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { memo, useRef, useState } from "react"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"./9"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import * as /* [auto-meaningful-name] */Module_748 from /* 748 */"./748/index"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import { useDispatch, useSelector } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo, useRef, useState } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_357 from "./357"
-import /* [auto-meaningful-name] */$_3571 from "./357"
+import * as /* [auto-meaningful-name] */Module_357 from /* 357 */"./357"
+import /* [auto-meaningful-name] */Module_3571 from /* 357 */"./357"
 var /* [auto-meaningful-name] */py$Option = py.Option
 var hC = memo(function (e) {
   var /* [auto-meaningful-name] */e$widgetId = e.widgetId
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
-  var r = Et.Bb(e$widgetId)
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
+  var r = Module_9.Bb(e$widgetId)
   var o = useRef(null)
   var i = useDispatch()
   var a = useSelector(function (e) {
@@ -43,7 +43,7 @@ var hC = memo(function (e) {
   var /* [auto-meaningful-name] */v$handleVisitCloudSpace = v.handleVisitCloudSpace
   var /* [auto-meaningful-name] */v$handleVisitDataSource = v.handleVisitDataSource
   var E = useState(false)
-  var O = $_10_index.a(E, 2)
+  var O = Module_10.a(E, 2)
   var w = O[0]
   var C = O[1]
   if (!r) {
@@ -51,7 +51,7 @@ var hC = memo(function (e) {
   }
   var T = function () {
     C(false)
-    i($$_$$_$$_$$_src_editor_redux_common_actions.Ch())
+    i(Src_editor_redux_common_actions.Ch())
   }
   var j = React.createElement(py, {
     open: w,
@@ -68,7 +68,7 @@ var hC = memo(function (e) {
       var t = React.createElement(React.Fragment, null, React.createElement("div", {
         onMouseOut: s$onMouseOut,
         onMouseOver: s$onMouseOver,
-        className: Classnames($_3571.optionItem, $_3571.addTable),
+        className: Classnames(Module_3571.optionItem, Module_3571.addTable),
         onClick: function () {
           var /* [auto-meaningful-name] */o$current
           if (!(null === o || undefined === o || null === (o$current = o.current) || undefined === o$current)) {
@@ -76,37 +76,37 @@ var hC = memo(function (e) {
           }
           v$handleVisitCloudSpace(Mw.Table)
         }
-      }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+      }, React.createElement(Src_shared_ui_components_index.j, {
         type: "icon-add"
       }), React.createElement("div", {
-        className: $_3571.newText
-      }, $_710$a$formatMessage({
+        className: Module_3571.newText
+      }, Module_710$a$formatMessage({
         id: "cloudSpace.newTable"
       })), React.createElement("div", {
-        className: $_3571.suffixIcon
-      }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+        className: Module_3571.suffixIcon
+      }, React.createElement(Src_shared_ui_components_index.j, {
         type: "icon-return-arrow"
       }))), s$cloudDataSources.length > 0 ? React.createElement("div", {
-        className: Classnames($_3571.line, s$addItemHover ? $_3571.hideLine : "")
+        className: Classnames(Module_3571.line, s$addItemHover ? Module_3571.hideLine : "")
       }) : "", s$cloudDataSources.length > 0 ? React.createElement("div", null, e) : "")
-      var r = React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
+      var r = React.createElement(Src_shared_ui_components_index.d, {
         type: "primary",
         onClick: T
-      }, $_710$a$formatMessage({
+      }, Module_710$a$formatMessage({
         id: "cloudSpace.needLogin"
       }))
       return React.createElement("div", {
-        className: Classnames("cloudTableDropdown", a ? "" : $_3571.unLoginDropdown, s$addItemHover ? "addBtnActive" : "")
+        className: Classnames("cloudTableDropdown", a ? "" : Module_3571.unLoginDropdown, s$addItemHover ? "addBtnActive" : "")
       }, a ? t : r)
     },
     value: s$dataSourceId,
     defaultValue: undefined,
     onChange: function (e) {
       C(false)
-      s$bindDataSourceId(e || Et.i)
+      s$bindDataSourceId(e || Module_9.i)
     },
-    dropdownClassName: $_3571.cloudSpaceAntSelectDropdown,
-    placeholder: $_710$a$formatMessage({
+    dropdownClassName: Module_3571.cloudSpaceAntSelectDropdown,
+    placeholder: Module_710$a$formatMessage({
       id: "cloudSpace.ChooseDataSource"
     })
   }, s$cloudDataSources.map(function (e) {
@@ -115,35 +115,35 @@ var hC = memo(function (e) {
       value: e.id,
       key: e.id
     }, React.createElement("div", {
-      className: Classnames($_3571.optionRenderBox)
+      className: Classnames(Module_3571.optionRenderBox)
     }, React.createElement("div", {
-      className: Classnames($_3571.prefixIcon, "spaceCloud-select-icon")
-    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+      className: Classnames(Module_3571.prefixIcon, "spaceCloud-select-icon")
+    }, React.createElement(Src_shared_ui_components_index.j, {
       type: "icon-widget-cloud-table"
     })), React.createElement("div", {
-      className: Classnames($_3571.tableName, s$dataSourceId === e.id ? $_3571.optionSelected : "")
+      className: Classnames(Module_3571.tableName, s$dataSourceId === e.id ? Module_3571.optionSelected : "")
     }, React.createElement("div", {
-      className: $_3571.nameText
+      className: Module_3571.nameText
     }, e.name)), React.createElement("div", {
-      className: $_3571.suffixIcon,
+      className: Module_3571.suffixIcon,
       onClick: function (t) {
         return v$handleVisitDataSource("table", e.id)
       }
-    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+    }, React.createElement(Src_shared_ui_components_index.j, {
       type: "icon-return-arrow"
     }))))
   }))
   return React.createElement("div", {
-    className: Classnames($_3571.formItemWrapper, $_3571.tableFields)
+    className: Classnames(Module_3571.formItemWrapper, Module_3571.tableFields)
   }, React.createElement("div", {
-    className: $_3571.title
-  }, React.createElement("div", null, $_710$a$formatMessage({
+    className: Module_3571.title
+  }, React.createElement("div", null, Module_710$a$formatMessage({
     id: "cloudSpace.DataSource"
   }))), React.createElement("div", {
-    className: $_3571.bindSource
-  }, g ? j : React.createElement($_748_index.a, {
+    className: Module_3571.bindSource
+  }, g ? j : React.createElement(Module_748.a, {
     placement: "bottom",
-    title: $_710$a$formatMessage({
+    title: Module_710$a$formatMessage({
       id: "cloudSpace.onlyAuthorCanEdit"
     })
   }, j)))

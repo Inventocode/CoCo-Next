@@ -16,7 +16,7 @@
         "noFallthroughCasesInSwitch": false,
         "noImplicitOverride": true,
         "noImplicitReturns": true,
-        "noPropertyAccessFromIndexSignature": true,
+        // "noPropertyAccessFromIndexSignature": true,
         "noUncheckedIndexedAccess": true,
         "noUnusedLocals": true,
         "noUnusedParameters": true,
@@ -28,5 +28,5 @@
         ]
     },
     "include": ["src/**/*", "unrestored/**/*", "scripts/**/*", "helper/**/*"],
-    "exclude": ["node_modules", "public"]
+    "exclude": ["node_modules", "public", "src/**/*.unrestored.*"]
 }

@@ -6,19 +6,19 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import { memo, useRef, useState, useEffect } from "react"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import { memo, useRef, useState, useEffect } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import { useSelector, useDispatch } from "react-redux"
-import * as /* [auto-meaningful-name] */Classnames from "classnames"
-import /* [auto-meaningful-name] */Classnames1 from "classnames"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as p from "./99"
-import f from "./99"
-import * as /* [auto-meaningful-name] */$_188 from "./188"
+import /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import { useSelector, useDispatch } from /* 16 */"react-redux"
+import * as /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import /* [auto-meaningful-name] */Classnames1 from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Module_99 from /* 99 */"./99"
+import /* [auto-meaningful-name] */Module_991 from /* 99 */"./99"
+import * as /* [auto-meaningful-name] */Module_188 from /* 188 */"./188"
 var _a
 _a = memo(function () {
   var t = useSelector(function (e) {
@@ -33,15 +33,15 @@ _a = memo(function () {
   var /* [auto-meaningful-name] */t$validator = t.validator
   var /* [auto-meaningful-name] */t$confirmCallback = t.confirmCallback
   var /* [auto-meaningful-name] */t$cancelCallback = t.cancelCallback
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var O = useRef(null)
   var w = useDispatch()
   var C = useState("")
-  var T = $_10_index.a(C, 2)
+  var T = Module_10.a(C, 2)
   var S = T[0]
   var A = T[1]
   var I = useState(t$defaultValue || "")
-  var j = $_10_index.a(I, 2)
+  var j = Module_10.a(I, 2)
   var N = j[0]
   var R = j[1]
   useEffect(function () {
@@ -64,38 +64,38 @@ _a = memo(function () {
     if (!(null === t$cancelCallback || undefined === t$cancelCallback)) {
       t$cancelCallback.call(null)
     }
-    w($$_$$_$$_$$_src_editor_redux_common_actions.jh())
+    w(Src_editor_redux_common_actions.jh())
   }
   var x = function () {
     if (!S && N) {
       if (!(null === t$confirmCallback || undefined === t$confirmCallback)) {
         t$confirmCallback.call(null, N)
       }
-      w($$_$$_$$_$$_src_editor_redux_common_actions.jh())
+      w(Src_editor_redux_common_actions.jh())
     }
   }
-  return React1.createElement($$_$$_$$_$$_src_shared_ui_components_index.f, {
+  return React1.createElement(Src_shared_ui_components_index.f, {
     visible: t$visible,
-    className: Classnames1(f.nameDialog),
+    className: Classnames1(Module_991.nameDialog),
     onClose: k,
     withPortal: true
-  }, React1.createElement($_188.a, {
+  }, React1.createElement(Module_188.a, {
     useCapture: true
-  }, React1.createElement($_188.b, {
+  }, React1.createElement(Module_188.b, {
     keys: "enter",
     callback: x
   })), React1.createElement("p", {
-    className: f.dialogTitle
-  }, t$title && $_710$a$formatMessage({
+    className: Module_991.dialogTitle
+  }, t$title && Module_710$a$formatMessage({
     id: t$title
   }) || ""), React1.createElement("div", {
-    className: f.inputWrapper
-  }, React1.createElement("span", null, $_710$a$formatMessage({
+    className: Module_991.inputWrapper
+  }, React1.createElement("span", null, Module_710$a$formatMessage({
     id: "name"
-  })), React1.createElement($$_$$_$$_$$_src_shared_ui_components_index.k, {
+  })), React1.createElement(Src_shared_ui_components_index.k, {
     ref: O,
     warning: !!S,
-    placeholder: t$placeholder && $_710$a$formatMessage({
+    placeholder: t$placeholder && Module_710$a$formatMessage({
       id: t$placeholder
     }),
     onChange: function (e) {
@@ -106,20 +106,20 @@ _a = memo(function () {
     maxLength: _,
     value: N
   }), S && React1.createElement("div", {
-    className: f.warningTips
-  }, " ", $_710$a$formatMessage({
+    className: Module_991.warningTips
+  }, " ", Module_710$a$formatMessage({
     id: S
   }))), React1.createElement("div", {
-    className: f.confirmBox
-  }, React1.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
+    className: Module_991.confirmBox
+  }, React1.createElement(Src_shared_ui_components_index.d, {
     onClick: k
-  }, $_710$a$formatMessage({
+  }, Module_710$a$formatMessage({
     id: "cancel"
-  })), React1.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
+  })), React1.createElement(Src_shared_ui_components_index.d, {
     onClick: x,
     type: "primary",
     disabled: !!S || !N
-  }, $_710$a$formatMessage({
+  }, Module_710$a$formatMessage({
     id: "confirm"
   }))))
 })

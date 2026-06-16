@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("./765/index")
+var r = require(/* 765 */"./765/index")
 module.exports = function (e) {
   r.copy(e, this)
 }

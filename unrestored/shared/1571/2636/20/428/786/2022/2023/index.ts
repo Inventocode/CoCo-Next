@@ -4,7 +4,7 @@
  * 模块 ID：2023
  */
 
-var r = require("./2024/index")
+var r = require(/* 2024 */"./2024/index")
 r.prototype.toPostfix = function () {
   "use strict"
 

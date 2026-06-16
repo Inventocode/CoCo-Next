@@ -6,13 +6,13 @@
 
 import React from "react"
 import ReactDom from "react-dom"
-import * as /* [auto-meaningful-name] */$$_shared_tools from "../shared/tools"
+import { parseURLSearchParamsToObject } from "../shared/tools"
 import { SafeLoad } from "./safe-load"
 
-var App = React.memo(function () {
-  const channel = ($$_shared_tools.N(window.location.href).channel || "").toUpperCase()
-  window.history.pushState = function () {}
-  window.history.replaceState = function () {}
+const App = React.memo(() => {
+  const channel = (parseURLSearchParamsToObject(window.location.href).channel || "").toUpperCase()
+  window.history.pushState = () => {}
+  window.history.replaceState = () => {}
   return <SafeLoad channel={channel} />
 })
 

@@ -6,10 +6,10 @@
 
 import * as React from "react"
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_redux_common_actions from "../../../redux/common/actions"
+import * as /* [auto-meaningful-name] */Redux_common_actions from "../../../redux/common/actions"
 import { CoCoDialog, IconFont } from "../../../../shared/ui/components"
 import { useDispatch, useSelector } from "react-redux"
-import styles from "../../../../../unrestored/shared/1571/2636/1062"
+import styles from "./style/styles.module.css"
 
 var ML = React.memo(() => {
   var e = useDispatch()
@@ -23,7 +23,7 @@ var ML = React.memo(() => {
       visible={blockImageDialogInfo$visible}
       className={styles.blockImageDialog}
       onClose={() => {
-        e($$_$$_$$_redux_common_actions.bi(false, ""))
+        e(Redux_common_actions.bi(false, ""))
       }}
     >
       <div className={styles.blockImageWrap}>

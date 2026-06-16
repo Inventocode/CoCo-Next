@@ -6,36 +6,36 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_block_toolbox from "../../../../../src/editor/block/toolbox"
-import * as /* [auto-meaningful-name] */$$_25_index from "../25/index"
-import * as /* [auto-meaningful-name] */$$_27 from "../27"
-import * as /* [auto-meaningful-name] */$$_39 from "../39"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index from "../../../../../src/shared/packages/@crc/blink/src/index"
-import * as l from "../9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_language from "../../../../../src/shared/ui/language"
-import * as /* [auto-meaningful-name] */$$_301_index from "../301/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_tools_index from "../../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */Src_editor_block_toolbox from /* 261 */"../../../../../src/editor/block/toolbox"
+import * as /* [auto-meaningful-name] */Module_25 from /* 25 */"../25/index"
+import * as /* [auto-meaningful-name] */Module_27 from /* 27 */"../27"
+import * as /* [auto-meaningful-name] */Module_39 from /* 39 */"../39"
+import * as /* [auto-meaningful-name] */Src_shared_packages_Crc_blink_src_index from /* 17 */"../../../../../src/shared/packages/@crc/blink/src/index"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"../9"
+import * as /* [auto-meaningful-name] */Src_shared_ui_language from /* 23 */"../../../../../src/shared/ui/language"
+import * as /* [auto-meaningful-name] */Module_301 from /* 301 */"../301/index"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../../src/shared/tools/index"
 var h = new (function () {
   function e() {
-    $$_27.a(this, e)
+    Module_27.a(this, e)
     this.lastSelectedWidgetCategoryName = undefined
     this.basicToolboxConfig = undefined
   }
-  $$_39.a(e, [
+  Module_39.a(e, [
     {
       key: "getToolbox",
       value: function () {
-        var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index$Blink$mainWorkspace
-        return null === ($$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index$Blink$mainWorkspace = $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace) || undefined === $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index$Blink$mainWorkspace ? undefined : $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index$Blink$mainWorkspace.get_toolbox()
+        var /* [auto-meaningful-name] */Src_shared_packages_Crc_blink_src_index$Blink$mainWorkspace
+        return null === (Src_shared_packages_Crc_blink_src_index$Blink$mainWorkspace = Src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace) || undefined === Src_shared_packages_Crc_blink_src_index$Blink$mainWorkspace ? undefined : Src_shared_packages_Crc_blink_src_index$Blink$mainWorkspace.get_toolbox()
       }
     }, {
       key: "convertBlockTypeToXml",
       value: function (e) {
-        var t = $$_301_index.a()
+        var t = Module_301.a()
         var n = "<xml>"
         e.forEach(function (e) {
-          if (e !== $$_$$_$$_$$_$$_src_editor_block_toolbox.c) {
+          if (e !== Src_editor_block_toolbox.c) {
             if (t[e]) {
               n += t[e]
             } else {
@@ -46,7 +46,7 @@ var h = new (function () {
           }
         })
         n += "</xml>"
-        return $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.xml.text_to_dom(n).children
+        return Src_shared_packages_Crc_blink_src_index.Blink.xml.text_to_dom(n).children
       }
     }, {
       key: "getConfig",
@@ -55,8 +55,8 @@ var h = new (function () {
         if (this.basicToolboxConfig) {
           return this.basicToolboxConfig
         }
-        var t = Object.keys($$_$$_$$_$$_$$_src_editor_block_toolbox.f).map(function (t) {
-          var n = $$_$$_$$_$$_$$_src_editor_block_toolbox.f[t]
+        var t = Object.keys(Src_editor_block_toolbox.f).map(function (t) {
+          var n = Src_editor_block_toolbox.f[t]
           return {
             name: n.id,
             text: n.text,
@@ -66,7 +66,7 @@ var h = new (function () {
             blocks: Array.isArray(n.blocks) ? e.convertBlockTypeToXml(n.blocks) : n.blocks
           }
         })
-        this.basicToolboxConfig = [].concat($$_25_index.a(t), [
+        this.basicToolboxConfig = [].concat(Module_25.a(t), [
           {
             name: "toolbox-widget",
             text: "%{BKY_COMPONENTS}",
@@ -128,19 +128,19 @@ var h = new (function () {
             return t.get_name() === e
           })
           if (!c) {
-            if (n === $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.m) {
+            if (n === Src_editor_widget_builtIn_types.m) {
               return
             }
-            var l = $$_$$_$$_$$_$$_src_editor_block_toolbox.e()[n]
+            var l = Src_editor_block_toolbox.e()[n]
             if (!l) {
               return void console.error("Type [".concat(n, "] has no toolbox config. "))
             }
             c = s.new_node({
               name: e,
-              text: t || l.text || $$_$$_$$_$$_$$_src_shared_ui_language.c($$_$$_$$_$$_$$_src_shared_ui_language.b, "untitled"),
+              text: t || l.text || Src_shared_ui_language.c(Src_shared_ui_language.b, "untitled"),
               icon: {
-                font_id: $$_$$_$$_$$_$$_src_shared_tools_index.X(l.iconId) ? undefined : l.iconId,
-                html: $$_$$_$$_$$_$$_src_shared_tools_index.X(l.iconId) ? "<img draggable=\"false\" style=\"width: 16px; height: 16px;\" src=\"".concat(l.iconId, "\">") : undefined
+                font_id: Src_shared_tools_index.X(l.iconId) ? undefined : l.iconId,
+                html: Src_shared_tools_index.X(l.iconId) ? "<img draggable=\"false\" style=\"width: 16px; height: 16px;\" src=\"".concat(l.iconId, "\">") : undefined
               },
               blocks: a ? "ANY_".concat(n) : Array.isArray(l.blocks) ? this.convertBlockTypeToXml(l.blocks) : l.blocks
             })
@@ -173,13 +173,13 @@ var h = new (function () {
             console.error(d)
           }
           var u = []
-          this._appendTreeNode(e.id, e.title, $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.D, a, o)
+          this._appendTreeNode(e.id, e.title, Src_editor_widget_builtIn_types.D, a, o)
           e.widgetIds.forEach(function (e) {
-            var t = l.dc.get(e)
+            var t = Module_9.dc.get(e)
             if (t) {
-              var r = l.qb(e)
-              if (!((null === r || undefined === r ? undefined : r.type) && [$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.x, $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.A].includes(r.type))) {
-                n._appendTreeNode(t.id, l.Fb(t.id), t.type, a, o)
+              var r = Module_9.qb(e)
+              if (!((null === r || undefined === r ? undefined : r.type) && [Src_editor_widget_builtIn_types.x, Src_editor_widget_builtIn_types.A].includes(r.type))) {
+                n._appendTreeNode(t.id, Module_9.Fb(t.id), t.type, a, o)
                 if (-1 === u.indexOf(t.type)) {
                   u.unshift(t.type)
                 }
@@ -188,9 +188,9 @@ var h = new (function () {
           })
           if (!(null === (e$invisibleWidgetIds = e.invisibleWidgetIds) || undefined === e$invisibleWidgetIds)) {
             e$invisibleWidgetIds.forEach(function (e) {
-              var t = l.dc.get(e)
+              var t = Module_9.dc.get(e)
               if (t) {
-                n._appendTreeNode(t.id, l.Fb(t.id), t.type, s, i)
+                n._appendTreeNode(t.id, Module_9.Fb(t.id), t.type, s, i)
                 if (-1 === u.indexOf(t.type)) {
                   u.unshift(t.type)
                 }
@@ -221,9 +221,9 @@ var h = new (function () {
           var o = r.remove_children()
           var i = []
           e.forEach(function (e) {
-            var n = l.dc.get(e)
+            var n = Module_9.dc.get(e)
             if (n) {
-              t._appendTreeNode(n.id, l.Fb(n.id), n.type, o, r)
+              t._appendTreeNode(n.id, Module_9.Fb(n.id), n.type, o, r)
               if (-1 === i.indexOf(n.type)) {
                 i.unshift(n.type)
               }
@@ -254,9 +254,9 @@ var h = new (function () {
     }, {
       key: "updateToolBoxWidgetTitle",
       value: function (e, t) {
-        var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index$Blink$mainWorkspace
+        var /* [auto-meaningful-name] */Src_shared_packages_Crc_blink_src_index$Blink$mainWorkspace
         var r
-        var o = null === ($$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index$Blink$mainWorkspace = $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace) || undefined === $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index$Blink$mainWorkspace || null === (r = $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index$Blink$mainWorkspace.get_toolbox()) || undefined === r ? undefined : r.find_node_by_name(e)
+        var o = null === (Src_shared_packages_Crc_blink_src_index$Blink$mainWorkspace = Src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace) || undefined === Src_shared_packages_Crc_blink_src_index$Blink$mainWorkspace || null === (r = Src_shared_packages_Crc_blink_src_index$Blink$mainWorkspace.get_toolbox()) || undefined === r ? undefined : r.find_node_by_name(e)
         if (o) {
           o.get_element().getElementsByClassName("blocklyTreeLabel")[0].textContent = t
         }
@@ -269,11 +269,11 @@ var h = new (function () {
         if (e) {
           var t
           var n = e
-          var r = l.qb(e)
-          if ((null === r || undefined === r ? undefined : r.type) && [$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.x, $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.A].includes(r.type)) {
+          var r = Module_9.qb(e)
+          if ((null === r || undefined === r ? undefined : r.type) && [Src_editor_widget_builtIn_types.x, Src_editor_widget_builtIn_types.A].includes(r.type)) {
             n = r.id
           }
-          var o = null === (t = $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_toolbox()) || undefined === t ? undefined : t.find_node_by_name(n)
+          var o = null === (t = Src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_toolbox()) || undefined === t ? undefined : t.find_node_by_name(n)
           if (o) {
             o.get_element().classList.add("cocoWidgetSelected")
           }

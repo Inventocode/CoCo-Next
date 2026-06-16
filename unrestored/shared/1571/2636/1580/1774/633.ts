@@ -6,8 +6,8 @@
 
 var r
 var o
-var i = require("../1785/194")
-var a = require("./1253/634")
+var i = require(/* 194 */"../1785/194")
+var a = require(/* 634 */"./1253/634")
 var /* [auto-meaningful-name] */i$process = i.process
 var /* [auto-meaningful-name] */i$Deno = i.Deno
 var l = i$process && i$process.versions || i$Deno && i$Deno.version

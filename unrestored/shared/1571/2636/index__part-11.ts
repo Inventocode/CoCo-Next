@@ -7,15 +7,15 @@
 "use strict"
 
 var Xe
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_load from "../../../../src/shared/widget/custom/load"
-import * as /* [auto-meaningful-name] */$_276 from "./276"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_ui_header_styles$module$css from "../../../../src/editor/ui/header/styles.module.css"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_ui_header_styles$module$css1 from "../../../../src/editor/ui/header/styles.module.css"
-import * as /* [auto-meaningful-name] */$_750 from "./750"
-import /* [auto-meaningful-name] */$_7501 from "./750"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Src_shared_widget_custom_load from /* 34 */"../../../../src/shared/widget/custom/load"
+import * as /* [auto-meaningful-name] */Module_276 from /* 276 */"./276"
+import * as /* [auto-meaningful-name] */Src_editor_ui_header_styles_module_css from /* 161 */"../../../../src/editor/ui/Header/styles.module.css"
+import /* [auto-meaningful-name] */Src_editor_ui_header_styles_module_css1 from /* 161 */"../../../../src/editor/ui/Header/styles.module.css"
+import * as /* [auto-meaningful-name] */Module_750 from /* 750 */"./750"
+import /* [auto-meaningful-name] */Module_7501 from /* 750 */"./750"
 !function (e) {
   e[e.ERROR = 0] = "ERROR"
   e[e.WARN = 1] = "WARN"
@@ -24,17 +24,17 @@ var ot = React.memo(function (e) {
   var /* [auto-meaningful-name] */e$type = e.type
   var /* [auto-meaningful-name] */e$message = e.message
   var /* [auto-meaningful-name] */e$onClose = e.onClose
-  var o = e$type === Xe.ERROR ? $_7501.error : $_7501.warn
+  var o = e$type === Xe.ERROR ? Module_7501.error : Module_7501.warn
   return React.createElement("div", {
-    className: Classnames(o, $_7501.container)
+    className: Classnames(o, Module_7501.container)
   }, React.createElement("span", {
-    className: $_7501.message
+    className: Module_7501.message
   }, e$message), React.createElement("span", {
-    className: $_7501.close,
+    className: Module_7501.close,
     onClick: e$onClose
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-close",
-    className: $_7501.icon
+    className: Module_7501.icon
   })))
 })
 export { Xe }

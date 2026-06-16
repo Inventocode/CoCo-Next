@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("./1555/index")
+var r = require(/* 1555 */"./1555/index")
 var /* [auto-meaningful-name] */r$default = r.default
 var /* [auto-meaningful-name] */r$DraggableCore = r.DraggableCore
 module.exports = r$default

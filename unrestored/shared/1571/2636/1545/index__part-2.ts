@@ -8,10 +8,10 @@
 
 import { d } from "./index__part-0"
 import { O, w } from "./index__part-1"
-import * as /* [auto-meaningful-name] */$$_1543_229 from "../1543/229"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import { useState, useEffect, useRef, useCallback, useMemo, useLayoutEffect, useImperativeHandle, createElement, forwardRef } from "react"
-import * as /* [auto-meaningful-name] */$$_1543_482 from "../1543/482"
+import * as /* [auto-meaningful-name] */Module_229 from /* 229 */"../1543/229"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import { useState, useEffect, useRef, useCallback, useMemo, useLayoutEffect, useImperativeHandle, createElement, forwardRef } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_482 from /* 482 */"../1543/482"
 function T(e, t) {
   for (var n = 0; n < t.length; n++) {
     var r = t[n]
@@ -514,7 +514,7 @@ function Y(e, t) {
         if (l$current === l.current) {
           s.current.forEach(function (e, t) {
             if (e && e.offsetParent) {
-              var n = $$_1543_482.a(e)
+              var n = Module_482.a(e)
               var /* [auto-meaningful-name] */n$offsetHeight = n.offsetHeight
               if (c.current.get(t) !== n$offsetHeight) {
                 c.current.set(t, n.offsetHeight)
@@ -622,7 +622,7 @@ function Y(e, t) {
     return [
       function (t) {
         if (e) {
-          $$_1543_229.a.cancel(a.current)
+          Module_229.a.cancel(a.current)
           var /* [auto-meaningful-name] */t$deltaY = t.deltaY
           i.current += t$deltaY
           s.current = t$deltaY
@@ -630,7 +630,7 @@ function Y(e, t) {
             if (!D) {
               t.preventDefault()
             }
-            a.current = $$_1543_229.a(function () {
+            a.current = Module_229.a(function () {
               var e = c.current ? 10 : 1
               o(i.current * e)
               i.current = 0
@@ -727,7 +727,7 @@ function Y(e, t) {
     var l = useRef()
     return function (r) {
       if (null !== r && undefined !== r) {
-        $$_1543_229.a.cancel(l.current)
+        Module_229.a.cancel(l.current)
         if ("number" === typeof r) {
           s(r)
         } else if (r && "object" === j(r)) {
@@ -775,7 +775,7 @@ function Y(e, t) {
                   s(S)
                 }
               }
-              l.current = $$_1543_229.a(function () {
+              l.current = Module_229.a(function () {
                 if (g) {
                   a()
                 }

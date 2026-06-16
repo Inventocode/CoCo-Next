@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("./2601")
+var r = require(/* 2601 */"./2601")
 var o = {
   "text/plain": "Text",
   "text/html": "Url",

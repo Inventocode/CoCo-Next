@@ -7,15 +7,15 @@
 "use strict"
 
 export { a }
-import * as /* [auto-meaningful-name] */$_919 from "./919"
-import * as /* [auto-meaningful-name] */$_1482 from "./1482"
-import * as /* [auto-meaningful-name] */$$_47_779 from "../47/779"
+import * as /* [auto-meaningful-name] */Module_919 from /* 919 */"./919"
+import * as /* [auto-meaningful-name] */Module_1482 from /* 1482 */"./1482"
+import * as /* [auto-meaningful-name] */Module_779 from /* 779 */"../47/779"
 function a(e) {
   return function (e) {
     if (Array.isArray(e)) {
-      return $_919.a(e)
+      return Module_919.a(e)
     }
-  }(e) || $_1482.a(e) || $$_47_779.a(e) || function () {
+  }(e) || Module_1482.a(e) || Module_779.a(e) || function () {
     throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.")
   }()
 }

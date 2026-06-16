@@ -9,9 +9,9 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 })
-var r = require("./359")
-var i = require("./1399/501")
-var o = require("./649")
+var r = require(/* 359 */"./359")
+var i = require(/* 501 */"./1399/501")
+var o = require(/* 649 */"./649")
 exports.optional = function () {
   return function (e, t, n) {
     var a = new i.Metadata(r.OPTIONAL_TAG, true)

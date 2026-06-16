@@ -6,9 +6,9 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$_268_index from "./268/index"
-import * as /* [auto-meaningful-name] */Hammerjs from "hammerjs"
-import * as /* [auto-meaningful-name] */$_32_index from "./32/index"
+import * as /* [auto-meaningful-name] */Module_268 from /* 268 */"./268/index"
+import * as /* [auto-meaningful-name] */Hammerjs from /* 562 */"hammerjs"
+import * as /* [auto-meaningful-name] */Module_32 from /* 32 */"./32/index"
 var s = {
   App: Symbol("App"),
   Data: Symbol("Data"),

@@ -7,41 +7,41 @@
 "use strict"
 
 import { Q } from "./index__part-3"
-import * as Et from "./9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_load from "../../../../src/shared/widget/custom/load"
-import * as /* [auto-meaningful-name] */$_141_index from "./141/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_language from "../../../../src/shared/ui/language"
-import { useSelector, useDispatch } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { useState, useRef, useCallback, useEffect, useLayoutEffect } from "react"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"./9"
+import * as /* [auto-meaningful-name] */Src_shared_widget_custom_load from /* 34 */"../../../../src/shared/widget/custom/load"
+import * as /* [auto-meaningful-name] */Module_141 from /* 141 */"./141/index"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import * as /* [auto-meaningful-name] */Src_shared_ui_language from /* 23 */"../../../../src/shared/ui/language"
+import { useSelector, useDispatch } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { useState, useRef, useCallback, useEffect, useLayoutEffect } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */Animejs from "animejs"
-import * as wn from "./90"
-import * as /* [auto-meaningful-name] */$_738_index from "./738/index"
-import * as Tn from "./68"
-import * as Sn from "./55"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
-import * as /* [auto-meaningful-name] */$_618 from "./618"
-import /* [auto-meaningful-name] */$_6181 from "./618"
+import * as /* [auto-meaningful-name] */Animejs from /* 205 */"animejs"
+import * as /* [auto-meaningful-name] */Module_90 from /* 90 */"./90"
+import * as /* [auto-meaningful-name] */Module_738 from /* 738 */"./738/index"
+import * as /* [auto-meaningful-name] */Module_68 from /* 68 */"./68"
+import * as /* [auto-meaningful-name] */Module_55 from /* 55 */"./55"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Module_618 from /* 618 */"./618"
+import /* [auto-meaningful-name] */Module_6181 from /* 618 */"./618"
 var Nn = React.memo(function (e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$vibrating = e.vibrating
   var /* [auto-meaningful-name] */e$scale = e.scale
   return React.createElement("div", {
-    className: Classnames($_6181.deviceFrameContainer, $_6181.galaxy5),
+    className: Classnames(Module_6181.deviceFrameContainer, Module_6181.galaxy5),
     style: {
       transform: "scale(".concat(e$scale, ")")
     }
   }, React.createElement("div", {
-    className: Classnames($_6181.deviceFrame, {
+    className: Classnames(Module_6181.deviceFrame, {
       vibrate: e$vibrating
     })
   }, e$children, React.createElement("div", {
-    className: $_6181.mask
+    className: Module_6181.mask
   })))
 })
 var Rn = React.memo(function () {
@@ -58,9 +58,9 @@ var Rn = React.memo(function () {
     return e.common.language
   })
   var o = useDispatch()
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var a = useState(false)
-  var s = $_10_index.a(a, 2)
+  var s = Module_10.a(a, 2)
   var c = s[0]
   var l = s[1]
   var u = useRef()
@@ -69,11 +69,11 @@ var Rn = React.memo(function () {
   var m = useRef(null)
   var g = useRef(null)
   var v = useState(null)
-  var b = $_10_index.a(v, 2)
+  var b = Module_10.a(v, 2)
   var y = b[0]
   var E = b[1]
   var O = useState(1)
-  var w = $_10_index.a(O, 2)
+  var w = Module_10.a(O, 2)
   var C = w[0]
   var A = w[1]
   var j = function (e) {
@@ -97,15 +97,15 @@ var Rn = React.memo(function () {
     var /* [auto-meaningful-name] */e$data$id = e$data.id
     var /* [auto-meaningful-name] */e$data$tab = e$data.tab
     var /* [auto-meaningful-name] */e$data$value = e$data.value
-    o($$_$$_$$_$$_src_editor_redux_common_actions.Pj(e$data$id, "value", e$data$value))
-    if (!(e$data$tab !== $$_$$_$$_$$_src_editor_widget_builtIn_types.B && e$data$tab !== $$_$$_$$_$$_src_editor_widget_builtIn_types.G)) {
-      o($$_$$_$$_$$_src_editor_redux_common_actions.Pj(e$data$id, "defaultValue", e$data$value))
+    o(Src_editor_redux_common_actions.Pj(e$data$id, "value", e$data$value))
+    if (!(e$data$tab !== Src_editor_widget_builtIn_types.B && e$data$tab !== Src_editor_widget_builtIn_types.G)) {
+      o(Src_editor_redux_common_actions.Pj(e$data$id, "defaultValue", e$data$value))
     }
   }, [o])
   var k = useCallback(function (e) {
     var /* [auto-meaningful-name] */e$data$type = e.data.type
     localStorage.removeItem("".concat(e$data$type, "DialogPermission"))
-    o($$_$$_$$_$$_src_editor_redux_common_actions.Ej({
+    o(Src_editor_redux_common_actions.Ej({
       type: e$data$type,
       visible: true,
       onConfirm: function () {
@@ -123,14 +123,14 @@ var Rn = React.memo(function () {
     var /* [auto-meaningful-name] */e$data$widgetId = e$data.widgetId
     e$data.message = e$data.message || ""
     if (!e$data$widgetType && e$data$widgetId) {
-      var c = Et.Bb(e$data$widgetId)
+      var c = Module_9.Bb(e$data$widgetId)
       if (c) {
         e$data$widgetType = c.type
       }
     }
     if (e$data$widgetType) {
-      var l = Et.Db(e$data$widgetType)
-      var u = $_710$a$formatMessage({
+      var l = Module_9.Db(e$data$widgetType)
+      var u = Module_710$a$formatMessage({
         id: (null === l || undefined === l ? undefined : l.title) || (null === l || undefined === l ? undefined : l.previewAreaWidgetTitle)
       })
       if (u) {
@@ -138,45 +138,45 @@ var Rn = React.memo(function () {
       }
     }
     if (e$data$widgetId) {
-      var d = Et.Fb(e$data$widgetId)
+      var d = Module_9.Fb(e$data$widgetId)
       if (d) {
         n += "".concat(d, " ")
       }
     }
-    if (e$data.msgType === Sn.a) {
-      if (e$data$widgetType && !$$_$$_$$_$$_src_shared_widget_custom_load.q(e$data$widgetType)) {
-        e$data.message = $$_$$_$$_$$_src_shared_ui_language.d(e$data.message, e$data.values)
+    if (e$data.msgType === Module_55.a) {
+      if (e$data$widgetType && !Src_shared_widget_custom_load.q(e$data$widgetType)) {
+        e$data.message = Src_shared_ui_language.d(e$data.message, e$data.values)
       }
     } else {
-      e$data.message = $$_$$_$$_$$_src_shared_ui_language.f(r, e$data.message, e$data.values)
+      e$data.message = Src_shared_ui_language.f(r, e$data.message, e$data.values)
     }
     if (n) {
       e$data.message = "".concat(n).concat(e$data.message)
     }
-    o($$_$$_$$_$$_src_editor_redux_common_actions.nf(e$data))
+    o(Src_editor_redux_common_actions.nf(e$data))
     if (!("error" !== e$data.type && "customError" !== e$data.type && "lintError" !== e$data.type)) {
-      $_141_index.a("ConsoleDetail", {
+      Module_141.a("ConsoleDetail", {
         errorMessage: e$data.message,
         warningMessage: ""
       })
     }
     if ("warning" === e$data.type) {
-      $_141_index.a("ConsoleDetail", {
+      Module_141.a("ConsoleDetail", {
         errorMessage: "",
         warningMessage: e$data.message
       })
     }
-  }, [o, $_710$a$formatMessage, r])
+  }, [o, Module_710$a$formatMessage, r])
   useEffect(function () {
-    Q.add(Tn.b.DEVICE_VIBRATE, j)
-    Q.add(Tn.b.DEVICE_NOT_VIBRATE, N)
-    Q.add(Tn.b.PLAYER_DATA_WATCH, R)
-    Q.add(Tn.b.RUNTIME_LOG, x)
-    Q.add(Tn.b.PLAYER_PERMISSION, k)
+    Q.add(Module_68.b.DEVICE_VIBRATE, j)
+    Q.add(Module_68.b.DEVICE_NOT_VIBRATE, N)
+    Q.add(Module_68.b.PLAYER_DATA_WATCH, R)
+    Q.add(Module_68.b.RUNTIME_LOG, x)
+    Q.add(Module_68.b.PLAYER_PERMISSION, k)
   }, [x, R, k])
   useEffect(function () {
     function e() {
-      o($$_$$_$$_$$_src_editor_redux_common_actions.vi(!navigator.onLine))
+      o(Src_editor_redux_common_actions.vi(!navigator.onLine))
     }
     window.addEventListener("online", e)
     window.addEventListener("offline", e)
@@ -215,10 +215,10 @@ var Rn = React.memo(function () {
     style: {
       display: e ? undefined : "none"
     },
-    className: $_6181.wrapper,
+    className: Module_6181.wrapper,
     ref: p
   }, React.createElement("div", {
-    className: $_6181.deviceFrameWrapper
+    className: Module_6181.deviceFrameWrapper
   }, React.createElement(Nn, {
     vibrating: c && e,
     scale: C
@@ -231,9 +231,9 @@ var Rn = React.memo(function () {
     sandbox: "allow-forms allow-modals allow-popups allow-same-origin allow-scripts",
     src: "".concat("/editor/editor-player.html").concat(L).concat(P)
   }))), React.createElement("div", {
-    className: $_6181.emulatorWrapper,
+    className: Module_6181.emulatorWrapper,
     ref: g
-  }, React.createElement($_738_index.a, {
+  }, React.createElement(Module_738.a, {
     messageWindow: y
   })))
 })

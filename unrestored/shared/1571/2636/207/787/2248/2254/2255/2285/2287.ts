@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("../1372")
+var r = require(/* 1372 */"../1372")
 module.exports = {
   $id: "https://github.com/ajv-validator/ajv/blob/master/lib/definition_schema.js",
   definitions: {

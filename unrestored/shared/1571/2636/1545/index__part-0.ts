@@ -6,10 +6,10 @@
 
 "use strict"
 
-import { forwardRef, createElement } from "react"
-import * as /* [auto-meaningful-name] */Classnames from "classnames"
-import /* [auto-meaningful-name] */Classnames1 from "classnames"
-import * as /* [auto-meaningful-name] */$_800 from "./800"
+import { forwardRef, createElement } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import /* [auto-meaningful-name] */Classnames1 from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_800 from /* 800 */"./800"
 function s(e, t) {
   var n = Object.keys(e)
   if (Object.getOwnPropertySymbols) {
@@ -82,7 +82,7 @@ var u = forwardRef(function (e, t) {
   }
   return createElement("div", {
     style: p
-  }, createElement($_800.a, {
+  }, createElement(Module_800.a, {
     onResize: function (e) {
       if (e.offsetHeight && e$onInnerResize) {
         e$onInnerResize()

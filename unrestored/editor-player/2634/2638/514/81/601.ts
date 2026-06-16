@@ -6,7 +6,7 @@
 
 "use strict"
 
-var n = require("./167")
+var n = require(/* 167 */"./167")
 var o = function () {
   function t() {}
   t.ISO_8859_1 = n.a.ISO8859_1

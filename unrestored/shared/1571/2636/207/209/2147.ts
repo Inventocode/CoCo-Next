@@ -10,8 +10,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.register_procedure_generator = undefined
-var r = require("../734/387")
-var i = require("../../1058/173")
+var r = require(/* 387 */"../734/387")
+var i = require(/* 173 */"../../1058/173")
 exports.register_procedure_generator = function (e) {
   e.register(i.PROCEDURE_BLOCK_TYPES.DEF, function (t) {
     var n = t.get_field_value("NAME");

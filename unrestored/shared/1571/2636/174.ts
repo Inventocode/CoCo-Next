@@ -6,15 +6,15 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
-import * as i from "./7"
-import * as a from "./27"
-import * as s from "./39"
+import * as /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import /* [auto-meaningful-name] */RegeneratorRuntime1 from /* 1 */"regenerator-runtime"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"./7"
+import * as /* [auto-meaningful-name] */Module_27 from /* 27 */"./27"
+import * as /* [auto-meaningful-name] */Module_39 from /* 39 */"./39"
 var c = function () {
   function e() {
     var t = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : "appCraft"
-    a.a(this, e)
+    Module_27.a(this, e)
     this._dbs = undefined
     this._databaseName = undefined
     this._tableName = "grid"
@@ -23,7 +23,7 @@ var c = function () {
     this._databaseName = t
     this.open(this._databaseName, this._version)
   }
-  s.a(e, [
+  Module_39.a(e, [
     {
       key: "open",
       value: function (e, t) {
@@ -63,7 +63,7 @@ var c = function () {
     }, {
       key: "_getTransaction",
       value: function () {
-        var e = i.a(RegeneratorRuntime1.mark(function e(t) {
+        var e = Module_7.a(RegeneratorRuntime1.mark(function e(t) {
           var n
           return RegeneratorRuntime1.wrap(function (e) {
             for (;;) {
@@ -97,7 +97,7 @@ var c = function () {
     }, {
       key: "_getObjectStore",
       value: function () {
-        var e = i.a(RegeneratorRuntime1.mark(function e() {
+        var e = Module_7.a(RegeneratorRuntime1.mark(function e() {
           var /* [auto-meaningful-name] */e$sent
           return RegeneratorRuntime1.wrap(function (e) {
             for (;;) {

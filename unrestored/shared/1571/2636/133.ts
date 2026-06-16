@@ -7,7 +7,7 @@
 "use strict"
 
 export { IconWidgetImage as a }
-export { $_13_344$a as g }
+export { Module_344$a as g }
 export { a as l }
 export { s as h }
 export { Https__static$bcmcdn$com_coco_image_image_widget_default_image_v2$svg as i }
@@ -19,9 +19,9 @@ export { Image_jpegImage_pngImage_bmp as d }
 export { Image_jpegImage_pngImage_bmp1 as e }
 export { m as k }
 export { g as j }
-import * as /* [auto-meaningful-name] */$_13_344 from "./13/344"
+import * as /* [auto-meaningful-name] */Module_344 from /* 344 */"./13/344"
 var /* [auto-meaningful-name] */IconWidgetImage = "icon-widget-image"
-var /* [auto-meaningful-name] */$_13_344$a = $_13_344.a
+var /* [auto-meaningful-name] */Module_344$a = Module_344.a
 var a = 274
 var s = 160
 var /* [auto-meaningful-name] */Https__static$bcmcdn$com_coco_image_image_widget_default_image_v2$svg = "https://static.bcmcdn.com/coco/image/image_widget_default_image_v2.svg"

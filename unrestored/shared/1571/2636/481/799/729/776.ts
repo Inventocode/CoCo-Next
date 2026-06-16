@@ -7,18 +7,18 @@
 "use strict"
 
 export { u as a }
-import * as /* [auto-meaningful-name] */$$_38 from "../38"
-import * as /* [auto-meaningful-name] */$_817 from "./817"
-import * as /* [auto-meaningful-name] */$$_317 from "../317"
-import * as /* [auto-meaningful-name] */$$_264 from "../264"
-import * as /* [auto-meaningful-name] */$$_439_index from "../439/index"
-import * as /* [auto-meaningful-name] */$$_775_731 from "../775/731"
+import * as /* [auto-meaningful-name] */Module_38 from /* 38 */"../38"
+import * as /* [auto-meaningful-name] */Module_817 from /* 817 */"./817"
+import * as /* [auto-meaningful-name] */Module_317 from /* 317 */"../317"
+import * as /* [auto-meaningful-name] */Module_264 from /* 264 */"../264"
+import * as /* [auto-meaningful-name] */Module_439 from /* 439 */"../439/index"
+import * as /* [auto-meaningful-name] */Module_731 from /* 731 */"../775/731"
 var u = function (e) {
   function t(t, n) {
     var r = e.call(this, t) || this
     r._measurements = {}
-    r._hub = $_817.b()
-    if ($$_317.d(n, $_817.a)) {
+    r._hub = Module_817.b()
+    if (Module_317.d(n, Module_817.a)) {
       r._hub = n
     }
     r.name = t.name || ""
@@ -27,7 +27,7 @@ var u = function (e) {
     r.transaction = r
     return r
   }
-  $$_38.c(t, e)
+  Module_38.c(t, e)
   t.prototype.setName = function (e) {
     this.name = e
   }
@@ -36,21 +36,21 @@ var u = function (e) {
       e = 1e3
     }
     if (!this.spanRecorder) {
-      this.spanRecorder = new $$_775_731.b(e)
+      this.spanRecorder = new Module_731.b(e)
     }
     this.spanRecorder.add(this)
   }
   t.prototype.setMeasurements = function (e) {
-    this._measurements = $$_38.a({}, e)
+    this._measurements = Module_38.a({}, e)
   }
   t.prototype.setMetadata = function (e) {
-    this.metadata = $$_38.a($$_38.a({}, this.metadata), e)
+    this.metadata = Module_38.a(Module_38.a({}, this.metadata), e)
   }
   t.prototype.finish = function (t) {
     var n = this
     if (undefined === this.endTimestamp) {
       if (!this.name) {
-        $$_264.a.warn("Transaction has no name, falling back to `<unlabeled transaction>`.")
+        Module_264.a.warn("Transaction has no name, falling back to `<unlabeled transaction>`.")
         this.name = "<unlabeled transaction>"
       }
       e.prototype.finish.call(this, t)
@@ -76,18 +76,18 @@ var u = function (e) {
           debug_meta: this.metadata
         }
         if (Object.keys(this._measurements).length > 0) {
-          $$_264.a.log("[Measurements] Adding measurements to transaction", JSON.stringify(this._measurements, undefined, 2))
+          Module_264.a.log("[Measurements] Adding measurements to transaction", JSON.stringify(this._measurements, undefined, 2))
           i.measurements = this._measurements
         }
-        $$_264.a.log("[Tracing] Finishing " + this.op + " transaction: " + this.name + ".")
+        Module_264.a.log("[Tracing] Finishing " + this.op + " transaction: " + this.name + ".")
         return this._hub.captureEvent(i)
       }
-      $$_264.a.log("[Tracing] Discarding transaction because its trace was not chosen to be sampled.")
+      Module_264.a.log("[Tracing] Discarding transaction because its trace was not chosen to be sampled.")
     }
   }
   t.prototype.toContext = function () {
     var t = e.prototype.toContext.call(this)
-    return $$_439_index.a($$_38.a($$_38.a({}, t), {
+    return Module_439.a(Module_38.a(Module_38.a({}, t), {
       name: this.name,
       trimEnd: this._trimEnd
     }))
@@ -100,5 +100,5 @@ var u = function (e) {
     return this
   }
   return t
-}($$_775_731.a)
+}(Module_731.a)
 export default u

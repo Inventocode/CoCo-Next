@@ -10,7 +10,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.JsonGenerator = undefined
-var r = require("../../../123/195/2051/1123")
+var r = require(/* 1123 */"../../../123/195/2051/1123")
 function i(e) {
   return "string" == typeof e || e instanceof String
 }

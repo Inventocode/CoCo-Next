@@ -6,55 +6,55 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_shop from "../../../../src/shared/widget/custom/shop"
-import * as Et from "./9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import * as /* [auto-meaningful-name] */$_748_index from "./748/index"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as O from "./7"
-import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import { useSelector, useDispatch } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { memo, useState, useRef, useCallback, useEffect } from "react"
+import * as /* [auto-meaningful-name] */Src_shared_widget_custom_shop from /* 183 */"../../../../src/shared/widget/custom/shop"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"./9"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */Module_25 from /* 25 */"./25/index"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import * as /* [auto-meaningful-name] */Module_748 from /* 748 */"./748/index"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"./7"
+import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import { useSelector, useDispatch } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo, useState, useRef, useCallback, useEffect } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_1191 from "./1191"
-import /* [auto-meaningful-name] */$_11911 from "./1191"
-import * as /* [auto-meaningful-name] */$_270 from "./270"
-import /* [auto-meaningful-name] */$_2701 from "./270"
+import * as /* [auto-meaningful-name] */Module_1191 from /* 1191 */"./1191"
+import /* [auto-meaningful-name] */Module_11911 from /* 1191 */"./1191"
+import * as /* [auto-meaningful-name] */Module_270 from /* 270 */"./270"
+import /* [auto-meaningful-name] */Module_2701 from /* 270 */"./270"
 var kL = memo(function () {
   var e = useSelector(function (e) {
     return e.common.widgetMallVisible
   })
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var n = useDispatch()
   var r = useState(false)
-  var o = $_10_index.a(r, 2)
+  var o = Module_10.a(r, 2)
   var i = o[0]
   var a = o[1]
   var s = useState([])
-  var c = $_10_index.a(s, 2)
+  var c = Module_10.a(s, 2)
   var l = c[0]
   var u = c[1]
   var d = useState(undefined)
-  var p = $_10_index.a(d, 2)
+  var p = Module_10.a(d, 2)
   var m = p[0]
   var g = p[1]
   var v = useState([])
-  var b = $_10_index.a(v, 2)
+  var b = Module_10.a(v, 2)
   var y = b[0]
   var w = b[1]
   var C = useState([])
-  var T = $_10_index.a(C, 2)
+  var T = Module_10.a(C, 2)
   var j = T[0]
   var R = T[1]
   var k = useRef(1)
   var D = useRef(1)
   var M = useRef(false)
-  var L = useCallback(O.a(RegeneratorRuntime.mark(function e() {
+  var L = useCallback(Module_7.a(RegeneratorRuntime.mark(function e() {
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$sent1
     var /* [auto-meaningful-name] */e$sent1$items
@@ -65,11 +65,11 @@ var kL = memo(function () {
           case 0:
             e.prev = 0
             e.next = 3
-            return $$_$$_$$_$$_src_shared_widget_custom_shop.d()
+            return Src_shared_widget_custom_shop.d()
           case 3:
             e$sent = e.sent
             e.next = 6
-            return $$_$$_$$_$$_src_shared_widget_custom_shop.e(k.current, 100)
+            return Src_shared_widget_custom_shop.e(k.current, 100)
           case 6:
             e$sent1 = e.sent
             e$sent1$items = e$sent1.items
@@ -93,7 +93,7 @@ var kL = memo(function () {
               o = e$sent1$items.map(function (e) {
                 return e.widget_code
               })
-              $$_$$_$$_$$_src_shared_widget_custom_shop.f(o.concat(Et.Q()))
+              Src_shared_widget_custom_shop.f(o.concat(Module_9.Q()))
             }
             e.next = 15
             break
@@ -118,10 +118,10 @@ var kL = memo(function () {
     }
   }, [L, e])
   var P = function () {
-    n($$_$$_$$_$$_src_editor_redux_common_actions.gj(false))
+    n(Src_editor_redux_common_actions.gj(false))
   }
   var B = function () {
-    var e = O.a(RegeneratorRuntime.mark(function e(t) {
+    var e = Module_7.a(RegeneratorRuntime.mark(function e(t) {
       var /* [auto-meaningful-name] */e$sent
       var /* [auto-meaningful-name] */e$sent$items
       return RegeneratorRuntime.wrap(function (e) {
@@ -132,7 +132,7 @@ var kL = memo(function () {
               k.current = 1
               e.prev = 2
               e.next = 5
-              return $$_$$_$$_$$_src_shared_widget_custom_shop.e(k.current, 100, -1 === t ? undefined : t)
+              return Src_shared_widget_custom_shop.e(k.current, 100, -1 === t ? undefined : t)
             case 5:
               e$sent = e.sent
               e$sent$items = e$sent.items
@@ -163,15 +163,15 @@ var kL = memo(function () {
   var F = function (e) {
     var t = j.indexOf(e)
     if (t < 0) {
-      R([].concat($_25_index.a(j), [e]))
+      R([].concat(Module_25.a(j), [e]))
     } else {
-      var n = $_25_index.a(j)
+      var n = Module_25.a(j)
       n.splice(t, 1)
       R(n)
     }
   }
   var G = function () {
-    var e = O.a(RegeneratorRuntime.mark(function e() {
+    var e = Module_7.a(RegeneratorRuntime.mark(function e() {
       var r
       return RegeneratorRuntime.wrap(function (e) {
         for (;;) {
@@ -179,11 +179,11 @@ var kL = memo(function () {
             case 0:
               e.prev = 0
               e.next = 3
-              return $$_$$_$$_$$_src_shared_widget_custom_shop.b(j)
+              return Src_shared_widget_custom_shop.b(j)
             case 3:
               if (e.sent) {
-                n($$_$$_$$_$$_src_editor_redux_common_actions.mj({
-                  message: $_710$a$formatMessage({
+                n(Src_editor_redux_common_actions.mj({
+                  message: Module_710$a$formatMessage({
                     id: "WidgetMall.addSuccess"
                   }),
                   type: "success"
@@ -204,7 +204,7 @@ var kL = memo(function () {
                     })
                   }
                 })
-                n($$_$$_$$_$$_src_editor_redux_common_actions.ef(r.reverse()))
+                n(Src_editor_redux_common_actions.ef(r.reverse()))
                 P()
               }
               e.next = 10
@@ -212,8 +212,8 @@ var kL = memo(function () {
             case 7:
               e.prev = 7
               e.t0 = e.catch(0)
-              n($$_$$_$$_$$_src_editor_redux_common_actions.mj({
-                message: $_710$a$formatMessage({
+              n(Src_editor_redux_common_actions.mj({
+                message: Module_710$a$formatMessage({
                   id: "WidgetMall.addFailure"
                 }),
                 type: "error"
@@ -229,21 +229,21 @@ var kL = memo(function () {
       return e.apply(this, arguments)
     }
   }()
-  var W = React.createElement("div", null, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
+  var W = React.createElement("div", null, React.createElement(Src_shared_ui_components_index.d, {
     type: "default",
     onClick: function () {
       R([])
     }
-  }, $_710$a$formatMessage({
+  }, Module_710$a$formatMessage({
     id: "WidgetMall.clear"
-  })), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
+  })), React.createElement(Src_shared_ui_components_index.d, {
     type: "primary",
     onClick: G
-  }, $_710$a$formatMessage({
+  }, Module_710$a$formatMessage({
     id: "WidgetMall.add"
   }), "(", j.length, ")"))
   var U = useCallback(function () {
-    var e = O.a(RegeneratorRuntime.mark(function e(t) {
+    var e = Module_7.a(RegeneratorRuntime.mark(function e(t) {
       var /* [auto-meaningful-name] */e$sent
       return RegeneratorRuntime.wrap(function (e) {
         for (;;) {
@@ -265,12 +265,12 @@ var kL = memo(function () {
               k.current = k.current + 1
               e.prev = 6
               e.next = 9
-              return $$_$$_$$_$$_src_shared_widget_custom_shop.e(k.current, 100, -1 === m ? undefined : m)
+              return Src_shared_widget_custom_shop.e(k.current, 100, -1 === m ? undefined : m)
             case 9:
               e$sent = e.sent
               D.current = e$sent.total
               M.current = false
-              w([].concat($_25_index.a(t), $_25_index.a(e$sent.items)))
+              w([].concat(Module_25.a(t), Module_25.a(e$sent.items)))
               e.next = 19
               break
             case 15:
@@ -289,37 +289,37 @@ var kL = memo(function () {
       return e.apply(this, arguments)
     }
   }(), [m])
-  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.f, {
+  return React.createElement(Src_shared_ui_components_index.f, {
     withPortal: true,
     visible: e,
-    title: $_710$a$formatMessage({
+    title: Module_710$a$formatMessage({
       id: "Widget.widgetMall"
     }),
     footer: W,
     onClose: P,
-    className: Classnames($_2701.widgetMallDialog, 0 !== j.length && $_2701.DialogFooter)
+    className: Classnames(Module_2701.widgetMallDialog, 0 !== j.length && Module_2701.DialogFooter)
   }, i && React.createElement("div", {
-    className: $_2701.networkError
+    className: Module_2701.networkError
   }, React.createElement("img", {
-    src: $_11911,
+    src: Module_11911,
     alt: "networkError"
-  }), React.createElement("h3", null, $_710$a$formatMessage({
+  }), React.createElement("h3", null, Module_710$a$formatMessage({
     id: "WidgetMall.networkError"
-  })), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
+  })), React.createElement(Src_shared_ui_components_index.d, {
     onClick: function () {
       L()
     },
     type: "primary"
-  }, $_710$a$formatMessage({
+  }, Module_710$a$formatMessage({
     id: "WidgetMall.retry"
   }))), !i && l.map(function (e) {
     return React.createElement("div", {
       key: e.id,
-      className: Classnames($_2701.widgetLabel, m === e.id && $_2701.active),
+      className: Classnames(Module_2701.widgetLabel, m === e.id && Module_2701.active),
       onClick: B.bind(null, e.id)
     }, e.name)
   }), !i && React.createElement("div", {
-    className: $_2701.cardContainer,
+    className: Module_2701.cardContainer,
     onScroll: function (e) {
       var /* [auto-meaningful-name] */e$currentTarget = e.currentTarget
       if (e$currentTarget.scrollTop + e$currentTarget.clientHeight > e$currentTarget.scrollHeight - 220) {
@@ -329,59 +329,59 @@ var kL = memo(function () {
   }, y.map(function (e) {
     return React.createElement("div", {
       key: e.id,
-      className: Classnames($_2701.widgetCard, j.indexOf(e.id) >= 0 && $_2701.selectedWidgetCard)
+      className: Classnames(Module_2701.widgetCard, j.indexOf(e.id) >= 0 && Module_2701.selectedWidgetCard)
     }, 2 === e.widget_type ? React.createElement("div", {
-      className: $_2701.invisibleWidget
+      className: Module_2701.invisibleWidget
     }, React.createElement("div", {
-      className: $_2701.invisibleWidgetHeader
+      className: Module_2701.invisibleWidgetHeader
     }, React.createElement("img", {
       src: e.icon,
       alt: "icon",
-      className: $_2701.widgetIcon
+      className: Module_2701.widgetIcon
     }), React.createElement("div", {
-      className: $_2701.widgetInfo
+      className: Module_2701.widgetInfo
     }, React.createElement("p", {
-      className: $_2701.widgetName
+      className: Module_2701.widgetName
     }, e.widget_name), React.createElement("p", {
-      className: $_2701.authorName
+      className: Module_2701.authorName
     }, e.author_name))), React.createElement("div", {
-      className: $_2701.widgetIntroContainer
+      className: Module_2701.widgetIntroContainer
     }, React.createElement("p", {
-      className: $_2701.widgetIntro
+      className: Module_2701.widgetIntro
     }, e.intro))) : React.createElement("div", {
-      className: $_2701.visibleWidget
+      className: Module_2701.visibleWidget
     }, React.createElement("div", {
-      className: $_2701.widgetImgContainer,
+      className: Module_2701.widgetImgContainer,
       style: {
         backgroundImage: "url(\"".concat(e.icon, "\")")
       }
     })), React.createElement("div", {
-      className: $_2701.widgetCardFooter
+      className: Module_2701.widgetCardFooter
     }, 1 === e.widget_type ? React.createElement("div", {
-      className: $_2701.widgetInfo
+      className: Module_2701.widgetInfo
     }, React.createElement("p", {
-      className: $_2701.widgetName
+      className: Module_2701.widgetName
     }, e.widget_name), React.createElement("p", {
-      className: $_2701.authorName
+      className: Module_2701.authorName
     }, e.author_name)) : React.createElement("div", null), 1 === e.if_have ? React.createElement("div", {
-      className: $_2701.added
-    }, React.createElement("span", null, $_710$a$formatMessage({
+      className: Module_2701.added
+    }, React.createElement("span", null, Module_710$a$formatMessage({
       id: "WidgetMall.added"
     }))) : j.includes(e.id) ? React.createElement("div", {
       onClick: F.bind(null, e.id),
-      className: Classnames($_2701.icon, $_2701.selectedIcon)
-    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+      className: Classnames(Module_2701.icon, Module_2701.selectedIcon)
+    }, React.createElement(Src_shared_ui_components_index.j, {
       type: "icon-selected"
-    })) : React.createElement($_748_index.a, {
+    })) : React.createElement(Module_748.a, {
       placement: "bottom",
       trigger: ["hover", "click"],
-      title: $_710$a$formatMessage({
+      title: Module_710$a$formatMessage({
         id: "WidgetMall.add"
       })
     }, React.createElement("div", {
       onClick: F.bind(null, e.id),
-      className: Classnames($_2701.icon, $_2701.addIcon)
-    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+      className: Classnames(Module_2701.icon, Module_2701.addIcon)
+    }, React.createElement(Src_shared_ui_components_index.j, {
       type: "icon-add"
     })))))
   })))

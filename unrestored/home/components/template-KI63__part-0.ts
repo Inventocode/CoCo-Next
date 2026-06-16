@@ -8,17 +8,17 @@
 
 /* harmony export (binding) */
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_0_react__ from "react"
+import * as __WEBPACK_IMPORTED_MODULE_0_react__ from /* GiK3 */"react"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_0_react___default from "react"
+import __WEBPACK_IMPORTED_MODULE_0_react___default from /* GiK3 */"react"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_1_react_css_modules__ from "react-css-modules"
+import * as __WEBPACK_IMPORTED_MODULE_1_react_css_modules__ from /* 211U */"react-css-modules"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_1_react_css_modules___default from "react-css-modules"
+import __WEBPACK_IMPORTED_MODULE_1_react_css_modules___default from /* 211U */"react-css-modules"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_2__cfg__ from "../cfg-dpNx"
+import * as __WEBPACK_IMPORTED_MODULE_2__cfg__ from /* dpNx */"../cfg-dpNx"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_3__sensorsData__ from "../sensorsData-yI2H"
+import * as __WEBPACK_IMPORTED_MODULE_3__sensorsData__ from /* yI2H */"../sensorsData-yI2H"
 var _createClass = function () {
   function defineProperties(target, props) {
     for (var i = 0; i < props.length; i++) {

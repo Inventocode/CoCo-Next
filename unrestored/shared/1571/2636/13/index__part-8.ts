@@ -6,13 +6,13 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_94_index from "../../../../../src/shared/ui/components/iconfont/index"
-import /* [auto-meaningful-name] */React from "react"
-import { createContext, memo, useState, useEffect, useCallback, useRef, useContext } from "react"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_iconfont_index from /* 94 */"../../../../../src/shared/ui/components/Iconfont/index"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { createContext, memo, useState, useEffect, useCallback, useRef, useContext } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import i from "classnames"
-import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
-import "./870"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../10/index"
+import /* 870 */"./870"
 var $ = createContext(null)
 var /* [auto-meaningful-name] */$$Provider = $.Provider
 var te = $
@@ -27,11 +27,11 @@ memo(function (e) {
   var /* [auto-meaningful-name] */e$open = e.open
   var /* [auto-meaningful-name] */e$onBlur = e.onBlur
   var h = useState(e$value || e$defaultValue)
-  var m = $$_10_index.a(h, 2)
+  var m = Module_10.a(h, 2)
   var g = m[0]
   var _ = m[1]
   var v = useState(false)
-  var b = $$_10_index.a(v, 2)
+  var b = Module_10.a(v, 2)
   var y = b[0]
   var O = b[1]
   useEffect(function () {
@@ -77,20 +77,20 @@ memo(function (e) {
     }
   }, React.createElement("div", {
     style: d,
-    className: i(e$className, "coco-tree-select"),
+    className: Classnames(e$className, "coco-tree-select"),
     onBlur: A,
     ref: S
   }, React.createElement("div", {
     className: "coco-tree-selector",
     onClick: T
   }, g, React.createElement("i", {
-    className: i("coco-tree-select-arrow", {
+    className: Classnames("coco-tree-select-arrow", {
       active: y
     })
-  }, React.createElement($$_94_index.a, {
+  }, React.createElement(Src_shared_ui_components_iconfont_index.a, {
     type: "icon-up"
   }))), React.createElement("div", {
-    className: i("coco-tree-select-list", {
+    className: Classnames("coco-tree-select-list", {
       hide: !y
     })
   }, e$children)))
@@ -100,7 +100,7 @@ var ne = memo(function (e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$disabled = e.disabled
   var c = useState(false)
-  var l = $$_10_index.a(c, 2)
+  var l = Module_10.a(c, 2)
   var u = l[0]
   var d = l[1]
   var p = useCallback(function () {
@@ -114,19 +114,19 @@ var ne = memo(function (e) {
     }
   }, [d, e$disabled])
   return React.createElement("div", {
-    className: i("coco-tree-node"),
+    className: Classnames("coco-tree-node"),
     onMouseEnter: p,
     onMouseLeave: f
   }, React.createElement("div", {
-    className: i("coco-tree-group-header", {
+    className: Classnames("coco-tree-group-header", {
       disabled: e$disabled
     })
   }, React.createElement("span", null, e$title), React.createElement("i", {
     className: "coco-tree-node-arrows"
-  }, React.createElement($$_94_index.a, {
+  }, React.createElement(Src_shared_ui_components_iconfont_index.a, {
     type: "icon-right"
   }))), React.createElement("div", {
-    className: i("coco-tree-group-main", {
+    className: Classnames("coco-tree-group-main", {
       hide: !u
     })
   }, e$children))
@@ -143,7 +143,7 @@ var re = memo(function (e) {
     }
   }, [e$value, c])
   return React.createElement("div", {
-    className: i("coco-tree-node-item", {
+    className: Classnames("coco-tree-node-item", {
       selected: (null === c || undefined === c ? undefined : c.selectedValue) === e$value,
       disabled: e$disabled
     }),
@@ -155,6 +155,6 @@ memo(function (e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$className = e.className
   return React.createElement("div", {
-    className: i(e$className, "coco-tree-node")
+    className: Classnames(e$className, "coco-tree-node")
   }, e$children ? React.createElement(ne, e) : React.createElement(re, e))
 })

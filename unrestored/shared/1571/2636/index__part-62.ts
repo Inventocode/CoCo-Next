@@ -6,25 +6,25 @@
 
 "use strict"
 
-import * as Jd from "./33"
-import * as D from "./6"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import { useSelector } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { memo, useState, useEffect } from "react"
+import * as /* [auto-meaningful-name] */Module_33 from /* 33 */"./33"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"./6"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import { useSelector } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo, useState, useEffect } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_691_index from "./691/index"
-import * as /* [auto-meaningful-name] */$_145 from "./145"
-import * as /* [auto-meaningful-name] */$_215 from "./215"
-import * as /* [auto-meaningful-name] */$_741 from "./741"
-import /* [auto-meaningful-name] */$_7411 from "./741"
+import * as /* [auto-meaningful-name] */Module_691 from /* 691 */"./691/index"
+import * as /* [auto-meaningful-name] */Module_145 from /* 145 */"./145"
+import * as /* [auto-meaningful-name] */Module_215 from /* 215 */"./215"
+import * as /* [auto-meaningful-name] */Module_741 from /* 741 */"./741"
+import /* [auto-meaningful-name] */Module_7411 from /* 741 */"./741"
 var gh = memo(function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$stage = e.stage
   var /* [auto-meaningful-name] */e$updateTimes = e.updateTimes
   var /* [auto-meaningful-name] */e$coordinateRatio = e.coordinateRatio
   var i = useState()
-  var a = $_10_index.a(i, 2)
+  var a = Module_10.a(i, 2)
   var s = a[0]
   var c = a[1]
   var l = useSelector(function (e) {
@@ -32,13 +32,13 @@ var gh = memo(function (e) {
   })
   useEffect(function () {
     if (l === t && e$stage && t) {
-      var e = Jd.Cb(t)
-      c(D.a({}, e))
+      var e = Module_33.Cb(t)
+      c(Module_6.a({}, e))
     } else {
       c(undefined)
     }
   }, [t, l, e$stage, e$updateTimes])
-  var u = (null === s || undefined === s ? undefined : s.parentId) ? Jd.Cb(s.parentId) : undefined
+  var u = (null === s || undefined === s ? undefined : s.parentId) ? Module_33.Cb(s.parentId) : undefined
   var d = (null === e$stage || undefined === e$stage ? undefined : e$stage.actors.get_actor(t)) || {}
   var /* [auto-meaningful-name] */d$value = d.value
   var /* [auto-meaningful-name] */d$is_error = d.is_error
@@ -62,7 +62,7 @@ var gh = memo(function (e) {
   var k = g.get_rotation()
   var x = Math.round(-180 * k / Math.PI)
   return React.createElement("div", {
-    className: $_7411.actorSelectedBox,
+    className: Module_7411.actorSelectedBox,
     style: {
       display: s.visible ? undefined : "none",
       position: "absolute",

@@ -4,8 +4,8 @@
  * 模块 ID：1606
  */
 
-var r = require("../../1282/240")
-var o = require("../../1686/838/1247")
+var r = require(/* 240 */"../../1282/240")
+var o = require(/* 1247 */"../../1686/838/1247")
 module.exports = function (e, t, n, i) {
   try {
     return i ? t(r(n)[0], n[1]) : t(n)

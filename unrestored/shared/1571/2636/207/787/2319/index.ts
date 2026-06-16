@@ -6,11 +6,11 @@
 
 "use strict"
 
-var r = require("../180")
-var i = require("../204")
-var o = require("../711/index")
-var a = require("./2320")
-var s = require("lodash")
+var r = require(/* 180 */"../180")
+var i = require(/* 204 */"../204")
+var o = require(/* 711 */"../711/index")
+var a = require(/* 2320 */"./2320")
+var s = require(/* 30 */"lodash")
 function c(e) {
   switch (e.type) {
     case "identifier":

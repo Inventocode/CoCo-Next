@@ -4,8 +4,8 @@
  * 模块 ID：1658
  */
 
-var r = require("../1662/86")
-var o = require("./1261/index")
+var r = require(/* 86 */"../1662/86")
+var o = require(/* 1261 */"./1261/index")
 r({
   target: "Number",
   stat: true,

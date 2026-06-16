@@ -6,16 +6,16 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_616_802 from "../616/802"
-import * as /* [auto-meaningful-name] */$$_616_index from "../616/index"
-import { useRef, useState, useEffect, createElement } from "react"
-import * as /* [auto-meaningful-name] */$$_19 from "../19"
-import * as /* [auto-meaningful-name] */ReactDom from "react-dom"
-import * as /* [auto-meaningful-name] */$_1046 from "./1046"
-import * as /* [auto-meaningful-name] */$_1045 from "./1045"
-import * as /* [auto-meaningful-name] */$_1047 from "./1047"
-import * as /* [auto-meaningful-name] */$_927 from "./927"
-import * as /* [auto-meaningful-name] */$$_40_index from "../40/index"
+import * as /* [auto-meaningful-name] */Module_802 from /* 802 */"../616/802"
+import * as /* [auto-meaningful-name] */Module_616 from /* 616 */"../616/index"
+import { useRef, useState, useEffect, createElement } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"../19"
+import * as /* [auto-meaningful-name] */ReactDom from /* 80 */"react-dom"
+import * as /* [auto-meaningful-name] */Module_1046 from /* 1046 */"./1046"
+import * as /* [auto-meaningful-name] */Module_1045 from /* 1045 */"./1045"
+import * as /* [auto-meaningful-name] */Module_1047 from /* 1047 */"./1047"
+import * as /* [auto-meaningful-name] */Module_927 from /* 927 */"./927"
+import * as /* [auto-meaningful-name] */Module_40 from /* 40 */"../40/index"
 function S(e) {
   return !(!e || !e.then)
 }
@@ -23,7 +23,7 @@ var T = function (e) {
   var t = useRef(false)
   var n = useRef()
   var r = useState(false)
-  var a = $$_40_index.a(r, 2)
+  var a = Module_40.a(r, 2)
   var s = a[0]
   var c = a[1]
   useEffect(function () {
@@ -44,7 +44,7 @@ var T = function (e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$prefixCls = e.prefixCls
   var /* [auto-meaningful-name] */e$buttonProps = e.buttonProps
-  return createElement($$_616_index.a, $$_19.a({}, $$_616_802.a(e$type), {
+  return createElement(Module_616.a, Module_19.a({}, Module_802.a(e$type), {
     onClick: function (n) {
       var /* [auto-meaningful-name] */e$actionFn = e.actionFn
       var /* [auto-meaningful-name] */e$close = e.close

@@ -4,7 +4,7 @@
  * 模块 ID：500
  */
 
-var r = require("./819")
+var r = require(/* 819 */"./819")
 function i(e, t) {
   var n = Object.keys(e)
   if (Object.getOwnPropertySymbols) {

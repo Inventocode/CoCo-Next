@@ -7,13 +7,13 @@
 "use strict"
 
 var n
-var o = require("./336")
-var i = require("./458")
-var a = require("./108")
-var u = require("./227")
-var s = require("./124")
-var c = require("./56")
-var f = require("./222")
+var o = require(/* 336 */"./336")
+var i = require(/* 458 */"./458")
+var a = require(/* 108 */"./108")
+var u = require(/* 227 */"./227")
+var s = require(/* 124 */"./124")
+var c = require(/* 56 */"./56")
+var f = require(/* 222 */"./222")
 !function (t) {
   t[t.PAD_ENCODE = 0] = "PAD_ENCODE"
   t[t.ASCII_ENCODE = 1] = "ASCII_ENCODE"

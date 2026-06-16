@@ -6,14 +6,14 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_710 from "../710"
-import "react"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../710"
+import /* 0 */"react"
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */Classnames from "classnames"
-import /* [auto-meaningful-name] */Classnames1 from "classnames"
-import * as /* [auto-meaningful-name] */$_155 from "./155"
-import /* [auto-meaningful-name] */$_1551 from "./155"
+import /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import /* [auto-meaningful-name] */Classnames1 from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_155 from /* 155 */"./155"
+import /* [auto-meaningful-name] */Module_1551 from /* 155 */"./155"
 var _a
 _a = function (e) {
   var /* [auto-meaningful-name] */e$type = e.type
@@ -21,14 +21,14 @@ _a = function (e) {
   var /* [auto-meaningful-name] */e$onSelect = e.onSelect
   var /* [auto-meaningful-name] */e$position = e.position
   var /* [auto-meaningful-name] */e$visible = e.visible
-  var /* [auto-meaningful-name] */$$_710$a$formatMessage = $$_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   function d(e) {
     if (e$onSelect) {
       e$onSelect(e$index, e)
     }
   }
   return React1.createElement("div", {
-    className: $_1551.typeSelectionList,
+    className: Module_1551.typeSelectionList,
     style: {
       left: e$position.x,
       top: e$position.y,
@@ -36,13 +36,13 @@ _a = function (e) {
     }
   }, React1.createElement("div", {
     onClick: d.bind(null, "number"),
-    className: Classnames1("number" === e$type && $_1551.active)
-  }, $$_710$a$formatMessage({
+    className: Classnames1("number" === e$type && Module_1551.active)
+  }, Module_710$a$formatMessage({
     id: "storageItemNumber"
   })), React1.createElement("div", {
     onClick: d.bind(null, "string"),
-    className: Classnames1("string" === e$type && $_1551.active)
-  }, $$_710$a$formatMessage({
+    className: Classnames1("string" === e$type && Module_1551.active)
+  }, Module_710$a$formatMessage({
     id: "storageItemString"
   })))
 }

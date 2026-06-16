@@ -9,17 +9,17 @@
 import { st, dt } from "./index__part-7"
 import { Cn } from "./index__part-14"
 import { Sn } from "./index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$$_$$_801_index from "../../801/index"
-import * as /* [auto-meaningful-name] */$$_$$_40_index from "../../40/index"
-import * as /* [auto-meaningful-name] */$$_$$_35 from "../../35"
-import { createElement, useRef } from "react"
-import * as /* [auto-meaningful-name] */$$_$$_19 from "../../19"
-import * as /* [auto-meaningful-name] */$$_$$_803 from "../../803"
-import * as /* [auto-meaningful-name] */$$_1045 from "../1045"
-import * as /* [auto-meaningful-name] */$$_1047 from "../1047"
-import * as /* [auto-meaningful-name] */$$_927 from "../927"
-import * as /* [auto-meaningful-name] */$$_1046 from "../1046"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_801 from /* 801 */"../../801/index"
+import * as /* [auto-meaningful-name] */Module_40 from /* 40 */"../../40/index"
+import * as /* [auto-meaningful-name] */Module_35 from /* 35 */"../../35"
+import { createElement, useRef } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"../../19"
+import * as /* [auto-meaningful-name] */Module_803 from /* 803 */"../../803"
+import * as /* [auto-meaningful-name] */Module_1045 from /* 1045 */"../1045"
+import * as /* [auto-meaningful-name] */Module_1047 from /* 1047 */"../1047"
+import * as /* [auto-meaningful-name] */Module_927 from /* 927 */"../927"
+import * as /* [auto-meaningful-name] */Module_1046 from /* 1046 */"../1046"
 var Xt
 var Yt
 var /* [auto-meaningful-name] */e$maxCount
@@ -89,7 +89,7 @@ function an(e, t) {
       })
     })
   } else {
-    var g = Classnames("".concat(h, "-").concat(r), $$_$$_35.a({}, "".concat(h, "-rtl"), true === rn))
+    var g = Classnames("".concat(h, "-").concat(r), Module_35.a({}, "".concat(h, "-rtl"), true === rn))
     $t[_] = new Promise(function (e) {
       dt.newInstance({
         prefixCls: h,
@@ -109,10 +109,10 @@ function an(e, t) {
   }
 }
 var sn = {
-  success: $$_1045.a,
-  info: $$_1046.a,
-  error: $$_1047.a,
-  warning: $$_927.a
+  success: Module_1045.a,
+  info: Module_1046.a,
+  error: Module_1047.a,
+  warning: Module_927.a
 }
 function cn(e, t, n) {
   var /* [auto-meaningful-name] */e$duration = e.duration
@@ -143,7 +143,7 @@ function cn(e, t, n) {
   }
   var y = createElement("span", {
     className: "".concat(t, "-close-x")
-  }, g || createElement($$_$$_803.a, {
+  }, g || createElement(Module_803.a, {
     className: "".concat(t, "-close-icon")
   }))
   var b = !e$description && m ? createElement("span", {
@@ -169,7 +169,7 @@ function cn(e, t, n) {
     onClick: e$onClick,
     key: e$key,
     style: e$style || {},
-    className: Classnames(e$className, $$_$$_35.a({}, "".concat(t, "-").concat(e$type), !!e$type))
+    className: Classnames(e$className, Module_35.a({}, "".concat(t, "-").concat(e$type), !!e$type))
   }
 }
 var un = {
@@ -238,7 +238,7 @@ var un = {
 };
 ["success", "info", "warning", "error"].forEach(function (e) {
   un[e] = function (t) {
-    return un.open($$_$$_19.a($$_$$_19.a({}, t), {
+    return un.open(Module_19.a(Module_19.a({}, t), {
       type: e
     }))
   }
@@ -255,14 +255,14 @@ un.useNotification = function (e, t) {
         }
       }
     })
-    var s = $$_$$_40_index.a(a, 2)
+    var s = Module_40.a(a, 2)
     var c = s[0]
     var u = s[1]
     var l = useRef({})
     l.current.open = function (i) {
       var /* [auto-meaningful-name] */i$prefixCls = i.prefixCls
       var s = e$getPrefixCls("notification", i$prefixCls)
-      e($$_$$_19.a($$_$$_19.a({}, i), {
+      e(Module_19.a(Module_19.a({}, i), {
         prefixCls: s
       }), function (e) {
         var /* [auto-meaningful-name] */e$prefixCls = e.prefixCls
@@ -273,13 +273,13 @@ un.useNotification = function (e, t) {
     };
     ["success", "info", "warning", "error"].forEach(function (e) {
       l.current[e] = function (t) {
-        return l.current.open($$_$$_19.a($$_$$_19.a({}, t), {
+        return l.current.open(Module_19.a(Module_19.a({}, t), {
           type: e
         }))
       }
     })
     return [
-      l.current, createElement($$_$$_801_index.a, {
+      l.current, createElement(Module_801.a, {
         key: "holder"
       }, function (e) {
         e$getPrefixCls = e.getPrefixCls

@@ -6,18 +6,18 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
-import * as Et from "./9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import { useDispatch } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { memo } from "react"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"./9"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Module_25 from /* 25 */"./25/index"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import { useDispatch } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_621 from "./621"
-import /* [auto-meaningful-name] */$_6211 from "./621"
+import * as /* [auto-meaningful-name] */Module_621 from /* 621 */"./621"
+import /* [auto-meaningful-name] */Module_6211 from /* 621 */"./621"
 var JO = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "fields" : e$keyName
@@ -25,36 +25,36 @@ var JO = memo(function (e) {
   var /* [auto-meaningful-name] */e$widgetId = e.widgetId
   var i = e$getValue(n)
   var a = useDispatch()
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
-  var c = Et.Bb(e$widgetId)
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
+  var c = Module_9.Bb(e$widgetId)
   if (!c) {
     return React.createElement(React.Fragment, null)
   }
   return React.createElement("div", {
-    className: Classnames($_6211.formItemWrapper, $_6211.storageFields)
+    className: Classnames(Module_6211.formItemWrapper, Module_6211.storageFields)
   }, React.createElement("div", {
-    className: $_6211.title
-  }, React.createElement("div", null, $_710$a$formatMessage({
+    className: Module_6211.title
+  }, React.createElement("div", null, Module_710$a$formatMessage({
     id: "initialData"
   })), React.createElement("span", {
-    className: $_6211.fieldsLength
+    className: Module_6211.fieldsLength
   }, "键值对:", i.length)), React.createElement("div", {
-    className: $_6211.imageBox
+    className: Module_6211.imageBox
   }, React.createElement("img", {
-    className: $_6211.image,
+    className: Module_6211.image,
     src: "https://static.bcmcdn.com/coco/image/edit_localstorage_data_image.png",
     alt: "微数据库"
   }), React.createElement("div", {
-    className: $_6211.edit
+    className: Module_6211.edit
   }, React.createElement("div", {
-    className: $_6211.btn,
+    className: Module_6211.btn,
     onClick: function () {
-      if (c.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.y) {
+      if (c.type === Src_editor_widget_builtIn_types.y) {
         (function () {
           if (!c) {
             return
           }
-          a($$_$$_$$_$$_src_editor_redux_common_actions.yj({
+          a(Src_editor_redux_common_actions.yj({
             title: "微数据库",
             widget: c,
             dbName: c.title,
@@ -66,34 +66,34 @@ var JO = memo(function (e) {
                   e.value = "number" === e.type ? Number(e.value) : e.value
                 }
               })
-              a($$_$$_$$_$$_src_editor_redux_common_actions.Fg(e$widgetId, $_25_index.a(e)))
+              a(Src_editor_redux_common_actions.Fg(e$widgetId, Module_25.a(e)))
             }
           }))
         })()
       } else {
-        if (c.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.l) {
+        if (c.type === Src_editor_widget_builtIn_types.l) {
           (function () {
-            if (!c || c.type !== $$_$$_$$_$$_src_editor_widget_builtIn_types.l) {
+            if (!c || c.type !== Src_editor_widget_builtIn_types.l) {
               return
             }
-            a($$_$$_$$_$$_src_editor_redux_common_actions.yj({
+            a(Src_editor_redux_common_actions.yj({
               title: "云微数据库",
               dbName: c.title,
               widget: c,
               maxKeyLength: 2e3,
               data: i,
               onSave: function (e) {
-                a($$_$$_$$_$$_src_editor_redux_common_actions.Cg(e$widgetId, $_25_index.a(e)))
+                a(Src_editor_redux_common_actions.Cg(e$widgetId, Module_25.a(e)))
               }
             }))
           })()
         } else {
-          if (c.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.B) {
+          if (c.type === Src_editor_widget_builtIn_types.B) {
             (function () {
               if (!c) {
                 return
               }
-              a($$_$$_$$_$$_src_editor_redux_common_actions.yj({
+              a(Src_editor_redux_common_actions.yj({
                 title: "微数据库",
                 dbName: c.title,
                 widget: c,
@@ -105,7 +105,7 @@ var JO = memo(function (e) {
                       e.value = "number" === e.type ? Number(e.value) : e.value
                     }
                   })
-                  a($$_$$_$$_$$_src_editor_redux_common_actions.Fg(e$widgetId, $_25_index.a(e)))
+                  a(Src_editor_redux_common_actions.Fg(e$widgetId, Module_25.a(e)))
                 }
               }))
             })()
@@ -113,7 +113,7 @@ var JO = memo(function (e) {
         }
       }
     }
-  }, $_710$a$formatMessage({
+  }, Module_710$a$formatMessage({
     id: "edit"
   })))))
 })

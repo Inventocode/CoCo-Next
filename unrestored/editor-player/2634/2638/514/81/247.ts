@@ -6,7 +6,7 @@
 
 "use strict"
 
-var n = require("./152")
+var n = require(/* 152 */"./152")
 var o = function () {
   var t = function (e, r) {
     return (t = Object.setPrototypeOf || {

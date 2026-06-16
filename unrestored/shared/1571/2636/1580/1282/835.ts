@@ -4,9 +4,9 @@
  * 模块 ID：835
  */
 
-var r = require("./836")
-var o = require("../949/834")
-var i = require("./246/index")("iterator")
+var r = require(/* 836 */"./836")
+var o = require(/* 834 */"../949/834")
+var i = require(/* 246 */"./246/index")("iterator")
 module.exports = function (e) {
   if (undefined != e) {
     return e[i] || e["@@iterator"] || o[r(e)]

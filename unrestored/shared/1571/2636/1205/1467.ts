@@ -10,10 +10,10 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.init_tell_blocks = exports.is_controls_if = exports.init_control_blocks = undefined
-var r = require("../1058/125")
-var o = require("../207/734/387")
-var i = require("../1022/214")
-var a = require("./2610/581")
+var r = require(/* 125 */"../1058/125")
+var o = require(/* 387 */"../207/734/387")
+var i = require(/* 214 */"../1022/214")
+var a = require(/* 581 */"./2610/581")
 var s = ["Boolean"]
 exports.init_control_blocks = function (e) {
   var t = [

@@ -184,8 +184,8 @@ function x(e, t, n, r, o, i, a) {
 function D(e) {
   return _.abort(e)
 }
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_28_index from "../../../../unrestored/shared/1571/2636/28/index"
-if (!$$_$$_$$_$$_unrestored_shared_1571_2636_28_index.d()) {
+import * as /* [auto-meaningful-name] */Module_28 from /* 28 */"../../../../unrestored/shared/1571/2636/28/index"
+if (!Module_28.d()) {
   var L = {}
   var P = function (e) {
     var t = L[e]
@@ -257,10 +257,10 @@ if (!$$_$$_$$_$$_unrestored_shared_1571_2636_28_index.d()) {
   }
   window.CordovaWebsocketPlugin = B
 }
-import * as /* [auto-meaningful-name] */$$_$$_tools from "../../tools"
+import * as /* [auto-meaningful-name] */Tools from "../../tools"
 function G(e, t, n, r) {
   var /* [auto-meaningful-name] */e$url
-  if (!((null === (e$url = e.url) || undefined === e$url ? undefined : e$url.includes("codemao.cn")) || $$_$$_tools.O(e.url || ""))) {
+  if (!((null === (e$url = e.url) || undefined === e$url ? undefined : e$url.includes("codemao.cn")) || Tools.O(e.url || ""))) {
     window.CordovaWebsocketPlugin.wsConnect(e, function (e) {
       t(e)
     }, function (e) {
@@ -323,16 +323,16 @@ Axios.interceptors.request.use(function (e) {
   if (e.baseURL) {
     t = e.baseURL + t.slice(1)
   }
-  return $$_$$_tools.Y(t) ? e : Promise.reject(new Error("auth failed"))
+  return Tools.Y(t) ? e : Promise.reject(new Error("auth failed"))
 }, function (e) {
   return Promise.reject(e)
 })
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_20_428_112 from "../../../../unrestored/shared/1571/2636/34/347/112"
+import * as /* [auto-meaningful-name] */Module_112 from /* 112 */"../../../../unrestored/shared/1571/2636/34/347/112"
 var Utils = {
-  isNative: $$_$$_$$_$$_unrestored_shared_1571_2636_28_index.d,
-  filterXss: $$_$$_$$_$$_unrestored_shared_1571_2636_28_index.i,
-  getWidgetImageUrl: $$_$$_$$_$$_unrestored_shared_1571_2636_20_428_112.b,
-  openLoginPage: $$_$$_$$_$$_unrestored_shared_1571_2636_28_index.q
+  isNative: Module_28.d,
+  filterXss: Module_28.i,
+  getWidgetImageUrl: Module_112.b,
+  openLoginPage: Module_28.q
 }
 export var modules: Map<string, string> = new Map()
 const MODULES_INFO: Record<string, {

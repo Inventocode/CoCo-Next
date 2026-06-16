@@ -7,10 +7,10 @@
 "use strict"
 
 export { i as a }
-import * as /* [auto-meaningful-name] */$_292 from "./292"
+import * as /* [auto-meaningful-name] */Module_292 from /* 292 */"./292"
 function i(e) {
   return function t(n) {
-    return 0 === arguments.length || $_292.a(n) ? t : e.apply(this, arguments)
+    return 0 === arguments.length || Module_292.a(n) ? t : e.apply(this, arguments)
   }
 }
 export default i

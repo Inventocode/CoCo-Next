@@ -8,19 +8,19 @@
 
 import { A } from "./802__part-0"
 import { C } from "./802__part-1"
-import * as /* [auto-meaningful-name] */$$_517 from "../517"
-import * as /* [auto-meaningful-name] */$$_364_index from "../364/index"
-import * as /* [auto-meaningful-name] */$$_614 from "../614"
-import * as /* [auto-meaningful-name] */$$_1048_index from "../1048/index"
-import * as /* [auto-meaningful-name] */$$_801_index from "../801/index"
-import * as /* [auto-meaningful-name] */$$_486 from "../486"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import { createElement, isValidElement, Fragment, useContext, useState, createRef, useRef, Children, useEffect, forwardRef } from "react"
-import * as /* [auto-meaningful-name] */$$_107 from "../107"
-import * as /* [auto-meaningful-name] */$$_40_index from "../40/index"
-import * as /* [auto-meaningful-name] */$$_35 from "../35"
-import * as /* [auto-meaningful-name] */$$_19 from "../19"
-import * as /* [auto-meaningful-name] */$$_315 from "../315"
+import * as /* [auto-meaningful-name] */Module_517 from /* 517 */"../517"
+import * as /* [auto-meaningful-name] */Module_364 from /* 364 */"../364/index"
+import * as /* [auto-meaningful-name] */Module_614 from /* 614 */"../614"
+import * as /* [auto-meaningful-name] */Module_1048 from /* 1048 */"../1048/index"
+import * as /* [auto-meaningful-name] */Module_801 from /* 801 */"../801/index"
+import * as /* [auto-meaningful-name] */Module_486 from /* 486 */"../486"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import { createElement, isValidElement, Fragment, useContext, useState, createRef, useRef, Children, useEffect, forwardRef } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_107 from /* 107 */"../107"
+import * as /* [auto-meaningful-name] */Module_40 from /* 40 */"../40/index"
+import * as /* [auto-meaningful-name] */Module_35 from /* 35 */"../35"
+import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"../19"
+import * as /* [auto-meaningful-name] */Module_315 from /* 315 */"../315"
 var k = function (e, t) {
   var n = {}
   for (var r in e) if (Object.prototype.hasOwnProperty.call(e, r) && t.indexOf(r) < 0) {
@@ -45,14 +45,14 @@ function D(e, t) {
   if (null != e) {
     var n
     var r = t ? " " : ""
-    return "string" !== typeof e && "number" !== typeof e && "string" === typeof e.type && T(e.props.children) ? $$_315.a(e, {
+    return "string" !== typeof e && "number" !== typeof e && "string" === typeof e.type && T(e.props.children) ? Module_315.a(e, {
       children: e.props.children.split("").join(r)
     }) : "string" === typeof e ? T(e) ? createElement("span", null, e.split("").join(r)) : createElement("span", null, e) : (n = e, isValidElement(n) && n.type === Fragment ? createElement("span", null, e) : e)
   }
 }
-$$_614.a("default", "primary", "ghost", "dashed", "link", "text")
-$$_614.a("default", "circle", "round")
-$$_614.a("submit", "button", "reset")
+Module_614.a("default", "primary", "ghost", "dashed", "link", "text")
+Module_614.a("default", "circle", "round")
+Module_614.a("submit", "button", "reset")
 function I(e) {
   return "danger" === e ? {
     danger: true
@@ -81,16 +81,16 @@ var R = function (e, t) {
   var /* [auto-meaningful-name] */e$htmlType = e.htmlType
   var N = undefined === e$htmlType ? "button" : e$htmlType
   var M = k(e, ["loading", "prefixCls", "type", "danger", "shape", "size", "className", "children", "icon", "ghost", "block", "htmlType"])
-  var L = useContext($$_517.b)
+  var L = useContext(Module_517.b)
   var j = useState(!!h)
-  var U = $$_40_index.a(j, 2)
+  var U = Module_40.a(j, 2)
   var H = U[0]
   var V = U[1]
   var G = useState(false)
-  var z = $$_40_index.a(G, 2)
+  var z = Module_40.a(G, 2)
   var Q = z[0]
   var W = z[1]
-  var K = useContext($$_801_index.b)
+  var K = useContext(Module_801.b)
   var /* [auto-meaningful-name] */K$getPrefixCls = K.getPrefixCls
   var /* [auto-meaningful-name] */K$autoInsertSpaceInButton = K.autoInsertSpaceInButton
   var /* [auto-meaningful-name] */K$direction = K.direction
@@ -99,7 +99,7 @@ var R = function (e, t) {
   var Z = function () {
     return 1 === Children.count(e$children) && !e$icon && !B(e$type)
   }
-  c = "object" === $$_107.a(h) && h.delay ? h.delay || true : !!h
+  c = "object" === Module_107.a(h) && h.delay ? h.delay || true : !!h
   useEffect(function () {
     clearTimeout(J.current)
     if ("number" === typeof c) {
@@ -136,8 +136,8 @@ var R = function (e, t) {
       }
     }
   }
-  $$_364_index.a(!("string" === typeof e$icon && e$icon.length > 2), "Button", "`icon` is using ReactNode instead of string naming in v4. Please check `".concat(e$icon, "` at https://ant.design/components/icon"))
-  $$_364_index.a(!(I && B(e$type)), "Button", "`link` or `text` button can't be a `ghost` button.")
+  Module_364.a(!("string" === typeof e$icon && e$icon.length > 2), "Button", "`icon` is using ReactNode instead of string naming in v4. Please check `".concat(e$icon, "` at https://ant.design/components/icon"))
+  Module_364.a(!(I && B(e$type)), "Button", "`link` or `text` button can't be a `ghost` button.")
   var te = K$getPrefixCls("btn", e$prefixCls)
   var ne = false !== K$autoInsertSpaceInButton
   var re = ""
@@ -149,7 +149,7 @@ var R = function (e, t) {
       re = "sm"
   }
   var ie = H ? "loading" : e$icon
-  var oe = Classnames(te, (n = {}, $$_35.a(n, "".concat(te, "-").concat(e$type), e$type), $$_35.a(n, "".concat(te, "-").concat(b), "default" !== b && b), $$_35.a(n, "".concat(te, "-").concat(re), re), $$_35.a(n, "".concat(te, "-icon-only"), !e$children && 0 !== e$children && !!ie), $$_35.a(n, "".concat(te, "-background-ghost"), I && !B(e$type)), $$_35.a(n, "".concat(te, "-loading"), H), $$_35.a(n, "".concat(te, "-two-chinese-chars"), Q && ne), $$_35.a(n, "".concat(te, "-block"), F), $$_35.a(n, "".concat(te, "-dangerous"), !!e$danger), $$_35.a(n, "".concat(te, "-rtl"), "rtl" === K$direction), n), e$className)
+  var oe = Classnames(te, (n = {}, Module_35.a(n, "".concat(te, "-").concat(e$type), e$type), Module_35.a(n, "".concat(te, "-").concat(b), "default" !== b && b), Module_35.a(n, "".concat(te, "-").concat(re), re), Module_35.a(n, "".concat(te, "-icon-only"), !e$children && 0 !== e$children && !!ie), Module_35.a(n, "".concat(te, "-background-ghost"), I && !B(e$type)), Module_35.a(n, "".concat(te, "-loading"), H), Module_35.a(n, "".concat(te, "-two-chinese-chars"), Q && ne), Module_35.a(n, "".concat(te, "-block"), F), Module_35.a(n, "".concat(te, "-dangerous"), !!e$danger), Module_35.a(n, "".concat(te, "-rtl"), "rtl" === K$direction), n), e$className)
   var ae = e$icon && !H ? e$icon : createElement(C, {
     existIcon: !!e$icon,
     prefixCls: te,
@@ -159,7 +159,7 @@ var R = function (e, t) {
     var n = false
     var r = []
     Children.forEach(e, function (e) {
-      var t = $$_107.a(e)
+      var t = Module_107.a(e)
       var i = "string" === t || "number" === t
       if (n && i) {
         var o = r.length - 1
@@ -174,21 +174,21 @@ var R = function (e, t) {
       return D(e, t)
     })
   }(e$children, Z() && ne) : null
-  var ce = $$_486.a(M, ["navigate"])
+  var ce = Module_486.a(M, ["navigate"])
   if (undefined !== ce.href) {
-    return createElement("a", $$_19.a({}, ce, {
+    return createElement("a", Module_19.a({}, ce, {
       className: oe,
       onClick: ee,
       ref: $
     }), ae, se)
   }
-  var ue = createElement("button", $$_19.a({}, M, {
+  var ue = createElement("button", Module_19.a({}, M, {
     type: N,
     className: oe,
     onClick: ee,
     ref: $
   }), ae, se)
-  return B(e$type) ? ue : createElement($$_1048_index.a, {
+  return B(e$type) ? ue : createElement(Module_1048.a, {
     disabled: !!H
   }, ue)
 }

@@ -7,8 +7,8 @@
 "use strict"
 
 export { i as a }
-import * as /* [auto-meaningful-name] */$$_391 from "../391"
+import * as /* [auto-meaningful-name] */Module_391 from /* 391 */"../391"
 function i(e) {
-  return $$_391.a(e).defaultView || window
+  return Module_391.a(e).defaultView || window
 }
 export default i

@@ -8,13 +8,13 @@
 
 import { be } from "./index__part-2"
 import { tn, rn } from "./index__part-4"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_552_1214_690_2645 from "../../../../552/1214/690/2645"
-import * as /* [auto-meaningful-name] */$$_$$_269_2674 from "../../269/2674"
-import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_19 from "../../../../19"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_54 from "../../../../54"
-import "../../../../107"
-import * as /* [auto-meaningful-name] */$_2675 from "./2675"
+import * as /* [auto-meaningful-name] */Module_2645 from /* 2645 */"../../../../552/1214/690/2645"
+import * as /* [auto-meaningful-name] */Module_2674 from /* 2674 */"../../269/2674"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"../../../../19"
+import * as /* [auto-meaningful-name] */Module_54 from /* 54 */"../../../../54"
+import /* 107 */"../../../../107"
+import * as /* [auto-meaningful-name] */Module_2675 from /* 2675 */"./2675"
 function an(e) {
   var t = "function" === typeof e
   return {
@@ -29,9 +29,9 @@ function an(e) {
         return o
       }
       var a = n.overrides[r]
-      var s = $$_$$_$$_$$_19.a({}, o)
+      var s = Module_19.a({}, o)
       Object.keys(a).forEach(function (e) {
-        s[e] = $_2675.a(s[e], a[e])
+        s[e] = Module_2675.a(s[e], a[e])
       })
       return s
     },
@@ -61,7 +61,7 @@ function cn(e, t, n) {
     i = true
   }
   if (i) {
-    e$state.cacheClasses.value = $$_$$_269_2674.a({
+    e$state.cacheClasses.value = Module_2674.a({
       baseClasses: e$state.cacheClasses.lastJSS,
       newClasses: t,
       Component: n
@@ -85,7 +85,7 @@ function un(e, t) {
       }
       be.set(e$stylesOptions.sheetsManager, e$stylesCreator, e$theme, c)
     }
-    var u = $$_$$_$$_$$_19.a({}, e$stylesCreator.options, e$stylesOptions, {
+    var u = Module_19.a({}, e$stylesCreator.options, e$stylesOptions, {
       theme: e$theme,
       flip: "boolean" === typeof e$stylesOptions.flip ? e$stylesOptions.flip : "rtl" === e$theme.direction
     })
@@ -98,7 +98,7 @@ function un(e, t) {
       }
       var d = e$stylesCreator.create(e$theme, e$name)
       if (!f) {
-        (f = e$stylesOptions.jss.createStyleSheet(d, $$_$$_$$_$$_19.a({
+        (f = e$stylesOptions.jss.createStyleSheet(d, Module_19.a({
           link: false
         }, u))).attach()
         if (e$stylesOptions.sheetsCache) {
@@ -133,13 +133,13 @@ function un(e, t) {
       }(d)
     }
     if (c.dynamicStyles) {
-      var h = e$stylesOptions.jss.createStyleSheet(c.dynamicStyles, $$_$$_$$_$$_19.a({
+      var h = e$stylesOptions.jss.createStyleSheet(c.dynamicStyles, Module_19.a({
         link: true
       }, u))
       h.update(t)
       h.attach()
       e$state.dynamicSheet = h
-      e$state.classes = $$_$$_269_2674.a({
+      e$state.classes = Module_2674.a({
         baseClasses: c.staticSheet.classes,
         newClasses: h.classes
       })
@@ -207,7 +207,7 @@ function hn(e) {
   var /* [auto-meaningful-name] */t$Component = t.Component
   var /* [auto-meaningful-name] */t$defaultTheme = t.defaultTheme
   var u = undefined === t$defaultTheme ? sn : t$defaultTheme
-  var l = $$_$$_$$_$$_54.a(t, ["name", "classNamePrefix", "Component", "defaultTheme"])
+  var l = Module_54.a(t, ["name", "classNamePrefix", "Component", "defaultTheme"])
   var f = an(e)
   var d = t$name || t$classNamePrefix || "makeStyles"
   f.options = {
@@ -218,8 +218,8 @@ function hn(e) {
   }
   var h = function () {
     var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : {}
-    var t = $$_$$_$$_$$_552_1214_690_2645.a() || u
-    var r = $$_$$_$$_$$_19.a({}, React.useContext(tn), l)
+    var t = Module_2645.a() || u
+    var r = Module_19.a({}, React.useContext(tn), l)
     var o = React.useRef()
     var c = React.useRef()
     dn(function () {

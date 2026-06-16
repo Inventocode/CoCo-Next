@@ -6,9 +6,9 @@
 
 "use strict"
 
-var n = require("./73")
-var o = require("./116")
-var i = require("./36")
+var n = require(/* 73 */"./73")
+var o = require(/* 116 */"./116")
+var i = require(/* 36 */"./36")
 var a = function () {
   function t(e, r, n, o) {
     this.image = e

@@ -4,8 +4,8 @@
  * 模块 ID：952
  */
 
-var r = require("../1282/231")
-var o = require("../1706/638")
+var r = require(/* 231 */"../1282/231")
+var o = require(/* 638 */"../1706/638")
 module.exports = function (e, t, n) {
   var /* [auto-meaningful-name] */t$constructor
   var /* [auto-meaningful-name] */t$constructor$prototype

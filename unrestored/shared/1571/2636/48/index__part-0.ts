@@ -6,14 +6,14 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_738_66 from "../738/66"
-import * as /* [auto-meaningful-name] */Redux from "redux"
-import * as /* [auto-meaningful-name] */$_489 from "./489"
-import * as /* [auto-meaningful-name] */$_345 from "./345"
-import * as /* [auto-meaningful-name] */$$_11 from "../11"
-import * as c from "../6"
-import * as /* [auto-meaningful-name] */$$_738_70 from "../738/70"
-import * as u from "./72"
+import * as /* [auto-meaningful-name] */Module_66 from /* 66 */"../738/66"
+import * as /* [auto-meaningful-name] */Redux from /* 156 */"redux"
+import * as /* [auto-meaningful-name] */Module_489 from /* 489 */"./489"
+import * as /* [auto-meaningful-name] */Module_345 from /* 345 */"./345"
+import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"../11"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"../6"
+import * as /* [auto-meaningful-name] */Module_70 from /* 70 */"../738/70"
+import * as /* [auto-meaningful-name] */Module_72 from /* 72 */"./72"
 function d(e, t) {
   var n = t.id
   var /* [auto-meaningful-name] */t$key = t.key
@@ -22,28 +22,28 @@ function d(e, t) {
     return e.id === n
   })
   return i > -1 ? e.update(i, function (e) {
-    return c.a(c.a({}, e), {}, $$_11.a({}, t$key, t$value))
+    return Module_6.a(Module_6.a({}, e), {}, Module_11.a({}, t$key, t$value))
   }) : e
 }
 var p = window.localStorage.getItem("LANGUAGE") || navigator.language
 var f = Redux.combineReducers({
   widgetMap: function () {
-    var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : $$_738_66.a.Map({})
+    var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : Module_66.a.Map({})
     var t = arguments.length > 1 ? arguments[1] : undefined
     switch (t.type) {
-      case u.k:
+      case Module_72.k:
         return e.delete(t.payload.id)
-      case u.j:
+      case Module_72.j:
         return e.set(t.payload.id, t.payload.widget)
       default:
         return e
     }
   },
   screenList: function () {
-    var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : $$_738_66.a.List([])
+    var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : Module_66.a.List([])
     var t = arguments.length > 1 ? arguments[1] : undefined
     switch (t.type) {
-      case u.l:
+      case Module_72.l:
         return d(e, t.payload)
       default:
         return e
@@ -77,7 +77,7 @@ var f = Redux.combineReducers({
     var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : ""
     var t = arguments.length > 1 ? arguments[1] : undefined
     switch (t.type) {
-      case u.h:
+      case Module_72.h:
         return t.payload.navigator
       default:
         return e
@@ -87,7 +87,7 @@ var f = Redux.combineReducers({
     var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : ""
     var t = arguments.length > 1 ? arguments[1] : undefined
     switch (t.type) {
-      case u.i:
+      case Module_72.i:
         return t.payload.param
       default:
         return e
@@ -105,8 +105,8 @@ var f = Redux.combineReducers({
     }
     var t = arguments.length > 1 ? arguments[1] : undefined
     switch (t.type) {
-      case u.f:
-        return c.a({
+      case Module_72.f:
+        return Module_6.a({
           state: e
         }, t.payload)
       default:
@@ -125,7 +125,7 @@ var f = Redux.combineReducers({
       smsWidgetId: "",
       phoneNumber: "",
       callType: "",
-      callStatus: $$_738_70.b.IDEL,
+      callStatus: Module_70.b.IDEL,
       sendSmsNumber: "",
       sendSmsContent: "",
       receiveSmsNumber: "",
@@ -133,8 +133,8 @@ var f = Redux.combineReducers({
     }
     var t = arguments.length > 1 ? arguments[1] : undefined
     switch (t.type) {
-      case u.g:
-        return c.a(c.a({}, e), t.payload)
+      case Module_72.g:
+        return Module_6.a(Module_6.a({}, e), t.payload)
       default:
         return e
     }

@@ -6,23 +6,23 @@
 
 "use strict"
 
-import qC from "./99"
-import * as /* [auto-meaningful-name] */$_238 from "./238"
-import * as /* [auto-meaningful-name] */$_26_index from "./26/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
-import * as K from "./18"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import { useSelector, useDispatch } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { memo, useState, useRef, useEffect, useCallback, useLayoutEffect } from "react"
+import /* [auto-meaningful-name] */Module_99 from /* 99 */"./99"
+import * as /* [auto-meaningful-name] */Module_238 from /* 238 */"./238"
+import * as /* [auto-meaningful-name] */Module_26 from /* 26 */"./26/index"
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"./18"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */Module_25 from /* 25 */"./25/index"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import { useSelector, useDispatch } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo, useState, useRef, useEffect, useCallback, useLayoutEffect } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_1040 from "./1040"
-import /* [auto-meaningful-name] */$_10401 from "./1040"
+import * as /* [auto-meaningful-name] */Module_1040 from /* 1040 */"./1040"
+import /* [auto-meaningful-name] */Module_10401 from /* 1040 */"./1040"
 var eT = new Map()
 function tT(e, t) {
   var n = arguments.length > 2 && undefined !== arguments[2] && arguments[2]
@@ -52,22 +52,22 @@ var nT = memo(function () {
   var /* [auto-meaningful-name] */e$array = e.array
   var /* [auto-meaningful-name] */e$arrayType = e.arrayType
   var o = useState([])
-  var i = $_10_index.a(o, 2)
+  var i = Module_10.a(o, 2)
   var a = i[0]
   var s = i[1]
   var c = useState(0)
-  var l = $_10_index.a(c, 2)
+  var l = Module_10.a(c, 2)
   var u = l[0]
   var d = l[1]
   var p = useRef(1)
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var g = useRef(null)
   var v = useRef(null)
   var b = useDispatch()
-  var y = $_238.d()
+  var y = Module_238.d()
   useEffect(function () {
     if (e$array) {
-      s($_25_index.a(e$array.defaultValue))
+      s(Module_25.a(e$array.defaultValue))
       d(e$array.defaultValue.length)
     }
   }, [e$array])
@@ -89,7 +89,7 @@ var nT = memo(function () {
       if (!(null === (g$current = g.current) || undefined === g$current)) {
         g$current.focus()
       }
-      $_26_index.z.unselectCurrentBlock()
+      Module_26.z.unselectCurrentBlock()
     }
   }, [e$visible])
   var E = function (e) {
@@ -104,7 +104,7 @@ var nT = memo(function () {
     } else {
       a.splice(Number(e), a.length)
     }
-    s($_25_index.a(a))
+    s(Module_25.a(a))
     d(a.length)
     p.current = 0
   }, [a])
@@ -112,10 +112,10 @@ var nT = memo(function () {
     if (13 === t.keyCode) {
       var n = e + 1
       a.splice(n, 0, "")
-      s($_25_index.a(a))
+      s(Module_25.a(a))
       E(n + 1)
       setTimeout(function () {
-        var e = document.querySelectorAll(".".concat(qC.list, " input"))[n]
+        var e = document.querySelectorAll(".".concat(Module_99.list, " input"))[n]
         if (!(null === e || undefined === e)) {
           e.focus()
         }
@@ -124,7 +124,7 @@ var nT = memo(function () {
   }
   useLayoutEffect(function () {
     if (p.current) {
-      var e = document.querySelectorAll(".".concat(qC.list, " input"))[u - 1]
+      var e = document.querySelectorAll(".".concat(Module_99.list, " input"))[u - 1]
       if (!(null === e || undefined === e)) {
         e.focus()
       }
@@ -132,16 +132,16 @@ var nT = memo(function () {
   }, [u])
   var C = useCallback(function (e) {
     a.splice(e, 1)
-    s($_25_index.a(a))
+    s(Module_25.a(a))
     d(a.length)
     p.current = 0
   }, [a])
   var T = useCallback(function (e, t) {
     a.splice(e, 1, t)
-    s($_25_index.a(a))
+    s(Module_25.a(a))
   }, [a])
   var A = useCallback(function () {
-    b($$_$$_$$_$$_src_editor_redux_common_actions.oh())
+    b(Src_editor_redux_common_actions.oh())
   }, [b])
   var j = useCallback(function () {
     p.current = 0
@@ -149,13 +149,13 @@ var nT = memo(function () {
       var e = []
       a.forEach(function (t) {
         if ("string" === typeof t) {
-          e.push($$_$$_$$_$$_src_shared_tools_index.mb(t))
+          e.push(Src_shared_tools_index.mb(t))
         } else {
           e.push(t)
         }
       })
       var /* [auto-meaningful-name] */e$array$id = e$array.id
-      b($$_$$_$$_$$_src_editor_redux_common_actions.yg(e$arrayType || K.i.SCREEN, e$array$id, "defaultValue", e, y.id))
+      b(Src_editor_redux_common_actions.yg(e$arrayType || Module_18.i.SCREEN, e$array$id, "defaultValue", e, y.id))
     }
     A()
   }, [e$array, y, A, a, b, e$arrayType])
@@ -176,35 +176,35 @@ var nT = memo(function () {
       document.body.removeEventListener("paste", e)
     }
   }, [e$visible, T, a])
-  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.f, {
-    className: Classnames(qC.editListDialog, qC.editDialog),
+  return React.createElement(Src_shared_ui_components_index.f, {
+    className: Classnames(Module_99.editListDialog, Module_99.editDialog),
     visible: e$visible,
     withPortal: true,
     onClose: A
   }, React.createElement("p", {
-    className: qC.dialogTitle
-  }, $_710$a$formatMessage({
+    className: Module_99.dialogTitle
+  }, Module_710$a$formatMessage({
     id: "editVariableList"
   })), React.createElement("div", {
-    className: qC.summary
+    className: Module_99.summary
   }, React.createElement("span", null, null === e$array || undefined === e$array ? undefined : e$array.name), React.createElement("div", {
-    className: qC.count
-  }, React.createElement("span", null, $_710$a$formatMessage({
+    className: Module_99.count
+  }, React.createElement("span", null, Module_710$a$formatMessage({
     id: "itemCount"
-  })), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.k, {
+  })), React.createElement(Src_shared_ui_components_index.k, {
     type: "number",
     min: 0,
     max: 1e3,
     onBlur: O,
     ref: g,
-    className: qC.input,
+    className: Module_99.input,
     defaultValue: a.length || "0",
     dependency: a.length.toString()
-  }), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
+  }), React.createElement(Src_shared_ui_components_index.d, {
     onClick: function () {
       if (!p.current) {
         a.push("")
-        s($_25_index.a(a))
+        s(Module_25.a(a))
         E(a.length)
         return void (p.current = 1)
       }
@@ -212,27 +212,27 @@ var nT = memo(function () {
       if (a.length < 1e3) {
         var e = u + 1
         a.splice(u, 0, "")
-        s($_25_index.a(a))
+        s(Module_25.a(a))
         E(e)
       }
     },
     type: "primary",
     ref: v
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-add"
   })))), React.createElement("div", {
-    className: qC.list
+    className: Module_99.list
   }, a.length > 0 ? React.createElement("ul", null, a.map(function (e, t) {
     return React.createElement("li", {
-      className: qC.listItem,
+      className: Module_99.listItem,
       key: t
-    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.k, {
+    }, React.createElement(Src_shared_ui_components_index.k, {
       type: "text",
       before: React.createElement("div", {
-        className: qC.inputLabel
+        className: Module_99.inputLabel
       }, t + 1),
       after: React.createElement("div", {
-        className: qC.inputClose,
+        className: Module_99.inputClose,
         onClick: C.bind(null, t)
       }, "x"),
       onClick: function (e) {
@@ -240,27 +240,27 @@ var nT = memo(function () {
         p.current = 1
         E(t + 1)
       },
-      className: qC.listInput,
+      className: Module_99.listInput,
       defaultValue: e,
       onBlur: T.bind(null, t),
       dependency: a.length.toString(),
       onKeyDown: w.bind(null, t)
     }))
   })) : React.createElement("div", {
-    className: qC.emptyContent
+    className: Module_99.emptyContent
   }, React.createElement("img", {
-    className: qC.image,
-    src: $_10401,
+    className: Module_99.image,
+    src: Module_10401,
     alt: ""
   }), React.createElement("div", {
-    className: qC.label
-  }, $_710$a$formatMessage({
+    className: Module_99.label
+  }, Module_710$a$formatMessage({
     id: "variableListEmptyContentLabel"
-  })))), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
-    className: qC.save,
+  })))), React.createElement(Src_shared_ui_components_index.d, {
+    className: Module_99.save,
     type: "primary",
     onClick: j
-  }, $_710$a$formatMessage({
+  }, Module_710$a$formatMessage({
     id: "save"
   })))
 })

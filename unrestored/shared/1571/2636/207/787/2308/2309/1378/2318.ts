@@ -88,7 +88,7 @@ function d(e, t) {
     return f(e, t)
   }, t)
 }
-t = require("../2310/1377/index")
+t = require(/* 1377 */"../2310/1377/index")
 t$any = t.any
 t$all = t.all
 t$isItNaN = t.isItNaN

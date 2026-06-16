@@ -8,13 +8,12 @@
 
 import { y, w, E, O, T } from "../../../../unrestored/player/2635/2637/index__part-0"
 import { loadRealWork } from "../../../shared/player/audit"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_177 from "../../../../unrestored/shared/1571/2636/177"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_player_2635_2637_514_index from "../../../../unrestored/player/2635/2637/514/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_6 from "../../../../unrestored/shared/1571/2636/6"
+import * as /* [auto-meaningful-name] */Module_177 from "../../../../unrestored/shared/1571/2636/177"
+import * as /* [auto-meaningful-name] */Module_514 from "../../../../unrestored/player/2635/2637/514/index"
 import * as Tools from "../../../shared/tools"
 import /* [auto-meaningful-name] */React from "react"
 import { useState, useRef, useEffect } from "react"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_player_2635_2637_1210 from "../../../../unrestored/player/2635/2637/1210"
+import /* [auto-meaningful-name] */Unrestored_player_2635_2637_1210 from "../../../../unrestored/player/2635/2637/1210"
 
 export const MobileCommunityWrapper = React.memo(() => {
 
@@ -31,7 +30,7 @@ export const MobileCommunityWrapper = React.memo(() => {
       workId = searchParams.workId
     }
     if (workId) {
-      const bcmcUrl = (await $$_$$_$$_$$_unrestored_shared_1571_2636_177.g(workId, 1)).data.bcmc_url
+      const bcmcUrl = (await Module_177.g(workId, 1)).data.bcmc_url
       // [CoCo Next] 提升加载速度
       // addEditorIframe(bcmcUrl)
       let bcmc = await (await fetch(bcmcUrl)).json()
@@ -74,14 +73,14 @@ export const MobileCommunityWrapper = React.memo(() => {
     }
   }, [blockCode, isLoading])
 
-  return playerProps ? <div className={$$_$$_$$_$$_unrestored_player_2635_2637_1210.community}>
+  return playerProps ? <div className={Unrestored_player_2635_2637_1210.community}>
     <input
       type="file"
       accept="image/*"
       capture="camera"
       id="appcraft-camera-input"
-      className={$$_$$_$$_$$_unrestored_player_2635_2637_1210.camera}
+      className={Unrestored_player_2635_2637_1210.camera}
     />
-    {React.createElement($$_$$_$$_$$_unrestored_player_2635_2637_514_index.a, playerProps)}
+    {React.createElement(Module_514.a, playerProps)}
   </div> : <></>
 })

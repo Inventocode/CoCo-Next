@@ -7,24 +7,24 @@
 "use strict"
 
 import { tT } from "./index__part-144"
-import /* [auto-meaningful-name] */$_1040 from "./1040"
-import qC from "./99"
-import * as /* [auto-meaningful-name] */Lodash from "lodash"
-import * as /* [auto-meaningful-name] */$_238 from "./238"
-import * as /* [auto-meaningful-name] */$_26_index from "./26/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
-import * as k from "./11"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import { useSelector, useDispatch } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { memo, useRef, useState, useEffect, useCallback } from "react"
+import /* [auto-meaningful-name] */Module_1040 from /* 1040 */"./1040"
+import /* [auto-meaningful-name] */Module_99 from /* 99 */"./99"
+import * as /* [auto-meaningful-name] */Lodash from /* 30 */"lodash"
+import * as /* [auto-meaningful-name] */Module_238 from /* 238 */"./238"
+import * as /* [auto-meaningful-name] */Module_26 from /* 26 */"./26/index"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */Module_25 from /* 25 */"./25/index"
+import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"./11"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import { useSelector, useDispatch } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo, useRef, useState, useEffect, useCallback } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_440 from "./440"
-import /* [auto-meaningful-name] */$_4401 from "./440"
+import * as /* [auto-meaningful-name] */Module_440 from /* 440 */"./440"
+import /* [auto-meaningful-name] */Module_4401 from /* 440 */"./440"
 var iT = memo(function () {
   var e = useSelector(function (e) {
     return e.block.get("editObjectDialog")
@@ -36,23 +36,23 @@ var iT = memo(function () {
   var i = useSelector(function (e) {
     return e.project.globalObjectList
   })
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var s = useRef(null)
-  var c = $_238.d()
+  var c = Module_238.d()
   var l = useState(false)
-  var u = $_10_index.a(l, 2)
+  var u = Module_10.a(l, 2)
   var d = u[0]
   var p = u[1]
   var m = useState(0)
-  var g = $_10_index.a(m, 2)
+  var g = Module_10.a(m, 2)
   var v = g[0]
   var b = g[1]
   var y = useState(0)
-  var E = $_10_index.a(y, 2)
+  var E = Module_10.a(y, 2)
   var O = E[0]
   var w = E[1]
   var C = useState([])
-  var T = $_10_index.a(C, 2)
+  var T = Module_10.a(C, 2)
   var A = T[0]
   var j = T[1]
   var R = useRef(false)
@@ -108,7 +108,7 @@ var iT = memo(function () {
   var P = useDispatch()
   useEffect(function () {
     if (e$visible) {
-      $_26_index.z.unselectCurrentBlock()
+      Module_26.z.unselectCurrentBlock()
     }
   }, [e$visible])
   var B = function () {
@@ -120,7 +120,7 @@ var iT = memo(function () {
     var n = "key".concat(t)
     if (!D.current) {
       A.push([n, ""])
-      j($_25_index.a(A))
+      j(Module_25.a(A))
       b(A.length)
       D.current = 1
       L(A.length)
@@ -131,7 +131,7 @@ var iT = memo(function () {
       }, 0)
     }
     A.splice(v + 1, 0, [n, ""])
-    j($_25_index.a(A))
+    j(Module_25.a(A))
     b(v + 1)
     L(v + 1)
     if (v === A.length - 1) {
@@ -143,18 +143,18 @@ var iT = memo(function () {
     }
   }
   var F = useCallback(function () {
-    P($$_$$_$$_$$_src_editor_redux_common_actions.ph())
+    P(Src_editor_redux_common_actions.ph())
   }, [P])
   var G = useCallback(function () {
     if (e$scopeType && o && c) {
       var e = {}
       A.forEach(function (t) {
-        var n = $_10_index.a(t, 2)
+        var n = Module_10.a(t, 2)
         var r = n[0]
         var o = n[1]
         e[r] = o
       })
-      P($$_$$_$$_$$_src_editor_redux_common_actions.Gg({
+      P(Src_editor_redux_common_actions.Gg({
         scopeType: e$scopeType,
         id: o,
         key: "defaultValue",
@@ -177,41 +177,41 @@ var iT = memo(function () {
       }
     }
   }
-  return e$variable ? React.createElement($$_$$_$$_$$_src_shared_ui_components_index.f, {
-    className: Classnames(qC.editDialog, $_4401.container),
+  return e$variable ? React.createElement(Src_shared_ui_components_index.f, {
+    className: Classnames(Module_99.editDialog, Module_4401.container),
     visible: e$visible,
     withPortal: true,
     onClose: F
   }, React.createElement("p", {
-    className: qC.dialogTitle
-  }, $_710$a$formatMessage({
+    className: Module_99.dialogTitle
+  }, Module_710$a$formatMessage({
     id: "object.editObjectList"
   })), React.createElement("div", {
-    className: qC.summary
+    className: Module_99.summary
   }, React.createElement("span", null, e$variable.name), React.createElement("div", {
-    className: qC.count
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
+    className: Module_99.count
+  }, React.createElement(Src_shared_ui_components_index.d, {
     onClick: B,
     type: "primary",
     ref: M
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-add"
   })))), React.createElement("div", {
-    className: Classnames(qC.list, $_4401.list),
+    className: Classnames(Module_99.list, Module_4401.list),
     ref: s
   }, A.length > 0 ? React.createElement("ul", null, A.map(function (e, t) {
-    var n = $_10_index.a(e, 2)
+    var n = Module_10.a(e, 2)
     var r = n[0]
     var o = n[1]
     return React.createElement("li", {
-      className: Classnames($_4401.row, k.a({}, $_4401.focus, t === v)),
+      className: Classnames(Module_4401.row, Module_11.a({}, Module_4401.focus, t === v)),
       key: r
     }, React.createElement("div", {
-      className: $_4401.keyItem
+      className: Module_4401.keyItem
     }, React.createElement("input", {
       type: "text",
       defaultValue: r,
-      className: Classnames($_4401.input, k.a({}, $_4401.error, d && v === t)),
+      className: Classnames(Module_4401.input, Module_11.a({}, Module_4401.error, d && v === t)),
       onClick: function () {
         D.current = 1
         b(t)
@@ -225,7 +225,7 @@ var iT = memo(function () {
             e.target.value = r
           } else {
             A.splice(t, 1, n)
-            j($_25_index.a(A))
+            j(Module_25.a(A))
           }
           p(false)
         }(e, t)
@@ -245,11 +245,11 @@ var iT = memo(function () {
         W(e, t)
       }
     })), React.createElement("div", {
-      className: $_4401.valueItem
+      className: Module_4401.valueItem
     }, React.createElement("input", {
       type: "text",
       value: o,
-      className: Classnames($_4401.input),
+      className: Classnames(Module_4401.input),
       onBlur: function (e) {
         !function (e, t) {
           var /* [auto-meaningful-name] */e$target$value = e.target.value
@@ -261,7 +261,7 @@ var iT = memo(function () {
           }
           var o = [A[t][0], e$target$value]
           A.splice(t, 1, o)
-          j($_25_index.a(A))
+          j(Module_25.a(A))
         }(e, t)
       },
       onClick: function () {
@@ -274,41 +274,41 @@ var iT = memo(function () {
       },
       onChange: function (e) {
         A[t][1] = e.target.value
-        j($_25_index.a(A))
+        j(Module_25.a(A))
       }
     })), React.createElement("span", {
-      className: $_4401.close,
+      className: Module_4401.close,
       onClick: function () {
         !function (e) {
           A.splice(e, 1)
-          j($_25_index.a(A))
+          j(Module_25.a(A))
         }(t)
       }
-    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+    }, React.createElement(Src_shared_ui_components_index.j, {
       type: "icon-close"
     })))
   })) : React.createElement("div", {
-    className: qC.emptyContent
+    className: Module_99.emptyContent
   }, React.createElement("img", {
-    className: qC.image,
-    src: $_1040,
+    className: Module_99.image,
+    src: Module_1040,
     alt: ""
   }), React.createElement("div", {
-    className: qC.label
-  }, $_710$a$formatMessage({
+    className: Module_99.label
+  }, Module_710$a$formatMessage({
     id: "variableListEmptyContentLabel"
   })))), React.createElement("div", {
-    className: $_4401.footer
+    className: Module_4401.footer
   }, React.createElement("p", {
-    className: $_4401.tips
-  }, d ? $_710$a$formatMessage({
+    className: Module_4401.tips
+  }, d ? Module_710$a$formatMessage({
     id: "object.keyRepeat"
-  }) : ""), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
-    className: $_4401.save,
+  }) : ""), React.createElement(Src_shared_ui_components_index.d, {
+    className: Module_4401.save,
     type: "primary",
     onClick: G,
     disabled: d
-  }, $_710$a$formatMessage({
+  }, Module_710$a$formatMessage({
     id: "save"
   })))) : null
 })

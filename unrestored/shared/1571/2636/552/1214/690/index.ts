@@ -7,10 +7,10 @@
 "use strict"
 
 export { o as a }
-import * as /* [auto-meaningful-name] */$_2645 from "./2645"
-import "react"
-import * as /* [auto-meaningful-name] */$$_$$_$$_551_1211_709_798 from "../../../551/1211/709/798"
+import * as /* [auto-meaningful-name] */Module_2645 from /* 2645 */"./2645"
+import /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_798 from /* 798 */"../../../551/1211/709/798"
 function o() {
-  return $_2645.a() || $$_$$_$$_551_1211_709_798.a
+  return Module_2645.a() || Module_798.a
 }
 export default o

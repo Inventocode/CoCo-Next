@@ -6,9 +6,9 @@
 
 "use strict"
 
-var r = require("./1806")
-var i = require("../../../../2393/2394/1288")
-var o = require("./1807")
+var r = require(/* 1806 */"./1806")
+var i = require(/* 1288 */"../../../../2393/2394/1288")
+var o = require(/* 1807 */"./1807")
 function a() {
   return c.TYPED_ARRAY_SUPPORT ? 2147483647 : 1073741823
 }

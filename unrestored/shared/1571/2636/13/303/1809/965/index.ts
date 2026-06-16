@@ -9,7 +9,7 @@
 var r
 var i
 var o
-var a = require("./1810")
+var a = require(/* 1810 */"./1810")
 var /* [auto-meaningful-name] */_0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_ = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_-"
 function c() {
   o = false

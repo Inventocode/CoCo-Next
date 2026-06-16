@@ -7,21 +7,21 @@
 "use strict"
 
 import { ce, ue } from "./index__part-1"
-import * as /* [auto-meaningful-name] */$_1497 from "./1497"
-import * as /* [auto-meaningful-name] */$$_432 from "../432"
-import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */$$_$$_107 from "../../107"
-import * as /* [auto-meaningful-name] */$$_$$_40_index from "../../40/index"
-import * as /* [auto-meaningful-name] */$$_491 from "../491"
-import * as /* [auto-meaningful-name] */ResizeObserverPolyfill from "resize-observer-polyfill"
-import * as /* [auto-meaningful-name] */$$_561 from "../561"
+import * as /* [auto-meaningful-name] */Module_1497 from /* 1497 */"./1497"
+import * as /* [auto-meaningful-name] */Module_432 from /* 432 */"../432"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_107 from /* 107 */"../../107"
+import * as /* [auto-meaningful-name] */Module_40 from /* 40 */"../../40/index"
+import * as /* [auto-meaningful-name] */Module_491 from /* 491 */"../491"
+import * as /* [auto-meaningful-name] */ResizeObserverPolyfill from /* 462 */"resize-observer-polyfill"
+import * as /* [auto-meaningful-name] */Module_561 from /* 561 */"../561"
 function he(e, t) {
   var n = null
   var r = null
   var o = new ResizeObserverPolyfill.default(function (e) {
-    var /* [auto-meaningful-name] */$$_$$_40_index$aE10$target = $$_$$_40_index.a(e, 1)[0].target
-    if (document.documentElement.contains($$_$$_40_index$aE10$target)) {
-      var a = $$_$$_40_index$aE10$target.getBoundingClientRect()
+    var /* [auto-meaningful-name] */Module_40$aE10$target = Module_40.a(e, 1)[0].target
+    if (document.documentElement.contains(Module_40$aE10$target)) {
+      var a = Module_40$aE10$target.getBoundingClientRect()
       var /* [auto-meaningful-name] */a$width = a.width
       var /* [auto-meaningful-name] */a$height = a.height
       var u = Math.floor(a$width)
@@ -49,7 +49,7 @@ function pe(e) {
   return "function" !== typeof e ? null : e()
 }
 function _e(e) {
-  return "object" === $$_$$_107.a(e) && e ? e : null
+  return "object" === Module_107.a(e) && e ? e : null
 }
 var Ae = React.forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$children = e.children
@@ -109,7 +109,7 @@ var Ae = React.forwardRef(function (e, t) {
       p.current.element = s
       p.current.point = c
       var /* [auto-meaningful-name] */document$activeElement = document.activeElement
-      if (s && $_1497.a(s)) {
+      if (s && Module_1497.a(s)) {
         i = ce(_$current, s, e$align)
       } else {
         if (c) {
@@ -117,7 +117,7 @@ var Ae = React.forwardRef(function (e, t) {
         }
       }
       (function (e, t) {
-        if (e !== document.activeElement && $$_561.a(t, e) && "function" === typeof e.focus) {
+        if (e !== document.activeElement && Module_561.a(t, e) && "function" === typeof e.focus) {
           e.focus()
         }
       })(document$activeElement, _$current)
@@ -128,7 +128,7 @@ var Ae = React.forwardRef(function (e, t) {
     }
     return false
   }, h)
-  var m = $$_$$_40_index.a(v, 2)
+  var m = Module_40.a(v, 2)
   var y = m[0]
   var b = m[1]
   var w = React.useRef({
@@ -167,7 +167,7 @@ var Ae = React.forwardRef(function (e, t) {
   React.useEffect(function () {
     if (e$monitorWindowResize) {
       if (!x.current) {
-        x.current = $$_491.a(window, "resize", y)
+        x.current = Module_491.a(window, "resize", y)
       }
     } else {
       if (x.current) {
@@ -195,7 +195,7 @@ var Ae = React.forwardRef(function (e, t) {
   })
   if (React.isValidElement(A)) {
     A = React.cloneElement(A, {
-      ref: $$_432.a(A.ref, _)
+      ref: Module_432.a(A.ref, _)
     })
   }
   return A

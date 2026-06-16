@@ -7,56 +7,56 @@
 "use strict"
 
 import { nI } from "./index__part-170"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import * as /* [auto-meaningful-name] */$_748_index from "./748/index"
-import /* [auto-meaningful-name] */React from "react"
-import { useRef } from "react"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import * as /* [auto-meaningful-name] */Module_748 from /* 748 */"./748/index"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { useRef } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_474 from "./474"
-import /* [auto-meaningful-name] */$_4741 from "./474"
+import * as /* [auto-meaningful-name] */Module_474 from /* 474 */"./474"
+import /* [auto-meaningful-name] */Module_4741 from /* 474 */"./474"
 var GS = function (e, t) {
   var n = React.createElement("div", {
-    className: $_4741.screenIcon
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+    className: Module_4741.screenIcon
+  }, React.createElement(Src_shared_ui_components_index.j, {
     className: "coco-iconfont-screen-bg",
     type: e >= 9 ? "icon-screen-variable-plus" : "icon-screen-variable"
   }), React.createElement("span", {
-    className: Classnames($_4741.iconNumber, e >= 9 ? $_4741.iconFat : $_4741.iconThin, e > 0 && e < 9 ? $_4741.iconMiddle : "")
+    className: Classnames(Module_4741.iconNumber, e >= 9 ? Module_4741.iconFat : Module_4741.iconThin, e > 0 && e < 9 ? Module_4741.iconMiddle : "")
   }, e + 1))
   var r = React.createElement("div", {
-    className: $_4741.tips
+    className: Module_4741.tips
   }, null === t || undefined === t ? undefined : t.title)
-  return t ? React.createElement($_748_index.a, {
+  return t ? React.createElement(Module_748.a, {
     placement: "bottom",
     trigger: ["hover"],
     title: r
   }, n) : n
 }
 var WS = React.memo(function () {
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var t = useRef(null)
   var /* [auto-meaningful-name] */React$useContextNI$setBulkSelectVisible = React.useContext(nI).setBulkSelectVisible
   return React.createElement("div", {
-    className: Classnames($_4741.wrapper)
+    className: Classnames(Module_4741.wrapper)
   }, React.createElement("div", {
-    className: Classnames($_4741.header)
+    className: Classnames(Module_4741.header)
   }, React.createElement("div", {
-    className: Classnames($_4741.addButton),
+    className: Classnames(Module_4741.addButton),
     ref: t
   }, React.createElement("div", {
-    className: Classnames($_4741.AddIcon),
+    className: Classnames(Module_4741.AddIcon),
     onClick: function () {
       React$useContextNI$setBulkSelectVisible(true)
     }
   }, React.createElement("div", {
-    className: $_4741.icon
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+    className: Module_4741.icon
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-add"
   })), React.createElement("div", {
-    className: Classnames($_4741.addText)
-  }, $_710$a$formatMessage({
+    className: Classnames(Module_4741.addText)
+  }, Module_710$a$formatMessage({
     id: "DataWatch.addData"
   }))))))
 })

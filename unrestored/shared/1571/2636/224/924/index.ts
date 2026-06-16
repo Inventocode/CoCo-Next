@@ -7,8 +7,8 @@
 "use strict"
 
 export { d as a }
-import * as /* [auto-meaningful-name] */$_265 from "./265"
-import * as /* [auto-meaningful-name] */$_749 from "./749"
+import * as /* [auto-meaningful-name] */Module_265 from /* 265 */"./265"
+import * as /* [auto-meaningful-name] */Module_749 from /* 749 */"./749"
 var o = [
   {
     index: 7,
@@ -46,7 +46,7 @@ function a(e) {
   var t = e.r
   var n = e.g
   var i = e.b
-  var o = $_265.h(t, n, i)
+  var o = Module_265.h(t, n, i)
   return {
     h: 360 * o.h,
     s: o.s,
@@ -57,7 +57,7 @@ function s(e) {
   var t = e.r
   var n = e.g
   var i = e.b
-  return "#".concat($_265.f(t, n, i, false))
+  return "#".concat(Module_265.f(t, n, i, false))
 }
 function c(e, t, n) {
   var r = n / 100
@@ -90,9 +90,9 @@ function f(e, t, n) {
   return Number(r.toFixed(2))
 }
 function d(e) {
-  for (var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : {}, n = [], r = $_749.a(e), d = 5; d > 0; d -= 1) {
+  for (var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : {}, n = [], r = Module_749.a(e), d = 5; d > 0; d -= 1) {
     var h = a(r)
-    var p = s($_749.a({
+    var p = s(Module_749.a({
       h: u(h, d, true),
       s: l(h, d, true),
       v: f(h, d, true)
@@ -102,7 +102,7 @@ function d(e) {
   n.push(s(r))
   for (var _ = 1; _ <= 4; _ += 1) {
     var A = a(r)
-    var g = s($_749.a({
+    var g = s(Module_749.a({
       h: u(A, _),
       s: l(A, _),
       v: f(A, _)
@@ -112,7 +112,7 @@ function d(e) {
   return "dark" === t.theme ? o.map(function (e) {
     var /* [auto-meaningful-name] */e$index = e.index
     var /* [auto-meaningful-name] */e$opacity = e.opacity
-    return s(c($_749.a(t.backgroundColor || "#141414"), $_749.a(n[e$index]), 100 * e$opacity))
+    return s(c(Module_749.a(t.backgroundColor || "#141414"), Module_749.a(n[e$index]), 100 * e$opacity))
   }) : n
 }
 var h = {

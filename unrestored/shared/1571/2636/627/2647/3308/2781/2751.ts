@@ -47,7 +47,7 @@ exports.hasClass = function (e, t) {
   }
   return false
 }
-var a = require("react-dom")
+var a = require(/* 80 */"react-dom")
 function r(e) {
   var t
   if (e.getBoundingClientRect && e.parentNode) {

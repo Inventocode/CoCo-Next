@@ -7,18 +7,18 @@
 "use strict"
 
 import { P } from "./413__part-3"
-import * as /* [auto-meaningful-name] */$$_$$_$$_82 from "../../../82"
-import * as /* [auto-meaningful-name] */$$_$$_$$_6 from "../../../6"
-import * as /* [auto-meaningful-name] */$$_$$_$$_28_index from "../../../28/index"
-import * as /* [auto-meaningful-name] */$$_242 from "../242"
-import * as /* [auto-meaningful-name] */$$_$$_$$_55 from "../../../55"
-import * as /* [auto-meaningful-name] */$$_$$_index from "../../index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../../src/editor/widget/built-in/types"
-import /* [auto-meaningful-name] */React from "react"
-import { useMemo } from "react"
+import * as /* [auto-meaningful-name] */Module_82 from /* 82 */"../../../82"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"../../../6"
+import * as /* [auto-meaningful-name] */Module_28 from /* 28 */"../../../28/index"
+import * as /* [auto-meaningful-name] */Module_242 from /* 242 */"../242"
+import * as /* [auto-meaningful-name] */Module_55 from /* 55 */"../../../55"
+import * as /* [auto-meaningful-name] */Module_20 from /* 20 */"../../index"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../../../../src/editor/widget/built-in/types"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { useMemo } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import /* [auto-meaningful-name] */Color from "color"
-import * as /* [auto-meaningful-name] */$$_$$_$$_34_347_112 from "../../../34/347/112"
+import /* [auto-meaningful-name] */Color from /* 51 */"color"
+import * as /* [auto-meaningful-name] */Module_112 from /* 112 */"../../../34/347/112"
 var F = function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$type = e.type
@@ -30,13 +30,13 @@ var F = function (e) {
   var /* [auto-meaningful-name] */e$attributes$backgroundColor = e$attributes.backgroundColor
   var /* [auto-meaningful-name] */e$attributes$iconId = e$attributes.iconId
   var /* [auto-meaningful-name] */e$attributes$backgroundImage = e$attributes.backgroundImage
-  var m = $$_$$_$$_34_347_112.a(e$attributes$iconId) || $$_$$_$$_82.c
-  var g = $$_$$_$$_34_347_112.b(e$attributes$backgroundImage) || $$_$$_$$_82.f
+  var m = Module_112.a(e$attributes$iconId) || Module_82.c
+  var g = Module_112.b(e$attributes$backgroundImage) || Module_82.f
   var _ = useMemo(function () {
     try {
       return Color(e$attributes$textColor.toString()).toString()
     } catch (e) {
-      $$_$$_$$_55.b.widgetError({
+      Module_55.b.widgetError({
         widgetId: t,
         widgetType: e$type,
         message: "player/colorError"
@@ -48,7 +48,7 @@ var F = function (e) {
     try {
       return Color(e$attributes$iconColor.toString()).toString()
     } catch (e) {
-      $$_$$_$$_55.b.widgetError({
+      Module_55.b.widgetError({
         widgetId: t,
         widgetType: e$type,
         message: "player/colorError"
@@ -60,7 +60,7 @@ var F = function (e) {
     try {
       return Color(e$attributes$backgroundColor.toString()).toString()
     } catch (e) {
-      $$_$$_$$_55.b.widgetError({
+      Module_55.b.widgetError({
         widgetId: t,
         widgetType: e$type,
         message: "player/colorError"
@@ -70,7 +70,7 @@ var F = function (e) {
   }, [e$attributes$backgroundColor, t, e$type])
   return React.createElement(P, Object.assign({}, e, {
     iconFileOrUrl: m,
-    attributes: $$_$$_$$_6.a($$_$$_$$_6.a({}, e.attributes), {}, {
+    attributes: Module_6.a(Module_6.a({}, e.attributes), {}, {
       textColor: _,
       iconColor: v,
       backgroundColor: b,
@@ -78,13 +78,13 @@ var F = function (e) {
     }),
     onClick: function () {
       if (!e$attributes$disabled) {
-        $$_$$_index.emitButtonPress(t)
+        Module_20.emitButtonPress(t)
       }
       if (!e$attributes$disabled) {
-        $$_$$_index.emitWidgetEvent(e$type, "onButtonPressPress", t)
+        Module_20.emitWidgetEvent(e$type, "onButtonPressPress", t)
       }
-      $$_242.b(t, $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.z, $$_$$_$$_28_index.m("click", e$animationRecord))
-      $$_$$_$$_55.b.playerWidgetLog({
+      Module_242.b(t, Src_editor_widget_builtIn_types.z, Module_28.m("click", e$animationRecord))
+      Module_55.b.playerWidgetLog({
         widgetId: t,
         widgetType: e$type,
         message: "onWidgetPress"
@@ -92,18 +92,18 @@ var F = function (e) {
     },
     onMouseDown: function () {
       if (!e$attributes$disabled) {
-        $$_$$_index.emitButtonPressIn(t)
+        Module_20.emitButtonPressIn(t)
       }
       if (!e$attributes$disabled) {
-        $$_$$_index.emitWidgetEvent(e$type, "onButtonPressPressIn", t)
+        Module_20.emitWidgetEvent(e$type, "onButtonPressPressIn", t)
       }
     },
     onMouseUp: function () {
       if (!e$attributes$disabled) {
-        $$_$$_index.emitButtonPressOut(t)
+        Module_20.emitButtonPressOut(t)
       }
       if (!e$attributes$disabled) {
-        $$_$$_index.emitWidgetEvent(e$type, "onButtonPressPressOut", t)
+        Module_20.emitWidgetEvent(e$type, "onButtonPressPressOut", t)
       }
     }
   }))

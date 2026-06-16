@@ -4,7 +4,7 @@
  * 模块 ID：712
  */
 
-var r = require("./2231")
+var r = require(/* 2231 */"./2231")
 function i(t, n, o) {
   if ("undefined" !== typeof Reflect && Reflect.get) {
     module.exports = i = Reflect.get

@@ -10,10 +10,10 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.ChangeEvent = undefined
-var r = require("tslib")
-var i = require("inversify")
-var o = require("../../../123/195/index")
-var a = require("../../../1022/214")
+var r = require(/* 93 */"tslib")
+var i = require(/* 134 */"inversify")
+var o = require(/* 195 */"../../../123/195/index")
+var a = require(/* 214 */"../../../1022/214")
 var s = function (e) {
   function t(t, n) {
     var r = e.call(this, n.block) || this
@@ -197,5 +197,5 @@ var s = function (e) {
     return this._new_json
   }
   return t = (0, r.__decorate)([(0, i.injectable)()], t)
-}(require("./647").BlockEvent)
+}(require(/* 647 */"./647").BlockEvent)
 exports.ChangeEvent = s

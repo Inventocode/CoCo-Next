@@ -6,7 +6,7 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$_234 from "./234"
+import * as /* [auto-meaningful-name] */Module_234 from /* 234 */"./234"
 var um = [
   {
     type: "WidgetTitle",
@@ -22,7 +22,7 @@ var um = [
     }
   ], {
     type: "Size",
-    sizeRange: [[$_234.l, $_234.j], [$_234.k, $_234.i]]
+    sizeRange: [[Module_234.l, Module_234.j], [Module_234.k, Module_234.i]]
   }, {
     type: "Coordinate"
   }

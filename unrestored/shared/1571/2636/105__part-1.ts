@@ -13,7 +13,7 @@ var a
 var o
 var i
 var r
-import * as /* [auto-meaningful-name] */Hammerjs from "hammerjs"
+import * as /* [auto-meaningful-name] */Hammerjs from /* 562 */"hammerjs"
 !function (e) {
   e.Actor = "actor"
   e.Scene = "scene"

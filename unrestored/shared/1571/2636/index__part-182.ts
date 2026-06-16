@@ -7,13 +7,13 @@
 "use strict"
 
 import { fj, hj } from "./index__part-181"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import /* [auto-meaningful-name] */React from "react"
-import { memo } from "react"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_815 from "./815"
-import /* [auto-meaningful-name] */$_8151 from "./815"
+import * as /* [auto-meaningful-name] */Module_815 from /* 815 */"./815"
+import /* [auto-meaningful-name] */Module_8151 from /* 815 */"./815"
 var bj = memo(function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$source = e.source
@@ -23,7 +23,7 @@ var bj = memo(function (e) {
   var /* [auto-meaningful-name] */e$isSelect = e.isSelect
   var /* [auto-meaningful-name] */e$selectHandler = e.selectHandler
   return React.createElement("div", {
-    className: Classnames($_8151.IconLibraryItem, e$isSelect && $_8151.selected),
+    className: Classnames(Module_8151.IconLibraryItem, e$isSelect && Module_8151.selected),
     onClick: function () {
       e$selectHandler({
         id: t,
@@ -35,16 +35,16 @@ var bj = memo(function (e) {
       })
     }
   }, React.createElement("div", {
-    className: $_8151.icon
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+    className: Module_8151.icon
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-style-selected"
   })), React.createElement("div", {
-    className: $_8151.content
+    className: Module_8151.content
   }, React.createElement("img", {
     alt: e$name,
     src: e$cdnUrl || e$source
   })), React.createElement("div", {
-    className: $_8151.footer
+    className: Module_8151.footer
   }, e$name, ".svg"))
 })
 export { bj }

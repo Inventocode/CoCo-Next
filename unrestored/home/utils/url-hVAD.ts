@@ -12,7 +12,7 @@
 export { getUrlParams }
 /* harmony import */
 export { getCommunityAccountSettingUrl }
-import * as __WEBPACK_IMPORTED_MODULE_0__cfg__ from "../cfg-dpNx"
+import * as __WEBPACK_IMPORTED_MODULE_0__cfg__ from /* dpNx */"../cfg-dpNx"
 function getUrlSearchParams(queryString) {
   var searchParams = new URLSearchParams(queryString)
   var key = "inviteCode"

@@ -4,10 +4,10 @@
  * 模块 ID：300
  */
 
-var r = require("../271")
-var o = require("./1237")
-var i = require("../../1282/240")
-var a = require("../../1581/632")
+var r = require(/* 271 */"../271")
+var o = require(/* 1237 */"./1237")
+var i = require(/* 240 */"../../1282/240")
+var a = require(/* 632 */"../../1581/632")
 var /* [auto-meaningful-name] */Object$defineProperty = Object.defineProperty
 exports.f = r ? Object$defineProperty : function (e, t, n) {
   i(e)

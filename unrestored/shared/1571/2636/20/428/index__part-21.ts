@@ -6,27 +6,27 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_14 from "../../14"
-import * as /* [auto-meaningful-name] */$$_$$_7 from "../../7"
-import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$$_$$_28_index from "../../28/index"
-import * as /* [auto-meaningful-name] */$$_$$_34_347_346 from "../../34/347/346"
+import * as /* [auto-meaningful-name] */Module_14 from /* 14 */"../../14"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../../7"
+import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import * as /* [auto-meaningful-name] */Module_28 from /* 28 */"../../28/index"
+import * as /* [auto-meaningful-name] */Module_346 from /* 346 */"../../34/347/346"
 var Ad = {
-  getBrightness: $$_$$_34_347_346.getBrightness,
+  getBrightness: Module_346.getBrightness,
   setBrightness: function (e) {
     if ("number" === typeof e) {
       if (e > 100) {
-        $$_$$_14.a.condition(false, {
+        Module_14.a.condition(false, {
           type: "error",
           messageId: "brightnessLessThan"
         })
       } else if (e < 0) {
-        $$_$$_14.a.condition(false, {
+        Module_14.a.condition(false, {
           type: "error",
           messageId: "brightnessGreaterThan"
         })
       } else {
-        if (!$$_$$_28_index.d()) {
+        if (!Module_28.d()) {
           var t = e / 100
           var n = document.getElementById("cocoScreenMask")
           if (n) {
@@ -34,20 +34,20 @@ var Ad = {
             n.style.opacity = String(r)
           }
         }
-        $$_$$_34_347_346.setBrightness(e)
+        Module_346.setBrightness(e)
       }
     } else {
-      $$_$$_14.a.condition(false, {
+      Module_14.a.condition(false, {
         type: "error",
         messageId: "brightnessTypeError"
       })
     }
   },
   setKeepScreenOn: function (e) {
-    if ($$_$$_28_index.d()) {
-      $$_$$_34_347_346.setKeepScreenOn(e)
+    if (Module_28.d()) {
+      Module_346.setKeepScreenOn(e)
     } else {
-      $$_$$_14.a.condition(false, {
+      Module_14.a.condition(false, {
         type: "warning",
         messageId: "brightnessKeepScreenOnNotSupported"
       })
@@ -58,14 +58,14 @@ function Id() {
   return jd.apply(this, arguments)
 }
 function jd() {
-  return (jd = $$_$$_7.a(RegeneratorRuntime.mark(function e() {
+  return (jd = Module_7.a(RegeneratorRuntime.mark(function e() {
     var /* [auto-meaningful-name] */e$sent
     var n
     return RegeneratorRuntime.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            if (console.log("getBatteryInfo"), !$$_$$_28_index.d()) {
+            if (console.log("getBatteryInfo"), !Module_28.d()) {
               e.next = 5
               break
             }
@@ -111,7 +111,7 @@ function Nd() {
   return Rd.apply(this, arguments)
 }
 function Rd() {
-  return (Rd = $$_$$_7.a(RegeneratorRuntime.mark(function e() {
+  return (Rd = Module_7.a(RegeneratorRuntime.mark(function e() {
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$sent$level
     return RegeneratorRuntime.wrap(function (e) {

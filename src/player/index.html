@@ -11,11 +11,11 @@
     <body>
         <script>
             try {
-                var url = new URL(window.location.href)
-                  , title = url.searchParams.get("title");
-                title && (document.title = title)
-            } catch (t) {
-                console.error("Set title error", t)
+                const url = new URL(window.location.href)
+                const title = url.searchParams.get("title")
+                if (title)  { document.title = title }
+            } catch (error) {
+                console.error("Set title error", error)
             }
         </script>
         <div id="loading">

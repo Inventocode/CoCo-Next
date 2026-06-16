@@ -4,7 +4,7 @@
  * 模块 ID：830
  */
 
-var r = require("../1648/714")
+var r = require(/* 714 */"../1648/714")
 module.exports = Array.isArray || function (e) {
   return "Array" == r(e)
 }

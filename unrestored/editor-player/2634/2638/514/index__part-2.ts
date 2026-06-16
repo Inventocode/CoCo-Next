@@ -7,35 +7,35 @@
 "use strict"
 
 import { M } from "./index__part-1"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_28_index from "../../../../shared/1571/2636/28/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_59_index from "../../../../shared/1571/2636/59/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_58_index from "../../../../shared/1571/2636/58/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_39 from "../../../../shared/1571/2636/39"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_27 from "../../../../shared/1571/2636/27"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_load from "../../../../../src/shared/widget/custom/load"
+import * as /* [auto-meaningful-name] */Module_28 from /* 28 */"../../../../shared/1571/2636/28/index"
+import * as /* [auto-meaningful-name] */Module_59 from /* 59 */"../../../../shared/1571/2636/59/index"
+import * as /* [auto-meaningful-name] */Module_58 from /* 58 */"../../../../shared/1571/2636/58/index"
+import * as /* [auto-meaningful-name] */Module_39 from /* 39 */"../../../../shared/1571/2636/39"
+import * as /* [auto-meaningful-name] */Module_27 from /* 27 */"../../../../shared/1571/2636/27"
+import * as /* [auto-meaningful-name] */Src_shared_widget_custom_load from /* 34 */"../../../../../src/shared/widget/custom/load"
 var i
 var r
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_48_72 from "../../../../shared/1571/2636/48/72"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_48_index from "../../../../shared/1571/2636/48/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_37_219_index from "../../../../shared/1571/2636/37/219/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_738_70 from "../../../../shared/1571/2636/738/70"
+import * as /* [auto-meaningful-name] */Module_72 from /* 72 */"../../../../shared/1571/2636/48/72"
+import * as /* [auto-meaningful-name] */Module_48 from /* 48 */"../../../../shared/1571/2636/48/index"
+import * as /* [auto-meaningful-name] */Module_219 from /* 219 */"../../../../shared/1571/2636/37/219/index"
+import * as /* [auto-meaningful-name] */Module_70 from /* 70 */"../../../../shared/1571/2636/738/70"
 var L = function (t) {
-  $$_$$_$$_$$_shared_1571_2636_58_index.a(n, t)
-  var e = $$_$$_$$_$$_shared_1571_2636_59_index.a(n)
+  Module_58.a(n, t)
+  var e = Module_59.a(n)
   function n(t) {
     var o
-    $$_$$_$$_$$_shared_1571_2636_27.a(this, n);
+    Module_27.a(this, n);
     (o = e.call(this, t)).phoneNumber = undefined
     o.oldState = ""
     o.isIncomingCall = false
     o.phoneNumber = t.phoneNumber
     M.onCall(function (t) {
       switch (t) {
-        case $$_$$_$$_$$_shared_1571_2636_738_70.b.RINGING:
+        case Module_70.b.RINGING:
           o.emit("onReceivePhoneCall")
           break
-        case $$_$$_$$_$$_shared_1571_2636_738_70.b.OFFHOOK:
-          if (o.oldState === $$_$$_$$_$$_shared_1571_2636_738_70.b.RINGING) {
+        case Module_70.b.OFFHOOK:
+          if (o.oldState === Module_70.b.RINGING) {
             o.emit("onConnectReceivePhoneCall")
             o.isIncomingCall = true
           } else {
@@ -46,14 +46,14 @@ var L = function (t) {
           }
           break
         case "IDLE":
-          if (o.oldState === $$_$$_$$_$$_shared_1571_2636_738_70.b.RINGING) {
-            o.emit("onPhoneCallEnd", $$_$$_$$_$$_shared_1571_2636_738_70.a.INCOMING_CALL_REFUSE_END)
+          if (o.oldState === Module_70.b.RINGING) {
+            o.emit("onPhoneCallEnd", Module_70.a.INCOMING_CALL_REFUSE_END)
           } else {
-            if (o.isIncomingCall && o.oldState === $$_$$_$$_$$_shared_1571_2636_738_70.b.OFFHOOK) {
-              o.emit("onPhoneCallEnd", $$_$$_$$_$$_shared_1571_2636_738_70.a.INCOMING_CALL_CONNECT_END)
+            if (o.isIncomingCall && o.oldState === Module_70.b.OFFHOOK) {
+              o.emit("onPhoneCallEnd", Module_70.a.INCOMING_CALL_CONNECT_END)
             } else {
-              if (!(o.isIncomingCall || o.oldState !== $$_$$_$$_$$_shared_1571_2636_738_70.b.OFFHOOK)) {
-                o.emit("onPhoneCallEnd", $$_$$_$$_$$_shared_1571_2636_738_70.a.DIAL_OUT_CALL_END)
+              if (!(o.isIncomingCall || o.oldState !== Module_70.b.OFFHOOK)) {
+                o.emit("onPhoneCallEnd", Module_70.a.DIAL_OUT_CALL_END)
                 i = false
               }
             }
@@ -63,33 +63,33 @@ var L = function (t) {
     })
     return o
   }
-  $$_$$_$$_$$_shared_1571_2636_39.a(n, [
+  Module_39.a(n, [
     {
       key: "callNumber",
       value: function () {
         if (this.phoneNumber) {
-          if ($$_$$_$$_$$_shared_1571_2636_28_index.g()) {
-            if ($$_$$_$$_$$_shared_1571_2636_48_index.a().getState().emulatorPhoneInfo.callingPageVisible) {
+          if (Module_28.g()) {
+            if (Module_48.a().getState().emulatorPhoneInfo.callingPageVisible) {
               this.widgetWarn("callNumberRepeat")
             } else {
-              $$_$$_$$_$$_shared_1571_2636_48_index.a().dispatch($$_$$_$$_$$_shared_1571_2636_48_72.s({
+              Module_48.a().dispatch(Module_72.s({
                 phoneDialWidgetId: this.__widgetId,
                 callingPageVisible: true,
                 phoneNumber: this.phoneNumber,
                 callType: "dialOutCall",
-                callStatus: $$_$$_$$_$$_shared_1571_2636_738_70.b.RINGING
+                callStatus: Module_70.b.RINGING
               }))
               this.emit("onPhoneCallStart")
-              $$_$$_$$_$$_shared_1571_2636_37_219_index.b({
+              Module_219.b({
                 phoneCallInfo: {
                   callType: "dialOutCall",
                   dialOutPhoneNumber: this.phoneNumber,
-                  callStatus: $$_$$_$$_$$_shared_1571_2636_738_70.b.RINGING
+                  callStatus: Module_70.b.RINGING
                 }
               })
             }
           } else {
-            if (!$$_$$_$$_$$_shared_1571_2636_28_index.d()) {
+            if (!Module_28.d()) {
               r = this.__widgetId
               M.callNumber(this.phoneNumber)
             }
@@ -106,11 +106,11 @@ var L = function (t) {
     }, {
       key: "dialNumber",
       value: function () {
-        if ($$_$$_$$_$$_shared_1571_2636_28_index.g()) {
-          if ($$_$$_$$_$$_shared_1571_2636_48_index.a().getState().emulatorPhoneInfo.dialPageVisible) {
+        if (Module_28.g()) {
+          if (Module_48.a().getState().emulatorPhoneInfo.dialPageVisible) {
             this.widgetWarn("dialNumberRepeat")
           }
-          return void $$_$$_$$_$$_shared_1571_2636_48_index.a().dispatch($$_$$_$$_$$_shared_1571_2636_48_72.s({
+          return void Module_48.a().dispatch(Module_72.s({
             phoneDialWidgetId: this.__widgetId,
             dialPageVisible: true,
             phoneNumber: this.phoneNumber
@@ -122,5 +122,5 @@ var L = function (t) {
     }
   ])
   return n
-}($$_$$_$$_$$_$$_src_shared_widget_custom_load.c)
+}(Src_shared_widget_custom_load.c)
 export { L }

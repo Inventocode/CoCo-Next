@@ -7,22 +7,22 @@
 "use strict"
 
 export { f as a }
-import * as r from "../6"
-import * as /* [auto-meaningful-name] */$$_27 from "../27"
-import * as /* [auto-meaningful-name] */$$_39 from "../39"
-import * as /* [auto-meaningful-name] */$$_58_index from "../58/index"
-import * as /* [auto-meaningful-name] */$$_59_index from "../59/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index from "../../../../../src/shared/packages/@crc/blink/src/index"
-import * as /* [auto-meaningful-name] */$_736 from "./736"
-import * as /* [auto-meaningful-name] */$$_18 from "../18"
-import * as d from "../9"
-import * as /* [auto-meaningful-name] */$$_46_index from "../46/index"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"../6"
+import * as /* [auto-meaningful-name] */Module_27 from /* 27 */"../27"
+import * as /* [auto-meaningful-name] */Module_39 from /* 39 */"../39"
+import * as /* [auto-meaningful-name] */Module_58 from /* 58 */"../58/index"
+import * as /* [auto-meaningful-name] */Module_59 from /* 59 */"../59/index"
+import * as /* [auto-meaningful-name] */Src_shared_packages_Crc_blink_src_index from /* 17 */"../../../../../src/shared/packages/@crc/blink/src/index"
+import * as /* [auto-meaningful-name] */Module_736 from /* 736 */"./736"
+import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"../18"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"../9"
+import * as /* [auto-meaningful-name] */Module_46 from /* 46 */"../46/index"
 var f = function (e) {
-  $$_58_index.a(n, e)
-  var t = $$_59_index.a(n)
+  Module_58.a(n, e)
+  var t = Module_59.a(n)
   function n(e) {
     var r
-    $$_27.a(this, n);
+    Module_27.a(this, n);
     (r = t.call(this, {
       menu_generator: e.options,
       opt_onchange: e.optOnchange,
@@ -33,7 +33,7 @@ var f = function (e) {
     r.SVG_WIDTH = 2
     return r
   }
-  $$_39.a(n, [
+  Module_39.a(n, [
     {
       key: "show_editor",
       value: function () {
@@ -47,7 +47,7 @@ var f = function (e) {
             var /* [auto-meaningful-name] */f$snapshot1
             var /* [auto-meaningful-name] */f$snapshot2
             var f = n[i]
-            var h = r.a(r.a({}, f), {}, {
+            var h = Module_6.a(Module_6.a({}, f), {}, {
               icon: {
                 width: (null === (f$snapshot = f.snapshot) || undefined === f$snapshot ? undefined : f$snapshot.width) || 40,
                 height: (null === (f$snapshot1 = f.snapshot) || undefined === f$snapshot1 ? undefined : f$snapshot1.height) || 40,
@@ -63,12 +63,12 @@ var f = function (e) {
           throw Error("field is not attached to any block.")
         }
         var _ = g.get_field_value("WIDGET_ID")
-        if ("DOC_KEYS" === this.name && _ === d.h) {
+        if ("DOC_KEYS" === this.name && _ === Module_9.h) {
           var v = {
             payload: undefined,
             type: "ASYNC_OPEN_TOAST_ON_NOT_SELECT_DOCUMENT"
           }
-          $$_46_index.c().dispatchAction(v)
+          Module_46.c().dispatchAction(v)
         } else {
           var /* [auto-meaningful-name] */this$source_block2
           var /* [auto-meaningful-name] */this$source_block1$parent_block
@@ -77,10 +77,10 @@ var f = function (e) {
           var w
           var C
           var T = g.workspace.get_scale()
-          var S = ($$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.theme.renderer.STATEMENT_ROW_PADDING_Y_TO_FIELD + 1) * T + 1
+          var S = (Src_shared_packages_Crc_blink_src_index.Blink.theme.renderer.STATEMENT_ROW_PADDING_Y_TO_FIELD + 1) * T + 1
           if (this$source_block1.is_shadow()) {
             var /* [auto-meaningful-name] */this$source_block1$svg_group = this$source_block1.svg_group
-            E = $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.BU.dom.get_page_offset(this$source_block1$svg_group)
+            E = Src_shared_packages_Crc_blink_src_index.BU.dom.get_page_offset(this$source_block1$svg_group)
             var I = this$source_block1.get_height_width()
             O = I.width * T
             w = I.height * T + 2 * S
@@ -95,7 +95,7 @@ var f = function (e) {
           this.change_editor_style(true)
           var N = {
             payload: {
-              type: $$_18.a.DYNAMIC_DROPDOWN,
+              type: Module_18.a.DYNAMIC_DROPDOWN,
               value: this.get_value(),
               setValue: function (e) {
                 t.set_value(e)
@@ -127,25 +127,25 @@ var f = function (e) {
             N.payload.showCurrentScreenIndex = true
           }
           if ("IMAGE_FILE_ID" === this.name) {
-            N.payload.type = $$_18.a.IMAGE_DROPDOWN
+            N.payload.type = Module_18.a.IMAGE_DROPDOWN
           } else {
             if ("ICON_FILE_ID" === this.name) {
-              N.payload.type = $$_18.a.ICON_DROPDOWN
+              N.payload.type = Module_18.a.ICON_DROPDOWN
             } else {
               if ("ACTOR_ACTION_ID" === this.name || "ACTOR_STYLE_ID" === this.name) {
-                N.payload.type = $$_18.a.ACTOR_STYLE_DROPDOWN
+                N.payload.type = Module_18.a.ACTOR_STYLE_DROPDOWN
               } else {
                 if ("SCREEN_ID" === this.name) {
-                  N.payload.type = $$_18.a.SCREEN_DROPDOWN
+                  N.payload.type = Module_18.a.SCREEN_DROPDOWN
                 } else {
                   if ("SOUND_FILE_ID" === this.name) {
-                    N.payload.type = $$_18.a.SOUND_DROPDOWN
+                    N.payload.type = Module_18.a.SOUND_DROPDOWN
                   }
                 }
               }
             }
           }
-          $$_46_index.c().dispatchAction(N)
+          Module_46.c().dispatchAction(N)
         }
       }
     }, {
@@ -172,6 +172,6 @@ var f = function (e) {
     }
   ])
   return n
-}($_736.FieldDropdown)
+}(Module_736.FieldDropdown)
 f.field_type = "field_coco_dropdown"
 export default f

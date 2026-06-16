@@ -4,7 +4,7 @@
  * 模块 ID：1119
  */
 
-var r = require("./1327")
+var r = require(/* 1327 */"./1327")
 module.exports = function (e, t) {
   if (e) {
     if ("string" === typeof e) {

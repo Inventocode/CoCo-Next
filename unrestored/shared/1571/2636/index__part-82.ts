@@ -6,20 +6,20 @@
 
 "use strict"
 
-import * as Sp from "./83"
-import * as /* [auto-meaningful-name] */$_314 from "./314"
-import * as Jd from "./33"
-import * as /* [auto-meaningful-name] */$_146 from "./146"
-import * as Qu from "./60"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
-import * as D from "./6"
-import * as /* [auto-meaningful-name] */$_683 from "./683"
-import * as /* [auto-meaningful-name] */$_684_index from "./684/index"
-import * as /* [auto-meaningful-name] */$_685_index from "./685/index"
-import * as /* [auto-meaningful-name] */$_686 from "./686"
-import * as /* [auto-meaningful-name] */$_678 from "./678"
-import * as /* [auto-meaningful-name] */$_687 from "./687"
-import * as /* [auto-meaningful-name] */$_688 from "./688"
+import * as /* [auto-meaningful-name] */Module_83 from /* 83 */"./83"
+import * as /* [auto-meaningful-name] */Module_314 from /* 314 */"./314"
+import * as /* [auto-meaningful-name] */Module_33 from /* 33 */"./33"
+import * as /* [auto-meaningful-name] */Module_146 from /* 146 */"./146"
+import * as /* [auto-meaningful-name] */Module_60 from /* 60 */"./60"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"./6"
+import * as /* [auto-meaningful-name] */Module_683 from /* 683 */"./683"
+import * as /* [auto-meaningful-name] */Module_684 from /* 684 */"./684/index"
+import * as /* [auto-meaningful-name] */Module_685 from /* 685 */"./685/index"
+import * as /* [auto-meaningful-name] */Module_686 from /* 686 */"./686"
+import * as /* [auto-meaningful-name] */Module_678 from /* 678 */"./678"
+import * as /* [auto-meaningful-name] */Module_687 from /* 687 */"./687"
+import * as /* [auto-meaningful-name] */Module_688 from /* 688 */"./688"
 var T_ = {
   "zh-CN": {
     widget: "控件",
@@ -42,8 +42,8 @@ var T_ = {
   }
 }
 var S_ = {
-  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.H,
-  icon: $_146.b,
+  type: Src_editor_widget_builtIn_types.H,
+  icon: Module_146.b,
   title: "widgetName",
   platforms: ["web", "android", "ios"],
   isGlobalWidget: false,
@@ -170,9 +170,9 @@ var S_ = {
         }
       },
       validators: {
-        greaterThan: Qu.n
+        greaterThan: Module_60.n
       }
-    }, D.a({}, Jd.i), {
+    }, Module_6.a({}, Module_33.i), {
       key: "__width",
       label: "width",
       valueType: "number",
@@ -181,8 +181,8 @@ var S_ = {
         generateBlock: false
       },
       validators: {
-        lessThan: $_146.k,
-        greaterThan: $_146.m
+        lessThan: Module_146.k,
+        greaterThan: Module_146.m
       }
     }, {
       key: "__height",
@@ -193,8 +193,8 @@ var S_ = {
         generateBlock: false
       },
       validators: {
-        lessThan: $_146.j,
-        greaterThan: $_146.l
+        lessThan: Module_146.j,
+        greaterThan: Module_146.l
       }
     }, {
       key: "__size",
@@ -269,8 +269,8 @@ var A_ = {
   }
 }
 var I_ = {
-  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.d,
-  icon: $_314.d,
+  type: Src_editor_widget_builtIn_types.d,
+  icon: Module_314.d,
   title: "widgetName",
   platforms: ["web", "android", "ios"],
   isGlobalWidget: false,
@@ -293,20 +293,20 @@ var I_ = {
       key: "mode",
       label: "mode",
       valueType: "string",
-      defaultValue: Sp.b.CONTAINED_TEXT,
+      defaultValue: Module_83.b.CONTAINED_TEXT,
       dropdown: [
         {
           label: "containedTextMsg",
-          value: Sp.b.CONTAINED_TEXT
+          value: Module_83.b.CONTAINED_TEXT
         }, {
           label: "outlinedTextMsg",
-          value: Sp.b.OUTLINED_TEXT
+          value: Module_83.b.OUTLINED_TEXT
         }, {
           label: "containedIconMsg",
-          value: Sp.b.CONTAINED_ICON
+          value: Module_83.b.CONTAINED_ICON
         }, {
           label: "outlinedIconMsg",
-          value: Sp.b.OUTLINED_ICON
+          value: Module_83.b.OUTLINED_ICON
         }
       ],
       blockOptions: {
@@ -330,27 +330,27 @@ var I_ = {
           func: "getButtonWidgetColor"
         }
       }
-    }, D.a({}, Jd.i), {
+    }, Module_6.a({}, Module_33.i), {
       key: "sizeType",
       label: "sizeType",
       valueType: "string",
-      defaultValue: Sp.c.MEDIUM,
+      defaultValue: Module_83.c.MEDIUM,
       dropdown: [
         {
           label: "sizeTypeTinyMsg",
-          value: Sp.c.TINY
+          value: Module_83.c.TINY
         }, {
           label: "sizeTypeSmallMsg",
-          value: Sp.c.SMALL
+          value: Module_83.c.SMALL
         }, {
           label: "sizeTypeMediumMsg",
-          value: Sp.c.MEDIUM
+          value: Module_83.c.MEDIUM
         }, {
           label: "sizeTypeLargeMsg",
-          value: Sp.c.LARGE
+          value: Module_83.c.LARGE
         }, {
           label: "sizeTypeHugeMsg",
-          value: Sp.c.HUGE
+          value: Module_83.c.HUGE
         }
       ],
       blockOptions: {
@@ -361,7 +361,7 @@ var I_ = {
           generateBlock: false
         }
       }
-    }, D.a({}, Jd.j), D.a({}, Jd.h)
+    }, Module_6.a({}, Module_33.j), Module_6.a({}, Module_33.h)
   ],
   methods: [
     {

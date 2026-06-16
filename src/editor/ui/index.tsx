@@ -4,12 +4,10 @@
  * 模块 ID：2636__part-220
  */
 
-"use strict"
-
 import { v } from "../../../unrestored/shared/1571/2636/index__part-1"
 import { App, fB, isDevelopment, registerServiceWorker } from "./app"
 import { store } from "../redux/store"
-import * as /* [auto-meaningful-name] */$$_$$_shared_env from "../../shared/env"
+import * as /* [auto-meaningful-name] */Shared_env from "../../shared/env"
 import { Provider } from "react-redux"
 import ReactDom from "react-dom"
 import React from "react"
@@ -24,7 +22,7 @@ enableDragDropTouch(document, document, {
   forceListen: true
 })
 
-if (["staging", "production", "prod"].includes($$_$$_shared_env.b())) {
+if (["staging", "production", "prod"].includes(Shared_env.b())) {
   setInterval(() => {}, 100)
 }
 

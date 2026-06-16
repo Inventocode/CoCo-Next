@@ -4,7 +4,7 @@
  * 模块 ID：1096
  */
 
-var r = require("../1723/1094")
+var r = require(/* 1094 */"../1723/1094")
 module.exports = function (e) {
   if (r(e)) {
     throw TypeError("The method doesn't accept regular expressions")

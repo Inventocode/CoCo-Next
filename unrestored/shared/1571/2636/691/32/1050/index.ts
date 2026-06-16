@@ -6,8 +6,8 @@
 
 "use strict"
 
-var r = require("punycode")
-var i = require("./2028")
+var r = require(/* 2027 */"punycode")
+var i = require(/* 2028 */"./2028")
 function o() {
   this.protocol = null
   this.slashes = null
@@ -65,7 +65,7 @@ var g = {
   "gopher:": true,
   "file:": true
 }
-var v = require("./2029/index")
+var v = require(/* 2029 */"./2029/index")
 function m(e, t, n) {
   if (e && i.isObject(e) && e instanceof o) {
     return e

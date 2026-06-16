@@ -25,11 +25,11 @@ var q
 var Y
 var X
 var K
-import * as /* [auto-meaningful-name] */$_1337 from "./1337"
-import /* [auto-meaningful-name] */$_13371 from "./1337"
-import * as /* [auto-meaningful-name] */$_1338 from "./1338"
-import /* [auto-meaningful-name] */$_13381 from "./1338"
-import * as /* [auto-meaningful-name] */$_1050_index from "./1050/index"
+import * as /* [auto-meaningful-name] */Module_1337 from /* 1337 */"./1337"
+import /* [auto-meaningful-name] */Module_13371 from /* 1337 */"./1337"
+import * as /* [auto-meaningful-name] */Module_1338 from /* 1338 */"./1338"
+import /* [auto-meaningful-name] */Module_13381 from /* 1338 */"./1338"
+import * as /* [auto-meaningful-name] */Module_1050 from /* 1050 */"./1050/index"
 !function (e) {
   e[e.WEBGL_LEGACY = 0] = "WEBGL_LEGACY"
   e[e.WEBGL = 1] = "WEBGL"
@@ -175,9 +175,9 @@ import * as /* [auto-meaningful-name] */$_1050_index from "./1050/index"
   e[e.HIGH = 8] = "HIGH"
 })(le || (le = {}))
 var ge = {
-  parse: $_1050_index.parse,
-  format: $_1050_index.format,
-  resolve: $_1050_index.resolve
+  parse: Module_1050.parse,
+  format: Module_1050.format,
+  resolve: Module_1050.resolve
 }
 fe.RETINA_PREFIX = /@([0-9\.]+)x/
 fe.FAIL_IF_MAJOR_PERFORMANCE_CAVEAT = false
@@ -2485,7 +2485,7 @@ var It = function (e) {
     configurable: true
   })
   return t
-}($_13371)
+}(Module_13371)
 var Rt = function (e) {
   function t() {
     var t = null !== e && e.apply(this, arguments) || this
@@ -3730,7 +3730,7 @@ var Gt = function (e) {
     this.search = null
   }
   return t
-}($_13371)
+}(Module_13371)
 var zt = function () {
   function e(e) {
     this.items = []
@@ -4215,7 +4215,7 @@ var Jt = function (e) {
   }
   t._globalBatch = 0
   return t
-}($_13371)
+}(Module_13371)
 var Zt = function (e) {
   function t(t, n) {
     var r = this
@@ -5429,7 +5429,7 @@ var An = function (e) {
     return this.baseTexture
   }
   return t
-}($_13371)
+}(Module_13371)
 function gn(e) {
   e.destroy = function () {}
   e.on = function () {}
@@ -8861,7 +8861,7 @@ var Hr = function (e) {
     configurable: true
   })
   return t
-}($_13371)
+}(Module_13371)
 var Vr = function (e) {
   function t(n) {
     var r = e.call(this, X.WEBGL, n) || this

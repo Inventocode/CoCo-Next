@@ -6,16 +6,16 @@
 
 "use strict"
 
-import "react"
+import /* 0 */"react"
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */React1 from "react"
-import "react-redux"
-import "../719"
-import * as /* [auto-meaningful-name] */Redux from "redux"
-import * as s from "../6"
-import * as c from "./66"
-import * as l from "./62"
-import * as u from "./70"
+import /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import /* 16 */"react-redux"
+import /* 719 */"../719"
+import * as /* [auto-meaningful-name] */Redux from /* 156 */"redux"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"../6"
+import * as /* [auto-meaningful-name] */Module_66 from /* 66 */"./66"
+import * as /* [auto-meaningful-name] */Module_62 from /* 62 */"./62"
+import * as /* [auto-meaningful-name] */Module_70 from /* 70 */"./70"
 var d = function (e) {
   return {
     type: "SET_ROTATION",
@@ -63,8 +63,8 @@ var v = {
   y: 0,
   z: 0
 }
-var b = new l.O(0, 0, 9.81)
-var y = new l.O(0, 50, 0)
+var b = new Module_62.O(0, 0, 9.81)
+var y = new Module_62.O(0, 50, 0)
 var E = 2 * Math.PI / 360
 var O = window.localStorage.getItem("LANGUAGE") || navigator.language
 var w = function (e) {
@@ -77,7 +77,7 @@ var w = function (e) {
     }
   }
 }
-var C = c.a.Record({
+var C = Module_66.a.Record({
   language: O,
   acceleration: {
     x: b.x,
@@ -99,7 +99,7 @@ var C = c.a.Record({
     dialOutPhoneNumber: "123 4567 8901",
     incomingPhoneNumber: "123 4567 8901",
     callType: "",
-    callStatus: u.b.IDEL
+    callStatus: Module_70.b.IDEL
   }
 })()
 var T = function (e) {
@@ -111,9 +111,9 @@ var T = function (e) {
   var /* [auto-meaningful-name] */e$additionalAcceleration$x = e$additionalAcceleration.x
   var /* [auto-meaningful-name] */e$additionalAcceleration$y = e$additionalAcceleration.y
   var /* [auto-meaningful-name] */e$additionalAcceleration$z = e$additionalAcceleration.z
-  var u = new l.k(-e$rotation$x * E, -e$rotation$y * E, -e$rotation$z * E, "ZYX")
-  var d = new l.O(e$additionalAcceleration$x, e$additionalAcceleration$y, e$additionalAcceleration$z).add(b)
-  var p = new l.O().copy(y)
+  var u = new Module_62.k(-e$rotation$x * E, -e$rotation$y * E, -e$rotation$z * E, "ZYX")
+  var d = new Module_62.O(e$additionalAcceleration$x, e$additionalAcceleration$y, e$additionalAcceleration$z).add(b)
+  var p = new Module_62.O().copy(y)
   var f = function (e) {
     var t = e.applyEuler(u)
     return {
@@ -161,7 +161,7 @@ var A = function () {
     case "SET_VISIBLE_PANEL":
       return e.set("visiblePanel", t.payload)
     case "SET_PHONE_CALL_INFO":
-      return e.set("phoneCallInfo", s.a(s.a({}, e.phoneCallInfo), t.payload))
+      return e.set("phoneCallInfo", Module_6.a(Module_6.a({}, e.phoneCallInfo), t.payload))
     default:
       return e
   }

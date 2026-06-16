@@ -8,11 +8,11 @@
 
 export { u as b }
 export { l as a }
-import * as r from "../1"
-import * as /* [auto-meaningful-name] */$$_14 from "../14"
-import * as /* [auto-meaningful-name] */$$_31 from "../31"
-import * as /* [auto-meaningful-name] */$$_17_index from "../17/index"
-import * as /* [auto-meaningful-name] */$$_12 from "../12"
+import * as /* [auto-meaningful-name] */Module_1 from /* 1 */"../1"
+import * as /* [auto-meaningful-name] */Module_14 from /* 14 */"../14"
+import * as /* [auto-meaningful-name] */Module_31 from /* 31 */"../31"
+import * as /* [auto-meaningful-name] */Module_17 from /* 17 */"../17/index"
+import * as /* [auto-meaningful-name] */Module_12 from /* 12 */"../12"
 var u = function () {
   function e(e) {
     if (undefined === e) {
@@ -32,9 +32,9 @@ var u = function () {
 }()
 var l = function () {
   function e(e) {
-    this.traceId = $$_14.i()
-    this.spanId = $$_14.i().substring(16)
-    this.startTimestamp = $$_31.d()
+    this.traceId = Module_14.i()
+    this.spanId = Module_14.i().substring(16)
+    this.startTimestamp = Module_31.d()
     this.tags = {}
     this.data = {}
     if (!e) {
@@ -78,7 +78,7 @@ var l = function () {
     return this.startChild(e)
   }
   e.prototype.startChild = function (t) {
-    var n = new e(r.a(r.a({}, t), {
+    var n = new e(Module_1.a(Module_1.a({}, t), {
       parentSpanId: this.spanId,
       sampled: this.sampled,
       traceId: this.traceId
@@ -92,12 +92,12 @@ var l = function () {
   }
   e.prototype.setTag = function (e, t) {
     var n
-    this.tags = r.a(r.a({}, this.tags), ((n = {})[e] = t, n))
+    this.tags = Module_1.a(Module_1.a({}, this.tags), ((n = {})[e] = t, n))
     return this
   }
   e.prototype.setData = function (e, t) {
     var n
-    this.data = r.a(r.a({}, this.data), ((n = {})[e] = t, n))
+    this.data = Module_1.a(Module_1.a({}, this.data), ((n = {})[e] = t, n))
     return this
   }
   e.prototype.setStatus = function (e) {
@@ -106,17 +106,17 @@ var l = function () {
   }
   e.prototype.setHttpStatus = function (e) {
     this.setTag("http.status_code", String(e))
-    var t = $$_12.a.fromHttpCode(e)
-    if (t !== $$_12.a.UnknownError) {
+    var t = Module_12.a.fromHttpCode(e)
+    if (t !== Module_12.a.UnknownError) {
       this.setStatus(t)
     }
     return this
   }
   e.prototype.isSuccess = function () {
-    return this.status === $$_12.a.Ok
+    return this.status === Module_12.a.Ok
   }
   e.prototype.finish = function (e) {
-    this.endTimestamp = "number" === typeof e ? e : $$_31.d()
+    this.endTimestamp = "number" === typeof e ? e : Module_31.d()
   }
   e.prototype.toTraceparent = function () {
     var e = ""
@@ -126,7 +126,7 @@ var l = function () {
     return this.traceId + "-" + this.spanId + e
   }
   e.prototype.toContext = function () {
-    return $$_17_index.a({
+    return Module_17.a({
       data: this.data,
       description: this.description,
       endTimestamp: this.endTimestamp,
@@ -160,7 +160,7 @@ var l = function () {
     return this
   }
   e.prototype.getTraceContext = function () {
-    return $$_17_index.a({
+    return Module_17.a({
       data: Object.keys(this.data).length > 0 ? this.data : undefined,
       description: this.description,
       op: this.op,
@@ -172,7 +172,7 @@ var l = function () {
     })
   }
   e.prototype.toJSON = function () {
-    return $$_17_index.a({
+    return Module_17.a({
       data: Object.keys(this.data).length > 0 ? this.data : undefined,
       description: this.description,
       op: this.op,

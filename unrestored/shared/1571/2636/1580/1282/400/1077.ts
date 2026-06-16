@@ -4,7 +4,7 @@
  * 模块 ID：1077
  */
 
-var r = require("../../1785/194")
+var r = require(/* 194 */"../../1785/194")
 module.exports = function (e, t) {
   try {
     Object.defineProperty(r, e, {

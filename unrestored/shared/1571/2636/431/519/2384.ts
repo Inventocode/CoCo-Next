@@ -4,8 +4,8 @@
  * 模块 ID：2384
  */
 
-var r = require("./2383/1400")
-var i = require("./2383/1401")
+var r = require(/* 1400 */"./2383/1400")
+var i = require(/* 1401 */"./2383/1401")
 module.exports = function (e, t, n) {
   var o = t && n || 0
   if ("string" == typeof e) {

@@ -32,9 +32,9 @@ var r = function () {
     return t
   }
 }()
-var i = require("react")
+var i = require(/* 0 */"react")
 var o = s(i)
-var a = s(require("../797/101/index"))
+var a = s(require(/* 101 */"../797/101/index"))
 function s(e) {
   return e && e.__esModule ? e : {
     default: e

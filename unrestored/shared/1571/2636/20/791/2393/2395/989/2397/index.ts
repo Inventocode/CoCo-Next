@@ -6,17 +6,17 @@
 
 "use strict"
 
-var r = require("regenerator-runtime")
-var i = require("../../../../449")
-var o = require("../../../../../../207/787/180")
-var a = require("../../../../../../207/787/204")
+var r = require(/* 1 */"regenerator-runtime")
+var i = require(/* 449 */"../../../../449")
+var o = require(/* 180 */"../../../../../../207/787/180")
+var a = require(/* 204 */"../../../../../../207/787/204")
 Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.StreamReader = exports.EndOfStreamError = undefined
-var s = require("../1162/index")
-var c = require("./2398")
-var u = require("../1162/index")
+var s = require(/* 1162 */"../1162/index")
+var c = require(/* 2398 */"./2398")
+var u = require(/* 1162 */"../1162/index")
 Object.defineProperty(exports, "EndOfStreamError", {
   enumerable: true,
   get: function () {

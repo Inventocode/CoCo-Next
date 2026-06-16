@@ -6,11 +6,11 @@
 
 "use strict"
 
-var r = require("./1132")
-var i = require("./2239/index")
-var o = require("./2241")
-var a = require("./2242/index")
-var s = require("./1362")
+var r = require(/* 1132 */"./1132")
+var i = require(/* 2239 */"./2239/index")
+var o = require(/* 2241 */"./2241")
+var a = require(/* 2242 */"./2242/index")
+var s = require(/* 1362 */"./1362")
 var /* [auto-meaningful-name] */s$getLatestEcmaVersion = s.getLatestEcmaVersion
 var /* [auto-meaningful-name] */s$getSupportedEcmaVersions = s.getSupportedEcmaVersions
 var l = {
@@ -32,7 +32,7 @@ var l = {
     return Boolean(e && e.ecmaFeatures && e.ecmaFeatures.jsx) ? this.jsx : this.regular
   }
 }
-exports.version = require("./2244").version
+exports.version = require(/* 2244 */"./2244").version
 exports.tokenize = function (e, t) {
   var n = l.get(t)
   if (!(t && true === t.tokens)) {
@@ -56,6 +56,6 @@ exports.Syntax = function () {
   }
   return t
 }()
-exports.VisitorKeys = require("../777/index").KEYS
+exports.VisitorKeys = require(/* 777 */"../777/index").KEYS
 exports.latestEcmaVersion = s$getLatestEcmaVersion()
 exports.supportedEcmaVersions = s$getSupportedEcmaVersions()

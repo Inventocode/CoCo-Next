@@ -10,7 +10,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.register_procedure_json_generator = undefined
-var r = require("../../1058/173")
+var r = require(/* 173 */"../../1058/173")
 exports.register_procedure_json_generator = function (e) {
   e.register(r.PROCEDURE_BLOCK_TYPES.DEF, function (t, n) {
     var i = t.blocks[n]

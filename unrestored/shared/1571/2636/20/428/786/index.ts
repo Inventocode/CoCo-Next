@@ -4,7 +4,7 @@
  * 模块 ID：786
  */
 
-var r = require("./2022/index")
+var r = require(/* 2022 */"./2022/index")
 r.prototype.formulaEval = function () {
   "use strict"
 

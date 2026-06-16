@@ -7,7 +7,7 @@
 !function () {
   "use strict"
 
-  exports.ast = require("./2252")
-  exports.code = require("./1364")
-  exports.keyword = require("./2253")
+  exports.ast = require(/* 2252 */"./2252")
+  exports.code = require(/* 1364 */"./1364")
+  exports.keyword = require(/* 2253 */"./2253")
 }()

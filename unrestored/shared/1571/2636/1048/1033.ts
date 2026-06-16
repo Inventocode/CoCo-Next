@@ -7,14 +7,14 @@
 "use strict"
 
 export { s as a }
-import * as /* [auto-meaningful-name] */$$_2680_466 from "../2680/466"
+import * as /* [auto-meaningful-name] */Module_466 from /* 466 */"../2680/466"
 function i(e) {
   return e.attachTo ? e.attachTo : document.querySelector("head") || document.body
 }
 function o(e) {
   var /* [auto-meaningful-name] */n$csp
   var n = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : {}
-  if (!$$_2680_466.a()) {
+  if (!Module_466.a()) {
     return null
   }
   var /* [auto-meaningful-name] */n$csp1

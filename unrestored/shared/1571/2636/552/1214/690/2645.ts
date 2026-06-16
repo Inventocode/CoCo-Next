@@ -7,9 +7,9 @@
 "use strict"
 
 export { a }
-import "react"
+import /* 0 */"react"
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */React1 from "react"
+import /* [auto-meaningful-name] */React1 from /* 0 */"react"
 var o = React1.createContext(null)
 function a() {
   return React1.useContext(o)

@@ -7,33 +7,33 @@
 "use strict"
 
 var Tt
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_language from "../../../../../src/shared/ui/language"
-import * as /* [auto-meaningful-name] */$_248 from "./248"
-import /* [auto-meaningful-name] */$_2481 from "./248"
+import * as /* [auto-meaningful-name] */Src_shared_ui_language from /* 23 */"../../../../../src/shared/ui/language"
+import * as /* [auto-meaningful-name] */Module_248 from /* 248 */"./248"
+import /* [auto-meaningful-name] */Module_2481 from /* 248 */"./248"
 function Ct(t) {
   switch (t) {
     case Tt.UNEXPECTED_ERROR:
-      return $$_$$_$$_$$_$$_src_shared_ui_language.c($$_$$_$$_$$_$$_src_shared_ui_language.b, "ScanQrCode.Error.UnexpectedError")
+      return Src_shared_ui_language.c(Src_shared_ui_language.b, "ScanQrCode.Error.UnexpectedError")
     case Tt.CAMERA_ACCESS_DENIED:
-      return $$_$$_$$_$$_$$_src_shared_ui_language.c($$_$$_$$_$$_$$_src_shared_ui_language.b, "ScanQrCode.Error.CameraAccessDenied")
+      return Src_shared_ui_language.c(Src_shared_ui_language.b, "ScanQrCode.Error.CameraAccessDenied")
     case Tt.CAMERA_ACCESS_RESTRICTED:
-      return $$_$$_$$_$$_$$_src_shared_ui_language.c($$_$$_$$_$$_$$_src_shared_ui_language.b, "ScanQrCode.Error.CameraAccessRestricted")
+      return Src_shared_ui_language.c(Src_shared_ui_language.b, "ScanQrCode.Error.CameraAccessRestricted")
     case Tt.BACK_CAMERA_UNAVAILABLE:
-      return $$_$$_$$_$$_$$_src_shared_ui_language.c($$_$$_$$_$$_$$_src_shared_ui_language.b, "ScanQrCode.Error.BackCameraUnavailable")
+      return Src_shared_ui_language.c(Src_shared_ui_language.b, "ScanQrCode.Error.BackCameraUnavailable")
     case Tt.FRONT_CAMERA_UNAVAILABLE:
-      return $$_$$_$$_$$_$$_src_shared_ui_language.c($$_$$_$$_$$_$$_src_shared_ui_language.b, "ScanQrCode.Error.FrontCameraUnavailable")
+      return Src_shared_ui_language.c(Src_shared_ui_language.b, "ScanQrCode.Error.FrontCameraUnavailable")
     case Tt.CAMERA_UNAVAILABLE:
-      return $$_$$_$$_$$_$$_src_shared_ui_language.c($$_$$_$$_$$_$$_src_shared_ui_language.b, "ScanQrCode.Error.CameraUnavailable")
+      return Src_shared_ui_language.c(Src_shared_ui_language.b, "ScanQrCode.Error.CameraUnavailable")
     case Tt.SCAN_CANCELED:
-      return $$_$$_$$_$$_$$_src_shared_ui_language.c($$_$$_$$_$$_$$_src_shared_ui_language.b, "ScanQrCode.Error.ScanCanceled")
+      return Src_shared_ui_language.c(Src_shared_ui_language.b, "ScanQrCode.Error.ScanCanceled")
     case Tt.LIGHT_UNAVAILABLE:
-      return $$_$$_$$_$$_$$_src_shared_ui_language.c($$_$$_$$_$$_$$_src_shared_ui_language.b, "ScanQrCode.Error.LightUnavailable")
+      return Src_shared_ui_language.c(Src_shared_ui_language.b, "ScanQrCode.Error.LightUnavailable")
     case Tt.OPEN_SETTINGS_UNAVAILABLE:
-      return $$_$$_$$_$$_$$_src_shared_ui_language.c($$_$$_$$_$$_$$_src_shared_ui_language.b, "ScanQrCode.Error.SettingsUnavailable")
+      return Src_shared_ui_language.c(Src_shared_ui_language.b, "ScanQrCode.Error.SettingsUnavailable")
     case Tt.NOT_FOUND:
-      return $$_$$_$$_$$_$$_src_shared_ui_language.c($$_$$_$$_$$_$$_src_shared_ui_language.b, "ScanQrCode.Error.NotFound")
+      return Src_shared_ui_language.c(Src_shared_ui_language.b, "ScanQrCode.Error.NotFound")
     default:
-      return $$_$$_$$_$$_$$_src_shared_ui_language.c($$_$$_$$_$$_$$_src_shared_ui_language.b, "ScanQrCode.Error.UnexpectedError")
+      return Src_shared_ui_language.c(Src_shared_ui_language.b, "ScanQrCode.Error.UnexpectedError")
   }
 }
 !function (t) {

@@ -6,14 +6,14 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_55 from "../../../55"
-import * as /* [auto-meaningful-name] */$$_$$_index from "../../index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../../src/editor/widget/built-in/types"
-import /* [auto-meaningful-name] */React from "react"
-import { useSelector } from "react-redux"
-import * as /* [auto-meaningful-name] */$$_$$_$$_546_index from "../../../546/index"
-import * as /* [auto-meaningful-name] */$$_242 from "../242"
-import * as /* [auto-meaningful-name] */$$_$$_$$_28_index from "../../../28/index"
+import * as /* [auto-meaningful-name] */Module_55 from /* 55 */"../../../55"
+import * as /* [auto-meaningful-name] */Module_20 from /* 20 */"../../index"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../../../../src/editor/widget/built-in/types"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { useSelector } from /* 16 */"react-redux"
+import * as /* [auto-meaningful-name] */Module_546 from /* 546 */"../../../546/index"
+import * as /* [auto-meaningful-name] */Module_242 from /* 242 */"../242"
+import * as /* [auto-meaningful-name] */Module_28 from /* 28 */"../../../28/index"
 var j = function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$type = e.type
@@ -23,17 +23,17 @@ var j = function (e) {
   var l = useSelector(function (e) {
     return e.iconFileMap
   }).get(e$attributes.iconId)
-  return React.createElement($$_$$_$$_546_index.a, Object.assign({}, e, {
+  return React.createElement(Module_546.a, Object.assign({}, e, {
     iconFile: l,
     onClick: function () {
       if (!e$attributes$disabled) {
-        $$_$$_index.emitButtonPress(t)
+        Module_20.emitButtonPress(t)
       }
       if (!e$attributes$disabled) {
-        $$_$$_index.emitWidgetEvent(e$type, "onButtonPressPress", t)
+        Module_20.emitWidgetEvent(e$type, "onButtonPressPress", t)
       }
-      $$_242.b(t, $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.d, $$_$$_$$_28_index.m("click", e$animationRecord))
-      $$_$$_$$_55.b.playerWidgetLog({
+      Module_242.b(t, Src_editor_widget_builtIn_types.d, Module_28.m("click", e$animationRecord))
+      Module_55.b.playerWidgetLog({
         widgetId: t,
         widgetType: e$type,
         message: "onWidgetPress"
@@ -41,18 +41,18 @@ var j = function (e) {
     },
     onMouseDown: function () {
       if (!e$attributes$disabled) {
-        $$_$$_index.emitButtonPressIn(t)
+        Module_20.emitButtonPressIn(t)
       }
       if (!e$attributes$disabled) {
-        $$_$$_index.emitWidgetEvent(e$type, "onButtonPressPressIn", t)
+        Module_20.emitWidgetEvent(e$type, "onButtonPressPressIn", t)
       }
     },
     onMouseUp: function () {
       if (!e$attributes$disabled) {
-        $$_$$_index.emitButtonPressOut(t)
+        Module_20.emitButtonPressOut(t)
       }
       if (!e$attributes$disabled) {
-        $$_$$_index.emitWidgetEvent(e$type, "onButtonPressPressOut", t)
+        Module_20.emitWidgetEvent(e$type, "onButtonPressPressOut", t)
       }
     }
   }))

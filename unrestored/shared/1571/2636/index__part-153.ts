@@ -6,31 +6,31 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$_207_index from "./207/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index from "../../../../src/shared/packages/@crc/blink/src/index"
-import * as /* [auto-meaningful-name] */$_26_index from "./26/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
-import * as K from "./18"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import * as /* [auto-meaningful-name] */$_748_index from "./748/index"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import { useSelector } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { useState, useEffect } from "react"
+import * as /* [auto-meaningful-name] */Module_207 from /* 207 */"./207/index"
+import * as /* [auto-meaningful-name] */Src_shared_packages_Crc_blink_src_index from /* 17 */"../../../../src/shared/packages/@crc/blink/src/index"
+import * as /* [auto-meaningful-name] */Module_26 from /* 26 */"./26/index"
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"./18"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import * as /* [auto-meaningful-name] */Module_748 from /* 748 */"./748/index"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import { useSelector } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { useState, useEffect } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_320 from "./320"
-import /* [auto-meaningful-name] */$_3201 from "./320"
+import * as /* [auto-meaningful-name] */Module_320 from /* 320 */"./320"
+import /* [auto-meaningful-name] */Module_3201 from /* 320 */"./320"
 var QT = React.memo(function () {
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
-  var t = useState($_26_index.f)
-  var n = $_10_index.a(t, 2)
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
+  var t = useState(Module_26.f)
+  var n = Module_10.a(t, 2)
   var r = n[0]
   var o = n[1]
   var i = useSelector(function (e) {
     return e.uiConfig.workspace
-  }) === K.j.ReadOnly
+  }) === Module_18.j.ReadOnly
   var a = useSelector(function (e) {
     return e.common.consoleHeight
   })
@@ -41,7 +41,7 @@ var QT = React.memo(function () {
     zoomIn: false,
     cleanUp: false
   })
-  var c = $_10_index.a(s, 2)
+  var c = Module_10.a(s, 2)
   var l = c[0]
   var u = c[1]
   useEffect(function () {
@@ -50,8 +50,8 @@ var QT = React.memo(function () {
       u({
         undo: l.undo,
         redo: l.redo,
-        zoomIn: e >= $_26_index.d,
-        zoomOut: e <= $_26_index.e,
+        zoomIn: e >= Module_26.d,
+        zoomOut: e <= Module_26.e,
         cleanUp: i
       })
     }
@@ -65,13 +65,13 @@ var QT = React.memo(function () {
         redo: !e$canRedo,
         cleanUp: i
       })
-      $_26_index.z.stopWarningAnimation()
+      Module_26.z.stopWarningAnimation()
     }
-    $_26_index.z.eventBus.addEventListener($_207_index.a.WORKSPACE_SCALE_CHANGE, e)
-    $_26_index.z.eventBus.addEventListener($_207_index.a.COMMON_BLOCKS, t)
+    Module_26.z.eventBus.addEventListener(Module_207.a.WORKSPACE_SCALE_CHANGE, e)
+    Module_26.z.eventBus.addEventListener(Module_207.a.COMMON_BLOCKS, t)
     return function () {
-      $_26_index.z.eventBus.removeEventListener($_207_index.a.COMMON_BLOCKS, t)
-      $_26_index.z.eventBus.removeEventListener($_207_index.a.WORKSPACE_SCALE_CHANGE, e)
+      Module_26.z.eventBus.removeEventListener(Module_207.a.COMMON_BLOCKS, t)
+      Module_26.z.eventBus.removeEventListener(Module_207.a.WORKSPACE_SCALE_CHANGE, e)
     }
   }, [l.redo, l.undo, l.zoomIn, l.zoomOut, i])
   useEffect(function () {
@@ -82,139 +82,139 @@ var QT = React.memo(function () {
       zoomIn: l.zoomIn,
       zoomOut: l.zoomOut
     })
-    $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.context_menu.set_disabled(i)
+    Src_shared_packages_Crc_blink_src_index.Blink.context_menu.set_disabled(i)
   }, [i, l.zoomIn, l.zoomOut])
   useEffect(function () {
-    var /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index$Blink$mainWorkspace$clean_up = $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.clean_up
-    $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.clean_up = function () {
-      $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index$Blink$mainWorkspace$clean_up.call(this, $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.vec2.fromValues(100, 50))
+    var /* [auto-meaningful-name] */Src_shared_packages_Crc_blink_src_index$Blink$mainWorkspace$clean_up = Src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.clean_up
+    Src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.clean_up = function () {
+      Src_shared_packages_Crc_blink_src_index$Blink$mainWorkspace$clean_up.call(this, Src_shared_packages_Crc_blink_src_index.vec2.fromValues(100, 50))
     }
   }, [])
   var d = function (e) {
     if (!("undo" !== e || l.undo)) {
-      $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.undo()
+      Src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.undo()
     }
     if (!("redo" !== e || l.redo)) {
-      $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.undo(true)
+      Src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.undo(true)
     }
   }
   var p = [.5, .75, 1, 1.25, 1.5, 1.75, 2]
   var m = function (e) {
-    var t = $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_scale()
-    var n = Math.round(t / $_26_index.f * 100) / 100
+    var t = Src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_scale()
+    var n = Math.round(t / Module_26.f * 100) / 100
     var r = "inc" === e ? p.filter(function (e) {
       return e > n
     }) : p.filter(function (e) {
       return e < n
     })
-    var o = $$_$$_$$_$$_src_shared_tools_index.z(n, r)
+    var o = Src_shared_tools_index.z(n, r)
     if (null != o) {
-      o *= $_26_index.f
-      $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.set_scale(o)
+      o *= Module_26.f
+      Src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.set_scale(o)
     }
   }
   return React.createElement("div", {
-    className: $_3201.wrapper,
+    className: Module_3201.wrapper,
     style: {
       bottom: a + 18
     }
   }, React.createElement("div", {
-    className: $_3201.undoRedoWrapper
-  }, React.createElement($_748_index.a, {
+    className: Module_3201.undoRedoWrapper
+  }, React.createElement(Module_748.a, {
     placement: "top",
-    title: $_710$a$formatMessage({
+    title: Module_710$a$formatMessage({
       id: "BlockEditor.undo"
     }),
     trigger: ["hover", "click"]
   }, React.createElement("span", {
-    className: $_3201.iconWrapper,
+    className: Module_3201.iconWrapper,
     onClick: function () {
       d("undo")
     }
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-undo",
-    className: Classnames($_3201.icon, $_3201.undo, l.undo && $_3201.disable)
-  }))), React.createElement($_748_index.a, {
+    className: Classnames(Module_3201.icon, Module_3201.undo, l.undo && Module_3201.disable)
+  }))), React.createElement(Module_748.a, {
     placement: "top",
-    title: $_710$a$formatMessage({
+    title: Module_710$a$formatMessage({
       id: "BlockEditor.redo"
     }),
     trigger: ["hover", "click"]
   }, React.createElement("span", {
-    className: $_3201.iconWrapper,
+    className: Module_3201.iconWrapper,
     onClick: function () {
       if (!l.redo) {
         d("redo")
       }
     }
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-undo",
-    className: Classnames($_3201.icon, $_3201.redo, l.redo && $_3201.disable)
+    className: Classnames(Module_3201.icon, Module_3201.redo, l.redo && Module_3201.disable)
   })))), React.createElement("div", {
-    className: $_3201.zoomWrapper
-  }, React.createElement($_748_index.a, {
+    className: Module_3201.zoomWrapper
+  }, React.createElement(Module_748.a, {
     placement: "top",
-    title: $_710$a$formatMessage({
+    title: Module_710$a$formatMessage({
       id: "BlockEditor.dec"
     }),
     trigger: ["hover", "click"]
   }, React.createElement("span", {
-    className: $_3201.iconWrapper,
+    className: Module_3201.iconWrapper,
     onClick: function () {
       if (!l.zoomOut) {
         m("dec")
       }
     }
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-zoom-out",
-    className: Classnames($_3201.icon, l.zoomOut && $_3201.disable)
-  }))), React.createElement($_748_index.a, {
+    className: Classnames(Module_3201.icon, l.zoomOut && Module_3201.disable)
+  }))), React.createElement(Module_748.a, {
     placement: "top",
-    title: $_710$a$formatMessage({
+    title: Module_710$a$formatMessage({
       id: "BlockEditor.percent"
     }),
     trigger: ["hover", "click"]
   }, React.createElement("span", {
-    className: $_3201.percent,
+    className: Module_3201.percent,
     onClick: function () {
-      if ($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_scale() !== $_26_index.f) {
-        $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.set_scale($_26_index.f)
+      if (Src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_scale() !== Module_26.f) {
+        Src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.set_scale(Module_26.f)
       }
     }
-  }, "".concat($$_$$_$$_$$_src_shared_tools_index.eb(r, $_26_index.f, 0), "%"))), React.createElement($_748_index.a, {
+  }, "".concat(Src_shared_tools_index.eb(r, Module_26.f, 0), "%"))), React.createElement(Module_748.a, {
     placement: "top",
-    title: $_710$a$formatMessage({
+    title: Module_710$a$formatMessage({
       id: "BlockEditor.inc"
     }),
     trigger: ["hover", "click"]
   }, React.createElement("span", {
-    className: $_3201.iconWrapper,
+    className: Module_3201.iconWrapper,
     onClick: function () {
       if (!l.zoomIn) {
         m("inc")
       }
     }
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-zoom-in",
-    className: Classnames($_3201.icon, l.zoomIn && $_3201.disable)
+    className: Classnames(Module_3201.icon, l.zoomIn && Module_3201.disable)
   })))), React.createElement("div", {
-    className: $_3201.cleanUpWrapper,
+    className: Module_3201.cleanUpWrapper,
     onClick: function () {
       if (!l.cleanUp) {
-        $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.clean_up($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.vec2.fromValues(100, 50))
+        Src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.clean_up(Src_shared_packages_Crc_blink_src_index.vec2.fromValues(100, 50))
       }
     }
-  }, React.createElement($_748_index.a, {
+  }, React.createElement(Module_748.a, {
     placement: "top",
-    title: $_710$a$formatMessage({
+    title: Module_710$a$formatMessage({
       id: "BlockEditor.cleanup"
     }),
     trigger: ["hover", "click"]
   }, React.createElement("span", {
-    className: $_3201.iconWrapper
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+    className: Module_3201.iconWrapper
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-clean-up",
-    className: Classnames($_3201.icon, l.cleanUp && $_3201.disable)
+    className: Classnames(Module_3201.icon, l.cleanUp && Module_3201.disable)
   })))))
 })
 export { QT }

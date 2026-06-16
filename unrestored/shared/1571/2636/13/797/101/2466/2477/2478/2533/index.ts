@@ -4,10 +4,10 @@
  * 模块 ID：2533
  */
 
-var r = require("./2534")
-var i = require("./2535")
-var o = require("./1180")
-var a = require("./1001")
+var r = require(/* 2534 */"./2534")
+var i = require(/* 2535 */"./2535")
+var o = require(/* 1180 */"./1180")
+var a = require(/* 1001 */"./1001")
 module.exports = function (e) {
   return o(e) ? r(a(e)) : i(e)
 }

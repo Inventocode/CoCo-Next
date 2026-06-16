@@ -8,38 +8,38 @@
 
 import { Sg } from "./index__part-79"
 import { DI } from "./index__part-175"
-import * as /* [auto-meaningful-name] */Lodash from "lodash"
-import * as Yr from "./53"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
-import * as /* [auto-meaningful-name] */$_47_index from "./47/index"
-import * as Et from "./9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import { useSelector, useDispatch } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { useRef, useState, useEffect, memo } from "react"
+import * as /* [auto-meaningful-name] */Lodash from /* 30 */"lodash"
+import * as /* [auto-meaningful-name] */Module_53 from /* 53 */"./53"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Module_47 from /* 47 */"./47/index"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"./9"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */Module_25 from /* 25 */"./25/index"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import { useSelector, useDispatch } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { useRef, useState, useEffect, memo } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_619 from "./619"
-import /* [auto-meaningful-name] */$_6191 from "./619"
+import * as /* [auto-meaningful-name] */Module_619 from /* 619 */"./619"
+import /* [auto-meaningful-name] */Module_6191 from /* 619 */"./619"
 var PI = function (e) {
   var t = useSelector(function (e) {
     return e.project.globalWidgetIds
   })
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var r = useRef(null)
   var o = useState(e.gridName)
-  var i = $_10_index.a(o, 2)
+  var i = Module_10.a(o, 2)
   var a = i[0]
   var s = i[1]
   var c = useState(false)
-  var l = $_10_index.a(c, 2)
+  var l = Module_10.a(c, 2)
   var u = l[0]
   var d = l[1]
   var p = useState("")
-  var m = $_10_index.a(p, 2)
+  var m = Module_10.a(p, 2)
   var g = m[0]
   var v = m[1]
   useEffect(function () {
@@ -55,8 +55,8 @@ var PI = function (e) {
       validator: function (e) {
         var n = []
         t.forEach(function (e) {
-          var t = Et.dc.get(e)
-          if ((null === t || undefined === t ? undefined : t.type) === $$_$$_$$_$$_src_editor_widget_builtIn_types.m) {
+          var t = Module_9.dc.get(e)
+          if ((null === t || undefined === t ? undefined : t.type) === Src_editor_widget_builtIn_types.m) {
             n.push(t)
           }
         })
@@ -64,26 +64,26 @@ var PI = function (e) {
           return t.title === e
         })
       },
-      message: $_710$a$formatMessage({
+      message: Module_710$a$formatMessage({
         id: "gridNameRepeat"
       })
     }
-  ].concat($_25_index.a(Sg($_710$a$formatMessage)))
+  ].concat(Module_25.a(Sg(Module_710$a$formatMessage)))
   return React.createElement("div", null, u ? React.createElement("div", {
-    className: $_6191.gridNameEditorContainer
+    className: Module_6191.gridNameEditorContainer
   }, React.createElement("input", {
-    className: $_6191.gridNameEditor,
-    maxLength: Yr.j,
+    className: Module_6191.gridNameEditor,
+    maxLength: Module_53.j,
     ref: r,
     defaultValue: a,
-    placeholder: $_710$a$formatMessage({
+    placeholder: Module_710$a$formatMessage({
       id: "addGridNamePlaceholder"
     }),
     onChange: function (t) {
       var n
       var o = ""
       var i = false
-      var a = $_47_index.a(b)
+      var a = Module_47.a(b)
       try {
         for (a.s(); !(n = a.n()).done;) {
           var /* [auto-meaningful-name] */n$value = n.value
@@ -102,9 +102,9 @@ var PI = function (e) {
       e.setDisabled(i)
       if (r.current) {
         if (o) {
-          r.current.classList.add($_6191.invalidGridName)
+          r.current.classList.add(Module_6191.invalidGridName)
         } else {
-          r.current.classList.remove($_6191.invalidGridName)
+          r.current.classList.remove(Module_6191.invalidGridName)
         }
       }
     },
@@ -124,14 +124,14 @@ var PI = function (e) {
       }
     }
   }), React.createElement("div", {
-    className: $_6191.warningMessage
+    className: Module_6191.warningMessage
   }, g)) : React.createElement("div", {
-    className: $_6191.gridName
+    className: Module_6191.gridName
   }, React.createElement("span", null, a), React.createElement("span", {
     onClick: function () {
       d(true)
     }
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-edit"
   }))))
 }
@@ -143,31 +143,31 @@ var BI = memo(function () {
   var /* [auto-meaningful-name] */e$grid = e.grid
   var /* [auto-meaningful-name] */e$onClose = e.onClose
   var /* [auto-meaningful-name] */e$isCreateNewGrid = e.isCreateNewGrid
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var a = useDispatch()
   var s = useState(false)
-  var c = $_10_index.a(s, 2)
+  var c = Module_10.a(s, 2)
   var l = c[0]
   var u = c[1]
   var d = useState()
-  var p = $_10_index.a(d, 2)
+  var p = Module_10.a(d, 2)
   var m = p[0]
   var g = p[1]
   var v = useState("")
-  var b = $_10_index.a(v, 2)
+  var b = Module_10.a(v, 2)
   var y = b[0]
   var E = b[1]
   var O = useState({})
-  var w = $_10_index.a(O, 2)
+  var w = Module_10.a(O, 2)
   var C = w[0]
   var T = w[1]
   var A = useState([])
-  var j = $_10_index.a(A, 2)
+  var j = Module_10.a(A, 2)
   var N = j[0]
   var R = j[1]
   useEffect(function () {
     if (e$visible) {
-      a($$_$$_$$_$$_src_editor_redux_common_actions.ki("grid"))
+      a(Src_editor_redux_common_actions.ki("grid"))
       E(e$grid.name)
       T(Lodash.cloneDeep(e$grid.header))
       R(Lodash.cloneDeep(e$grid.data))
@@ -198,9 +198,9 @@ var BI = memo(function () {
     }
   }
   var x = function () {
-    a($$_$$_$$_$$_src_editor_redux_common_actions.oi(""))
-    a($$_$$_$$_$$_src_editor_redux_common_actions.ri("", ""))
-    a($$_$$_$$_$$_src_editor_redux_common_actions.ni("", ""))
+    a(Src_editor_redux_common_actions.oi(""))
+    a(Src_editor_redux_common_actions.ri("", ""))
+    a(Src_editor_redux_common_actions.ni("", ""))
   }
   var D = function () {
     x()
@@ -211,7 +211,7 @@ var BI = memo(function () {
         isCreateNewGrid: e$isCreateNewGrid
       })
     }
-    a($$_$$_$$_$$_src_editor_redux_common_actions.qh())
+    a(Src_editor_redux_common_actions.qh())
   }
   var M = function () {
     if (!(null === m || undefined === m)) {
@@ -223,28 +223,28 @@ var BI = memo(function () {
     if (Lodash.isEqual(e$data, e$grid.data) && Lodash.isEqual(e$header, e$grid.header) && y === e$grid.name) {
       D()
     } else {
-      a($$_$$_$$_$$_src_editor_redux_common_actions.zh({
+      a(Src_editor_redux_common_actions.zh({
         onConfirm: function () {
           D()
         },
-        allowText: $_710$a$formatMessage({
+        allowText: Module_710$a$formatMessage({
           id: "giveUp"
         }),
-        title: $_710$a$formatMessage({
+        title: Module_710$a$formatMessage({
           id: "giveUpTitle"
         }),
-        content: $_710$a$formatMessage({
+        content: Module_710$a$formatMessage({
           id: "giveUpTips"
         })
       }))
     }
   }
-  var L = React.createElement("div", null, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
+  var L = React.createElement("div", null, React.createElement(Src_shared_ui_components_index.d, {
     type: "default",
     onClick: M
-  }, $_710$a$formatMessage({
+  }, Module_710$a$formatMessage({
     id: "cancel"
-  })), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
+  })), React.createElement(Src_shared_ui_components_index.d, {
     type: "primary",
     disabled: l,
     onClick: function () {
@@ -260,7 +260,7 @@ var BI = memo(function () {
       var l = []
       if (y !== e$grid.name) {
         s = y
-        a($$_$$_$$_$$_src_editor_redux_common_actions.Lg(e$grid.id, "title", y, false, false, true))
+        a(Src_editor_redux_common_actions.Lg(e$grid.id, "title", y, false, false, true))
       }
       if (!Lodash.isEqual(e$header, e$grid.header)) {
         c = true
@@ -272,7 +272,7 @@ var BI = memo(function () {
             l.push(d)
           }
         }
-        a($$_$$_$$_$$_src_editor_redux_common_actions.Lg(e$grid.id, "db", {
+        a(Src_editor_redux_common_actions.Lg(e$grid.id, "db", {
           header: e$header,
           data: e$data
         }, false, false, true))
@@ -284,14 +284,14 @@ var BI = memo(function () {
           isCreateNewGrid: e$isCreateNewGrid
         })
       }
-      a($$_$$_$$_$$_src_editor_redux_common_actions.qh())
+      a(Src_editor_redux_common_actions.qh())
     }
-  }, $_710$a$formatMessage({
+  }, Module_710$a$formatMessage({
     id: "confirm"
   })))
-  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.f, {
+  return React.createElement(Src_shared_ui_components_index.f, {
     visible: e$visible,
-    className: $_6191.dataViewerGrid,
+    className: Module_6191.dataViewerGrid,
     title: React.createElement(PI, {
       gridName: y,
       setDisabled: function (e) {

@@ -9,46 +9,46 @@
 var i
 var o
 var r
-import * as a from "./11"
-import * as s from "./64"
+import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"./11"
+import * as /* [auto-meaningful-name] */Module_64 from /* 64 */"./64"
 var /* [auto-meaningful-name] */IconWidgetTableData = "icon-widget-table-data"
-var l = s.a("COLUMN")
-var u = s.a("COLUMN")
+var l = Module_64.a("COLUMN")
+var u = Module_64.a("COLUMN")
 r = {}
-a.a(r, l, {
+Module_11.a(r, l, {
   field: "第1列"
 })
-a.a(r, u, {
+Module_11.a(r, u, {
   field: "第2列"
 })
 var d = r
 var p = [
   (o = {
-    rowId: s.a("ROW")
-  }, a.a(o, l, ""), a.a(o, u, ""), o), (i = {
-    rowId: s.a("ROW")
-  }, a.a(i, l, ""), a.a(i, u, ""), i)
+    rowId: Module_64.a("ROW")
+  }, Module_11.a(o, l, ""), Module_11.a(o, u, ""), o), (i = {
+    rowId: Module_64.a("ROW")
+  }, Module_11.a(i, l, ""), Module_11.a(i, u, ""), i)
 ]
 function f() {
   var e
   var t
   var n
-  var r = s.a("COLUMN")
-  var o = s.a("COLUMN")
+  var r = Module_64.a("COLUMN")
+  var o = Module_64.a("COLUMN")
   return {
-    header: (e = {}, a.a(e, r, {
+    header: (e = {}, Module_11.a(e, r, {
       field: "第1列",
       width: 407
-    }), a.a(e, o, {
+    }), Module_11.a(e, o, {
       field: "第2列",
       width: 407
     }), e),
     data: [
       (t = {
-        rowId: s.a("ROW")
-      }, a.a(t, r, ""), a.a(t, o, ""), t), (n = {
-        rowId: s.a("ROW")
-      }, a.a(n, r, ""), a.a(n, o, ""), n)
+        rowId: Module_64.a("ROW")
+      }, Module_11.a(t, r, ""), Module_11.a(t, o, ""), t), (n = {
+        rowId: Module_64.a("ROW")
+      }, Module_11.a(n, r, ""), Module_11.a(n, o, ""), n)
     ]
   }
 }

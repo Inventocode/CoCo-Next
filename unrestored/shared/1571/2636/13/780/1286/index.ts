@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("../571")
+var r = require(/* 571 */"../571")
 Object.defineProperty(exports, "__esModule", {
   value: true
 })
@@ -98,9 +98,9 @@ exports.getKeyboardValueMutator = function (e, t, n) {
     return u(Increase, e, t)
   }
 }
-var i = r(require("./1552/index"))
-var o = require("react-dom")
-var a = r(require("./1805"))
+var i = r(require(/* 1552 */"./1552/index"))
+var o = require(/* 80 */"react-dom")
+var a = r(require(/* 1805 */"./1805"))
 function s(e, t) {
   var /* [auto-meaningful-name] */t$marks = t.marks
   var /* [auto-meaningful-name] */t$step = t.step

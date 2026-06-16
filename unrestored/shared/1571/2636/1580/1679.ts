@@ -4,11 +4,11 @@
  * 模块 ID：1679
  */
 
-var r = require("./1662/86")
-var o = require("./1282/231")
-var /* [auto-meaningful-name] */require$_1778_718$onFreeze = require("./1778/718").onFreeze
-var a = require("./1704/837")
-var s = require("./1659/168")
+var r = require(/* 86 */"./1662/86")
+var o = require(/* 231 */"./1282/231")
+var /* [auto-meaningful-name] */require_718_$_1778_718$onFreeze = require(/* 718 */"./1778/718").onFreeze
+var a = require(/* 837 */"./1704/837")
+var s = require(/* 168 */"./1659/168")
 var /* [auto-meaningful-name] */Object$seal = Object.seal
 r({
   target: "Object",
@@ -19,6 +19,6 @@ r({
   sham: !a
 }, {
   seal: function (e) {
-    return Object$seal && o(e) ? Object$seal(require$_1778_718$onFreeze(e)) : e
+    return Object$seal && o(e) ? Object$seal(require_718_$_1778_718$onFreeze(e)) : e
   }
 })

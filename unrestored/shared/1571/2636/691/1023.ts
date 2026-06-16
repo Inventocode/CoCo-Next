@@ -7,10 +7,10 @@
 "use strict"
 
 export { s as a }
-import * as /* [auto-meaningful-name] */$_217_index from "./217/index"
-import * as /* [auto-meaningful-name] */$_32_index from "./32/index"
-import * as o from "./65"
-import * as /* [auto-meaningful-name] */$_119 from "./119"
+import * as /* [auto-meaningful-name] */Module_217 from /* 217 */"./217/index"
+import * as /* [auto-meaningful-name] */Module_32 from /* 32 */"./32/index"
+import * as /* [auto-meaningful-name] */Module_65 from /* 65 */"./65"
+import * as /* [auto-meaningful-name] */Module_119 from /* 119 */"./119"
 var s = function () {
   function e(e, t) {
     var n = this
@@ -29,7 +29,7 @@ var s = function () {
         var /* [auto-meaningful-name] */n$app$get_app$view$width = n$app$get_app$view.width
         var /* [auto-meaningful-name] */n$app$get_app$view$height = n$app$get_app$view.height
         var a = n.get_target_position()
-        e.offset = new $_32_index.o(a.x + n$app$get_app$view$width / 2, -a.y + n$app$get_app$view$height / 2)
+        e.offset = new Module_32.o(a.x + n$app$get_app$view$width / 2, -a.y + n$app$get_app$view$height / 2)
       }
     }
     this.update_displacement_position = function () {
@@ -49,7 +49,7 @@ var s = function () {
     var r = function () {
       n.remove_effects()
     }
-    if (o.m(t)) {
+    if (Module_65.m(t)) {
       this.target_sprite = t.background
       t.add_listener("destroy", r)
       this.get_target_position = function () {
@@ -76,25 +76,25 @@ var s = function () {
         case 0:
         case 1:
         case 5:
-          n = new $_32_index.e()
+          n = new Module_32.e()
           break
         case 2:
-          n = new $_32_index.n()
+          n = new Module_32.n()
           break
         case 3:
           if (!this.displacement_sprite) {
             throw new Error("Displacement sprite should be init first.")
           }
-          n = new $_32_index.g(this.displacement_sprite)
+          n = new Module_32.g(this.displacement_sprite)
           this.app.get_app().ticker.add(this.update_displacement_position)
           break
         case 4:
-          n = new $_32_index.A()
-          o.m(this.target)
+          n = new Module_32.A()
+          Module_65.m(this.target)
           this.target.add_listener("change", r)
           break
         case 6:
-          n = new $_32_index.c()
+          n = new Module_32.c()
       }
       this.effect_filter_list[e] = n
       this.update_target_filter()
@@ -108,19 +108,19 @@ var s = function () {
     })
   }
   e.prototype.is_color_matrix_filter = function (e) {
-    return e instanceof $_32_index.e
+    return e instanceof Module_32.e
   }
   e.prototype.is_pixelate_filter = function (e) {
-    return e instanceof $_32_index.n
+    return e instanceof Module_32.n
   }
   e.prototype.is_displacement_filter = function (e) {
-    return e instanceof $_32_index.g
+    return e instanceof Module_32.g
   }
   e.prototype.is_twist_filter = function (e) {
-    return e instanceof $_32_index.A
+    return e instanceof Module_32.A
   }
   e.prototype.is_ascii_filter = function (e) {
-    return e instanceof $_32_index.c
+    return e instanceof Module_32.c
   }
   e.prototype.update_displacement_sprite = function (e) {
     if (!e || this.displacement_img !== e || !this.displacement_sprite) {
@@ -128,7 +128,7 @@ var s = function () {
         this.displacement_sprite.destroy()
       }
       this.displacement_img = e
-      this.displacement_sprite = $_32_index.t.from(e)
+      this.displacement_sprite = Module_32.t.from(e)
       this.displacement_sprite.anchor.set(.5, .5)
       var /* [auto-meaningful-name] */this$app$get_app$view = this.app.get_app().view
       var /* [auto-meaningful-name] */this$app$get_app$view$width = this$app$get_app$view.width
@@ -152,7 +152,7 @@ var s = function () {
     var t = this.get_effect_filter(1)
     if (this.is_color_matrix_filter(t)) {
       this.brightness = e
-      var n = $_217_index.a(-1, 1, e / 100 - 1)
+      var n = Module_217.a(-1, 1, e / 100 - 1)
       t.matrix = [1, 0, 0, 0, n, 0, 1, 0, 0, n, 0, 0, 1, 0, n, 0, 0, 0, 1, 0]
     }
   }
@@ -162,7 +162,7 @@ var s = function () {
   e.prototype.set_saturate = function (e) {
     var t = this.get_effect_filter(5)
     if (this.is_color_matrix_filter(t)) {
-      this.saturation = $_217_index.a(-100, 100, e)
+      this.saturation = Module_217.a(-100, 100, e)
       t.saturate(this.saturation / 100, false)
     }
   }
@@ -173,7 +173,7 @@ var s = function () {
     var t = this.get_effect_filter(2)
     if (this.is_pixelate_filter(t)) {
       var n = Math.min(this.target_sprite.width, this.target_sprite.height)
-      this.pixelate_size = $_217_index.a(1, n, e)
+      this.pixelate_size = Module_217.a(1, n, e)
       t.size = this.pixelate_size
     }
   }
@@ -187,9 +187,9 @@ var s = function () {
       if (!this.is_displacement_filter(n)) {
         return
       }
-      return void (this.displacement_speed = $_217_index.a(0, 100, e))
+      return void (this.displacement_speed = Module_217.a(0, 100, e))
     } catch (i) {
-      return new $_119.a("Init displacement filter failed.")
+      return new Module_119.a("Init displacement filter failed.")
     }
   }
   e.prototype.get_displacement = function () {
@@ -198,8 +198,8 @@ var s = function () {
   e.prototype.set_twist = function (e) {
     var t = this.get_effect_filter(4)
     if (this.is_twist_filter(t)) {
-      this.twist_angle = $_217_index.a(0, 100, e)
-      t.angle = o.b(10 * this.twist_angle)
+      this.twist_angle = Module_217.a(0, 100, e)
+      t.angle = Module_65.b(10 * this.twist_angle)
       t.radius = Math.sqrt(Math.pow(this.target_sprite.width / 2, 2) + Math.pow(this.target_sprite.height / 2, 2))
       this.update_twist_offset()
     }
@@ -211,7 +211,7 @@ var s = function () {
     var t = this.get_effect_filter(6)
     if (this.is_ascii_filter(t)) {
       var n = Math.min(this.target_sprite.width, this.target_sprite.height)
-      this.ascii_size = $_217_index.a(1, n, e)
+      this.ascii_size = Module_217.a(1, n, e)
       t.size = this.ascii_size
     }
   }

@@ -9,9 +9,9 @@
 import { r, o, s } from "./index__part-0"
 import { u, _, A, g } from "./index__part-1"
 import { R, F } from "./index__part-2"
-import * as /* [auto-meaningful-name] */Lodash from "lodash"
-import * as /* [auto-meaningful-name] */$_790 from "./790"
-import * as /* [auto-meaningful-name] */$_519_index from "./519/index"
+import * as /* [auto-meaningful-name] */Lodash from /* 30 */"lodash"
+import * as /* [auto-meaningful-name] */Module_790 from /* 790 */"./790"
+import * as /* [auto-meaningful-name] */Module_519 from /* 519 */"./519/index"
 var M = {}
 var L = {}
 var j = {}
@@ -19,7 +19,7 @@ function U(e, t, n) {
   if (undefined === n) {
     n = false
   }
-  var r = new $_790.Howl({
+  var r = new Module_790.Howl({
     src: t,
     html5: false,
     format: ["mp3", "wav"]
@@ -32,7 +32,7 @@ function U(e, t, n) {
   return r
 }
 function H(e, t, n, r) {
-  var i = $_519_index.v4()
+  var i = Module_519.v4()
   j[i] = i
   var /* [auto-meaningful-name] */document$body = document.body
   var a = document.createElement("audio")
@@ -97,7 +97,7 @@ function K(e, t, n) {
   if (undefined === n) {
     n = false
   }
-  var r = new $_790.Howl({
+  var r = new Module_790.Howl({
     src: t,
     html5: true,
     format: ["mp3", "wav"]
@@ -110,7 +110,7 @@ function K(e, t, n) {
   return r
 }
 function X(e, t, n, r, i) {
-  var o = K(r || $_519_index.v4(), e, true)
+  var o = K(r || Module_519.v4(), e, true)
   if (o) {
     if ("loaded" === o.state()) {
       return void o.play()
@@ -178,7 +178,7 @@ function ee(e, t, n) {
   if (undefined === n) {
     n = false
   }
-  var r = new $_790.Howl({
+  var r = new Module_790.Howl({
     src: t,
     html5: false,
     format: ["mp3", "wav"]
@@ -438,7 +438,7 @@ var ae = {
   play_url: function (e, t, n, r, i) {
     if (_()) {
       (function (e, t, n, r, i) {
-        var o = ee(r || $_519_index.v4(), e, true)
+        var o = ee(r || Module_519.v4(), e, true)
         if ("loaded" === o.state()) {
           o.play()
         }
@@ -467,7 +467,7 @@ var ae = {
     } else {
       if (g()) {
         (function (e, t, n, r, i) {
-          var o = U(r || $_519_index.v4(), e, true)
+          var o = U(r || Module_519.v4(), e, true)
           if (o) {
             if ("loaded" === o.state()) {
               return void o.play()

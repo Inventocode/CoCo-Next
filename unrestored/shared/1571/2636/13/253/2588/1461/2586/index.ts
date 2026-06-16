@@ -4,8 +4,8 @@
  * 模块 ID：2586
  */
 
-var r = require("../479")
-var i = require("./1000")
+var r = require(/* 479 */"../479")
+var i = require(/* 1000 */"./1000")
 var o = /^\s+|\s+$/g
 var a = /^[-+]0x[0-9a-f]+$/i
 var s = /^0b[01]+$/i

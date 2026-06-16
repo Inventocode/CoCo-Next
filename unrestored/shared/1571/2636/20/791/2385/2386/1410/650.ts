@@ -7,25 +7,25 @@
 "use strict"
 
 var r
-var i = require("process")
-var o = require("../1402/402/index")
+var i = require(/* 298 */"process")
+var o = require(/* 402 */"../1402/402/index")
 var /* [auto-meaningful-name] */o$AbortError = o.AbortError
 var /* [auto-meaningful-name] */o$codes = o.codes
 var /* [auto-meaningful-name] */o$codes$ERR_INVALID_ARG_TYPE = o$codes.ERR_INVALID_ARG_TYPE
 var /* [auto-meaningful-name] */o$codes$ERR_STREAM_PREMATURE_CLOSE = o$codes.ERR_STREAM_PREMATURE_CLOSE
-var l = require("../1402/427")
+var l = require(/* 427 */"../1402/427")
 var /* [auto-meaningful-name] */l$kEmptyObject = l.kEmptyObject
 var /* [auto-meaningful-name] */l$once = l.once
-var h = require("./1159/858")
+var h = require(/* 858 */"./1159/858")
 var /* [auto-meaningful-name] */h$validateAbortSignal = h.validateAbortSignal
 var /* [auto-meaningful-name] */h$validateFunction = h.validateFunction
 var /* [auto-meaningful-name] */h$validateObject = h.validateObject
 var /* [auto-meaningful-name] */h$validateBoolean = h.validateBoolean
-var v = require("./311")
+var v = require(/* 311 */"./311")
 var /* [auto-meaningful-name] */v$Promise = v.Promise
 var /* [auto-meaningful-name] */v$PromisePrototypeThen = v.PromisePrototypeThen
 var /* [auto-meaningful-name] */v$SymbolDispose = v.SymbolDispose
-var w = require("./583")
+var w = require(/* 583 */"./583")
 var /* [auto-meaningful-name] */w$isClosed = w.isClosed
 var /* [auto-meaningful-name] */w$isReadable = w.isReadable
 var /* [auto-meaningful-name] */w$isReadableNodeStream = w.isReadableNodeStream
@@ -189,7 +189,7 @@ function j(e, t, o) {
     if (t.signal.aborted) {
       i.nextTick(Y)
     } else {
-      var q = (r = r || require("../1402/427").addAbortListener)(t.signal, Y)
+      var q = (r = r || require(/* 427 */"../1402/427").addAbortListener)(t.signal, Y)
       var $ = o
       o = l$once(function () {
         q[v$SymbolDispose]()
@@ -215,7 +215,7 @@ function U(e, t, o) {
     if (t.signal.aborted) {
       i.nextTick(c)
     } else {
-      var u = (r = r || require("../1402/427").addAbortListener)(t.signal, c)
+      var u = (r = r || require(/* 427 */"../1402/427").addAbortListener)(t.signal, c)
       var l = o
       o = l$once(function () {
         u[v$SymbolDispose]()

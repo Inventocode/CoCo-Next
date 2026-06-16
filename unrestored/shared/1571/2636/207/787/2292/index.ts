@@ -7,5 +7,5 @@
 "use strict"
 
 module.exports = {
-  SourceCode: require("./2293/index")
+  SourceCode: require(/* 2293 */"./2293/index")
 }

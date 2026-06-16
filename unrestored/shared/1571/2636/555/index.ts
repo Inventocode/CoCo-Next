@@ -6,21 +6,21 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_11 from "../11"
-import { useRef } from "react"
+import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"../11"
+import { useRef } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */Color from "color"
-import /* [auto-meaningful-name] */Color1 from "color"
-import * as /* [auto-meaningful-name] */Classnames from "classnames"
-import /* [auto-meaningful-name] */Classnames1 from "classnames"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
-import * as /* [auto-meaningful-name] */$$_90 from "../90"
-import * as /* [auto-meaningful-name] */$$_200 from "../200"
-import * as /* [auto-meaningful-name] */$_289 from "./289"
-import /* [auto-meaningful-name] */$_2891 from "./289"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_components_index from "../../../../../src/shared/ui/components/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_tools_index from "../../../../../src/shared/tools/index"
+import /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Color from /* 51 */"color"
+import /* [auto-meaningful-name] */Color1 from /* 51 */"color"
+import * as /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import /* [auto-meaningful-name] */Classnames1 from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Module_90 from /* 90 */"../90"
+import * as /* [auto-meaningful-name] */Module_200 from /* 200 */"../200"
+import * as /* [auto-meaningful-name] */Module_289 from /* 289 */"./289"
+import /* [auto-meaningful-name] */Module_2891 from /* 289 */"./289"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../../src/shared/tools/index"
 var _ = function (e) {
   var /* [auto-meaningful-name] */e$text = e.text
   var /* [auto-meaningful-name] */e$isSelected = e.isSelected
@@ -44,9 +44,9 @@ var _ = function (e) {
         }
       }
     }
-    return n ? React1.createElement($$_$$_$$_$$_$$_src_shared_ui_components_index.j, {
+    return n ? React1.createElement(Src_shared_ui_components_index.j, {
       type: n,
-      className: $_2891.selected
+      className: Module_2891.selected
     }) : null
   }(e$state, e$isSelected)
   var v = function () {
@@ -54,25 +54,25 @@ var _ = function (e) {
       return {
         default: {
           color: "inherit",
-          borderColor: $$_$$_$$_$$_$$_src_shared_tools_index.v(e),
+          borderColor: Src_shared_tools_index.v(e),
           borderWidth: 1
         },
         selected: {
           color: "inherit",
-          borderColor: $$_$$_$$_$$_$$_src_shared_tools_index.v(e),
-          backgroundColor: $$_$$_$$_$$_$$_src_shared_tools_index.v(e),
+          borderColor: Src_shared_tools_index.v(e),
+          backgroundColor: Src_shared_tools_index.v(e),
           borderWidth: 1
         },
         correct: {
-          borderColor: $$_$$_$$_$$_$$_src_shared_tools_index.v($$_200.a),
-          color: $$_$$_$$_$$_$$_src_shared_tools_index.v($$_200.a),
-          backgroundColor: $$_$$_$$_$$_$$_src_shared_tools_index.v($$_200.a),
+          borderColor: Src_shared_tools_index.v(Module_200.a),
+          color: Src_shared_tools_index.v(Module_200.a),
+          backgroundColor: Src_shared_tools_index.v(Module_200.a),
           borderWidth: 1
         },
         inCorrect: {
-          borderColor: $$_$$_$$_$$_$$_src_shared_tools_index.v($$_200.d),
-          color: $$_$$_$$_$$_$$_src_shared_tools_index.v($$_200.d),
-          backgroundColor: $$_$$_$$_$$_$$_src_shared_tools_index.v($$_200.d),
+          borderColor: Src_shared_tools_index.v(Module_200.d),
+          color: Src_shared_tools_index.v(Module_200.d),
+          backgroundColor: Src_shared_tools_index.v(Module_200.d),
           borderWidth: 1
         },
         disabled: {
@@ -92,13 +92,13 @@ var _ = function (e) {
     }
     return e$disabled ? e.disabled : e$isSelected ? e.selected : e.default
   }()
-  var b = $$_200.g[e$sizeType]
+  var b = Module_200.g[e$sizeType]
   return React1.createElement("div", {
     style: {
       color: null === v || undefined === v ? undefined : v.color,
-      backgroundColor: (null === v || undefined === v ? undefined : v.backgroundColor) && $$_$$_$$_$$_$$_src_shared_tools_index.hb(null === v || undefined === v ? undefined : v.backgroundColor, .1)
+      backgroundColor: (null === v || undefined === v ? undefined : v.backgroundColor) && Src_shared_tools_index.hb(null === v || undefined === v ? undefined : v.backgroundColor, .1)
     },
-    className: Classnames1($_2891.defaultCheckbox, "checkbox-widget-box"),
+    className: Classnames1(Module_2891.defaultCheckbox, "checkbox-widget-box"),
     onClick: function (e) {
       var /* [auto-meaningful-name] */f$current = f.current
       if (f$current && e$onClick) {
@@ -114,7 +114,7 @@ var _ = function (e) {
       height: b.innerSize,
       fontSize: b.innerSize - 4
     },
-    className: $_2891.inner
+    className: Module_2891.inner
   }, _), React1.createElement("p", {
     ref: f,
     style: {
@@ -143,14 +143,14 @@ _a = function (e) {
       e$onOptionClick(e, t)
     }
   }
-  var T = $$_200.g[e$attributes$sizeType]
+  var T = Module_200.g[e$attributes$sizeType]
   return React1.createElement("div", {
     id: t,
-    "data-role": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.M,
-    "data-widget-type": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.C,
+    "data-role": Src_editor_widget_builtIn_types.M,
+    "data-widget-type": Src_editor_widget_builtIn_types.C,
     "data-min-width": T.minWidth,
     "data-max-width": T.maxWidth,
-    className: Classnames1($_2891.checkboxWidget, $$_90.b, $$_11.a({}, $_2891.hide, !e$visible)),
+    className: Classnames1(Module_2891.checkboxWidget, Module_90.b, Module_11.a({}, Module_2891.hide, !e$visible)),
     style: {
       top: e$position.y,
       left: e$position.x,
@@ -162,7 +162,7 @@ _a = function (e) {
     },
     "data-lock-height": true
   }, e$attributes$headlineVisible && React1.createElement("div", {
-    className: $_2891.headline,
+    className: Module_2891.headline,
     onClick: function (e) {
       if (e$onHeadlineClick) {
         e$onHeadlineClick(e)

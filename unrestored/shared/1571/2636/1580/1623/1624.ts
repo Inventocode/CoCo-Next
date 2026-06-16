@@ -6,8 +6,8 @@
 
 "use strict"
 
-var r = require("../1282/240")
-var o = require("../1648/1234/1236")
+var r = require(/* 240 */"../1282/240")
+var o = require(/* 1236 */"../1648/1234/1236")
 module.exports = function (e) {
   r(this)
   if ("string" === e || "default" === e) {

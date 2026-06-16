@@ -6,9 +6,9 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$_126 from "./126"
-import * as /* [auto-meaningful-name] */$_32_index from "./32/index"
-import * as /* [auto-meaningful-name] */$_471 from "./471"
+import * as /* [auto-meaningful-name] */Module_126 from /* 126 */"./126"
+import * as /* [auto-meaningful-name] */Module_32 from /* 32 */"./32/index"
+import * as /* [auto-meaningful-name] */Module_471 from /* 471 */"./471"
 var Nr = function () {
   var e = function (t, n) {
     return (e = Object.setPrototypeOf || {
@@ -36,21 +36,21 @@ var Mr = function (e) {
     r.on_destroy = n
     r.video = document.createElement("video")
     r.canvas = document.createElement("canvas")
-    r.camera_status = $_126.d.TURN_OFF
+    r.camera_status = Module_126.d.TURN_OFF
     r.set_parent = function (e) {
       r.setParent(e)
     }
     r.anchor.set(.5)
-    r.texture = $_32_index.y.from(r.video)
+    r.texture = Module_32.y.from(r.video)
     r.visible = false
     return r
   }
   Nr(t, e)
   t.prototype.turn_on = function (e) {
     var t = this
-    return this.camera_status === $_126.d.IS_TURNED_ON ? Promise.resolve() : this.camera_status === $_126.d.TURNING_ON && this.turning_on_lock ? this.turning_on_lock : (this.camera_status = $_126.d.TURNING_ON, this.turning_on_lock = new Promise(function (n, r) {
+    return this.camera_status === Module_126.d.IS_TURNED_ON ? Promise.resolve() : this.camera_status === Module_126.d.TURNING_ON && this.turning_on_lock ? this.turning_on_lock : (this.camera_status = Module_126.d.TURNING_ON, this.turning_on_lock = new Promise(function (n, r) {
       navigator.mediaDevices.getUserMedia(e).then(function (e) {
-        if (t.camera_status !== $_126.d.TURN_OFF) {
+        if (t.camera_status !== Module_126.d.TURN_OFF) {
           t.stream = e
           try {
             t.video.srcObject = e
@@ -58,9 +58,9 @@ var Mr = function (e) {
             t.video.src = window.URL.createObjectURL(e)
           }
           t.video.onloadedmetadata = function (e) {
-            if (t.camera_status !== $_126.d.TURN_OFF) {
+            if (t.camera_status !== Module_126.d.TURN_OFF) {
               t.adjust_stage_scale()
-              t.camera_status = $_126.d.IS_TURNED_ON
+              t.camera_status = Module_126.d.IS_TURNED_ON
               t.turning_on_lock = undefined
               t.visible = true
               t.video.play()
@@ -89,8 +89,8 @@ var Mr = function (e) {
   }
   t.prototype.turn_off = function () {
     var /* [auto-meaningful-name] */this$stream
-    if (this.camera_status !== $_126.d.TURN_OFF) {
-      this.camera_status = $_126.d.TURN_OFF
+    if (this.camera_status !== Module_126.d.TURN_OFF) {
+      this.camera_status = Module_126.d.TURN_OFF
       if (!(null === (this$stream = this.stream) || undefined === this$stream)) {
         this$stream.getVideoTracks().forEach(function (e) {
           return e.stop()
@@ -103,7 +103,7 @@ var Mr = function (e) {
   }
   t.prototype.get_image_data = function (e) {
     var t = this.canvas.getContext("2d")
-    if (this.camera_status === $_126.d.IS_TURNED_ON && t) {
+    if (this.camera_status === Module_126.d.IS_TURNED_ON && t) {
       if (e) {
         this.canvas.width = e.width
         this.canvas.height = e.height
@@ -130,5 +130,5 @@ var Mr = function (e) {
     this.on_destroy()
   }
   return t
-}($_32_index.t)
+}(Module_32.t)
 export { Mr }

@@ -6,7 +6,7 @@
 
 "use strict"
 
-var a = require("../../../../13/780/571")
+var a = require(/* 571 */"../../../../13/780/571")
 Object.defineProperty(exports, "__esModule", {
   value: true
 })
@@ -155,7 +155,7 @@ exports.toggleFullscreen = function (e) {
   }
 }
 exports.USER_ACTIVATE = exports.PLAYER_ACTIVATE = exports.FULLSCREEN_CHANGE = exports.OPERATE = undefined
-var r = a(require("./2910"))
+var r = a(require(/* 2910 */"./2910"))
 var /* [auto-meaningful-name] */VideoReact_OPERATE = "video-react/OPERATE"
 exports.OPERATE = VideoReact_OPERATE
 exports.FULLSCREEN_CHANGE = "video-react/FULLSCREEN_CHANGE"

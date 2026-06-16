@@ -7,25 +7,25 @@
 "use strict"
 
 import { fy } from "./index__part-102"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import /* [auto-meaningful-name] */React from "react"
-import { memo } from "react"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_1518 from "./1518"
-import /* [auto-meaningful-name] */$_15181 from "./1518"
+import * as /* [auto-meaningful-name] */Module_1518 from /* 1518 */"./1518"
+import /* [auto-meaningful-name] */Module_15181 from /* 1518 */"./1518"
 var ME = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "fontFamily" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */e$onChange = e.onChange
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var a = e$getValue(n)
-  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
+  return React.createElement(Src_shared_ui_components_index.i, {
     align: "vertical",
-    className: Classnames($_15181.formItemWrapper, "changeFontFamily"),
-    label: $_710$a$formatMessage({
+    className: Classnames(Module_15181.formItemWrapper, "changeFontFamily"),
+    label: Module_710$a$formatMessage({
       id: "fontFamily"
     })
   }, React.createElement(fy, {

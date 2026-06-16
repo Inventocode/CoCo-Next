@@ -4,10 +4,10 @@
  * 模块 ID：1708
  */
 
-var r = require("../1662/271")
-var o = require("../1662/300/index")
-var i = require("./957")
-var a = require("../1659/168")
+var r = require(/* 271 */"../1662/271")
+var o = require(/* 300 */"../1662/300/index")
+var i = require(/* 957 */"./957")
+var a = require(/* 168 */"../1659/168")
 if (r && a(function () {
   return "sy" !== Object.getOwnPropertyDescriptor(RegExp.prototype, "flags").get.call({
     dotAll: true,

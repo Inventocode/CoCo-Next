@@ -6,19 +6,19 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_src_shared_env from "../../../../../../src/shared/env"
-import * as /* [auto-meaningful-name] */$$_$$_48_87 from "../../48/87"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials from "../../../../../../src/shared/utils/network/axios-with-credentials"
-import * as /* [auto-meaningful-name] */$$_$$_6 from "../../6"
-import * as /* [auto-meaningful-name] */$$_$$_7 from "../../7"
-import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$$_$$_431_index from "../../431/index"
-var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_src_shared_env$a$serverHost = $$_$$_$$_$$_$$_$$_src_shared_env.a.serverHost
+import * as /* [auto-meaningful-name] */Src_shared_env from /* 57 */"../../../../../../src/shared/env"
+import * as /* [auto-meaningful-name] */Module_87 from /* 87 */"../../48/87"
+import * as /* [auto-meaningful-name] */Src_shared_utils_network_axiosWithCredentials from /* 41 */"../../../../../../src/shared/utils/network/axios-with-credentials"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"../../6"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../../7"
+import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import * as /* [auto-meaningful-name] */Module_431 from /* 431 */"../../431/index"
+var /* [auto-meaningful-name] */Src_shared_env$a$serverHost = Src_shared_env.a.serverHost
 function cu(e) {
   return lu.apply(this, arguments)
 }
 function lu() {
-  return (lu = $$_$$_7.a(RegeneratorRuntime.mark(function e(t) {
+  return (lu = Module_7.a(RegeneratorRuntime.mark(function e(t) {
     var /* [auto-meaningful-name] */e$sent
     return RegeneratorRuntime.wrap(function (e) {
       for (;;) {
@@ -26,8 +26,8 @@ function lu() {
           case 0:
             e.prev = 0
             e.next = 3
-            return $$_$$_$$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.post($$_$$_$$_$$_$$_$$_src_shared_env$a$serverHost + "/public-api/baidu-openapi/text2audio", $$_$$_6.a({}, t), {
-              headers: $$_$$_48_87.a()
+            return Src_shared_utils_network_axiosWithCredentials.a.post(Src_shared_env$a$serverHost + "/public-api/baidu-openapi/text2audio", Module_6.a({}, t), {
+              headers: Module_87.a()
             })
           case 3:
             e$sent = e.sent

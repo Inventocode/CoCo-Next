@@ -7,25 +7,25 @@
 "use strict"
 
 export { s as a }
-import * as /* [auto-meaningful-name] */$$_50 from "../50"
-import * as i from "../8"
-import * as /* [auto-meaningful-name] */$$_12 from "../12"
-import * as a from "../6"
+import * as /* [auto-meaningful-name] */Module_50 from /* 50 */"../50"
+import * as /* [auto-meaningful-name] */Module_8 from /* 8 */"../8"
+import * as /* [auto-meaningful-name] */Module_12 from /* 12 */"../12"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"../6"
 function s() {
-  $$_50.a({
+  Module_50.a({
     callback: u,
     type: "error"
   })
-  $$_50.a({
+  Module_50.a({
     callback: u,
     type: "unhandledrejection"
   })
 }
 function u() {
-  var e = a.b()
+  var e = Module_6.b()
   if (e) {
-    i.a.log("[Tracing] Transaction: " + $$_12.a.InternalError + " -> Global error occured")
-    e.setStatus($$_12.a.InternalError)
+    Module_8.a.log("[Tracing] Transaction: " + Module_12.a.InternalError + " -> Global error occured")
+    e.setStatus(Module_12.a.InternalError)
   }
 }
 export default s

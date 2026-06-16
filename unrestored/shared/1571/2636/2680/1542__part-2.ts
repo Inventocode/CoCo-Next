@@ -8,20 +8,20 @@
 
 import { A } from "./1542__part-0"
 import { m, b, w, E, C } from "./1542__part-1"
-import * as /* [auto-meaningful-name] */$$_107 from "../107"
-import * as /* [auto-meaningful-name] */$$_140 from "../140"
-import * as /* [auto-meaningful-name] */$$_120 from "../120"
-import * as /* [auto-meaningful-name] */$$_106 from "../106"
-import * as /* [auto-meaningful-name] */$$_103 from "../103"
-import { createRef, createElement, Component } from "react"
-import * as /* [auto-meaningful-name] */$$_79_index from "../79/index"
+import * as /* [auto-meaningful-name] */Module_107 from /* 107 */"../107"
+import * as /* [auto-meaningful-name] */Module_140 from /* 140 */"../140"
+import * as /* [auto-meaningful-name] */Module_120 from /* 120 */"../120"
+import * as /* [auto-meaningful-name] */Module_106 from /* 106 */"../106"
+import * as /* [auto-meaningful-name] */Module_103 from /* 103 */"../103"
+import { createRef, createElement, Component } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_79 from /* 79 */"../79/index"
 var k = []
 var S = new RegExp("".concat("ant-scrolling-effect"), "g")
 var T = 0
 var B = new Map()
 var D = function e(t) {
   var n = this
-  $$_103.a(this, e)
+  Module_103.a(this, e)
   this.lockTarget = undefined
   this.options = undefined
   this.getContainer = function () {
@@ -51,7 +51,7 @@ var D = function e(t) {
         var /* [auto-meaningful-name] */e$options = e.options
         return (null === e$options || undefined === e$options ? undefined : e$options.container) === (null === (n$options1 = n.options) || undefined === n$options1 ? undefined : n$options1.container)
       })) {
-        k = [].concat($$_79_index.a(k), [
+        k = [].concat(Module_79.a(k), [
           {
             target: n.lockTarget,
             options: n.options
@@ -82,7 +82,7 @@ var D = function e(t) {
           var o = "".concat(r$className, " ").concat("ant-scrolling-effect")
           r.className = o.trim()
         }
-        k = [].concat($$_79_index.a(k), [
+        k = [].concat(Module_79.a(k), [
           {
             target: n.lockTarget,
             options: n.options
@@ -132,18 +132,18 @@ var P = function (e) {
     if ("function" === typeof e) {
       return e()
     }
-    if ("object" === $$_107.a(e) && e instanceof window.HTMLElement) {
+    if ("object" === Module_107.a(e) && e instanceof window.HTMLElement) {
       return e
     }
   }
   return document.body
 }
 var N = function (e) {
-  $$_120.a(n, e)
-  var t = $$_140.a(n)
+  Module_120.a(n, e)
+  var t = Module_140.a(n)
   function n(e) {
     var r
-    $$_103.a(this, n);
+    Module_103.a(this, n);
     (r = t.call(this, e)).container = undefined
     r.componentRef = createRef()
     r.rafId = undefined
@@ -225,7 +225,7 @@ var N = function (e) {
     })
     return r
   }
-  $$_106.a(n, [
+  Module_106.a(n, [
     {
       key: "componentDidMount",
       value: function () {

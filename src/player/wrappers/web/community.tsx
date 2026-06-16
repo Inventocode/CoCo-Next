@@ -5,16 +5,16 @@
  */
 
 import { y, w, E, O, T } from "../../../../unrestored/player/2635/2637/index__part-0"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_738_index from "../../../../unrestored/shared/1571/2636/738/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_177 from "../../../../unrestored/shared/1571/2636/177"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_player_2635_2637_514_index from "../../../../unrestored/player/2635/2637/514/index"
+import * as /* [auto-meaningful-name] */Module_738 from /* 738 */"../../../../unrestored/shared/1571/2636/738/index"
+import * as /* [auto-meaningful-name] */Module_177 from /* 177 */"../../../../unrestored/shared/1571/2636/177"
+import * as /* [auto-meaningful-name] */Module_514 from /* 514 */"../../../../unrestored/player/2635/2637/514/index"
 import classnames from "classnames"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_68 from "../../../../unrestored/shared/1571/2636/68"
+import * as /* [auto-meaningful-name] */Module_68 from /* 68 */"../../../../unrestored/shared/1571/2636/68"
 import * as Tools from "../../../shared/tools"
 import /* [auto-meaningful-name] */React from "react"
 import { useState, useRef, useEffect } from "react"
 import { IconFont } from "../../../shared/ui/components"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_player_2635_2637_1042 from "../../../../unrestored/player/2635/2637/1042"
+import /* [auto-meaningful-name] */Unrestored_player_2635_2637_1042 from "../../../../unrestored/player/2635/2637/1042"
 import { loadRealWork } from "../../../shared/player/audit"
 import styles from "../../../../unrestored/player/2635/2637/530"
 
@@ -42,7 +42,7 @@ export const WebCommunityWrapper = React.memo(() => {
       workId = searchParams.workId
     }
     if (workId) {
-      const bcmcUrl = (await $$_$$_$$_$$_unrestored_shared_1571_2636_177.g(workId)).data.bcmc_url
+      const bcmcUrl = (await Module_177.g(workId)).data.bcmc_url
       // [CoCo Next] 提升加载速度
       // addEditorIframe(bcmcUrl)
       let bcmc = await (await fetch(bcmcUrl)).json()
@@ -100,7 +100,7 @@ export const WebCommunityWrapper = React.memo(() => {
   }, [])
 
   function handleMessage({ data }: MessageEvent) {
-    if (data.type === $$_$$_$$_$$_unrestored_shared_1571_2636_68.b.DEVICE_VIBRATE) {
+    if (data.type === Module_68.b.DEVICE_VIBRATE) {
       var n = Date.now() + data.data.duration
       if (Y.current && Y.current >= n) {
         return
@@ -112,12 +112,12 @@ export const WebCommunityWrapper = React.memo(() => {
       }, data.data.duration)
       return void (Y.current = n)
     }
-    if (data.type === $$_$$_$$_$$_unrestored_shared_1571_2636_68.b.DEVICE_NOT_VIBRATE) {
+    if (data.type === Module_68.b.DEVICE_NOT_VIBRATE) {
       window.clearTimeout(z.current)
       Y.current = 0
       R(false)
     } else {
-      if (data.type === $$_$$_$$_$$_unrestored_shared_1571_2636_68.b.EMULATOR && "string" === typeof data.data.visiblePanel) {
+      if (data.type === Module_68.b.EMULATOR && "string" === typeof data.data.visiblePanel) {
         setPanelIsVisible(!!data.data.visiblePanel)
       }
     }
@@ -140,11 +140,11 @@ export const WebCommunityWrapper = React.memo(() => {
       }}
     >
       <div className={classnames(j && styles.vibrate, styles.playerWrapper)}>
-        {playerProps && React.createElement($$_$$_$$_$$_unrestored_player_2635_2637_514_index.a, playerProps)}
+        {playerProps && React.createElement(Module_514.a, playerProps)}
       </div>
       <div className={classnames(j && styles.vibrate, styles.deviceFrame)} />
       <div className={styles.emulatorWrapper}>
-        <$$_$$_$$_$$_unrestored_shared_1571_2636_738_index.a messageWindow={window} />
+        <Module_738.a messageWindow={window} />
       </div>
     </div>
     <div
@@ -153,7 +153,7 @@ export const WebCommunityWrapper = React.memo(() => {
         window.open(window.location.origin.replace(/\d+/g, ""), "_blank")
       }}
     >
-      <img src={$$_$$_$$_$$_unrestored_player_2635_2637_1042} className={styles.appUrlBtnImg} alt="" />
+      <img src={Unrestored_player_2635_2637_1042} className={styles.appUrlBtnImg} alt="" />
       {/* [CoCo Next] 添加 CoCo Next */}
       <span>去 CoCo Next 制作</span>
       <IconFont type="icon-fold-left" className={styles.appUrlBtnIcon} />

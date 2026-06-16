@@ -6,13 +6,13 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$_220 from "./220"
-import * as /* [auto-meaningful-name] */$_365 from "./365"
-import * as /* [auto-meaningful-name] */$_264 from "./264"
-import * as i from "./38"
-import * as /* [auto-meaningful-name] */$_524 from "./524"
-import * as /* [auto-meaningful-name] */$_939 from "./939"
-import * as /* [auto-meaningful-name] */$_1194 from "./1194"
+import * as /* [auto-meaningful-name] */Module_220 from /* 220 */"./220"
+import * as /* [auto-meaningful-name] */Module_365 from /* 365 */"./365"
+import * as /* [auto-meaningful-name] */Module_264 from /* 264 */"./264"
+import * as /* [auto-meaningful-name] */Module_38 from /* 38 */"./38"
+import * as /* [auto-meaningful-name] */Module_524 from /* 524 */"./524"
+import * as /* [auto-meaningful-name] */Module_939 from /* 939 */"./939"
+import * as /* [auto-meaningful-name] */Module_1194 from /* 1194 */"./1194"
 var _ = function (e, t, n) {
   var /* [auto-meaningful-name] */t$value
   return function (i) {
@@ -80,14 +80,14 @@ var y = function () {
   }
 }
 var b = {}
-var w = $_365.b()
+var w = Module_365.b()
 var E = function () {
   function e() {
     var e
     var t
     this._measurements = {}
     this._performanceCursor = 0
-    if (!$_524.b() && (null === (e = w) || undefined === e ? undefined : e.performance) && (null === (t = w) || undefined === t ? undefined : t.document)) {
+    if (!Module_524.b() && (null === (e = w) || undefined === e ? undefined : e.performance) && (null === (t = w) || undefined === t ? undefined : t.document)) {
       if (w.performance.mark) {
         w.performance.mark("sentry-tracing-init")
       }
@@ -98,14 +98,14 @@ var E = function () {
   }
   e.prototype.addPerformanceEntries = function (e) {
     var t = this
-    if (w && w.performance && w.performance.getEntries && $_939.a) {
-      $_264.a.log("[Tracing] Adding & adjusting spans using Performance API")
+    if (w && w.performance && w.performance.getEntries && Module_939.a) {
+      Module_264.a.log("[Tracing] Adding & adjusting spans using Performance API")
       var /* [auto-meaningful-name] */w$document$scriptsU$src
       var r
       var i
       var a
       var s
-      var c = $_220.d($_939.a)
+      var c = Module_220.d(Module_939.a)
       if (w.document && w.document.scripts) {
         for (var u = 0; u < w.document.scripts.length; u++) {
           if ("true" === w.document.scripts[u].dataset.entry) {
@@ -115,8 +115,8 @@ var E = function () {
         }
       }
       w.performance.getEntries().slice(this._performanceCursor).forEach(function (u) {
-        var f = $_220.d(u.startTime)
-        var d = $_220.d(u.duration)
+        var f = Module_220.d(u.startTime)
+        var d = Module_220.d(u.duration)
         if (!("navigation" === e.op && c + f < e.startTimestamp)) {
           switch (u.entryType) {
             case "navigation":
@@ -178,19 +178,19 @@ var E = function () {
                   C(e, {
                     op: "browser",
                     description: "request",
-                    startTimestamp: n + $_220.d(t.requestStart),
-                    endTimestamp: n + $_220.d(t.responseEnd)
+                    startTimestamp: n + Module_220.d(t.requestStart),
+                    endTimestamp: n + Module_220.d(t.responseEnd)
                   })
                   C(e, {
                     op: "browser",
                     description: "response",
-                    startTimestamp: n + $_220.d(t.responseStart),
-                    endTimestamp: n + $_220.d(t.responseEnd)
+                    startTimestamp: n + Module_220.d(t.responseStart),
+                    endTimestamp: n + Module_220.d(t.responseEnd)
                   })
                 })(e, t, n)
               }(e, u, c)
-              a = c + $_220.d(u.responseStart)
-              s = c + $_220.d(u.requestStart)
+              a = c + Module_220.d(u.responseStart)
+              s = c + Module_220.d(u.requestStart)
               break
             case "mark":
             case "paint":
@@ -212,7 +212,7 @@ var E = function () {
               var p = y(),
                 _ = u.startTime < p.firstHiddenTime
               if ("first-paint" === u.name && _) {
-                $_264.a.log("[Measurements] Adding FP")
+                Module_264.a.log("[Measurements] Adding FP")
                 t._measurements.fp = {
                   value: u.startTime
                 }
@@ -221,7 +221,7 @@ var E = function () {
                 }
               }
               if ("first-contentful-paint" === u.name && _) {
-                $_264.a.log("[Measurements] Adding FCP")
+                Module_264.a.log("[Measurements] Adding FCP")
                 t._measurements.fcp = {
                   value: u.startTime
                 }
@@ -274,9 +274,9 @@ var E = function () {
       this._performanceCursor = Math.max(performance.getEntries().length - 1, 0)
       this._trackNavigator(e)
       if ("pageload" === e.op) {
-        var f = $_220.d($_939.a)
+        var f = Module_220.d(Module_939.a)
         if ("number" === typeof a) {
-          $_264.a.log("[Measurements] Adding TTFB")
+          Module_264.a.log("[Measurements] Adding TTFB")
           this._measurements.ttfb = {
             value: 1e3 * (a - e.startTimestamp)
           }
@@ -289,17 +289,17 @@ var E = function () {
         ["fcp", "fp", "lcp"].forEach(function (n) {
           if (t._measurements[n] && !(f >= e.startTimestamp)) {
             var /* [auto-meaningful-name] */t$_measurementsN$value = t._measurements[n].value
-            var i = f + $_220.d(t$_measurementsN$value)
+            var i = f + Module_220.d(t$_measurementsN$value)
             var a = Math.abs(1e3 * (i - e.startTimestamp))
             var s = a - t$_measurementsN$value
-            $_264.a.log("[Measurements] Normalized " + n + " from " + t$_measurementsN$value + " to " + a + " (" + s + ")")
+            Module_264.a.log("[Measurements] Normalized " + n + " from " + t$_measurementsN$value + " to " + a + " (" + s + ")")
             t._measurements[n].value = a
           }
         })
         if (this._measurements["mark.fid"] && this._measurements.fid) {
           C(e, {
             description: "first input delay",
-            endTimestamp: this._measurements["mark.fid"].value + $_220.d(this._measurements.fid.value),
+            endTimestamp: this._measurements["mark.fid"].value + Module_220.d(this._measurements.fid.value),
             op: "web.vitals",
             startTimestamp: this._measurements["mark.fid"].value
           })
@@ -314,9 +314,9 @@ var E = function () {
   }
   e.prototype._tagMetricInfo = function (e) {
     if (this._lcpEntry) {
-      $_264.a.log("[Measurements] Adding LCP Data")
+      Module_264.a.log("[Measurements] Adding LCP Data")
       if (this._lcpEntry.element) {
-        e.setTag("lcp.element", $_1194.a(this._lcpEntry.element))
+        e.setTag("lcp.element", Module_1194.a(this._lcpEntry.element))
       }
       if (this._lcpEntry.id) {
         e.setTag("lcp.id", this._lcpEntry.id)
@@ -327,9 +327,9 @@ var E = function () {
       e.setTag("lcp.size", this._lcpEntry.size)
     }
     if (this._clsEntry && this._clsEntry.sources) {
-      $_264.a.log("[Measurements] Adding CLS Data")
+      Module_264.a.log("[Measurements] Adding CLS Data")
       this._clsEntry.sources.forEach(function (t, n) {
-        return e.setTag("cls.source." + (n + 1), $_1194.a(t.node))
+        return e.setTag("cls.source." + (n + 1), Module_1194.a(t.node))
       })
     }
   }
@@ -371,7 +371,7 @@ var E = function () {
     }(function (t) {
       var n = t.entries.pop()
       if (n) {
-        $_264.a.log("[Measurements] Adding CLS")
+        Module_264.a.log("[Measurements] Adding CLS")
         e._measurements.cls = {
           value: t.value
         }
@@ -447,9 +447,9 @@ var E = function () {
     }(function (t) {
       var n = t.entries.pop()
       if (n) {
-        var r = $_220.d($_939.a)
-        var i = $_220.d(n.startTime)
-        $_264.a.log("[Measurements] Adding LCP")
+        var r = Module_220.d(Module_939.a)
+        var i = Module_220.d(n.startTime)
+        Module_264.a.log("[Measurements] Adding LCP")
         e._measurements.lcp = {
           value: t.value
         }
@@ -484,9 +484,9 @@ var E = function () {
     }(function (t) {
       var n = t.entries.pop()
       if (n) {
-        var r = $_220.d($_939.a)
-        var i = $_220.d(n.startTime)
-        $_264.a.log("[Measurements] Adding FID")
+        var r = Module_220.d(Module_939.a)
+        var i = Module_220.d(n.startTime)
+        Module_264.a.log("[Measurements] Adding FID")
         e._measurements.fid = {
           value: t.value
         }
@@ -511,18 +511,18 @@ function x(e) {
     C(e$transaction, {
       op: "browser",
       description: null !== e$description && undefined !== e$description ? e$description : e$event,
-      startTimestamp: e$timeOrigin + $_220.d(c),
-      endTimestamp: e$timeOrigin + $_220.d(s)
+      startTimestamp: e$timeOrigin + Module_220.d(c),
+      endTimestamp: e$timeOrigin + Module_220.d(s)
     })
   }
 }
 function C(e, t) {
   var /* [auto-meaningful-name] */t$startTimestamp = t.startTimestamp
-  var r = i.e(t, ["startTimestamp"])
+  var r = Module_38.e(t, ["startTimestamp"])
   if (t$startTimestamp && e.startTimestamp > t$startTimestamp) {
     e.startTimestamp = t$startTimestamp
   }
-  return e.startChild(i.a({
+  return e.startChild(Module_38.a({
     startTimestamp: t$startTimestamp
   }, r))
 }

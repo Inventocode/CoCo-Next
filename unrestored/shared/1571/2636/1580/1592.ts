@@ -4,4 +4,4 @@
  * 模块 ID：1592
  */
 
-require("./1581/442/index")("species")
+require(/* 442 */"./1581/442/index")("species")

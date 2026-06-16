@@ -6,23 +6,23 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_11 from "../11"
-import { useRef } from "react"
+import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"../11"
+import { useRef } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */Classnames from "classnames"
-import /* [auto-meaningful-name] */Classnames1 from "classnames"
-import * as /* [auto-meaningful-name] */Color from "color"
-import /* [auto-meaningful-name] */Color1 from "color"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
-import * as /* [auto-meaningful-name] */$$_90 from "../90"
-import * as /* [auto-meaningful-name] */$$_148 from "../148"
-import * as /* [auto-meaningful-name] */$_245 from "./245"
-import /* [auto-meaningful-name] */$_2451 from "./245"
-import * as m from "../6"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_tools_index from "../../../../../src/shared/tools/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_components_index from "../../../../../src/shared/ui/components/index"
-import * as /* [auto-meaningful-name] */$$_379 from "../379"
+import /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import /* [auto-meaningful-name] */Classnames1 from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Color from /* 51 */"color"
+import /* [auto-meaningful-name] */Color1 from /* 51 */"color"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Module_90 from /* 90 */"../90"
+import * as /* [auto-meaningful-name] */Module_148 from /* 148 */"../148"
+import * as /* [auto-meaningful-name] */Module_245 from /* 245 */"./245"
+import /* [auto-meaningful-name] */Module_2451 from /* 245 */"./245"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"../6"
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */Module_379 from /* 379 */"../379"
 var b = function (e) {
   var /* [auto-meaningful-name] */e$mode = e.mode
   var /* [auto-meaningful-name] */e$text = e.text
@@ -43,32 +43,32 @@ var b = function (e) {
         t = "icon-radio-incorrect"
       }
     }
-    return t ? React1.createElement($$_$$_$$_$$_$$_src_shared_ui_components_index.j, {
+    return t ? React1.createElement(Src_shared_ui_components_index.j, {
       type: t
     }) : null
   }(e$state)
   var O = function () {
     var e = function (e, t) {
-      return t === $$_379.a.BUTTON ? {
+      return t === Module_379.a.BUTTON ? {
         default: {
-          borderColor: $$_$$_$$_$$_$$_src_shared_tools_index.hb(e, .8),
-          backgroundColor: $$_$$_$$_$$_$$_src_shared_tools_index.hb(e, .2),
+          borderColor: Src_shared_tools_index.hb(e, .8),
+          backgroundColor: Src_shared_tools_index.hb(e, .2),
           color: "inherit"
         },
         selected: {
-          borderColor: $$_$$_$$_$$_$$_src_shared_tools_index.v(e),
-          backgroundColor: $$_$$_$$_$$_$$_src_shared_tools_index.hb(e, .4),
+          borderColor: Src_shared_tools_index.v(e),
+          backgroundColor: Src_shared_tools_index.hb(e, .4),
           color: "inherit"
         },
         correct: {
-          color: $$_148.c,
-          borderColor: $$_$$_$$_$$_$$_src_shared_tools_index.hb($$_148.c, .8),
-          backgroundColor: $$_$$_$$_$$_$$_src_shared_tools_index.hb($$_148.c, .1)
+          color: Module_148.c,
+          borderColor: Src_shared_tools_index.hb(Module_148.c, .8),
+          backgroundColor: Src_shared_tools_index.hb(Module_148.c, .1)
         },
         inCorrect: {
-          color: $$_148.f,
-          borderColor: $$_$$_$$_$$_$$_src_shared_tools_index.hb($$_148.f, .8),
-          backgroundColor: $$_$$_$$_$$_$$_src_shared_tools_index.hb($$_148.f, .1)
+          color: Module_148.f,
+          borderColor: Src_shared_tools_index.hb(Module_148.f, .8),
+          backgroundColor: Src_shared_tools_index.hb(Module_148.f, .1)
         },
         disabled: {
           borderColor: "#e6e6e6",
@@ -78,24 +78,24 @@ var b = function (e) {
       } : {
         default: {
           color: "inherit",
-          borderColor: $$_$$_$$_$$_$$_src_shared_tools_index.v(e),
+          borderColor: Src_shared_tools_index.v(e),
           borderWidth: 1
         },
         selected: {
           color: "inherit",
-          borderColor: $$_$$_$$_$$_$$_src_shared_tools_index.v(e),
+          borderColor: Src_shared_tools_index.v(e),
           borderWidth: 5
         },
         correct: {
-          borderColor: $$_$$_$$_$$_$$_src_shared_tools_index.v($$_148.c),
-          color: $$_$$_$$_$$_$$_src_shared_tools_index.v($$_148.c),
-          backgroundColor: $$_$$_$$_$$_$$_src_shared_tools_index.v($$_148.c),
+          borderColor: Src_shared_tools_index.v(Module_148.c),
+          color: Src_shared_tools_index.v(Module_148.c),
+          backgroundColor: Src_shared_tools_index.v(Module_148.c),
           borderWidth: 1
         },
         inCorrect: {
-          borderColor: $$_$$_$$_$$_$$_src_shared_tools_index.v($$_148.f),
-          color: $$_$$_$$_$$_$$_src_shared_tools_index.v($$_148.f),
-          backgroundColor: $$_$$_$$_$$_$$_src_shared_tools_index.v($$_148.f),
+          borderColor: Src_shared_tools_index.v(Module_148.f),
+          color: Src_shared_tools_index.v(Module_148.f),
+          backgroundColor: Src_shared_tools_index.v(Module_148.f),
           borderWidth: 1
         },
         disabled: {
@@ -121,12 +121,12 @@ var b = function (e) {
       e$onClick(e$index, y$current)
     }
   }
-  var C = $$_148.g[e$sizeType]
-  return e$mode === $$_379.a.BUTTON ? React1.createElement("button", {
-    style: m.a(m.a({}, O), {}, {
+  var C = Module_148.g[e$sizeType]
+  return e$mode === Module_379.a.BUTTON ? React1.createElement("button", {
+    style: Module_6.a(Module_6.a({}, O), {}, {
       padding: C.optionPadding
     }),
-    className: Classnames1($_2451.buttonRadio, "radio-widget-button"),
+    className: Classnames1(Module_2451.buttonRadio, "radio-widget-button"),
     onClick: w
   }, React1.createElement("p", {
     ref: y,
@@ -134,7 +134,7 @@ var b = function (e) {
       fontSize: C.optionFontSize
     }
   }, e$text), React1.createElement("div", {
-    className: $_2451.buttonRadioInner,
+    className: Module_2451.buttonRadioInner,
     style: {
       color: null === O || undefined === O ? undefined : O.color,
       fontSize: C.iconFontSize
@@ -143,7 +143,7 @@ var b = function (e) {
     style: {
       color: null === O || undefined === O ? undefined : O.color
     },
-    className: $_2451.defaultRadio,
+    className: Module_2451.defaultRadio,
     onClick: w
   }, React1.createElement("div", {
     style: {
@@ -153,7 +153,7 @@ var b = function (e) {
       width: C.innerSize,
       height: C.innerSize
     },
-    className: Classnames1($_2451.inner, $$_11.a({}, $_2451.selected, e$isSelected))
+    className: Classnames1(Module_2451.inner, Module_11.a({}, Module_2451.selected, e$isSelected))
   }, E), React1.createElement("p", {
     ref: y,
     style: {
@@ -183,14 +183,14 @@ _a = function (e) {
       e$onOptionClick(e, t)
     }
   }
-  var S = $$_148.g[e$attributes$sizeType]
+  var S = Module_148.g[e$attributes$sizeType]
   return React1.createElement("div", {
     id: t,
-    "data-role": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.M,
-    "data-widget-type": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.C,
+    "data-role": Src_editor_widget_builtIn_types.M,
+    "data-widget-type": Src_editor_widget_builtIn_types.C,
     "data-min-width": S.minWidth,
     "data-max-width": S.maxWidth,
-    className: Classnames1($_2451.radioWidget, $$_90.b, $$_11.a({}, $_2451.hide, !e$visible)),
+    className: Classnames1(Module_2451.radioWidget, Module_90.b, Module_11.a({}, Module_2451.hide, !e$visible)),
     style: {
       top: e$position.y,
       left: e$position.x,
@@ -202,7 +202,7 @@ _a = function (e) {
     },
     "data-lock-height": true
   }, e$attributes$headlineVisible && React1.createElement("div", {
-    className: $_2451.headline,
+    className: Module_2451.headline,
     onClick: function (e) {
       if (e$onHeadlineClick) {
         e$onHeadlineClick(e)

@@ -8,29 +8,29 @@
 
 import { Yh } from "./index__part-68"
 import { lg } from "./index__part-76"
-import * as rp from "./61"
-import * as /* [auto-meaningful-name] */$_118_index from "./118/index"
-import * as /* [auto-meaningful-name] */$_46_index from "./46/index"
-import * as ep from "./4"
-import * as Jd from "./33"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index from "../../../../src/shared/packages/@crc/blink/src/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
-import * as Et from "./9"
-import * as D from "./6"
-import * as /* [auto-meaningful-name] */$_410 from "./410"
+import * as /* [auto-meaningful-name] */Module_61 from /* 61 */"./61"
+import * as /* [auto-meaningful-name] */Module_118 from /* 118 */"./118/index"
+import * as /* [auto-meaningful-name] */Module_46 from /* 46 */"./46/index"
+import * as /* [auto-meaningful-name] */Module_4 from /* 4 */"./4"
+import * as /* [auto-meaningful-name] */Module_33 from /* 33 */"./33"
+import * as /* [auto-meaningful-name] */Src_shared_packages_Crc_blink_src_index from /* 17 */"../../../../src/shared/packages/@crc/blink/src/index"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"./9"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"./6"
+import * as /* [auto-meaningful-name] */Module_410 from /* 410 */"./410"
 var /* [auto-meaningful-name] */ShadowType_Math_number_FieldName_NUM_Constraints_11_1_field_shadow = "<shadow type=\"math_number\"><field name=\"NUM\" constraints=\"1,,1\">1</field></shadow>"
 var pg = {
   addMutation: function (e) {
     var t = this
-    ep.b.call(this, "INDEX", function () {
+    Module_4.b.call(this, "INDEX", function () {
       var e = t.append_value_input("INDEX", 2).set_check("Number")
-      t.append_dummy_input("ITEM", 3).append_field($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.Msg.ROW)
+      t.append_dummy_input("ITEM", 3).append_field(Src_shared_packages_Crc_blink_src_index.Blink.Msg.ROW)
       return e
     }, ShadowType_Math_number_FieldName_NUM_Constraints_11_1_field_shadow, e)
   },
   removeMutation: function () {
     var e = this
-    ep.t.call(this, "INDEX", "NUM", function () {
+    Module_4.t.call(this, "INDEX", "NUM", function () {
       e.remove_input("INDEX")
       e.remove_input("ITEM")
     })
@@ -40,7 +40,7 @@ var pg = {
     if ("nth" === this.rowChoice) {
       if (!e) {
         this.append_shadow_input("INDEX", ShadowType_Math_number_FieldName_NUM_Constraints_11_1_field_shadow, 2).set_check("Number")
-        this.append_dummy_input("ITEM", 3).append_field($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.Msg.ROW)
+        this.append_dummy_input("ITEM", 3).append_field(Src_shared_packages_Crc_blink_src_index.Blink.Msg.ROW)
       }
     } else {
       if (e) {
@@ -65,15 +65,15 @@ var pg = {
   }
 }
 function fg() {
-  return new $_118_index.a({
+  return new Module_118.a({
     type: "field_coco_dropdown",
     name: "ROW_CHOICE",
     custom: true,
     options: function () {
-      return [[$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.Msg.LAST_ROW, "lastRow"], [$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.Msg.NTH, "nth"]]
+      return [[Src_shared_packages_Crc_blink_src_index.Blink.Msg.LAST_ROW, "lastRow"], [Src_shared_packages_Crc_blink_src_index.Blink.Msg.NTH, "nth"]]
     },
     optOnchange: function (e) {
-      if (!$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.is_undoing()) {
+      if (!Src_shared_packages_Crc_blink_src_index.Blink.events.is_undoing()) {
         var /* [auto-meaningful-name] */r$addMutation
         var /* [auto-meaningful-name] */r$removeMutation
         var /* [auto-meaningful-name] */this$source_block = this.source_block
@@ -97,14 +97,14 @@ var hg = {
     var t = fg()
     t.set_value("nth")
     e.append_field(t, "ROW_CHOICE")
-    e.insert_field_at(0, "".concat($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.Msg.ROW, ":"))
-    if ($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.is_enabled()) {
-      var n = ep.c("mutation", {
+    e.insert_field_at(0, "".concat(Src_shared_packages_Crc_blink_src_index.Blink.Msg.ROW, ":"))
+    if (Src_shared_packages_Crc_blink_src_index.Blink.events.is_enabled()) {
+      var n = Module_4.c("mutation", {
         block: this,
         old_value: undefined,
         new_value: "nth"
       })
-      $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.fire(n)
+      Src_shared_packages_Crc_blink_src_index.Blink.events.fire(n)
     }
   },
   removeMutation: function () {
@@ -113,14 +113,14 @@ var hg = {
     var t = fg()
     t.set_value("lastRow")
     e.append_field(t, "ROW_CHOICE")
-    e.insert_field_at(0, "".concat($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.Msg.ROW, ":"))
-    if ($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.is_enabled()) {
-      var n = ep.c("mutation", {
+    e.insert_field_at(0, "".concat(Src_shared_packages_Crc_blink_src_index.Blink.Msg.ROW, ":"))
+    if (Src_shared_packages_Crc_blink_src_index.Blink.events.is_enabled()) {
+      var n = Module_4.c("mutation", {
         block: this,
         old_value: "lastRow",
         new_value: undefined
       })
-      $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.fire(n)
+      Src_shared_packages_Crc_blink_src_index.Blink.events.fire(n)
     }
   },
   updateShape_: function (e) {
@@ -129,12 +129,12 @@ var hg = {
       var n = fg()
       n.set_value("lastRow")
       t.append_field(n, "ROW_CHOICE")
-      t.insert_field_at(0, "".concat($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.Msg.ROW, ":"))
+      t.insert_field_at(0, "".concat(Src_shared_packages_Crc_blink_src_index.Blink.Msg.ROW, ":"))
     }
     var r = e || this.get_field_value("WIDGET_ID")
     if (r) {
-      var o = Jd.Cb(r)
-      if (o && o.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.G) {
+      var o = Module_33.Cb(r)
+      if (o && o.type === Src_editor_widget_builtIn_types.G) {
         var i = 1
         for (var a in o.attributes.db.header) {
           var s = o.attributes.db.header[a]
@@ -171,32 +171,32 @@ var hg = {
   }
 }
 var mg = {
-  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.G,
+  type: Src_editor_widget_builtIn_types.G,
   category: {
-    iconId: $_410.a,
-    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_types.G
+    iconId: Module_410.a,
+    blocks: Src_editor_widget_builtIn_types.G
   },
   getTemplate: function (e) {
     var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>")
-    var /* [auto-meaningful-name] */$_46_index$c$getTableDataColumnListE0$value = $_46_index.c().getTableDataColumnList(e)[0].value
-    var r = "<field name=\"COLUMN\">".concat($_46_index$c$getTableDataColumnListE0$value, "</field>")
-    return ["<block type=\"table_data_on_change\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, "<block type=\"table_data_get_value_by_row_and_column\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"COLUMN_WRAPPER\">\n        <shadow type=\"table_data_column_field_dropdown\">").concat(r, "</shadow>\n      </value>\n      <value name=\"ROW\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='1,,1'>1</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"table_data_get_column_data\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"COLUMN_WRAPPER\">\n        <shadow type=\"table_data_column_field_dropdown\">").concat(r, "</shadow>\n      </value>\n    </block>"), "<block type=\"table_data_get_row_data\" uncache=\"true\">\n      <mutation pos='nth'></mutation>\n      ".concat(t, "\n      <value name=\"INDEX\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='1,,1'>1</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"table_data_get_row_length\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, "<block type=\"table_data_set_value_by_row_and_column\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"COLUMN_WRAPPER\">\n        <shadow type=\"table_data_column_field_dropdown\">").concat(r, "</shadow>\n      </value>\n      <value name=\"ROW\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='1,,1'>1</field>\n        </shadow>\n      </value>\n      <value name=\"VALUE\">\n        <shadow type=\"text_multiline\">\n          <field name=\"TEXT\"></field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"table_data_delete_row_data\" uncache=\"true\">\n      <mutation pos='nth'></mutation>\n      ".concat(t, "\n      <value name=\"INDEX\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='1,,1'>1</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"table_data_insert_row_data\" uncache=\"true\">\n      <mutation pos='nth'></mutation>\n      ".concat(t, "\n    </block>")]
+    var /* [auto-meaningful-name] */Module_46$c$getTableDataColumnListE0$value = Module_46.c().getTableDataColumnList(e)[0].value
+    var r = "<field name=\"COLUMN\">".concat(Module_46$c$getTableDataColumnListE0$value, "</field>")
+    return ["<block type=\"table_data_on_change\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Module_61.d, "<block type=\"table_data_get_value_by_row_and_column\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"COLUMN_WRAPPER\">\n        <shadow type=\"table_data_column_field_dropdown\">").concat(r, "</shadow>\n      </value>\n      <value name=\"ROW\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='1,,1'>1</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"table_data_get_column_data\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"COLUMN_WRAPPER\">\n        <shadow type=\"table_data_column_field_dropdown\">").concat(r, "</shadow>\n      </value>\n    </block>"), "<block type=\"table_data_get_row_data\" uncache=\"true\">\n      <mutation pos='nth'></mutation>\n      ".concat(t, "\n      <value name=\"INDEX\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='1,,1'>1</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"table_data_get_row_length\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Module_61.d, "<block type=\"table_data_set_value_by_row_and_column\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"COLUMN_WRAPPER\">\n        <shadow type=\"table_data_column_field_dropdown\">").concat(r, "</shadow>\n      </value>\n      <value name=\"ROW\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='1,,1'>1</field>\n        </shadow>\n      </value>\n      <value name=\"VALUE\">\n        <shadow type=\"text_multiline\">\n          <field name=\"TEXT\"></field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"table_data_delete_row_data\" uncache=\"true\">\n      <mutation pos='nth'></mutation>\n      ".concat(t, "\n      <value name=\"INDEX\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='1,,1'>1</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"table_data_insert_row_data\" uncache=\"true\">\n      <mutation pos='nth'></mutation>\n      ".concat(t, "\n    </block>")]
   },
   blockDeclareGroup: {
     setBlockGroupSnippet: function (e) {
       e.insertBlockSnippetGenerator("table_data_column_field_dropdown", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "COLUMN")
-        return o === Et.h ? "''" : ep.o(o)
+        return o === Module_9.h ? "''" : Module_4.o(o)
       })
       e.insertBlockSnippetGenerator("table_data_on_change", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID")
-        if (o === Et.h) {
+        if (o === Module_9.h) {
           return ""
         }
         var i = e.statementToCode(t, n, "DO")
-        return i ? ep.n("onTableDataChange", [ep.o(o)], i) : ""
+        return i ? Module_4.n("onTableDataChange", [Module_4.o(o)], i) : ""
       })
       e.insertBlockSnippetGenerator("table_data_set_value_by_row_and_column", function (t, n) {
         var r = t.blocks[n]
@@ -204,28 +204,28 @@ var mg = {
         var i = e.valueToCode(t, n, "COLUMN_WRAPPER", e.ORDER_FUNCTION_CALL)
         var a = e.valueToCode(t, n, "ROW", e.ORDER_FUNCTION_CALL)
         var s = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL)
-        return ep.l(ep.n("tableDataSetValueByColumnAndRow", [ep.o(o), i, a, s]), r, e)
+        return Module_4.l(Module_4.n("tableDataSetValueByColumnAndRow", [Module_4.o(o), i, a, s]), r, e)
       })
       e.insertBlockSnippetGenerator("table_data_delete_row_data", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID")
         var i = e.getFieldValue(r, "ROW_CHOICE")
         if ("lastRow" === i) {
-          return ep.l(ep.n("tableDataDeleteLastRow", [ep.o(o)]), r, e)
+          return Module_4.l(Module_4.n("tableDataDeleteLastRow", [Module_4.o(o)]), r, e)
         }
         if ("allRow" === i) {
-          return ep.l(ep.n("tableDataDeleteAllRow", [ep.o(o)]), r, e)
+          return Module_4.l(Module_4.n("tableDataDeleteAllRow", [Module_4.o(o)]), r, e)
         }
         var a = e.valueToCode(t, n, "INDEX", e.ORDER_FUNCTION_CALL)
-        return ep.l(ep.n("tableDataDeleteRowByIndex", [ep.o(o), a]), r, e)
+        return Module_4.l(Module_4.n("tableDataDeleteRowByIndex", [Module_4.o(o), a]), r, e)
       })
       e.insertBlockSnippetGenerator("table_data_insert_row_data", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID")
         var i = e.getFieldValue(r, "ROW_CHOICE")
-        var a = Jd.Cb(o)
+        var a = Module_33.Cb(o)
         var s = "{"
-        if (a && a.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.G) {
+        if (a && a.type === Src_editor_widget_builtIn_types.G) {
           var c = 1
           for (var l in a.attributes.db.header) {
             var u = e.valueToCode(t, n, "VALUE".concat(c), e.ORDER_FUNCTION_CALL)
@@ -235,37 +235,37 @@ var mg = {
         }
         s += "}"
         if ("lastRow" === i) {
-          return ep.l(ep.n("tableDataInsertLastRow", [ep.o(o), s]), r, e)
+          return Module_4.l(Module_4.n("tableDataInsertLastRow", [Module_4.o(o), s]), r, e)
         }
         var d = e.valueToCode(t, n, "INDEX", e.ORDER_FUNCTION_CALL)
-        return ep.l(ep.n("tableDataInsertRowByIndex", [ep.o(o), d, s]), r, e)
+        return Module_4.l(Module_4.n("tableDataInsertRowByIndex", [Module_4.o(o), d, s]), r, e)
       })
       e.insertBlockSnippetGenerator("table_data_get_value_by_row_and_column", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID")
         var i = e.valueToCode(t, n, "COLUMN_WRAPPER", e.ORDER_FUNCTION_CALL)
         var a = e.valueToCode(t, n, "ROW", e.ORDER_FUNCTION_CALL)
-        return ep.l(ep.s("tableDataGetValueByColumnAndRow", [ep.o(o), i, a]), r, e, false, true)
+        return Module_4.l(Module_4.s("tableDataGetValueByColumnAndRow", [Module_4.o(o), i, a]), r, e, false, true)
       })
       e.insertBlockSnippetGenerator("table_data_get_row_length", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID")
-        return ep.l(ep.s("tableDataGetRowLength", [ep.o(o)]), r, e, false, true)
+        return Module_4.l(Module_4.s("tableDataGetRowLength", [Module_4.o(o)]), r, e, false, true)
       })
       e.insertBlockSnippetGenerator("table_data_get_column_data", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID")
         var i = e.valueToCode(t, n, "COLUMN_WRAPPER", e.ORDER_FUNCTION_CALL)
-        return ep.l(ep.s("tableDataGetColumnData", [ep.o(o), i]), r, e, false, true)
+        return Module_4.l(Module_4.s("tableDataGetColumnData", [Module_4.o(o), i]), r, e, false, true)
       })
       e.insertBlockSnippetGenerator("table_data_get_row_data", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID")
         if ("lastRow" === e.getFieldValue(r, "ROW_CHOICE")) {
-          return ep.l(ep.s("tableDataGetLastRow", [ep.o(o)]), r, e, false, true)
+          return Module_4.l(Module_4.s("tableDataGetLastRow", [Module_4.o(o)]), r, e, false, true)
         }
         var i = e.valueToCode(t, n, "INDEX", e.ORDER_FUNCTION_CALL)
-        return ep.l(ep.s("tableDataGetRowByIndex", [ep.o(o), i]), r, e, false, true)
+        return Module_4.l(Module_4.s("tableDataGetRowByIndex", [Module_4.o(o), i]), r, e, false, true)
       })
     },
     setBlockGroupProfile: function (e, t) {
@@ -276,7 +276,7 @@ var mg = {
         name: "WIDGET_ID",
         custom: true,
         options: function () {
-          return $_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_types.G)
+          return Module_46.c().getWidgetListByType(Src_editor_widget_builtIn_types.G)
         }
       }
       function r(e) {
@@ -307,7 +307,7 @@ var mg = {
               var /* [auto-meaningful-name] */this$source_block
               var /* [auto-meaningful-name] */this$source_block$parent_block
               var n = null === (this$source_block = this.source_block) || undefined === this$source_block || null === (this$source_block$parent_block = this$source_block.parent_block) || undefined === this$source_block$parent_block ? undefined : this$source_block$parent_block.get_field_value("WIDGET_ID")
-              return $_46_index.c().getTableDataColumnList(n)
+              return Module_46.c().getTableDataColumnList(n)
             }
           }
         ],
@@ -317,7 +317,7 @@ var mg = {
         type: "table_data_on_change",
         message0: "%{BKY_TABLE_DATA_ON_CHANGE}",
         args0: [
-          ep.e("%{BKY_BLOCK_CLOUD_ICON}", true), D.a({}, n), {
+          Module_4.e("%{BKY_BLOCK_CLOUD_ICON}", true), Module_6.a({}, n), {
             type: "input_dummy",
             align: "CENTRE"
           }, {
@@ -333,7 +333,7 @@ var mg = {
         type: "table_data_set_value_by_row_and_column",
         message0: "%{BKY_TABLE_DATA_SET_VALUE_BY_ROW_AND_COLUMN}",
         args0: [
-          D.a({}, n), {
+          Module_6.a({}, n), {
             type: "input_value",
             name: "COLUMN_WRAPPER",
             check: ["String", "Number"]
@@ -361,7 +361,7 @@ var mg = {
             name: "WIDGET_ID",
             custom: true,
             options: function () {
-              return $_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_types.G)
+              return Module_46.c().getWidgetListByType(Src_editor_widget_builtIn_types.G)
             },
             optOnchange: function (e) {
               var /* [auto-meaningful-name] */this$source_block
@@ -384,7 +384,7 @@ var mg = {
         type: "table_data_delete_row_data",
         message0: "%{BKY_TABLE_DATA_DELETE_ROW_DATA}",
         args0: [
-          D.a({}, n), {
+          Module_6.a({}, n), {
             type: "field_coco_dropdown",
             name: "ROW_CHOICE",
             custom: true,
@@ -419,7 +419,7 @@ var mg = {
         type: "table_data_get_value_by_row_and_column",
         message0: "%{BKY_TABLE_DATA_GET_VALUE_BY_ROW_AND_COLUMN}",
         args0: [
-          D.a({}, n), {
+          Module_6.a({}, n), {
             type: "input_value",
             name: "COLUMN_WRAPPER",
             check: ["String", "Number"]
@@ -437,7 +437,7 @@ var mg = {
       e.insertBlockProfile("table_data_get_row_length", {
         type: "table_data_get_row_length",
         message0: "%{BKY_TABLE_DATA_GET_ROW_LENGTH}",
-        args0: [D.a({}, n)],
+        args0: [Module_6.a({}, n)],
         output: ["Number"],
         inputsInline: true,
         colour: "%{BKY_VARIABLES_HUE}"
@@ -446,7 +446,7 @@ var mg = {
         type: "table_data_get_column_data",
         message0: "%{BKY_TABLE_DATA_GET_COLUMN_DATA}",
         args0: [
-          ep.d("%{BKY_BLOCK_LIST_ICON}"), D.a({}, n), {
+          Module_4.d("%{BKY_BLOCK_LIST_ICON}"), Module_6.a({}, n), {
             type: "input_value",
             name: "COLUMN_WRAPPER",
             check: ["String", "Number"]
@@ -461,7 +461,7 @@ var mg = {
         type: "table_data_get_row_data",
         message0: "%{BKY_TABLE_DATA_GET_ROW_DATA}",
         args0: [
-          ep.d("%{BKY_BLOCK_DICT_ICON}"), D.a({}, n), {
+          Module_4.d("%{BKY_BLOCK_DICT_ICON}"), Module_6.a({}, n), {
             type: "field_coco_dropdown",
             name: "ROW_CHOICE",
             custom: true,
@@ -495,7 +495,7 @@ var mg = {
   },
   categoryClass: {
     text: "",
-    iconId: $_410.a,
+    iconId: Module_410.a,
     blocks: []
   },
   renameBlocksInfo: {
@@ -505,9 +505,9 @@ var mg = {
   topBlocks: ["table_data_on_change"]
 }
 var gg = {
-  icon: $_410.a,
+  icon: Module_410.a,
   title: "TableDataWidget.widgetName",
-  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.G,
+  type: Src_editor_widget_builtIn_types.G,
   previewAreaWidgetTitle: "TableDataWidget.widgetName",
   component: Yh,
   editConfig: lg,
@@ -521,8 +521,8 @@ var gg = {
     isGlobalWidget: true,
     attributes: {
       db: {
-        header: $_410.c,
-        data: $_410.b
+        header: Module_410.c,
+        data: Module_410.b
       }
     }
   }

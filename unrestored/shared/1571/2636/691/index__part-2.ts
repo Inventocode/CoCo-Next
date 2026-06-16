@@ -7,11 +7,11 @@
 "use strict"
 
 import { s } from "./index__part-1"
-import * as /* [auto-meaningful-name] */$_32_index from "./32/index"
-import * as /* [auto-meaningful-name] */Hammerjs from "hammerjs"
-import * as /* [auto-meaningful-name] */$_268_index from "./268/index"
-import * as c from "./65"
-import * as /* [auto-meaningful-name] */$_119 from "./119"
+import * as /* [auto-meaningful-name] */Module_32 from /* 32 */"./32/index"
+import * as /* [auto-meaningful-name] */Hammerjs from /* 562 */"hammerjs"
+import * as /* [auto-meaningful-name] */Module_268 from /* 268 */"./268/index"
+import * as /* [auto-meaningful-name] */Module_65 from /* 65 */"./65"
+import * as /* [auto-meaningful-name] */Module_119 from /* 119 */"./119"
 var l = function (e, t, n, r) {
   var i
   var /* [auto-meaningful-name] */arguments$length = arguments.length
@@ -193,15 +193,15 @@ var _ = function () {
     if (this.app) {
       console.warn("Application cannot be reinitialized.")
     } else {
-      this.app = new $_32_index.b(e.renderer)
+      this.app = new Module_32.b(e.renderer)
       this.app.stage.name = e.id ? e.id : "stage"
       this.cancel_multi_touch = undefined !== e.cancel_multi_touch && e.cancel_multi_touch
       this.app.stage.pivot.set(-this.app.renderer.width / 2, -this.app.renderer.height / 2)
       this.app.stage.interactive = true
-      this.app.stage.hitArea = new $_32_index.q(-this.app.renderer.width / 2, -this.app.renderer.height / 2, this.app.renderer.width, this.app.renderer.height)
+      this.app.stage.hitArea = new Module_32.q(-this.app.renderer.width / 2, -this.app.renderer.height / 2, this.app.renderer.width, this.app.renderer.height)
       this.app.ticker.autoStart = false
       this.app.ticker.stop()
-      this.scene_container = new $_32_index.f()
+      this.scene_container = new Module_32.f()
       this.scene_container.name = "scenes"
       this.scene_container.interactive = true
       this.app.stage.addChild(this.scene_container)
@@ -242,7 +242,7 @@ var _ = function () {
         return t.emit_mouse_event(e, "stage:rightclick")
       })
       if (e.development) {
-        $_119.a.set_log_enabled(true)
+        Module_119.a.set_log_enabled(true)
       }
     }
   }
@@ -363,7 +363,7 @@ var _ = function () {
     var /* [auto-meaningful-name] */n$stage = n.stage
     var /* [auto-meaningful-name] */n$renderer = n.renderer
     n$stage.pivot.set(-e / 2, -t / 2)
-    n$stage.hitArea = new $_32_index.q(-e / 2, -t / 2, e, t)
+    n$stage.hitArea = new Module_32.q(-e / 2, -t / 2, e, t)
     n$renderer.resize(e, t)
     if (n$stage.name) {
       this.events.fire("stage:resize", {
@@ -416,11 +416,11 @@ var _ = function () {
     }
     if (this.cancel_multi_touch) {
       var /* [auto-meaningful-name] */e$data$originalEvent = e.data.originalEvent
-      if (c.o(e$data$originalEvent) && e$data$originalEvent.touches.length > 1) {
+      if (Module_65.o(e$data$originalEvent) && e$data$originalEvent.touches.length > 1) {
         this.events.emit_break_event()
       }
     }
   }
-  return e = l([$_268_index.injectable(), d(0, $_268_index.inject(s.Events)), f("design:paramtypes", [Object])], e)
+  return e = l([Module_268.injectable(), d(0, Module_268.inject(s.Events)), f("design:paramtypes", [Object])], e)
 }()
 export { _ }

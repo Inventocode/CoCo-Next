@@ -10,8 +10,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.HeadBlockRenderer = undefined
-var r = require("tslib")
-var i = require("../../../123/index")
+var r = require(/* 93 */"tslib")
+var i = require(/* 123 */"../../../123/index")
 var o = function (e) {
   function t(t) {
     var n = e.call(this, t) || this
@@ -50,5 +50,5 @@ var o = function (e) {
     return 0
   }
   return t
-}(require("./1128").BlockRenderer)
+}(require(/* 1128 */"./1128").BlockRenderer)
 exports.HeadBlockRenderer = o

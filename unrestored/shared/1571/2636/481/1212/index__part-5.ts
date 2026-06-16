@@ -8,17 +8,17 @@
 
 import { v, m, y } from "./index__part-3"
 import { M, j } from "./index__part-4"
-import * as /* [auto-meaningful-name] */$_2673 from "./2673"
-import * as /* [auto-meaningful-name] */$_564_index from "./564/index"
-import * as /* [auto-meaningful-name] */$_306 from "./306"
-import * as /* [auto-meaningful-name] */$_928 from "./928"
-import * as /* [auto-meaningful-name] */$_746 from "./746"
-import * as /* [auto-meaningful-name] */$_395 from "./395"
-import * as /* [auto-meaningful-name] */$_918 from "./918"
-import * as /* [auto-meaningful-name] */$_2644 from "./2644"
-import * as /* [auto-meaningful-name] */$_1049 from "./1049"
-import * as /* [auto-meaningful-name] */$$_799_38 from "../799/38"
-import * as /* [auto-meaningful-name] */$_2639_index from "./2639/index"
+import * as /* [auto-meaningful-name] */Module_2673 from /* 2673 */"./2673"
+import * as /* [auto-meaningful-name] */Module_564 from /* 564 */"./564/index"
+import * as /* [auto-meaningful-name] */Module_306 from /* 306 */"./306"
+import * as /* [auto-meaningful-name] */Module_928 from /* 928 */"./928"
+import * as /* [auto-meaningful-name] */Module_746 from /* 746 */"./746"
+import * as /* [auto-meaningful-name] */Module_395 from /* 395 */"./395"
+import * as /* [auto-meaningful-name] */Module_918 from /* 918 */"./918"
+import * as /* [auto-meaningful-name] */Module_2644 from /* 2644 */"./2644"
+import * as /* [auto-meaningful-name] */Module_1049 from /* 1049 */"./1049"
+import * as /* [auto-meaningful-name] */Module_38 from /* 38 */"../799/38"
+import * as /* [auto-meaningful-name] */Module_2639 from /* 2639 */"./2639/index"
 var H = []
 function V(e) {
   return e.reduce(function (e, t) {
@@ -33,11 +33,11 @@ function V(e) {
 function G(e) {
   var t = {};
   (function (e) {
-    var t = e.defaultIntegrations && $$_799_38.f(e.defaultIntegrations) || []
+    var t = e.defaultIntegrations && Module_38.f(e.defaultIntegrations) || []
     var /* [auto-meaningful-name] */e$integrations = e.integrations
-    var r = $$_799_38.f(V(t))
+    var r = Module_38.f(V(t))
     if (Array.isArray(e$integrations)) {
-      r = $$_799_38.f(r.filter(function (e) {
+      r = Module_38.f(r.filter(function (e) {
         return e$integrations.every(function (t) {
           return t.name !== e.name
         })
@@ -52,16 +52,16 @@ function G(e) {
       return e.name
     })
     if (-1 !== i.indexOf("Debug")) {
-      r.push.apply(r, $$_799_38.f(r.splice(i.indexOf("Debug"), 1)))
+      r.push.apply(r, Module_38.f(r.splice(i.indexOf("Debug"), 1)))
     }
     return r
   })(e).forEach(function (e) {
     t[e.name] = e;
     (function (e) {
       if (-1 === H.indexOf(e.name)) {
-        e.setupOnce($_1049.b, $_2644.a)
+        e.setupOnce(Module_1049.b, Module_2644.a)
         H.push(e.name)
-        $_918.a.log("Integration installed: " + e.name)
+        Module_918.a.log("Integration installed: " + e.name)
       }
     })(e)
   })
@@ -94,7 +94,7 @@ var Q = function () {
   e.prototype.captureMessage = function (e, t, n, r) {
     var i = this
     var o = n && n.event_id
-    var a = $_306.i(e) ? this._getBackend().eventFromMessage(String(e), t, n) : this._getBackend().eventFromException(e, n)
+    var a = Module_306.i(e) ? this._getBackend().eventFromMessage(String(e), t, n) : this._getBackend().eventFromException(e, n)
     this._process(a.then(function (e) {
       return i._captureEvent(e, n, r)
     }).then(function (e) {
@@ -112,7 +112,7 @@ var Q = function () {
   e.prototype.captureSession = function (e) {
     if (this._isEnabled()) {
       if ("string" !== typeof e.release) {
-        $_918.a.warn("Discarded session because of missing or non-string release")
+        Module_918.a.warn("Discarded session because of missing or non-string release")
       } else {
         this._sendSession(e)
         e.update({
@@ -120,7 +120,7 @@ var Q = function () {
         })
       }
     } else {
-      $_918.a.warn("SDK not enabled, will not capture session.")
+      Module_918.a.warn("SDK not enabled, will not capture session.")
     }
   }
   e.prototype.getDsn = function () {
@@ -153,7 +153,7 @@ var Q = function () {
     try {
       return this._integrations[e.id] || null
     } catch (t) {
-      $_918.a.warn("Cannot retrieve integration " + e.id + " from the current Client")
+      Module_918.a.warn("Cannot retrieve integration " + e.id + " from the current Client")
       return null
     }
   }
@@ -166,7 +166,7 @@ var Q = function () {
     if (s) {
       a = true
       try {
-        for (var c = $$_799_38.g(s), u = c.next(); !u.done; u = c.next()) {
+        for (var c = Module_38.g(s), u = c.next(); !u.done; u = c.next()) {
           var /* [auto-meaningful-name] */u$value$mechanism = u.value.mechanism
           if (u$value$mechanism && false === u$value$mechanism.handled) {
             i = true
@@ -189,10 +189,10 @@ var Q = function () {
         }
       }
     }
-    var f = e.status === $_2673.a.Ok
+    var f = e.status === Module_2673.a.Ok
     if (f && 0 === e.errors || f && i) {
-      e.update($$_799_38.a($$_799_38.a({}, i && {
-        status: $_2673.a.Crashed
+      e.update(Module_38.a(Module_38.a({}, i && {
+        status: Module_2673.a.Crashed
       }), {
         errors: e.errors || Number(a || i)
       }))
@@ -204,7 +204,7 @@ var Q = function () {
   }
   e.prototype._isClientDoneProcessing = function (e) {
     var t = this
-    return new $_928.a(function (n) {
+    return new Module_928.a(function (n) {
       var r = 0
       var i = setInterval(function () {
         if (0 == t._numProcessing) {
@@ -230,17 +230,17 @@ var Q = function () {
     var r = this
     var /* [auto-meaningful-name] */this$getOptions$normalizeDepth = this.getOptions().normalizeDepth
     var a = undefined === this$getOptions$normalizeDepth ? 3 : this$getOptions$normalizeDepth
-    var c = $$_799_38.a($$_799_38.a({}, e), {
-      event_id: e.event_id || (n && n.event_id ? n.event_id : $_395.i()),
-      timestamp: e.timestamp || $_2639_index.a()
+    var c = Module_38.a(Module_38.a({}, e), {
+      event_id: e.event_id || (n && n.event_id ? n.event_id : Module_395.i()),
+      timestamp: e.timestamp || Module_2639.a()
     })
     this._applyClientOptions(c)
     this._applyIntegrationsMetadata(c)
     var u = t
     if (n && n.captureContext) {
-      u = $_1049.a.clone(u).update(n.captureContext)
+      u = Module_1049.a.clone(u).update(n.captureContext)
     }
-    var f = $_928.a.resolve(c)
+    var f = Module_928.a.resolve(c)
     if (u) {
       f = u.applyToEvent(c, n)
     }
@@ -252,24 +252,24 @@ var Q = function () {
     if (!e) {
       return null
     }
-    var n = $$_799_38.a($$_799_38.a($$_799_38.a($$_799_38.a($$_799_38.a({}, e), e.breadcrumbs && {
+    var n = Module_38.a(Module_38.a(Module_38.a(Module_38.a(Module_38.a({}, e), e.breadcrumbs && {
       breadcrumbs: e.breadcrumbs.map(function (e) {
-        return $$_799_38.a($$_799_38.a({}, e), e.data && {
-          data: $_564_index.d(e.data, t)
+        return Module_38.a(Module_38.a({}, e), e.data && {
+          data: Module_564.d(e.data, t)
         })
       })
     }), e.user && {
-      user: $_564_index.d(e.user, t)
+      user: Module_564.d(e.user, t)
     }), e.contexts && {
-      contexts: $_564_index.d(e.contexts, t)
+      contexts: Module_564.d(e.contexts, t)
     }), e.extra && {
-      extra: $_564_index.d(e.extra, t)
+      extra: Module_564.d(e.extra, t)
     })
     if (e.contexts && e.contexts.trace) {
       n.contexts.trace = e.contexts.trace
     }
     var /* [auto-meaningful-name] */this$getOptions$_experiments = this.getOptions()._experiments
-    return (undefined === this$getOptions$_experiments ? {} : this$getOptions$_experiments).ensureNoCircularStructures ? $_564_index.d(n) : n
+    return (undefined === this$getOptions$_experiments ? {} : this$getOptions$_experiments).ensureNoCircularStructures ? Module_564.d(n) : n
   }
   e.prototype._applyClientOptions = function (e) {
     var t = this.getOptions()
@@ -288,22 +288,22 @@ var Q = function () {
       e.dist = t$dist
     }
     if (e.message) {
-      e.message = $_746.d(e.message, a)
+      e.message = Module_746.d(e.message, a)
     }
     var s = e.exception && e.exception.values && e.exception.values[0]
     if (s && s.value) {
-      s.value = $_746.d(s.value, a)
+      s.value = Module_746.d(s.value, a)
     }
     var /* [auto-meaningful-name] */e$request = e.request
     if (e$request && e$request.url) {
-      e$request.url = $_746.d(e$request.url, a)
+      e$request.url = Module_746.d(e$request.url, a)
     }
   }
   e.prototype._applyIntegrationsMetadata = function (e) {
     var t = Object.keys(this._integrations)
     if (t.length > 0) {
       e.sdk = e.sdk || {}
-      e.sdk.integrations = $$_799_38.f(e.sdk.integrations || [], t)
+      e.sdk.integrations = Module_38.f(e.sdk.integrations || [], t)
     }
   }
   e.prototype._sendEvent = function (e) {
@@ -313,7 +313,7 @@ var Q = function () {
     return this._processEvent(e, t, n).then(function (e) {
       return e.event_id
     }, function (e) {
-      $_918.a.error(e)
+      Module_918.a.error(e)
     })
   }
   e.prototype._processEvent = function (e, t, n) {
@@ -322,10 +322,10 @@ var Q = function () {
     var /* [auto-meaningful-name] */i$beforeSend = i.beforeSend
     var /* [auto-meaningful-name] */i$sampleRate = i.sampleRate
     if (!this._isEnabled()) {
-      return $_928.a.reject(new M("SDK not enabled, will not capture event."))
+      return Module_928.a.reject(new M("SDK not enabled, will not capture event."))
     }
     var s = "transaction" === e.type
-    return !s && "number" === typeof i$sampleRate && Math.random() > i$sampleRate ? $_928.a.reject(new M("Discarding event because it's not included in the random sample (sampling rate = " + i$sampleRate + ")")) : this._prepareEvent(e, n, t).then(function (e) {
+    return !s && "number" === typeof i$sampleRate && Math.random() > i$sampleRate ? Module_928.a.reject(new M("Discarding event because it's not included in the random sample (sampling rate = " + i$sampleRate + ")")) : this._prepareEvent(e, n, t).then(function (e) {
       if (null === e) {
         throw new M("An event processor returned null, will not send event.")
       }
@@ -370,9 +370,9 @@ var Q = function () {
   }
   e.prototype._ensureBeforeSendRv = function (e) {
     var /* [auto-meaningful-name] */BeforeSendMethodHasToReturnNullOrAValidEvent$ = "`beforeSend` method has to return `null` or a valid event."
-    if ($_306.m(e)) {
+    if (Module_306.m(e)) {
       return e.then(function (e) {
-        if (!$_306.h(e) && null !== e) {
+        if (!Module_306.h(e) && null !== e) {
           throw new M(BeforeSendMethodHasToReturnNullOrAValidEvent$)
         }
         return e
@@ -380,7 +380,7 @@ var Q = function () {
         throw new M("beforeSend rejected with " + e)
       })
     }
-    if (!$_306.h(e) && null !== e) {
+    if (!Module_306.h(e) && null !== e) {
       throw new M(BeforeSendMethodHasToReturnNullOrAValidEvent$)
     }
     return e
@@ -404,13 +404,13 @@ var W
 var K = function () {
   function e() {}
   e.prototype.sendEvent = function (e) {
-    return $_928.a.resolve({
+    return Module_928.a.resolve({
       reason: "NoopTransport: Event has been skipped because no Dsn is configured.",
       status: z.Skipped
     })
   }
   e.prototype.close = function (e) {
-    return $_928.a.resolve(true)
+    return Module_928.a.resolve(true)
   }
   return e
 }()
@@ -418,7 +418,7 @@ var X = function () {
   function e(e) {
     this._options = e
     if (!this._options.dsn) {
-      $_918.a.warn("No DSN provided, backend will not do anything.")
+      Module_918.a.warn("No DSN provided, backend will not do anything.")
     }
     this._transport = this._setupTransport()
   }
@@ -430,16 +430,16 @@ var X = function () {
   }
   e.prototype.sendEvent = function (e) {
     this._transport.sendEvent(e).then(null, function (e) {
-      $_918.a.error("Error while sending event: " + e)
+      Module_918.a.error("Error while sending event: " + e)
     })
   }
   e.prototype.sendSession = function (e) {
     if (this._transport.sendSession) {
       this._transport.sendSession(e).then(null, function (e) {
-        $_918.a.error("Error while sending session: " + e)
+        Module_918.a.error("Error while sending session: " + e)
       })
     } else {
-      $_918.a.warn("Dropping session because custom transport doesn't implement sendSession")
+      Module_918.a.warn("Dropping session because custom transport doesn't implement sendSession")
     }
   }
   e.prototype.getTransport = function () {
@@ -628,7 +628,7 @@ function te(e) {
 }
 function ne(e, t) {
   try {
-    return $$_799_38.a($$_799_38.a({}, e), {
+    return Module_38.a(Module_38.a({}, e), {
       stack: e.stack.slice(t)
     })
   } catch (n) {
@@ -690,34 +690,34 @@ function se(e, t, n) {
   if (undefined === n) {
     n = {}
   }
-  if ($_306.e(e) && e.error) {
+  if (Module_306.e(e) && e.error) {
     return r = oe(te(e = e.error))
   }
-  if ($_306.a(e) || $_306.b(e)) {
+  if (Module_306.a(e) || Module_306.b(e)) {
     var i = e
-    var a = i.name || ($_306.a(i) ? "DOMError" : "DOMException")
+    var a = i.name || (Module_306.a(i) ? "DOMError" : "DOMException")
     var s = i.message ? a + ": " + i.message : a
     r = ce(s, t, n)
-    $_395.b(r, s)
+    Module_395.b(r, s)
     if ("code" in i) {
-      r.tags = $$_799_38.a($$_799_38.a({}, r.tags), {
+      r.tags = Module_38.a(Module_38.a({}, r.tags), {
         "DOMException.code": "" + i.code
       })
     }
     return r
   }
-  return $_306.d(e) ? r = oe(te(e)) : $_306.h(e) || $_306.f(e) ? (r = function (e, t, n) {
+  return Module_306.d(e) ? r = oe(te(e)) : Module_306.h(e) || Module_306.f(e) ? (r = function (e, t, n) {
     var r = {
       exception: {
         values: [
           {
-            type: $_306.f(e) ? e.constructor.name : n ? "UnhandledRejection" : "Error",
-            value: "Non-Error " + (n ? "promise rejection" : "exception") + " captured with keys: " + $_564_index.b(e)
+            type: Module_306.f(e) ? e.constructor.name : n ? "UnhandledRejection" : "Error",
+            value: "Non-Error " + (n ? "promise rejection" : "exception") + " captured with keys: " + Module_564.b(e)
           }
         ]
       },
       extra: {
-        __serialized__: $_564_index.e(e)
+        __serialized__: Module_564.e(e)
       }
     }
     if (t) {
@@ -727,9 +727,9 @@ function se(e, t, n) {
       }
     }
     return r
-  }(e, t, n.rejection), $_395.a(r, {
+  }(e, t, n.rejection), Module_395.a(r, {
     synthetic: true
-  }), r) : (r = ce(e, t, n), $_395.b(r, "" + e, undefined), $_395.a(r, {
+  }), r) : (r = ce(e, t, n), Module_395.b(r, "" + e, undefined), Module_395.a(r, {
     synthetic: true
   }), r)
 }
@@ -758,13 +758,13 @@ function ue(e) {
   }
 }
 function le(e, t) {
-  return t ? (e.sdk = e.sdk || {}, e.sdk.name = e.sdk.name || t.name, e.sdk.version = e.sdk.version || t.version, e.sdk.integrations = $$_799_38.f(e.sdk.integrations || [], t.integrations || []), e.sdk.packages = $$_799_38.f(e.sdk.packages || [], t.packages || []), e) : e
+  return t ? (e.sdk = e.sdk || {}, e.sdk.name = e.sdk.name || t.name, e.sdk.version = e.sdk.version || t.version, e.sdk.integrations = Module_38.f(e.sdk.integrations || [], t.integrations || []), e.sdk.packages = Module_38.f(e.sdk.packages || [], t.packages || []), e) : e
 }
 function fe(e, t) {
   var n = ue(t)
   var r = "aggregates" in e ? "sessions" : "session"
   return {
-    body: JSON.stringify($$_799_38.a($$_799_38.a({
+    body: JSON.stringify(Module_38.a(Module_38.a({
       sent_at: new Date().toISOString()
     }, n && {
       sdk: n
@@ -783,7 +783,7 @@ function de(e, t) {
   var i = "transaction" === r || t.forceEnvelope()
   var a = e.debug_meta || {}
   var /* [auto-meaningful-name] */a$transactionSampling = a.transactionSampling
-  var c = $$_799_38.e(a, ["transactionSampling"])
+  var c = Module_38.e(a, ["transactionSampling"])
   var u = a$transactionSampling || {}
   var /* [auto-meaningful-name] */u$method = u.method
   var /* [auto-meaningful-name] */u$rate = u.rate
@@ -798,7 +798,7 @@ function de(e, t) {
     url: i ? t.getEnvelopeEndpointWithUrlEncodedAuth() : t.getStoreEndpointWithUrlEncodedAuth()
   }
   if (i) {
-    var h = JSON.stringify($$_799_38.a($$_799_38.a({
+    var h = JSON.stringify(Module_38.a(Module_38.a({
       event_id: e.event_id,
       sent_at: new Date().toISOString()
     }, n && {
@@ -901,7 +901,7 @@ var he = function () {
       sentry_key: this.getDsn().publicKey,
       sentry_version: "7"
     }
-    return $_564_index.f(e)
+    return Module_564.f(e)
   }
   return e
 }()
@@ -916,7 +916,7 @@ var pe = function () {
   e.prototype.add = function (e) {
     var t = this
     if (!this.isReady()) {
-      return $_928.a.reject(new M("Not adding Promise due to buffer limit reached."))
+      return Module_928.a.reject(new M("Not adding Promise due to buffer limit reached."))
     }
     var n = e()
     if (-1 === this._buffer.indexOf(n)) {
@@ -937,13 +937,13 @@ var pe = function () {
   }
   e.prototype.drain = function (e) {
     var t = this
-    return new $_928.a(function (n) {
+    return new Module_928.a(function (n) {
       var r = setTimeout(function () {
         if (e && e > 0) {
           n(false)
         }
       }, e)
-      $_928.a.all(t._buffer).then(function () {
+      Module_928.a.all(t._buffer).then(function () {
         clearTimeout(r)
         n(true)
       }).then(null, function () {
@@ -981,7 +981,7 @@ var Ae = function () {
     var /* [auto-meaningful-name] */e$reject = e.reject
     var a = z.fromHttpCode(e$response.status)
     if (this._handleRateLimit(e$headers)) {
-      $_918.a.warn("Too many " + e$requestType + " requests, backing off until: " + this._disabledUntil(e$requestType))
+      Module_918.a.warn("Too many " + e$requestType + " requests, backing off until: " + this._disabledUntil(e$requestType))
     }
     if (a !== z.Success) {
       e$reject(e$response)
@@ -1008,12 +1008,12 @@ var Ae = function () {
     var c = e["retry-after"]
     if (s) {
       try {
-        for (var u = $$_799_38.g(s.trim().split(",")), f = u.next(); !f.done; f = u.next()) {
+        for (var u = Module_38.g(s.trim().split(",")), f = u.next(); !f.done; f = u.next()) {
           var d = f.value.split(":", 2)
           var h = parseInt(d[0], 10)
           var p = 1e3 * (isNaN(h) ? 60 : h)
           try {
-            for (r = undefined, _ = $$_799_38.g(d[1].split(";")), A = _.next(), undefined; !A.done; A = _.next()) {
+            for (r = undefined, _ = Module_38.g(d[1].split(";")), A = _.next(), undefined; !A.done; A = _.next()) {
               var _
               var A
               var /* [auto-meaningful-name] */A$value = A.value
@@ -1052,7 +1052,7 @@ var Ae = function () {
       }
       return true
     }
-    return !!c && (this._rateLimits.all = new Date(a + $_395.g(a, c)), true)
+    return !!c && (this._rateLimits.all = new Date(a + Module_395.g(a, c)), true)
   }
   return e
 }()
@@ -1062,7 +1062,7 @@ var ge = function (e) {
       n = function () {
         var e
         var /* [auto-meaningful-name] */o$contentWindow
-        var n = $_395.e()
+        var n = Module_395.e()
         if (m(n.fetch)) {
           return n.fetch.bind(n)
         }
@@ -1078,7 +1078,7 @@ var ge = function (e) {
             }
             n$document.head.removeChild(o)
           } catch (a) {
-            $_918.a.warn("Could not create sandbox iframe for pure fetch check, bailing to window.fetch: ", a)
+            Module_918.a.warn("Could not create sandbox iframe for pure fetch check, bailing to window.fetch: ", a)
           }
         }
         return n$fetch.bind(n)
@@ -1088,7 +1088,7 @@ var ge = function (e) {
     r._fetch = n
     return r
   }
-  $$_799_38.c(t, e)
+  Module_38.c(t, e)
   t.prototype.sendEvent = function (e) {
     return this._sendRequest(de(e, this._api), e)
   }
@@ -1117,7 +1117,7 @@ var ge = function (e) {
       r.headers = this.options.headers
     }
     return this._buffer.add(function () {
-      return new $_928.a(function (t, i) {
+      return new Module_928.a(function (t, i) {
         n._fetch(e.url, r).then(function (r) {
           var o = {
             "x-sentry-rate-limits": r.headers.get("X-Sentry-Rate-Limits"),
@@ -1140,7 +1140,7 @@ var ve = function (e) {
   function t() {
     return null !== e && e.apply(this, arguments) || this
   }
-  $$_799_38.c(t, e)
+  Module_38.c(t, e)
   t.prototype.sendEvent = function (e) {
     return this._sendRequest(de(e, this._api), e)
   }
@@ -1155,7 +1155,7 @@ var ve = function (e) {
       reason: "Transport for " + e.type + " requests locked till " + this._disabledUntil(e.type) + " due to too many requests.",
       status: 429
     }) : this._buffer.add(function () {
-      return new $_928.a(function (t, r) {
+      return new Module_928.a(function (t, r) {
         var i = new XMLHttpRequest()
         for (var o in i.onreadystatechange = function () {
           if (4 === i.readyState) {
@@ -1184,13 +1184,13 @@ var me = function (e) {
   function t() {
     return null !== e && e.apply(this, arguments) || this
   }
-  $$_799_38.c(t, e)
+  Module_38.c(t, e)
   t.prototype.eventFromException = function (e, t) {
     return function (e, t, n) {
       var r = se(t, n && n.syntheticException || undefined, {
         attachStacktrace: e.attachStacktrace
       })
-      $_395.a(r, {
+      Module_395.a(r, {
         handled: true,
         type: "generic"
       })
@@ -1198,7 +1198,7 @@ var me = function (e) {
       if (n && n.event_id) {
         r.event_id = n.event_id
       }
-      return $_928.a.resolve(r)
+      return Module_928.a.resolve(r)
     }(this._options, e, t)
   }
   t.prototype.eventFromMessage = function (e, t, n) {
@@ -1216,14 +1216,14 @@ var me = function (e) {
       if (r && r.event_id) {
         i.event_id = r.event_id
       }
-      return $_928.a.resolve(i)
+      return Module_928.a.resolve(i)
     }(this._options, e, t, n)
   }
   t.prototype._setupTransport = function () {
     if (!this._options.dsn) {
       return e.prototype._setupTransport.call(this)
     }
-    var t = $$_799_38.a($$_799_38.a({}, this._options.transportOptions), {
+    var t = Module_38.a(Module_38.a({}, this._options.transportOptions), {
       dsn: this._options.dsn,
       tunnel: this._options.tunnel,
       _metadata: this._options._metadata

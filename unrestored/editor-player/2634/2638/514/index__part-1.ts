@@ -6,36 +6,36 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_25_index from "../../../../shared/1571/2636/25/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_295 from "../../../../shared/1571/2636/295"
-import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_10_index from "../../../../shared/1571/2636/10/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_6 from "../../../../shared/1571/2636/6"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_7 from "../../../../shared/1571/2636/7"
-import "react"
+import * as /* [auto-meaningful-name] */Module_25 from /* 25 */"../../../../shared/1571/2636/25/index"
+import * as /* [auto-meaningful-name] */Module_295 from /* 295 */"../../../../shared/1571/2636/295"
+import * as /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import /* [auto-meaningful-name] */RegeneratorRuntime1 from /* 1 */"regenerator-runtime"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../../../../shared/1571/2636/10/index"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"../../../../shared/1571/2636/6"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../../../../shared/1571/2636/7"
+import /* 0 */"react"
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */React1 from "react"
-import "react-redux"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_37_1412_index from "../../../../shared/1571/2636/37/1412/index"
-import * as /* [auto-meaningful-name] */Axios from "axios"
-import /* [auto-meaningful-name] */Axios1 from "axios"
-import "../../../../shared/1571/2636/719"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_load from "../../../../../src/shared/widget/custom/load"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_type from "../../../../../src/shared/widget/custom/type"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_storage from "../../../../../src/shared/widget/custom/storage"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_tools_index from "../../../../../src/shared/tools/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_683 from "../../../../shared/1571/2636/683"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_27 from "../../../../shared/1571/2636/27"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_39 from "../../../../shared/1571/2636/39"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_58_index from "../../../../shared/1571/2636/58/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_59_index from "../../../../shared/1571/2636/59/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_28_index from "../../../../shared/1571/2636/28/index"
+import /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import /* 16 */"react-redux"
+import * as /* [auto-meaningful-name] */Module_1412 from /* 1412 */"../../../../shared/1571/2636/37/1412/index"
+import * as /* [auto-meaningful-name] */Axios from /* 129 */"axios"
+import /* [auto-meaningful-name] */Axios1 from /* 129 */"axios"
+import /* 719 */"../../../../shared/1571/2636/719"
+import * as /* [auto-meaningful-name] */Src_shared_widget_custom_load from /* 34 */"../../../../../src/shared/widget/custom/load"
+import * as /* [auto-meaningful-name] */Src_shared_widget_custom_type from /* 78 */"../../../../../src/shared/widget/custom/type"
+import * as /* [auto-meaningful-name] */Src_shared_widget_custom_storage from /* 96 */"../../../../../src/shared/widget/custom/storage"
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */Module_683 from /* 683 */"../../../../shared/1571/2636/683"
+import * as /* [auto-meaningful-name] */Module_27 from /* 27 */"../../../../shared/1571/2636/27"
+import * as /* [auto-meaningful-name] */Module_39 from /* 39 */"../../../../shared/1571/2636/39"
+import * as /* [auto-meaningful-name] */Module_58 from /* 58 */"../../../../shared/1571/2636/58/index"
+import * as /* [auto-meaningful-name] */Module_59 from /* 59 */"../../../../shared/1571/2636/59/index"
+import * as /* [auto-meaningful-name] */Module_28 from /* 28 */"../../../../shared/1571/2636/28/index"
 var k = []
 var I = function () {}
 var M = {
   callNumber: function (t) {
-    if ($$_$$_$$_$$_shared_1571_2636_28_index.d()) {
+    if (Module_28.d()) {
       window.cordova.plugins.phonedialer.call(t, I, function (t) {
         console.error("应用需要开启电话权限")
         var /* [auto-meaningful-name] */window$cordova$plugins$permissions = window.cordova.plugins.permissions
@@ -53,7 +53,7 @@ var M = {
     }
   },
   dialNumber: function (t) {
-    if ($$_$$_$$_$$_shared_1571_2636_28_index.d()) {
+    if (Module_28.d()) {
       window.cordova.plugins.phonedialer.dial(t, I, function (t) {
         return console.error(t)
       }, false)
@@ -63,7 +63,7 @@ var M = {
   },
   onCall: function (t) {
     var /* [auto-meaningful-name] */window$CallTrap
-    if ($$_$$_$$_$$_shared_1571_2636_28_index.d()) {
+    if (Module_28.d()) {
       k.push(t)
       if (!(null === (window$CallTrap = window.CallTrap) || undefined === window$CallTrap)) {
         window$CallTrap.onCall(function (t) {

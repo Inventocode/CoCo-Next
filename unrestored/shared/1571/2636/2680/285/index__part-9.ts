@@ -7,11 +7,11 @@
 "use strict"
 
 import { pt } from "./index__part-8"
-import * as /* [auto-meaningful-name] */$$_$$_21 from "../../21"
-import { createElement, forwardRef } from "react"
-import * as /* [auto-meaningful-name] */$$_$$_224_index from "../../224/index"
+import * as /* [auto-meaningful-name] */Module_21 from /* 21 */"../../21"
+import { createElement, forwardRef } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_224 from /* 224 */"../../224/index"
 var At = function (e, t) {
-  return createElement($$_$$_224_index.a, $$_$$_21.a($$_$$_21.a({}, e), {}, {
+  return createElement(Module_224.a, Module_21.a(Module_21.a({}, e), {}, {
     ref: t,
     icon: pt
   }))

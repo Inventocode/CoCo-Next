@@ -7,7 +7,7 @@
 "use strict"
 
 export { o as a }
-import { createContext, createElement } from "react"
+import { createContext, createElement } from /* 0 */"react"
 var i = createContext(undefined)
 var o = function (e) {
   var /* [auto-meaningful-name] */e$children = e.children

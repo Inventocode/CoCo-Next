@@ -7,67 +7,67 @@
 "use strict"
 
 import { py } from "./index__part-102"
-import qv from "./88"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import /* [auto-meaningful-name] */React from "react"
-import { memo } from "react"
+import /* [auto-meaningful-name] */Module_88 from /* 88 */"./88"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_189 from "./189"
+import * as /* [auto-meaningful-name] */Module_189 from /* 189 */"./189"
 var _w = memo(function (e) {
   var /* [auto-meaningful-name] */e$formConfig = e.formConfig
   var /* [auto-meaningful-name] */e$getValue = e.getValue
-  var r = e$getValue("style") || $_189.b.styleA
+  var r = e$getValue("style") || Module_189.b.styleA
   var o = e$getValue("themeColor")
-  var i = (0, $_710.a().formatMessage)({
+  var i = (0, Module_710.a().formatMessage)({
     id: e$formConfig.label || "previewImage"
   })
   var a = {
     backgroundColor: o
   }
-  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
-    className: qv.formItemWrapper,
+  return React.createElement(Src_shared_ui_components_index.i, {
+    className: Module_88.formItemWrapper,
     label: i,
     align: "vertical"
   }, React.createElement("div", {
-    className: qv.dialog
+    className: Module_88.dialog
   }, React.createElement("div", {
-    className: qv.dialogContent
+    className: Module_88.dialogContent
   }, React.createElement("div", {
-    className: qv.titleWrapper,
-    style: r === $_189.b.styleB ? {
+    className: Module_88.titleWrapper,
+    style: r === Module_189.b.styleB ? {
       paddingLeft: "24px"
     } : {
       paddingLeft: "101px"
     }
   }, React.createElement("div", {
-    className: qv.title,
+    className: Module_88.title,
     style: a
   }), React.createElement("div", {
-    className: qv.title,
+    className: Module_88.title,
     style: a
   })), React.createElement("div", {
-    className: qv.textWrapper
+    className: Module_88.textWrapper
   }, React.createElement("div", {
-    className: Classnames(qv.line, qv.firstLine),
+    className: Classnames(Module_88.line, Module_88.firstLine),
     style: a
   }), React.createElement("div", {
-    className: Classnames(qv.line, qv.secondLine),
+    className: Classnames(Module_88.line, Module_88.secondLine),
     style: a
-  })), r === $_189.b.styleA ? React.createElement("div", {
-    className: qv.buttonWrapper
+  })), r === Module_189.b.styleA ? React.createElement("div", {
+    className: Module_88.buttonWrapper
   }, React.createElement("div", {
-    className: Classnames(qv.button, qv.secondary)
+    className: Classnames(Module_88.button, Module_88.secondary)
   }, "BUTTON"), React.createElement("div", {
-    className: Classnames(qv.button, qv.primary),
+    className: Classnames(Module_88.button, Module_88.primary),
     style: a
   }, "BUTTON")) : React.createElement("div", {
-    className: qv.textButtonWrapper
+    className: Module_88.textButtonWrapper
   }, React.createElement("div", {
-    className: qv.secondary
+    className: Module_88.secondary
   }, "BUTTON"), React.createElement("div", {
-    className: qv.primary,
+    className: Module_88.primary,
     style: {
       color: o
     }
@@ -81,11 +81,11 @@ var vw = memo(function (e) {
   var /* [auto-meaningful-name] */e$formConfig = e.formConfig
   var a = e$getValue(n)
   var s = e$formConfig.dropdown || []
-  var c = (0, $_710.a().formatMessage)({
+  var c = (0, Module_710.a().formatMessage)({
     id: e$formConfig.label || "options"
   })
-  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
-    className: Classnames(qv.formItemWrapper),
+  return React.createElement(Src_shared_ui_components_index.i, {
+    className: Classnames(Module_88.formItemWrapper),
     label: c,
     align: "horizontal"
   }, React.createElement(py, {
@@ -97,7 +97,7 @@ var vw = memo(function (e) {
     value: a,
     optionLabelProp: "label",
     listHeight: 160,
-    suffixIcon: React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+    suffixIcon: React.createElement(Src_shared_ui_components_index.j, {
       type: "icon-dropdown-down"
     })
   }, s.map(function (e) {

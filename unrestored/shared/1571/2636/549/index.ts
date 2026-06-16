@@ -7,18 +7,18 @@
 import "./index__part-0"
 import { r } from "./index__part-1"
 var b = false
-import /* [auto-meaningful-name] */$_159 from "./159"
-import * as /* [auto-meaningful-name] */$$_77 from "../77"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_tools_index from "../../../../../src/shared/tools/index"
-import * as /* [auto-meaningful-name] */$$_90 from "../90"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import /* [auto-meaningful-name] */Color from "color"
-import /* [auto-meaningful-name] */React from "react"
-import { useRef, useState, useEffect, useCallback, useLayoutEffect } from "react"
+import /* [auto-meaningful-name] */Module_159 from /* 159 */"./159"
+import * as /* [auto-meaningful-name] */Module_77 from /* 77 */"../77"
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */Module_90 from /* 90 */"../90"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../../src/editor/widget/built-in/types"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import /* [auto-meaningful-name] */Color from /* 51 */"color"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { useRef, useState, useEffect, useCallback, useLayoutEffect } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
-import * as /* [auto-meaningful-name] */$$_11 from "../11"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../10/index"
+import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"../11"
 var _a
 _a = function (e) {
   var t = useRef(null)
@@ -41,16 +41,16 @@ _a = function (e) {
   var /* [auto-meaningful-name] */e$attributes$step = e$attributes.step
   var /* [auto-meaningful-name] */e$attributes$minValue = e$attributes.minValue
   var /* [auto-meaningful-name] */e$attributes$direction = e$attributes.direction
-  var D = undefined === e$attributes$direction ? $$_77.b.HORIZONTAL : e$attributes$direction
+  var D = undefined === e$attributes$direction ? Module_77.b.HORIZONTAL : e$attributes$direction
   var /* [auto-meaningful-name] */e$attributes$sliderType = e$attributes.sliderType
-  var L = undefined === e$attributes$sliderType ? $$_77.d.TEMPLATE : e$attributes$sliderType
+  var L = undefined === e$attributes$sliderType ? Module_77.d.TEMPLATE : e$attributes$sliderType
   var /* [auto-meaningful-name] */e$attributes$handleImageRatio = e$attributes.handleImageRatio
   var B = undefined === e$attributes$handleImageRatio ? 2 : e$attributes$handleImageRatio
   var /* [auto-meaningful-name] */e$attributes$backgroundImageDirection = e$attributes.backgroundImageDirection
-  var G = undefined === e$attributes$backgroundImageDirection ? $$_77.b.HORIZONTAL : e$attributes$backgroundImageDirection
+  var G = undefined === e$attributes$backgroundImageDirection ? Module_77.b.HORIZONTAL : e$attributes$backgroundImageDirection
   var /* [auto-meaningful-name] */e$attributes$trackImageDirection = e$attributes.trackImageDirection
-  var U = undefined === e$attributes$trackImageDirection ? $$_77.b.HORIZONTAL : e$attributes$trackImageDirection
-  var H = e$attributes.handleImageDirection || $$_77.b.HORIZONTAL
+  var U = undefined === e$attributes$trackImageDirection ? Module_77.b.HORIZONTAL : e$attributes$trackImageDirection
+  var H = e$attributes.handleImageDirection || Module_77.b.HORIZONTAL
   var /* [auto-meaningful-name] */e$attributes$mode = e$attributes.mode
   var /* [auto-meaningful-name] */e$attributes$color = e$attributes.color
   var /* [auto-meaningful-name] */e$attributes$disabled = e$attributes.disabled
@@ -59,31 +59,31 @@ _a = function (e) {
   var X = useRef(null)
   var Q = useRef(r.UP)
   var Z = useState(false)
-  var J = $$_10_index.a(Z, 2)
+  var J = Module_10.a(Z, 2)
   var $ = J[0]
   var ee = J[1]
   var te = useState(0)
-  var ne = $$_10_index.a(te, 2)
+  var ne = Module_10.a(te, 2)
   var re = ne[0]
   var oe = ne[1]
   var ie = useState(0)
-  var ae = $$_10_index.a(ie, 2)
+  var ae = Module_10.a(ie, 2)
   var se = ae[0]
   var ce = ae[1]
   var le = useState(0)
-  var ue = $$_10_index.a(le, 2)
+  var ue = Module_10.a(le, 2)
   var de = ue[0]
   var pe = ue[1]
   var fe = useState(0)
-  var he = $$_10_index.a(fe, 2)
+  var he = Module_10.a(fe, 2)
   var me = he[0]
   var ge = he[1]
   var _e = useState("")
-  var ve = $$_10_index.a(_e, 2)
+  var ve = Module_10.a(_e, 2)
   var be = ve[0]
   var ye = ve[1]
   var Ee = useState("")
-  var Oe = $$_10_index.a(Ee, 2)
+  var Oe = Module_10.a(Ee, 2)
   var we = Oe[0]
   var Ce = Oe[1]
   var Te = useRef(1)
@@ -92,7 +92,7 @@ _a = function (e) {
     if (e$trackImageUrl) {
       Te.current = Te.current + 1
       var /* [auto-meaningful-name] */Te$current = Te.current
-      $$_$$_$$_$$_$$_src_shared_tools_index.gb(e$trackImageUrl, U === $$_77.b.HORIZONTAL ? -90 : 90).then(function (t) {
+      Src_shared_tools_index.gb(e$trackImageUrl, U === Module_77.b.HORIZONTAL ? -90 : 90).then(function (t) {
         if (!(Te.current > Te$current)) {
           ye(t)
         }
@@ -105,7 +105,7 @@ _a = function (e) {
     if (e$backgroundImageUrl) {
       Se.current = Se.current + 1
       var /* [auto-meaningful-name] */Se$current = Se.current
-      $$_$$_$$_$$_$$_src_shared_tools_index.gb(e$backgroundImageUrl, G === $$_77.b.HORIZONTAL ? -90 : 90).then(function (t) {
+      Src_shared_tools_index.gb(e$backgroundImageUrl, G === Module_77.b.HORIZONTAL ? -90 : 90).then(function (t) {
         if (!(Se.current > Se$current)) {
           Ce(t)
         }
@@ -115,7 +115,7 @@ _a = function (e) {
     }
   }, [e$backgroundImageUrl, G])
   useEffect(function () {
-    if (L === $$_77.d.IMAGE) {
+    if (L === Module_77.d.IMAGE) {
       ee(true)
     } else {
       ee(false)
@@ -123,23 +123,23 @@ _a = function (e) {
   }, [L])
   useEffect(function () {
     var /* [auto-meaningful-name] */e$size$height = e$size.height
-    if (D === $$_77.b.VERTICAL) {
+    if (D === Module_77.b.VERTICAL) {
       e$size$height = e$size.width
     }
-    if (L === $$_77.d.IMAGE) {
+    if (L === Module_77.d.IMAGE) {
       oe(e$size$height * B)
       ce(e$size$height * B)
       pe(0)
       return void ge(0)
     }
-    if (e$attributes$mode === $$_77.c.DEFAULT) {
+    if (e$attributes$mode === Module_77.c.DEFAULT) {
       oe(1.4 * e$size$height)
       ce(1.4 * e$size$height)
       pe(e$size$height / 3.2)
       ge(1.4 * e$size$height / 2)
     } else {
-      if (e$attributes$mode === $$_77.c.PRIMARY) {
-        if (D === $$_77.b.VERTICAL) {
+      if (e$attributes$mode === Module_77.c.PRIMARY) {
+        if (D === Module_77.b.VERTICAL) {
           oe(e$size$height)
           ce(1.6 * e$size$height)
         } else {
@@ -156,12 +156,12 @@ _a = function (e) {
       var t = Color(e).toString()
       return {
         default: {
-          stepBackgroundColor: $$_$$_$$_$$_$$_src_shared_tools_index.hb(t, .2),
+          stepBackgroundColor: Src_shared_tools_index.hb(t, .2),
           handleBorderColor: t,
           trackBackgroundColor: t
         },
         disabled: {
-          stepBackgroundColor: $$_$$_$$_$$_$$_src_shared_tools_index.hb("#ccc", .2),
+          stepBackgroundColor: Src_shared_tools_index.hb("#ccc", .2),
           handleBorderColor: "#ccc",
           trackBackgroundColor: "#ccc"
         }
@@ -183,7 +183,7 @@ _a = function (e) {
     }
     var c = Math.max(e$attributes$maxValue - e$attributes$minValue, 1)
     if (q$current && X$current && t$current1) {
-      if (D === $$_77.b.HORIZONTAL) {
+      if (D === Module_77.b.HORIZONTAL) {
         var /* [auto-meaningful-name] */t$current1$getClientRects0$width = t$current1.getClientRects()[0].width
         var /* [auto-meaningful-name] */q$current$offsetWidth = q$current.offsetWidth
         var d = t$current1$getClientRects0$width / (c / e$attributes$step)
@@ -211,7 +211,7 @@ _a = function (e) {
     return e$attributes$value
   }, [D, e$attributes$maxValue, e$attributes$minValue, e$attributes$step, e$attributes$value])
   var Ne = useCallback(function (e) {
-    if ($$_$$_$$_$$_$$_src_shared_tools_index.W()) {
+    if (Src_shared_tools_index.W()) {
       b = true
       if (!e$attributes$disabled) {
         if (e$onStartToSlid) {
@@ -221,7 +221,7 @@ _a = function (e) {
     }
   }, [e$attributes$disabled, e$onStartToSlid, e$attributes$value])
   var Re = useCallback(function (e) {
-    if ($$_$$_$$_$$_$$_src_shared_tools_index.W() && !e$attributes$disabled) {
+    if (Src_shared_tools_index.W() && !e$attributes$disabled) {
       b = true
       var t = je(e.changedTouches[0].clientX, e.changedTouches[0].clientY)
       if (e$onSliderChange) {
@@ -243,7 +243,7 @@ _a = function (e) {
     var /* [auto-meaningful-name] */t$current = t.current
     var o = Math.max(e$attributes$maxValue - e$attributes$minValue, 1)
     if (X$current && q$current && t$current) {
-      if (D === $$_77.b.HORIZONTAL) {
+      if (D === Module_77.b.HORIZONTAL) {
         var /* [auto-meaningful-name] */t$current$offsetWidth = t$current.offsetWidth
         var /* [auto-meaningful-name] */q$current$offsetWidth = q$current.offsetWidth
         var s = (e$attributes$value - e$attributes$minValue) / o * t$current$offsetWidth
@@ -271,10 +271,10 @@ _a = function (e) {
     }
   }, [re, se, e$attributes$maxValue, e$attributes$minValue, e$attributes$value, D, $, e$size])
   useEffect(function () {
-    if (!$$_$$_$$_$$_$$_src_shared_tools_index.W()) {
+    if (!Src_shared_tools_index.W()) {
       var e = e$attributes$value
       var t = e$attributes$value
-      var n = $$_$$_$$_$$_$$_src_shared_tools_index.p(function () {
+      var n = Src_shared_tools_index.p(function () {
         if (e$onSliderChange) {
           e$onSliderChange(e)
         }
@@ -340,9 +340,9 @@ _a = function (e) {
   }, [e$attributes$disabled, je, n, e$isEditState, e$onEndToSlid, e$onSliderChange, e$onStartToSlid, S, e$attributes$value])
   return React.createElement("div", {
     id: n,
-    "data-role": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.M,
-    "data-widget-type": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.E,
-    className: Classnames($$_90.b, $$_11.a({}, $_159.hide, !e$visible)),
+    "data-role": Src_editor_widget_builtIn_types.M,
+    "data-widget-type": Src_editor_widget_builtIn_types.E,
+    className: Classnames(Module_90.b, Module_11.a({}, Module_159.hide, !e$visible)),
     style: {
       top: e$position.y,
       left: e$position.x,
@@ -352,34 +352,34 @@ _a = function (e) {
       filter: e$attributes$disabled && $ ? "saturate(0)" : undefined
     }
   }, React.createElement("div", {
-    className: $_159.sliderBox
+    className: Module_159.sliderBox
   }, React.createElement("div", {
-    className: $_159.main,
+    className: Module_159.main,
     ref: t,
     style: {
-      borderRadius: $ ? 0 : D === $$_77.b.HORIZONTAL ? e$size.height / 2 : e$size.width / 2,
+      borderRadius: $ ? 0 : D === Module_77.b.HORIZONTAL ? e$size.height / 2 : e$size.width / 2,
       backgroundColor: $ ? "transparent" : "#fff"
     }
   }, React.createElement("div", {
-    className: Classnames($_159.step, D === $$_77.b.VERTICAL && $_159.vertical),
+    className: Classnames(Module_159.step, D === Module_77.b.VERTICAL && Module_159.vertical),
     style: {
       width: "100%",
       height: "100%",
-      borderRadius: $ ? 0 : D === $$_77.b.HORIZONTAL ? e$size.height / 2 : e$size.width / 2,
+      borderRadius: $ ? 0 : D === Module_77.b.HORIZONTAL ? e$size.height / 2 : e$size.width / 2,
       backgroundColor: $ ? undefined : Ae.stepBackgroundColor,
       backgroundImage: $ ? "url(".concat(G === D ? e$backgroundImageUrl : we, ")") : undefined
     }
   }, React.createElement("div", {
-    className: Classnames($_159.trackBox, D === $$_77.b.HORIZONTAL ? $_159.horizontalTrackBox : $_159.verticalTrackBox),
+    className: Classnames(Module_159.trackBox, D === Module_77.b.HORIZONTAL ? Module_159.horizontalTrackBox : Module_159.verticalTrackBox),
     ref: X,
     style: {
       backgroundColor: $ ? undefined : Ae.trackBackgroundColor
     }
   }, React.createElement("div", {
-    className: $_159.track,
+    className: Module_159.track,
     style: {
-      width: D === $$_77.b.HORIZONTAL ? e$size.width : "100%",
-      height: D === $$_77.b.HORIZONTAL ? "100%" : e$size.height,
+      width: D === Module_77.b.HORIZONTAL ? e$size.width : "100%",
+      height: D === Module_77.b.HORIZONTAL ? "100%" : e$size.height,
       backgroundImage: $ ? "url(".concat(U === D ? e$trackImageUrl : be, ")") : undefined
     }
   }))), React.createElement("div", {
@@ -387,18 +387,18 @@ _a = function (e) {
     onTouchMove: Re,
     onTouchEnd: ke,
     ref: q,
-    className: Classnames($_159.handle, $ ? $_159.imageHandle : $_159.templateHandle, H === D ? $_159.horizontalHandle : $_159.verticalHandle, H === $$_77.b.HORIZONTAL && D === $$_77.b.VERTICAL ? $_159.verticalRotate : $_159.horizontalRotate, e$isEditState && !S && $_159.handleNotSelected),
+    className: Classnames(Module_159.handle, $ ? Module_159.imageHandle : Module_159.templateHandle, H === D ? Module_159.horizontalHandle : Module_159.verticalHandle, H === Module_77.b.HORIZONTAL && D === Module_77.b.VERTICAL ? Module_159.verticalRotate : Module_159.horizontalRotate, e$isEditState && !S && Module_159.handleNotSelected),
     style: {
       width: re,
       height: se,
       borderWidth: de,
       borderRadius: me,
       borderColor: Ae.handleBorderColor,
-      color: $$_$$_$$_$$_$$_src_shared_tools_index.hb(Ae.handleBorderColor, .3),
+      color: Src_shared_tools_index.hb(Ae.handleBorderColor, .3),
       backgroundImage: $ ? "url(".concat(e$handleImageUrl, ")") : undefined
     }
-  }, !$ && e$attributes$mode === $$_77.c.PRIMARY && React.createElement("div", {
-    className: $_159.handleInner,
+  }, !$ && e$attributes$mode === Module_77.c.PRIMARY && React.createElement("div", {
+    className: Module_159.handleInner,
     style: {
       color: Ae.handleBorderColor
     }

@@ -5,6 +5,6 @@
  */
 
 var r = new Map()
-r.set("no-undef", require("./1134"))
-r.set("consistent-return", require("./1135/index"))
+r.set("no-undef", require(/* 1134 */"./1134"))
+r.set("consistent-return", require(/* 1135 */"./1135/index"))
 module.exports = r

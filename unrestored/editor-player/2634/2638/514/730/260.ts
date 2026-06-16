@@ -7,8 +7,8 @@
 "use strict"
 
 export { l as a }
-import * as /* [auto-meaningful-name] */$$_81_index from "../81/index"
-import * as /* [auto-meaningful-name] */$_603 from "./603"
+import * as /* [auto-meaningful-name] */Module_81 from /* 81 */"../81/index"
+import * as /* [auto-meaningful-name] */Module_603 from /* 603 */"./603"
 function i() {
   return "undefined" !== typeof navigator
 }
@@ -198,7 +198,7 @@ var l = function () {
   }
   Object.defineProperty(t.prototype, "possibleFormats", {
     set: function (t) {
-      this.hints.set($$_81_index.DecodeHintType.POSSIBLE_FORMATS, t)
+      this.hints.set(Module_81.DecodeHintType.POSSIBLE_FORMATS, t)
     },
     enumerable: false,
     configurable: true
@@ -275,10 +275,10 @@ var l = function () {
   t.getMediaElement = function (t, e) {
     var r = document.getElementById(t)
     if (!r) {
-      throw new $$_81_index.ArgumentException("element with id '" + t + "' not found")
+      throw new Module_81.ArgumentException("element with id '" + t + "' not found")
     }
     if (r.nodeName.toLowerCase() !== e.toLowerCase()) {
-      throw new $$_81_index.ArgumentException("element with id '" + t + "' must be an " + e + " element")
+      throw new Module_81.ArgumentException("element with id '" + t + "' must be an " + e + " element")
     }
     return r
   }
@@ -323,9 +323,9 @@ var l = function () {
     return !!t.complete && 0 !== t.naturalWidth
   }
   t.createBinaryBitmapFromCanvas = function (t) {
-    var e = new $_603.a(t)
-    var r = new $$_81_index.HybridBinarizer(e)
-    return new $$_81_index.BinaryBitmap(r)
+    var e = new Module_603.a(t)
+    var r = new Module_81.HybridBinarizer(e)
+    return new Module_81.BinaryBitmap(r)
   }
   t.drawImageOnCanvas = function (t, e) {
     t.drawImage(e, 0, 0)
@@ -347,7 +347,7 @@ var l = function () {
   }
   t.createCaptureCanvas = function (e) {
     if (!e) {
-      throw new $$_81_index.ArgumentException("Cannot create a capture canvas without a media element.")
+      throw new Module_81.ArgumentException("Cannot create a capture canvas without a media element.")
     }
     if ("undefined" === typeof document) {
       throw new Error("The page \"Document\" is undefined, make sure you're running in a browser.")
@@ -579,7 +579,7 @@ var l = function () {
   }
   t.checkCallbackFnOrThrow = function (t) {
     if (!t) {
-      throw new $$_81_index.ArgumentException("`callbackFn` is a required parameter, you cannot capture results without it.")
+      throw new Module_81.ArgumentException("`callbackFn` is a required parameter, you cannot capture results without it.")
     }
   }
   t.disposeMediaStream = function (t) {
@@ -606,7 +606,7 @@ var l = function () {
         switch (o.label) {
           case 0:
             if (!e) {
-              throw new $$_81_index.ArgumentException("An image element must be provided.")
+              throw new Module_81.ArgumentException("An image element must be provided.")
             }
             r = t.prepareImageElement(e)
             return [4, this._decodeOnLoadImage(r)]
@@ -623,7 +623,7 @@ var l = function () {
         switch (o.label) {
           case 0:
             if (!e) {
-              throw new $$_81_index.ArgumentException("An URL must be provided.")
+              throw new Module_81.ArgumentException("An URL must be provided.")
             }
             (r = t.prepareImageElement()).src = e
             o.label = 1
@@ -819,7 +819,7 @@ var l = function () {
         switch (a.label) {
           case 0:
             if (t.checkCallbackFnOrThrow(r), !e) {
-              throw new $$_81_index.ArgumentException("A video element must be provided.")
+              throw new Module_81.ArgumentException("A video element must be provided.")
             }
             o = t.prepareVideoElement(e)
             this$options$tryPlayVideoTimeout = this.options.tryPlayVideoTimeout
@@ -840,7 +840,7 @@ var l = function () {
         switch (u.label) {
           case 0:
             if (t.checkCallbackFnOrThrow(r), !e) {
-              throw new $$_81_index.ArgumentException("An URL must be provided.")
+              throw new Module_81.ArgumentException("An URL must be provided.")
             }
             (o = t.prepareVideoElement()).src = e
             i = function () {
@@ -929,7 +929,7 @@ var l = function () {
         switch (i.label) {
           case 0:
             if (!e) {
-              throw new $$_81_index.ArgumentException("A video element must be provided.")
+              throw new Module_81.ArgumentException("A video element must be provided.")
             }
             r = t.prepareVideoElement(e)
             this$options$tryPlayVideoTimeout = this.options.tryPlayVideoTimeout
@@ -951,7 +951,7 @@ var l = function () {
         switch (i.label) {
           case 0:
             if (!e) {
-              throw new $$_81_index.ArgumentException("An URL must be provided.")
+              throw new Module_81.ArgumentException("An URL must be provided.")
             }
             (r = t.prepareVideoElement()).src = e
             o = this.decodeOnceFromVideoElement(r)
@@ -988,13 +988,13 @@ var l = function () {
           return void s.stop()
         }
         if (i) {
-          if (i instanceof $$_81_index.NotFoundException && e) {
+          if (i instanceof Module_81.NotFoundException && e) {
             return
           }
-          if (i instanceof $$_81_index.ChecksumException && r) {
+          if (i instanceof Module_81.ChecksumException && r) {
             return
           }
-          if (i instanceof $$_81_index.FormatException && o) {
+          if (i instanceof Module_81.FormatException && o) {
             return
           }
           s.stop()
@@ -1036,9 +1036,9 @@ var l = function () {
           s = setTimeout(l, i.options.delayBetweenScanSuccess)
         } catch (w) {
           r(undefined, w, h)
-          var p = w instanceof $$_81_index.ChecksumException
-          var g = w instanceof $$_81_index.FormatException
-          var y = w instanceof $$_81_index.NotFoundException
+          var p = w instanceof Module_81.ChecksumException
+          var g = w instanceof Module_81.FormatException
+          var y = w instanceof Module_81.NotFoundException
           if (p || g || y) {
             return void (s = setTimeout(l, i.options.delayBetweenScanAttempts))
           }

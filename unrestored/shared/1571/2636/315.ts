@@ -8,7 +8,7 @@
 
 export { i as b }
 export { o as a }
-import { isValidElement, cloneElement } from "react"
+import { isValidElement, cloneElement } from /* 0 */"react"
 var i = isValidElement
 function o(e, t) {
   return function (e, t, n) {

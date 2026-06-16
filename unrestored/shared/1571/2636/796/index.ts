@@ -7,13 +7,13 @@
 "use strict"
 
 export { l as a }
-import { memo } from "react"
+import { memo } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$$_710 from "../710"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_components_index from "../../../../../src/shared/ui/components/index"
-import * as /* [auto-meaningful-name] */$_751 from "./751"
-import /* [auto-meaningful-name] */$_7511 from "./751"
+import /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../710"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */Module_751 from /* 751 */"./751"
+import /* [auto-meaningful-name] */Module_7511 from /* 751 */"./751"
 function l(e) {
   var /* [auto-meaningful-name] */e$onCancel = e.onCancel
   var /* [auto-meaningful-name] */e$onOk = e.onOk
@@ -21,31 +21,31 @@ function l(e) {
   var s = undefined === e$title ? "saveTipsTitle" : e$title
   var /* [auto-meaningful-name] */e$desc = e.desc
   var u = undefined === e$desc ? "saveTipsDesc" : e$desc
-  var /* [auto-meaningful-name] */$$_710$a$formatMessage = $$_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   return React1.createElement("div", {
-    className: $_7511.saveTipsWrapper
+    className: Module_7511.saveTipsWrapper
   }, React1.createElement("div", {
-    className: $_7511.saveTipsMask
+    className: Module_7511.saveTipsMask
   }), React1.createElement("div", {
-    className: $_7511.saveTipsContent
+    className: Module_7511.saveTipsContent
   }, React1.createElement("div", {
-    className: $_7511.name
-  }, $$_710$a$formatMessage({
+    className: Module_7511.name
+  }, Module_710$a$formatMessage({
     id: s
   })), React1.createElement("div", {
-    className: $_7511.description
-  }, $$_710$a$formatMessage({
+    className: Module_7511.description
+  }, Module_710$a$formatMessage({
     id: u
   })), React1.createElement("div", {
-    className: $_7511.actions
-  }, React1.createElement($$_$$_$$_$$_$$_src_shared_ui_components_index.d, {
+    className: Module_7511.actions
+  }, React1.createElement(Src_shared_ui_components_index.d, {
     onClick: e$onCancel
-  }, $$_710$a$formatMessage({
+  }, Module_710$a$formatMessage({
     id: "notSave"
-  })), React1.createElement($$_$$_$$_$$_$$_src_shared_ui_components_index.d, {
+  })), React1.createElement(Src_shared_ui_components_index.d, {
     type: "primary",
     onClick: e$onOk
-  }, $$_710$a$formatMessage({
+  }, Module_710$a$formatMessage({
     id: "save"
   })))))
 }

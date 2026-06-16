@@ -7,20 +7,20 @@
 "use strict"
 
 import { Nw } from "./index__part-129"
-import * as /* [auto-meaningful-name] */$_517 from "./517"
-import * as /* [auto-meaningful-name] */$_610 from "./610"
-import * as /* [auto-meaningful-name] */$_801_index from "./801/index"
-import qv from "./88"
-import * as Ln from "./35"
-import * as Dn from "./19"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import /* [auto-meaningful-name] */React from "react"
-import { forwardRef, useContext, createElement, memo } from "react"
+import * as /* [auto-meaningful-name] */Module_517 from /* 517 */"./517"
+import * as /* [auto-meaningful-name] */Module_610 from /* 610 */"./610"
+import * as /* [auto-meaningful-name] */Module_801 from /* 801 */"./801/index"
+import /* [auto-meaningful-name] */Module_88 from /* 88 */"./88"
+import * as /* [auto-meaningful-name] */Module_35 from /* 35 */"./35"
+import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"./19"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { forwardRef, useContext, createElement, memo } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_1048_index from "./1048/index"
-import * as /* [auto-meaningful-name] */$_364_index from "./364/index"
+import * as /* [auto-meaningful-name] */Module_1048 from /* 1048 */"./1048/index"
+import * as /* [auto-meaningful-name] */Module_364 from /* 364 */"./364/index"
 var xw = function (e, t) {
   var n = {}
   for (var r in e) if (Object.prototype.hasOwnProperty.call(e, r) && t.indexOf(r) < 0) {
@@ -45,21 +45,21 @@ var Dw = forwardRef(function (e, t) {
   var s = undefined === e$className ? "" : e$className
   var /* [auto-meaningful-name] */e$disabled = e.disabled
   var l = xw(e, ["prefixCls", "size", "loading", "className", "disabled"])
-  $_364_index.a("checked" in l || !("value" in l), "Switch", "`value` is not a valid prop, do you mean `checked`?")
-  var u = useContext($_801_index.b)
+  Module_364.a("checked" in l || !("value" in l), "Switch", "`value` is not a valid prop, do you mean `checked`?")
+  var u = useContext(Module_801.b)
   var /* [auto-meaningful-name] */u$getPrefixCls = u.getPrefixCls
   var /* [auto-meaningful-name] */u$direction = u.direction
-  var h = useContext($_517.b)
+  var h = useContext(Module_517.b)
   var m = u$getPrefixCls("switch", e$prefixCls)
   var g = createElement("div", {
     className: "".concat(m, "-handle")
-  }, e$loading && createElement($_610.a, {
+  }, e$loading && createElement(Module_610.a, {
     className: "".concat(m, "-loading-icon")
   }))
-  var _ = Classnames((n = {}, Ln.a(n, "".concat(m, "-small"), "small" === (e$size || h)), Ln.a(n, "".concat(m, "-loading"), e$loading), Ln.a(n, "".concat(m, "-rtl"), "rtl" === u$direction), n), s)
-  return createElement($_1048_index.a, {
+  var _ = Classnames((n = {}, Module_35.a(n, "".concat(m, "-small"), "small" === (e$size || h)), Module_35.a(n, "".concat(m, "-loading"), e$loading), Module_35.a(n, "".concat(m, "-rtl"), "rtl" === u$direction), n), s)
+  return createElement(Module_1048.a, {
     insertExtraNode: true
-  }, createElement(Nw, Dn.a({}, l, {
+  }, createElement(Nw, Module_19.a({}, l, {
     prefixCls: m,
     className: _,
     disabled: e$disabled || e$loading,
@@ -82,22 +82,22 @@ var Pw = memo(function (e) {
   var /* [auto-meaningful-name] */e$formConfig$unCheckedLabel = e$formConfig.unCheckedLabel
   var /* [auto-meaningful-name] */e$formConfig$convert = e$formConfig.convert
   var /* [auto-meaningful-name] */e$formConfig$reverse = e$formConfig.reverse
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
-  var f = $_710$a$formatMessage({
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
+  var f = Module_710$a$formatMessage({
     id: s
   })
-  var m = e$formConfig$checkedLabel ? $_710$a$formatMessage({
+  var m = e$formConfig$checkedLabel ? Module_710$a$formatMessage({
     id: e$formConfig$checkedLabel
   }) : ""
-  var g = e$formConfig$unCheckedLabel ? $_710$a$formatMessage({
+  var g = e$formConfig$unCheckedLabel ? Module_710$a$formatMessage({
     id: e$formConfig$unCheckedLabel
   }) : ""
   var _ = e$getValue(n)
   if (e$formConfig$convert) {
     _ = e$formConfig$convert(_)
   }
-  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
-    className: Classnames(qv.formItemWrapper),
+  return React.createElement(Src_shared_ui_components_index.i, {
+    className: Classnames(Module_88.formItemWrapper),
     label: f
   }, React.createElement(Lw, {
     checkedChildren: m,

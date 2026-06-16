@@ -4,9 +4,9 @@
  * 模块 ID：301__part-4
  */
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4 from "../../../../../unrestored/shared/1571/2636/4"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_25_index from "../../../../../unrestored/shared/1571/2636/25/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1058_173 from "../../../../../unrestored/shared/1571/2636/1058/173"
+import * as /* [auto-meaningful-name] */Module_4 from /* 4 */"../../../../../unrestored/shared/1571/2636/4"
+import * as /* [auto-meaningful-name] */Module_25 from /* 25 */"../../../../../unrestored/shared/1571/2636/25/index"
+import * as /* [auto-meaningful-name] */Module_173 from /* 173 */"../../../../../unrestored/shared/1571/2636/1058/173"
 function setBlockGroupProfile(e) {
   e.insertBlockProfile("procedures_2_param_block", {
     type: "procedures_2_param_block",
@@ -24,33 +24,33 @@ function setBlockGroupProfile(e) {
   })
 }
 function setBlockGroupXML(e) {
-  e.insertBlockXML($$_$$_$$_$$_$$_unrestored_shared_1571_2636_1058_173.PROCEDURE_BLOCK_TYPES.DEF, "", true)
-  e.insertBlockXML($$_$$_$$_$$_$$_unrestored_shared_1571_2636_1058_173.PROCEDURE_BLOCK_TYPES.CALL_RETURN, "", true)
-  e.insertBlockXML($$_$$_$$_$$_$$_unrestored_shared_1571_2636_1058_173.PROCEDURE_BLOCK_TYPES.CALL_NORETURN, "", true)
+  e.insertBlockXML(Module_173.PROCEDURE_BLOCK_TYPES.DEF, "", true)
+  e.insertBlockXML(Module_173.PROCEDURE_BLOCK_TYPES.CALL_RETURN, "", true)
+  e.insertBlockXML(Module_173.PROCEDURE_BLOCK_TYPES.CALL_NORETURN, "", true)
 }
 function setBlockGroupSnippet(e) {
   function t(t, n, r) {
     var o = n.blocks[r]
     var i = e.getDynamicValue("__CURRENT_SCREEN_ID__")
     var a = e.getFieldValue(o, "NAME") || ""
-    var s = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.f(a, i)
+    var s = Module_4.f(a, i)
     var c = Object.keys(o.shadows).filter(function (e) {
       return e.startsWith("ARG")
     }).map(function (t) {
       return e.valueToCode(n, r, t, e.ORDER_ATOMIC)
     })
-    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l("(await Coco.tryExecute(".concat([
+    return Module_4.l("(await Coco.tryExecute(".concat([
       "".concat(s), JSON.stringify({
         functionName: s,
         screenId: i
       })
-    ].concat($$_$$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(c)).join(", "), "))"), o, e, true, true)
+    ].concat(Module_25.a(c)).join(", "), "))"), o, e, true, true)
   }
   e.insertBlockSnippetGenerator("procedures_2_param_block", function (t, n) {
     var r = t.blocks[n]
     return e.getFieldValue(r, "param") || ""
   })
-  e.insertBlockSnippetGenerator($$_$$_$$_$$_$$_unrestored_shared_1571_2636_1058_173.PROCEDURE_BLOCK_TYPES.DEF, function (t, n) {
+  e.insertBlockSnippetGenerator(Module_173.PROCEDURE_BLOCK_TYPES.DEF, function (t, n) {
     var r = t.blocks[n]
     var o = e.getDynamicValue("__CURRENT_SCREEN_ID__")
     var i = e.getFieldValue(r, "NAME") || ""
@@ -62,24 +62,24 @@ function setBlockGroupSnippet(e) {
     e.setDynamicValue("__DEFINING_PROCEDURE__", "true")
     var s = e.statementToCode(t, n, "STACK")
     e.deleteDynamicValue("__DEFINING_PROCEDURE__")
-    return "async function ".concat($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.f(i, o), "(").concat(a.join(", "), ") {\n").concat(s, "}\n")
+    return "async function ".concat(Module_4.f(i, o), "(").concat(a.join(", "), ") {\n").concat(s, "}\n")
   })
-  e.insertBlockSnippetGenerator($$_$$_$$_$$_$$_unrestored_shared_1571_2636_1058_173.PROCEDURE_BLOCK_TYPES.RETURN, function (t, n) {
+  e.insertBlockSnippetGenerator(Module_173.PROCEDURE_BLOCK_TYPES.RETURN, function (t, n) {
     var r = t.blocks[n]
-    return "return /* blockId=".concat(n, ";blockType=").concat($$_$$_$$_$$_$$_unrestored_shared_1571_2636_1058_173.PROCEDURE_BLOCK_TYPES.RETURN, " */ ").concat(Object.keys(r.shadows).length + Object.keys(r.fields).length > 2 ? e.valueToCode(t, n, "VALUE", e.ORDER_NONE) : "", ";\n")
+    return "return /* blockId=".concat(n, ";blockType=").concat(Module_173.PROCEDURE_BLOCK_TYPES.RETURN, " */ ").concat(Object.keys(r.shadows).length + Object.keys(r.fields).length > 2 ? e.valueToCode(t, n, "VALUE", e.ORDER_NONE) : "", ";\n")
   })
-  e.insertBlockSnippetGenerator($$_$$_$$_$$_$$_unrestored_shared_1571_2636_1058_173.PROCEDURE_BLOCK_TYPES.CALL_NORETURN, function (e, n) {
-    return t($$_$$_$$_$$_$$_unrestored_shared_1571_2636_1058_173.PROCEDURE_BLOCK_TYPES.CALL_NORETURN, e, n) + ";\n"
+  e.insertBlockSnippetGenerator(Module_173.PROCEDURE_BLOCK_TYPES.CALL_NORETURN, function (e, n) {
+    return t(Module_173.PROCEDURE_BLOCK_TYPES.CALL_NORETURN, e, n) + ";\n"
   })
-  e.insertBlockSnippetGenerator($$_$$_$$_$$_$$_unrestored_shared_1571_2636_1058_173.PROCEDURE_BLOCK_TYPES.CALL_RETURN, function (n, r) {
-    return [t($$_$$_$$_$$_$$_unrestored_shared_1571_2636_1058_173.PROCEDURE_BLOCK_TYPES.CALL_RETURN, n, r), e.ORDER_FUNCTION_CALL]
+  e.insertBlockSnippetGenerator(Module_173.PROCEDURE_BLOCK_TYPES.CALL_RETURN, function (n, r) {
+    return [t(Module_173.PROCEDURE_BLOCK_TYPES.CALL_RETURN, n, r), e.ORDER_FUNCTION_CALL]
   })
-  e.insertBlockSnippetGenerator($$_$$_$$_$$_$$_unrestored_shared_1571_2636_1058_173.PROCEDURE_BLOCK_TYPES.PARAM, function (t, n) {
+  e.insertBlockSnippetGenerator(Module_173.PROCEDURE_BLOCK_TYPES.PARAM, function (t, n) {
     var r = t.blocks[n]
     var o = e.getFieldValue(r, "param_name")
-    return [o ? "".concat(o, " /* blockId=").concat(n, ";blockType=").concat($$_$$_$$_$$_$$_unrestored_shared_1571_2636_1058_173.PROCEDURE_BLOCK_TYPES.PARAM, " */") : "", e.ORDER_ATOMIC]
+    return [o ? "".concat(o, " /* blockId=").concat(n, ";blockType=").concat(Module_173.PROCEDURE_BLOCK_TYPES.PARAM, " */") : "", e.ORDER_ATOMIC]
   })
-  e.insertBlockSnippetGenerator($$_$$_$$_$$_$$_unrestored_shared_1571_2636_1058_173.PROCEDURE_BLOCK_TYPES.PARAM_ON_BLOCK, function (t, n) {
+  e.insertBlockSnippetGenerator(Module_173.PROCEDURE_BLOCK_TYPES.PARAM_ON_BLOCK, function (t, n) {
     var r = t.blocks[n]
     return [e.getFieldValue(r, "param_name") || "", e.ORDER_ATOMIC]
   })
@@ -150,23 +150,23 @@ function ce(e) {
     var r = t.blocks[n]
     switch (e.getFieldValue(r, "DATE_TYPE")) {
       case "time":
-        return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getCurrentFormatDateTime")
+        return Module_4.s("getCurrentFormatDateTime")
       case "year":
-        return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getCurrentYear")
+        return Module_4.s("getCurrentYear")
       case "month":
-        return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getCurrentMonth")
+        return Module_4.s("getCurrentMonth")
       case "date":
-        return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getCurrentDate")
+        return Module_4.s("getCurrentDate")
       case "dayName":
-        return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getCurrentDayName")
+        return Module_4.s("getCurrentDayName")
       case "day":
-        return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getCurrentDay")
+        return Module_4.s("getCurrentDay")
       case "hour":
-        return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getCurrentHour")
+        return Module_4.s("getCurrentHour")
       case "minute":
-        return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getCurrentMinute")
+        return Module_4.s("getCurrentMinute")
       case "second":
-        return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getCurrentSecond")
+        return Module_4.s("getCurrentSecond")
       default:
         return ""
     }
@@ -174,14 +174,14 @@ function ce(e) {
   e.insertBlockSnippetGenerator("date_check_date_is_equal", function (t, n) {
     var r = e.valueToCode(t, n, "DATE_A", e.ORDER_FUNCTION_CALL)
     var o = e.valueToCode(t, n, "DATE_B", e.ORDER_FUNCTION_CALL)
-    return r && o ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("checkDateIsEqual", [r, o]) : ""
+    return r && o ? Module_4.s("checkDateIsEqual", [r, o]) : ""
   })
   e.insertBlockSnippetGenerator("date_get_date_minus_operation", function (t, n) {
     var r = e.valueToCode(t, n, "DATE_A", e.ORDER_FUNCTION_CALL)
     var o = e.valueToCode(t, n, "DATE_B", e.ORDER_FUNCTION_CALL)
     var i = t.blocks[n]
     var a = e.getFieldValue(i, "OPERATION_TYPE")
-    return a && r && o ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getDateOperation", [r, o, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(a)]) : ""
+    return a && r && o ? Module_4.s("getDateOperation", [r, o, Module_4.o(a)]) : ""
   })
 }
 export { setBlockGroupProfile as oe }

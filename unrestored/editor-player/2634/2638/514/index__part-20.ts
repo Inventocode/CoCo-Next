@@ -6,16 +6,16 @@
 
 "use strict"
 
-import be from "./71"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_components_index from "../../../../../src/shared/ui/components/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_20_index from "../../../../shared/1571/2636/20/index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_48_72 from "../../../../shared/1571/2636/48/72"
-import { useDispatch, useSelector } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { memo } from "react"
+import /* [auto-meaningful-name] */Module_71 from /* 71 */"./71"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */Module_20 from /* 20 */"../../../../shared/1571/2636/20/index"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_72 from /* 72 */"../../../../shared/1571/2636/48/72"
+import { useDispatch, useSelector } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_684_480 from "../../../../shared/1571/2636/684/480"
+import * as /* [auto-meaningful-name] */Module_480 from /* 480 */"../../../../shared/1571/2636/684/480"
 var we = [
   {
     avatar: "https://static.bcmcdn.com/crc-uploader/2021/12/bbc05b5084214ba6a0c164be0e557364.jpeg",
@@ -45,46 +45,46 @@ var Ee = memo(function () {
     return t.emulatorPhoneInfo
   })
   var n = function (n, r, i) {
-    t($$_$$_$$_$$_shared_1571_2636_48_72.s({
+    t(Module_72.s({
       contactPageVisible: false
     }))
-    $$_$$_$$_$$_shared_1571_2636_20_index.setProperties(e.contactWidgetId, {
+    Module_20.setProperties(e.contactWidgetId, {
       contactName: n,
       phoneNumber: r,
       phoneNumberList: [r],
       contactAvatar: i
     })
-    $$_$$_$$_$$_shared_1571_2636_20_index.emitWidgetEvent($$_$$_$$_$$_shared_1571_2636_684_480.a, "onContactPickerSelected", e.contactWidgetId, n, r)
+    Module_20.emitWidgetEvent(Module_480.a, "onContactPickerSelected", e.contactWidgetId, n, r)
   }
   return React.createElement("div", {
-    className: Classnames(be.contactBox, !e.contactPageVisible && be.contactBoxHide)
+    className: Classnames(Module_71.contactBox, !e.contactPageVisible && Module_71.contactBoxHide)
   }, React.createElement("div", {
-    className: be.backBox,
+    className: Module_71.backBox,
     onClick: function () {
-      t($$_$$_$$_$$_shared_1571_2636_48_72.s({
+      t(Module_72.s({
         contactPageVisible: false
       }))
     }
-  }, React.createElement($$_$$_$$_$$_$$_src_shared_ui_components_index.j, {
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-phone-nav-back"
   })), React.createElement("div", {
-    className: be.contactList
+    className: Module_71.contactList
   }, we.map(function (t) {
     return React.createElement("div", {
       onClick: n.bind(null, t.name, t.number, t.avatar),
       key: t.name,
-      className: Classnames(be.contactItem, be.flexSC)
+      className: Classnames(Module_71.contactItem, Module_71.flexSC)
     }, React.createElement("div", {
-      className: be.flexCC
+      className: Module_71.flexCC
     }, React.createElement("img", {
       src: t.avatar,
-      className: be.itemAvatar,
+      className: Module_71.itemAvatar,
       alt: ""
     }), React.createElement("div", null, React.createElement("div", {
-      className: be.itemName
+      className: Module_71.itemName
     }, t.name), React.createElement("div", {
-      className: be.itemNumber
-    }, t.number))), React.createElement($$_$$_$$_$$_$$_src_shared_ui_components_index.j, {
+      className: Module_71.itemNumber
+    }, t.number))), React.createElement(Src_shared_ui_components_index.j, {
       type: "icon-fold-left"
     }))
   })))

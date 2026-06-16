@@ -7,8 +7,8 @@
 "use strict"
 
 var r = /^[a-z_$][a-z0-9_$-]*$/i
-var i = require("./2286")
-var o = require("./2287")
+var i = require(/* 2286 */"./2286")
+var o = require(/* 2287 */"./2287")
 module.exports = {
   add: function (e, t) {
     var /* [auto-meaningful-name] */this$RULES = this.RULES

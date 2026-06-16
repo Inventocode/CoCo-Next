@@ -6,15 +6,15 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_686 from "../../../../shared/1571/2636/686"
-import * as /* [auto-meaningful-name] */ReactDom from "react-dom"
-import /* [auto-meaningful-name] */ReactDom1 from "react-dom"
-import * as /* [auto-meaningful-name] */Classnames from "classnames"
-import /* [auto-meaningful-name] */Classnames1 from "classnames"
-import * as /* [auto-meaningful-name] */Color from "color"
-import /* [auto-meaningful-name] */Color1 from "color"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_189 from "../../../../shared/1571/2636/189"
-import * as /* [auto-meaningful-name] */Animejs from "animejs"
+import * as /* [auto-meaningful-name] */Module_686 from /* 686 */"../../../../shared/1571/2636/686"
+import * as /* [auto-meaningful-name] */ReactDom from /* 80 */"react-dom"
+import /* [auto-meaningful-name] */ReactDom1 from /* 80 */"react-dom"
+import * as /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import /* [auto-meaningful-name] */Classnames1 from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Color from /* 51 */"color"
+import /* [auto-meaningful-name] */Color1 from /* 51 */"color"
+import * as /* [auto-meaningful-name] */Module_189 from /* 189 */"../../../../shared/1571/2636/189"
+import * as /* [auto-meaningful-name] */Animejs from /* 205 */"animejs"
 function tt(t, e) {
   return [
     Animejs.default({

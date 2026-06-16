@@ -6,8 +6,8 @@
 
 "use strict"
 
-var n = require("./338")
-var o = require("./102")
+var n = require(/* 338 */"./338")
+var o = require(/* 102 */"./102")
 var i = function (t) {
   var e = "function" === typeof Symbol && Symbol.iterator
   var r = e && t[e]

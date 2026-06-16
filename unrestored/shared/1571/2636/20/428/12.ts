@@ -18,17 +18,17 @@ export { m as j }
 export { g as k }
 export { _ as l }
 export { v as i }
-import * as /* [auto-meaningful-name] */$$_$$_6 from "../../6"
-import * as /* [auto-meaningful-name] */$$_$$_48_index from "../../48/index"
-import * as /* [auto-meaningful-name] */$$_$$_48_72 from "../../48/72"
-import * as /* [auto-meaningful-name] */$$_$$_14 from "../../14"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"../../6"
+import * as /* [auto-meaningful-name] */Module_48 from /* 48 */"../../48/index"
+import * as /* [auto-meaningful-name] */Module_72 from /* 72 */"../../48/72"
+import * as /* [auto-meaningful-name] */Module_14 from /* 14 */"../../14"
 function s(e) {
-  return $$_$$_48_index.a().getState().widgetMap.get(e)
+  return Module_48.a().getState().widgetMap.get(e)
 }
 function c(e) {
-  var t = $$_$$_48_index.a().getState().widgetMap.get(e)
+  var t = Module_48.a().getState().widgetMap.get(e)
   if (t && t.parentId) {
-    return $$_$$_48_index.a().getState().widgetMap.get(t.parentId)
+    return Module_48.a().getState().widgetMap.get(t.parentId)
   }
 }
 function l(e) {
@@ -54,17 +54,17 @@ function f(e) {
 function h(e, t) {
   var n = s(e)
   if (n) {
-    var a = $$_$$_6.a($$_$$_6.a({}, n), {}, {
-      attributes: $$_$$_6.a($$_$$_6.a({}, n.attributes), t)
+    var a = Module_6.a(Module_6.a({}, n), {}, {
+      attributes: Module_6.a(Module_6.a({}, n.attributes), t)
     })
-    $$_$$_48_index.a().dispatch($$_$$_48_72.v(e, a))
+    Module_48.a().dispatch(Module_72.v(e, a))
   }
 }
 function m(e, t) {
   var n = s(e)
   if (n) {
     if (undefined !== t.x) {
-      if (!$$_$$_14.a.isNumber(t.x, {
+      if (!Module_14.a.isNumber(t.x, {
         type: "error",
         widgetId: e,
         messageId: "argNotNumber",
@@ -77,7 +77,7 @@ function m(e, t) {
       t.x = Math.round(t.x)
     }
     if (undefined !== t.y) {
-      if (!$$_$$_14.a.isNumber(t.y, {
+      if (!Module_14.a.isNumber(t.y, {
         type: "error",
         widgetId: e,
         messageId: "argNotNumber",
@@ -89,8 +89,8 @@ function m(e, t) {
       }
       t.y = Math.round(t.y)
     }
-    $$_$$_48_index.a().dispatch($$_$$_48_72.v(e, $$_$$_6.a($$_$$_6.a({}, n), {}, {
-      position: $$_$$_6.a($$_$$_6.a({}, n.position), t)
+    Module_48.a().dispatch(Module_72.v(e, Module_6.a(Module_6.a({}, n), {}, {
+      position: Module_6.a(Module_6.a({}, n.position), t)
     })))
   } else {
     console.error("updateWidgetPosition error, widget is undefined")
@@ -99,9 +99,9 @@ function m(e, t) {
 function g(e, t) {
   var n = s(e)
   if (n) {
-    var c = $$_$$_6.a({}, n.attributes)
+    var c = Module_6.a({}, n.attributes)
     if (undefined !== t.height) {
-      if (!$$_$$_14.a.isNumber(t.height, {
+      if (!Module_14.a.isNumber(t.height, {
         type: "error",
         widgetId: e,
         messageId: "argNotNumber",
@@ -113,7 +113,7 @@ function g(e, t) {
       }
       t.height = Math.round(t.height)
       if (t.height < 0) {
-        return void $$_$$_14.a.log({
+        return void Module_14.a.log({
           type: "warning",
           widgetId: e,
           messageId: "valueOutOfRange"
@@ -121,7 +121,7 @@ function g(e, t) {
       }
     }
     if (undefined !== t.width) {
-      if (!$$_$$_14.a.isNumber(t.width, {
+      if (!Module_14.a.isNumber(t.width, {
         type: "error",
         widgetId: e,
         messageId: "argNotNumber",
@@ -133,16 +133,16 @@ function g(e, t) {
       }
       t.width = Math.round(t.width)
       if (t.width < 0) {
-        return void $$_$$_14.a.log({
+        return void Module_14.a.log({
           type: "warning",
           widgetId: e,
           messageId: "valueOutOfRange"
         })
       }
     }
-    $$_$$_48_index.a().dispatch($$_$$_48_72.v(e, $$_$$_6.a($$_$$_6.a({}, n), {}, {
-      attributes: $$_$$_6.a({}, c),
-      size: $$_$$_6.a($$_$$_6.a({}, n.size), t)
+    Module_48.a().dispatch(Module_72.v(e, Module_6.a(Module_6.a({}, n), {}, {
+      attributes: Module_6.a({}, c),
+      size: Module_6.a(Module_6.a({}, n.size), t)
     })))
   } else {
     console.error("updateWidgetSize error, widget is undefined")
@@ -151,7 +151,7 @@ function g(e, t) {
 function _(e, t) {
   var n = s(e)
   if (n) {
-    $$_$$_48_index.a().dispatch($$_$$_48_72.v(e, $$_$$_6.a($$_$$_6.a({}, n), {}, {
+    Module_48.a().dispatch(Module_72.v(e, Module_6.a(Module_6.a({}, n), {}, {
       visible: t
     })))
   }
@@ -159,7 +159,7 @@ function _(e, t) {
 function v(e, t) {
   var n = s(e)
   if (n) {
-    $$_$$_48_index.a().dispatch($$_$$_48_72.v(e, $$_$$_6.a($$_$$_6.a({}, n), {}, {
+    Module_48.a().dispatch(Module_72.v(e, Module_6.a(Module_6.a({}, n), {}, {
       opacity: t
     })))
   }

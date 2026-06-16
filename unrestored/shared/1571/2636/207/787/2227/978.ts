@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("../180")
+var r = require(/* 180 */"../180")
 var i = function e(t, n) {
   r(this, e)
   this.name = t

@@ -7,9 +7,9 @@
 "use strict"
 
 export { a }
-import * as /* [auto-meaningful-name] */$_265 from "./265"
-import * as /* [auto-meaningful-name] */$$_$$_2680_285_925 from "../../2680/285/925"
-import * as /* [auto-meaningful-name] */$$_$$_2680_285_211 from "../../2680/285/211"
+import * as /* [auto-meaningful-name] */Module_265 from /* 265 */"./265"
+import * as /* [auto-meaningful-name] */Module_925 from /* 925 */"../../2680/285/925"
+import * as /* [auto-meaningful-name] */Module_211 from /* 211 */"../../2680/285/211"
 function a(e) {
   var t = {
     r: 0,
@@ -28,8 +28,8 @@ function a(e) {
         return false
       }
       var t = false
-      if ($$_$$_2680_285_925.a[e]) {
-        e = $$_$$_2680_285_925.a[e]
+      if (Module_925.a[e]) {
+        e = Module_925.a[e]
         t = true
       } else if ("transparent" === e) {
         return {
@@ -88,35 +88,35 @@ function a(e) {
       }
       if (n = l.hex8.exec(e)) {
         return {
-          r: $_265.e(n[1]),
-          g: $_265.e(n[2]),
-          b: $_265.e(n[3]),
-          a: $_265.a(n[4]),
+          r: Module_265.e(n[1]),
+          g: Module_265.e(n[2]),
+          b: Module_265.e(n[3]),
+          a: Module_265.a(n[4]),
           format: t ? "name" : "hex8"
         }
       }
       if (n = l.hex6.exec(e)) {
         return {
-          r: $_265.e(n[1]),
-          g: $_265.e(n[2]),
-          b: $_265.e(n[3]),
+          r: Module_265.e(n[1]),
+          g: Module_265.e(n[2]),
+          b: Module_265.e(n[3]),
           format: t ? "name" : "hex"
         }
       }
       if (n = l.hex4.exec(e)) {
         return {
-          r: $_265.e(n[1] + n[1]),
-          g: $_265.e(n[2] + n[2]),
-          b: $_265.e(n[3] + n[3]),
-          a: $_265.a(n[4] + n[4]),
+          r: Module_265.e(n[1] + n[1]),
+          g: Module_265.e(n[2] + n[2]),
+          b: Module_265.e(n[3] + n[3]),
+          a: Module_265.a(n[4] + n[4]),
           format: t ? "name" : "hex8"
         }
       }
       if (n = l.hex3.exec(e)) {
         return {
-          r: $_265.e(n[1] + n[1]),
-          g: $_265.e(n[2] + n[2]),
-          b: $_265.e(n[3] + n[3]),
+          r: Module_265.e(n[1] + n[1]),
+          g: Module_265.e(n[2] + n[2]),
+          b: Module_265.e(n[3] + n[3]),
           format: t ? "name" : "hex"
         }
       }
@@ -125,21 +125,21 @@ function a(e) {
   }
   if ("object" === typeof e) {
     if (f(e.r) && f(e.g) && f(e.b)) {
-      t = $_265.i(e.r, e.g, e.b)
+      t = Module_265.i(e.r, e.g, e.b)
       u = true
       d = "%" === String(e.r).substr(-1) ? "prgb" : "rgb"
     } else {
       if (f(e.h) && f(e.s) && f(e.v)) {
-        a = $$_$$_2680_285_211.d(e.s)
-        s = $$_$$_2680_285_211.d(e.v)
-        t = $_265.c(e.h, a, s)
+        a = Module_211.d(e.s)
+        s = Module_211.d(e.v)
+        t = Module_265.c(e.h, a, s)
         u = true
         d = "hsv"
       } else {
         if (f(e.h) && f(e.s) && f(e.l)) {
-          a = $$_$$_2680_285_211.d(e.s)
-          c = $$_$$_2680_285_211.d(e.l)
-          t = $_265.b(e.h, a, c)
+          a = Module_211.d(e.s)
+          c = Module_211.d(e.l)
+          t = Module_265.b(e.h, a, c)
           u = true
           d = "hsl"
         }
@@ -149,7 +149,7 @@ function a(e) {
       n = e.a
     }
   }
-  n = $$_$$_2680_285_211.b(n)
+  n = Module_211.b(n)
   return {
     ok: u,
     format: e.format || d,

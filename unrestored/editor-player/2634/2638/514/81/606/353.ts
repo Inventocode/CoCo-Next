@@ -6,9 +6,9 @@
 
 "use strict"
 
-var n = require("../116")
-var o = require("../36")
-var i = require("../171")
+var n = require(/* 116 */"../116")
+var o = require(/* 36 */"../36")
+var i = require(/* 171 */"../171")
 var a = function () {
   var t = function (e, r) {
     return (t = Object.setPrototypeOf || {

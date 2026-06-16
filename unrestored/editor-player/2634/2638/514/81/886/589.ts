@@ -7,9 +7,9 @@
 "use strict"
 
 export { u as a }
-import * as /* [auto-meaningful-name] */$$_349 from "../349"
-import * as /* [auto-meaningful-name] */$$_335 from "../335"
-import * as /* [auto-meaningful-name] */$$_63 from "../63"
+import * as /* [auto-meaningful-name] */Module_349 from /* 349 */"../349"
+import * as /* [auto-meaningful-name] */Module_335 from /* 335 */"../335"
+import * as /* [auto-meaningful-name] */Module_63 from /* 63 */"../63"
 var a = function () {
   var t = function (e, r) {
     return (t = Object.setPrototypeOf || {
@@ -57,7 +57,7 @@ var u = function (t) {
   }
   e.prototype.getRow = function (t, e) {
     if (t < 0 || t >= this.getHeight()) {
-      throw new $$_63.a("Requested row is outside the image: " + t)
+      throw new Module_63.a("Requested row is outside the image: " + t)
     }
     var r = this.getWidth()
     var n = t * r
@@ -118,9 +118,9 @@ var u = function (t) {
     return this
   }
   e.prototype.invert = function () {
-    return new $$_349.a(this)
+    return new Module_349.a(this)
   }
   e.DEGREE_TO_RADIANS = Math.PI / 180
   return e
-}($$_335.a)
+}(Module_335.a)
 export default u

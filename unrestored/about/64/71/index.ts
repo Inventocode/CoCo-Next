@@ -7,12 +7,12 @@
 "use strict"
 
 export { a }
-import * as /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */$_35_index from "./35/index"
-import * as o from "./20"
+import { useContext } from /* 13 */"react"
+import * as /* [auto-meaningful-name] */Module_35 from /* 35 */"./35/index"
+import * as /* [auto-meaningful-name] */Module_20 from /* 20 */"./20"
 function a() {
-  var e = React.useContext($_35_index.a)
-  o.c(e)
+  var e = useContext(Module_35.a)
+  Module_20.c(e)
   return e
 }
 export default a

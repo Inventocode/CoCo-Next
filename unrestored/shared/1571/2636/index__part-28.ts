@@ -6,9 +6,9 @@
 
 "use strict"
 
-import { version, createElement, Component, PureComponent } from "react"
-import * as /* [auto-meaningful-name] */$_452_index from "./452/index"
-import * as po from "./49"
+import { version, createElement, Component, PureComponent } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_452 from /* 452 */"./452/index"
+import * as /* [auto-meaningful-name] */Module_49 from /* 49 */"./49"
 function fo(e, t) {
   for (var /* [auto-meaningful-name] */e$length = e.length, r = 0; r < e$length; ++r) {
     if (t(e[r], r)) {

@@ -6,23 +6,23 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_94_index from "../../../../../src/shared/ui/components/iconfont/index"
-import /* [auto-meaningful-name] */React from "react"
-import { memo } from "react"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_iconfont_index from /* 94 */"../../../../../src/shared/ui/components/Iconfont/index"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import i from "classnames"
-import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
-import * as A from "../7"
-import "react-redux"
-import * as /* [auto-meaningful-name] */$$_710 from "../710"
-import * as /* [auto-meaningful-name] */$$_1213 from "../1213"
-import * as /* [auto-meaningful-name] */Color from "color"
-import /* [auto-meaningful-name] */Color1 from "color"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_344 from "./344"
-import * as /* [auto-meaningful-name] */$$_15 from "../../../../../src/shared/tools"
-import "./651"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import /* [auto-meaningful-name] */RegeneratorRuntime1 from /* 1 */"regenerator-runtime"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../7"
+import /* 16 */"react-redux"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../710"
+import * as /* [auto-meaningful-name] */Module_1213 from /* 1213 */"../1213"
+import * as /* [auto-meaningful-name] */Color from /* 51 */"color"
+import /* [auto-meaningful-name] */Color1 from /* 51 */"color"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Module_344 from /* 344 */"./344"
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../../src/shared/tools/index"
+import /* 651 */"./651"
 function L(e) {
   return "#ffffff" === Color1(e).hex().toLocaleLowerCase()
 }
@@ -31,7 +31,7 @@ var B = memo(function (e) {
   var /* [auto-meaningful-name] */e$color = e.color
   var /* [auto-meaningful-name] */e$selected = e.selected
   var /* [auto-meaningful-name] */e$className = e.className
-  var a = $$_15.i(e$color)
+  var a = Src_shared_tools_index.i(e$color)
   return React.createElement("div", {
     onClick: function () {
       if (e$onClick) {
@@ -41,12 +41,12 @@ var B = memo(function (e) {
     style: {
       background: e$color
     },
-    className: i("color-palette-block", {
+    className: Classnames("color-palette-block", {
       selected: e$selected
     }, e$className, a && "color-palette-transparent-block", !a && L(e$color) && "color-palette-white-block")
   }, a && React.createElement("div", {
     className: "coco-palette-bias"
-  }), e$selected && !a && React.createElement($$_94_index.a, {
+  }), e$selected && !a && React.createElement(Src_shared_ui_components_iconfont_index.a, {
     className: "coco-palette-icon-selected",
     type: "icon-selected"
   }))

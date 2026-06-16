@@ -6,21 +6,21 @@
 
 "use strict"
 
-import * as o from "./6"
-import * as i from "./95"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
-import * as s from "./33"
-import * as c from "./76"
-import * as l from "./60"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"./6"
+import * as /* [auto-meaningful-name] */Module_95 from /* 95 */"./95"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Module_33 from /* 33 */"./33"
+import * as /* [auto-meaningful-name] */Module_76 from /* 76 */"./76"
+import * as /* [auto-meaningful-name] */Module_60 from /* 60 */"./60"
 var u = {
-  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.w,
-  icon: i.b,
+  type: Src_editor_widget_builtIn_types.w,
+  icon: Module_95.b,
   title: "widgetName",
   platforms: ["web", "android", "ios"],
   isGlobalWidget: false,
   isInvisibleWidget: false,
   properties: [
-    o.a({}, s.h), {
+    Module_6.a({}, Module_33.h), {
       key: "__width",
       label: "widthMsg",
       valueType: "number",
@@ -29,7 +29,7 @@ var u = {
         generateBlock: false
       },
       validators: {
-        greaterThan: i.m
+        greaterThan: Module_95.m
       }
     }, {
       key: "__height",
@@ -40,7 +40,7 @@ var u = {
         generateBlock: false
       },
       validators: {
-        greaterThan: i.l
+        greaterThan: Module_95.l
       }
     }, {
       key: "__size",
@@ -70,7 +70,7 @@ var u = {
       key: "placeholderColor",
       label: "placeholderContent",
       valueType: "color",
-      defaultValue: i.n,
+      defaultValue: Module_95.n,
       blockOptions: {
         generateBlock: false
       }
@@ -78,7 +78,7 @@ var u = {
       key: "valueColor",
       label: "inputContent",
       valueType: "color",
-      defaultValue: i.o,
+      defaultValue: Module_95.o,
       blockOptions: {
         generateBlock: false
       }
@@ -86,7 +86,7 @@ var u = {
       key: "contentColor",
       label: "contentColor",
       valueType: "color",
-      defaultValue: i.n,
+      defaultValue: Module_95.n,
       readonly: true,
       blockOptions: {
         setter: {
@@ -100,10 +100,10 @@ var u = {
       key: "fontSize",
       label: "fontSize",
       valueType: "number",
-      defaultValue: i.g,
+      defaultValue: Module_95.g,
       validators: {
         greaterThan: {
-          value: l.n,
+          value: Module_60.n,
           message: "outOfRange"
         },
         isInteger: true
@@ -112,17 +112,17 @@ var u = {
       key: "textAlign",
       label: "textAlign",
       valueType: "string",
-      defaultValue: l.a.LEFT,
+      defaultValue: Module_60.a.LEFT,
       dropdown: [
         {
           label: "left",
-          value: l.a.LEFT
+          value: Module_60.a.LEFT
         }, {
           label: "center",
-          value: l.a.CENTER
+          value: Module_60.a.CENTER
         }, {
           label: "right",
-          value: l.a.RIGHT
+          value: Module_60.a.RIGHT
         }
       ],
       blockOptions: {
@@ -156,26 +156,26 @@ var u = {
           label: "",
           valueType: "string",
           checkType: ["string"],
-          defaultValue: c.c.OUTLINED_NORMAL,
+          defaultValue: Module_76.c.OUTLINED_NORMAL,
           dropdown: [
             {
               label: "outlinedNormal",
-              value: c.c.OUTLINED_NORMAL,
+              value: Module_76.c.OUTLINED_NORMAL,
               image: "https://static.bcmcdn.com/coco/image/input-outline-normal-template.png",
               isHideFieldImage: true
             }, {
               label: "containedNormal",
-              value: c.c.CONTAINED_NORMAL,
+              value: Module_76.c.CONTAINED_NORMAL,
               image: "https://static.bcmcdn.com/coco/image/input-contain-normal-template.png",
               isHideFieldImage: true
             }, {
               label: "containedRound",
-              value: c.c.CONTAINED_ROUND,
+              value: Module_76.c.CONTAINED_ROUND,
               image: "https://static.bcmcdn.com/coco/image/input-contain-round-template.png",
               isHideFieldImage: true
             }, {
               label: "outlinedFlat",
-              value: c.c.OUTLINED_FLAT,
+              value: Module_76.c.OUTLINED_FLAT,
               image: "https://static.bcmcdn.com/coco/image/input-outline-flat-template.png",
               isHideFieldImage: true
             }
@@ -184,7 +184,7 @@ var u = {
           key: "backgroundColor",
           label: "color",
           valueType: "color",
-          defaultValue: i.c
+          defaultValue: Module_95.c
         }
       ]
     }, {

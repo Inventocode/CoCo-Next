@@ -10,10 +10,10 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.get_nested_blocks_with_comment = exports.get_outer_block = exports.has_context = exports.is_valid_context = exports.cal_num_blocks = exports.fire_block_onchange = exports.update_disable_status = undefined
-var r = require("../../207/209/index")
-var i = require("../../123/195/index")
-var o = require("../../207/734/387")
-var a = require("../../1022/214")
+var r = require(/* 209 */"../../207/209/index")
+var i = require(/* 195 */"../../123/195/index")
+var o = require(/* 387 */"../../207/734/387")
+var a = require(/* 214 */"../../1022/214")
 function s(e) {
   var t = e.previous_connection || e.output_connection
   return !(!t || !t.context || t.source_block.is_shadow())

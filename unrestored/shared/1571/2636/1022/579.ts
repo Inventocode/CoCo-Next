@@ -10,7 +10,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.hsva_to_rgba = exports.rgba_to_hex = exports.hsv_to_rgb = exports.rgb_to_hsv = exports.darken = exports.Color = undefined
-var r = require("../123/293")
+var r = require(/* 293 */"../123/293")
 var i = function () {
   function e(e, t, n) {
     this.r = 0

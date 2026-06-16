@@ -7,7 +7,7 @@
 "use strict"
 
 export { o as a }
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
 function o(e) {
   for (var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : {
       line: 1,
@@ -36,7 +36,7 @@ function o(e) {
     var d = u[1]
     d.split(";").forEach(function (e) {
       var t = e.split("=")
-      var n = $_10_index.a(t, 2)
+      var n = Module_10.a(t, 2)
       var o = n[0]
       var i = n[1]
       if (o && i) {

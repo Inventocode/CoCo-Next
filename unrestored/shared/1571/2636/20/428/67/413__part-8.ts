@@ -6,17 +6,17 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_55 from "../../../55"
-import * as /* [auto-meaningful-name] */$$_$$_index from "../../index"
-import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */$$_$$_$$_555_index from "../../../555/index"
+import * as /* [auto-meaningful-name] */Module_55 from /* 55 */"../../../55"
+import * as /* [auto-meaningful-name] */Module_20 from /* 20 */"../../index"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_555 from /* 555 */"../../../555/index"
 var te = function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$type = e.type
   var /* [auto-meaningful-name] */e$attributes = e.attributes
   var /* [auto-meaningful-name] */e$attributes$options = e$attributes.options
   var /* [auto-meaningful-name] */e$attributes$disabled = e$attributes.disabled
-  return React.createElement($$_$$_$$_555_index.a, Object.assign({}, e, {
+  return React.createElement(Module_555.a, Object.assign({}, e, {
     onOptionClick: function (e) {
       if (!e$attributes$disabled && "disabled" !== e$attributes$options[e].state) {
         var r = []
@@ -27,8 +27,8 @@ var te = function (e) {
         })
         var a = e + 1
         if (r.includes(e)) {
-          $$_$$_index.setCheckboxWidgetOptionUnselected(t, a)
-          $$_$$_$$_55.b.playerWidgetLog({
+          Module_20.setCheckboxWidgetOptionUnselected(t, a)
+          Module_55.b.playerWidgetLog({
             widgetId: t,
             widgetType: e$type,
             message: "onCheckboxUnselected",
@@ -38,8 +38,8 @@ var te = function (e) {
             }
           })
         } else {
-          $$_$$_index.setCheckboxWidgetOptionSelected(t, a)
-          $$_$$_$$_55.b.playerWidgetLog({
+          Module_20.setCheckboxWidgetOptionSelected(t, a)
+          Module_55.b.playerWidgetLog({
             widgetId: t,
             widgetType: e$type,
             message: "onCheckboxSelected",

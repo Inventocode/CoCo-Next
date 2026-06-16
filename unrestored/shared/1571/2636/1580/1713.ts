@@ -4,8 +4,8 @@
  * 模块 ID：1713
  */
 
-var r = require("./1662/86")
-var o = require("./1775/715")
+var r = require(/* 86 */"./1662/86")
+var o = require(/* 715 */"./1775/715")
 var /* [auto-meaningful-name] */String$fromCharCode = String.fromCharCode
 var /* [auto-meaningful-name] */String$fromCodePoint = String.fromCodePoint
 r({

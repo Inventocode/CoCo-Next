@@ -8,9 +8,9 @@
 
 import { u } from "./index__part-0"
 import { ce } from "./index__part-4"
-import * as /* [auto-meaningful-name] */$$_49_14 from "../49/14"
-import * as /* [auto-meaningful-name] */$$_49_8 from "../49/8"
-import * as /* [auto-meaningful-name] */$$_16_index from "../16/index"
+import * as /* [auto-meaningful-name] */Module_14 from /* 14 */"../49/14"
+import * as /* [auto-meaningful-name] */Module_8 from /* 8 */"../49/8"
+import * as /* [auto-meaningful-name] */Module_16 from /* 16 */"../16/index"
 var ge = 0
 function be() {
   return ge > 0
@@ -50,19 +50,19 @@ function Ee(e, t, n) {
       return e.handleEvent ? e.handleEvent.apply(this, i) : e.apply(this, i)
     } catch (o) {
       _e()
-      $$_16_index.c(function (e) {
+      Module_16.c(function (e) {
         e.addEventProcessor(function (e) {
           var n = u({}, e)
           if (t.mechanism) {
-            $$_49_14.b(n, undefined, undefined)
-            $$_49_14.a(n, t.mechanism)
+            Module_14.b(n, undefined, undefined)
+            Module_14.a(n, t.mechanism)
           }
           n.extra = u(u({}, n.extra), {
             arguments: r
           })
           return n
         })
-        $$_16_index.a(o)
+        Module_16.a(o)
       })
       throw o
     }
@@ -113,10 +113,10 @@ function Oe(e) {
       }
       (document.head || document.body).appendChild(t)
     } else {
-      $$_49_8.a.error("Missing dsn option in showReportDialog call")
+      Module_8.a.error("Missing dsn option in showReportDialog call")
     }
   } else {
-    $$_49_8.a.error("Missing eventId option in showReportDialog call")
+    Module_8.a.error("Missing eventId option in showReportDialog call")
   }
 }
 export { be }

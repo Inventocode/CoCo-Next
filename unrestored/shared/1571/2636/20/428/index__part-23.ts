@@ -6,19 +6,19 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_48_87 from "../../48/87"
-import * as /* [auto-meaningful-name] */$$_$$_6 from "../../6"
-import * as /* [auto-meaningful-name] */$$_128 from "../128"
-import * as /* [auto-meaningful-name] */$$_$$_7 from "../../7"
-import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$$_$$_48_210 from "../../48/210"
-import * as /* [auto-meaningful-name] */$$_$$_48_117 from "../../48/117"
-var gp = "".concat($$_128.a.serverHost, "/coconut")
+import * as /* [auto-meaningful-name] */Module_87 from /* 87 */"../../48/87"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"../../6"
+import * as /* [auto-meaningful-name] */Module_128 from /* 128 */"../128"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../../7"
+import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import * as /* [auto-meaningful-name] */Module_210 from /* 210 */"../../48/210"
+import * as /* [auto-meaningful-name] */Module_117 from /* 117 */"../../48/117"
+var gp = "".concat(Module_128.a.serverHost, "/coconut")
 function _p(e, t, n) {
   return vp.apply(this, arguments)
 }
 function vp() {
-  return (vp = $$_$$_7.a(RegeneratorRuntime.mark(function e(t, n, r) {
+  return (vp = Module_7.a(RegeneratorRuntime.mark(function e(t, n, r) {
     var o
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$sent$sign
@@ -38,22 +38,22 @@ function vp() {
               value: r
             }
             e.next = 4
-            return $$_$$_48_117.a("".concat(JSON.stringify(o)))
+            return Module_117.a("".concat(JSON.stringify(o)))
           case 4:
             e$sent = e.sent
             e$sent$sign = e$sent.sign
             e$sent$timestamp = e$sent.timestamp
             e.next = 9
-            return $$_$$_48_210.a.post(gp + "/webdb/try/dict/".concat(t, "/set"), {
+            return Module_210.a.post(gp + "/webdb/try/dict/".concat(t, "/set"), {
               key: n,
               type: "string",
               value: r
             }, {
-              headers: $$_$$_6.a({
+              headers: Module_6.a({
                 env: 1,
                 sign: e$sent$sign,
                 timestamp: e$sent$timestamp
-              }, $$_$$_48_87.a())
+              }, Module_87.a())
             })
           case 9:
             if (e$sent1 = e.sent, 200 !== (e$sent1$data = e$sent1.data).code) {
@@ -92,7 +92,7 @@ function bp(e, t) {
   return yp.apply(this, arguments)
 }
 function yp() {
-  return (yp = $$_$$_7.a(RegeneratorRuntime.mark(function e(t, n) {
+  return (yp = Module_7.a(RegeneratorRuntime.mark(function e(t, n) {
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$sent$sign
     var /* [auto-meaningful-name] */e$sent$timestamp
@@ -106,18 +106,18 @@ function yp() {
           case 0:
             e.prev = 0
             e.next = 3
-            return $$_$$_48_117.a("dictId=".concat(t, "&id=&key=").concat(n))
+            return Module_117.a("dictId=".concat(t, "&id=&key=").concat(n))
           case 3:
             e$sent = e.sent
             e$sent$sign = e$sent.sign
             e$sent$timestamp = e$sent.timestamp
             e.next = 8
-            return $$_$$_48_210.a.delete(gp + "/webdb/try/dict/".concat(t, "/remove?key=").concat(n, "&id="), {
-              headers: $$_$$_6.a({
+            return Module_210.a.delete(gp + "/webdb/try/dict/".concat(t, "/remove?key=").concat(n, "&id="), {
+              headers: Module_6.a({
                 env: 1,
                 sign: e$sent$sign,
                 timestamp: e$sent$timestamp
-              }, $$_$$_48_87.a())
+              }, Module_87.a())
             })
           case 8:
             if (e$sent1 = e.sent, 200 !== (e$sent1$data = e$sent1.data).code) {
@@ -153,7 +153,7 @@ function Ep(e, t) {
   return Op.apply(this, arguments)
 }
 function Op() {
-  return (Op = $$_$$_7.a(RegeneratorRuntime.mark(function e(t, n) {
+  return (Op = Module_7.a(RegeneratorRuntime.mark(function e(t, n) {
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$sent$sign
     var /* [auto-meaningful-name] */e$sent$timestamp
@@ -167,21 +167,21 @@ function Op() {
           case 0:
             e.prev = 0
             e.next = 3
-            return $$_$$_48_117.a("dictId=".concat(t, "&key=").concat(n))
+            return Module_117.a("dictId=".concat(t, "&key=").concat(n))
           case 3:
             e$sent = e.sent
             e$sent$sign = e$sent.sign
             e$sent$timestamp = e$sent.timestamp
             e.next = 8
-            return $$_$$_48_210.a.get(gp + "/webdb/try/dict/".concat(t, "/getvalue"), {
+            return Module_210.a.get(gp + "/webdb/try/dict/".concat(t, "/getvalue"), {
               params: {
                 key: n
               },
-              headers: $$_$$_6.a({
+              headers: Module_6.a({
                 env: 1,
                 sign: e$sent$sign,
                 timestamp: e$sent$timestamp
-              }, $$_$$_48_87.a())
+              }, Module_87.a())
             })
           case 8:
             if (e$sent1 = e.sent, 200 !== (e$sent1$data = e$sent1.data).code) {
@@ -217,7 +217,7 @@ function wp(e) {
   return Cp.apply(this, arguments)
 }
 function Cp() {
-  return (Cp = $$_$$_7.a(RegeneratorRuntime.mark(function e(t) {
+  return (Cp = Module_7.a(RegeneratorRuntime.mark(function e(t) {
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$sent$sign
     var /* [auto-meaningful-name] */e$sent$timestamp
@@ -231,18 +231,18 @@ function Cp() {
           case 0:
             e.prev = 0
             e.next = 3
-            return $$_$$_48_117.a("dictId=".concat(t))
+            return Module_117.a("dictId=".concat(t))
           case 3:
             e$sent = e.sent
             e$sent$sign = e$sent.sign
             e$sent$timestamp = e$sent.timestamp
             e.next = 8
-            return $$_$$_48_210.a.get(gp + "/webdb/try/dict/".concat(t, "/keys"), {
-              headers: $$_$$_6.a({
+            return Module_210.a.get(gp + "/webdb/try/dict/".concat(t, "/keys"), {
+              headers: Module_6.a({
                 env: 1,
                 sign: e$sent$sign,
                 timestamp: e$sent$timestamp
-              }, $$_$$_48_87.a())
+              }, Module_87.a())
             })
           case 8:
             if (e$sent1 = e.sent, 200 !== (e$sent1$data = e$sent1.data).code) {
@@ -278,7 +278,7 @@ function Tp(e) {
   return Sp.apply(this, arguments)
 }
 function Sp() {
-  return (Sp = $$_$$_7.a(RegeneratorRuntime.mark(function e(t) {
+  return (Sp = Module_7.a(RegeneratorRuntime.mark(function e(t) {
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$sent$sign
     var /* [auto-meaningful-name] */e$sent$timestamp
@@ -292,18 +292,18 @@ function Sp() {
           case 0:
             e.prev = 0
             e.next = 3
-            return $$_$$_48_117.a("dictId=".concat(t))
+            return Module_117.a("dictId=".concat(t))
           case 3:
             e$sent = e.sent
             e$sent$sign = e$sent.sign
             e$sent$timestamp = e$sent.timestamp
             e.next = 8
-            return $$_$$_48_210.a.delete(gp + "/webdb/try/dict/clear/".concat(t), {
-              headers: $$_$$_6.a({
+            return Module_210.a.delete(gp + "/webdb/try/dict/clear/".concat(t), {
+              headers: Module_6.a({
                 env: 1,
                 sign: e$sent$sign,
                 timestamp: e$sent$timestamp
-              }, $$_$$_48_87.a())
+              }, Module_87.a())
             })
           case 8:
             if (e$sent1 = e.sent, 200 !== (e$sent1$data = e$sent1.data).code) {

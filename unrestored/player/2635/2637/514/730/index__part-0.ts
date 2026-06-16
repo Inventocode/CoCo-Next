@@ -6,6 +6,6 @@
 
 "use strict"
 
-import "../81/index"
-import "./603"
-import * as /* [auto-meaningful-name] */$_900 from "./900"
+import /* 81 */"../81/index"
+import /* 603 */"./603"
+import * as /* [auto-meaningful-name] */Module_900 from /* 900 */"./900"

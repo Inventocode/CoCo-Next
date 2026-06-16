@@ -4,13 +4,13 @@
  * 模块 ID：86
  */
 
-var r = require("../1785/194")
-var /* [auto-meaningful-name] */require$$_1581_386$f = require("../1581/386").f
-var i = require("../1782/425")
-var a = require("../1282/400/index")
-var s = require("../1282/400/1077")
-var c = require("../1584/1239")
-var l = require("../1648/829")
+var r = require(/* 194 */"../1785/194")
+var /* [auto-meaningful-name] */require_386_$$_1581_386$f = require(/* 386 */"../1581/386").f
+var i = require(/* 425 */"../1782/425")
+var a = require(/* 400 */"../1282/400/index")
+var s = require(/* 1077 */"../1282/400/1077")
+var c = require(/* 1239 */"../1584/1239")
+var l = require(/* 829 */"../1648/829")
 module.exports = function (e, t) {
   var n
   var u
@@ -23,7 +23,7 @@ module.exports = function (e, t) {
   if (n = e$global ? r : e$stat ? r[e$target] || s(e$target, {}) : (r[e$target] || {}).prototype) {
     for (u in t) {
       p = t[u]
-      d = e.noTargetGet ? (f = require$$_1581_386$f(n, u)) && f.value : n[u]
+      d = e.noTargetGet ? (f = require_386_$$_1581_386$f(n, u)) && f.value : n[u]
       if (!l(e$global ? u : e$target + (e$stat ? "." : "#") + u, e.forced) && undefined !== d) {
         if (typeof p === typeof d) {
           continue

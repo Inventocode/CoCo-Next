@@ -4,4 +4,4 @@
  * 模块 ID：1620
  */
 
-require("./1598/637")("flatMap")
+require(/* 637 */"./1598/637")("flatMap")

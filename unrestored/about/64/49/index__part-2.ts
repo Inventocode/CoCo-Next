@@ -6,13 +6,13 @@
 
 "use strict"
 
-import * as c from "./6"
-import * as a from "./14"
-import * as o from "./8"
-import * as i from "./1"
-import * as d from "./19"
-import * as p from "./31"
-import * as h from "./40"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"./6"
+import * as /* [auto-meaningful-name] */Module_14 from /* 14 */"./14"
+import * as /* [auto-meaningful-name] */Module_8 from /* 8 */"./8"
+import * as /* [auto-meaningful-name] */Module_1 from /* 1 */"./1"
+import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"./19"
+import * as /* [auto-meaningful-name] */Module_31 from /* 31 */"./31"
+import * as /* [auto-meaningful-name] */Module_40 from /* 40 */"./40"
 var m = function (e, t, n) {
   var /* [auto-meaningful-name] */t$value
   return function (i) {
@@ -80,13 +80,13 @@ var _ = function () {
   }
 }
 var E = {}
-var O = a.e()
+var O = Module_14.e()
 var w = function () {
   function e() {
     var e
     this._measurements = {}
     this._performanceCursor = 0
-    if (!d.b() && (null === (e = O) || undefined === e ? undefined : e.performance)) {
+    if (!Module_19.b() && (null === (e = O) || undefined === e ? undefined : e.performance)) {
       if (O.performance.mark) {
         O.performance.mark("sentry-tracing-init")
       }
@@ -97,14 +97,14 @@ var w = function () {
   }
   e.prototype.addPerformanceEntries = function (e) {
     var t = this
-    if (O && O.performance && O.performance.getEntries && p.a) {
-      o.a.log("[Tracing] Adding & adjusting spans using Performance API")
+    if (O && O.performance && O.performance.getEntries && Module_31.a) {
+      Module_8.a.log("[Tracing] Adding & adjusting spans using Performance API")
       var /* [auto-meaningful-name] */O$document$scriptsL$src
       var r
       var i
       var a
       var s
-      var u = c.d(p.a)
+      var u = Module_6.d(Module_31.a)
       if (O.document && O.document.scripts) {
         for (var l = 0; l < O.document.scripts.length; l++) {
           if ("true" === O.document.scripts[l].dataset.entry) {
@@ -114,8 +114,8 @@ var w = function () {
         }
       }
       O.performance.getEntries().slice(this._performanceCursor).forEach(function (l) {
-        var f = c.d(l.startTime)
-        var d = c.d(l.duration)
+        var f = Module_6.d(l.startTime)
+        var d = Module_6.d(l.duration)
         if (!("navigation" === e.op && u + f < e.startTimestamp)) {
           switch (l.entryType) {
             case "navigation":
@@ -177,19 +177,19 @@ var w = function () {
                   k(e, {
                     op: "browser",
                     description: "request",
-                    startTimestamp: n + c.d(t.requestStart),
-                    endTimestamp: n + c.d(t.responseEnd)
+                    startTimestamp: n + Module_6.d(t.requestStart),
+                    endTimestamp: n + Module_6.d(t.responseEnd)
                   })
                   k(e, {
                     op: "browser",
                     description: "response",
-                    startTimestamp: n + c.d(t.responseStart),
-                    endTimestamp: n + c.d(t.responseEnd)
+                    startTimestamp: n + Module_6.d(t.responseStart),
+                    endTimestamp: n + Module_6.d(t.responseEnd)
                   })
                 })(e, t, n)
               }(e, l, u)
-              a = u + c.d(l.responseStart)
-              s = u + c.d(l.requestStart)
+              a = u + Module_6.d(l.responseStart)
+              s = u + Module_6.d(l.requestStart)
               break
             case "mark":
             case "paint":
@@ -211,7 +211,7 @@ var w = function () {
               var h = _(),
                 m = l.startTime < h.firstHiddenTime
               if ("first-paint" === l.name && m) {
-                o.a.log("[Measurements] Adding FP")
+                Module_8.a.log("[Measurements] Adding FP")
                 t._measurements.fp = {
                   value: l.startTime
                 }
@@ -220,7 +220,7 @@ var w = function () {
                 }
               }
               if ("first-contentful-paint" === l.name && m) {
-                o.a.log("[Measurements] Adding FCP")
+                Module_8.a.log("[Measurements] Adding FCP")
                 t._measurements.fcp = {
                   value: l.startTime
                 }
@@ -273,9 +273,9 @@ var w = function () {
       this._performanceCursor = Math.max(performance.getEntries().length - 1, 0)
       this._trackNavigator(e)
       if ("pageload" === e.op) {
-        var f = c.d(p.a)
+        var f = Module_6.d(Module_31.a)
         if ("number" === typeof a) {
-          o.a.log("[Measurements] Adding TTFB")
+          Module_8.a.log("[Measurements] Adding TTFB")
           this._measurements.ttfb = {
             value: 1e3 * (a - e.startTimestamp)
           }
@@ -288,17 +288,17 @@ var w = function () {
         ["fcp", "fp", "lcp"].forEach(function (n) {
           if (t._measurements[n] && !(f >= e.startTimestamp)) {
             var /* [auto-meaningful-name] */t$_measurementsN$value = t._measurements[n].value
-            var i = f + c.d(t$_measurementsN$value)
+            var i = f + Module_6.d(t$_measurementsN$value)
             var a = Math.abs(1e3 * (i - e.startTimestamp))
             var s = a - t$_measurementsN$value
-            o.a.log("[Measurements] Normalized " + n + " from " + t$_measurementsN$value + " to " + a + " (" + s + ")")
+            Module_8.a.log("[Measurements] Normalized " + n + " from " + t$_measurementsN$value + " to " + a + " (" + s + ")")
             t._measurements[n].value = a
           }
         })
         if (this._measurements["mark.fid"] && this._measurements.fid) {
           k(e, {
             description: "first input delay",
-            endTimestamp: this._measurements["mark.fid"].value + c.d(this._measurements.fid.value),
+            endTimestamp: this._measurements["mark.fid"].value + Module_6.d(this._measurements.fid.value),
             op: "web.vitals",
             startTimestamp: this._measurements["mark.fid"].value
           })
@@ -313,9 +313,9 @@ var w = function () {
   }
   e.prototype._tagMetricInfo = function (e) {
     if (this._lcpEntry) {
-      o.a.log("[Measurements] Adding LCP Data")
+      Module_8.a.log("[Measurements] Adding LCP Data")
       if (this._lcpEntry.element) {
-        e.setTag("lcp.element", h.a(this._lcpEntry.element))
+        e.setTag("lcp.element", Module_40.a(this._lcpEntry.element))
       }
       if (this._lcpEntry.id) {
         e.setTag("lcp.id", this._lcpEntry.id)
@@ -326,9 +326,9 @@ var w = function () {
       e.setTag("lcp.size", this._lcpEntry.size)
     }
     if (this._clsEntry && this._clsEntry.sources) {
-      o.a.log("[Measurements] Adding CLS Data")
+      Module_8.a.log("[Measurements] Adding CLS Data")
       this._clsEntry.sources.forEach(function (t, n) {
-        return e.setTag("cls.source." + (n + 1), h.a(t.node))
+        return e.setTag("cls.source." + (n + 1), Module_40.a(t.node))
       })
     }
   }
@@ -370,7 +370,7 @@ var w = function () {
     }(function (t) {
       var n = t.entries.pop()
       if (n) {
-        o.a.log("[Measurements] Adding CLS")
+        Module_8.a.log("[Measurements] Adding CLS")
         e._measurements.cls = {
           value: t.value
         }
@@ -446,9 +446,9 @@ var w = function () {
     }(function (t) {
       var n = t.entries.pop()
       if (n) {
-        var r = c.d(p.a)
-        var i = c.d(n.startTime)
-        o.a.log("[Measurements] Adding LCP")
+        var r = Module_6.d(Module_31.a)
+        var i = Module_6.d(n.startTime)
+        Module_8.a.log("[Measurements] Adding LCP")
         e._measurements.lcp = {
           value: t.value
         }
@@ -483,9 +483,9 @@ var w = function () {
     }(function (t) {
       var n = t.entries.pop()
       if (n) {
-        var r = c.d(p.a)
-        var i = c.d(n.startTime)
-        o.a.log("[Measurements] Adding FID")
+        var r = Module_6.d(Module_31.a)
+        var i = Module_6.d(n.startTime)
+        Module_8.a.log("[Measurements] Adding FID")
         e._measurements.fid = {
           value: t.value
         }
@@ -510,18 +510,18 @@ function S(e) {
     k(e$transaction, {
       op: "browser",
       description: null !== e$description && undefined !== e$description ? e$description : e$event,
-      startTimestamp: e$timeOrigin + c.d(u),
-      endTimestamp: e$timeOrigin + c.d(s)
+      startTimestamp: e$timeOrigin + Module_6.d(u),
+      endTimestamp: e$timeOrigin + Module_6.d(s)
     })
   }
 }
 function k(e, t) {
   var /* [auto-meaningful-name] */t$startTimestamp = t.startTimestamp
-  var r = i.d(t, ["startTimestamp"])
+  var r = Module_1.d(t, ["startTimestamp"])
   if (t$startTimestamp && e.startTimestamp > t$startTimestamp) {
     e.startTimestamp = t$startTimestamp
   }
-  return e.startChild(i.a({
+  return e.startChild(Module_1.a({
     startTimestamp: t$startTimestamp
   }, r))
 }

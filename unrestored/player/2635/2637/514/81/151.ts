@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("./115")
+var r = require(/* 115 */"./115")
 var i = function () {
   function t(t, e, n, i, o, a) {
     if (undefined === n) {

@@ -8,8 +8,8 @@
 
 import { o } from "./index__part-0"
 import { u, f, h, _, A, g } from "./index__part-1"
-import * as /* [auto-meaningful-name] */Lodash from "lodash"
-import * as /* [auto-meaningful-name] */$_1503 from "./1503"
+import * as /* [auto-meaningful-name] */Lodash from /* 30 */"lodash"
+import * as /* [auto-meaningful-name] */Module_1503 from /* 1503 */"./1503"
 function m() {
   var /* [auto-meaningful-name] */l$record_sample_rate
   var /* [auto-meaningful-name] */l$target_sample_rate
@@ -180,7 +180,7 @@ var C = function () {
     }
     e.connect(this.node)
     this.node.connect(this.context.destination)
-    this.worker = new $_1503(m, {})
+    this.worker = new Module_1503(m, {})
     this.worker.postMessage({
       command: "init",
       config: {

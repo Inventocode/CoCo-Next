@@ -1,28 +1,20 @@
-/**
- * 由 CoCo 源代码计划解包器解包
- *
- * 模块 ID：2637__part-6
- */
-
-"use strict"
-
 import { V } from "../../../../unrestored/player/2635/2637/index__part-5"
 import { addEditorIframe, loadRealWork, getWhitelist } from "../../../shared/player/audit"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_177 from "../../../../unrestored/shared/1571/2636/177"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_player_2635_2637_514_index from "../../../../unrestored/player/2635/2637/514/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_7 from "../../../../unrestored/shared/1571/2636/7"
+import * as /* [auto-meaningful-name] */Module_177 from /* 177 */"../../../../unrestored/shared/1571/2636/177"
+import * as /* [auto-meaningful-name] */Module_514 from /* 514 */"../../../../unrestored/player/2635/2637/514/index"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../../../../unrestored/shared/1571/2636/7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$$_$$_$$_shared_tools from "../../../shared/tools"
+import * as /* [auto-meaningful-name] */Shared_tools from "../../../shared/tools"
 import /* [auto-meaningful-name] */React from "react"
 import { useState, useRef, useEffect } from "react"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_328 from "../../../../unrestored/shared/1571/2636/328"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_player_2635_2637_1063 from "../../../../unrestored/player/2635/2637/1063"
+import * as /* [auto-meaningful-name] */Module_328 from /* 328 */"../../../../unrestored/shared/1571/2636/328"
+import /* [auto-meaningful-name] */Unrestored_player_2635_2637_1063 from "../../../../unrestored/player/2635/2637/1063"
 
 function setMicroMessengerInfo(title, description, coverUrl) {
   return X.apply(this, arguments)
 }
 function X() {
-  return (X = $$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function t(title, description, coverUrl) {
+  return (X = Module_7.a(RegeneratorRuntime.mark(function t(title, description, coverUrl) {
     var /* [auto-meaningful-name] */window$wx
     var /* [auto-meaningful-name] */t$sent
     var a
@@ -33,7 +25,7 @@ function X() {
         switch (t.prev = t.next) {
           case 0:
             t.next = 2
-            return $$_$$_$$_shared_tools.cb("https://res2.wx.qq.com/open/js/jweixin-1.6.0.js")
+            return Shared_tools.cb("https://res2.wx.qq.com/open/js/jweixin-1.6.0.js")
           case 2:
             window$wx = window.wx
             t.prev = 3
@@ -56,7 +48,7 @@ function X() {
             t.t0 = t.catch(3)
             console.error("getWeixinInfo error", t.t0)
           case 13:
-            a = $$_$$_$$_shared_tools.N(window.location.href)
+            a = Shared_tools.parseURLSearchParamsToObject(window.location.href)
             s = a.title || title
             c = a.desc || description
             window$wx.ready(function () {
@@ -94,12 +86,12 @@ export const MobileH5Wrapper = React.memo(() => {
     var description
     var coverUrl
     let workId = window.location.pathname.match(/\/player\/([^/]*)/)?.[1]
-    const searchParams = $$_$$_$$_shared_tools.N(window.location.href)
+    const searchParams = Shared_tools.parseURLSearchParamsToObject(window.location.href)
     if (searchParams.workId) {
       workId = searchParams.workId
     }
     if (workId) {
-      const bcmcUrl = (await $$_$$_$$_$$_unrestored_shared_1571_2636_177.g(workId, 0)).data.bcmc_url
+      const bcmcUrl = (await Module_177.g(workId, 0)).data.bcmc_url
       // [CoCo Next] 提升加载速度
       // addEditorIframe(bcmcUrl)
       let bcmc = await (await fetch(bcmcUrl)).json()
@@ -111,7 +103,7 @@ export const MobileH5Wrapper = React.memo(() => {
       setIsLoading(false)
       // [CoCo Next] 改为 CoCo Next
       title = bcmc.title || "CoCo Next"
-      description = bcmc.description || $$_$$_$$_$$_unrestored_shared_1571_2636_328.c
+      description = bcmc.description || Module_328.c
       coverUrl = bcmc.coverUrl || ""
       document.title ||= title
       if (navigator.userAgent.toLowerCase().includes("micromessenger")) {
@@ -146,20 +138,20 @@ export const MobileH5Wrapper = React.memo(() => {
   }, [blockCode, isLoading])
 
   return playerProps ? (
-    <div className={$$_$$_$$_$$_unrestored_player_2635_2637_1063.community} >
+    <div className={Unrestored_player_2635_2637_1063.community} >
       {isLoadingMicroMessenger && <img
         src="https://static.bcmcdn.com/crc-uploader/2021/12/35f947eec3186875243a6ffb6efd5cf5.gif"
         alt="loading"
-        className={$$_$$_$$_$$_unrestored_player_2635_2637_1063.loading}
+        className={Unrestored_player_2635_2637_1063.loading}
       />}
       <input
         type="file"
         accept="image/*"
         capture="camera"
         id="appcraft-camera-input"
-        className={$$_$$_$$_$$_unrestored_player_2635_2637_1063.camera}
+        className={Unrestored_player_2635_2637_1063.camera}
       />
-      {React.createElement($$_$$_$$_$$_unrestored_player_2635_2637_514_index.a, playerProps)}
+      {React.createElement(Module_514.a, playerProps)}
     </div>
   ) : <></>
 })

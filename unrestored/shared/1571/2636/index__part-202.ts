@@ -6,127 +6,127 @@
 
 "use strict"
 
-import * as K from "./18"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import { useSelector, useDispatch } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { useLayoutEffect } from "react"
+import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"./18"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
+import { useSelector, useDispatch } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { useLayoutEffect } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import "./2628"
-import "./2629"
+import /* 2628 */"./2628"
+import /* 2629 */"./2629"
 var yL = {
   header: {
-    logo: K.j.Show,
+    logo: Module_18.j.Show,
     file: {
-      newProject: K.j.Show,
-      openMyProject: K.j.Show,
-      saveAs: K.j.Hide,
-      showHistory: K.j.Hide,
-      openLocalFile: K.j.Show,
-      exportLocalFile: K.j.Hide
+      newProject: Module_18.j.Show,
+      openMyProject: Module_18.j.Show,
+      saveAs: Module_18.j.Hide,
+      showHistory: Module_18.j.Hide,
+      openLocalFile: Module_18.j.Show,
+      exportLocalFile: Module_18.j.Hide
     },
     tutorial: {
-      tutorial: K.j.Show,
-      feedback: K.j.Show,
-      releaseInfo: K.j.Show,
-      about: K.j.Show
+      tutorial: Module_18.j.Show,
+      feedback: Module_18.j.Show,
+      releaseInfo: Module_18.j.Show,
+      about: Module_18.j.Show
     },
     help: {
-      ruler: K.j.Show,
-      stage: K.j.Show
+      ruler: Module_18.j.Show,
+      stage: Module_18.j.Show
     },
-    projectName: K.j.ReadOnly,
-    coll: K.j.Show,
-    save: K.j.Hide,
-    cloudDBManager: K.j.Hide,
-    cloudSpaceManager: K.j.Show,
-    cutLine: K.j.Show,
-    package: K.j.Hide,
-    userInfo: K.j.Show,
-    preventLeave: K.j.Show
+    projectName: Module_18.j.ReadOnly,
+    coll: Module_18.j.Show,
+    save: Module_18.j.Hide,
+    cloudDBManager: Module_18.j.Hide,
+    cloudSpaceManager: Module_18.j.Show,
+    cutLine: Module_18.j.Show,
+    package: Module_18.j.Hide,
+    userInfo: Module_18.j.Show,
+    preventLeave: Module_18.j.Show
   },
-  widgetPanel: K.j.ReadOnly,
-  stage: K.j.ReadOnly,
-  widgetEditor: K.j.ReadOnly,
-  workspace: K.j.ReadOnly,
-  screenPanel: K.j.ReadOnly,
-  resourceLibrary: K.j.ReadOnly
+  widgetPanel: Module_18.j.ReadOnly,
+  stage: Module_18.j.ReadOnly,
+  widgetEditor: Module_18.j.ReadOnly,
+  workspace: Module_18.j.ReadOnly,
+  screenPanel: Module_18.j.ReadOnly,
+  resourceLibrary: Module_18.j.ReadOnly
 }
 var EL = {
   header: {
-    logo: K.j.Show,
+    logo: Module_18.j.Show,
     file: {
-      newProject: K.j.Show,
-      openMyProject: K.j.Show,
-      saveAs: K.j.Show,
-      showHistory: K.j.Show,
-      openLocalFile: K.j.Show,
-      exportLocalFile: K.j.Show
+      newProject: Module_18.j.Show,
+      openMyProject: Module_18.j.Show,
+      saveAs: Module_18.j.Show,
+      showHistory: Module_18.j.Show,
+      openLocalFile: Module_18.j.Show,
+      exportLocalFile: Module_18.j.Show
     },
     tutorial: {
-      tutorial: K.j.Show,
-      feedback: K.j.Show,
-      releaseInfo: K.j.Show,
-      about: K.j.Show
+      tutorial: Module_18.j.Show,
+      feedback: Module_18.j.Show,
+      releaseInfo: Module_18.j.Show,
+      about: Module_18.j.Show
     },
     help: {
-      ruler: K.j.Show,
-      stage: K.j.Show
+      ruler: Module_18.j.Show,
+      stage: Module_18.j.Show
     },
-    projectName: K.j.Show,
-    coll: K.j.Show,
-    save: K.j.Show,
-    cloudDBManager: K.j.Hide,
-    cloudSpaceManager: K.j.Show,
-    cutLine: K.j.Show,
-    package: K.j.Show,
-    userInfo: K.j.Show,
-    preventLeave: K.j.Show
+    projectName: Module_18.j.Show,
+    coll: Module_18.j.Show,
+    save: Module_18.j.Show,
+    cloudDBManager: Module_18.j.Hide,
+    cloudSpaceManager: Module_18.j.Show,
+    cutLine: Module_18.j.Show,
+    package: Module_18.j.Show,
+    userInfo: Module_18.j.Show,
+    preventLeave: Module_18.j.Show
   },
-  widgetPanel: K.j.Show,
-  stage: K.j.Show,
-  widgetEditor: K.j.Show,
-  workspace: K.j.Show,
-  screenPanel: K.j.Show,
-  resourceLibrary: K.j.Show
+  widgetPanel: Module_18.j.Show,
+  stage: Module_18.j.Show,
+  widgetEditor: Module_18.j.Show,
+  workspace: Module_18.j.Show,
+  screenPanel: Module_18.j.Show,
+  resourceLibrary: Module_18.j.Show
 }
 var OL = {
   header: {
-    logo: K.j.Hide,
+    logo: Module_18.j.Hide,
     file: {
-      newProject: K.j.Hide,
-      openMyProject: K.j.Hide,
-      saveAs: K.j.Hide,
-      showHistory: K.j.Hide,
-      openLocalFile: K.j.Hide,
-      exportLocalFile: K.j.Hide
+      newProject: Module_18.j.Hide,
+      openMyProject: Module_18.j.Hide,
+      saveAs: Module_18.j.Hide,
+      showHistory: Module_18.j.Hide,
+      openLocalFile: Module_18.j.Hide,
+      exportLocalFile: Module_18.j.Hide
     },
     tutorial: {
-      tutorial: K.j.Hide,
-      feedback: K.j.Hide,
-      releaseInfo: K.j.Hide,
-      about: K.j.Hide
+      tutorial: Module_18.j.Hide,
+      feedback: Module_18.j.Hide,
+      releaseInfo: Module_18.j.Hide,
+      about: Module_18.j.Hide
     },
     help: {
-      ruler: K.j.Hide,
-      stage: K.j.Hide
+      ruler: Module_18.j.Hide,
+      stage: Module_18.j.Hide
     },
-    projectName: K.j.Hide,
-    coll: K.j.Hide,
-    save: K.j.Hide,
-    cloudDBManager: K.j.Hide,
-    cloudSpaceManager: K.j.Hide,
-    cutLine: K.j.Hide,
-    package: K.j.Hide,
-    userInfo: K.j.Hide,
-    preventLeave: K.j.Hide
+    projectName: Module_18.j.Hide,
+    coll: Module_18.j.Hide,
+    save: Module_18.j.Hide,
+    cloudDBManager: Module_18.j.Hide,
+    cloudSpaceManager: Module_18.j.Hide,
+    cutLine: Module_18.j.Hide,
+    package: Module_18.j.Hide,
+    userInfo: Module_18.j.Hide,
+    preventLeave: Module_18.j.Hide
   },
-  widgetPanel: K.j.ReadOnly,
-  stage: K.j.ReadOnly,
-  widgetEditor: K.j.ReadOnly,
-  workspace: K.j.ReadOnly,
-  screenPanel: K.j.ReadOnly,
-  resourceLibrary: K.j.ReadOnly
+  widgetPanel: Module_18.j.ReadOnly,
+  stage: Module_18.j.ReadOnly,
+  widgetEditor: Module_18.j.ReadOnly,
+  workspace: Module_18.j.ReadOnly,
+  screenPanel: Module_18.j.ReadOnly,
+  resourceLibrary: Module_18.j.ReadOnly
 }
 var wL = function () {
   var e = useSelector(function (e) {
@@ -137,15 +137,15 @@ var wL = function () {
     var n
     var r = "readonly" === (n = function (e) {
       switch (e) {
-        case K.c.ReadOnly:
+        case Module_18.c.ReadOnly:
           return "readonly"
-        case K.c.Preview:
+        case Module_18.c.Preview:
           return "preview"
         default:
           return "normal"
       }
     }(e)) ? yL : "preview" === n ? OL : EL
-    t($$_$$_$$_$$_src_editor_redux_common_actions.cj(r))
+    t(Src_editor_redux_common_actions.cj(r))
   }, [e, t])
   return React.createElement(React.Fragment, null)
 }

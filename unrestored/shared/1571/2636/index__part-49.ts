@@ -6,8 +6,8 @@
 
 "use strict"
 
-import * as kn from "./75"
-import * as /* [auto-meaningful-name] */$_262 from "./262"
+import * as /* [auto-meaningful-name] */Module_75 from /* 75 */"./75"
+import * as /* [auto-meaningful-name] */Module_262 from /* 262 */"./262"
 var bf = [
   {
     type: "WidgetTitle",
@@ -27,7 +27,7 @@ var bf = [
     type: "WidgetOpacity"
   }, {
     type: "Size",
-    sizeRange: [[$_262.c, kn.e], [$_262.b, kn.d]]
+    sizeRange: [[Module_262.c, Module_75.e], [Module_262.b, Module_75.d]]
   }, {
     type: "Coordinate"
   }

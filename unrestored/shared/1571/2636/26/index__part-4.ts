@@ -8,27 +8,27 @@
 
 import { h } from "./index__part-1"
 import { te } from "./index__part-3"
-import * as /* [auto-meaningful-name] */$$_53 from "../53"
-import * as /* [auto-meaningful-name] */$$_37_index from "../37/index"
-import * as /* [auto-meaningful-name] */$$_207_209_index from "../207/209/index"
-import * as Y from "../7"
-import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as H from "../6"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_language from "../../../../../src/shared/ui/language"
-import * as l from "../9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index from "../../../../../src/shared/packages/@crc/blink/src/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_block_toolbox from "../../../../../src/editor/block/toolbox"
-import * as /* [auto-meaningful-name] */$$_228_index from "../228/index"
-import * as /* [auto-meaningful-name] */$$_207_index from "../207/index"
-import * as /* [auto-meaningful-name] */$$_207_430 from "../207/430"
-var /* [auto-meaningful-name] */$$_53$d = $$_53.d
-var me = .5 * $$_53$d
-var ge = 2 * $$_53$d
+import * as /* [auto-meaningful-name] */Module_53 from /* 53 */"../53"
+import * as /* [auto-meaningful-name] */Module_37 from /* 37 */"../37/index"
+import * as /* [auto-meaningful-name] */Module_209 from /* 209 */"../207/209/index"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../7"
+import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"../6"
+import * as /* [auto-meaningful-name] */Src_shared_ui_language from /* 23 */"../../../../../src/shared/ui/language"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"../9"
+import * as /* [auto-meaningful-name] */Src_shared_packages_Crc_blink_src_index from /* 17 */"../../../../../src/shared/packages/@crc/blink/src/index"
+import * as /* [auto-meaningful-name] */Src_editor_block_toolbox from /* 261 */"../../../../../src/editor/block/toolbox"
+import * as /* [auto-meaningful-name] */Module_228 from /* 228 */"../228/index"
+import * as /* [auto-meaningful-name] */Module_207 from /* 207 */"../207/index"
+import * as /* [auto-meaningful-name] */Module_430 from /* 430 */"../207/430"
+var /* [auto-meaningful-name] */Module_53$d = Module_53.d
+var me = .5 * Module_53$d
+var ge = 2 * Module_53$d
 var _e = {
   zoom: {
     controls: false,
     wheel: false,
-    startScale: $$_53$d,
+    startScale: Module_53$d,
     maxScale: ge,
     minScale: me,
     scaleSpeed: 1.2
@@ -36,15 +36,15 @@ var _e = {
   notch: false,
   tooltip: true,
   flyout: {
-    fixed_width: $$_53.b,
+    fixed_width: Module_53.b,
     corner_radius: 12,
     blocks: {
-      default_gap: 12 / $$_53$d,
-      head_block_offset: [14 / $$_53$d, 4 / $$_53$d]
+      default_gap: 12 / Module_53$d,
+      head_block_offset: [14 / Module_53$d, 4 / Module_53$d]
     },
     padding: {
-      left: 16 / $$_53$d,
-      top: 24 / $$_53$d
+      left: 16 / Module_53$d,
+      top: 24 / Module_53$d
     }
   },
   grid: {
@@ -60,15 +60,15 @@ var _e = {
     flyout: true
   },
   context_menu: {
-    workspace: [$$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.I.WorkspaceOptionType.PASTE, $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.I.WorkspaceOptionType.CLEAN_UP, $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.I.WorkspaceOptionType.DELETE_ALL, $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.I.WorkspaceOptionType.COPY_ALL, $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.I.WorkspaceOptionType.GLOBAL_COMMENT],
+    workspace: [Src_shared_packages_Crc_blink_src_index.I.WorkspaceOptionType.PASTE, Src_shared_packages_Crc_blink_src_index.I.WorkspaceOptionType.CLEAN_UP, Src_shared_packages_Crc_blink_src_index.I.WorkspaceOptionType.DELETE_ALL, Src_shared_packages_Crc_blink_src_index.I.WorkspaceOptionType.COPY_ALL, Src_shared_packages_Crc_blink_src_index.I.WorkspaceOptionType.GLOBAL_COMMENT],
     block: [
-      $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.I.BlockOptionType.COPY_AND_PASTE, $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.I.BlockOptionType.COPY, $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.I.BlockOptionType.ADD_COMMENT, $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.I.BlockOptionType.COLLAPSE, $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.I.BlockOptionType.DELETE, function (e) {
+      Src_shared_packages_Crc_blink_src_index.I.BlockOptionType.COPY_AND_PASTE, Src_shared_packages_Crc_blink_src_index.I.BlockOptionType.COPY, Src_shared_packages_Crc_blink_src_index.I.BlockOptionType.ADD_COMMENT, Src_shared_packages_Crc_blink_src_index.I.BlockOptionType.COLLAPSE, Src_shared_packages_Crc_blink_src_index.I.BlockOptionType.DELETE, function (e) {
         return {
-          text: $$_$$_$$_$$_$$_src_shared_ui_language.c($$_37_index.b(), "Workspace.ContextMenu.blockToImage"),
+          text: Src_shared_ui_language.c(Module_37.b(), "Workspace.ContextMenu.blockToImage"),
           name: "blockToImage",
           enabled: true,
           callback: function () {
-            var t = Y.a(RegeneratorRuntime.mark(function t() {
+            var t = Module_7.a(RegeneratorRuntime.mark(function t() {
               return RegeneratorRuntime.wrap(function (t) {
                 for (;;) {
                   switch (t.prev = t.next) {
@@ -89,12 +89,12 @@ var _e = {
           }()
         }
       }, function (e) {
-        if (e.type !== $$_207_209_index.PROCEDURE_BLOCK_TYPES.CALL_NORETURN && e.type !== $$_207_209_index.PROCEDURE_BLOCK_TYPES.CALL_RETURN) {
+        if (e.type !== Module_209.PROCEDURE_BLOCK_TYPES.CALL_NORETURN && e.type !== Module_209.PROCEDURE_BLOCK_TYPES.CALL_RETURN) {
           return
         }
         var t = function () {
           var t
-          var n = $$_37_index.d.getState()
+          var n = Module_37.d.getState()
           var r = n.project.screens.get(n.project.currentScreenIndex)
           if (r) {
             var o = null === (t = Ee.getWorkspaceDataByScreenId(r.id)) || undefined === t ? undefined : t.getProcedureManager()
@@ -104,15 +104,15 @@ var _e = {
           }
         }()
         return {
-          text: $$_$$_$$_$$_$$_src_shared_ui_language.c($$_37_index.b(), "Workspace.ContextMenu.jumpToProcDef"),
+          text: Src_shared_ui_language.c(Module_37.b(), "Workspace.ContextMenu.jumpToProcDef"),
           name: "jumpToProcDef",
           enabled: !!t && !t.disabled,
           callback: function () {
             if (t) {
               var /* [auto-meaningful-name] */t$def_id = t.def_id
-              var n = $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_block_by_id(t$def_id)
+              var n = Src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_block_by_id(t$def_id)
               if (n) {
-                $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.center_on_block(t$def_id)
+                Src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.center_on_block(t$def_id)
                 n.select()
                 Ee.setDebuggingBlock(n)
                 n.set_glow_stack(true)
@@ -126,8 +126,8 @@ var _e = {
 }
 function ve(e) {
   var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : "zh"
-  Object.assign($$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.Msg, e)
-  $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.utils.set_language(t)
+  Object.assign(Src_shared_packages_Crc_blink_src_index.Blink.Msg, e)
+  Src_shared_packages_Crc_blink_src_index.Blink.utils.set_language(t)
 }
 function be() {
   var e = Ee.getWorkspaceDataByScreenId(Ee.getCurrentScreenId())
@@ -137,8 +137,8 @@ function be() {
   return e.getProcedureManager()
 }
 function ye(e, t) {
-  var n = $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.inject(e, H.a(H.a(H.a({}, _e), t), {}, {
-    custom_svg_defs: $$_207_430.a,
+  var n = Src_shared_packages_Crc_blink_src_index.Blink.inject(e, Module_6.a(Module_6.a(Module_6.a({}, _e), t), {}, {
+    custom_svg_defs: Module_430.a,
     auto_resize: true
   }))
   var r = h.getToolbox()
@@ -150,9 +150,9 @@ function ye(e, t) {
     })
   }
   n.get_parent_svg().setAttribute("enable-animation", "true")
-  Object.values($$_$$_$$_$$_$$_src_editor_block_toolbox.b).forEach(function (e, t) {
-    $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.register_flyout_button(e, function () {
-      var t = document.createElementNS($$_53.c, "foreignObject")
+  Object.values(Src_editor_block_toolbox.b).forEach(function (e, t) {
+    Src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.register_flyout_button(e, function () {
+      var t = document.createElementNS(Module_53.c, "foreignObject")
       t.style.overflow = "visible"
       var n = document.getElementById(e)
       if (n) {
@@ -180,19 +180,19 @@ function ye(e, t) {
       }
     })
   })
-  Object.values($$_$$_$$_$$_$$_src_editor_block_toolbox.a).forEach(function (e) {
+  Object.values(Src_editor_block_toolbox.a).forEach(function (e) {
     var t = {
       lineLabel: e.id,
       text: e.label
     }
-    l.x([t], "category")
+    Module_9.x([t], "category")
   })
-  $$_228_index.d()
-  $$_228_index.b(be)
+  Module_228.d()
+  Module_228.b(be)
   return n
 }
-var Ee = new $$_207_index.b()
-export { $$_53$d as he }
+var Ee = new Module_207.b()
+export { Module_53$d as he }
 export { me }
 export { ge }
 export { ve }

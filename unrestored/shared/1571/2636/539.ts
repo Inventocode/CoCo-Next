@@ -6,15 +6,15 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$_295 from "./295"
-import * as /* [auto-meaningful-name] */Lodash from "lodash"
-import { memo, useCallback } from "react"
+import * as /* [auto-meaningful-name] */Module_295 from /* 295 */"./295"
+import * as /* [auto-meaningful-name] */Lodash from /* 30 */"lodash"
+import { memo, useCallback } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */Classnames from "classnames"
-import /* [auto-meaningful-name] */Classnames1 from "classnames"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import "./13/640"
+import /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import /* [auto-meaningful-name] */Classnames1 from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import /* 640 */"./13/640"
 var _a
 _a = memo(function (e) {
   var /* [auto-meaningful-name] */e$onStep = e.onStep
@@ -23,7 +23,7 @@ _a = memo(function (e) {
   var /* [auto-meaningful-name] */e$defaultValue = e.defaultValue
   var /* [auto-meaningful-name] */e$disabled = e.disabled
   var /* [auto-meaningful-name] */e$label = e.label
-  var f = $_295.a(e, ["onStep", "max", "min", "defaultValue", "disabled", "label"])
+  var f = Module_295.a(e, ["onStep", "max", "min", "defaultValue", "disabled", "label"])
   var h = Number(e$max) <= Number(e$defaultValue)
   var m = Number(e$min) >= Number(e$defaultValue)
   var g = Number(e$defaultValue)
@@ -37,7 +37,7 @@ _a = memo(function (e) {
       e$onStep("".concat(g - 1), e, "down")
     }
   }, [m, e$onStep, g])
-  return React1.createElement($$_$$_$$_$$_src_shared_ui_components_index.k, Object.assign({}, f, {
+  return React1.createElement(Src_shared_ui_components_index.k, Object.assign({}, f, {
     className: Classnames1(f.className, "coco-number-input-wrapper"),
     defaultValue: e$defaultValue,
     min: e$min,
@@ -50,12 +50,12 @@ _a = memo(function (e) {
     }, React1.createElement("span", {
       className: h || e$disabled ? "disable" : "",
       onClick: _
-    }, React1.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+    }, React1.createElement(Src_shared_ui_components_index.j, {
       type: "icon-up"
     })), React1.createElement("span", {
       className: m || e$disabled ? "disable" : "",
       onClick: v
-    }, React1.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+    }, React1.createElement(Src_shared_ui_components_index.j, {
       type: "icon-down"
     }))))
   }))

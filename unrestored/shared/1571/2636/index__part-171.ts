@@ -7,14 +7,14 @@
 "use strict"
 
 var rI
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import { useSelector, useDispatch } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { memo, useCallback, useEffect } from "react"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import { useSelector, useDispatch } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo, useCallback, useEffect } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_1526 from "./1526"
-import /* [auto-meaningful-name] */$_15261 from "./1526"
+import * as /* [auto-meaningful-name] */Module_1526 from /* 1526 */"./1526"
+import /* [auto-meaningful-name] */Module_15261 from /* 1526 */"./1526"
 var lI = memo(function () {
   var e = useSelector(function (e) {
     return e.common.commonToastInfo
@@ -30,7 +30,7 @@ var lI = memo(function () {
     if (e$onClose) {
       e$onClose()
     }
-    s($$_$$_$$_$$_src_editor_redux_common_actions.kh())
+    s(Src_editor_redux_common_actions.kh())
   }, [e$onClose, s])
   useEffect(function () {
     if (e$visible && i) {
@@ -42,13 +42,13 @@ var lI = memo(function () {
       }, i)
     }
   }, [e$visible, s, i, c])
-  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.b, {
+  return React.createElement(Src_shared_ui_components_index.b, {
     visible: e$visible,
     type: e$type,
     message: e$message,
     onClose: c,
     showPrefixIcon: e.showPrefixIcon,
-    className: $_15261.wrapper,
+    className: Module_15261.wrapper,
     showCloseIcon: e.showCloseIcon
   })
 })

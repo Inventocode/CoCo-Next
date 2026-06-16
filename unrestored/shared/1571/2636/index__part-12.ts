@@ -6,20 +6,20 @@
 
 "use strict"
 
-import { useSelector } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { useEffect } from "react"
+import { useSelector } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { useEffect } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_24_index from "./24/index"
-import * as /* [auto-meaningful-name] */$_100 from "./100"
-import * as /* [auto-meaningful-name] */$_26_index from "./26/index"
-import * as /* [auto-meaningful-name] */$_390 from "./390"
+import * as /* [auto-meaningful-name] */Module_24 from /* 24 */"./24/index"
+import * as /* [auto-meaningful-name] */Module_100 from /* 100 */"./100"
+import * as /* [auto-meaningful-name] */Module_26 from /* 26 */"./26/index"
+import * as /* [auto-meaningful-name] */Module_390 from /* 390 */"./390"
 var lt = function (e, t) {
   var n = {}
   e.forEach(function (e) {
     if (n[e.path.id]) {
-      t[e.userId] = $_390.a
-      t[n[e.path.id]] = $_390.a
+      t[e.userId] = Module_390.a
+      t[n[e.path.id]] = Module_390.a
     } else {
       n[e.path.id] = e.userId
     }
@@ -83,7 +83,7 @@ var ft = React.memo(function (e) {
       })
       if (e$list.length > 0) {
         e$list.forEach(function (e) {
-          var t = $_26_index.z.getBlockById(e.path.id)
+          var t = Module_26.z.getBlockById(e.path.id)
           var n = (null === t || undefined === t ? undefined : t.get_top_parent()) || t
           var r = null === n || undefined === n ? undefined : n.get_svg_root()
           if (r) {

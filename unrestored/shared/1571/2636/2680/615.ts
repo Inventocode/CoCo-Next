@@ -8,11 +8,11 @@
 
 export { a }
 export { s as b }
-import * as /* [auto-meaningful-name] */$$_19 from "../19"
-import * as /* [auto-meaningful-name] */$_609 from "./609"
-var o = $$_19.a({}, $_609.a.Modal)
+import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"../19"
+import * as /* [auto-meaningful-name] */Module_609 from /* 609 */"./609"
+var o = Module_19.a({}, Module_609.a.Modal)
 function a(e) {
-  o = e ? $$_19.a($$_19.a({}, o), e) : $$_19.a({}, $_609.a.Modal)
+  o = e ? Module_19.a(Module_19.a({}, o), e) : Module_19.a({}, Module_609.a.Modal)
 }
 function s() {
   return o

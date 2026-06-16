@@ -6,20 +6,20 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_34_347_112 from "../../../34/347/112"
-import * as /* [auto-meaningful-name] */$$_$$_$$_55 from "../../../55"
-import * as /* [auto-meaningful-name] */$$_$$_index from "../../index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_90 from "../../../90"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../../src/editor/widget/built-in/types"
-import /* [auto-meaningful-name] */React from "react"
-import { memo, useRef } from "react"
+import * as /* [auto-meaningful-name] */Module_112 from /* 112 */"../../../34/347/112"
+import * as /* [auto-meaningful-name] */Module_55 from /* 55 */"../../../55"
+import * as /* [auto-meaningful-name] */Module_20 from /* 20 */"../../index"
+import * as /* [auto-meaningful-name] */Module_90 from /* 90 */"../../../90"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../../../../src/editor/widget/built-in/types"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo, useRef } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import /* [auto-meaningful-name] */Color from "color"
-import * as /* [auto-meaningful-name] */$$_$$_$$_513 from "../../../513"
-import /* [auto-meaningful-name] */$$_$$_$$_5131 from "../../../513"
-import * as /* [auto-meaningful-name] */$$_$$_$$_433 from "../../../433"
-import * as /* [auto-meaningful-name] */$$_$$_$$_133 from "../../../133"
+import /* [auto-meaningful-name] */Color from /* 51 */"color"
+import * as /* [auto-meaningful-name] */Module_513 from /* 513 */"../../../513"
+import /* [auto-meaningful-name] */Module_5131 from /* 513 */"../../../513"
+import * as /* [auto-meaningful-name] */Module_433 from /* 433 */"../../../433"
+import * as /* [auto-meaningful-name] */Module_133 from /* 133 */"../../../133"
 var V = memo(function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$type = e.type
@@ -34,21 +34,21 @@ var V = memo(function (e) {
   var /* [auto-meaningful-name] */e$attributes$borderRadius = e$attributes.borderRadius
   var /* [auto-meaningful-name] */e$attributes$fileId = e$attributes.fileId
   var b = useRef(null)
-  var y = $$_$$_$$_34_347_112.b(e$attributes$fileId)
+  var y = Module_112.b(e$attributes$fileId)
   if (!y) {
-    y = e$parentId ? $$_$$_$$_133.i : $$_$$_$$_133.m
+    y = e$parentId ? Module_133.i : Module_133.m
   }
   return React.createElement("div", {
     id: t,
-    className: Classnames($$_$$_$$_5131.imageWidget, $$_$$_$$_90.b),
-    "data-role": $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.M,
-    "data-type": $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.v,
-    "data-scale-mode": $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.p.PROPORTIONAL,
+    className: Classnames(Module_5131.imageWidget, Module_90.b),
+    "data-role": Src_editor_widget_builtIn_types.M,
+    "data-type": Src_editor_widget_builtIn_types.v,
+    "data-scale-mode": Src_editor_widget_builtIn_types.p.PROPORTIONAL,
     ref: b,
     onClick: function () {
-      $$_$$_index.emitWidgetEvent(e$type, "onImagePress", t)
-      $$_$$_index.emitImagePress(t)
-      $$_$$_$$_55.b.playerWidgetLog({
+      Module_20.emitWidgetEvent(e$type, "onImagePress", t)
+      Module_20.emitImagePress(t)
+      Module_55.b.playerWidgetLog({
         widgetId: e$parentId ? t.replace(/_\d+$/, "") : t,
         widgetType: e$type,
         message: "onWidgetPress"
@@ -66,7 +66,7 @@ var V = memo(function (e) {
       backgroundImage: "url(".concat(y, ")"),
       backgroundRepeat: "no-repeat",
       backgroundPosition: "center center",
-      backgroundSize: $$_$$_$$_433.a(e$attributes$resizeMode),
+      backgroundSize: Module_433.a(e$attributes$resizeMode),
       borderRadius: e$attributes$borderRadius,
       opacity: undefined === e$opacity ? undefined : e$opacity / 100
     }
@@ -76,7 +76,7 @@ var V = memo(function (e) {
     style: {
       visibility: "hidden",
       borderRadius: e$attributes$borderRadius,
-      objectFit: $$_$$_$$_433.b(e$attributes$resizeMode)
+      objectFit: Module_433.b(e$attributes$resizeMode)
     }
   }))
 })

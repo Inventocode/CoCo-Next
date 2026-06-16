@@ -4,23 +4,23 @@
  * 模块 ID：faTg
  */
 
-export interface MainReducerState {
+export interface IMainReducerState {
   language: string
   signDialogVisible: boolean
   courseDialogVisible: boolean
-  userInfo: null | UserInfo
+  userInfo: null | IUserInfo
   userInfoFetchDone: boolean
-  commonToastInfo: CommonToastInfo
-  confirmDialogInfo: ConfirmDialogInfo
+  commonToastInfo: ICommonToastInfo
+  confirmDialogInfo: IConfirmDialogInfo
 }
 
-export interface UserInfo {
+export interface IUserInfo {
   id: number
   name: string
   avatar: string
 }
 
-export interface CommonToastInfo {
+export interface ICommonToastInfo {
   visible: boolean
   type?: "success" | "error" | "info"
   message?: string
@@ -29,7 +29,7 @@ export interface CommonToastInfo {
   onClose?(): void
 }
 
-export interface ConfirmDialogInfo {
+export interface IConfirmDialogInfo {
   visible: boolean
   title?: string
   content?: string

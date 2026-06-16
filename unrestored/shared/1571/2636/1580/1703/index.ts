@@ -4,9 +4,9 @@
  * 模块 ID：1703
  */
 
-require("../1662/86")({
+require(/* 86 */"../1662/86")({
   target: "Reflect",
   stat: true
 }, {
-  ownKeys: require("./1080")
+  ownKeys: require(/* 1080 */"./1080")
 })

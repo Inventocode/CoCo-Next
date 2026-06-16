@@ -6,11 +6,11 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_1048_1033 from "../../1048/1033"
-import * as /* [auto-meaningful-name] */$$_$$_224_924_265 from "../../224/924/265"
-import * as /* [auto-meaningful-name] */$_925 from "./925"
-import * as /* [auto-meaningful-name] */$$_$$_224_924_749 from "../../224/924/749"
-import * as /* [auto-meaningful-name] */$_211 from "./211"
+import * as /* [auto-meaningful-name] */Module_1033 from /* 1033 */"../../1048/1033"
+import * as /* [auto-meaningful-name] */Module_265 from /* 265 */"../../224/924/265"
+import * as /* [auto-meaningful-name] */Module_925 from /* 925 */"./925"
+import * as /* [auto-meaningful-name] */Module_749 from /* 749 */"../../224/924/749"
+import * as /* [auto-meaningful-name] */Module_211 from /* 211 */"./211"
 var An = function () {
   function e(t, n) {
     var /* [auto-meaningful-name] */n$format
@@ -24,10 +24,10 @@ var An = function () {
       return t
     }
     if ("number" === typeof t) {
-      t = $$_$$_224_924_265.d(t)
+      t = Module_265.d(t)
     }
     this.originalInput = t
-    var i = $$_$$_224_924_749.a(t)
+    var i = Module_749.a(t)
     this.originalInput = t
     this.r = i.r
     this.g = i.g
@@ -68,12 +68,12 @@ var An = function () {
     return this.a
   }
   e.prototype.setAlpha = function (e) {
-    this.a = $_211.b(e)
+    this.a = Module_211.b(e)
     this.roundA = Math.round(100 * this.a) / 100
     return this
   }
   e.prototype.toHsv = function () {
-    var e = $$_$$_224_924_265.h(this.r, this.g, this.b)
+    var e = Module_265.h(this.r, this.g, this.b)
     return {
       h: 360 * e.h,
       s: e.s,
@@ -82,14 +82,14 @@ var An = function () {
     }
   }
   e.prototype.toHsvString = function () {
-    var e = $$_$$_224_924_265.h(this.r, this.g, this.b)
+    var e = Module_265.h(this.r, this.g, this.b)
     var t = Math.round(360 * e.h)
     var n = Math.round(100 * e.s)
     var r = Math.round(100 * e.v)
     return 1 === this.a ? "hsv(" + t + ", " + n + "%, " + r + "%)" : "hsva(" + t + ", " + n + "%, " + r + "%, " + this.roundA + ")"
   }
   e.prototype.toHsl = function () {
-    var e = $$_$$_224_924_265.g(this.r, this.g, this.b)
+    var e = Module_265.g(this.r, this.g, this.b)
     return {
       h: 360 * e.h,
       s: e.s,
@@ -98,7 +98,7 @@ var An = function () {
     }
   }
   e.prototype.toHslString = function () {
-    var e = $$_$$_224_924_265.g(this.r, this.g, this.b)
+    var e = Module_265.g(this.r, this.g, this.b)
     var t = Math.round(360 * e.h)
     var n = Math.round(100 * e.s)
     var r = Math.round(100 * e.l)
@@ -108,7 +108,7 @@ var An = function () {
     if (undefined === e) {
       e = false
     }
-    return $$_$$_224_924_265.f(this.r, this.g, this.b, e)
+    return Module_265.f(this.r, this.g, this.b, e)
   }
   e.prototype.toHexString = function (e) {
     if (undefined === e) {
@@ -120,7 +120,7 @@ var An = function () {
     if (undefined === e) {
       e = false
     }
-    return $$_$$_224_924_265.j(this.r, this.g, this.b, this.a, e)
+    return Module_265.j(this.r, this.g, this.b, this.a, e)
   }
   e.prototype.toHex8String = function (e) {
     if (undefined === e) {
@@ -144,7 +144,7 @@ var An = function () {
   }
   e.prototype.toPercentageRgb = function () {
     var e = function (e) {
-      return Math.round(100 * $_211.a(e, 255)) + "%"
+      return Math.round(100 * Module_211.a(e, 255)) + "%"
     }
     return {
       r: e(this.r),
@@ -155,7 +155,7 @@ var An = function () {
   }
   e.prototype.toPercentageRgbString = function () {
     var e = function (e) {
-      return Math.round(100 * $_211.a(e, 255))
+      return Math.round(100 * Module_211.a(e, 255))
     }
     return 1 === this.a ? "rgb(" + e(this.r) + "%, " + e(this.g) + "%, " + e(this.b) + "%)" : "rgba(" + e(this.r) + "%, " + e(this.g) + "%, " + e(this.b) + "%, " + this.roundA + ")"
   }
@@ -166,7 +166,7 @@ var An = function () {
     if (this.a < 1) {
       return false
     }
-    for (var e = "#" + $$_$$_224_924_265.f(this.r, this.g, this.b, false), t = 0, n = Object.entries($_925.a); t < n.length; t++) {
+    for (var e = "#" + Module_265.f(this.r, this.g, this.b, false), t = 0, n = Object.entries(Module_925.a); t < n.length; t++) {
       var r = n[t]
       var i = r[0]
       if (e === r[1]) {
@@ -194,7 +194,7 @@ var An = function () {
     }
     var n = this.toHsl()
     n.l += t / 100
-    n.l = $_211.c(n.l)
+    n.l = Module_211.c(n.l)
     return new e(n)
   }
   e.prototype.brighten = function (t) {
@@ -213,7 +213,7 @@ var An = function () {
     }
     var n = this.toHsl()
     n.l -= t / 100
-    n.l = $_211.c(n.l)
+    n.l = Module_211.c(n.l)
     return new e(n)
   }
   e.prototype.tint = function (e) {
@@ -234,7 +234,7 @@ var An = function () {
     }
     var n = this.toHsl()
     n.s -= t / 100
-    n.s = $_211.c(n.s)
+    n.s = Module_211.c(n.s)
     return new e(n)
   }
   e.prototype.saturate = function (t) {
@@ -243,7 +243,7 @@ var An = function () {
     }
     var n = this.toHsl()
     n.s += t / 100
-    n.s = $_211.c(n.s)
+    n.s = Module_211.c(n.s)
     return new e(n)
   }
   e.prototype.greyscale = function () {

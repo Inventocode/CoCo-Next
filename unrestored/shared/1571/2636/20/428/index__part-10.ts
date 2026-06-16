@@ -7,26 +7,26 @@
 "use strict"
 
 import { Uo, Yo, Ko } from "./index__part-9"
-import /* [auto-meaningful-name] */Color from "color"
-import * as /* [auto-meaningful-name] */$$_$$_9 from "../../9"
-import * as /* [auto-meaningful-name] */$$_$$_14 from "../../14"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_src_shared_tools_index from "../../../../../../src/shared/tools/index"
-import * as /* [auto-meaningful-name] */Lodash from "lodash"
-import * as /* [auto-meaningful-name] */$$_$$_7 from "../../7"
-import * as /* [auto-meaningful-name] */$$_$$_47_index from "../../47/index"
-import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as a from "./12"
-import * as /* [auto-meaningful-name] */$$_$$_277 from "../../277"
-import * as /* [auto-meaningful-name] */$$_$$_6 from "../../6"
-import * as /* [auto-meaningful-name] */$$_$$_105 from "../../105"
-import * as /* [auto-meaningful-name] */$$_$$_691_65 from "../../691/65"
-import * as /* [auto-meaningful-name] */$$_$$_691_126 from "../../691/126"
-import * as /* [auto-meaningful-name] */$_67_index from "./67/index"
-import * as /* [auto-meaningful-name] */$$_$$_144 from "../../144"
+import /* [auto-meaningful-name] */Color from /* 51 */"color"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"../../9"
+import * as /* [auto-meaningful-name] */Module_14 from /* 14 */"../../14"
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */Lodash from /* 30 */"lodash"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../../7"
+import * as /* [auto-meaningful-name] */Module_47 from /* 47 */"../../47/index"
+import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import * as /* [auto-meaningful-name] */Module_12 from /* 12 */"./12"
+import * as /* [auto-meaningful-name] */Module_277 from /* 277 */"../../277"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"../../6"
+import * as /* [auto-meaningful-name] */Module_105 from /* 105 */"../../105"
+import * as /* [auto-meaningful-name] */Module_65 from /* 65 */"../../691/65"
+import * as /* [auto-meaningful-name] */Module_126 from /* 126 */"../../691/126"
+import * as /* [auto-meaningful-name] */Module_67 from /* 67 */"./67/index"
+import * as /* [auto-meaningful-name] */Module_144 from /* 144 */"../../144"
 function di(e, t) {
   if ("number" === typeof t) {
-    var n = a.d(e)
-    if (n && $$_$$_14.a.isNumber(t, {
+    var n = Module_12.d(e)
+    if (n && Module_14.a.isNumber(t, {
       type: "error",
       widgetId: e,
       messageId: "argNotNumber",
@@ -35,12 +35,12 @@ function di(e, t) {
       }
     })) {
       var r = n.rotation + t / 180 * Math.PI
-      a.h(e, {
+      Module_12.h(e, {
         rotation: r
       })
     }
   } else {
-    $$_$$_14.a.log({
+    Module_14.a.log({
       type: "error",
       messageId: "argNotNumber",
       widgetId: e,
@@ -52,15 +52,15 @@ function di(e, t) {
 }
 function pi(e, t) {
   if ("number" === typeof t) {
-    var n = a.d(e)
+    var n = Module_12.d(e)
     if (n) {
       var r = n.rotation + -t / 180 * Math.PI
-      a.h(e, {
+      Module_12.h(e, {
         rotation: r
       })
     }
   } else {
-    $$_$$_14.a.log({
+    Module_14.a.log({
       type: "error",
       messageId: "argNotNumber",
       widgetId: e,
@@ -73,7 +73,7 @@ function pi(e, t) {
 function fi(e, t) {
   if ("number" === typeof t) {
     var n = Ko(e)
-    if (n && $$_$$_14.a.isNumber(t, {
+    if (n && Module_14.a.isNumber(t, {
       type: "error",
       widgetId: e,
       messageId: "argNotNumber",
@@ -83,10 +83,10 @@ function fi(e, t) {
     })) {
       n.move_forward(t)
       var r = n.get_position()
-      a.j(e, r)
+      Module_12.j(e, r)
     }
   } else {
-    $$_$$_14.a.log({
+    Module_14.a.log({
       type: "error",
       messageId: "argNotNumber",
       widgetId: e,
@@ -100,7 +100,7 @@ function hi(e, t) {
   if ("number" === typeof t) {
     fi(e, -t)
   } else {
-    $$_$$_14.a.log({
+    Module_14.a.log({
       type: "error",
       messageId: "argNotNumber",
       widgetId: e,
@@ -112,11 +112,11 @@ function hi(e, t) {
 }
 function mi(e, t) {
   if ("number" === typeof t) {
-    a.h(e, {
+    Module_12.h(e, {
       rotation: t / 180 * Math.PI
     })
   } else {
-    $$_$$_14.a.log({
+    Module_14.a.log({
       type: "error",
       messageId: "argNotNumber",
       widgetId: e,
@@ -127,12 +127,12 @@ function mi(e, t) {
   }
 }
 function gi(e, t) {
-  var n = a.e(e)
+  var n = Module_12.e(e)
   if (n) {
     var r = t.x - n.x
     var o = t.y - n.y
     if (!(0 === r && 0 === o)) {
-      a.h(e, {
+      Module_12.h(e, {
         rotation: Math.atan2(o, r)
       })
     }
@@ -146,14 +146,14 @@ function bi(e, t, n, r) {
   var o
   if ("string" === typeof t) {
     if (t.includes("ACTOR") || Qi(e, t)) {
-      if ($$_$$_14.a.isNumber(n, {
+      if (Module_14.a.isNumber(n, {
         type: "error",
         widgetId: e,
         messageId: "argNotNumber",
         values: {
           name: "间隔时间"
         }
-      }) && $$_$$_14.a.isNumber(r, {
+      }) && Module_14.a.isNumber(r, {
         type: "error",
         widgetId: e,
         messageId: "argNotNumber",
@@ -161,9 +161,9 @@ function bi(e, t, n, r) {
           name: "重复次数"
         }
       })) {
-        $$_$$_14.a.range(n, {
-          min: $$_$$_144.d,
-          max: $$_$$_144.b
+        Module_14.a.range(n, {
+          min: Module_144.d,
+          max: Module_144.b
         }, {
           type: "warning",
           widgetId: e,
@@ -172,22 +172,22 @@ function bi(e, t, n, r) {
         _i.delete(e)
         var i
         var s
-        var /* [auto-meaningful-name] */a$bE$attributes = a.b(e).attributes
-        var /* [auto-meaningful-name] */a$bE$attributes$actionList = a$bE$attributes.actionList
-        var /* [auto-meaningful-name] */a$bE$attributes$selectedStyleId = a$bE$attributes.selectedStyleId
+        var /* [auto-meaningful-name] */Module_12$bE$attributes = Module_12.b(e).attributes
+        var /* [auto-meaningful-name] */Module_12$bE$attributes$actionList = Module_12$bE$attributes.actionList
+        var /* [auto-meaningful-name] */Module_12$bE$attributes$selectedStyleId = Module_12$bE$attributes.selectedStyleId
         var d = []
         if (t.includes("ACTOR")) {
-          d = (null === (i = a$bE$attributes$actionList.find(function (e) {
+          d = (null === (i = Module_12$bE$attributes$actionList.find(function (e) {
             return e.id === t
           })) || undefined === i ? undefined : i.styleList) || []
         } else {
-          d = (null === (s = a$bE$attributes$actionList.find(function (e) {
+          d = (null === (s = Module_12$bE$attributes$actionList.find(function (e) {
             return e.name === t
           })) || undefined === s ? undefined : s.styleList) || []
         }
         if ((null === (o = d) || undefined === o ? undefined : o.length) && n && r) {
           var p = d.findIndex(function (e) {
-            return e.id === a$bE$attributes$selectedStyleId
+            return e.id === Module_12$bE$attributes$selectedStyleId
           })
           if (-1 === p) {
             p = 0
@@ -214,14 +214,14 @@ function bi(e, t, n, r) {
         }
       }
     } else {
-      $$_$$_14.a.log({
+      Module_14.a.log({
         type: "error",
         widgetId: e,
         messageId: "actorActionNameNotExists"
       })
     }
   } else {
-    $$_$$_14.a.log({
+    Module_14.a.log({
       type: "error",
       widgetId: e,
       messageId: "mustToBeString",
@@ -235,14 +235,14 @@ function yi(e) {
   _i.delete(e)
 }
 function Ei(e, t) {
-  a.h(e, {
+  Module_12.h(e, {
     selectedStyleId: t
   })
 }
 function Oi(e, t) {
   if ("__random" === t) {
     var n = Lodash.random(-1 * Math.PI, Math.PI)
-    a.h(e, {
+    Module_12.h(e, {
       rotation: n
     })
   } else if ("__mouse" === t) {
@@ -255,7 +255,7 @@ function Oi(e, t) {
       gi(e, o)
     }
   } else {
-    var i = a.e(t)
+    var i = Module_12.e(t)
     if (!i) {
       return
     }
@@ -267,7 +267,7 @@ function wi(e, t, n) {
   if (r) {
     var o = r.actors.get_actor(e)
     var /* [auto-meaningful-name] */o$value = o.value
-    if (!(0, o.is_error)(o$value) && $$_$$_14.a.isNumber(n, {
+    if (!(0, o.is_error)(o$value) && Module_14.a.isNumber(n, {
       type: "error",
       widgetId: e,
       messageId: "argNotNumber",
@@ -275,7 +275,7 @@ function wi(e, t, n) {
         name: "旋转角度"
       }
     })) {
-      var a = $$_$$_691_65.b(n)
+      var a = Module_65.b(n)
       o$value.rotate_around_actor(t, a)
     }
   }
@@ -301,14 +301,14 @@ function Ci(e, t) {
   }
 }
 function Ti(e, t, n) {
-  if ($$_$$_14.a.isNumber(t, {
+  if (Module_14.a.isNumber(t, {
     type: "error",
     widgetId: e,
     messageId: "argNotNumber",
     values: {
       name: "x坐标"
     }
-  }) && $$_$$_14.a.isNumber(n, {
+  }) && Module_14.a.isNumber(n, {
     type: "error",
     widgetId: e,
     messageId: "argNotNumber",
@@ -316,7 +316,7 @@ function Ti(e, t, n) {
       name: "y坐标"
     }
   })) {
-    a.j(e, {
+    Module_12.j(e, {
       x: t,
       y: n
     })
@@ -336,7 +336,7 @@ function Si(e, t) {
     var /* [auto-meaningful-name] */n$get_view$clientHeight = n.get_view().clientHeight
     var i = Lodash.random(-1 * n$get_view$clientWidth, n$get_view$clientWidth)
     var s = Lodash.random(-1 * n$get_view$clientHeight, n$get_view$clientHeight)
-    a.j(e, {
+    Module_12.j(e, {
       x: i,
       y: s
     })
@@ -353,7 +353,7 @@ function Si(e, t) {
     if (l) {
       var u = l.x
       var d = l.y
-      a.j(e, {
+      Module_12.j(e, {
         x: u,
         y: d
       })
@@ -363,16 +363,16 @@ function Si(e, t) {
       })
     }
   } else {
-    var p = a.e(t)
+    var p = Module_12.e(t)
     if (!p) {
       return
     }
-    a.j(e, p)
+    Module_12.j(e, p)
     Ci(e, p)
   }
 }
 function Ai(e, t) {
-  if ($$_$$_14.a.isNumber(t, {
+  if (Module_14.a.isNumber(t, {
     type: "error",
     widgetId: e,
     messageId: "argNotNumber",
@@ -380,7 +380,7 @@ function Ai(e, t) {
       name: "x坐标"
     }
   })) {
-    a.j(e, {
+    Module_12.j(e, {
       x: t
     })
     Ci(e, {
@@ -389,7 +389,7 @@ function Ai(e, t) {
   }
 }
 function Ii(e, t) {
-  if ($$_$$_14.a.isNumber(t, {
+  if (Module_14.a.isNumber(t, {
     type: "error",
     widgetId: e,
     messageId: "argNotNumber",
@@ -397,7 +397,7 @@ function Ii(e, t) {
       name: "y坐标"
     }
   })) {
-    a.j(e, {
+    Module_12.j(e, {
       y: t
     })
     Ci(e, {
@@ -407,9 +407,9 @@ function Ii(e, t) {
 }
 function ji(e, t, n) {
   if ("number" === typeof t) {
-    var r = a.e(e)
+    var r = Module_12.e(e)
     if (r) {
-      if (!$$_$$_14.a.isNumber(t, {
+      if (!Module_14.a.isNumber(t, {
         type: "error",
         widgetId: e,
         messageId: "argNotNumber",
@@ -419,7 +419,7 @@ function ji(e, t, n) {
       })) {
         return
       }
-      a.j(e, {
+      Module_12.j(e, {
         x: r.x + n * t
       })
       Ci(e, {
@@ -427,7 +427,7 @@ function ji(e, t, n) {
       }, "x")
     }
   } else {
-    $$_$$_14.a.log({
+    Module_14.a.log({
       type: "error",
       messageId: "argNotNumber",
       widgetId: e,
@@ -439,8 +439,8 @@ function ji(e, t, n) {
 }
 function Ni(e, t, n) {
   if ("number" === typeof t) {
-    var r = a.e(e)
-    if (r && $$_$$_14.a.isNumber(t, {
+    var r = Module_12.e(e)
+    if (r && Module_14.a.isNumber(t, {
       type: "error",
       widgetId: e,
       messageId: "argNotNumber",
@@ -448,7 +448,7 @@ function Ni(e, t, n) {
         name: "y坐标"
       }
     })) {
-      a.j(e, {
+      Module_12.j(e, {
         y: r.y + n * t
       })
       Ci(e, {
@@ -456,7 +456,7 @@ function Ni(e, t, n) {
       }, "y")
     }
   } else {
-    $$_$$_14.a.log({
+    Module_14.a.log({
       type: "error",
       messageId: "argNotNumber",
       widgetId: e,
@@ -470,7 +470,7 @@ function Ri(e, t, n, r) {
   return ki.apply(this, arguments)
 }
 function ki() {
-  return (ki = $$_$$_7.a(RegeneratorRuntime.mark(function e(t, n, r, o) {
+  return (ki = Module_7.a(RegeneratorRuntime.mark(function e(t, n, r, o) {
     var i
     var s
     var c
@@ -482,7 +482,7 @@ function ki() {
               e.next = 3
               break
             }
-            $$_$$_14.a.log({
+            Module_14.a.log({
               type: "error",
               messageId: "argNotNumber",
               widgetId: t,
@@ -496,7 +496,7 @@ function ki() {
               e.next = 6
               break
             }
-            $$_$$_14.a.log({
+            Module_14.a.log({
               type: "error",
               messageId: "argNotNumber",
               widgetId: t,
@@ -506,13 +506,13 @@ function ki() {
             })
             return e.abrupt("return")
           case 6:
-            if (i = Uo(t), s = a.e(t), i && s) {
+            if (i = Uo(t), s = Module_12.e(t), i && s) {
               e.next = 10
               break
             }
             return e.abrupt("return")
           case 10:
-            if (o < 0 && $$_$$_14.a.log({
+            if (o < 0 && Module_14.a.log({
               type: "warning",
               messageId: "valueOutOfRange",
               widgetId: t
@@ -526,12 +526,12 @@ function ki() {
             c = s.x + n * r
             e.next = 17
             return i.stage_animation.compose_tween(t, {
-              variation_type: $$_$$_105.f.TO,
+              variation_type: Module_105.f.TO,
               tween_vars: {
                 position_x: c,
                 duration: o,
                 on_complete: function () {
-                  a.j(t, {
+                  Module_12.j(t, {
                     x: c
                   })
                 }
@@ -549,7 +549,7 @@ function xi(e, t, n, r) {
   return Di.apply(this, arguments)
 }
 function Di() {
-  return (Di = $$_$$_7.a(RegeneratorRuntime.mark(function e(t, n, r, o) {
+  return (Di = Module_7.a(RegeneratorRuntime.mark(function e(t, n, r, o) {
     var i
     var s
     var c
@@ -561,7 +561,7 @@ function Di() {
               e.next = 3
               break
             }
-            $$_$$_14.a.log({
+            Module_14.a.log({
               type: "error",
               messageId: "argNotNumber",
               widgetId: t,
@@ -575,7 +575,7 @@ function Di() {
               e.next = 6
               break
             }
-            $$_$$_14.a.log({
+            Module_14.a.log({
               type: "error",
               messageId: "argNotNumber",
               widgetId: t,
@@ -585,13 +585,13 @@ function Di() {
             })
             return e.abrupt("return")
           case 6:
-            if (i = Uo(t), s = a.e(t), i && s) {
+            if (i = Uo(t), s = Module_12.e(t), i && s) {
               e.next = 10
               break
             }
             return e.abrupt("return")
           case 10:
-            if (o < 0 && $$_$$_14.a.log({
+            if (o < 0 && Module_14.a.log({
               type: "warning",
               messageId: "valueOutOfRange",
               widgetId: t
@@ -605,12 +605,12 @@ function Di() {
             c = s.y + n * r
             e.next = 17
             return i.stage_animation.compose_tween(t, {
-              variation_type: $$_$$_105.f.TO,
+              variation_type: Module_105.f.TO,
               tween_vars: {
                 position_y: c,
                 duration: o,
                 on_complete: function () {
-                  a.j(t, {
+                  Module_12.j(t, {
                     y: c
                   })
                 }
@@ -628,7 +628,7 @@ function Mi(e, t, n, r) {
   return Li.apply(this, arguments)
 }
 function Li() {
-  return (Li = $$_$$_7.a(RegeneratorRuntime.mark(function e(t, n, r, o) {
+  return (Li = Module_7.a(RegeneratorRuntime.mark(function e(t, n, r, o) {
     var i
     return RegeneratorRuntime.wrap(function (e) {
       for (;;) {
@@ -638,7 +638,7 @@ function Li() {
               e.next = 3
               break
             }
-            $$_$$_14.a.log({
+            Module_14.a.log({
               type: "error",
               messageId: "argNotNumber",
               widgetId: t,
@@ -652,7 +652,7 @@ function Li() {
               e.next = 6
               break
             }
-            $$_$$_14.a.log({
+            Module_14.a.log({
               type: "error",
               messageId: "argNotNumber",
               widgetId: t,
@@ -666,7 +666,7 @@ function Li() {
               e.next = 9
               break
             }
-            $$_$$_14.a.log({
+            Module_14.a.log({
               type: "error",
               messageId: "argNotNumber",
               widgetId: t,
@@ -682,7 +682,7 @@ function Li() {
             }
             return e.abrupt("return")
           case 12:
-            if (n < 0 && $$_$$_14.a.log({
+            if (n < 0 && Module_14.a.log({
               type: "warning",
               messageId: "valueOutOfRange",
               widgetId: t
@@ -695,13 +695,13 @@ function Li() {
           case 16:
             e.next = 18
             return i.stage_animation.compose_tween(t, {
-              variation_type: $$_$$_105.f.TO,
+              variation_type: Module_105.f.TO,
               tween_vars: {
                 position_x: r,
                 position_y: o,
                 duration: n,
                 on_complete: function () {
-                  a.j(t, {
+                  Module_12.j(t, {
                     x: r,
                     y: o
                   })
@@ -717,13 +717,13 @@ function Li() {
   }))).apply(this, arguments)
 }
 function Pi(e, t) {
-  a.l(e, t)
+  Module_12.l(e, t)
 }
 function Bi(e, t) {
   return Fi.apply(this, arguments)
 }
 function Fi() {
-  return (Fi = $$_$$_7.a(RegeneratorRuntime.mark(function e(t, n) {
+  return (Fi = Module_7.a(RegeneratorRuntime.mark(function e(t, n) {
     var r
     var o
     return RegeneratorRuntime.wrap(function (e) {
@@ -742,7 +742,7 @@ function Fi() {
             }
             return e.abrupt("return")
           case 6:
-            if ($$_$$_14.a.isNumber(n, {
+            if (Module_14.a.isNumber(n, {
               type: "error",
               widgetId: t,
               messageId: "argNotNumber",
@@ -759,7 +759,7 @@ function Fi() {
             o.set_alpha(0)
             e.next = 12
             return r.stage_animation.compose_tween(t, {
-              variation_type: $$_$$_105.f.TO,
+              variation_type: Module_105.f.TO,
               tween_vars: {
                 alpha: 1,
                 duration: n
@@ -777,7 +777,7 @@ function Gi(e, t) {
   return Wi.apply(this, arguments)
 }
 function Wi() {
-  return (Wi = $$_$$_7.a(RegeneratorRuntime.mark(function e(t, n) {
+  return (Wi = Module_7.a(RegeneratorRuntime.mark(function e(t, n) {
     var r
     return RegeneratorRuntime.wrap(function (e) {
       for (;;) {
@@ -789,7 +789,7 @@ function Wi() {
             }
             return e.abrupt("return")
           case 3:
-            if ($$_$$_14.a.isNumber(n, {
+            if (Module_14.a.isNumber(n, {
               type: "error",
               widgetId: t,
               messageId: "argNotNumber",
@@ -804,7 +804,7 @@ function Wi() {
           case 5:
             e.next = 7
             return r.stage_animation.compose_tween(t, {
-              variation_type: $$_$$_105.f.TO,
+              variation_type: Module_105.f.TO,
               tween_vars: {
                 alpha: 0,
                 duration: n
@@ -819,7 +819,7 @@ function Wi() {
   }))).apply(this, arguments)
 }
 function Ui(e, t) {
-  if (a.d(e) && $$_$$_14.a.isNumber(t, {
+  if (Module_12.d(e) && Module_14.a.isNumber(t, {
     type: "error",
     widgetId: e,
     messageId: "argNotNumber",
@@ -832,14 +832,14 @@ function Ui(e, t) {
       y: t,
       ratio: false
     }
-    a.h(e, {
+    Module_12.h(e, {
       scaleAndLock: n
     })
   }
 }
 function Hi(e, t, n) {
-  var r = a.d(e)
-  if (r && $$_$$_14.a.isNumber(t, {
+  var r = Module_12.d(e)
+  if (r && Module_14.a.isNumber(t, {
     type: "error",
     widgetId: e,
     messageId: "argNotNumber",
@@ -853,14 +853,14 @@ function Hi(e, t, n) {
       y: o,
       ratio: false
     }
-    a.h(e, {
+    Module_12.h(e, {
       scaleAndLock: i
     })
   }
 }
 function Vi(e, t, n) {
-  var r = a.d(e)
-  if (r && $$_$$_14.a.isNumber(n, {
+  var r = Module_12.d(e)
+  if (r && Module_14.a.isNumber(n, {
     type: "error",
     widgetId: e,
     messageId: "argNotNumber",
@@ -870,14 +870,14 @@ function Vi(e, t, n) {
   })) {
     n /= 100
     var o
-    var i = $$_$$_6.a({}, r.scaleAndLock || {
+    var i = Module_6.a({}, r.scaleAndLock || {
       x: 1,
       y: 1,
       ratio: false
     })
     i.ratio = false
     o = "scale_x" === t ? i.x = n : "scale_y" === t ? i.y = n : i.x = i.y = n
-    $$_$$_14.a.range(o, {
+    Module_14.a.range(o, {
       min: .01,
       max: 100
     }, {
@@ -885,15 +885,15 @@ function Vi(e, t, n) {
       widgetId: e,
       messageId: "scaleOutOfRange"
     })
-    a.h(e, {
+    Module_12.h(e, {
       scaleAndLock: i
     })
   }
 }
 function zi(e, t) {
-  var n = a.d(e)
+  var n = Module_12.d(e)
   if (n) {
-    var r = $$_$$_6.a({}, n.scaleAndLock || {
+    var r = Module_6.a({}, n.scaleAndLock || {
       x: 1,
       y: 1,
       ratio: false
@@ -906,8 +906,8 @@ function zi(e, t) {
   }
 }
 function Yi(e, t, n, r) {
-  var o = a.d(e)
-  if (o && $$_$$_14.a.isNumber(n, {
+  var o = Module_12.d(e)
+  if (o && Module_14.a.isNumber(n, {
     type: "error",
     widgetId: e,
     messageId: "argNotNumber",
@@ -916,14 +916,14 @@ function Yi(e, t, n, r) {
     }
   })) {
     var i
-    var s = $$_$$_6.a({}, o.scaleAndLock || {
+    var s = Module_6.a({}, o.scaleAndLock || {
       x: 1,
       y: 1,
       ratio: false
     })
     s.ratio = false
     i = "scale_x" === t ? s.x += n / 100 * r : "scale_y" === t ? s.y += n / 100 * r : s.x = s.y = s.x + n / 100 * r
-    $$_$$_14.a.range(i, {
+    Module_14.a.range(i, {
       min: .01,
       max: 100
     }, {
@@ -931,14 +931,14 @@ function Yi(e, t, n, r) {
       widgetId: e,
       messageId: "scaleOutOfRange"
     })
-    a.h(e, {
+    Module_12.h(e, {
       scaleAndLock: s
     })
   }
 }
 function Ki(e, t, n) {
-  var r = a.b(e)
-  if (r && $$_$$_14.a.isNumber(t, {
+  var r = Module_12.b(e)
+  if (r && Module_14.a.isNumber(t, {
     type: "error",
     widgetId: e,
     messageId: "argNotNumber",
@@ -947,7 +947,7 @@ function Ki(e, t, n) {
     }
   })) {
     var o = "number" === typeof r.opacity ? r.opacity : 100
-    $$_$$_14.a.range(o + t * n, {
+    Module_14.a.range(o + t * n, {
       min: 0,
       max: 100
     }, {
@@ -956,12 +956,12 @@ function Ki(e, t, n) {
       messageId: "opacityOutOfRange"
     })
     var i = Math.min(100, Math.max(0, o + t * n))
-    a.i(e, i)
+    Module_12.i(e, i)
   }
 }
 function qi(e, t) {
   var n = []
-  var r = a.b(e)
+  var r = Module_12.b(e)
   return r ? (r.attributes.actionList.some(function (e) {
     var r = e.styleList.map(function (e) {
       return e.id
@@ -984,7 +984,7 @@ function Xi(e) {
 }
 function Qi(e, t) {
   var n = Ko(e)
-  var r = a.b(e)
+  var r = Module_12.b(e)
   if (r && n) {
     return r.attributes.actionList.some(function (e) {
       return e.name === t
@@ -993,7 +993,7 @@ function Qi(e, t) {
 }
 function Zi(e, t) {
   var n = Ko(e)
-  var r = a.b(e)
+  var r = Module_12.b(e)
   if (!r || !n) {
     return null
   }
@@ -1011,14 +1011,14 @@ function Ji(e, t, n) {
 }
 function $i(e, t) {
   var n = Ko(e)
-  var r = a.b(e)
+  var r = Module_12.b(e)
   if (!r || !n) {
     return -1
   }
   var o
   var /* [auto-meaningful-name] */r$attributes$actionList = r.attributes.actionList
   var s = -1
-  var c = $$_$$_47_index.a(r$attributes$actionList)
+  var c = Module_47.a(r$attributes$actionList)
   try {
     for (c.s(); !(o = c.n()).done;) {
       var l = o.value.styleList.findIndex(function (e) {
@@ -1043,7 +1043,7 @@ function ea(e, t, n) {
   }) && n)
 }
 function ta(e, t) {
-  var n = a.d(e)
+  var n = Module_12.d(e)
   if (n) {
     switch (t) {
       case "scale":
@@ -1059,7 +1059,7 @@ function ta(e, t) {
 }
 function na(e, t) {
   _i.delete(e)
-  a.h(e, {
+  Module_12.h(e, {
     selectedStyleId: t
   })
 }
@@ -1067,13 +1067,13 @@ function ra(e, t, n) {
   var r = t
   if ("string" === typeof n) {
     if (!n || n.includes("ACTOR") || Qi(e, n)) {
-      if (t !== $$_$$_9.h) {
+      if (t !== Module_9.h) {
         if ("object" !== typeof t && "boolean" !== typeof t) {
           if ("number" === typeof t || t.includes("STYLE")) {
             if ("number" === typeof t) {
               var o = ea(e, n, t)
               if (!o) {
-                return void $$_$$_14.a.log({
+                return void Module_14.a.log({
                   type: "error",
                   widgetId: e,
                   messageId: "actorStyleIndexNotExists"
@@ -1086,7 +1086,7 @@ function ra(e, t, n) {
               if (i >= 0) {
                 var s = Ji(e, n, i)
                 if (!s) {
-                  return void $$_$$_14.a.log({
+                  return void Module_14.a.log({
                     type: "error",
                     widgetId: e,
                     messageId: "actorStyleIndexNotExists"
@@ -1096,11 +1096,11 @@ function ra(e, t, n) {
               }
             }
             _i.delete(e)
-            a.h(e, {
+            Module_12.h(e, {
               selectedStyleId: r
             })
           } else {
-            $$_$$_14.a.log({
+            Module_14.a.log({
               type: "error",
               widgetId: e,
               messageId: "actorStyleIndexNotExists",
@@ -1110,7 +1110,7 @@ function ra(e, t, n) {
             })
           }
         } else {
-          $$_$$_14.a.log({
+          Module_14.a.log({
             type: "error",
             widgetId: e,
             messageId: "actorStyleIndexNotExists",
@@ -1120,7 +1120,7 @@ function ra(e, t, n) {
           })
         }
       } else {
-        $$_$$_14.a.log({
+        Module_14.a.log({
           type: "error",
           widgetId: e,
           messageId: "actorStyleIndexNotExists",
@@ -1130,7 +1130,7 @@ function ra(e, t, n) {
         })
       }
     } else {
-      $$_$$_14.a.log({
+      Module_14.a.log({
         type: "error",
         widgetId: e,
         messageId: "actorActionNameNotExists",
@@ -1140,7 +1140,7 @@ function ra(e, t, n) {
       })
     }
   } else {
-    $$_$$_14.a.log({
+    Module_14.a.log({
       type: "error",
       widgetId: e,
       messageId: "mustToBeString",
@@ -1152,15 +1152,15 @@ function ra(e, t, n) {
 }
 function oa(e, t) {
   if (Ko(e)) {
-    var /* [auto-meaningful-name] */a$dE$selectedStyleId = a.d(e).selectedStyleId
-    if (a$dE$selectedStyleId) {
-      var r = qi(e, a$dE$selectedStyleId)
+    var /* [auto-meaningful-name] */Module_12$dE$selectedStyleId = Module_12.d(e).selectedStyleId
+    if (Module_12$dE$selectedStyleId) {
+      var r = qi(e, Module_12$dE$selectedStyleId)
       if (null === r || undefined === r ? undefined : r.length) {
         var o = 0
         if ("random" === t) {
           o = Math.floor(Math.random() * r.length)
         } else {
-          var i = r.indexOf(a$dE$selectedStyleId)
+          var i = r.indexOf(Module_12$dE$selectedStyleId)
           if (i <= -1) {
             return
           }
@@ -1173,14 +1173,14 @@ function oa(e, t) {
 }
 function ia(e) {
   var t
-  return Math.ceil((null === (t = a.e(e)) || undefined === t ? undefined : t.x) || 0)
+  return Math.ceil((null === (t = Module_12.e(e)) || undefined === t ? undefined : t.x) || 0)
 }
 function aa(e) {
   var t
-  return Math.ceil((null === (t = a.e(e)) || undefined === t ? undefined : t.y) || 0)
+  return Math.ceil((null === (t = Module_12.e(e)) || undefined === t ? undefined : t.y) || 0)
 }
 function sa(e) {
-  var t = a.d(e)
+  var t = Module_12.d(e)
   if (t) {
     return Math.ceil(t.rotation / Math.PI * 180)
   }
@@ -1191,7 +1191,7 @@ function ca(e, t, n, r) {
     var i = o.components.get_actor_dialog_manager()
     if (i) {
       if ("" !== t) {
-        if ($$_$$_14.a.isNumber(r, {
+        if (Module_14.a.isNumber(r, {
           type: "error",
           widgetId: e,
           messageId: "argNotNumber",
@@ -1215,21 +1215,21 @@ function ca(e, t, n, r) {
 }
 function la(e, t) {
   var n = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : 1 / 0
-  ca(e, t, $$_$$_691_126.a.SAYING, n)
+  ca(e, t, Module_126.a.SAYING, n)
 }
 function ua(e) {
   switch (e) {
     case "__boundary_left":
-      return $$_$$_105.b.LEFT
+      return Module_105.b.LEFT
     case "__boundary_right":
-      return $$_$$_105.b.RIGHT
+      return Module_105.b.RIGHT
     case "__boundary_top":
-      return $$_$$_105.b.TOP
+      return Module_105.b.TOP
     default:
-      return $$_$$_105.b.BOTTOM
+      return Module_105.b.BOTTOM
   }
 }
-var da = [$$_$$_105.b.LEFT, $$_$$_105.b.RIGHT, $$_$$_105.b.TOP, $$_$$_105.b.BOTTOM]
+var da = [Module_105.b.LEFT, Module_105.b.RIGHT, Module_105.b.TOP, Module_105.b.BOTTOM]
 var pa = new Set()
 function fa(e) {
   pa.add(e)
@@ -1320,33 +1320,33 @@ function Ea(e, t) {
 }
 function Oa(e, t) {
   var n = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : 1 / 0
-  ca(e, t, $$_$$_691_126.a.THINKING, n)
+  ca(e, t, Module_126.a.THINKING, n)
 }
 function wa(e, t, n) {
-  $_67_index.b(function () {
+  Module_67.b(function () {
     return _a(e, t)
   }, n)
 }
 function Ca(e, t, n) {
-  $_67_index.b(function () {
+  Module_67.b(function () {
     return va(e, t)
   }, n)
 }
 function Ta(e, t, n) {
   if ("__mouse" === t) {
-    $_67_index.b(function () {
+    Module_67.b(function () {
       return ba(e)
     }, n)
   }
 }
 function Sa(e, t) {
-  $_67_index.b(function () {
+  Module_67.b(function () {
     return ya(e)
   }, t)
 }
 function Aa(e, t, n) {
   if ("__boundary_any" !== t) {
-    $_67_index.b(function () {
+    Module_67.b(function () {
       return Ea(e, t)
     }, n)
   } else {
@@ -1354,9 +1354,9 @@ function Aa(e, t, n) {
   }
 }
 function Ia(e, t) {
-  var n = a.d(e)
+  var n = Module_12.d(e)
   if (n) {
-    var r = $$_$$_6.a({}, n.flipped || {
+    var r = Module_6.a({}, n.flipped || {
       vertical: false,
       horizontal: false
     })
@@ -1365,13 +1365,13 @@ function Ia(e, t) {
     } else {
       r.vertical = true
     }
-    a.h(e, {
+    Module_12.h(e, {
       flipped: r
     })
   }
 }
 function ja(e, t) {
-  var n = a.d(e)
+  var n = Module_12.d(e)
   if (!n) {
     return false
   }
@@ -1418,7 +1418,7 @@ function ka(e) {
 }
 function xa(e) {
   try {
-    return $$_$$_$$_$$_$$_$$_src_shared_tools_index.l(Color(e))
+    return Src_shared_tools_index.l(Color(e))
   } catch (t) {
     return ""
   }
@@ -1426,7 +1426,7 @@ function xa(e) {
 function Da(e, t, n, r) {
   try {
     var o = Color.rgb(e, t, n).alpha(r / 100)
-    return $$_$$_$$_$$_$$_$$_src_shared_tools_index.l(o)
+    return Src_shared_tools_index.l(o)
   } catch (i) {
     return ""
   }
@@ -1434,7 +1434,7 @@ function Da(e, t, n, r) {
 function Ma(e, t, n, r) {
   try {
     var o = Color.hsv(e, t, n).alpha(r / 100)
-    return $$_$$_$$_$$_$$_$$_src_shared_tools_index.l(o)
+    return Src_shared_tools_index.l(o)
   } catch (i) {
     return ""
   }
@@ -1453,13 +1453,13 @@ function Pa(e) {
   return null === t || undefined === t ? undefined : t.get_brush()
 }
 function Ba(e) {
-  var t = a.d(e)
+  var t = Module_12.d(e)
   var n = null === t || undefined === t ? undefined : t.isPenDown
   var r = Ko(e)
   var o = null === r || undefined === r ? undefined : r.get_brush()
   if (r && o) {
     var i = r.get_position()
-    a.j(e, i)
+    Module_12.j(e, i)
     if (n) {
       o.set_pen_down()
     } else {
@@ -1481,7 +1481,7 @@ function Fa(e, t, n) {
         Ba(e)
       }
     } else {
-      $$_$$_14.a.log({
+      Module_14.a.log({
         type: "error",
         messageId: "argNotNumber",
         widgetId: e,
@@ -1491,7 +1491,7 @@ function Fa(e, t, n) {
       })
     }
   } else {
-    $$_$$_14.a.log({
+    Module_14.a.log({
       type: "error",
       messageId: "argNotNumber",
       widgetId: e,
@@ -1506,7 +1506,7 @@ function Ga(e, t, n, r, o) {
     if ("number" === typeof n) {
       if ("number" === typeof r) {
         if ("number" === typeof o) {
-          a.h(e, {
+          Module_12.h(e, {
             updateAt: Date.now()
           })
           var i = Ko(e)
@@ -1519,7 +1519,7 @@ function Ga(e, t, n, r, o) {
             Ba(e)
           }
         } else {
-          $$_$$_14.a.log({
+          Module_14.a.log({
             type: "error",
             messageId: "argNotNumber",
             widgetId: e,
@@ -1529,7 +1529,7 @@ function Ga(e, t, n, r, o) {
           })
         }
       } else {
-        $$_$$_14.a.log({
+        Module_14.a.log({
           type: "error",
           messageId: "argNotNumber",
           widgetId: e,
@@ -1539,7 +1539,7 @@ function Ga(e, t, n, r, o) {
         })
       }
     } else {
-      $$_$$_14.a.log({
+      Module_14.a.log({
         type: "error",
         messageId: "argNotNumber",
         widgetId: e,
@@ -1549,7 +1549,7 @@ function Ga(e, t, n, r, o) {
       })
     }
   } else {
-    $$_$$_14.a.log({
+    Module_14.a.log({
       type: "error",
       messageId: "argNotNumber",
       widgetId: e,
@@ -1563,7 +1563,7 @@ function Wa(e, t) {
   return Ua.apply(this, arguments)
 }
 function Ua() {
-  return (Ua = $$_$$_7.a(RegeneratorRuntime.mark(function e(t, n) {
+  return (Ua = Module_7.a(RegeneratorRuntime.mark(function e(t, n) {
     var r
     var o
     var i
@@ -1576,7 +1576,7 @@ function Ua() {
               e.next = 3
               break
             }
-            $$_$$_14.a.log({
+            Module_14.a.log({
               type: "error",
               messageId: "argNotNumber",
               widgetId: t,
@@ -1607,7 +1607,7 @@ function Ha(e, t, n, r) {
   return Va.apply(this, arguments)
 }
 function Va() {
-  return (Va = $$_$$_7.a(RegeneratorRuntime.mark(function e(t, n, r, o) {
+  return (Va = Module_7.a(RegeneratorRuntime.mark(function e(t, n, r, o) {
     var i
     var s
     var c
@@ -1620,7 +1620,7 @@ function Va() {
               e.next = 3
               break
             }
-            $$_$$_14.a.log({
+            Module_14.a.log({
               type: "error",
               messageId: "argNotNumber",
               widgetId: t,
@@ -1634,7 +1634,7 @@ function Va() {
               e.next = 6
               break
             }
-            $$_$$_14.a.log({
+            Module_14.a.log({
               type: "error",
               messageId: "argNotNumber",
               widgetId: t,
@@ -1648,7 +1648,7 @@ function Va() {
               e.next = 9
               break
             }
-            $$_$$_14.a.log({
+            Module_14.a.log({
               type: "error",
               messageId: "argNotNumber",
               widgetId: t,
@@ -1658,7 +1658,7 @@ function Va() {
             })
             return e.abrupt("return")
           case 9:
-            if (a.h(t, {
+            if (Module_12.h(t, {
               updateAt: Date.now()
             }), i = Ko(t), s = null === i || undefined === i ? undefined : i.get_brush(), i && s) {
               e.next = 14
@@ -1701,7 +1701,7 @@ function za(e, t, n) {
         Ya(e, t, n, ia(e), aa(e))
       }
     } else {
-      $$_$$_14.a.log({
+      Module_14.a.log({
         type: "error",
         messageId: "argNotNumber",
         widgetId: e,
@@ -1711,7 +1711,7 @@ function za(e, t, n) {
       })
     }
   } else {
-    $$_$$_14.a.log({
+    Module_14.a.log({
       type: "error",
       messageId: "argNotNumber",
       widgetId: e,
@@ -1725,7 +1725,7 @@ function Ya(e, t, n, r, o) {
   return Ka.apply(this, arguments)
 }
 function Ka() {
-  return (Ka = $$_$$_7.a(RegeneratorRuntime.mark(function e(t, n, r, o, i) {
+  return (Ka = Module_7.a(RegeneratorRuntime.mark(function e(t, n, r, o, i) {
     var s
     var c
     var l
@@ -1740,7 +1740,7 @@ function Ka() {
               e.next = 4
               break
             }
-            $$_$$_14.a.log({
+            Module_14.a.log({
               type: "error",
               messageId: "argNotNumber",
               widgetId: t,
@@ -1754,7 +1754,7 @@ function Ka() {
               e.next = 7
               break
             }
-            $$_$$_14.a.log({
+            Module_14.a.log({
               type: "error",
               messageId: "argNotNumber",
               widgetId: t,
@@ -1768,7 +1768,7 @@ function Ka() {
               e.next = 10
               break
             }
-            $$_$$_14.a.log({
+            Module_14.a.log({
               type: "error",
               messageId: "argNotNumber",
               widgetId: t,
@@ -1782,7 +1782,7 @@ function Ka() {
               e.next = 13
               break
             }
-            $$_$$_14.a.log({
+            Module_14.a.log({
               type: "error",
               messageId: "argNotNumber",
               widgetId: t,
@@ -1796,7 +1796,7 @@ function Ka() {
               e.next = 16
               break
             }
-            $$_$$_14.a.log({
+            Module_14.a.log({
               type: "error",
               messageId: "argNotNumber",
               widgetId: t,
@@ -1806,7 +1806,7 @@ function Ka() {
             })
             return e.abrupt("return")
           case 16:
-            if (a.h(t, {
+            if (Module_12.h(t, {
               updateAt: Date.now()
             }), c = Ko(t), l = null === c || undefined === c ? undefined : c.get_brush(), c && l) {
               e.next = 21
@@ -1855,7 +1855,7 @@ function qa(e, t, n) {
         Xa(e, t, n, ia(e), aa(e))
       }
     } else {
-      $$_$$_14.a.log({
+      Module_14.a.log({
         type: "error",
         messageId: "argNotNumber",
         widgetId: e,
@@ -1865,7 +1865,7 @@ function qa(e, t, n) {
       })
     }
   } else {
-    $$_$$_14.a.log({
+    Module_14.a.log({
       type: "error",
       messageId: "argNotNumber",
       widgetId: e,
@@ -1879,7 +1879,7 @@ function Xa(e, t, n, r, o) {
   return Qa.apply(this, arguments)
 }
 function Qa() {
-  return (Qa = $$_$$_7.a(RegeneratorRuntime.mark(function e(t, n, r, o, i) {
+  return (Qa = Module_7.a(RegeneratorRuntime.mark(function e(t, n, r, o, i) {
     var s
     var c
     var l
@@ -1893,7 +1893,7 @@ function Qa() {
               e.next = 3
               break
             }
-            $$_$$_14.a.log({
+            Module_14.a.log({
               type: "error",
               messageId: "argNotNumber",
               widgetId: t,
@@ -1907,7 +1907,7 @@ function Qa() {
               e.next = 6
               break
             }
-            $$_$$_14.a.log({
+            Module_14.a.log({
               type: "error",
               messageId: "argNotNumber",
               widgetId: t,
@@ -1921,7 +1921,7 @@ function Qa() {
               e.next = 9
               break
             }
-            $$_$$_14.a.log({
+            Module_14.a.log({
               type: "error",
               messageId: "argNotNumber",
               widgetId: t,
@@ -1935,7 +1935,7 @@ function Qa() {
               e.next = 12
               break
             }
-            $$_$$_14.a.log({
+            Module_14.a.log({
               type: "error",
               messageId: "argNotNumber",
               widgetId: t,
@@ -1945,7 +1945,7 @@ function Qa() {
             })
             return e.abrupt("return")
           case 12:
-            if (a.h(t, {
+            if (Module_12.h(t, {
               updateAt: Date.now()
             }), s = Ko(t), c = null === s || undefined === s ? undefined : s.get_brush(), s && c) {
               e.next = 17
@@ -1985,7 +1985,7 @@ function Za(e) {
   if (!(null === t || undefined === t)) {
     t.set_pen_down()
   }
-  a.h(e, {
+  Module_12.h(e, {
     isPenDown: true
   })
 }
@@ -1994,23 +1994,23 @@ function Ja(e) {
   if (!(null === t || undefined === t)) {
     t.set_pen_up()
   }
-  a.h(e, {
+  Module_12.h(e, {
     isPenDown: false
   })
 }
 function $a(e, t) {
   var n = xa(t)
-  if ($$_$$_$$_$$_$$_$$_src_shared_tools_index.pb(n)) {
+  if (Src_shared_tools_index.pb(n)) {
     var r = n.slice(1)
     var o = Pa(e)
     if (!(null === o || undefined === o)) {
       o.set_color(r)
     }
-    a.h(e, {
+    Module_12.h(e, {
       color: n
     })
   } else {
-    $$_$$_14.a.log({
+    Module_14.a.log({
       type: "warning",
       messageId: "argNotColor",
       widgetId: e
@@ -2019,14 +2019,14 @@ function $a(e, t) {
 }
 function es(e, t) {
   var n = xa(t)
-  if ($$_$$_$$_$$_$$_$$_src_shared_tools_index.pb(n)) {
+  if (Src_shared_tools_index.pb(n)) {
     var r = n.slice(1)
     var o = Pa(e)
     if (!(null === o || undefined === o)) {
       o.set_fill_color(r)
     }
   } else {
-    $$_$$_14.a.log({
+    Module_14.a.log({
       type: "warning",
       messageId: "argNotColor",
       widgetId: e
@@ -2052,16 +2052,16 @@ function ns(e) {
 }
 function rs(e, t) {
   if ("number" === typeof t) {
-    var n = Math.max(Math.min(Math.round(t), $$_$$_277.e), 1)
+    var n = Math.max(Math.min(Math.round(t), Module_277.e), 1)
     var r = Pa(e)
     if (!(null === r || undefined === r)) {
       r.set_size(n)
     }
-    a.h(e, {
+    Module_12.h(e, {
       penSize: n
     })
   } else {
-    $$_$$_14.a.log({
+    Module_14.a.log({
       type: "error",
       messageId: "argNotNumber",
       widgetId: e,
@@ -2076,14 +2076,14 @@ function os(e, t, n) {
     var r = Pa(e)
     if (r) {
       var o = r.get_size() + t * n
-      var i = Math.max(Math.min(Math.round(o), $$_$$_277.e), 1)
+      var i = Math.max(Math.min(Math.round(o), Module_277.e), 1)
       r.set_size(i)
-      a.h(e, {
+      Module_12.h(e, {
         penSize: i
       })
     }
   } else {
-    $$_$$_14.a.log({
+    Module_14.a.log({
       type: "error",
       messageId: "argNotNumber",
       widgetId: e,
@@ -2123,7 +2123,7 @@ function as(e, t, n) {
         }
         var i = Ma(o[0], o[1], o[2], o[3])
         r.set_color(i.slice(1))
-        a.h(e, {
+        Module_12.h(e, {
           color: i
         })
       } else {
@@ -2132,7 +2132,7 @@ function as(e, t, n) {
       }
     }
   } else {
-    $$_$$_14.a.log({
+    Module_14.a.log({
       type: "error",
       messageId: "argNotNumber",
       widgetId: e,
@@ -2171,7 +2171,7 @@ function ss(e, t, n, r) {
         }
         var p = Ma(i[0], i[1], i[2], i[3])
         o.set_color(p.slice(1))
-        a.h(e, {
+        Module_12.h(e, {
           color: p
         })
       } else {
@@ -2180,7 +2180,7 @@ function ss(e, t, n, r) {
       }
     }
   } else {
-    $$_$$_14.a.log({
+    Module_14.a.log({
       type: "error",
       messageId: "argNotNumber",
       widgetId: e,
@@ -2225,7 +2225,7 @@ function ds(e, t) {
   var n = Ko(e)
   var r = null === n || undefined === n ? undefined : n.get_brush()
   if (n && r) {
-    var o = a.a(e)
+    var o = Module_12.a(e)
     if (o) {
       var /* [auto-meaningful-name] */o$widgetIds$length = o.widgetIds.length
       var s = n.get_z_index()

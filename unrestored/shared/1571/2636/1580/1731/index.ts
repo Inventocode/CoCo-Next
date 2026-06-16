@@ -6,12 +6,12 @@
 
 "use strict"
 
-var r = require("../1662/86")
-var o = require("./444")
+var r = require(/* 86 */"../1662/86")
+var o = require(/* 444 */"./444")
 r({
   target: "String",
   proto: true,
-  forced: require("./445")("bold")
+  forced: require(/* 445 */"./445")("bold")
 }, {
   bold: function () {
     return o(this, "b", "", "")

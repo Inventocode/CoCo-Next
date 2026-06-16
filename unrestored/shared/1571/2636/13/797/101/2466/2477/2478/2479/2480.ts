@@ -4,8 +4,8 @@
  * 模块 ID：2480
  */
 
-var r = require("../../../../../../253/2568/2569/2570/994/index")
-var i = require("../2523/1439/index")
+var r = require(/* 994 */"../../../../../../253/2568/2569/2570/994/index")
+var i = require(/* 1439 */"../2523/1439/index")
 module.exports = function (e, t, n, o) {
   var /* [auto-meaningful-name] */n$length = n.length
   var s = n$length

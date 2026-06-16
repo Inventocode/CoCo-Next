@@ -7,14 +7,14 @@
 "use strict"
 
 export { p as a }
-import * as /* [auto-meaningful-name] */$$_247 from "../247"
-import * as /* [auto-meaningful-name] */$$_585 from "../585"
-import * as /* [auto-meaningful-name] */$$_165 from "../165"
-import * as /* [auto-meaningful-name] */$$_586 from "../586"
-import * as /* [auto-meaningful-name] */$$_56 from "../56"
-import * as /* [auto-meaningful-name] */$$_36 from "../36"
-import * as /* [auto-meaningful-name] */$_589 from "./589"
-import * as /* [auto-meaningful-name] */$_590 from "./590"
+import * as /* [auto-meaningful-name] */Module_247 from /* 247 */"../247"
+import * as /* [auto-meaningful-name] */Module_585 from /* 585 */"../585"
+import * as /* [auto-meaningful-name] */Module_165 from /* 165 */"../165"
+import * as /* [auto-meaningful-name] */Module_586 from /* 586 */"../586"
+import * as /* [auto-meaningful-name] */Module_56 from /* 56 */"../56"
+import * as /* [auto-meaningful-name] */Module_36 from /* 36 */"../36"
+import * as /* [auto-meaningful-name] */Module_589 from /* 589 */"./589"
+import * as /* [auto-meaningful-name] */Module_590 from /* 590 */"./590"
 var h = function (t, e, r, n) {
   return new (r || (r = Promise))(function (o, i) {
     function a(t) {
@@ -294,7 +294,7 @@ var p = function () {
           case 1:
             return [
               2, t.sent().map(function (t) {
-                return new $_590.a(t.deviceId, t.label)
+                return new Module_590.a(t.deviceId, t.label)
               })
             ]
         }
@@ -530,34 +530,34 @@ var p = function () {
   t.prototype.getMediaElement = function (t, e) {
     var r = document.getElementById(t)
     if (!r) {
-      throw new $$_247.a("element with id '" + t + "' not found")
+      throw new Module_247.a("element with id '" + t + "' not found")
     }
     if (r.nodeName.toLowerCase() !== e.toLowerCase()) {
-      throw new $$_247.a("element with id '" + t + "' must be an " + e + " element")
+      throw new Module_247.a("element with id '" + t + "' must be an " + e + " element")
     }
     return r
   }
   t.prototype.decodeFromImage = function (t, e) {
     if (!t && !e) {
-      throw new $$_247.a("either imageElement with a src set or an url must be provided")
+      throw new Module_247.a("either imageElement with a src set or an url must be provided")
     }
     return e && !t ? this.decodeFromImageUrl(e) : this.decodeFromImageElement(t)
   }
   t.prototype.decodeFromVideo = function (t, e) {
     if (!t && !e) {
-      throw new $$_247.a("Either an element with a src set or an URL must be provided")
+      throw new Module_247.a("Either an element with a src set or an URL must be provided")
     }
     return e && !t ? this.decodeFromVideoUrl(e) : this.decodeFromVideoElement(t)
   }
   t.prototype.decodeFromVideoContinuously = function (t, e, r) {
     if (undefined === t && undefined === e) {
-      throw new $$_247.a("Either an element with a src set or an URL must be provided")
+      throw new Module_247.a("Either an element with a src set or an URL must be provided")
     }
     return e && !t ? this.decodeFromVideoUrlContinuously(e, r) : this.decodeFromVideoElementContinuously(t, r)
   }
   t.prototype.decodeFromImageElement = function (t) {
     if (!t) {
-      throw new $$_247.a("An image element must be provided.")
+      throw new Module_247.a("An image element must be provided.")
     }
     this.reset()
     var e = this.prepareImageElement(t)
@@ -574,7 +574,7 @@ var p = function () {
   }
   t.prototype._decodeFromVideoElementSetup = function (t) {
     if (!t) {
-      throw new $$_247.a("A video element must be provided.")
+      throw new Module_247.a("A video element must be provided.")
     }
     this.reset()
     var e = this.prepareVideoElement(t)
@@ -583,7 +583,7 @@ var p = function () {
   }
   t.prototype.decodeFromImageUrl = function (t) {
     if (!t) {
-      throw new $$_247.a("An URL must be provided.")
+      throw new Module_247.a("An URL must be provided.")
     }
     this.reset()
     var e = this.prepareImageElement()
@@ -594,7 +594,7 @@ var p = function () {
   }
   t.prototype.decodeFromVideoUrl = function (t) {
     if (!t) {
-      throw new $$_247.a("An URL must be provided.")
+      throw new Module_247.a("An URL must be provided.")
     }
     this.reset()
     var e = this.prepareVideoElement()
@@ -604,7 +604,7 @@ var p = function () {
   }
   t.prototype.decodeFromVideoUrlContinuously = function (t, e) {
     if (!t) {
-      throw new $$_247.a("An URL must be provided.")
+      throw new Module_247.a("An URL must be provided.")
     }
     this.reset()
     var r = this.prepareVideoElement()
@@ -696,14 +696,14 @@ var p = function () {
     return new Promise(function (o, a) {
       return function o(a, c) {
         if (n._stopAsyncDecode) {
-          c(new $$_36.a("Video stream has ended before any code could be detected."))
+          c(new Module_36.a("Video stream has ended before any code could be detected."))
           return void (n._stopAsyncDecode = undefined)
         }
         try {
           a(n.decode(t))
         } catch (l) {
-          var f = e && l instanceof $$_36.a
-          var h = l instanceof $$_165.a || l instanceof $$_56.a
+          var f = e && l instanceof Module_36.a
+          var h = l instanceof Module_165.a || l instanceof Module_56.a
           if (f || h && r) {
             return setTimeout(o, n._timeBetweenDecodingAttempts, a, c)
           }
@@ -725,8 +725,8 @@ var p = function () {
           setTimeout(n, r.timeBetweenScansMillis)
         } catch (f) {
           e(null, f)
-          var a = f instanceof $$_165.a || f instanceof $$_56.a
-          var c = f instanceof $$_36.a
+          var a = f instanceof Module_165.a || f instanceof Module_56.a
+          var c = f instanceof Module_36.a
           if (a || c) {
             setTimeout(n, r._timeBetweenDecodingAttempts)
           }
@@ -742,9 +742,9 @@ var p = function () {
     var e = this.getCaptureCanvasContext(t)
     this.drawImageOnCanvas(e, t)
     var r = this.getCaptureCanvas(t)
-    var n = new $_589.a(r)
-    var i = new $$_586.a(n)
-    return new $$_585.a(i)
+    var n = new Module_589.a(r)
+    var i = new Module_586.a(n)
+    return new Module_585.a(i)
   }
   t.prototype.getCaptureCanvasContext = function (t) {
     if (!this.captureCanvasContext) {

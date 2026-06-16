@@ -4,13 +4,13 @@
  * 模块 ID：232
  */
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_232_324 from "../../../../unrestored/shared/1571/2636/232/324"
+import * as /* [auto-meaningful-name] */Module_324 from /* 324 */"../../../../unrestored/shared/1571/2636/232/324"
 
 var object = {
   window: undefined,
   document: {
     getElementById: function (e) {
-      return e ? document.querySelector("#".concat($$_$$_$$_$$_unrestored_shared_1571_2636_232_324.a, " #").concat(e)) : null
+      return e ? document.querySelector("#".concat(Module_324.a, " #").concat(e)) : null
     }
   },
   history: undefined,

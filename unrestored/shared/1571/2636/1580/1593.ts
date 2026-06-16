@@ -4,4 +4,4 @@
  * 模块 ID：1593
  */
 
-require("./1581/442/index")("split")
+require(/* 442 */"./1581/442/index")("split")

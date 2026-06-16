@@ -8,20 +8,20 @@
 
 import { lt, ft } from "./index__part-12"
 var pt
-import * as /* [auto-meaningful-name] */$_390 from "./390"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
-import * as /* [auto-meaningful-name] */$_1213 from "./1213"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import * as /* [auto-meaningful-name] */$_748_index from "./748/index"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import { useSelector } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { useState, useEffect } from "react"
+import * as /* [auto-meaningful-name] */Module_390 from /* 390 */"./390"
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */Module_1213 from /* 1213 */"./1213"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import * as /* [auto-meaningful-name] */Module_748 from /* 748 */"./748/index"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import { useSelector } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { useState, useEffect } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_136 from "./136"
-import /* [auto-meaningful-name] */$_1361 from "./136"
+import * as /* [auto-meaningful-name] */Module_136 from /* 136 */"./136"
+import /* [auto-meaningful-name] */Module_1361 from /* 136 */"./136"
 var gt = function () {
   var e = useSelector(function (e) {
     return e.oTState.userFocusOTInfoList
@@ -32,20 +32,20 @@ var gt = function () {
   var n = useSelector(function (e) {
     return e.oTState.onlineCooperationUserColorRecord
   })
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var o = useState([])
-  var i = $_10_index.a(o, 2)
+  var i = Module_10.a(o, 2)
   var a = i[0]
   var s = i[1]
   var c = useState({
     left: 0,
     top: 0
   })
-  var l = $_10_index.a(c, 2)
+  var l = Module_10.a(c, 2)
   var u = l[0]
   var d = l[1]
   var p = useState(false)
-  var m = $_10_index.a(p, 2)
+  var m = Module_10.a(p, 2)
   var g = m[0]
   var v = m[1]
   useEffect(function () {
@@ -96,15 +96,15 @@ var gt = function () {
       position: "fixed",
       left: u.left,
       top: u.top,
-      backgroundColor: 1 === a.length ? n.get(a[0].id) : $_390.a
+      backgroundColor: 1 === a.length ? n.get(a[0].id) : Module_390.a
     },
-    className: $_1361.userFocusCard
+    className: Module_1361.userFocusCard
   }, a.length > 1 ? React.createElement("div", {
-    className: $_1361.item
+    className: Module_1361.item
   }, a.map(function (e, t) {
     return React.createElement("div", {
       key: t,
-      className: $_1361.headPhoto,
+      className: Module_1361.headPhoto,
       style: {
         zIndex: a.length - t,
         backgroundImage: "url(\"".concat(e.avatar_url, "\")"),
@@ -112,20 +112,20 @@ var gt = function () {
       }
     })
   }), React.createElement("span", {
-    className: $_1361.nickname
-  }, a.length, " ", $_710$a$formatMessage({
+    className: Module_1361.nickname
+  }, a.length, " ", Module_710$a$formatMessage({
     id: "OT.collPeopleCount"
   }))) : React.createElement("div", {
     key: a[0].id,
-    className: $_1361.item
+    className: Module_1361.item
   }, React.createElement("div", {
-    className: $_1361.headPhoto,
+    className: Module_1361.headPhoto,
     style: {
       backgroundImage: "url(\"".concat(a[0].avatar_url, "\")"),
       borderColor: n.get(a[0].id)
     }
   }), React.createElement("div", {
-    className: $_1361.nickname
+    className: Module_1361.nickname
   }, a[0].nickname)))
 }
 var _t = React.memo(function () {
@@ -171,34 +171,34 @@ var _t = React.memo(function () {
 var vt = function (e) {
   var /* [auto-meaningful-name] */e$visible = e.visible
   var /* [auto-meaningful-name] */e$onClose = e.onClose
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
-  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.f, {
-    className: $_1361.invalidUrlDialog,
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
+  return React.createElement(Src_shared_ui_components_index.f, {
+    className: Module_1361.invalidUrlDialog,
     visible: e$visible,
     onClose: e$onClose
-  }, React.createElement("h3", null, $_710$a$formatMessage({
+  }, React.createElement("h3", null, Module_710$a$formatMessage({
     id: "OT.urlIsInvalid"
-  })), React.createElement("p", null, $_710$a$formatMessage({
+  })), React.createElement("p", null, Module_710$a$formatMessage({
     id: "OT.urlIsInvalidDetail"
-  })), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
+  })), React.createElement(Src_shared_ui_components_index.d, {
     type: "primary",
     onClick: e$onClose
-  }, $_710$a$formatMessage({
+  }, Module_710$a$formatMessage({
     id: "know"
   })))
 }
 var bt = function (e) {
   var /* [auto-meaningful-name] */e$visible = e.visible
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
-  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.f, {
-    className: $_1361.loadingDialog,
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
+  return React.createElement(Src_shared_ui_components_index.f, {
+    className: Module_1361.loadingDialog,
     visible: e$visible,
     showCloseButton: false
   }, React.createElement("div", {
-    className: $_1361.icon
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+    className: Module_1361.icon
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-loading2"
-  })), React.createElement("p", null, $_710$a$formatMessage({
+  })), React.createElement("p", null, Module_710$a$formatMessage({
     id: "OT.isBuildingCollWork"
   })))
 }
@@ -209,55 +209,55 @@ var yt = React.memo(function () {
   var t = useSelector(function (e) {
     return e.oTState.onlineCooperationUserColorRecord
   })
-  var n = $$_$$_$$_$$_src_shared_tools_index.q(e).reverse()
+  var n = Src_shared_tools_index.q(e).reverse()
   return React.createElement("div", {
-    className: $_1361.users
+    className: Module_1361.users
   }, n.map(function (e, n) {
     return n + 1 > 3 ? null : React.createElement("div", {
-      className: Classnames($_1361.headerPhotoBorder, $_1361.user),
+      className: Classnames(Module_1361.headerPhotoBorder, Module_1361.user),
       key: e.id,
       style: {
         borderColor: t.get(e.id)
       }
-    }, React.createElement($_748_index.a, {
+    }, React.createElement(Module_748.a, {
       placement: "bottom",
       title: e.nickname
     }, React.createElement("div", {
-      className: $_1361.headPhoto,
+      className: Module_1361.headPhoto,
       style: {
         backgroundImage: "url(\"".concat(e.avatar_url, "\")")
       }
     })))
-  }), n.length > 3 && React.createElement($_1213.a, {
-    overlayClassName: $_1361.avatarPopover,
+  }), n.length > 3 && React.createElement(Module_1213.a, {
+    overlayClassName: Module_1361.avatarPopover,
     content: React.createElement("div", {
-      className: $_1361.avatarContent
+      className: Module_1361.avatarContent
     }, n.map(function (e) {
       return React.createElement("div", {
         key: e.id,
-        className: $_1361.avatarItem
+        className: Module_1361.avatarItem
       }, React.createElement("div", {
-        className: Classnames($_1361.headerPhotoBorder, $_1361.user),
+        className: Classnames(Module_1361.headerPhotoBorder, Module_1361.user),
         key: e.id,
         style: {
           borderColor: t.get(e.id)
         }
-      }, React.createElement($_748_index.a, {
+      }, React.createElement(Module_748.a, {
         placement: "bottom",
         title: e.nickname
       }, React.createElement("div", {
-        className: $_1361.headPhoto,
+        className: Module_1361.headPhoto,
         style: {
           backgroundImage: "url(\"".concat(e.avatar_url, "\")")
         }
       }))), React.createElement("div", {
-        className: $_1361.itemName
+        className: Module_1361.itemName
       }, e.nickname))
     }))
   }, React.createElement("div", {
-    className: Classnames($_1361.count, $_1361.user)
+    className: Classnames(Module_1361.count, Module_1361.user)
   }, React.createElement("div", {
-    className: $_1361.countPhoto
+    className: Module_1361.countPhoto
   }, n.length))))
 })
 export { _t }

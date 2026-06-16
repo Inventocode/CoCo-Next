@@ -4,8 +4,8 @@
  * 模块 ID：gApy
  */
 
-var rng = require("./rng-i4uy")
-var bytesToUuid = require("./bytesToUuid-MAlW") // **`v1()` - Generate time-based UUID**
+var rng = require(/* i4uy */"./rng-i4uy")
+var bytesToUuid = require(/* MAlW */"./bytesToUuid-MAlW") // **`v1()` - Generate time-based UUID**
 //
 // Inspired by https://github.com/LiosK/UUID.js
 // and http://docs.python.org/library/uuid.html

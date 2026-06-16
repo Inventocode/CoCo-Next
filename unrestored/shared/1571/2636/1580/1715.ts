@@ -6,13 +6,13 @@
 
 "use strict"
 
-var r = require("./1720/960")
-var o = require("./1282/240")
-var i = require("./1771/256")
-var a = require("./1282/310")
-var s = require("./1720/424")
-var c = require("./1720/1098")
-var l = require("./1720/961")
+var r = require(/* 960 */"./1720/960")
+var o = require(/* 240 */"./1282/240")
+var i = require(/* 256 */"./1771/256")
+var a = require(/* 310 */"./1282/310")
+var s = require(/* 424 */"./1720/424")
+var c = require(/* 1098 */"./1720/1098")
+var l = require(/* 961 */"./1720/961")
 r("match", function (e, t, n) {
   return [
     function (t) {

@@ -8,13 +8,13 @@ var /* [auto-meaningful-name] */s$location
 var o
 var i
 var /* [auto-meaningful-name] */INew_$port2
-var s = require("../1785/194")
-var c = require("../1659/168")
-var l = require("../1282/636")
-var u = require("../1282/577/1242")
-var d = require("../1282/577/1078")
-var p = require("../1784/1267/1266")
-var f = require("../1784/758")
+var s = require(/* 194 */"../1785/194")
+var c = require(/* 168 */"../1659/168")
+var l = require(/* 636 */"../1282/636")
+var u = require(/* 1242 */"../1282/577/1242")
+var d = require(/* 1078 */"../1282/577/1078")
+var p = require(/* 1266 */"../1784/1267/1266")
+var f = require(/* 758 */"../1784/758")
 var /* [auto-meaningful-name] */s$setImmediate = s.setImmediate
 var /* [auto-meaningful-name] */s$clearImmediate = s.clearImmediate
 var /* [auto-meaningful-name] */s$process = s.process

@@ -4,13 +4,13 @@
  * 模块 ID：1704
  */
 
-var r = require("../1662/86")
-var o = require("../1282/476")
-var i = require("../1282/240")
+var r = require(/* 86 */"../1662/86")
+var o = require(/* 476 */"../1282/476")
+var i = require(/* 240 */"../1282/240")
 r({
   target: "Reflect",
   stat: true,
-  sham: !require("./837")
+  sham: !require(/* 837 */"./837")
 }, {
   preventExtensions: function (e) {
     i(e)

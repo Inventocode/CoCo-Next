@@ -4,8 +4,8 @@
  * 模块 ID：1168
  */
 
-var r = require("./2472")
-var i = require("../../../../../../797/101/2466/1436/538")
+var r = require(/* 2472 */"./2472")
+var i = require(/* 538 */"../../../../../../797/101/2466/1436/538")
 var /* [auto-meaningful-name] */Object$prototype = Object.prototype
 var /* [auto-meaningful-name] */Object$prototype$hasOwnProperty = Object$prototype.hasOwnProperty
 var /* [auto-meaningful-name] */Object$prototype$propertyIsEnumerable = Object$prototype.propertyIsEnumerable

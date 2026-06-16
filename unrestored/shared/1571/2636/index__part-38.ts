@@ -9,21 +9,21 @@
 import { Xd, Qd } from "./index__part-34"
 import { op } from "./index__part-36"
 import { vp } from "./index__part-37"
-import * as /* [auto-meaningful-name] */$_545 from "./545"
-import * as /* [auto-meaningful-name] */$_146 from "./146"
-import * as Qu from "./60"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
-import * as wn from "./90"
-import /* [auto-meaningful-name] */Color from "color"
-import * as D from "./6"
-import * as k from "./11"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import /* [auto-meaningful-name] */React from "react"
-import { useRef, useState, useEffect } from "react"
+import * as /* [auto-meaningful-name] */Module_545 from /* 545 */"./545"
+import * as /* [auto-meaningful-name] */Module_146 from /* 146 */"./146"
+import * as /* [auto-meaningful-name] */Module_60 from /* 60 */"./60"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Module_90 from /* 90 */"./90"
+import /* [auto-meaningful-name] */Color from /* 51 */"color"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"./6"
+import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"./11"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { useRef, useState, useEffect } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_239 from "./239"
-import /* [auto-meaningful-name] */$_2391 from "./239"
+import * as /* [auto-meaningful-name] */Module_239 from /* 239 */"./239"
+import /* [auto-meaningful-name] */Module_2391 from /* 239 */"./239"
 function Ep(e, t, n) {
   var r = e
   if ("center" === n) {
@@ -60,7 +60,7 @@ var Op = function (e) {
   var C = useRef(null)
   var T = useRef(Ep(e$position.y, e$size.height, e$attributes$justifyContent))
   var A = useState(false)
-  var I = $_10_index.a(A, 2)
+  var I = Module_10.a(A, 2)
   var j = I[0]
   var R = I[1]
   useEffect(function () {
@@ -76,7 +76,7 @@ var Op = function (e) {
       R(false)
     }
   }, [e$selected])
-  var x = e$attributes$sizeAdaptive !== $$_$$_$$_$$_src_editor_widget_builtIn_types.q.FIXED
+  var x = e$attributes$sizeAdaptive !== Src_editor_widget_builtIn_types.q.FIXED
   useEffect(function () {
     if (x && O.current && e$onChange) {
       var /* [auto-meaningful-name] */O$current = O.current
@@ -103,9 +103,9 @@ var Op = function (e) {
   }, [e$attributes$justifyContent, e$onChange, e$position.y, e$size.height])
   var M = {
     width: e$size.width,
-    height: e$attributes$sizeAdaptive & $$_$$_$$_$$_src_editor_widget_builtIn_types.q.AUTO_HEIGHT ? "auto" : e$size.height,
-    minWidth: "".concat($_146.m, "px"),
-    minHeight: "".concat($_146.l, "px"),
+    height: e$attributes$sizeAdaptive & Src_editor_widget_builtIn_types.q.AUTO_HEIGHT ? "auto" : e$size.height,
+    minWidth: "".concat(Module_146.m, "px"),
+    minHeight: "".concat(Module_146.l, "px"),
     backgroundColor: Color(e$attributes$backgroundColor).toString(),
     color: Color(e$attributes$color).toString(),
     fontFamily: e$attributes$fontFamily,
@@ -118,18 +118,18 @@ var Op = function (e) {
   }
   return React.createElement(React.Fragment, null, React.createElement("div", {
     id: t,
-    "data-widget-type": $$_$$_$$_$$_src_editor_widget_builtIn_types.H,
-    "data-role": $$_$$_$$_$$_src_editor_widget_builtIn_types.M,
-    className: Classnames(wn.b, $_2391.textWidget, k.a({}, $_2391.hide, !e$visible)),
-    "data-min-width": $_146.m,
-    "data-min-height": $_146.l,
+    "data-widget-type": Src_editor_widget_builtIn_types.H,
+    "data-role": Src_editor_widget_builtIn_types.M,
+    className: Classnames(Module_90.b, Module_2391.textWidget, Module_11.a({}, Module_2391.hide, !e$visible)),
+    "data-min-width": Module_146.m,
+    "data-min-height": Module_146.l,
     ref: C,
-    style: D.a(D.a({}, M), {}, {
+    style: Module_6.a(Module_6.a({}, M), {}, {
       visibility: j ? "hidden" : "visible"
     }),
     onClick: function () {
       var /* [auto-meaningful-name] */C$current
-      if ((null === (C$current = C.current) || undefined === C$current ? undefined : C$current.dataset.clickType) === Qu.d.CLICK && e$selected) {
+      if ((null === (C$current = C.current) || undefined === C$current ? undefined : C$current.dataset.clickType) === Module_60.d.CLICK && e$selected) {
         R(true)
       }
     }
@@ -138,20 +138,20 @@ var Op = function (e) {
       overflow: E
     }
   }, React.createElement("span", {
-    className: $_2391.content
+    className: Module_2391.content
   }, e$attributes$content + "\n"))), React.createElement("div", {
-    "data-role": $$_$$_$$_$$_src_editor_widget_builtIn_types.M,
+    "data-role": Src_editor_widget_builtIn_types.M,
     ref: O,
-    className: Classnames(wn.b, $_2391.textWidget, "coco-widget-editor", k.a({}, $_2391.hide, !e$visible)),
+    className: Classnames(Module_90.b, Module_2391.textWidget, "coco-widget-editor", Module_11.a({}, Module_2391.hide, !e$visible)),
     onMouseDown: function (e) {
       e.stopPropagation()
     },
-    style: D.a(D.a({}, M), {}, {
+    style: Module_6.a(Module_6.a({}, M), {}, {
       visibility: j ? "visible" : "hidden",
       zIndex: 2
     })
   }, React.createElement(vp, {
-    className: $_2391.content,
+    className: Module_2391.content,
     onBlur: function () {
       R(false)
     },
@@ -165,32 +165,32 @@ var Op = function (e) {
   })))
 }
 var wp = function (e) {
-  return e.parentId ? React.createElement($_545.a, e) : React.createElement(Op, e)
+  return e.parentId ? React.createElement(Module_545.a, e) : React.createElement(Op, e)
 }
 var Cp = {
-  icon: $_146.b,
+  icon: Module_146.b,
   title: "",
-  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.H,
+  type: Src_editor_widget_builtIn_types.H,
   previewAreaWidgetTitle: "TextWidget.widgetName",
   component: wp,
   editConfig: Xd,
   childWidgetEditConfig: Qd,
   blockConfig: op,
   contentTextField: "content",
-  isInvisibleWidget: $_146.i,
+  isInvisibleWidget: Module_146.i,
   hasAnyWidget: true,
   widget: {
-    isGlobalWidget: $_146.h,
+    isGlobalWidget: Module_146.h,
     size: {
-      width: $_146.c,
-      height: $_146.a
+      width: Module_146.c,
+      height: Module_146.a
     },
     attributes: {
-      sizeAdaptive: $$_$$_$$_$$_src_editor_widget_builtIn_types.q.AUTO_HEIGHT,
-      backgroundColor: $_146.d,
-      color: $_146.e,
-      fontFamily: $_146.f,
-      fontSize: $_146.g,
+      sizeAdaptive: Src_editor_widget_builtIn_types.q.AUTO_HEIGHT,
+      backgroundColor: Module_146.d,
+      color: Module_146.e,
+      fontFamily: Module_146.f,
+      fontSize: Module_146.g,
       justifyContent: "flex-start",
       textAlign: "center",
       content: "%{COCO_defaultTextWidgetContent}",

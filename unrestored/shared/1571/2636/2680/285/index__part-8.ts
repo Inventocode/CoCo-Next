@@ -6,7 +6,7 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_610 from "../../610"
+import * as /* [auto-meaningful-name] */Module_610 from /* 610 */"../../610"
 var pt = {
   icon: {
     tag: "svg",

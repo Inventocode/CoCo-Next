@@ -25,7 +25,6 @@ export { OPEN_CONFIRM_DIALOG as Ec }
 export { openConfirmDialogAction as zh }
 export { TOGGLE_PERMISSION_DIALOG as Ke }
 export { C as Ej }
-export { CLOSE_CONFIRM_DIALOG as Wb }
 export { S as Vg }
 export { OPEN_ICON_LIB_DIALOG as Fc }
 export { CLOSE_ICON_LIB_DIALOG as Yb }
@@ -58,7 +57,6 @@ export { ee as ei }
 export { SHOW_STAGE_TOAST as De }
 export { ne as xj }
 export { HIDE_STAGE_TOAST as zc }
-export { oe as th }
 export { SET_ACTOR_DRAGGING as cd }
 export { ae as Yh }
 export { OPEN_SIGN_IN_DIALOG as Ic }
@@ -71,8 +69,7 @@ export { SET_STAGE_VISIBLE as de }
 export { he as Yi }
 export { SET_IS_HOVER_BLOCK_AREA as Ad }
 export { ge as ui }
-export { SET_STAGE_WIDTH as ee }
-export { ve as Zi }
+export { setStageWidthAction as Zi }
 export { SET_BLOCKY_TOOLBOX_PINED as gd }
 export { ye as ci }
 export { SET_WIDGET_ATTRIBUTE_VISIBLE as ie }
@@ -98,7 +95,6 @@ export { Ge as pi }
 export { SET_GRID_COLUMN_CUSTOM_WIDTH as sd }
 export { We as mi }
 export { SET_STAGE_SCALE as ce }
-export { Ve as Xi }
 export { SET_COLL_AUTO_SAVE as id }
 export { Ye as di }
 export { SET_HISTORY_ARCHIVE_ID as yd }
@@ -175,7 +171,7 @@ export { dn as ng }
 export { ASYNC_COPY_PROJECT_SCREEN as D }
 export { fn as Df }
 export { ASYNC_DELETE_PROJECT_WIDGET as M }
-export { mn as Mf }
+export { asyncDeleteProjectWidgetAction as Mf }
 export { ASYNC_INSERT_PROJECT_WIDGET as gb }
 export { _n as hg }
 export { ASYNC_REGISTER_EXTENSION_WIDGET as lb }
@@ -316,11 +312,10 @@ export { DELETE_BROADCAST as fc }
 export { ASYNC_ADD_BROADCAST as p }
 export { Qo as pf }
 export { CHANGE_CONTEXT_MENU_INFO as Pb }
-export { Jo as Og }
+export { changeContextMenuInfoAction as Og }
 export { CLOSE_CONTEXT_MENU as Xb }
-export { ei as Wg }
 export { ASYNC_COPY_WIDGET_TO_SCREEN as E }
-export { ni as Ef }
+export { asyncCopyWidgetToScreenAction as Ef }
 export { CLEAR_PROJECT as Vb }
 export { oi as Ug }
 export { ASYNC_INSERT_BRUSH_WIDGET as fb }
@@ -373,7 +368,7 @@ export { HIDE_BLOCKS_SLIDER as mc }
 export { na as ih }
 export { UPDATE_BLOCKS_SLIDER_VALUE as Oe }
 export { SHOW_CREATE_DYNAMIC_DATA_DIALOG as se }
-export { ia as nj }
+export { showCreateDynamicDataDialogAction as nj }
 export { HIDE_CREATE_DYNAMIC_DATA_DIALOG as qc }
 export { sa as lh }
 export { SHOW_COMMON_INPUT_DIALOG as qe }
@@ -518,7 +513,8 @@ export { I as Bg } from "../../../../unrestored/shared/1571/2636/162"
 export { l as Eb } from "../../../../unrestored/shared/1571/2636/162"
 export { K as Eg } from "../../../../unrestored/shared/1571/2636/162"
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_6 from "../../../../unrestored/shared/1571/2636/6"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"../../../../unrestored/shared/1571/2636/6"
+import { ICommonToastInfo, IConfirmDialogInfo } from "./interface"
 
 export const SET_APP_LANGUAGE = "SET_APP_LANGUAGE"
 
@@ -547,13 +543,7 @@ export function updateExtensionWidgetListAction() {
 }
 
 export const SHOW_COMMON_TOAST_INFO = "SHOW_COMMON_TOAST_INFO"
-export function showCommonToastInfoAction(payload: {
-  showPrefixIcon?: boolean
-  type?: "success" | "info" | "error"
-  message: string
-  showCloseIcon?: boolean
-  duration?: number
-}) {
+export function showCommonToastInfoAction(payload: ICommonToastInfo) {
   return {
     payload,
     type: SHOW_COMMON_TOAST_INFO
@@ -593,22 +583,7 @@ function y(e) {
 }
 
 export const OPEN_CONFIRM_DIALOG: string = "OPEN_CONFIRM_DIALOG"
-export function openConfirmDialogAction(payload: {
-  title: string
-  content?: string | JSX.Element
-  isDangerous?: boolean
-  allowText?: string
-  denyText?: string
-  cancelText?: string
-  cancelBtnVisible?: boolean
-  confirmBtnVisible?: boolean
-  visible?: boolean
-  className?: string
-  onClose?(): void
-  onConfirm?(): void
-  onDeny?(): void
-  onCancel?(): void
-}) {
+export function openConfirmDialogAction(payload: IConfirmDialogInfo) {
   return {
     type: OPEN_CONFIRM_DIALOG,
     payload
@@ -756,7 +731,7 @@ function ne(e, t) {
 }
 
 export const HIDE_STAGE_TOAST = "HIDE_STAGE_TOAST"
-function oe() {
+export function hideStageToastAction() {
   return {
     type: HIDE_STAGE_TOAST,
     payload: undefined
@@ -814,10 +789,10 @@ function ge(e) {
 }
 
 export const SET_STAGE_WIDTH = "SET_STAGE_WIDTH"
-function ve(e) {
+export function setStageWidthAction(stageWidth: number) {
   return {
     type: SET_STAGE_WIDTH,
-    payload: e
+    payload: stageWidth
   }
 }
 
@@ -932,7 +907,7 @@ function We(e) {
 }
 
 export const SET_STAGE_SCALE = "SET_STAGE_SCALE"
-function Ve(e) {
+export function setStageScaleAction(e) {
   return {
     type: SET_STAGE_SCALE,
     payload: e
@@ -1197,7 +1172,7 @@ var Xt = {
 export const ADD_FLOAT_ICON = "ADD_FLOAT_ICON"
 function Zt(e) {
   return {
-    payload: $$_$$_$$_$$_unrestored_shared_1571_2636_6.a($$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, Xt), e),
+    payload: Module_6.a(Module_6.a({}, Xt), e),
     type: ADD_FLOAT_ICON
   }
 }
@@ -1215,7 +1190,7 @@ function tn(e, t) {
   return {
     payload: {
       name: e,
-      icon: $$_$$_$$_$$_unrestored_shared_1571_2636_6.a($$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, Xt), t)
+      icon: Module_6.a(Module_6.a({}, Xt), t)
     },
     type: REPLACE_FLOAT_ICON
   }
@@ -1286,13 +1261,9 @@ function fn(e) {
 }
 
 export const ASYNC_DELETE_PROJECT_WIDGET = "ASYNC_DELETE_PROJECT_WIDGET"
-function mn(e, t, n) {
+export function asyncDeleteProjectWidgetAction(widgetId, screenId, isEmitOT?) {
   return {
-    payload: {
-      screenId: t,
-      widgetId: e,
-      isEmitOT: n
-    },
+    payload: { screenId, widgetId, isEmitOT },
     type: ASYNC_DELETE_PROJECT_WIDGET
   }
 }
@@ -2112,7 +2083,7 @@ function Qo(e, t, n, r, o) {
 }
 
 export const CHANGE_CONTEXT_MENU_INFO = "CHANGE_CONTEXT_MENU_INFO"
-function Jo(e) {
+export function changeContextMenuInfoAction(e) {
   return {
     payload: e,
     type: CHANGE_CONTEXT_MENU_INFO
@@ -2120,7 +2091,7 @@ function Jo(e) {
 }
 
 export const CLOSE_CONTEXT_MENU = "CLOSE_CONTEXT_MENU"
-function ei() {
+export function closeContextMenuAction() {
   return {
     type: CLOSE_CONTEXT_MENU,
     payload: undefined
@@ -2128,13 +2099,10 @@ function ei() {
 }
 
 export const ASYNC_COPY_WIDGET_TO_SCREEN = "ASYNC_COPY_WIDGET_TO_SCREEN"
-function ni(e, t) {
+export function asyncCopyWidgetToScreenAction(widgetCloneList, screenId?) {
   return {
     type: ASYNC_COPY_WIDGET_TO_SCREEN,
-    payload: {
-      widgetCloneList: e,
-      screenId: t
-    }
+    payload: { widgetCloneList, screenId }
   }
 }
 
@@ -2400,7 +2368,7 @@ function na() {
 export const UPDATE_BLOCKS_SLIDER_VALUE = "UPDATE_BLOCKS_SLIDER_VALUE"
 
 export const SHOW_CREATE_DYNAMIC_DATA_DIALOG = "SHOW_CREATE_DYNAMIC_DATA_DIALOG"
-function ia(e) {
+export function showCreateDynamicDataDialogAction(e) {
   return {
     payload: e,
     type: SHOW_CREATE_DYNAMIC_DATA_DIALOG

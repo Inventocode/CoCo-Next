@@ -4,20 +4,22 @@
  * 模块 ID：261
  */
 
-export { ADD as b }
+export { FLYOUT_COMPONENTS_LABEL as b }
 export { CATEGORIES as a }
 export { SPACE as c }
 export { TOOLBOXES as f }
 export { l as e }
 export { u as d }
-import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_9 from "../../../unrestored/shared/1571/2636/9"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"../../../unrestored/shared/1571/2636/9"
 import * as generate from "../../../unrestored/shared/1571/2636/301/index"
-var ADD = {
+
+export const FLYOUT_COMPONENTS_LABEL = {
   PRIMITIVE: "PRIMITIVE",
   ARRAY: "ARRAY",
   OBJECT: "OBJECT",
   STORAGE: "STORAGE"
 }
+
 const CATEGORIES = {
   NUMBER: {
     id: "category_number",
@@ -149,7 +151,7 @@ const TOOLBOXES = {
     text: "%{BKY_PRIMITIVE}",
     iconId: "icon-toolbox-variable",
     blocks: [
-      `<label type="${ADD.PRIMITIVE}" width="10" height="10" align="center"></label>`,
+      `<label type="${FLYOUT_COMPONENTS_LABEL.PRIMITIVE}" width="10" height="10" align="center"></label>`,
       "variables_get",
       "variables_set",
       "variables_change"
@@ -160,7 +162,7 @@ const TOOLBOXES = {
     text: "%{BKY_ARRAY}",
     iconId: "icon-toolbox-list",
     blocks: [
-      `<label type="${ADD.ARRAY}" width="10" height="10" align="center"></label>`,
+      `<label type="${FLYOUT_COMPONENTS_LABEL.ARRAY}" width="10" height="10" align="center"></label>`,
       "array_get",
       // [CoCo Next] 在列表积木盒中添加 [临时列表 array_create]
       "array_create",
@@ -183,7 +185,7 @@ const TOOLBOXES = {
     text: "%{BKY_OBJECT}",
     iconId: "icon-toolbox-object",
     blocks: [
-      `<label type="${ADD.OBJECT}" width="10" height="10" align="center"></label>`,
+      `<label type="${FLYOUT_COMPONENTS_LABEL.OBJECT}" width="10" height="10" align="center"></label>`,
       "object_get",
       "object_create",
       "object_set_item",
@@ -203,7 +205,7 @@ const TOOLBOXES = {
   }
 }
 var l = function () {
-  return $$_$$_$$_unrestored_shared_1571_2636_9.O()
+  return Module_9.O()
 }
 var u = function (e) {
   var /* [auto-meaningful-name] */cN$text

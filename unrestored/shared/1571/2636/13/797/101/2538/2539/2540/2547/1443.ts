@@ -4,8 +4,8 @@
  * 模块 ID：1443
  */
 
-var r = require("./1456/1444")
-var i = require("../../../../2466/2477/451")
+var r = require(/* 1444 */"./1456/1444")
+var i = require(/* 451 */"../../../../2466/2477/451")
 module.exports = function (e, t, n) {
   var o = t(e)
   return i(e) ? o : r(o, n(e))

@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("../207/787/180")
+var r = require(/* 180 */"../207/787/180")
 Object.defineProperty(exports, "__esModule", {
   value: true
 })

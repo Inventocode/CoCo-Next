@@ -6,5 +6,5 @@
 
 "use strict"
 
-exports.decode = exports.parse = require("./2030")
-exports.encode = exports.stringify = require("./2031")
+exports.decode = exports.parse = require(/* 2030 */"./2030")
+exports.encode = exports.stringify = require(/* 2031 */"./2031")

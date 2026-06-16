@@ -8,12 +8,12 @@
 
 /* harmony export (binding) */
 import { _createClass, _classCallCheck, _possibleConstructorReturn, _inherits, __decorate } from "./template-ReOC__part-0"
-import * as __WEBPACK_IMPORTED_MODULE_4__sensorsData__ from "../sensorsData-yI2H"
-import * as __WEBPACK_IMPORTED_MODULE_3__IconFont__ from "./IconFont-zVV7"
-import * as __WEBPACK_IMPORTED_MODULE_2__cfg__ from "../cfg-dpNx"
-import * as __WEBPACK_IMPORTED_MODULE_1_react_css_modules__ from "react-css-modules"
-import * as __WEBPACK_IMPORTED_MODULE_0_react__ from "react"
-import * as styles from "./styles-V8ar"
+import * as __WEBPACK_IMPORTED_MODULE_4__sensorsData__ from /* yI2H */"../sensorsData-yI2H"
+import * as __WEBPACK_IMPORTED_MODULE_3__IconFont__ from /* zVV7 */"./IconFont-zVV7"
+import * as __WEBPACK_IMPORTED_MODULE_2__cfg__ from /* dpNx */"../cfg-dpNx"
+import * as __WEBPACK_IMPORTED_MODULE_1_react_css_modules__ from /* 211U */"react-css-modules"
+import * as __WEBPACK_IMPORTED_MODULE_0_react__ from /* GiK3 */"react"
+import * as styles from /* V8ar */"./styles-V8ar"
 var PlayCourseVideoView = function (_React$Component) {
   _inherits(PlayCourseVideoView, _React$Component)
   function PlayCourseVideoView(props) {

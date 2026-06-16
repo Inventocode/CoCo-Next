@@ -12,10 +12,10 @@ Object.defineProperty(exports, "__esModule", {
 exports.createNekoIframeApi = createNekoIframeApi
 exports.createNekoParentApi = createNekoParentApi
 exports.getNekoIframeUrl = getNekoIframeUrl
-var base_1 = require("./unnamed-S9_H")
-var iframe_1 = require("./unnamed-IKhi")
-var utils_1 = require("./utils/1-MMZc")
-var interface_1 = require("./interface/1-yX6s")
+var base_1 = require(/* S9/H */"./unnamed-S9_H")
+var iframe_1 = require(/* IKhi */"./unnamed-IKhi")
+var utils_1 = require(/* MMZc */"./utils/1-MMZc")
+var interface_1 = require(/* yX6s */"./interface/1-yX6s")
 const iframeApiSpec = new base_1.ApiSpec("neko", {
   loadWork: new base_1.MethodType(),
   saveWork: new base_1.MethodType(),

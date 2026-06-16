@@ -10,16 +10,16 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.SimplifiedWorkspaceComment = undefined
-var r = require("tslib")
-var i = require("inversify")
-var o = require("@kitten-team/gl-matrix")
-var a = require("../../1058/125")
-var s = require("../../123/195/index")
-var c = require("../../123/index")
-var u = require("../../1022/214")
-var l = require("../../123/293")
-var f = require("../../1205/2609/648")
-var d = require("./2169/763")
+var r = require(/* 93 */"tslib")
+var i = require(/* 134 */"inversify")
+var o = require(/* 258 */"@kitten-team/gl-matrix")
+var a = require(/* 125 */"../../1058/125")
+var s = require(/* 195 */"../../123/195/index")
+var c = require(/* 123 */"../../123/index")
+var u = require(/* 214 */"../../1022/214")
+var l = require(/* 293 */"../../123/293")
+var f = require(/* 648 */"../../1205/2609/648")
+var d = require(/* 763 */"./2169/763")
 var h = function (e) {
   function t(t, n, r, i) {
     var a = e.call(this, t) || this
@@ -340,5 +340,5 @@ var h = function (e) {
   (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.ChangeEvent)], t.prototype, "change_event_factory", undefined);
   (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.SimplifiedCommentBubble)], t.prototype, "comment_bubble", undefined)
   return t = (0, r.__decorate)([(0, i.injectable)()], t)
-}(require("./977").WorkspaceElement)
+}(require(/* 977 */"./977").WorkspaceElement)
 exports.SimplifiedWorkspaceComment = h

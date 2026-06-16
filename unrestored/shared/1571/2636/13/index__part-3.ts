@@ -6,14 +6,14 @@
 
 "use strict"
 
-import /* [auto-meaningful-name] */React from "react"
-import { memo, useState, useRef, useEffect, useCallback, useContext } from "react"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo, useState, useRef, useEffect, useCallback, useContext } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import i from "classnames"
-import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
-import * as /* [auto-meaningful-name] */$$_94_index from "../../../../../src/shared/ui/components/iconfont/index"
-import "./641"
-import * as /* [auto-meaningful-name] */$$_361 from "../361"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../10/index"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_iconfont_index from /* 94 */"../../../../../src/shared/ui/components/Iconfont/index"
+import /* 641 */"./641"
+import * as /* [auto-meaningful-name] */Module_361 from /* 361 */"../361"
 var w = memo(function (e) {
   var /* [auto-meaningful-name] */e$style = e.style
   var /* [auto-meaningful-name] */e$children = e.children
@@ -25,16 +25,16 @@ var w = memo(function (e) {
   var /* [auto-meaningful-name] */e$autoCloseWhenChanged = e.autoCloseWhenChanged
   var f = undefined === e$autoCloseWhenChanged || e$autoCloseWhenChanged
   var h = useState(e$value || e$defaultValue)
-  var m = $$_10_index.a(h, 2)
+  var m = Module_10.a(h, 2)
   var g = m[0]
   var _ = m[1]
   var v = useState(e$open)
-  var b = $$_10_index.a(v, 2)
+  var b = Module_10.a(v, 2)
   var y = b[0]
   var w = b[1]
   var C = useRef(null)
   var T = useState(null)
-  var S = $$_10_index.a(T, 2)
+  var S = Module_10.a(T, 2)
   var A = S[0]
   var I = S[1]
   useEffect(function () {
@@ -72,7 +72,7 @@ var w = memo(function (e) {
       document.body.removeEventListener("click", e)
     }
   }, [y])
-  return React.createElement($$_361.a, {
+  return React.createElement(Module_361.a, {
     value: {
       value: g,
       onChange: function (e) {
@@ -87,23 +87,23 @@ var w = memo(function (e) {
       onChangeSelectorContent: N
     }
   }, React.createElement("div", {
-    className: i("coco-select", e$className),
+    className: Classnames("coco-select", e$className),
     style: e$style,
     ref: C
   }, React.createElement("div", {
-    className: i("coco-select-selector", {
+    className: Classnames("coco-select-selector", {
       active: y
     }),
     onClick: R
   }, React.createElement("div", {
-    className: i("coco-select-label")
-  }, A), React.createElement($$_94_index.a, {
+    className: Classnames("coco-select-label")
+  }, A), React.createElement(Src_shared_ui_components_iconfont_index.a, {
     type: "icon-up",
-    className: i("coco-select-arrow", {
+    className: Classnames("coco-select-arrow", {
       active: y
     })
   })), React.createElement("div", {
-    className: i("coco-select-options", [y ? "show" : "hide"])
+    className: Classnames("coco-select-options", [y ? "show" : "hide"])
   }, e$children)))
 })
 var C = memo(function (e) {
@@ -111,7 +111,7 @@ var C = memo(function (e) {
   var /* [auto-meaningful-name] */e$suffix = e.suffix
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$className = e.className
-  var c = useContext($$_361.b)
+  var c = useContext(Module_361.b)
   useEffect(function () {
     if ((null === c || undefined === c ? undefined : c.value) === e$value) {
       c.onChangeSelectorContent(e$children || e$value)
@@ -123,7 +123,7 @@ var C = memo(function (e) {
         c.onChange(e$value)
       }
     },
-    className: i({
+    className: Classnames({
       selected: (null === c || undefined === c ? undefined : c.value) === e$value
     }, e$className, "coco-option")
   }, e$children || React.createElement("div", {

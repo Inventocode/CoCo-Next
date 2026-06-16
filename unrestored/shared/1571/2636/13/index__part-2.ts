@@ -6,17 +6,17 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_294_index from "../294/index"
-import /* [auto-meaningful-name] */React from "react"
-import { memo, useRef, useState, useEffect, useCallback } from "react"
+import * as /* [auto-meaningful-name] */Module_294 from /* 294 */"../294/index"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo, useRef, useState, useEffect, useCallback } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import i from "classnames"
-import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
-import * as /* [auto-meaningful-name] */$$_539 from "../539"
-import "./1101"
-import * as /* [auto-meaningful-name] */$_780_index from "./780/index"
-import /* [auto-meaningful-name] */$_780_index1 from "./780/index"
-import "./842"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../10/index"
+import * as /* [auto-meaningful-name] */Module_539 from /* 539 */"../539"
+import /* 1101 */"./1101"
+import * as /* [auto-meaningful-name] */Module_780 from /* 780 */"./780/index"
+import /* [auto-meaningful-name] */Module_7801 from /* 780 */"./780/index"
+import /* 842 */"./842"
 var y = memo(function (e) {
   var /* [auto-meaningful-name] */e$step = e.step
   var n = undefined === e$step ? 1 : e$step
@@ -32,7 +32,7 @@ var y = memo(function (e) {
   var /* [auto-meaningful-name] */e$inputAfter = e.inputAfter
   var v = useRef(null)
   var y = useState(e$value || u)
-  var E = $$_10_index.a(y, 2)
+  var E = Module_10.a(y, 2)
   var O = E[0]
   var w = E[1]
   useEffect(function () {
@@ -62,25 +62,25 @@ var y = memo(function (e) {
     }
   }
   return React.createElement("div", {
-    className: i("coco-slider", e$className)
-  }, e$isShowLeftInput && React.createElement($$_294_index.a, {
+    className: Classnames("coco-slider", e$className)
+  }, e$isShowLeftInput && React.createElement(Module_294.a, {
     defaultValue: O,
-    className: i("coco-slider-input", "coco-slider-left-input"),
+    className: Classnames("coco-slider-input", "coco-slider-left-input"),
     type: "number",
     max: c,
     min: u,
     onChange: S,
     ref: v,
     after: e$inputAfter
-  }), React.createElement($_780_index1, {
+  }), React.createElement(Module_7801, {
     value: O,
     step: n,
     min: u,
     max: c,
     onChange: C
-  }), e$isShowRightInput && React.createElement($$_294_index.a, {
+  }), e$isShowRightInput && React.createElement(Module_294.a, {
     defaultValue: O,
-    className: i("coco-slider-input", "coco-slider-right-input"),
+    className: Classnames("coco-slider-input", "coco-slider-right-input"),
     type: "number",
     max: c,
     min: u,

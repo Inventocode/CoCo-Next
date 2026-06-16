@@ -8,24 +8,24 @@
 
 import { EP, OP, wP, TP, IP } from "./index__part-212"
 var CP = false
-import * as /* [auto-meaningful-name] */$_28_index from "./28/index"
-import /* [auto-meaningful-name] */Quill from "quill"
-import * as Yr from "./53"
-import * as /* [auto-meaningful-name] */$_47_index from "./47/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
-import * as /* [auto-meaningful-name] */$_1213 from "./1213"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import { useDispatch, useSelector } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { memo, useState, useRef, useCallback, useEffect } from "react"
+import * as /* [auto-meaningful-name] */Module_28 from /* 28 */"./28/index"
+import /* [auto-meaningful-name] */Quill from /* 620 */"quill"
+import * as /* [auto-meaningful-name] */Module_53 from /* 53 */"./53"
+import * as /* [auto-meaningful-name] */Module_47 from /* 47 */"./47/index"
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */Module_1213 from /* 1213 */"./1213"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import { useDispatch, useSelector } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo, useState, useRef, useCallback, useEffect } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_707 from "./707"
-import /* [auto-meaningful-name] */$_7071 from "./707"
+import * as /* [auto-meaningful-name] */Module_707 from /* 707 */"./707"
+import /* [auto-meaningful-name] */Module_7071 from /* 707 */"./707"
 var kP = memo(function () {
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var t = useDispatch()
   var n = useSelector(function (e) {
     return e.common.richTextEditorDialogInfo
@@ -35,11 +35,11 @@ var kP = memo(function () {
   var /* [auto-meaningful-name] */n$content = n.content
   var a = undefined === n$content ? "" : n$content
   var s = useState(false)
-  var c = $_10_index.a(s, 2)
+  var c = Module_10.a(s, 2)
   var l = c[0]
   var u = c[1]
   var d = useState(null)
-  var p = $_10_index.a(d, 2)
+  var p = Module_10.a(d, 2)
   var m = p[0]
   var g = p[1]
   var v = useRef(null)
@@ -49,12 +49,12 @@ var kP = memo(function () {
   var O = useRef(null)
   var w = useRef(null)
   var C = useCallback(function () {
-    t($$_$$_$$_$$_src_editor_redux_common_actions.Yg())
+    t(Src_editor_redux_common_actions.Yg())
   }, [t])
   useEffect(function () {
     if (y.current && w.current) {
       var t = {
-        placeholder: $_710$a$formatMessage({
+        placeholder: Module_710$a$formatMessage({
           id: "RichTextEditor.inputPlaceholder"
         }),
         theme: "snow",
@@ -129,10 +129,10 @@ var kP = memo(function () {
         console.error("quill link error")
       }
     }
-  }, [$_710$a$formatMessage])
+  }, [Module_710$a$formatMessage])
   useEffect(function () {
     if (n$visible && E.current) {
-      E.current.root.innerHTML = $_28_index.i(a)
+      E.current.root.innerHTML = Module_28.i(a)
     }
   }, [a, n$visible])
   useEffect(function () {
@@ -141,12 +141,12 @@ var kP = memo(function () {
         if (!CP) {
           CP = true
           var e
-          var t = $_47_index.a(Yr.a)
+          var t = Module_47.a(Module_53.a)
           try {
             for (t.s(); !(e = t.n()).done;) {
               var /* [auto-meaningful-name] */e$value = e.value
               if (null === e$value || undefined === e$value ? undefined : e$value.cdnUrl) {
-                $$_$$_$$_$$_src_shared_tools_index.bb(e$value.id, e$value.cdnUrl)
+                Src_shared_tools_index.bb(e$value.id, e$value.cdnUrl)
               }
             }
           } catch (r) {
@@ -244,42 +244,42 @@ var kP = memo(function () {
       }
     }
   }, [])
-  var N = $$_$$_$$_$$_src_shared_tools_index.H(m, null === m || undefined === m ? undefined : m.closest(".coco-dialog-wrapper"))
-  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.f, {
+  var N = Src_shared_tools_index.H(m, null === m || undefined === m ? undefined : m.closest(".coco-dialog-wrapper"))
+  return React.createElement(Src_shared_ui_components_index.f, {
     visible: n$visible,
     withPortal: true,
     onClose: C,
-    title: $_710$a$formatMessage({
+    title: Module_710$a$formatMessage({
       id: "RichTextEditor.editDialogTitle"
     }),
-    className: $_7071.container
+    className: Module_7071.container
   }, React.createElement("div", {
-    className: $_7071.header
+    className: Module_7071.header
   }), React.createElement("div", {
-    className: $_7071.content,
+    className: Module_7071.content,
     ref: w,
     onClick: A
   }, React.createElement("div", {
-    className: $_7071.editor
+    className: Module_7071.editor
   }, React.createElement("div", {
     ref: y
   }))), React.createElement("div", {
-    className: $_7071.footer
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
-    className: $_7071.save,
+    className: Module_7071.footer
+  }, React.createElement(Src_shared_ui_components_index.d, {
+    className: Module_7071.save,
     type: "primary",
     onClick: T
-  }, $_710$a$formatMessage({
+  }, Module_710$a$formatMessage({
     id: "save"
-  }))), React.createElement($_1213.a, {
+  }))), React.createElement(Module_1213.a, {
     placement: "rightBottom",
     visible: l,
-    content: l && React.createElement($$_$$_$$_$$_src_shared_ui_components_index.q, {
+    content: l && React.createElement(Src_shared_ui_components_index.q, {
       ref: b,
       onChange: j
     })
   }, React.createElement("span", {
-    className: $_7071.paletteTrigger,
+    className: Module_7071.paletteTrigger,
     style: {
       top: null === N || undefined === N ? undefined : N.top,
       left: null === N || undefined === N ? undefined : N.left

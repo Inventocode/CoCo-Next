@@ -8,71 +8,71 @@
 
 var o
 var r
-import * as i from "./11"
-import * as a from "./75"
-import * as s from "./83"
+import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"./11"
+import * as /* [auto-meaningful-name] */Module_75 from /* 75 */"./75"
+import * as /* [auto-meaningful-name] */Module_83 from /* 83 */"./83"
 var /* [auto-meaningful-name] */IconWidgetOldButton = "icon-widget-old-button"
 r = {}
-i.a(r, s.c.TINY, {
+Module_11.a(r, Module_83.c.TINY, {
   height: 32,
   fontSize: 20,
-  maxWidth: a.e,
+  maxWidth: Module_75.e,
   minWidth: 32
 })
-i.a(r, s.c.SMALL, {
+Module_11.a(r, Module_83.c.SMALL, {
   height: 40,
   fontSize: 24,
-  maxWidth: a.e,
+  maxWidth: Module_75.e,
   minWidth: 40
 })
-i.a(r, s.c.MEDIUM, {
+Module_11.a(r, Module_83.c.MEDIUM, {
   height: 56,
   fontSize: 24,
-  maxWidth: a.e,
+  maxWidth: Module_75.e,
   minWidth: 56
 })
-i.a(r, s.c.LARGE, {
+Module_11.a(r, Module_83.c.LARGE, {
   height: 80,
   fontSize: 44,
-  maxWidth: a.e,
+  maxWidth: Module_75.e,
   minWidth: 80
 })
-i.a(r, s.c.HUGE, {
+Module_11.a(r, Module_83.c.HUGE, {
   height: 112,
   fontSize: 52,
-  maxWidth: a.e,
+  maxWidth: Module_75.e,
   minWidth: 112
 })
 var l = r
 o = {}
-i.a(o, s.c.TINY, {
+Module_11.a(o, Module_83.c.TINY, {
   height: 28,
   fontSize: 12,
-  maxWidth: a.e,
+  maxWidth: Module_75.e,
   minWidth: 64
 })
-i.a(o, s.c.SMALL, {
+Module_11.a(o, Module_83.c.SMALL, {
   height: 28,
   fontSize: 12,
-  maxWidth: a.e,
+  maxWidth: Module_75.e,
   minWidth: 64
 })
-i.a(o, s.c.MEDIUM, {
+Module_11.a(o, Module_83.c.MEDIUM, {
   height: 40,
   fontSize: 16,
-  maxWidth: a.e,
+  maxWidth: Module_75.e,
   minWidth: 68
 })
-i.a(o, s.c.LARGE, {
+Module_11.a(o, Module_83.c.LARGE, {
   height: 52,
   fontSize: 20,
-  maxWidth: a.e,
+  maxWidth: Module_75.e,
   minWidth: 78
 })
-i.a(o, s.c.HUGE, {
+Module_11.a(o, Module_83.c.HUGE, {
   height: 52,
   fontSize: 20,
-  maxWidth: a.e,
+  maxWidth: Module_75.e,
   minWidth: 78
 })
 var u = o

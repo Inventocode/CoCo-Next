@@ -7,13 +7,13 @@
 "use strict"
 
 var r
-import * as i from "./15"
-import * as o from "./26"
+import * as /* [auto-meaningful-name] */Module_15 from /* 15 */"./15"
+import * as /* [auto-meaningful-name] */Module_26 from /* 26 */"./26"
 function a(e) {
   return "function" === typeof e
 }
 function s(e, t, n, u, l, c, f) {
-  if (1 === e.length && i.e(e[0])) {
+  if (1 === e.length && Module_15.e(e[0])) {
     return [
       {
         type: r.literal,
@@ -23,12 +23,12 @@ function s(e, t, n, u, l, c, f) {
   }
   for (var d = [], p = 0, h = e; p < h.length; p++) {
     var m = h[p]
-    if (i.e(m)) {
+    if (Module_15.e(m)) {
       d.push({
         type: r.literal,
         value: m.value
       })
-    } else if (i.i(m)) {
+    } else if (Module_15.i(m)) {
       if ("number" === typeof c) {
         d.push({
           type: r.literal,
@@ -38,10 +38,10 @@ function s(e, t, n, u, l, c, f) {
     } else {
       var /* [auto-meaningful-name] */m$value = m.value
       if (!l || !(m$value in l)) {
-        throw new o.e(m$value, f)
+        throw new Module_26.e(m$value, f)
       }
       var y = l[m$value]
-      if (i.b(m)) {
+      if (Module_15.b(m)) {
         if (!(y && "string" !== typeof y && "number" !== typeof y)) {
           y = "string" === typeof y || "number" === typeof y ? String(y) : ""
         }
@@ -49,20 +49,20 @@ function s(e, t, n, u, l, c, f) {
           type: "string" === typeof y ? r.literal : r.object,
           value: y
         })
-      } else if (i.c(m)) {
-        var g = "string" === typeof m.style ? u.date[m.style] : i.d(m.style) ? m.style.parsedOptions : undefined
+      } else if (Module_15.c(m)) {
+        var g = "string" === typeof m.style ? u.date[m.style] : Module_15.d(m.style) ? m.style.parsedOptions : undefined
         d.push({
           type: r.literal,
           value: n.getDateTimeFormat(t, g).format(y)
         })
-      } else if (i.l(m)) {
-        g = "string" === typeof m.style ? u.time[m.style] : i.d(m.style) ? m.style.parsedOptions : undefined
+      } else if (Module_15.l(m)) {
+        g = "string" === typeof m.style ? u.time[m.style] : Module_15.d(m.style) ? m.style.parsedOptions : undefined
         d.push({
           type: r.literal,
           value: n.getDateTimeFormat(t, g).format(y)
         })
-      } else if (i.f(m)) {
-        if ((g = "string" === typeof m.style ? u.number[m.style] : i.g(m.style) ? m.style.parsedOptions : undefined) && g.scale) {
+      } else if (Module_15.f(m)) {
+        if ((g = "string" === typeof m.style ? u.number[m.style] : Module_15.g(m.style) ? m.style.parsedOptions : undefined) && g.scale) {
           y *= g.scale || 1
         }
         d.push({
@@ -70,12 +70,12 @@ function s(e, t, n, u, l, c, f) {
           value: n.getNumberFormat(t, g).format(y)
         })
       } else {
-        if (i.k(m)) {
+        if (Module_15.k(m)) {
           var /* [auto-meaningful-name] */m$children = m.children
           var /* [auto-meaningful-name] */m$value1 = m.value
           var E = l[m$value1]
           if (!a(E)) {
-            throw new o.d(m$value1, "function", f)
+            throw new Module_26.d(m$value1, "function", f)
           }
           var O = E(s(m$children, t, n, u, l, c).map(function (e) {
             return e.value
@@ -90,16 +90,16 @@ function s(e, t, n, u, l, c, f) {
             }
           }))
         }
-        if (i.j(m)) {
+        if (Module_15.j(m)) {
           if (!(w = m.options[y] || m.options.other)) {
-            throw new o.c(m.value, y, Object.keys(m.options), f)
+            throw new Module_26.c(m.value, y, Object.keys(m.options), f)
           }
           d.push.apply(d, s(w.value, t, n, u, l))
-        } else if (i.h(m)) {
+        } else if (Module_15.h(m)) {
           var w
           if (!(w = m.options["=" + y])) {
             if (!Intl.PluralRules) {
-              throw new o.b("Intl.PluralRules is not available in this environment.\nTry polyfilling it using \"@formatjs/intl-pluralrules\"\n", o.a.MISSING_INTL_API, f)
+              throw new Module_26.b("Intl.PluralRules is not available in this environment.\nTry polyfilling it using \"@formatjs/intl-pluralrules\"\n", Module_26.a.MISSING_INTL_API, f)
             }
             var S = n.getPluralRules(t, {
               type: m.pluralType
@@ -107,7 +107,7 @@ function s(e, t, n, u, l, c, f) {
             w = m.options[S] || m.options.other
           }
           if (!w) {
-            throw new o.c(m.value, y, Object.keys(m.options), f)
+            throw new Module_26.c(m.value, y, Object.keys(m.options), f)
           }
           d.push.apply(d, s(w.value, t, n, u, l, y - (m.offset || 0)))
         } else {

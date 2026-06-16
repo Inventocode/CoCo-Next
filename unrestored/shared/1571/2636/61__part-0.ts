@@ -7,19 +7,19 @@
 "use strict"
 
 import { f, h } from "./61__part-1"
-import * as r from "./6"
-import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_storage from "../../../../src/shared/widget/custom/storage"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_load from "../../../../src/shared/widget/custom/load"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
-import * as c from "./75"
-import * as l from "./4"
-import * as /* [auto-meaningful-name] */$_46_index from "./46/index"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"./6"
+import * as /* [auto-meaningful-name] */Module_25 from /* 25 */"./25/index"
+import * as /* [auto-meaningful-name] */Src_shared_widget_custom_storage from /* 96 */"../../../../src/shared/widget/custom/storage"
+import * as /* [auto-meaningful-name] */Src_shared_widget_custom_load from /* 34 */"../../../../src/shared/widget/custom/load"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Module_75 from /* 75 */"./75"
+import * as /* [auto-meaningful-name] */Module_4 from /* 4 */"./4"
+import * as /* [auto-meaningful-name] */Module_46 from /* 46 */"./46/index"
 var d = {
-  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.D,
+  type: Src_editor_widget_builtIn_types.D,
   category: {
     iconId: "icon-screen",
-    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_types.D
+    blocks: Src_editor_widget_builtIn_types.D
   },
   categoryClass: {
     text: "",
@@ -27,7 +27,7 @@ var d = {
     blocks: []
   },
   getTemplate: function (e) {
-    return ["<block type=\"screen_on_press\" uncache=\"true\"></block>", f, "<block type=\"new_screen_set_background_color\" uncache=\"true\">\n    <value name=\"COLOR\">\n      <shadow type=\"color_picker\"><field name=\"COLOR_PALETTE\">".concat(c.c, "</field></shadow>\n    </value>\n    </block>"), "<block type=\"new_screen_set_background_image\" uncache=\"true\">\n      <value name=\"IMAGE_FILE_ID\">\n        <shadow type=\"image_file_list_dropdown\">\n          <field name=\"IMAGE_FILE_ID\">".concat(h, "</field>\n        </shadow>\n      </value>\n    </block>"), f, "<block type=\"new_screen_get_size\" uncache=\"true\">\n    </block>", "<block type=\"new_screen_get_color\" uncache=\"true\">\n    </block>\n    <block type=\"new_screen_get_background_image\" uncache=\"true\">\n    </block>\n    ", f, "<block type=\"screen_check_if_pressed\" uncache=\"true\">\n    </block>"]
+    return ["<block type=\"screen_on_press\" uncache=\"true\"></block>", f, "<block type=\"new_screen_set_background_color\" uncache=\"true\">\n    <value name=\"COLOR\">\n      <shadow type=\"color_picker\"><field name=\"COLOR_PALETTE\">".concat(Module_75.c, "</field></shadow>\n    </value>\n    </block>"), "<block type=\"new_screen_set_background_image\" uncache=\"true\">\n      <value name=\"IMAGE_FILE_ID\">\n        <shadow type=\"image_file_list_dropdown\">\n          <field name=\"IMAGE_FILE_ID\">".concat(h, "</field>\n        </shadow>\n      </value>\n    </block>"), f, "<block type=\"new_screen_get_size\" uncache=\"true\">\n    </block>", "<block type=\"new_screen_get_color\" uncache=\"true\">\n    </block>\n    <block type=\"new_screen_get_background_image\" uncache=\"true\">\n    </block>\n    ", f, "<block type=\"screen_check_if_pressed\" uncache=\"true\">\n    </block>"]
   },
   blockDeclareGroup: {
     setBlockGroupSnippet: function (e) {
@@ -55,64 +55,64 @@ var d = {
         }
         var u = ""
         u = "press" === i ? "argsOnScreenPress" : "pressIn" === i ? "argsOnScreenPressIn" : "pressHold" === i ? "argsOnScreenPressHold" : "argsOnScreenPressOut"
-        return l.n(u, [l.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))], a, [s, c])
+        return Module_4.n(u, [Module_4.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))], a, [s, c])
       })
       e.insertBlockSnippetGenerator("screen_field_color", function (t, n) {
         var r = t.blocks[n]
-        return l.o(e.getFieldValue(r, "COLOR_VALUE") || "")
+        return Module_4.o(e.getFieldValue(r, "COLOR_VALUE") || "")
       })
       e.insertBlockSnippetGenerator("screen_set_background_color", function (t, n) {
         var r = e.getFieldValue(t.blocks[n], "SCREEN_ID") || ""
         var o = e.valueToCode(t, n, "COLOR", e.ORDER_FUNCTION_CALL)
-        return l.n("setScreenBackgroundColor", [l.o(r), o])
+        return Module_4.n("setScreenBackgroundColor", [Module_4.o(r), o])
       })
       e.insertBlockSnippetGenerator("screen_check_if_pressed", function (t, n) {
-        return l.s("checkIfScreenPressed", [l.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))])
+        return Module_4.s("checkIfScreenPressed", [Module_4.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))])
       })
       e.insertBlockSnippetGenerator("screen_set_background_image", function (t, n) {
         var r = e.getFieldValue(t.blocks[n], "SCREEN_ID") || ""
         var o = e.valueToCode(t, n, "IMAGE_FILE_ID", e.ORDER_FUNCTION_CALL)
-        return o ? l.n("setScreenBackgroundImageId", [l.o(r), o]) : ""
+        return o ? Module_4.n("setScreenBackgroundImageId", [Module_4.o(r), o]) : ""
       })
       e.insertBlockSnippetGenerator("screen_get_color", function (t, n) {
         var r = e.getFieldValue(t.blocks[n], "SCREEN_ID") || ""
-        return l.s("getScreenBackgroundColor", [l.o(r)])
+        return Module_4.s("getScreenBackgroundColor", [Module_4.o(r)])
       })
       e.insertBlockSnippetGenerator("screen_get_size", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "SCREEN_ID") || ""
         var i = e.getFieldValue(r, "PROPERTY") || ""
-        return l.s("height" === i ? "getScreenHeight" : "getScreenWidth", [l.o(o)])
+        return Module_4.s("height" === i ? "getScreenHeight" : "getScreenWidth", [Module_4.o(o)])
       })
       e.insertBlockSnippetGenerator("screen_get_background_image", function (t, n) {
         var r = e.getFieldValue(t.blocks[n], "SCREEN_ID") || ""
-        return l.s("getScreenBackgroundImage", [l.o(r)])
+        return Module_4.s("getScreenBackgroundImage", [Module_4.o(r)])
       })
       e.insertBlockSnippetGenerator("new_screen_set_background_color", function (n, r) {
         var /* [auto-meaningful-name] */tNR$block = t(n, r).block
         var i = e.getDynamicValue("__CURRENT_SCREEN_ID__")
         var a = e.valueToCode(n, r, "COLOR", e.ORDER_FUNCTION_CALL)
-        return l.l(l.n("setScreenBackgroundColor", [l.o(i), a]), tNR$block, e)
+        return Module_4.l(Module_4.n("setScreenBackgroundColor", [Module_4.o(i), a]), tNR$block, e)
       })
       e.insertBlockSnippetGenerator("new_screen_set_background_image", function (n, r) {
         var o = e.getDynamicValue("__CURRENT_SCREEN_ID__")
         var /* [auto-meaningful-name] */tNR$block = t(n, r).block
         var a = e.valueToCode(n, r, "IMAGE_FILE_ID", e.ORDER_FUNCTION_CALL)
-        return a ? l.l(l.n("setScreenBackgroundImageId", [l.o(o), a]), tNR$block, e) : ""
+        return a ? Module_4.l(Module_4.n("setScreenBackgroundImageId", [Module_4.o(o), a]), tNR$block, e) : ""
       })
       e.insertBlockSnippetGenerator("new_screen_get_color", function (t, n) {
         var r = e.getDynamicValue("__CURRENT_SCREEN_ID__")
-        return l.s("getScreenBackgroundColor", [l.o(r)])
+        return Module_4.s("getScreenBackgroundColor", [Module_4.o(r)])
       })
       e.insertBlockSnippetGenerator("new_screen_get_size", function (t, n) {
         var r = t.blocks[n]
         var o = e.getDynamicValue("__CURRENT_SCREEN_ID__") || ""
         var i = e.getFieldValue(r, "PROPERTY") || ""
-        return l.s("height" === i ? "getScreenHeight" : "getScreenWidth", [l.o(o)])
+        return Module_4.s("height" === i ? "getScreenHeight" : "getScreenWidth", [Module_4.o(o)])
       })
       e.insertBlockSnippetGenerator("new_screen_get_background_image", function (t, n) {
         var r = e.getDynamicValue("__CURRENT_SCREEN_ID__")
-        return l.s("getScreenBackgroundImage", [l.o(r)])
+        return Module_4.s("getScreenBackgroundImage", [Module_4.o(r)])
       })
     },
     setBlockGroupProfile: function (e, t) {
@@ -120,7 +120,7 @@ var d = {
         type: "screen_on_press",
         message0: "%{BKY_SCREEN_ON_PRESS_MSG0}",
         args0: [
-          l.e("%{BKY_BLOCK_TAB_ICON}", true), {
+          Module_4.e("%{BKY_BLOCK_TAB_ICON}", true), {
             type: "field_coco_dropdown",
             name: "PRESS_EVENT",
             custom: true,
@@ -174,7 +174,7 @@ var d = {
             name: "SCREEN_ID",
             custom: true,
             advancedOptions: function () {
-              return $_46_index.c().getScreenList()
+              return Module_46.c().getScreenList()
             }
           }, {
             type: "input_value",
@@ -209,7 +209,7 @@ var d = {
             name: "SCREEN_ID",
             custom: true,
             options: function () {
-              return $_46_index.c().getScreenList()
+              return Module_46.c().getScreenList()
             }
           }, {
             type: "field_coco_dropdown",
@@ -243,7 +243,7 @@ var d = {
             name: "SCREEN_ID",
             custom: true,
             options: function () {
-              return $_46_index.c().getScreenList()
+              return Module_46.c().getScreenList()
             }
           }
         ],
@@ -260,7 +260,7 @@ var d = {
             name: "SCREEN_ID",
             custom: true,
             advancedOptions: function () {
-              return $_46_index.c().getScreenList()
+              return Module_46.c().getScreenList()
             }
           }, {
             type: "input_value",
@@ -282,7 +282,7 @@ var d = {
             name: "SCREEN_ID",
             custom: true,
             advancedOptions: function () {
-              return $_46_index.c().getScreenList()
+              return Module_46.c().getScreenList()
             }
           }
         ],

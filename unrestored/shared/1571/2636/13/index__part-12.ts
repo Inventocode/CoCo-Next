@@ -7,15 +7,15 @@
 "use strict"
 
 import { fe, he } from "./index__part-11"
-import * as /* [auto-meaningful-name] */$$_59_index from "../59/index"
-import * as /* [auto-meaningful-name] */$$_58_index from "../58/index"
-import * as /* [auto-meaningful-name] */$$_39 from "../39"
-import * as /* [auto-meaningful-name] */$$_27 from "../27"
-import /* [auto-meaningful-name] */React from "react"
-import { createRef, memo } from "react"
+import * as /* [auto-meaningful-name] */Module_59 from /* 59 */"../59/index"
+import * as /* [auto-meaningful-name] */Module_58 from /* 58 */"../58/index"
+import * as /* [auto-meaningful-name] */Module_39 from /* 39 */"../39"
+import * as /* [auto-meaningful-name] */Module_27 from /* 27 */"../27"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { createRef, memo } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import i from "classnames"
-import "./872"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import /* 872 */"./872"
 function me(e) {
   return e.target.closest("[data-coco-draggable-index]")
 }
@@ -29,11 +29,11 @@ function ge(e, t, n) {
   return s
 }
 var _e = function (e) {
-  $$_58_index.a(n, e)
-  var t = $$_59_index.a(n)
+  Module_58.a(n, e)
+  var t = Module_59.a(n)
   function n(e) {
     var r
-    $$_27.a(this, n);
+    Module_27.a(this, n);
     (r = t.call(this, e)).separationLineRef = createRef()
     r.dragContentRef = createRef()
     r.dragWrapperRef = createRef()
@@ -156,7 +156,7 @@ var _e = function (e) {
     }
     return r
   }
-  $$_39.a(n, [
+  Module_39.a(n, [
     {
       key: "render",
       value: function () {
@@ -171,7 +171,7 @@ var _e = function (e) {
             draggedItemIndex: this$state$draggedItemIndex
           }
         }, React.createElement("div", {
-          className: i("coco-drag-context", this$props$className),
+          className: Classnames("coco-drag-context", this$props$className),
           ref: this.dragWrapperRef
         }, React.createElement("div", {
           onMouseDown: this.handleMouseDown,
@@ -196,7 +196,7 @@ memo(function (e) {
   return React.createElement(fe, null, function (e) {
     var /* [auto-meaningful-name] */e$draggedItemIndex = e.draggedItemIndex
     return React.createElement("div", {
-      className: i("coco-draggable", {
+      className: Classnames("coco-draggable", {
         dragged: e$draggedItemIndex === e$index
       }),
       "data-coco-draggable-index": e$index

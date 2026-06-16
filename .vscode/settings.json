@@ -34,6 +34,7 @@
         "nexe",
         "npmmirror",
         "oldsquaw",
+        "nums",
         "qiniu",
         "qrcode",
         "rsdoctor",
@@ -43,8 +44,6 @@
         "slightning",
         "socketcoll",
         "socketcv",
-        "unminimize",
-        "unminimizing",
         "vika",
         "vikadata",
         "webdb",
@@ -53,9 +52,10 @@
     ],
     "explorer.fileNesting.enabled": true,
     "explorer.fileNesting.patterns": {
+        "*": "${basename}.unrestored.*, ${capture}.unrestored.ts",
         "rspack.common.*": "rspack.*",
         "tsconfig.json": "tsconfig.*.json",
         "package.json": "package-lock.json"
     },
-    "typescript.tsdk": "node_modules\\typescript\\lib"
+    "js/ts.tsdk.path": "node_modules\\typescript\\lib"
 }

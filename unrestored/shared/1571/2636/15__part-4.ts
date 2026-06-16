@@ -6,16 +6,16 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
-import * as P from "./7"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import * as /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import /* [auto-meaningful-name] */RegeneratorRuntime1 from /* 1 */"regenerator-runtime"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"./7"
 var B = {}
 function F(e, t) {
   return G.apply(this, arguments)
 }
 function G() {
-  return (G = P.a(RegeneratorRuntime1.mark(function e(t, n) {
+  return (G = Module_7.a(RegeneratorRuntime1.mark(function e(t, n) {
     var r
     return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
@@ -65,7 +65,7 @@ function U(e) {
   if ("object" === typeof e) {
     var t = Array.isArray(e) ? [] : {}
     Object.entries(e).forEach(function (e) {
-      var n = $_10_index.a(e, 2)
+      var n = Module_10.a(e, 2)
       var o = n[0]
       var i = n[1]
       t[o] = U(i)

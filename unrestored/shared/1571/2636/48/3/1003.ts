@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("./230")
+var r = require(/* 230 */"./230")
 exports.a = function (e, t) {
   var n
   if (undefined === t) {

@@ -6,36 +6,36 @@
 
 "use strict"
 
-import { Xr } from "../../../../src/editor/ui/preview-area/screen-list/index"
+import { Xr } from "../../../../src/editor/ui/PreviewArea/screen-list/index"
 import { $v } from "./index__part-91"
 import { nb } from "./index__part-92"
-import qv from "./88"
-import * as /* [auto-meaningful-name] */$_238 from "./238"
-import * as Tn from "./68"
-import * as Et from "./9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
-import * as /* [auto-meaningful-name] */$_1213 from "./1213"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import { useDispatch, useSelector } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { memo, useState } from "react"
+import /* [auto-meaningful-name] */Module_88 from /* 88 */"./88"
+import * as /* [auto-meaningful-name] */Module_238 from /* 238 */"./238"
+import * as /* [auto-meaningful-name] */Module_68 from /* 68 */"./68"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"./9"
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */Module_1213 from /* 1213 */"./1213"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import { useDispatch, useSelector } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo, useState } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_747 from "./747"
-import /* [auto-meaningful-name] */$_7471 from "./747"
+import * as /* [auto-meaningful-name] */Module_747 from /* 747 */"./747"
+import /* [auto-meaningful-name] */Module_7471 from /* 747 */"./747"
 var wy = memo(function () {
   var e = useDispatch()
-  var t = $_238.b()
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
-  var r = $_238.d()
+  var t = Module_238.b()
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
+  var r = Module_238.d()
   var o = useSelector(function (e) {
     return e.project.screens
   })
   var i = useState(false)
-  var a = $_10_index.a(i, 2)
+  var a = Module_10.a(i, 2)
   var s = a[0]
   var c = a[1]
   if (!r) {
@@ -45,80 +45,80 @@ var wy = memo(function () {
   var /* [auto-meaningful-name] */r$backgroundColor = r.backgroundColor
   var /* [auto-meaningful-name] */r$backgroundImage = r.backgroundImage
   var /* [auto-meaningful-name] */r$backgroundImageResizeMode = r.backgroundImageResizeMode
-  var m = Et.hb(r$backgroundImage || "")
+  var m = Module_9.hb(r$backgroundImage || "")
   var g = (null === m || undefined === m ? undefined : m.source) || (null === m || undefined === m ? undefined : m.cdnUrl)
-  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.h, {
+  return React.createElement(Src_shared_ui_components_index.h, {
     "data-updated-at": t
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
-    className: Classnames(qv.formItemWrapper, qv.formWidgetTitle, "changeTitle"),
+  }, React.createElement(Src_shared_ui_components_index.i, {
+    className: Classnames(Module_88.formItemWrapper, Module_88.formWidgetTitle, "changeTitle"),
     align: "vertical",
     label: "名称"
   }, React.createElement(Xr, {
     value: r$title,
     renameInputValue: function (t) {
-      var n = Et.Ob(r.id, t, o)
-      e($$_$$_$$_$$_src_editor_redux_common_actions.Jg(r.id, "title", n))
+      var n = Module_9.Ob(r.id, t, o)
+      e(Src_editor_redux_common_actions.Jg(r.id, "title", n))
       return n
     },
     onChange: function (t) {
-      e($$_$$_$$_$$_src_editor_redux_common_actions.Jg(r.id, "title", t))
+      e(Src_editor_redux_common_actions.Jg(r.id, "title", t))
     },
     checkValueIsRepeat: function (e) {
-      return Et.r(r.id, e)
+      return Module_9.r(r.id, e)
     }
-  })), React.createElement("div", null, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
-    className: Classnames(qv.formItemWrapper, "changeBackgroundColor"),
-    label: $_710$a$formatMessage({
+  })), React.createElement("div", null, React.createElement(Src_shared_ui_components_index.i, {
+    className: Classnames(Module_88.formItemWrapper, "changeBackgroundColor"),
+    label: Module_710$a$formatMessage({
       id: "color"
     })
-  }, React.createElement($_1213.a, {
+  }, React.createElement(Module_1213.a, {
     placement: "rightBottom",
     trigger: "click",
     onVisibleChange: function (e) {
       c(e)
     },
-    content: s && React.createElement($$_$$_$$_$$_src_shared_ui_components_index.q, {
+    content: s && React.createElement(Src_shared_ui_components_index.q, {
       value: r$backgroundColor,
       onChange: function (t) {
-        e($$_$$_$$_$$_src_editor_redux_common_actions.Jg(r.id, "backgroundColor", t))
+        e(Src_editor_redux_common_actions.Jg(r.id, "backgroundColor", t))
       }
     })
   }, React.createElement("div", {
-    className: qv.colorBlock,
+    className: Module_88.colorBlock,
     style: {
-      backgroundColor: $$_$$_$$_$$_src_shared_tools_index.i(r$backgroundColor) ? "#ffffff" : r$backgroundColor
+      backgroundColor: Src_shared_tools_index.i(r$backgroundColor) ? "#ffffff" : r$backgroundColor
     }
-  }, $$_$$_$$_$$_src_shared_tools_index.i(r$backgroundColor) && React.createElement("div", {
-    className: qv.slash
-  })))), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
-    className: Classnames(qv.formItemWrapper, $_7471.changeImageWrapper),
+  }, Src_shared_tools_index.i(r$backgroundColor) && React.createElement("div", {
+    className: Module_88.slash
+  })))), React.createElement(Src_shared_ui_components_index.i, {
+    className: Classnames(Module_88.formItemWrapper, Module_7471.changeImageWrapper),
     align: "vertical",
-    label: $_710$a$formatMessage({
+    label: Module_710$a$formatMessage({
       id: "backgroundImage"
     })
   }, React.createElement(nb, {
     onUploadFileChange: function (t) {
       if (t) {
-        e($$_$$_$$_$$_src_editor_redux_common_actions.Zf(t, function (t) {
+        e(Src_editor_redux_common_actions.Zf(t, function (t) {
           var n = t[0]
-          e($$_$$_$$_$$_src_editor_redux_common_actions.Jg(r.id, "backgroundImage", n.id))
+          e(Src_editor_redux_common_actions.Jg(r.id, "backgroundImage", n.id))
         }))
       }
     },
     onResourceLibraryClick: function () {
-      e($$_$$_$$_$$_src_editor_redux_common_actions.wj(Tn.c.ImageLibrary, function (t) {
+      e(Src_editor_redux_common_actions.wj(Module_68.c.ImageLibrary, function (t) {
         var n = t[0]
-        e($$_$$_$$_$$_src_editor_redux_common_actions.Jg(r.id, "backgroundImage", n.id))
-        e($$_$$_$$_$$_src_editor_redux_common_actions.sh())
+        e(Src_editor_redux_common_actions.Jg(r.id, "backgroundImage", n.id))
+        e(Src_editor_redux_common_actions.sh())
       }))
     },
     onDelete: function () {
-      e($$_$$_$$_$$_src_editor_redux_common_actions.Jg(r.id, "backgroundImage", ""))
+      e(Src_editor_redux_common_actions.Jg(r.id, "backgroundImage", ""))
     },
     fileId: r$backgroundImage
-  })), g && React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
-    className: Classnames(qv.formItemWrapper),
-    label: $_710$a$formatMessage({
+  })), g && React.createElement(Src_shared_ui_components_index.i, {
+    className: Classnames(Module_88.formItemWrapper),
+    label: Module_710$a$formatMessage({
       id: "adapt"
     }),
     align: "vertical"
@@ -126,7 +126,7 @@ var wy = memo(function () {
     mode: r$backgroundImageResizeMode,
     onModeChange: function (t) {
       var n = t
-      e($$_$$_$$_$$_src_editor_redux_common_actions.Jg(r.id, "backgroundImageResizeMode", n))
+      e(Src_editor_redux_common_actions.Jg(r.id, "backgroundImageResizeMode", n))
     }
   }))))
 })

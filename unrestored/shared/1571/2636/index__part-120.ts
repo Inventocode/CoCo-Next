@@ -6,49 +6,49 @@
 
 "use strict"
 
-import /* [auto-meaningful-name] */$_397 from "./397"
-import qv from "./88"
-import * as /* [auto-meaningful-name] */$_144 from "./144"
-import * as Et from "./9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import { useDispatch } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { memo } from "react"
+import /* [auto-meaningful-name] */Module_397 from /* 397 */"./397"
+import /* [auto-meaningful-name] */Module_88 from /* 88 */"./88"
+import * as /* [auto-meaningful-name] */Module_144 from /* 144 */"./144"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"./9"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import { useDispatch } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_1039 from "./1039"
-import /* [auto-meaningful-name] */$_10391 from "./1039"
+import * as /* [auto-meaningful-name] */Module_1039 from /* 1039 */"./1039"
+import /* [auto-meaningful-name] */Module_10391 from /* 1039 */"./1039"
 var WO = memo(function (e) {
   var /* [auto-meaningful-name] */e$formConfig = e.formConfig
   var /* [auto-meaningful-name] */e$widgetId = e.widgetId
   var /* [auto-meaningful-name] */e$getValue = e.getValue
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var i = useDispatch()
   var a = e$getValue("selectedStyleId")
   var s = e$getValue("actionList")
-  var c = $_144.j(s, a)
-  var l = $_710$a$formatMessage({
+  var c = Module_144.j(s, a)
+  var l = Module_710$a$formatMessage({
     id: e$formConfig.label || "styleAction"
   })
-  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
-    className: Classnames(qv.formItemWrapper, $_397.form),
+  return React.createElement(Src_shared_ui_components_index.i, {
+    className: Classnames(Module_88.formItemWrapper, Module_397.form),
     label: l,
     align: "vertical"
   }, React.createElement("div", {
-    className: $_397.imageBox
+    className: Module_397.imageBox
   }, React.createElement("img", {
     alt: "actor style",
-    src: Et.mb(c.source) || c.source || $_10391
+    src: Module_9.mb(c.source) || c.source || Module_10391
   }), React.createElement("div", {
-    className: $_397.edit
+    className: Module_397.edit
   }, React.createElement("div", {
-    className: $_397.btn,
+    className: Module_397.btn,
     onClick: function () {
-      i($$_$$_$$_$$_src_editor_redux_common_actions.Dh(e$widgetId))
+      i(Src_editor_redux_common_actions.Dh(e$widgetId))
     }
-  }, $_710$a$formatMessage({
+  }, Module_710$a$formatMessage({
     id: "edit"
   })))))
 })

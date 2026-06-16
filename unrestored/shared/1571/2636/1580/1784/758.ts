@@ -4,6 +4,6 @@
  * 模块 ID：758
  */
 
-var r = require("../1648/714")
-var o = require("../1785/194")
+var r = require(/* 714 */"../1648/714")
+var o = require(/* 194 */"../1785/194")
 module.exports = "process" == r(o.process)

@@ -17,7 +17,8 @@ const PAGES = [
     { name: "editor" },
     { name: "editor-player", filenames: ["editor/editor-player.html"] },
     { name: "player", filenames: ["editor/player/index.html"] },
-    { name: "about" }
+    { name: "about" },
+    { name: "download" }
 ]
 
 /**
@@ -51,7 +52,7 @@ module.exports = (moreConfig, env) => {
  */
 function commonConfig(development, env) {
 
-    const { publicPath = "/", noPublicCDN = false } = env
+    const { publicPath = "/", noPublicCDN = development } = env
     const publicCDN = !noPublicCDN
 
     /** @type {SWC.Config} */
@@ -102,7 +103,8 @@ function commonConfig(development, env) {
                     exclude: [
                         /[\\\/]node_modules[\\\/]/i,
                         /[\\\/]unrestored[\\\/]/i,
-                        /[\\\/]src[\\\/]home[\\\/]ui[\\\/].*\.tsx?$/i
+                        /[\\\/]src[\\\/]home[\\\/]ui[\\\/].*\.tsx?$/i,
+                        /[\\\/]src[\\\/]shared[\\\/]packages[\\\/]@crc[\\\/]blink[\\\/].*\.ts$/i
                     ],
                     loader: "builtin:swc-loader",
                     options: commonSwcConfig
@@ -115,12 +117,22 @@ function commonConfig(development, env) {
                         }
                     })
                 }, {
+                    test: /[\\\/]src[\\\/]shared[\\\/]packages[\\\/]@crc[\\\/]blink[\\\/].*\.ts$/i,
+                    loader: "builtin:swc-loader",
+                    options: merge(commonSwcConfig, {
+                        jsc: {
+                            transform: {
+                                useDefineForClassFields: false
+                            }
+                        }
+                    })
+                }, {
                     test: /\.css$/i,
                     loader: "css-loader",
                     options: {
                         modules: {
                             auto: true,
-                            localIdentName: "[local]__[hash:hex:5]",
+                            localIdentName: "[folder]_[local]__[hash:base64:5]",
                             exportLocalsConvention: "asIs"
                         },
                         esModule: false

@@ -6,6 +6,6 @@
 
 import { r } from "./688__part-0"
 import "./688__part-1"
-import * as /* [auto-meaningful-name] */$_543 from "./543"
+import * as /* [auto-meaningful-name] */Module_543 from /* 543 */"./543"
 export { r as messages }
 export { b as types } from "./543"

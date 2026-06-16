@@ -7,12 +7,12 @@
 "use strict"
 
 import { m } from "./index__part-3"
-import * as /* [auto-meaningful-name] */$_744 from "./744"
-import * as /* [auto-meaningful-name] */$_119 from "./119"
-import * as c from "./65"
-import * as /* [auto-meaningful-name] */$_32_index from "./32/index"
-import * as /* [auto-meaningful-name] */$_268_index from "./268/index"
-import * as /* [auto-meaningful-name] */$_523_index from "./523/index"
+import * as /* [auto-meaningful-name] */Module_744 from /* 744 */"./744"
+import * as /* [auto-meaningful-name] */Module_119 from /* 119 */"./119"
+import * as /* [auto-meaningful-name] */Module_65 from /* 65 */"./65"
+import * as /* [auto-meaningful-name] */Module_32 from /* 32 */"./32/index"
+import * as /* [auto-meaningful-name] */Module_268 from /* 268 */"./268/index"
+import * as /* [auto-meaningful-name] */Module_523 from /* 523 */"./523/index"
 function E(e, t) {
   var n = function (e) {
     for (var t = [], n = 0, r = 0, i = 0, o = 0; o < e.length; o++) {
@@ -51,7 +51,7 @@ function E(e, t) {
           }
         }
         if (r === n) {
-          var s = $_523_index.a(t)
+          var s = Module_523.a(t)
           s.pop()
           return e(s)
         }
@@ -170,7 +170,7 @@ function R(e, t, n, r) {
     if (0 !== f) {
       var d = (u * s - o * l) / f
       var h = (i * l - c * s) / f
-      return new $_32_index.o(d, h)
+      return new Module_32.o(d, h)
     }
   }(e, t, n, r)
   return i ? I(i.x, e.x, t.x) && I(i.x, n.x, r.x) && I(i.y, e.y, t.y) && I(i.y, n.y, r.y) : 3 === D(e, t, n) || 3 === D(e, t, r)
@@ -212,8 +212,8 @@ var M = function () {
     this.app = e
   }
   e.prototype.get_texture = function (e) {
-    var t = $_32_index.B.TextureCache[e]
-    if (t instanceof $_32_index.y) {
+    var t = Module_32.B.TextureCache[e]
+    if (t instanceof Module_32.y) {
       return t
     }
   }
@@ -240,7 +240,7 @@ var M = function () {
     var n = this.get_texture(e)
     var r = this.get_texture_points_color_data(e)
     if (n && r) {
-      var i = c.f({
+      var i = Module_65.f({
         width: n.width,
         height: n.height
       })
@@ -268,7 +268,7 @@ var M = function () {
             var d = i ? (Math.random() - .5) * i + o : o
             var h = i ? (Math.random() - .5) * i + s : s
             if (f((c = d) - 1, (u = h) - 1) && f(c, u - 1) && f(c - 1, u) && f(c, u)) {
-              l.push(new $_32_index.m(d, h))
+              l.push(new Module_32.m(d, h))
             }
           }
         }
@@ -288,7 +288,7 @@ var M = function () {
     var n = this.get_texture(e)
     var r = this.get_texture_points_color_data(e)
     if (n && r) {
-      var i = c.f({
+      var i = Module_65.f({
         width: n.width,
         height: n.height
       })
@@ -314,7 +314,7 @@ var M = function () {
     var t = this.get_texture(e)
     var n = this.get_texture_points_color_data(e)
     if (t && n) {
-      var r = c.f({
+      var r = Module_65.f({
         width: t.width,
         height: t.height
       })
@@ -334,7 +334,7 @@ var M = function () {
     var r = document.createElement("canvas")
     var i = r.getContext("2d")
     if (i && n) {
-      var o = c.f({
+      var o = Module_65.f({
         width: t.width,
         height: t.height
       })
@@ -353,7 +353,7 @@ var M = function () {
     }
     for (var /* [auto-meaningful-name] */this$app$get_scene_container$children = this.app.get_scene_container().children, r = 0; r < this$app$get_scene_container$children.length; r++) {
       var i = this$app$get_scene_container$children[r]
-      if (c.m(i) && i.id === e) {
+      if (Module_65.m(i) && i.id === e) {
         this.scenes_cache.set(e, i)
         return i
       }
@@ -366,7 +366,7 @@ var M = function () {
     var /* [auto-meaningful-name] */p$return
     var a = this.actors_cache.get(e)
     var s = function (e) {
-      return !t || $_744.a(e.get_id(), t)
+      return !t || Module_744.a(e.get_id(), t)
     }
     if (a) {
       return !t || s(a.get_parent_scene()) ? a : undefined
@@ -375,14 +375,14 @@ var M = function () {
     try {
       for (var l = N(this$app$get_scene_container$children), f = l.next(); !f.done; f = l.next()) {
         var /* [auto-meaningful-name] */f$value = f.value
-        if (c.m(f$value) && s(f$value)) {
+        if (Module_65.m(f$value) && s(f$value)) {
           var /* [auto-meaningful-name] */f$value$get_actor_container$children = f$value.get_actor_container().children
           try {
             for (i = undefined, p = N(f$value$get_actor_container$children), _ = p.next(), undefined; !_.done; _ = p.next()) {
               var p
               var _
               var /* [auto-meaningful-name] */_$value = _.value
-              if (c.k(_$value) && _$value.id === e) {
+              if (Module_65.k(_$value) && _$value.id === e) {
                 var v = _$value.get_actor()
                 this.actors_cache.set(e, v)
                 return v
@@ -473,7 +473,7 @@ var M = function () {
       }
       var c = r.get_texture(t)
       if (c) {
-        var u = new $_32_index.u(c, n)
+        var u = new Module_32.u(c, n)
         u.parse(function () {
           if (u.textures) {
             var n = {
@@ -504,7 +504,7 @@ var M = function () {
     try {
       for (var i = N(r), o = i.next(); !o.done; o = i.next()) {
         var /* [auto-meaningful-name] */o$value = o.value
-        if ($_744.a(e, o$value.texture_ids)) {
+        if (Module_744.a(e, o$value.texture_ids)) {
           return true
         }
       }
@@ -547,7 +547,7 @@ var L = function (e, t, n, r) {
 }
 var j = function () {
   function e() {
-    this.event_emitter = new $_32_index.B.EventEmitter()
+    this.event_emitter = new Module_32.B.EventEmitter()
     this.disabled = 0
     this.fire_queue = []
   }
@@ -557,7 +557,7 @@ var j = function () {
   e.prototype.enable = function () {
     if (this.disabled <= 0) {
       this.disabled = 0
-      return new $_119.a("Do not use enable more than once")
+      return new Module_119.a("Do not use enable more than once")
     }
     this.disabled--
   }
@@ -589,7 +589,7 @@ var j = function () {
   e.prototype.emit = function (e, t) {
     this.event_emitter.emit(e, t)
   }
-  return e = L([$_268_index.injectable()], e)
+  return e = L([Module_268.injectable()], e)
 }()
 export { E }
 export { M }

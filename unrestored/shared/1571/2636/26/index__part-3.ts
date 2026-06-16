@@ -6,19 +6,19 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_tools_index from "../../../../../src/shared/tools/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index from "../../../../../src/shared/packages/@crc/blink/src/index"
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */Src_shared_packages_Crc_blink_src_index from /* 17 */"../../../../../src/shared/packages/@crc/blink/src/index"
 var r
-import * as H from "../6"
-import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
-import * as Y from "../7"
-import * as /* [auto-meaningful-name] */$$_207_209_index from "../207/209/index"
-import * as /* [auto-meaningful-name] */$$_37_index from "../37/index"
-import * as /* [auto-meaningful-name] */$$_53 from "../53"
-import * as /* [auto-meaningful-name] */$$_47_index from "../47/index"
-import * as /* [auto-meaningful-name] */$$_1058_125 from "../1058/125"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"../6"
+import * as /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import /* [auto-meaningful-name] */RegeneratorRuntime1 from /* 1 */"regenerator-runtime"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../7"
+import * as /* [auto-meaningful-name] */Module_209 from /* 209 */"../207/209/index"
+import * as /* [auto-meaningful-name] */Module_37 from /* 37 */"../37/index"
+import * as /* [auto-meaningful-name] */Module_53 from /* 53 */"../53"
+import * as /* [auto-meaningful-name] */Module_47 from /* 47 */"../47/index"
+import * as /* [auto-meaningful-name] */Module_125 from /* 125 */"../1058/125"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../../src/editor/redux/common/actions"
 !function (e) {
   e.PNG = "dataurl+png"
   e.SVG_ASCII = "dataurl+ascii"
@@ -31,7 +31,7 @@ function te(e) {
   return ne.apply(this, arguments)
 }
 function ne() {
-  return (ne = Y.a(RegeneratorRuntime1.mark(function e(t) {
+  return (ne = Module_7.a(RegeneratorRuntime1.mark(function e(t) {
     var n
     var r
     var o
@@ -44,7 +44,7 @@ function ne() {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            if (r = u.length > 1 && undefined !== u[1] ? u[1] : 2, o = null === (n = $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_block_by_id(t)) || undefined === n ? undefined : n.svg_group) {
+            if (r = u.length > 1 && undefined !== u[1] ? u[1] : 2, o = null === (n = Src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_block_by_id(t)) || undefined === n ? undefined : n.svg_group) {
               e.next = 4
               break
             }
@@ -58,7 +58,7 @@ function ne() {
             s = (a.width + 10) * r
             l = (a.height + 10) * r
             ue(e$sent, s, l, "png", function (e) {
-              $$_37_index.d.dispatch($$_$$_$$_$$_$$_src_editor_redux_common_actions.bi(true, e))
+              Module_37.d.dispatch(Src_editor_redux_common_actions.bi(true, e))
             })
           case 11:
           case "end":
@@ -72,7 +72,7 @@ function re(e, t) {
   return oe.apply(this, arguments)
 }
 function oe() {
-  return (oe = Y.a(RegeneratorRuntime1.mark(function e(t, n) {
+  return (oe = Module_7.a(RegeneratorRuntime1.mark(function e(t, n) {
     var r
     var /* [auto-meaningful-name] */t$type
     var /* [auto-meaningful-name] */e$sent
@@ -130,7 +130,7 @@ function ie() {
   return ae.apply(this, arguments)
 }
 function ae() {
-  return (ae = Y.a(RegeneratorRuntime1.mark(function e() {
+  return (ae = Module_7.a(RegeneratorRuntime1.mark(function e() {
     var t
     var n
     var r
@@ -143,14 +143,14 @@ function ae() {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            if (n = null === (t = $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_flyout()) || undefined === t ? undefined : t.get_workspace()) {
+            if (n = null === (t = Src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_flyout()) || undefined === t ? undefined : t.get_workspace()) {
               e.next = 3
               break
             }
             return e.abrupt("return")
           case 3:
             r = n.get_top_blocks(false)
-            o = $$_47_index.a(r)
+            o = Module_47.a(r)
             e.prev = 5
             o.s()
           case 7:
@@ -168,7 +168,7 @@ function ae() {
             return re(i$value, l)
           case 14:
             e.next = 16
-            return $$_$$_$$_$$_$$_src_shared_tools_index.lb(200)
+            return Src_shared_tools_index.lb(200)
           case 16:
             e.next = 7
             break
@@ -196,7 +196,7 @@ function ce(e) {
   return le.apply(this, arguments)
 }
 function le() {
-  return (le = Y.a(RegeneratorRuntime1.mark(function e(t) {
+  return (le = Module_7.a(RegeneratorRuntime1.mark(function e(t) {
     var n
     var r
     var o
@@ -253,7 +253,7 @@ function le() {
             break
           case 12:
             a = document.createElementNS("http://www.w3.org/2000/svg", "style")
-            s = $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.di_container.get($$_1058_125.BINDING.css)
+            s = Src_shared_packages_Crc_blink_src_index.Blink.di_container.get(Module_125.BINDING.css)
             a.textContent = "".concat(s.CONTENT, " .blocklyDropdownArrow{ fill: rgba(0, 0, 0, .1); }");
             (l = t.getBBox()).x -= 5
             l.y -= 5

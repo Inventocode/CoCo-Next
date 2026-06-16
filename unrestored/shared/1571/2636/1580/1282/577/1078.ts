@@ -4,8 +4,8 @@
  * 模块 ID：1078
  */
 
-var r = require("../../1785/194")
-var o = require("../231")
+var r = require(/* 194 */"../../1785/194")
+var o = require(/* 231 */"../231")
 var /* [auto-meaningful-name] */r$document = r.document
 var a = o(r$document) && o(r$document.createElement)
 module.exports = function (e) {

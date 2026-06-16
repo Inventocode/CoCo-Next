@@ -49,10 +49,10 @@ exports.getWood3ViewerUrl = function (e, t, n, r) {
   }
   return "".concat((0, i.getServiceOrigin)(e, "turtle-tool.codemao.cn"), "/viewer?action=load_work&").concat(o.join("&"))
 }
-var r = require("../772")
-var o = require("../773/index")
-var i = require("../2618/885")
-var a = require("./2623")
+var r = require(/* 772 */"../772")
+var o = require(/* 773 */"../773/index")
+var i = require(/* 885 */"../2618/885")
+var a = require(/* 2623 */"./2623")
 var s = new r.ApiSpec("wood3", {
   configure: new r.MethodType(),
   loadWork: new r.MethodType(),

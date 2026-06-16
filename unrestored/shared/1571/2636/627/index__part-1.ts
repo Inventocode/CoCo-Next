@@ -8,21 +8,21 @@
 
 var i
 var r
-import * as /* [auto-meaningful-name] */$$_19 from "../19"
-import * as /* [auto-meaningful-name] */$$_1543_326 from "../1543/326"
-import * as /* [auto-meaningful-name] */$$_1543_216 from "../1543/216"
-import /* [auto-meaningful-name] */$$_1543_2161 from "../1543/216"
-import "react"
+import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"../19"
+import * as /* [auto-meaningful-name] */Module_326 from /* 326 */"../1543/326"
+import * as /* [auto-meaningful-name] */Module_216 from /* 216 */"../1543/216"
+import /* [auto-meaningful-name] */Module_2161 from /* 216 */"../1543/216"
+import /* 0 */"react"
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */ReactDom from "react-dom"
-import /* [auto-meaningful-name] */ReactDom1 from "react-dom"
+import /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */ReactDom from /* 80 */"react-dom"
+import /* [auto-meaningful-name] */ReactDom1 from /* 80 */"react-dom"
 var h = false
 var p = {
   load: function () {
-    var e = $$_1543_326.a($$_1543_2161.mark(function e(t) {
+    var e = Module_326.a(Module_2161.mark(function e(t) {
       var a
-      return $$_1543_2161.wrap(function (e) {
+      return Module_2161.wrap(function (e) {
         for (;;) {
           switch (e.prev = e.next) {
             case 0:
@@ -33,7 +33,7 @@ var p = {
               return e.abrupt("return")
             case 2:
               a = React1.lazy(function () {
-                return import("./2647/index").then(function (e) {
+                return import(/* 2647 */"./2647/index").then(function (e) {
                   return {
                     default: e.KittenVideoPlayer
                   }
@@ -43,7 +43,7 @@ var p = {
               document.body.appendChild(r)
               ReactDom1.render(React1.createElement(React1.Suspense, {
                 fallback: null
-              }, React1.createElement(a, $$_19.a({
+              }, React1.createElement(a, Module_19.a({
                 getPlayerRef: function (e) {
                   return i = e
                 }

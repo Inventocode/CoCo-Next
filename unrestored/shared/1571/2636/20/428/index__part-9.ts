@@ -6,21 +6,21 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_34_347_112 from "../../34/347/112"
-import * as /* [auto-meaningful-name] */$$_$$_10_index from "../../10/index"
-import * as /* [auto-meaningful-name] */$$_$$_60 from "../../60"
-import /* [auto-meaningful-name] */Color from "color"
-import * as /* [auto-meaningful-name] */$$_$$_14 from "../../14"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_src_shared_tools_index from "../../../../../../src/shared/tools/index"
-import * as /* [auto-meaningful-name] */$$_$$_7 from "../../7"
-import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as a from "./12"
-import * as /* [auto-meaningful-name] */$$_$$_28_index from "../../28/index"
-import * as /* [auto-meaningful-name] */$_313 from "./313"
-import * as /* [auto-meaningful-name] */$$_$$_11 from "../../11"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_src_shared_widget_custom_storage from "../../../../../../src/shared/widget/custom/storage"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_src_shared_widget_custom_load from "../../../../../../src/shared/widget/custom/load"
-import * as /* [auto-meaningful-name] */$$_$$_301_85 from "../../301/85"
+import * as /* [auto-meaningful-name] */Module_112 from /* 112 */"../../34/347/112"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../../10/index"
+import * as /* [auto-meaningful-name] */Module_60 from /* 60 */"../../60"
+import /* [auto-meaningful-name] */Color from /* 51 */"color"
+import * as /* [auto-meaningful-name] */Module_14 from /* 14 */"../../14"
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../../7"
+import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import * as /* [auto-meaningful-name] */Module_12 from /* 12 */"./12"
+import * as /* [auto-meaningful-name] */Module_28 from /* 28 */"../../28/index"
+import * as /* [auto-meaningful-name] */Module_313 from /* 313 */"./313"
+import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"../../11"
+import * as /* [auto-meaningful-name] */Src_shared_widget_custom_storage from /* 96 */"../../../../../../src/shared/widget/custom/storage"
+import * as /* [auto-meaningful-name] */Src_shared_widget_custom_load from /* 34 */"../../../../../../src/shared/widget/custom/load"
+import * as /* [auto-meaningful-name] */Module_85 from /* 85 */"../../301/85"
 function fo(e) {
   var /* [auto-meaningful-name] */e$ruleKey = e.ruleKey
   var /* [auto-meaningful-name] */e$ruleOptions = e.ruleOptions
@@ -29,12 +29,12 @@ function fo(e) {
   var /* [auto-meaningful-name] */e$label = e.label
   var /* [auto-meaningful-name] */e$widgetId = e.widgetId
   var s = {
-    label: $$_$$_301_85.a(e$widgetType, e$label)
+    label: Module_85.a(e$widgetType, e$label)
   }
   if ("object" === typeof e$ruleOptions && e$ruleOptions.message) {
-    e$ruleOptions.message = $$_$$_301_85.b(e$widgetType, e$ruleOptions.message)
+    e$ruleOptions.message = Module_85.b(e$widgetType, e$ruleOptions.message)
   }
-  return $$_$$_14.a.validate({
+  return Module_14.a.validate({
     ruleKey: e$ruleKey,
     ruleOptions: e$ruleOptions,
     inputValue: e$inputValue,
@@ -43,13 +43,13 @@ function fo(e) {
   })
 }
 function ho(e, t) {
-  a.l(e, t)
+  Module_12.l(e, t)
 }
 function mo(e, t) {
-  var n = a.b(e)
+  var n = Module_12.b(e)
   if (n) {
-    var r = $$_$$_$$_$$_$$_$$_src_shared_widget_custom_load.m(n.type, "__width")
-    var o = $$_$$_$$_$$_$$_$$_src_shared_widget_custom_load.o(n.type, "__width")
+    var r = Src_shared_widget_custom_load.m(n.type, "__width")
+    var o = Src_shared_widget_custom_load.o(n.type, "__width")
     var i = false
     if ("number" === typeof t) {
       if ("number" === typeof r && t > r) {
@@ -60,23 +60,23 @@ function mo(e, t) {
       }
     }
     if (i) {
-      $$_$$_14.a.log({
+      Module_14.a.log({
         type: "warning",
         messageId: "valueOutOfRange",
         widgetId: e
       })
     } else {
-      a.k(e, {
+      Module_12.k(e, {
         width: t
       })
     }
   }
 }
 function go(e, t) {
-  var n = a.b(e)
+  var n = Module_12.b(e)
   if (n) {
-    var r = $$_$$_$$_$$_$$_$$_src_shared_widget_custom_load.m(n.type, "__height")
-    var o = $$_$$_$$_$$_$$_$$_src_shared_widget_custom_load.o(n.type, "__height")
+    var r = Src_shared_widget_custom_load.m(n.type, "__height")
+    var o = Src_shared_widget_custom_load.o(n.type, "__height")
     var i = false
     if ("number" === typeof t) {
       if ("number" === typeof r && t > r) {
@@ -87,33 +87,33 @@ function go(e, t) {
       }
     }
     if (i) {
-      $$_$$_14.a.log({
+      Module_14.a.log({
         type: "warning",
         messageId: "valueOutOfRange",
         widgetId: e
       })
     } else {
-      a.k(e, {
+      Module_12.k(e, {
         height: t
       })
     }
   }
 }
 function _o(e, t) {
-  a.j(e, {
+  Module_12.j(e, {
     x: t
   })
 }
 function vo(e, t) {
-  a.j(e, {
+  Module_12.j(e, {
     y: t
   })
 }
 function bo(e, t) {
-  var n = Math.max(Math.min(Math.round(t), $$_$$_60.j), $$_$$_60.r)
-  a.i(e, n)
+  var n = Math.max(Math.min(Math.round(t), Module_60.j), Module_60.r)
+  Module_12.i(e, n)
   if (t < 0 || t > 100) {
-    $$_$$_14.a.log({
+    Module_14.a.log({
       type: "warning",
       messageId: "opacityValueOutOfRange",
       widgetId: e
@@ -121,43 +121,43 @@ function bo(e, t) {
   }
 }
 function yo(e, t, n) {
-  a.h(e, $$_$$_11.a({}, t, n))
+  Module_12.h(e, Module_11.a({}, t, n))
 }
 function Eo(e, t, n) {
-  var r = $$_$$_28_index.p(n)
-  a.h(e, $$_$$_11.a({}, t, r))
+  var r = Module_28.p(n)
+  Module_12.h(e, Module_11.a({}, t, r))
 }
 function Oo(e) {
   var t
-  return null === (t = a.f(e)) || undefined === t ? undefined : t.width
+  return null === (t = Module_12.f(e)) || undefined === t ? undefined : t.width
 }
 function wo(e) {
   var t
-  return null === (t = a.f(e)) || undefined === t ? undefined : t.height
+  return null === (t = Module_12.f(e)) || undefined === t ? undefined : t.height
 }
 function Co(e) {
   var t
-  return null === (t = a.e(e)) || undefined === t ? undefined : t.x
+  return null === (t = Module_12.e(e)) || undefined === t ? undefined : t.x
 }
 function To(e) {
   var t
-  return null === (t = a.e(e)) || undefined === t ? undefined : t.y
+  return null === (t = Module_12.e(e)) || undefined === t ? undefined : t.y
 }
 function So(e) {
   var t
-  var n = null === (t = a.b(e)) || undefined === t ? undefined : t.opacity
-  return undefined !== n ? n : $$_$$_60.j
+  var n = null === (t = Module_12.b(e)) || undefined === t ? undefined : t.opacity
+  return undefined !== n ? n : Module_60.j
 }
 function Ao(e) {
-  return a.g(e)
+  return Module_12.g(e)
 }
 function Io(e) {
   var t
-  return !(null === (t = a.d(e)) || undefined === t ? undefined : t.disabled)
+  return !(null === (t = Module_12.d(e)) || undefined === t ? undefined : t.disabled)
 }
 function jo(e, t) {
   var n
-  return null === (n = a.d(e)) || undefined === n ? undefined : n[t]
+  return null === (n = Module_12.d(e)) || undefined === n ? undefined : n[t]
 }
 var No = new Map()
 function Ro(e, t) {
@@ -170,16 +170,16 @@ function xo() {
   return Array.from(No.values())
 }
 var Do = function (e, t) {
-  var n = a.b(e)
+  var n = Module_12.b(e)
   if (n) {
-    var r = $$_$$_$$_$$_$$_$$_src_shared_widget_custom_storage.f(n.type)
+    var r = Src_shared_widget_custom_storage.f(n.type)
     if (!(null === r || undefined === r ? undefined : r.types.isInvisibleWidget)) {
-      var o = $$_$$_$$_$$_$$_$$_src_shared_widget_custom_load.l(n.type, t)
+      var o = Src_shared_widget_custom_load.l(n.type, t)
       return function (e, t) {
         switch (t) {
           case "color":
             try {
-              return $$_$$_$$_$$_$$_$$_src_shared_tools_index.l(Color(e))
+              return Src_shared_tools_index.l(Color(e))
             } catch (n) {
               return e
             }
@@ -194,21 +194,21 @@ var Do = function (e, t) {
 }
 var Mo = function (e, t, n) {
   var r = ko(e)
-  var o = a.b(e)
+  var o = Module_12.b(e)
   if (o) {
-    var s = $$_$$_$$_$$_$$_$$_src_shared_widget_custom_load.l(o.type, t)
+    var s = Src_shared_widget_custom_load.l(o.type, t)
     if (s) {
       var /* [auto-meaningful-name] */s$valueType = s.valueType
       var /* [auto-meaningful-name] */s$validators = s.validators
       var /* [auto-meaningful-name] */s$label = s.label
       if ("string" === s$valueType || "multilineString" === s$valueType) {
         if ("string" !== typeof n) {
-          n = $$_$$_28_index.p(n)
+          n = Module_28.p(n)
         }
         if (s$validators) {
-          var d = $$_$$_$$_$$_$$_$$_src_shared_tools_index.q(s$validators)
+          var d = Src_shared_tools_index.q(s$validators)
           if (!Object.entries(d).every(function (t) {
-            var r = $$_$$_10_index.a(t, 2)
+            var r = Module_10.a(t, 2)
             var i = r[0]
             var a = r[1]
             return fo({
@@ -226,7 +226,7 @@ var Mo = function (e, t, n) {
       } else if ("number" === s$valueType) {
         var p
         if ("number" !== typeof n) {
-          return void $$_$$_14.a.log({
+          return void Module_14.a.log({
             type: "error",
             widgetId: e,
             messageId: "argNotNumber",
@@ -239,9 +239,9 @@ var Mo = function (e, t, n) {
           n = Math.round(n)
         }
         if (s$validators) {
-          var f = $$_$$_$$_$$_$$_$$_src_shared_tools_index.q(s$validators)
+          var f = Src_shared_tools_index.q(s$validators)
           if (!Object.entries(f).every(function (t) {
-            var r = $$_$$_10_index.a(t, 2)
+            var r = Module_10.a(t, 2)
             var i = r[0]
             var a = r[1]
             return fo({
@@ -257,24 +257,24 @@ var Mo = function (e, t, n) {
           }
         }
       } else if ("color" === s$valueType) {
-        if (!$$_$$_$$_$$_$$_$$_src_shared_tools_index.pb(n)) {
-          return void $$_$$_14.a.log({
+        if (!Src_shared_tools_index.pb(n)) {
+          return void Module_14.a.log({
             type: "warning",
             messageId: "argNotColor",
             widgetId: e
           })
         }
       } else if ("image" === s$valueType) {
-        if (!$$_$$_34_347_112.d(n)) {
-          return void $$_$$_14.a.log({
+        if (!Module_112.d(n)) {
+          return void Module_14.a.log({
             type: "warning",
             messageId: "imageNotExists",
             widgetId: e
           })
         }
       } else if ("icon" === s$valueType) {
-        if (!$$_$$_34_347_112.c(n)) {
-          return void $$_$$_14.a.log({
+        if (!Module_112.c(n)) {
+          return void Module_14.a.log({
             type: "warning",
             messageId: "imageNotExists",
             widgetId: e
@@ -287,7 +287,7 @@ var Mo = function (e, t, n) {
     } else {
       console.error("setProperty getWidgetInstance error", e, t, n)
     }
-    var h = $$_$$_$$_$$_$$_$$_src_shared_widget_custom_storage.f(o.type)
+    var h = Src_shared_widget_custom_storage.f(o.type)
     if (h) {
       if (!h.types.isInvisibleWidget) {
         yo(e, t, n)
@@ -302,9 +302,9 @@ var Mo = function (e, t, n) {
 var Lo = function (e, t, n) {
   var /* [auto-meaningful-name] */s$blockOptions
   var /* [auto-meaningful-name] */s$blockOptions$setter
-  var i = a.b(e)
+  var i = Module_12.b(e)
   if (i) {
-    var s = $$_$$_$$_$$_$$_$$_src_shared_widget_custom_load.l(i.type, t)
+    var s = Src_shared_widget_custom_load.l(i.type, t)
     var c = null === s || undefined === s || null === (s$blockOptions = s.blockOptions) || undefined === s$blockOptions || null === (s$blockOptions$setter = s$blockOptions.setter) || undefined === s$blockOptions$setter ? undefined : s$blockOptions$setter.func
     if ("function" === typeof c) {
       try {
@@ -329,7 +329,7 @@ function Po(e, t) {
   return Bo.apply(this, arguments)
 }
 function Bo() {
-  return (Bo = $$_$$_7.a(RegeneratorRuntime.mark(function e(t, n) {
+  return (Bo = Module_7.a(RegeneratorRuntime.mark(function e(t, n) {
     var /* [auto-meaningful-name] */h$length
     var o
     var s
@@ -354,14 +354,14 @@ function Bo() {
             console.error("callMethod getWidgetInstance error", t, n)
             return e.abrupt("return")
           case 5:
-            if (l = a.b(t)) {
+            if (l = Module_12.b(t)) {
               e.next = 9
               break
             }
             (u = console).error.apply(u, ["callMethod widget is null", t, n].concat(o))
             return e.abrupt("return")
           case 9:
-            if (d = $$_$$_$$_$$_$$_$$_src_shared_widget_custom_load.j(l.type, n)) {
+            if (d = Src_shared_widget_custom_load.j(l.type, n)) {
               e.next = 13
               break
             }
@@ -373,7 +373,7 @@ function Bo() {
               var r = o[t]
               if (!("string" !== e$valueType && "multilineString" !== e$valueType)) {
                 if ("string" !== typeof r) {
-                  o[t] = $$_$$_28_index.p(r)
+                  o[t] = Module_28.p(r)
                 }
               }
             }), e.prev = 14, "function" !== typeof c[n]) {
@@ -458,7 +458,7 @@ function Xo(e) {
   return Qo.apply(this, arguments)
 }
 function Qo() {
-  return (Qo = $$_$$_7.a(RegeneratorRuntime.mark(function e(t) {
+  return (Qo = Module_7.a(RegeneratorRuntime.mark(function e(t) {
     var n
     var /* [auto-meaningful-name] */e$sent
     return RegeneratorRuntime.wrap(function (e) {
@@ -472,7 +472,7 @@ function Qo() {
             return e.abrupt("return")
           case 3:
             e.next = 5
-            return $$_$$_$$_$$_$$_$$_src_shared_tools_index.lb(20)
+            return Src_shared_tools_index.lb(20)
           case 5:
             e.next = 7
             return n.get_screenshot()
@@ -489,10 +489,10 @@ function Qo() {
 }
 function Zo(e, t) {
   if (Uo(e)) {
-    if ($$_$$_34_347_112.d(t)) {
+    if (Module_112.d(t)) {
       yo(e, "backgroundImage", t)
     } else {
-      $$_$$_14.a.log({
+      Module_14.a.log({
         messageId: "imageNotExists",
         type: "error",
         widgetId: e

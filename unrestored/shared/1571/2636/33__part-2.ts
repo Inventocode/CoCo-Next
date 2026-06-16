@@ -6,10 +6,10 @@
 
 "use strict"
 
-import * as C from "./53"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index from "../../../../src/shared/packages/@crc/blink/src/index"
-import * as H from "./60"
-import * as /* [auto-meaningful-name] */$_301_85 from "./301/85"
+import * as /* [auto-meaningful-name] */Module_53 from /* 53 */"./53"
+import * as /* [auto-meaningful-name] */Src_shared_packages_Crc_blink_src_index from /* 17 */"../../../../src/shared/packages/@crc/blink/src/index"
+import * as /* [auto-meaningful-name] */Module_60 from /* 60 */"./60"
+import * as /* [auto-meaningful-name] */Module_85 from /* 85 */"./301/85"
 var z = ["Size", "Coordinate", "VisibleSwitch", "WidgetOpacity"]
 var Y = ["size", "position", "visible", "opacity"]
 var K = {
@@ -18,8 +18,8 @@ var K = {
   valueType: "number",
   defaultValue: 100,
   validators: {
-    lessThan: H.j,
-    greaterThan: H.r,
+    lessThan: Module_60.j,
+    greaterThan: Module_60.r,
     isInteger: true
   }
 }
@@ -67,7 +67,7 @@ function J(e, t) {
       (a = document.createElement("div")).id = e$lineLabel
       a.style.display = "flex"
       a.style.alignItems = "center"
-      a.style.width = "".concat(C.b + 40, "px")
+      a.style.width = "".concat(Module_53.b + 40, "px")
       var s = document.createElement("div")
       s.style.width = "6px"
       s.style.height = "6px"
@@ -78,7 +78,7 @@ function J(e, t) {
       c.style.fontFamily = "NotoSansCJKsc-Medium, NotoSansCJKsc"
       c.style.color = "#82778C"
       c.style.marginLeft = "8px"
-      var l = $_301_85.a(t, e$text) || e$text
+      var l = Module_85.a(t, e$text) || e$text
       c.innerText = l
       var u = document.createElement("div")
       u.style.flex = "1"
@@ -91,8 +91,8 @@ function J(e, t) {
       if (!(null === (n = r) || undefined === n)) {
         n.appendChild(a)
       }
-      $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.register_flyout_button(e$lineLabel, function () {
-        var e = document.createElementNS(C.c, "foreignObject")
+      Src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.register_flyout_button(e$lineLabel, function () {
+        var e = document.createElementNS(Module_53.c, "foreignObject")
         e.style.overflow = "visible"
         var t = document.getElementById(e$lineLabel)
         if (t) {
@@ -109,8 +109,8 @@ function J(e, t) {
             if (n) {
               var /* [auto-meaningful-name] */n$clientWidth = n.clientWidth
               var /* [auto-meaningful-name] */n$clientHeight = n.clientHeight
-              n$clientWidth /= C.d
-              n$clientHeight /= C.d
+              n$clientWidth /= Module_53.d
+              n$clientHeight /= Module_53.d
               e.setAttribute("width", "".concat(n$clientWidth))
               e.setAttribute("height", "".concat(n$clientHeight))
               t.width = n$clientWidth

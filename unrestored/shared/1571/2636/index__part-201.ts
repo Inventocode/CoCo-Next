@@ -6,56 +6,56 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import /* [auto-meaningful-name] */React from "react"
-import { memo, useState } from "react"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo, useState } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_754 from "./754"
-import /* [auto-meaningful-name] */$_7541 from "./754"
-import * as /* [auto-meaningful-name] */$_1530 from "./1530"
-import /* [auto-meaningful-name] */$_15301 from "./1530"
-import * as /* [auto-meaningful-name] */$_1531 from "./1531"
-import /* [auto-meaningful-name] */$_15311 from "./1531"
+import * as /* [auto-meaningful-name] */Module_754 from /* 754 */"./754"
+import /* [auto-meaningful-name] */Module_7541 from /* 754 */"./754"
+import * as /* [auto-meaningful-name] */Module_1530 from /* 1530 */"./1530"
+import /* [auto-meaningful-name] */Module_15301 from /* 1530 */"./1530"
+import * as /* [auto-meaningful-name] */Module_1531 from /* 1531 */"./1531"
+import /* [auto-meaningful-name] */Module_15311 from /* 1531 */"./1531"
 var bL = memo(function () {
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var t = useState(!function () {
     var e = navigator.userAgent.toLowerCase()
     return e.includes("chrome") && !e.includes("qqbrowser") && !e.includes("opr") && !e.includes("se") && !e.includes("metasr") && /Google Inc/.test(navigator.vendor)
   }())
-  var n = $_10_index.a(t, 2)
+  var n = Module_10.a(t, 2)
   var r = n[0]
   var o = n[1]
   return r ? React.createElement("div", {
-    className: $_7541.container
+    className: Module_7541.container
   }, React.createElement("div", {
-    className: $_7541.wrapper
+    className: Module_7541.wrapper
   }, React.createElement("img", {
-    src: $_15301,
-    className: $_7541.codemaoImg,
+    src: Module_15301,
+    className: Module_7541.codemaoImg,
     alt: "codemao"
   }), React.createElement("span", {
-    className: $_7541.compatibility
-  }, $_710$a$formatMessage({
+    className: Module_7541.compatibility
+  }, Module_710$a$formatMessage({
     id: "ChromeTips.compatibility"
   })), React.createElement("img", {
-    src: $_15311,
-    className: $_7541.chromeImg,
+    src: Module_15311,
+    className: Module_7541.chromeImg,
     alt: "chrome"
   }), React.createElement("a", {
     href: "https://shequ.codemao.cn/download",
     target: "_blank",
     rel: "noopener noreferrer",
     className: "coco-button coco-button-primary"
-  }, $_710$a$formatMessage({
+  }, Module_710$a$formatMessage({
     id: "ChromeTips.download"
   })), React.createElement("span", {
-    className: $_7541.close,
+    className: Module_7541.close,
     onClick: function () {
       return o(false)
     }
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-close-btn"
   })))) : null
 })

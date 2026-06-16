@@ -9,7 +9,7 @@ export { getExtension as f }
 export { unsafeExtensionsToFileStorage as e }
 export { safeExtensionsToFileStorage as d }
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_9 from "../../../../unrestored/shared/1571/2636/9"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"../../../../unrestored/shared/1571/2636/9"
 
 import * as types from "./types"
 import * as Type from "./type"
@@ -67,7 +67,7 @@ export function safeExtensionsToFileStorage() {
   const safeExtensionsArray = Array.from(safeExtensions.values())
   const storage: SafeExtensionFileStorage[] = []
   safeExtensionsArray.forEach(({ id, type, cdnUrl }) => {
-    if ($$_$$_$$_$$_unrestored_shared_1571_2636_9.Mb(type)) {
+    if (Module_9.Mb(type)) {
       storage.push({ id, type, cdnUrl })
     }
   })

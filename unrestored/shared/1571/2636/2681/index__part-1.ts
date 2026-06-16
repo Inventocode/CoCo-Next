@@ -6,9 +6,9 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$_275 from "./275"
-import * as /* [auto-meaningful-name] */$_273 from "./273"
-import * as /* [auto-meaningful-name] */$_808_index from "./808/index"
+import * as /* [auto-meaningful-name] */Module_275 from /* 275 */"./275"
+import * as /* [auto-meaningful-name] */Module_273 from /* 273 */"./273"
+import * as /* [auto-meaningful-name] */Module_808 from /* 808 */"./808/index"
 var d = ["numeric", "style"]
 function h(e, t, n, r, i) {
   if (undefined === i) {
@@ -18,7 +18,7 @@ function h(e, t, n, r, i) {
     r = "second"
   }
   if (!Intl.RelativeTimeFormat) {
-    e.onError(new $_808_index.a("Intl.RelativeTimeFormat is not available in this environment.\nTry polyfilling it using \"@formatjs/intl-relativetimeformat\"\n", "MISSING_INTL_API"))
+    e.onError(new Module_808.a("Intl.RelativeTimeFormat is not available in this environment.\nTry polyfilling it using \"@formatjs/intl-relativetimeformat\"\n", "MISSING_INTL_API"))
   }
   try {
     return function (e, t, n) {
@@ -29,11 +29,11 @@ function h(e, t, n, r, i) {
         n = {}
       }
       var /* [auto-meaningful-name] */n$format = n.format
-      var c = !!n$format && $_273.f(e$formats, "relative", n$format, e$onError) || {}
-      return t(e$locale, $_273.e(n, d, c))
+      var c = !!n$format && Module_273.f(e$formats, "relative", n$format, e$onError) || {}
+      return t(e$locale, Module_273.e(n, d, c))
     }(e, t, i).format(n, r)
   } catch (s) {
-    e.onError(new $_275.b("Error formatting relative time.", s))
+    e.onError(new Module_275.b("Error formatting relative time.", s))
   }
   return String(n)
 }
@@ -59,8 +59,8 @@ function A(e, t, n, r) {
   var /* [auto-meaningful-name] */r$format = r.format
   var l = p(p({}, e$timeZone && {
     timeZone: e$timeZone
-  }), r$format && $_273.f(e$formats, t, r$format, e$onError))
-  var f = $_273.e(r, _, l)
+  }), r$format && Module_273.f(e$formats, t, r$format, e$onError))
+  var f = Module_273.e(r, _, l)
   if (!("time" !== t || f.hour || f.minute || f.second)) {
     f = p(p({}, f), {
       hour: "numeric",
@@ -77,7 +77,7 @@ function g(e, t, n, r) {
   try {
     return A(e, "date", t, r).format(i)
   } catch (o) {
-    e.onError(new $_275.e("FORMAT_ERROR", "Error formatting date.", o))
+    e.onError(new Module_275.e("FORMAT_ERROR", "Error formatting date.", o))
   }
   return String(i)
 }
@@ -89,7 +89,7 @@ function v(e, t, n, r) {
   try {
     return A(e, "time", t, r).format(i)
   } catch (o) {
-    e.onError(new $_275.e("FORMAT_ERROR", "Error formatting time.", o))
+    e.onError(new Module_275.e("FORMAT_ERROR", "Error formatting time.", o))
   }
   return String(i)
 }
@@ -101,7 +101,7 @@ function m(e, t, n, r) {
   try {
     return A(e, "date", t, r).formatToParts(i)
   } catch (o) {
-    e.onError(new $_275.e("FORMAT_ERROR", "Error formatting date.", o))
+    e.onError(new Module_275.e("FORMAT_ERROR", "Error formatting date.", o))
   }
   return []
 }
@@ -113,7 +113,7 @@ function y(e, t, n, r) {
   try {
     return A(e, "time", t, r).formatToParts(i)
   } catch (o) {
-    e.onError(new $_275.e("FORMAT_ERROR", "Error formatting time.", o))
+    e.onError(new Module_275.e("FORMAT_ERROR", "Error formatting time.", o))
   }
   return []
 }
@@ -125,13 +125,13 @@ function w(e, t, n, r) {
     r = {}
   }
   if (!Intl.PluralRules) {
-    e$onError(new $_808_index.a("Intl.PluralRules is not available in this environment.\nTry polyfilling it using \"@formatjs/intl-pluralrules\"\n", "MISSING_INTL_API"))
+    e$onError(new Module_808.a("Intl.PluralRules is not available in this environment.\nTry polyfilling it using \"@formatjs/intl-pluralrules\"\n", "MISSING_INTL_API"))
   }
-  var c = $_273.e(r, b)
+  var c = Module_273.e(r, b)
   try {
     return t(e$locale, c).select(n)
   } catch (u) {
-    e$onError(new $_275.b("Error formatting plural.", u))
+    e$onError(new Module_275.b("Error formatting plural.", u))
   }
   return "other"
 }

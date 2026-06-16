@@ -6,7 +6,7 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$_454_312 from "../../../../src/shared/tools/url"
+import * as /* [auto-meaningful-name] */Src_shared_tools_url from /* 312 */"../../../../src/shared/tools/url"
 function x(e, t) {
   var n = new Date(e)
   n.setDate(n.getDate() + t)

@@ -6,4 +6,4 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$_360 from "./360"
+import * as /* [auto-meaningful-name] */Module_360 from /* 360 */"./360"

@@ -12,34 +12,34 @@ import { nT } from "./index__part-144"
 import { iT } from "./index__part-145"
 import { pT } from "./index__part-146"
 import { ST } from "./index__part-148"
-import { kT } from "./index__part-149"
-import * as lT from "./43"
-import * as /* [auto-meaningful-name] */$_1523_index from "./1523/index"
-import * as /* [auto-meaningful-name] */$_207_index from "./207/index"
-import * as /* [auto-meaningful-name] */$_1522 from "./1522"
-import * as /* [auto-meaningful-name] */$_301_index from "./301/index"
-import qC from "./99"
-import * as /* [auto-meaningful-name] */$_1022_index from "./1022/index"
-import * as /* [auto-meaningful-name] */$_1058_index from "./1058/index"
-import * as /* [auto-meaningful-name] */$_1205_index from "./1205/index"
+import { kT } from "../../../../src/editor/ui/EditArea/BlockEditor/FlyoutComponents"
+import * as /* [auto-meaningful-name] */Module_43 from /* 43 */"./43"
+import * as /* [auto-meaningful-name] */Module_1523 from /* 1523 */"./1523/index"
+import * as /* [auto-meaningful-name] */Module_207 from /* 207 */"./207/index"
+import * as /* [auto-meaningful-name] */Module_1522 from /* 1522 */"./1522"
+import * as /* [auto-meaningful-name] */Module_301 from /* 301 */"./301/index"
+import /* [auto-meaningful-name] */Module_99 from /* 99 */"./99"
+import * as /* [auto-meaningful-name] */Module_1022 from /* 1022 */"./1022/index"
+import * as /* [auto-meaningful-name] */Module_1058 from /* 1058 */"./1058/index"
+import * as /* [auto-meaningful-name] */Module_1205 from /* 1205 */"./1205/index"
 var yg
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index from "../../../../src/shared/packages/@crc/blink/src/index"
-import * as /* [auto-meaningful-name] */Lodash from "lodash"
-import * as /* [auto-meaningful-name] */$_238 from "./238"
-import * as Et from "./9"
-import * as /* [auto-meaningful-name] */$_26_index from "./26/index"
-import * as /* [auto-meaningful-name] */$_24_index from "./24/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
-import * as K from "./18"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import { useStore, useDispatch, useSelector, batch } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { memo, useRef, useState, useLayoutEffect, useEffect } from "react"
+import * as /* [auto-meaningful-name] */Src_shared_packages_Crc_blink_src_index from /* 17 */"../../../../src/shared/packages/@crc/blink/src/index"
+import * as /* [auto-meaningful-name] */Lodash from /* 30 */"lodash"
+import * as /* [auto-meaningful-name] */Module_238 from /* 238 */"./238"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"./9"
+import * as /* [auto-meaningful-name] */Module_26 from /* 26 */"./26/index"
+import * as /* [auto-meaningful-name] */Module_24 from /* 24 */"./24/index"
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"./18"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import { useStore, useDispatch, useSelector, batch } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo, useRef, useState, useLayoutEffect, useEffect } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import "./2611"
+import /* 2611 */"./2611"
 var xT = memo(function () {
   var e = useStore()
   var t = useDispatch()
@@ -59,20 +59,20 @@ var xT = memo(function () {
   })
   var c = useSelector(function (e) {
     return e.uiConfig.workspace
-  }) === K.j.ReadOnly
+  }) === Module_18.j.ReadOnly
   var l = useState(false)
-  var u = $_10_index.a(l, 2)
+  var u = Module_10.a(l, 2)
   var d = u[0]
   var p = u[1]
-  var m = $_238.d()
+  var m = Module_238.d()
   useLayoutEffect(function () {
     var /* [auto-meaningful-name] */e$getState
-    var /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index$Blink
+    var /* [auto-meaningful-name] */Src_shared_packages_Crc_blink_src_index$Blink
     e$getState = e.getState
     yg = e$getState
-    $_301_index.e({
+    Module_301.e({
       getWidgetListByType: jg,
-      getButtonTypeById: Et.T,
+      getButtonTypeById: Module_9.T,
       getPrimitiveVariableList: Dg,
       getArrayVariableList: Mg,
       getObjectVariableList: Bg,
@@ -99,26 +99,26 @@ var xT = memo(function () {
       getTableDataColumnList: Zg,
       getCloudTableColumnList: $g
     })
-    $_26_index.j($_301_index.b())
-    $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index$Blink = $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink
-    $_1022_index.DEFAULT_THEME_CONFIG.block_color.PARAM_BLOCK_COLOR = {
+    Module_26.j(Module_301.b())
+    Src_shared_packages_Crc_blink_src_index$Blink = Src_shared_packages_Crc_blink_src_index.Blink
+    Module_1022.DEFAULT_THEME_CONFIG.block_color.PARAM_BLOCK_COLOR = {
       fill: "#3ca9ff",
       border: "rgba(0, 0, 0, 0.15)"
     }
-    $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index$Blink.theme.register("cocoBlinkTheme", $_1022_index.DEFAULT_THEME_CONFIG)
-    $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index$Blink.theme.apply("cocoBlinkTheme")
-    $_1205_index.init_extensions($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink)
-    $_1205_index.init_basic_blocks($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink)
-    $_301_index.d()
-    $_26_index.u()
+    Src_shared_packages_Crc_blink_src_index$Blink.theme.register("cocoBlinkTheme", Module_1022.DEFAULT_THEME_CONFIG)
+    Src_shared_packages_Crc_blink_src_index$Blink.theme.apply("cocoBlinkTheme")
+    Module_1205.init_extensions(Src_shared_packages_Crc_blink_src_index.Blink)
+    Module_1205.init_basic_blocks(Src_shared_packages_Crc_blink_src_index.Blink)
+    Module_301.d()
+    Module_26.u()
     var a = document.getElementById("coco_workspace")
     if (a) {
       var s
-      var c = $_26_index.k(a, {
-        toolbox: $_26_index.g.getConfig()
+      var c = Module_26.k(a, {
+        toolbox: Module_26.g.getConfig()
       })
       i.current = c
-      $_26_index.i()
+      Module_26.i()
       var l = null === (s = c.get_toolbox()) || undefined === s ? undefined : s.flyout
       if (l) {
         var u = l.get_svg_root()
@@ -131,7 +131,7 @@ var xT = memo(function () {
         d.setAttribute("fill", "#B1A3BF")
         d.setAttribute("transform", "translate(".concat(u.width.baseVal.value - 22, ", 17) translate(-14, -12.727922)"))
         d.addEventListener("mousedown", function () {
-          t($$_$$_$$_$$_src_editor_redux_common_actions.ci(l.is_auto_close()))
+          t(Src_editor_redux_common_actions.ci(l.is_auto_close()))
         })
         o.current = function (e) {
           l.set_auto_close(!e)
@@ -149,11 +149,11 @@ var xT = memo(function () {
       }
       a.addEventListener("click", function () {
         batch(function () {
-          t($$_$$_$$_$$_src_editor_redux_common_actions.fj(false))
+          t(Src_editor_redux_common_actions.fj(false))
         })
       })
       document.addEventListener("mousedown", function (e) {
-        var t = $_26_index.z.getDebuggingBlock()
+        var t = Module_26.z.getDebuggingBlock()
         if (t) {
           var n = document.querySelectorAll(".".concat("DevToolCloseButton"))
           var /* [auto-meaningful-name] */e$target = e.target
@@ -169,8 +169,8 @@ var xT = memo(function () {
         }
       })
       c.add_change_listener(function (e) {
-        if (!$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.I.AllUIEvents.includes(e.type)) {
-          t($$_$$_$$_$$_src_editor_redux_common_actions.Fi(true))
+        if (!Src_shared_packages_Crc_blink_src_index.I.AllUIEvents.includes(e.type)) {
+          t(Src_editor_redux_common_actions.Fi(true))
         }
       })
       var f = function () {
@@ -188,12 +188,12 @@ var xT = memo(function () {
         var /* [auto-meaningful-name] */e$procName = e.procName
         var /* [auto-meaningful-name] */e$callDisabled = e.callDisabled
         var /* [auto-meaningful-name] */e$callReturnDisabled = e.callReturnDisabled
-        var i = lT.a()
+        var i = Module_43.a()
         if (i) {
-          var a = $_26_index.z.getWorkspaceDataByScreenId(i)
-          var s = Lodash.cloneDeep(null === (t = $_24_index.a.getDoc()) || undefined === t ? undefined : t.blockly[i].workspaceJson)
+          var a = Module_26.z.getWorkspaceDataByScreenId(i)
+          var s = Lodash.cloneDeep(null === (t = Module_24.a.getDoc()) || undefined === t ? undefined : t.blockly[i].workspaceJson)
           if ((null === a || undefined === a ? undefined : a.getProcedureManager()) && s) {
-            var c = $_1058_index.effect_of_update_disabled(e$procName, e$callDisabled, e$callReturnDisabled, s)
+            var c = Module_1058.effect_of_update_disabled(e$procName, e$callDisabled, e$callReturnDisabled, s)
             if (!(null === c || undefined === c)) {
               c.unshift("workspaceJson")
             }
@@ -204,7 +204,7 @@ var xT = memo(function () {
               c.unshift("blockly")
             }
             if (c) {
-              $_24_index.a.applyClient(c)
+              Module_24.a.applyClient(c)
             }
           }
         }
@@ -215,12 +215,12 @@ var xT = memo(function () {
         var /* [auto-meaningful-name] */e$procName = e.procName
         var /* [auto-meaningful-name] */e$changeValue = e.changeValue
         f()
-        var i = lT.a()
+        var i = Module_43.a()
         if (i) {
-          var a = $_26_index.z.getWorkspaceDataByScreenId(i)
-          var s = Lodash.cloneDeep(null === (t = $_24_index.a.getDoc()) || undefined === t ? undefined : t.blockly[i].workspaceJson)
+          var a = Module_26.z.getWorkspaceDataByScreenId(i)
+          var s = Lodash.cloneDeep(null === (t = Module_24.a.getDoc()) || undefined === t ? undefined : t.blockly[i].workspaceJson)
           if ((null === a || undefined === a ? undefined : a.getProcedureManager()) && s) {
-            var c = $_1058_index.effect_of_update_param(e$type, e$procName, e$changeValue, s)
+            var c = Module_1058.effect_of_update_param(e$type, e$procName, e$changeValue, s)
             if (!(null === c || undefined === c)) {
               c.unshift("workspaceJson")
             }
@@ -231,7 +231,7 @@ var xT = memo(function () {
               c.unshift("blockly")
             }
             if (c) {
-              $_24_index.a.applyClient(c)
+              Module_24.a.applyClient(c)
             }
           }
         }
@@ -241,12 +241,12 @@ var xT = memo(function () {
         var /* [auto-meaningful-name] */e$oldName = e.oldName
         var /* [auto-meaningful-name] */e$newName = e.newName
         f()
-        var o = lT.a()
+        var o = Module_43.a()
         if (o) {
-          var i = $_26_index.z.getWorkspaceDataByScreenId(o)
-          var a = Lodash.cloneDeep(null === (t = $_24_index.a.getDoc()) || undefined === t ? undefined : t.blockly[o].workspaceJson)
+          var i = Module_26.z.getWorkspaceDataByScreenId(o)
+          var a = Lodash.cloneDeep(null === (t = Module_24.a.getDoc()) || undefined === t ? undefined : t.blockly[o].workspaceJson)
           if ((null === i || undefined === i ? undefined : i.getProcedureManager()) && a) {
-            var s = $_1058_index.effect_of_rename_proc(e$oldName, e$newName, a)
+            var s = Module_1058.effect_of_rename_proc(e$oldName, e$newName, a)
             if (!(null === s || undefined === s)) {
               s.unshift("workspaceJson")
             }
@@ -257,18 +257,18 @@ var xT = memo(function () {
               s.unshift("blockly")
             }
             if (s) {
-              $_24_index.a.applyClient(s)
+              Module_24.a.applyClient(s)
             }
           }
         }
       }
-      $_26_index.z.eventBus.addEventListener($_207_index.a.PROCEDURE_UPDATE_DISABLED, h)
-      $_26_index.z.eventBus.addEventListener($_207_index.a.PROCEDURE_UPDATE_PARAM, m)
-      $_26_index.z.eventBus.addEventListener($_207_index.a.PROCEDURE_UPDATE_NAME, g)
+      Module_26.z.eventBus.addEventListener(Module_207.a.PROCEDURE_UPDATE_DISABLED, h)
+      Module_26.z.eventBus.addEventListener(Module_207.a.PROCEDURE_UPDATE_PARAM, m)
+      Module_26.z.eventBus.addEventListener(Module_207.a.PROCEDURE_UPDATE_NAME, g)
       return function () {
-        $_26_index.z.eventBus.addEventListener($_207_index.a.PROCEDURE_UPDATE_DISABLED, h)
-        $_26_index.z.eventBus.addEventListener($_207_index.a.PROCEDURE_UPDATE_PARAM, m)
-        $_26_index.z.eventBus.addEventListener($_207_index.a.PROCEDURE_UPDATE_NAME, g)
+        Module_26.z.eventBus.addEventListener(Module_207.a.PROCEDURE_UPDATE_DISABLED, h)
+        Module_26.z.eventBus.addEventListener(Module_207.a.PROCEDURE_UPDATE_PARAM, m)
+        Module_26.z.eventBus.addEventListener(Module_207.a.PROCEDURE_UPDATE_NAME, g)
       }
     }
   }, [t, e.getState])
@@ -285,10 +285,10 @@ var xT = memo(function () {
       o.current(a)
     }
   }, [a])
-  var g = $_238.a()
+  var g = Module_238.a()
   useEffect(function () {
-    var e = $$_$$_$$_$$_src_shared_tools_index.p(function () {
-      $_26_index.z.resizeWorkspace()
+    var e = Src_shared_tools_index.p(function () {
+      Module_26.z.resizeWorkspace()
     }, 500)
     window.addEventListener("resize", e)
     return function () {
@@ -296,30 +296,30 @@ var xT = memo(function () {
     }
   }, [])
   useEffect(function () {
-    $_26_index.g.update(m)
+    Module_26.g.update(m)
   }, [m])
   useEffect(function () {
-    $_26_index.g.updateGlobalWidget(r)
+    Module_26.g.updateGlobalWidget(r)
   }, [r])
   useEffect(function () {
-    $_26_index.g.updateAnyWidget(g)
+    Module_26.g.updateAnyWidget(g)
   }, [g])
   useEffect(function () {
-    $_26_index.g.changeSelectWidgetCategoryStyle(n || (null === m || undefined === m ? undefined : m.id))
+    Module_26.g.changeSelectWidgetCategoryStyle(n || (null === m || undefined === m ? undefined : m.id))
   }, [n, m])
   useEffect(function () {
     function e(e) {
       p(e)
-      t($$_$$_$$_$$_src_editor_redux_common_actions.ji(e))
+      t(Src_editor_redux_common_actions.ji(e))
     }
     function n() {
-      t($$_$$_$$_$$_src_editor_redux_common_actions.gh())
+      t(Src_editor_redux_common_actions.gh())
     }
-    $_26_index.z.eventBus.addEventListener($_207_index.a.FLYOUT_CHANGE, e)
-    $_26_index.z.eventBus.addEventListener($_207_index.a.DELETE_BLOCK, n)
+    Module_26.z.eventBus.addEventListener(Module_207.a.FLYOUT_CHANGE, e)
+    Module_26.z.eventBus.addEventListener(Module_207.a.DELETE_BLOCK, n)
     return function () {
-      $_26_index.z.eventBus.removeEventListener($_207_index.a.FLYOUT_CHANGE, e)
-      $_26_index.z.eventBus.removeEventListener($_207_index.a.DELETE_BLOCK, n)
+      Module_26.z.eventBus.removeEventListener(Module_207.a.FLYOUT_CHANGE, e)
+      Module_26.z.eventBus.removeEventListener(Module_207.a.DELETE_BLOCK, n)
     }
   }, [t])
   var v = useRef(null)
@@ -334,7 +334,7 @@ var xT = memo(function () {
           })
           document.body.dispatchEvent(e)
         }, 0)
-        t($$_$$_$$_$$_src_editor_redux_common_actions.ki("blockly"))
+        t(Src_editor_redux_common_actions.ki("blockly"))
       }
       v$current.addEventListener("mousedown", n, true)
       return function () {
@@ -343,22 +343,22 @@ var xT = memo(function () {
     }
   }, [v, t])
   return React.createElement("div", {
-    className: qC.wrapper
+    className: Module_99.wrapper
   }, React.createElement("div", {
-    className: Classnames(!d && qC.upper)
+    className: Classnames(!d && Module_99.upper)
   }), React.createElement("div", {
     id: "coco_workspace",
-    className: Classnames(qC.blocklyWorkspace, c && qC.readonly),
+    className: Classnames(Module_99.blocklyWorkspace, c && Module_99.readonly),
     onWheel: function () {
       if (e.getState().block.dropdown.visible) {
-        t($$_$$_$$_$$_src_editor_redux_common_actions.gh())
+        t(Src_editor_redux_common_actions.gh())
       }
       if (e.getState().block.slider.visible) {
-        t($$_$$_$$_$$_src_editor_redux_common_actions.ih())
+        t(Src_editor_redux_common_actions.ih())
       }
     },
     ref: v
-  }), s.visible && React.createElement($$_$$_$$_$$_src_shared_ui_components_index.q, {
+  }), s.visible && React.createElement(Src_shared_ui_components_index.q, {
     value: s.value,
     onClose: s.setValue,
     onChange: s.selectValue,
@@ -369,7 +369,7 @@ var xT = memo(function () {
       left: s.left,
       boxShadow: "0 3px 6px -4px rgb(0 0 0 / 12%), 0 6px 16px 0 rgb(0 0 0 / 8%), 0 9px 28px 8px rgb(0 0 0 / 5%)"
     }
-  }), React.createElement(kT, null), React.createElement(ST, null), React.createElement(ZC, null), React.createElement(nT, null), React.createElement(iT, null), React.createElement($_1522.a, null), React.createElement($_1523_index.a, null), React.createElement(pT, null))
+  }), React.createElement(kT, null), React.createElement(ST, null), React.createElement(ZC, null), React.createElement(nT, null), React.createElement(iT, null), React.createElement(Module_1522.a, null), React.createElement(Module_1523.a, null), React.createElement(pT, null))
 })
 export { yg }
 export { xT }

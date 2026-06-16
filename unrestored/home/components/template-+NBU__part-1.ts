@@ -8,15 +8,15 @@
 
 /* harmony export (binding) */
 import { _createClass, _classCallCheck, _possibleConstructorReturn, _inherits, __decorate } from "./template-+NBU__part-0"
-import * as __WEBPACK_IMPORTED_MODULE_7__sensorsData__ from "../sensorsData-yI2H"
-import * as __WEBPACK_IMPORTED_MODULE_6__IconFont__ from "./IconFont-zVV7"
-import * as __WEBPACK_IMPORTED_MODULE_5__cfg__ from "../cfg-dpNx"
-import * as __WEBPACK_IMPORTED_MODULE_4_react_css_modules__ from "react-css-modules"
-import * as __WEBPACK_IMPORTED_MODULE_3_qrcode_react__ from "../qrcode/react-3Cpi"
-import * as __WEBPACK_IMPORTED_MODULE_2_antd__ from "antd"
-import __WEBPACK_IMPORTED_MODULE_1_classnames___default from "classnames"
-import * as __WEBPACK_IMPORTED_MODULE_0_react__ from "react"
-import * as styles from "./styles-aJKZ"
+import * as __WEBPACK_IMPORTED_MODULE_7__sensorsData__ from /* yI2H */"../sensorsData-yI2H"
+import * as __WEBPACK_IMPORTED_MODULE_6__IconFont__ from /* zVV7 */"./IconFont-zVV7"
+import * as __WEBPACK_IMPORTED_MODULE_5__cfg__ from /* dpNx */"../cfg-dpNx"
+import * as __WEBPACK_IMPORTED_MODULE_4_react_css_modules__ from /* 211U */"react-css-modules"
+import * as __WEBPACK_IMPORTED_MODULE_3_qrcode_react__ from /* 3Cpi */"../qrcode/react-3Cpi"
+import * as __WEBPACK_IMPORTED_MODULE_2_antd__ from /* nFWT */"antd"
+import __WEBPACK_IMPORTED_MODULE_1_classnames___default from /* HW6M */"classnames"
+import * as __WEBPACK_IMPORTED_MODULE_0_react__ from /* GiK3 */"react"
+import * as styles from /* aJKZ */"./styles-aJKZ"
 var PreviewTemplateView = function (_React$Component) {
   _inherits(PreviewTemplateView, _React$Component)
   function PreviewTemplateView(props) {

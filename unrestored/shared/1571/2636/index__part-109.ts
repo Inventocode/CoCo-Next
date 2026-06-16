@@ -11,28 +11,28 @@ import { nb } from "./index__part-92"
 import { hb, mb } from "./index__part-94"
 import { fy } from "./index__part-102"
 import { gy } from "./index__part-103"
-import /* [auto-meaningful-name] */$_202 from "./202"
-import /* [auto-meaningful-name] */$_747 from "./747"
-import qv from "./88"
-import * as Fp from "./76"
-import * as Pp from "./95"
-import * as Qu from "./60"
-import * as /* [auto-meaningful-name] */Lodash from "lodash"
-import * as Yr from "./53"
-import * as Tn from "./68"
-import * as Et from "./9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import /* [auto-meaningful-name] */Color from "color"
-import * as D from "./6"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import { useSelector, useDispatch } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { memo, useRef } from "react"
+import /* [auto-meaningful-name] */Module_202 from /* 202 */"./202"
+import /* [auto-meaningful-name] */Module_747 from /* 747 */"./747"
+import /* [auto-meaningful-name] */Module_88 from /* 88 */"./88"
+import * as /* [auto-meaningful-name] */Module_76 from /* 76 */"./76"
+import * as /* [auto-meaningful-name] */Module_95 from /* 95 */"./95"
+import * as /* [auto-meaningful-name] */Module_60 from /* 60 */"./60"
+import * as /* [auto-meaningful-name] */Lodash from /* 30 */"lodash"
+import * as /* [auto-meaningful-name] */Module_53 from /* 53 */"./53"
+import * as /* [auto-meaningful-name] */Module_68 from /* 68 */"./68"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"./9"
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Color from /* 51 */"color"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"./6"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import { useSelector, useDispatch } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo, useRef } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_539 from "./539"
+import * as /* [auto-meaningful-name] */Module_539 from /* 539 */"./539"
 var TE = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "fontSize" : e$keyName
@@ -47,16 +47,16 @@ var TE = memo(function (e) {
   var /* [auto-meaningful-name] */e$formConfig$label = e$formConfig.label
   var /* [auto-meaningful-name] */e$formConfig$min = e$formConfig.min
   var /* [auto-meaningful-name] */e$formConfig$max = e$formConfig.max
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var g = Math.ceil(e$value * u)
   var _ = function (e) {
-    return $$_$$_$$_$$_src_shared_tools_index.p(function (e) {
+    return Src_shared_tools_index.p(function (e) {
       var t = parseInt(e)
       e$onChange(n, t /= u)
     }, e)
   }
-  return React.createElement($_539.a, {
-    label: $_710$a$formatMessage({
+  return React.createElement(Module_539.a, {
+    label: Module_710$a$formatMessage({
       id: e$formConfig$label
     }),
     className: "coco-number-inputRow",
@@ -75,44 +75,44 @@ var TE = memo(function (e) {
 var SE = memo(function (e) {
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$getValue = e.getValue
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   return React.createElement("div", {
-    className: Classnames($_202.formItemWrapper, "coco-form-item", "coco-form-item-vertical")
+    className: Classnames(Module_202.formItemWrapper, "coco-form-item", "coco-form-item-vertical")
   }, React.createElement("div", {
-    className: $_202.labelWrapper
-  }, React.createElement("span", null, $_710$a$formatMessage({
+    className: Module_202.labelWrapper
+  }, React.createElement("span", null, Module_710$a$formatMessage({
     id: "text"
-  }) + $_710$a$formatMessage({
+  }) + Module_710$a$formatMessage({
     id: "setting"
   }))), React.createElement("div", {
-    className: $_202.fontWrapper
+    className: Module_202.fontWrapper
   }, React.createElement("div", {
-    className: $_202.fontFamily
+    className: Module_202.fontFamily
   }, React.createElement(fy, {
     keyName: "fontFamily",
     onChange: e$onChange,
-    fontFamily: e$getValue("fontFamily") || Pp.f
+    fontFamily: e$getValue("fontFamily") || Module_95.f
   })), React.createElement("div", {
-    className: $_202.fontSize
+    className: Module_202.fontSize
   }, React.createElement(TE, {
     keyName: "fontSize",
     onChange: e$onChange,
-    formConfig: D.a(D.a({}, e.formConfig), {}, {
+    formConfig: Module_6.a(Module_6.a({}, e.formConfig), {}, {
       label: "fontSize",
-      max: Yr.l,
-      min: Yr.p
+      max: Module_53.l,
+      min: Module_53.p
     }),
-    value: e$getValue("fontSize") || Pp.g,
+    value: e$getValue("fontSize") || Module_95.g,
     rules: [
       {
-        rule: Yr.w(4)
+        rule: Module_53.w(4)
       }, {
-        rule: Yr.v
+        rule: Module_53.v
       }
     ],
     width: 86
   }))), React.createElement("div", {
-    className: $_202.alignWrapper
+    className: Module_202.alignWrapper
   }, React.createElement(gy, {
     keyName: "textAlign",
     onChange: e$onChange,
@@ -121,15 +121,15 @@ var SE = memo(function (e) {
 })
 var AE = function (e) {
   return React.createElement("div", {
-    className: $_202.backgroundTypeWrapper
+    className: Module_202.backgroundTypeWrapper
   }, React.createElement("div", {
-    className: $_202.backgroundTypeItem,
+    className: Module_202.backgroundTypeItem,
     style: e
   }, React.createElement("div", null)))
 }
 var IE = [
   {
-    value: Fp.c.OUTLINED_NORMAL,
+    value: Module_76.c.OUTLINED_NORMAL,
     renderContent: function (e) {
       return AE({
         background: "rgba(255, 255, 255, 0.3)",
@@ -138,7 +138,7 @@ var IE = [
       })
     }
   }, {
-    value: Fp.c.CONTAINED_NORMAL,
+    value: Module_76.c.CONTAINED_NORMAL,
     renderContent: function (e) {
       return AE({
         background: Color(e).alpha(.14).toString(),
@@ -146,7 +146,7 @@ var IE = [
       })
     }
   }, {
-    value: Fp.c.CONTAINED_ROUND,
+    value: Module_76.c.CONTAINED_ROUND,
     renderContent: function (e) {
       return AE({
         background: Color(e).alpha(.14).toString(),
@@ -154,7 +154,7 @@ var IE = [
       })
     }
   }, {
-    value: Fp.c.OUTLINED_FLAT,
+    value: Module_76.c.OUTLINED_FLAT,
     renderContent: function (e) {
       return AE({
         borderBottom: "2px solid ".concat(Color(e).alpha(.5).toString())
@@ -165,41 +165,41 @@ var IE = [
 var jE = memo(function (e) {
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$getValue = e.getValue
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
-  var o = e$getValue("backgroundColor") || Pp.c
-  var i = e$getValue("backgroundMode") || Fp.a.TEMPLATE
-  var a = e$getValue("templateMode") || Fp.c.OUTLINED_NORMAL
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
+  var o = e$getValue("backgroundColor") || Module_95.c
+  var i = e$getValue("backgroundMode") || Module_76.a.TEMPLATE
+  var a = e$getValue("templateMode") || Module_76.c.OUTLINED_NORMAL
   var s = useSelector(function (e) {
     return e.project.selectedWidgetId
   })
   var c = useDispatch()
-  var l = e$getValue("backgroundImage") || Pp.a
+  var l = e$getValue("backgroundImage") || Module_95.a
   return React.createElement("div", {
-    className: Classnames($_202.formItemWrapper, $_202.buttonWrapper, "coco-form-item", "coco-form-item-vertical")
+    className: Classnames(Module_202.formItemWrapper, Module_202.buttonWrapper, "coco-form-item", "coco-form-item-vertical")
   }, React.createElement("div", {
-    className: $_202.backgroundLabel
-  }, React.createElement("span", null, $_710$a$formatMessage({
+    className: Module_202.backgroundLabel
+  }, React.createElement("span", null, Module_710$a$formatMessage({
     id: "background"
   })), React.createElement("div", {
-    className: $_202.modeActionWrapper
+    className: Module_202.modeActionWrapper
   }, React.createElement("div", {
-    className: Classnames($_202.modeTemplate, i === Fp.a.TEMPLATE && $_202.backgroundSelected),
+    className: Classnames(Module_202.modeTemplate, i === Module_76.a.TEMPLATE && Module_202.backgroundSelected),
     onClick: function () {
-      e$onChange("backgroundMode", Fp.a.TEMPLATE)
+      e$onChange("backgroundMode", Module_76.a.TEMPLATE)
     }
-  }, $_710$a$formatMessage({
+  }, Module_710$a$formatMessage({
     id: "template"
   })), React.createElement("div", {
-    className: Classnames($_202.modeImage, i === Fp.a.IMAGE && $_202.backgroundSelected),
+    className: Classnames(Module_202.modeImage, i === Module_76.a.IMAGE && Module_202.backgroundSelected),
     onClick: function () {
-      e$onChange("backgroundMode", Fp.a.IMAGE)
+      e$onChange("backgroundMode", Module_76.a.IMAGE)
     }
-  }, $_710$a$formatMessage({
+  }, Module_710$a$formatMessage({
     id: "image"
-  })))), i === Fp.a.TEMPLATE && React.createElement("div", {
-    className: $_202.backgroundWrapper
+  })))), i === Module_76.a.TEMPLATE && React.createElement("div", {
+    className: Module_202.backgroundWrapper
   }, React.createElement("div", {
-    className: $_202.templateMode
+    className: Module_202.templateMode
   }, React.createElement(hb, {
     modeList: IE,
     value: a,
@@ -208,39 +208,39 @@ var jE = memo(function (e) {
     },
     params: [o]
   }, IE.map(function (e) {
-    return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.p, {
+    return React.createElement(Src_shared_ui_components_index.p, {
       key: e.value,
       value: e.value
     }, e.renderContent(o))
   }))), React.createElement("div", {
-    className: $_202.templateColor
-  }, React.createElement("span", null, $_710$a$formatMessage({
+    className: Module_202.templateColor
+  }, React.createElement("span", null, Module_710$a$formatMessage({
     id: "templateColor"
   })), React.createElement(mb, {
     width: 43,
     keyName: "backgroundColor",
     onChange: e$onChange,
     color: o
-  }))), i === Fp.a.IMAGE && React.createElement(React.Fragment, null, React.createElement("div", {
-    className: $_202.backgroundWrapper
+  }))), i === Module_76.a.IMAGE && React.createElement(React.Fragment, null, React.createElement("div", {
+    className: Module_202.backgroundWrapper
   }, React.createElement(nb, {
     onUploadFileChange: function (e) {
       if (e && s) {
-        c($$_$$_$$_$$_src_editor_redux_common_actions.Zf(e, function (e) {
-          c($$_$$_$$_$$_src_editor_redux_common_actions.Yf(e[0], s))
+        c(Src_editor_redux_common_actions.Zf(e, function (e) {
+          c(Src_editor_redux_common_actions.Yf(e[0], s))
         }))
       }
     },
     onResourceLibraryClick: function () {
-      c($$_$$_$$_$$_src_editor_redux_common_actions.wj(Tn.c.ImageLibrary, function (e) {
+      c(Src_editor_redux_common_actions.wj(Module_68.c.ImageLibrary, function (e) {
         var t = e[0]
         if (s) {
-          c($$_$$_$$_$$_src_editor_redux_common_actions.Yf(t, s))
+          c(Src_editor_redux_common_actions.Yf(t, s))
         }
-        c($$_$$_$$_$$_src_editor_redux_common_actions.sh())
+        c(Src_editor_redux_common_actions.sh())
       }))
     },
-    fileId: Et.hb(l) ? l : Pp.a,
+    fileId: Module_9.hb(l) ? l : Module_95.a,
     style: {
       height: 90,
       padding: "12px"
@@ -249,24 +249,24 @@ var jE = memo(function (e) {
     style: {
       marginTop: 8
     }
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.s, {
-    className: Classnames($_202.radioWrapper, $_202.sizeRadioBox),
-    value: e$getValue("imageResizeMode") || Fp.b.CONTAIN,
+  }, React.createElement(Src_shared_ui_components_index.s, {
+    className: Classnames(Module_202.radioWrapper, Module_202.sizeRadioBox),
+    value: e$getValue("imageResizeMode") || Module_76.b.CONTAIN,
     onChange: function (e) {
       e$onChange("imageResizeMode", e)
     }
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.t, {
-    value: Fp.b.CONTAIN
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+  }, React.createElement(Src_shared_ui_components_index.t, {
+    value: Module_76.b.CONTAIN
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-contain"
-  }), $_710$a$formatMessage({
-    id: "".concat(Fp.b.CONTAIN)
-  })), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.t, {
-    value: Fp.b.STRETCH
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+  }), Module_710$a$formatMessage({
+    id: "".concat(Module_76.b.CONTAIN)
+  })), React.createElement(Src_shared_ui_components_index.t, {
+    value: Module_76.b.STRETCH
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-stretch"
-  }), $_710$a$formatMessage({
-    id: "".concat(Fp.b.STRETCH)
+  }), Module_710$a$formatMessage({
+    id: "".concat(Module_76.b.STRETCH)
   }))))))
 })
 var NE = memo(function (e) {
@@ -275,7 +275,7 @@ var NE = memo(function (e) {
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$formConfig = e.formConfig
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var /* [auto-meaningful-name] */e$formConfig$stillImageShowResizeMode = e$formConfig.stillImageShowResizeMode
   var /* [auto-meaningful-name] */e$formConfig$label = e$formConfig.label
   var l = useSelector(function (e) {
@@ -283,44 +283,44 @@ var NE = memo(function (e) {
   })
   var u = useDispatch()
   var d = e$getValue(n)
-  var p = Et.hb(d)
+  var p = Module_9.hb(d)
   var f = (null === p || undefined === p ? undefined : p.source) || (null === p || undefined === p ? undefined : p.cdnUrl)
   var m = e$getValue("resizeMode")
   var g = e$formConfig$stillImageShowResizeMode || f
-  return React.createElement(React.Fragment, null, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
-    className: Classnames($_747.formItemWrapper, $_747.changeImageWrapper),
+  return React.createElement(React.Fragment, null, React.createElement(Src_shared_ui_components_index.i, {
+    className: Classnames(Module_747.formItemWrapper, Module_747.changeImageWrapper),
     align: "vertical",
-    label: $_710$a$formatMessage({
+    label: Module_710$a$formatMessage({
       id: e$formConfig$label || "image"
     })
   }, React.createElement(nb, {
     onUploadFileChange: function (e) {
       if (e && l) {
-        u($$_$$_$$_$$_src_editor_redux_common_actions.Zf(e, function (e) {
-          u($$_$$_$$_$$_src_editor_redux_common_actions.Yf(e[0], l))
+        u(Src_editor_redux_common_actions.Zf(e, function (e) {
+          u(Src_editor_redux_common_actions.Yf(e[0], l))
         }))
       }
     },
     onResourceLibraryClick: function () {
-      u($$_$$_$$_$$_src_editor_redux_common_actions.wj(Tn.c.ImageLibrary, function (e) {
+      u(Src_editor_redux_common_actions.wj(Module_68.c.ImageLibrary, function (e) {
         var t = e[0]
         if (l) {
-          u($$_$$_$$_$$_src_editor_redux_common_actions.Yf(t, l))
+          u(Src_editor_redux_common_actions.Yf(t, l))
         }
-        u($$_$$_$$_$$_src_editor_redux_common_actions.sh())
+        u(Src_editor_redux_common_actions.sh())
       }))
     },
     onDelete: function () {
       e$onChange(n, "")
     },
     fileId: d
-  })), g && React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
-    className: Classnames($_747.formItemWrapper, $_747.imageResizeMode, "changeImageResizeMode"),
-    label: $_710$a$formatMessage({
+  })), g && React.createElement(Src_shared_ui_components_index.i, {
+    className: Classnames(Module_747.formItemWrapper, Module_747.imageResizeMode, "changeImageResizeMode"),
+    label: Module_710$a$formatMessage({
       id: "adapt"
     }),
     align: "vertical"
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
+  }, React.createElement(Src_shared_ui_components_index.i, {
     className: "changeSizeFormItemWrapper"
   }, React.createElement($v, {
     mode: m,
@@ -339,8 +339,8 @@ var RE = memo(function (e) {
   var /* [auto-meaningful-name] */e$formConfig$label = e.formConfig.label
   var a = undefined === e$formConfig$label ? "coordinate" : e$formConfig$label
   var s = e$getValue(n)
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
-  var l = D.a({}, s)
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
+  var l = Module_6.a({}, s)
   var u = function (e) {
     return function (t, r) {
       l[t] = parseInt(r);
@@ -351,47 +351,47 @@ var RE = memo(function (e) {
       })(e)(l)
     }
   }
-  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
+  return React.createElement(Src_shared_ui_components_index.i, {
     align: "vertical",
-    className: "".concat(qv.formItemWrapper, " ").concat(qv.formInputNumberRow)
+    className: "".concat(Module_88.formItemWrapper, " ").concat(Module_88.formInputNumberRow)
   }, React.createElement("p", {
     className: "coco-form-item-label"
-  }, $_710$a$formatMessage({
+  }, Module_710$a$formatMessage({
     id: a || "coordinate"
   })), React.createElement("div", {
-    className: qv.formInputNumberRow
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
+    className: Module_88.formInputNumberRow
+  }, React.createElement(Src_shared_ui_components_index.i, {
     className: "changeLeft"
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.o, {
+  }, React.createElement(Src_shared_ui_components_index.o, {
     label: "x",
     type: "number",
     defaultValue: Math.round(s.x),
-    className: "".concat(qv.justifyInputContent, " coco-number-inputRow"),
+    className: "".concat(Module_88.justifyInputContent, " coco-number-inputRow"),
     rules: [
       {
-        rule: Yr.w(9)
+        rule: Module_53.w(9)
       }
     ],
     onChange: function (e) {
       u(50)("x", e)
     },
-    min: Qu.s,
-    max: Qu.k,
+    min: Module_60.s,
+    max: Module_60.k,
     onStep: function (e) {
       u(0)("x", e)
     }
-  })), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
+  })), React.createElement(Src_shared_ui_components_index.i, {
     className: "changeTop"
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.o, {
+  }, React.createElement(Src_shared_ui_components_index.o, {
     label: "y",
     type: "number",
     defaultValue: Math.round(s.y),
-    className: "".concat(qv.justifyInputContent, " coco-number-inputRow"),
-    min: Qu.s,
-    max: Qu.k,
+    className: "".concat(Module_88.justifyInputContent, " coco-number-inputRow"),
+    min: Module_60.s,
+    max: Module_60.k,
     rules: [
       {
-        rule: Yr.w(9)
+        rule: Module_53.w(9)
       }
     ],
     onChange: function (e, t) {
@@ -408,20 +408,20 @@ var kE = memo(function (e) {
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$formConfig = e.formConfig
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var s = useRef(null)
   var c = e$getValue(n)
-  var l = $_710$a$formatMessage({
+  var l = Module_710$a$formatMessage({
     id: e$formConfig.label || "content"
   })
-  var u = $$_$$_$$_$$_src_shared_tools_index.p(function (e) {
+  var u = Src_shared_tools_index.p(function (e) {
     e$onChange(n, e)
   }, 60)
-  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
-    className: Classnames(qv.formItemWrapper, "changeContent"),
+  return React.createElement(Src_shared_ui_components_index.i, {
+    className: Classnames(Module_88.formItemWrapper, "changeContent"),
     label: l,
     align: "vertical"
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.A, {
+  }, React.createElement(Src_shared_ui_components_index.A, {
     ref: s,
     defaultValue: c,
     rows: 3,

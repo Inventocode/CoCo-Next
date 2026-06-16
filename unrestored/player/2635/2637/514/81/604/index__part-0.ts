@@ -6,9 +6,9 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_222 from "../222"
-import * as /* [auto-meaningful-name] */$_469 from "./469"
-import * as /* [auto-meaningful-name] */$$_457 from "../457"
+import * as /* [auto-meaningful-name] */Module_222 from /* 222 */"../222"
+import * as /* [auto-meaningful-name] */Module_469 from /* 469 */"./469"
+import * as /* [auto-meaningful-name] */Module_457 from /* 457 */"../457"
 var a = function () {
   var t = function (e, n) {
     return (t = Object.setPrototypeOf || {
@@ -65,5 +65,5 @@ var s = function (t) {
   }
   e.GTIN_SIZE = 40
   return e
-}($$_457.a)
+}(Module_457.a)
 export { s }

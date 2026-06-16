@@ -7,26 +7,26 @@
 "use strict"
 
 import { Z } from "./index__part-2"
-import * as /* [auto-meaningful-name] */$$_49 from "../49"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_tools_index from "../../../../../src/shared/tools/index"
-import * as /* [auto-meaningful-name] */OtJson1 from "ot-json1"
-import * as /* [auto-meaningful-name] */$$_39 from "../39"
-import * as /* [auto-meaningful-name] */$$_27 from "../27"
-import * as s from "../7"
-import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$_377_index from "./377/index"
+import * as /* [auto-meaningful-name] */Module_49 from /* 49 */"../49"
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */OtJson1 from /* 31 */"ot-json1"
+import * as /* [auto-meaningful-name] */Module_39 from /* 39 */"../39"
+import * as /* [auto-meaningful-name] */Module_27 from /* 27 */"../27"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../7"
+import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import * as /* [auto-meaningful-name] */Module_377 from /* 377 */"./377/index"
 var $ = new (function () {
   function e() {
-    $$_27.a(this, e)
+    Module_27.a(this, e)
     this.client = undefined
     this.workerId = undefined
     this.workerId = ""
   }
-  $$_39.a(e, [
+  Module_39.a(e, [
     {
       key: "init",
       value: function () {
-        var e = s.a(RegeneratorRuntime.mark(function e(t) {
+        var e = Module_7.a(RegeneratorRuntime.mark(function e(t) {
           return RegeneratorRuntime.wrap(function (e) {
             for (;;) {
               switch (e.prev = e.next) {
@@ -41,8 +41,8 @@ var $ = new (function () {
                     e.next = 11
                     break
                   }
-                  $$_49.oTHelper.init()
-                  $_377_index.blinkOTAdapter.start()
+                  Module_49.oTHelper.init()
+                  Module_377.blinkOTAdapter.start()
                   e.next = 13
                   break
                 case 11:
@@ -62,13 +62,13 @@ var $ = new (function () {
     }, {
       key: "reconnect",
       value: function () {
-        var e = s.a(RegeneratorRuntime.mark(function e() {
+        var e = Module_7.a(RegeneratorRuntime.mark(function e() {
           return RegeneratorRuntime.wrap(function (e) {
             for (;;) {
               switch (e.prev = e.next) {
                 case 0:
                   e.next = 2
-                  return $$_$$_$$_$$_$$_src_shared_tools_index.lb(500)
+                  return Src_shared_tools_index.lb(500)
                 case 2:
                   this.disconnect()
                   e.next = 5
@@ -87,7 +87,7 @@ var $ = new (function () {
     }, {
       key: "disconnect",
       value: function () {
-        var e = s.a(RegeneratorRuntime.mark(function e() {
+        var e = Module_7.a(RegeneratorRuntime.mark(function e() {
           var /* [auto-meaningful-name] */this$client
           return RegeneratorRuntime.wrap(function (e) {
             for (;;) {
@@ -97,8 +97,8 @@ var $ = new (function () {
                     this$client.disconnect()
                   }
                   this.client = undefined
-                  $_377_index.blinkOTAdapter.stop()
-                  $$_49.oTHelper.dispose()
+                  Module_377.blinkOTAdapter.stop()
+                  Module_49.oTHelper.dispose()
                 case 4:
                 case "end":
                   return e.stop()

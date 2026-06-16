@@ -7,11 +7,11 @@
 "use strict"
 
 var r
-import * as o from "./27"
-import * as i from "./39"
-import { useContext, useEffect, useRef } from "react"
+import * as /* [auto-meaningful-name] */Module_27 from /* 27 */"./27"
+import * as /* [auto-meaningful-name] */Module_39 from /* 39 */"./39"
+import { useContext, useEffect, useRef } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */React1 from "react"
+import /* [auto-meaningful-name] */React1 from /* 0 */"react"
 if (navigator.platform.match("Mac")) {
   r = "osx"
 } else {
@@ -25,10 +25,10 @@ if (navigator.platform.match("Mac")) {
 }
 var c = function () {
   function e() {
-    o.a(this, e)
+    Module_27.a(this, e)
     this.handlers = new Array()
   }
-  i.a(e, [
+  Module_39.a(e, [
     {
       key: "addHandler",
       value: function (e) {

@@ -6,8 +6,8 @@
 
 "use strict"
 
-var r = require("./21")
-var i = require("react")
+var r = require(/* 21 */"./21")
+var i = require(/* 0 */"react")
 var o = {
   icon: {
     tag: "svg",
@@ -27,7 +27,7 @@ var o = {
   name: "close",
   theme: "outlined"
 }
-var a = require("./224/index")
+var a = require(/* 224 */"./224/index")
 var s = function (e, t) {
   return i.createElement(a.a, r.a(r.a({}, e), {}, {
     ref: t,

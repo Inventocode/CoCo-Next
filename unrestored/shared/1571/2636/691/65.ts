@@ -29,8 +29,8 @@ export { x as e }
 export { C as a }
 export { O as w }
 export { k as n }
-import * as /* [auto-meaningful-name] */$_32_index from "./32/index"
-import * as /* [auto-meaningful-name] */$$_105 from "../105"
+import * as /* [auto-meaningful-name] */Module_32 from /* 32 */"./32/index"
+import * as /* [auto-meaningful-name] */Module_105 from /* 105 */"../105"
 function o(e) {
   return {
     width: Math.floor(.7 * e.width),
@@ -38,20 +38,20 @@ function o(e) {
   }
 }
 function a(e) {
-  return new $_32_index.o(Math.floor(.7 * e.x), Math.floor(.7 * e.y))
+  return new Module_32.o(Math.floor(.7 * e.x), Math.floor(.7 * e.y))
 }
 function s(e) {
-  return new $_32_index.o(Math.floor(e.x / .7), Math.floor(e.y / .7))
+  return new Module_32.o(Math.floor(e.x / .7), Math.floor(e.y / .7))
 }
 function c(e, t) {
-  var n = new $_32_index.l()
+  var n = new Module_32.l()
   n.tx = -Math.floor(.7 * (e.x + t.width / 2))
   n.ty = -Math.floor(.7 * (e.y + t.height / 2))
   n.a = n.d = .7
   return n
 }
 function u(e, t) {
-  return l(new $_32_index.o(t.x - e.pivot.x * e.scale.x, t.y - e.pivot.y * e.scale.y), t, e.rotation)
+  return l(new Module_32.o(t.x - e.pivot.x * e.scale.x, t.y - e.pivot.y * e.scale.y), t, e.rotation)
 }
 function l(e, t, n) {
   var i = e.x - t.x
@@ -60,23 +60,23 @@ function l(e, t, n) {
   var s = Math.sin(n)
   var c = a * i - o * s + t.x
   var u = a * o + i * s + t.y
-  return new $_32_index.o(c, u)
+  return new Module_32.o(c, u)
 }
 function f(e, t) {
   var n = l(u(t, t.position), t.position, -t.rotation)
   var i = l(e, t.position, -t.rotation)
   var o = t.scale.x > 0 ? i.x - n.x + t.width / 2 : i.x - n.x - t.width / 2
   var a = t.scale.y > 0 ? i.y - n.y + t.height / 2 : i.y - n.y - t.height / 2
-  return new $_32_index.o(Math.round(o / t.scale.x), Math.round(a / t.scale.y))
+  return new Module_32.o(Math.round(o / t.scale.x), Math.round(a / t.scale.y))
 }
 function d(e, t) {
-  var n = new $_32_index.o(t.position.x - t.pivot.x * t.scale.x, t.position.y - t.pivot.y * t.scale.y)
+  var n = new Module_32.o(t.position.x - t.pivot.x * t.scale.x, t.position.y - t.pivot.y * t.scale.y)
   var i = e.x * t.scale.x
   var o = e.y * t.scale.y
   var a = t.scale.x > 0 ? i + n.x - t.width / 2 : i + n.x + t.width / 2
   var s = t.scale.y > 0 ? o + n.y - t.height / 2 : o + n.y + t.height / 2
-  var c = l(new $_32_index.o(a, s), t.position, t.rotation)
-  return new $_32_index.o(c.x, c.y)
+  var c = l(new Module_32.o(a, s), t.position, t.rotation)
+  return new Module_32.o(c.x, c.y)
 }
 function h(e, t) {
   if (0 === e && 0 === t) {
@@ -169,13 +169,13 @@ function v(e, t, n) {
   return ("00000" + (r << 16 | i << 8 | o).toString(16)).slice(-6)
 }
 function m(e) {
-  return !(!e || !e.type) && e.type === $$_105.d.Actor
+  return !(!e || !e.type) && e.type === Module_105.d.Actor
 }
 function y(e) {
-  return !(!e || !e.type) && e.type === $$_105.d.Scene
+  return !(!e || !e.type) && e.type === Module_105.d.Scene
 }
 function b(e) {
-  return !(!e || !e.type) && e.type === $$_105.c.ActorWrapper
+  return !(!e || !e.type) && e.type === Module_105.c.ActorWrapper
 }
 function w(e) {
   return e.type.startsWith("touch")

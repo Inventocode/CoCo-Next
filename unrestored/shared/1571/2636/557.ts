@@ -6,8 +6,8 @@
 
 "use strict"
 
-var r = require("react")
-var o = require("./50/index")
+var r = require(/* 0 */"react")
+var o = require(/* 50 */"./50/index")
 var i = function (e, t) {
   return (i = Object.setPrototypeOf || {
     __proto__: []

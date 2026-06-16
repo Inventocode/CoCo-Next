@@ -6,28 +6,28 @@
 
 "use strict"
 
-import * as r from "../6"
-import { useState, useCallback } from "react"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"../6"
+import { useState, useCallback } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */Classnames from "classnames"
-import /* [auto-meaningful-name] */Classnames1 from "classnames"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_load from "../../../../../src/shared/widget/custom/load"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_tools_index from "../../../../../src/shared/tools/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
-import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
-import { useDispatch, useSelector } from "react-redux"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../../src/editor/redux/common/actions"
-import "./859"
-import * as h from "../9"
-import * as /* [auto-meaningful-name] */$_676_index from "./676/index"
-import * as /* [auto-meaningful-name] */$$_33 from "../33"
+import /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import /* [auto-meaningful-name] */Classnames1 from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Src_shared_widget_custom_load from /* 34 */"../../../../../src/shared/widget/custom/load"
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../10/index"
+import { useDispatch, useSelector } from /* 16 */"react-redux"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../../src/editor/redux/common/actions"
+import /* 859 */"./859"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"../9"
+import * as /* [auto-meaningful-name] */Module_676 from /* 676 */"./676/index"
+import * as /* [auto-meaningful-name] */Module_33 from /* 33 */"../33"
 var _ = function (e) {
   var /* [auto-meaningful-name] */e$render = e.render
   var /* [auto-meaningful-name] */e$widgetId = e.widgetId
   var /* [auto-meaningful-name] */e$widgetType = e.widgetType
   var a = useState()
-  var s = $$_10_index.a(a, 2)
+  var s = Module_10.a(a, 2)
   var c = s[0]
   var l = s[1]
   var _ = useDispatch()
@@ -36,16 +36,16 @@ var _ = function (e) {
   })
   var b = v === e$widgetId
   var y = useCallback(function (e, t, r, o) {
-    _($$_$$_$$_$$_$$_src_editor_redux_common_actions.Lg(e$widgetId, e, t, r, o))
+    _(Src_editor_redux_common_actions.Lg(e$widgetId, e, t, r, o))
   }, [_, e$widgetId])
   var /* [auto-meaningful-name] */CocoWidgetWrapper = "coco-widget-wrapper"
-  if (!(e$widgetType !== $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.a && e$widgetType !== $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.c)) {
+  if (!(e$widgetType !== Src_editor_widget_builtIn_types.a && e$widgetType !== Src_editor_widget_builtIn_types.c)) {
     CocoWidgetWrapper = ""
   }
-  var O = h.qb(e$widgetId)
-  if ((null === O || undefined === O ? undefined : O.type) && [$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.x, $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.A].includes(O.type)) {
+  var O = Module_9.qb(e$widgetId)
+  if ((null === O || undefined === O ? undefined : O.type) && [Src_editor_widget_builtIn_types.x, Src_editor_widget_builtIn_types.A].includes(O.type)) {
     CocoWidgetWrapper += " coco-child-widget"
-    if (e$widgetType === $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.v) {
+    if (e$widgetType === Src_editor_widget_builtIn_types.v) {
       CocoWidgetWrapper += " coco-child-widget-full"
     }
     if (e$widgetId === v) {
@@ -54,8 +54,8 @@ var _ = function (e) {
   }
   return React1.createElement("div", {
     className: CocoWidgetWrapper
-  }, c && React1.createElement($_676_index.a, c), e$render(y, function (e, t, r) {
-    if ($$_33.r(e$widgetId)) {
+  }, c && React1.createElement(Module_676.a, c), e$render(y, function (e, t, r) {
+    if (Module_33.r(e$widgetId)) {
       l({
         target: e,
         callback: t,

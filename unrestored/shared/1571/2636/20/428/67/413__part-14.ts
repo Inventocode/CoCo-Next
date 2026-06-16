@@ -7,23 +7,23 @@
 "use strict"
 
 import { Ye } from "./413__part-19"
-import * as /* [auto-meaningful-name] */$_index from "./index"
-import * as /* [auto-meaningful-name] */$$_12 from "../12"
-import * as /* [auto-meaningful-name] */$$_$$_$$_10_index from "../../../10/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_55 from "../../../55"
-import * as /* [auto-meaningful-name] */$$_$$_index from "../../index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_9 from "../../../9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../../src/editor/widget/built-in/types"
-import /* [auto-meaningful-name] */React from "react"
-import { useMemo, useEffect, memo, useRef, useState } from "react"
+import * as /* [auto-meaningful-name] */Module_67 from /* 67 */"./index"
+import * as /* [auto-meaningful-name] */Module_12 from /* 12 */"../12"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../../../10/index"
+import * as /* [auto-meaningful-name] */Module_55 from /* 55 */"../../../55"
+import * as /* [auto-meaningful-name] */Module_20 from /* 20 */"../../index"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"../../../9"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../../../../src/editor/widget/built-in/types"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { useMemo, useEffect, memo, useRef, useState } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import { useSelector } from "react-redux"
-import * as /* [auto-meaningful-name] */$$_$$_$$_691_index from "../../../691/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_145 from "../../../145"
-import "../../../768"
+import { useSelector } from /* 16 */"react-redux"
+import * as /* [auto-meaningful-name] */Module_691 from /* 691 */"../../../691/index"
+import * as /* [auto-meaningful-name] */Module_145 from /* 145 */"../../../145"
+import /* 768 */"../../../768"
 function Se(e, t) {
   var n
-  return (null === (n = $$_12.b(t)) || undefined === n ? undefined : n.parentId) === e
+  return (null === (n = Module_12.b(t)) || undefined === n ? undefined : n.parentId) === e
 }
 function Ae(e, t) {
   var n = useMemo(function () {
@@ -32,11 +32,11 @@ function Ae(e, t) {
         handleActorClick: function (t) {
           var /* [auto-meaningful-name] */t$target_id = t.target_id
           if (Se(e, t$target_id)) {
-            $$_$$_index.unsetPressedActorId(t$target_id)
-            $$_$$_index.emitActorPress(t$target_id, t.data.position)
-            $$_$$_$$_55.b.playerWidgetLog({
+            Module_20.unsetPressedActorId(t$target_id)
+            Module_20.emitActorPress(t$target_id, t.data.position)
+            Module_55.b.playerWidgetLog({
               widgetId: t$target_id,
-              widgetType: $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.a,
+              widgetType: Src_editor_widget_builtIn_types.a,
               message: "onWidgetPress"
             })
           }
@@ -44,30 +44,30 @@ function Ae(e, t) {
         handleActorMouseDown: function (n) {
           var /* [auto-meaningful-name] */n$target_id = n.target_id
           if (Se(e, n$target_id)) {
-            $$_$$_index.setPressedActorId(n$target_id)
+            Module_20.setPressedActorId(n$target_id)
             document.addEventListener("mouseup", function () {
-              return $$_$$_index.clearPressedActorIds()
+              return Module_20.clearPressedActorIds()
             }, {
               once: true
             })
-            $$_$$_index.emitActorPressIn(n$target_id, n.data.position)
-            $$_$$_$$_55.b.playerWidgetLog({
+            Module_20.emitActorPressIn(n$target_id, n.data.position)
+            Module_55.b.playerWidgetLog({
               widgetId: n$target_id,
-              widgetType: $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.a,
+              widgetType: Src_editor_widget_builtIn_types.a,
               message: "onWidgetPressIn"
             })
             if (t) {
-              $$_$$_index.setStageMouse(t, n.data.position)
-              $_index.a(function () {
-                var e = $$_$$_index.getStageMouse(t)
-                return $$_$$_index.emitActorPressHoldAndWait(n$target_id, e || {
+              Module_20.setStageMouse(t, n.data.position)
+              Module_67.a(function () {
+                var e = Module_20.getStageMouse(t)
+                return Module_20.emitActorPressHoldAndWait(n$target_id, e || {
                   x: 0,
                   y: 0
                 })
               })
-              $$_$$_$$_55.b.playerWidgetLog({
+              Module_55.b.playerWidgetLog({
                 widgetId: n$target_id,
-                widgetType: $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.a,
+                widgetType: Src_editor_widget_builtIn_types.a,
                 message: "onWidgetPressHold"
               })
             }
@@ -76,11 +76,11 @@ function Ae(e, t) {
         handleActorMouseUp: function (t) {
           var /* [auto-meaningful-name] */t$target_id = t.target_id
           if (Se(e, t$target_id)) {
-            $$_$$_index.unsetPressedActorId(t$target_id)
-            $$_$$_index.emitActorPressOut(t$target_id, t.data.position)
-            $$_$$_$$_55.b.playerWidgetLog({
+            Module_20.unsetPressedActorId(t$target_id)
+            Module_20.emitActorPressOut(t$target_id, t.data.position)
+            Module_55.b.playerWidgetLog({
               widgetId: t$target_id,
-              widgetType: $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.a,
+              widgetType: Src_editor_widget_builtIn_types.a,
               message: "onWidgetPressOut"
             })
           }
@@ -114,11 +114,11 @@ var Ie = memo(function (e) {
   var n = useRef(null)
   var r = useRef(null)
   var o = useState(false)
-  var l = $$_$$_$$_10_index.a(o, 2)
+  var l = Module_10.a(o, 2)
   var u = l[0]
   var p = l[1]
   var f = useState()
-  var h = $$_$$_$$_10_index.a(f, 2)
+  var h = Module_10.a(f, 2)
   var m = h[0]
   var g = h[1]
   var _ = e.id
@@ -149,12 +149,12 @@ var Ie = memo(function (e) {
           var /* [auto-meaningful-name] */n$target_id = n.target_id
           var /* [auto-meaningful-name] */n$data = n.data
           if (n$target_id === e) {
-            $$_$$_index.setStageMouse(t, n$data.position)
-            $$_$$_index.unsetPressedCanvasId(e)
-            $$_$$_index.emitCanvasPress(e, n$data.position)
-            $$_$$_$$_55.b.playerWidgetLog({
+            Module_20.setStageMouse(t, n$data.position)
+            Module_20.unsetPressedCanvasId(e)
+            Module_20.emitCanvasPress(e, n$data.position)
+            Module_55.b.playerWidgetLog({
               widgetId: e,
-              widgetType: $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.f,
+              widgetType: Src_editor_widget_builtIn_types.f,
               message: "onWidgetPress"
             })
           }
@@ -163,29 +163,29 @@ var Ie = memo(function (e) {
           var /* [auto-meaningful-name] */n$target_id = n.target_id
           var /* [auto-meaningful-name] */n$data = n.data
           if (n$target_id === e) {
-            $$_$$_index.setPressedCanvasId(e)
+            Module_20.setPressedCanvasId(e)
             document.addEventListener("mouseup", function () {
-              return $$_$$_index.clearPressedCanvasIds()
+              return Module_20.clearPressedCanvasIds()
             }, {
               once: true
             })
-            $$_$$_index.setStageMouse(t, n$data.position)
-            $$_$$_index.emitCanvasPressIn(e, n$data.position)
-            $$_$$_$$_55.b.playerWidgetLog({
+            Module_20.setStageMouse(t, n$data.position)
+            Module_20.emitCanvasPressIn(e, n$data.position)
+            Module_55.b.playerWidgetLog({
               widgetId: e,
-              widgetType: $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.f,
+              widgetType: Src_editor_widget_builtIn_types.f,
               message: "onWidgetPressIn"
             })
-            $_index.a(function () {
-              var n = $$_$$_index.getStageMouse(t)
-              return $$_$$_index.emitCanvasPressHoldAndWait(e, n || {
+            Module_67.a(function () {
+              var n = Module_20.getStageMouse(t)
+              return Module_20.emitCanvasPressHoldAndWait(e, n || {
                 x: 0,
                 y: 0
               })
             })
-            $$_$$_$$_55.b.playerWidgetLog({
+            Module_55.b.playerWidgetLog({
               widgetId: e,
-              widgetType: $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.f,
+              widgetType: Src_editor_widget_builtIn_types.f,
               message: "onWidgetPressHold"
             })
           }
@@ -194,12 +194,12 @@ var Ie = memo(function (e) {
           var /* [auto-meaningful-name] */n$target_id = n.target_id
           var /* [auto-meaningful-name] */n$data = n.data
           if (n$target_id === e) {
-            $$_$$_index.unsetPressedCanvasId(e)
-            $$_$$_index.setStageMouse(t, n$data.position)
-            $$_$$_index.emitCanvasPressOut(e, n$data.position)
-            $$_$$_$$_55.b.playerWidgetLog({
+            Module_20.unsetPressedCanvasId(e)
+            Module_20.setStageMouse(t, n$data.position)
+            Module_20.emitCanvasPressOut(e, n$data.position)
+            Module_55.b.playerWidgetLog({
               widgetId: e,
-              widgetType: $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.f,
+              widgetType: Src_editor_widget_builtIn_types.f,
               message: "onWidgetPressOut"
             })
           }
@@ -209,7 +209,7 @@ var Ie = memo(function (e) {
           var /* [auto-meaningful-name] */n$target_id = n.target_id
           var /* [auto-meaningful-name] */n$data = n.data
           if (n$target_id === e) {
-            $$_$$_index.setStageMouse(t, n$data.position)
+            Module_20.setStageMouse(t, n$data.position)
           }
         }
         var /* [auto-meaningful-name] */t$events = t.events
@@ -237,7 +237,7 @@ var Ie = memo(function (e) {
   Ae(M, m)
   useEffect(function () {
     if (null === n || undefined === n ? undefined : n.current) {
-      var e = $$_$$_$$_691_index.a()
+      var e = Module_691.a()
       r.current = e
       e.init({
         renderer: {
@@ -256,26 +256,26 @@ var Ie = memo(function (e) {
       e.scenes.load_scene(L, "")
       e.scenes.set_current_scene(L)
       g(e)
-      $$_$$_index.setStage(M, e)
+      Module_20.setStage(M, e)
       e.start_rendering()
       e.stage_animation.init().finally(function () {
         p(true)
       })
       return function () {
-        $$_$$_index.deleteStage(M)
+        Module_20.deleteStage(M)
       }
     }
   }, [])
   useEffect(function () {
     var /* [auto-meaningful-name] */r$current = r.current
     if (r$current) {
-      $$_$$_$$_145.q(r$current, e$size$width * k, e$size$height * k)
+      Module_145.q(r$current, e$size$width * k, e$size$height * k)
     }
   }, [k, e$size$width, e$size$height])
   useEffect(function () {
     var /* [auto-meaningful-name] */r$current = r.current
     if (r$current) {
-      $$_$$_$$_145.n(r$current, e$attributes$backgroundColor)
+      Module_145.n(r$current, e$attributes$backgroundColor)
     }
   }, [e$attributes$backgroundColor])
   useEffect(function () {
@@ -285,14 +285,14 @@ var Ie = memo(function (e) {
       if (e$attributes$backgroundImage) {
         var n = P.get(e$attributes$backgroundImage)
         if (n) {
-          t = $$_$$_$$_9.lb(n)
+          t = Module_9.lb(n)
         } else {
           if (e$attributes$backgroundImage.includes("://") || e$attributes$backgroundImage.includes("data:image/")) {
             t = e$attributes$backgroundImage
           }
         }
       }
-      $$_$$_$$_145.o(r$current, t, e$attributes$resizeMode)
+      Module_145.o(r$current, t, e$attributes$resizeMode)
     }
   }, [e$attributes$backgroundImage, P, e$attributes$resizeMode])
   var /* [auto-meaningful-name] */e$widgetIds$length = e$widgetIds.length
@@ -309,8 +309,8 @@ var Ie = memo(function (e) {
   }
   return React.createElement(React.Fragment, null, React.createElement("div", {
     id: _,
-    "data-role": $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.M,
-    "data-widget-type": $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.f,
+    "data-role": Src_editor_widget_builtIn_types.M,
+    "data-widget-type": Src_editor_widget_builtIn_types.f,
     ref: t,
     style: {
       top: e$position.y,
@@ -329,7 +329,7 @@ var Ie = memo(function (e) {
     }
   })), u && e$widgetIds.map(function (e) {
     if (r.current) {
-      $$_$$_index.setStage(e, r.current)
+      Module_20.setStage(e, r.current)
     }
     return Ye({
       widgetId: e,

@@ -7,7 +7,7 @@
 "use strict"
 
 var rc
-import * as /* [auto-meaningful-name] */$$_429 from "../429"
+import * as /* [auto-meaningful-name] */Module_429 from /* 429 */"../429"
 !function (e) {
   e.STACK_EXCEEDED = "STACK_EXCEEDED"
 }(rc || (rc = {}))

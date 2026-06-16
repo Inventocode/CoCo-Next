@@ -10,11 +10,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.WorkspaceDragSurfaceSvg = undefined
-var r = require("tslib")
-var i = require("inversify")
-var o = require("../../1058/125")
-var a = require("../../123/index")
-var s = require("../../123/537")
+var r = require(/* 93 */"tslib")
+var i = require(/* 134 */"inversify")
+var o = require(/* 125 */"../../1058/125")
+var a = require(/* 123 */"../../123/index")
+var s = require(/* 537 */"../../123/537")
 var c = function () {
   function e(e, t) {
     this.previous_sibling_ = undefined

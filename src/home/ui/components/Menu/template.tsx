@@ -1,7 +1,7 @@
 /**
  * 由 CoCo 源代码计划解包器解包
  *
- * 模块 ID：My5k__part-1
+ * 模块 ID：My5k
  */
 
 import { config } from "../../../../../unrestored/home/cfg-dpNx"

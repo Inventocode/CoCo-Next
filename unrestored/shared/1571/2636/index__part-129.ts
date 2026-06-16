@@ -6,13 +6,13 @@
 
 "use strict"
 
-import * as vb from "./54"
-import * as Ln from "./35"
-import * as /* [auto-meaningful-name] */$_40_index from "./40/index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import { forwardRef, createElement } from "react"
-import * as /* [auto-meaningful-name] */$_1521 from "./1521"
-import * as /* [auto-meaningful-name] */$_1202 from "./1202"
+import * as /* [auto-meaningful-name] */Module_54 from /* 54 */"./54"
+import * as /* [auto-meaningful-name] */Module_35 from /* 35 */"./35"
+import * as /* [auto-meaningful-name] */Module_40 from /* 40 */"./40/index"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import { forwardRef, createElement } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_1521 from /* 1521 */"./1521"
+import * as /* [auto-meaningful-name] */Module_1202 from /* 1202 */"./1202"
 var jw = forwardRef(function (e, t) {
   var n
   var /* [auto-meaningful-name] */e$prefixCls = e.prefixCls
@@ -27,12 +27,12 @@ var jw = forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$onClick = e.onClick
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$onKeyDown = e.onKeyDown
-  var g = vb.a(e, ["prefixCls", "className", "checked", "defaultChecked", "disabled", "loadingIcon", "checkedChildren", "unCheckedChildren", "onClick", "onChange", "onKeyDown"])
-  var _ = $_1521.a(false, {
+  var g = Module_54.a(e, ["prefixCls", "className", "checked", "defaultChecked", "disabled", "loadingIcon", "checkedChildren", "unCheckedChildren", "onClick", "onChange", "onKeyDown"])
+  var _ = Module_1521.a(false, {
     value: e$checked,
     defaultValue: e$defaultChecked
   })
-  var v = $_40_index.a(_, 2)
+  var v = Module_40.a(_, 2)
   var b = v[0]
   var y = v[1]
   function E(e, t) {
@@ -45,7 +45,7 @@ var jw = forwardRef(function (e, t) {
     }
     return n
   }
-  var O = Classnames(o, e$className, (n = {}, Ln.a(n, "".concat(o, "-checked"), b), Ln.a(n, "".concat(o, "-disabled"), e$disabled), n))
+  var O = Classnames(o, e$className, (n = {}, Module_35.a(n, "".concat(o, "-checked"), b), Module_35.a(n, "".concat(o, "-disabled"), e$disabled), n))
   return createElement("button", Object.assign({}, g, {
     type: "button",
     role: "switch",
@@ -54,10 +54,10 @@ var jw = forwardRef(function (e, t) {
     className: O,
     ref: t,
     onKeyDown: function (e) {
-      if (e.which === $_1202.a.LEFT) {
+      if (e.which === Module_1202.a.LEFT) {
         E(false, e)
       } else {
-        if (e.which === $_1202.a.RIGHT) {
+        if (e.which === Module_1202.a.RIGHT) {
           E(true, e)
         }
       }

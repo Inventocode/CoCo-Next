@@ -7,9 +7,9 @@
 "use strict"
 
 import { _, $, ve } from "./index__part-1"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_19 from "../../../../19"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_552_1214_690_2645 from "../../../../552/1214/690/2645"
-import "../../../../50/index"
+import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"../../../../19"
+import * as /* [auto-meaningful-name] */Module_2645 from /* 2645 */"../../../../552/1214/690/2645"
+import /* 50 */"../../../../50/index"
 var Ee = "function" === typeof Symbol && Symbol.for ? Symbol.for("mui.nested") : "__THEME_NESTED__"
 var xe = ["checked", "disabled", "error", "focused", "focusVisible", "required", "expanded", "selected"]
 var Ce = Date.now()
@@ -56,7 +56,7 @@ var Se = function () {
 var /* [auto-meaningful-name] */Global = "@global"
 var Be = function () {
   function e(e, t, n) {
-    for (var r in this.type = "global", this.at = Global, this.rules = undefined, this.options = undefined, this.key = undefined, this.isProcessed = false, this.key = e, this.options = n, this.rules = new $($$_$$_$$_$$_19.a({}, n, {
+    for (var r in this.type = "global", this.at = Global, this.rules = undefined, this.options = undefined, this.key = undefined, this.isProcessed = false, this.key = e, this.options = n, this.rules = new $(Module_19.a({}, n, {
       parent: this
     })), t) this.rules.add(r, t[r])
     this.rules.process()
@@ -91,7 +91,7 @@ var De = function () {
     this.key = e
     this.options = n
     var r = e.substr("@global ".length)
-    this.rule = n.jss.createRule(r, t, $$_$$_$$_$$_19.a({}, n, {
+    this.rule = n.jss.createRule(r, t, Module_19.a({}, n, {
       parent: this
     }))
   }
@@ -138,7 +138,7 @@ var Fe = function () {
           var /* [auto-meaningful-name] */e$style = e.style
           var o = e$style ? e$style[Global] : null
           if (o) {
-            for (var a in o) t.addRule(a, o[a], $$_$$_$$_$$_19.a({}, e$options, {
+            for (var a in o) t.addRule(a, o[a], Module_19.a({}, e$options, {
               selector: Re(a, e.selector)
             }))
             delete e$style[Global]
@@ -149,7 +149,7 @@ var Fe = function () {
           var /* [auto-meaningful-name] */e$style = e.style
           for (var o in e$style) if ("@" === o[0] && o.substr(0, Global.length) === Global) {
             var a = Re(o.substr(Global.length), e.selector)
-            t.addRule(a, e$style[o], $$_$$_$$_$$_19.a({}, e$options, {
+            t.addRule(a, e$style[o], Module_19.a({}, e$options, {
               selector: a
             }))
             delete e$style[o]
@@ -183,13 +183,13 @@ var Le = function () {
   }
   function n(e, t, n) {
     if (n) {
-      return $$_$$_$$_$$_19.a({}, n, {
+      return Module_19.a({}, n, {
         index: n.index + 1
       })
     }
     var /* [auto-meaningful-name] */e$options$nestingLevel = e.options.nestingLevel
     e$options$nestingLevel = undefined === e$options$nestingLevel ? 1 : e$options$nestingLevel + 1
-    var o = $$_$$_$$_$$_19.a({}, e.options, {
+    var o = Module_19.a({}, e.options, {
       nestingLevel: e$options$nestingLevel,
       index: t.indexOf(e) + 1
     })
@@ -216,7 +216,7 @@ var Le = function () {
               c = e(u$options$parent, a)
             }
             p = p.replace(Me, c)
-            u$options$parent.addRule(p, r[f], $$_$$_$$_$$_19.a({}, s, {
+            u$options$parent.addRule(p, r[f], Module_19.a({}, s, {
               selector: p
             }))
           } else if (h) {

@@ -7,28 +7,28 @@
 "use strict"
 
 import { f, m } from "./index__part-0"
-import * as l from "./62"
-import { useDispatch, useSelector } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { useRef, useState, useEffect, useCallback } from "react"
+import * as /* [auto-meaningful-name] */Module_62 from /* 62 */"./62"
+import { useDispatch, useSelector } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { useRef, useState, useEffect, useCallback } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */Classnames from "classnames"
-import /* [auto-meaningful-name] */Classnames1 from "classnames"
-import * as /* [auto-meaningful-name] */$$_2681_index from "../2681/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_language from "../../../../../src/shared/ui/language"
-import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
-import * as /* [auto-meaningful-name] */$_1043 from "./1043"
+import * as /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import /* [auto-meaningful-name] */Classnames1 from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_2681 from /* 2681 */"../2681/index"
+import * as /* [auto-meaningful-name] */Src_shared_ui_language from /* 23 */"../../../../../src/shared/ui/language"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../10/index"
+import * as /* [auto-meaningful-name] */Module_1043 from /* 1043 */"./1043"
 var M = function (e) {
   var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : .001
   return Math.abs(e.x) <= t && Math.abs(e.y) <= t && Math.abs(e.z) <= t
 }
-var L = new l.g("#f6f4fd")
+var L = new Module_62.g("#f6f4fd")
 function P() {
   var e = useRef()
   var t = useRef(0)
   var n = useRef()
   var a = useState(false)
-  var s = $$_10_index.a(a, 2)
+  var s = Module_10.a(a, 2)
   var c = s[0]
   var u = s[1]
   var d = useDispatch()
@@ -42,24 +42,24 @@ function P() {
       width: (null === (t = document.getElementById("emulatorCanvasWrapper")) || undefined === t ? undefined : t.clientWidth) || 340,
       height: 300
     }
-    var r = new l.H()
-    var o = new l.B(75, n.width / n.height, .1, 1e3)
-    var i = new l.R({
+    var r = new Module_62.H()
+    var o = new Module_62.B(75, n.width / n.height, .1, 1e3)
+    var i = new Module_62.R({
       antialias: true,
       alpha: false
     })
-    var a = new l.C()
+    var a = new Module_62.C()
     a.position.set(10, 10, 50)
     a.intensity = .2
-    r.add(new l.a())
+    r.add(new Module_62.a())
     r.add(a)
     r.background = null
     o.position.z = 6
     i.setSize(n.width, n.height)
     i.setClearColor(L)
     i.autoClear = false
-    var s = new $_1043.a()
-    var c = new l.M().load("/editor/model/background.png")
+    var s = new Module_1043.a()
+    var c = new Module_62.M().load("/editor/model/background.png")
     r.background = c
     s.loadAsync("/editor/model/phone.fbx").then(function (t) {
       r.add(t)
@@ -76,8 +76,8 @@ function P() {
       e.current = undefined
     }
   }, [])
-  var h = new l.O()
-  var g = new l.O()
+  var h = new Module_62.O()
+  var g = new Module_62.O()
   !function (e, t) {
     var n = React.useRef()
     var i = React.useRef()
@@ -116,7 +116,7 @@ function P() {
       var /* [auto-meaningful-name] */n$current$rotation$x = n$current$rotation.x
       var /* [auto-meaningful-name] */n$current$rotation$y = n$current$rotation.y
       var /* [auto-meaningful-name] */n$current$rotation$z = n$current$rotation.z
-      e$current$phone.rotation.set(l.s.lerp(e$current$phone$rotation$x, n$current$rotation$x * l.s.DEG2RAD, p), l.s.lerp(e$current$phone$rotation$y, n$current$rotation$y * l.s.DEG2RAD, p), l.s.lerp(e$current$phone$rotation$z, n$current$rotation$z * l.s.DEG2RAD, p))
+      e$current$phone.rotation.set(Module_62.s.lerp(e$current$phone$rotation$x, n$current$rotation$x * Module_62.s.DEG2RAD, p), Module_62.s.lerp(e$current$phone$rotation$y, n$current$rotation$y * Module_62.s.DEG2RAD, p), Module_62.s.lerp(e$current$phone$rotation$z, n$current$rotation$z * Module_62.s.DEG2RAD, p))
       var /* [auto-meaningful-name] */e$current$phone$position = e$current$phone.position
       var /* [auto-meaningful-name] */e$current$phone$position$x = e$current$phone$position.x
       var /* [auto-meaningful-name] */e$current$phone$position$y = e$current$phone$position.y
@@ -125,7 +125,7 @@ function P() {
       var /* [auto-meaningful-name] */n$current$position$x = n$current$position.x
       var /* [auto-meaningful-name] */n$current$position$y = n$current$position.y
       var /* [auto-meaningful-name] */n$current$position$z = n$current$position.z
-      e$current$phone.position.set(l.s.lerp(e$current$phone$position$x, n$current$position$x, p), l.s.lerp(e$current$phone$position$y, n$current$position$y, p), l.s.lerp(e$current$phone$position$z, n$current$position$z, p))
+      e$current$phone.position.set(Module_62.s.lerp(e$current$phone$position$x, n$current$position$x, p), Module_62.s.lerp(e$current$phone$position$y, n$current$position$y, p), Module_62.s.lerp(e$current$phone$position$z, n$current$position$z, p))
       e$current$renderer.clear(true, true, true)
       e$current$renderer.render(e$current$scene, e$current$camera)
       t.current -= r

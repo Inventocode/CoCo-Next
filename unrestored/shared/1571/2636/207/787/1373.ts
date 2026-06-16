@@ -6,10 +6,10 @@
 
 "use strict"
 
-var r = require("./180")
-var i = require("./204")
-var o = require("./777/index")
-var a = require("./818/index")("eslint:traverser")
+var r = require(/* 180 */"./180")
+var i = require(/* 204 */"./204")
+var o = require(/* 777 */"./777/index")
+var a = require(/* 818 */"./818/index")("eslint:traverser")
 function s() {}
 var c = function () {
   function e() {

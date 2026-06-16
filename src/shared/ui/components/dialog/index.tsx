@@ -9,7 +9,7 @@ import { memo, useRef, useState, useCallback, useEffect, CSSProperties, ReactNod
 import React from "react"
 import ReactDom from "react-dom"
 import "./styles.css"
-import { IconFont } from "../iconfont"
+import { IconFont } from "../Iconfont"
 
 export const CoCoDialog = memo(({
   className,
@@ -67,12 +67,8 @@ export const CoCoDialog = memo(({
         event.stopPropagation()
       }
     }
-    if (element) {
-      element.addEventListener("keydown", listener)
-    }
-    return function () {
-      element?.removeEventListener("keydown", listener)
-    }
+    if (element) { element.addEventListener("keydown", listener) }
+    return () => { element?.removeEventListener("keydown", listener) }
   }, [])
 
   useEffect(() => {

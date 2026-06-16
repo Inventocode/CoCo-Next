@@ -6,14 +6,14 @@
 
 "use strict"
 
-var r = require("./1662/86")
-var /* [auto-meaningful-name] */require$_1717_1275$end = require("./1717/1275").end
+var r = require(/* 86 */"./1662/86")
+var /* [auto-meaningful-name] */require_1275_$_1717_1275$end = require(/* 1275 */"./1717/1275").end
 r({
   target: "String",
   proto: true,
-  forced: require("./1717/1276")
+  forced: require(/* 1276 */"./1717/1276")
 }, {
   padEnd: function (e) {
-    return require$_1717_1275$end(this, e, arguments.length > 1 ? arguments[1] : undefined)
+    return require_1275_$_1717_1275$end(this, e, arguments.length > 1 ? arguments[1] : undefined)
   }
 })

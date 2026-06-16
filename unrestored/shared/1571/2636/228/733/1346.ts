@@ -10,9 +10,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.delete_from_xml = exports.rename_procedures_in_xml = exports.load_from_xml = undefined
-var r = require("../../207/734/387")
-var i = require("../../1058/173")
-var o = require("../../1058/762")
+var r = require(/* 387 */"../../207/734/387")
+var i = require(/* 173 */"../../1058/173")
+var o = require(/* 762 */"../../1058/762")
 function a(e, t) {
   var n = function (e) {
     if ("block" === e.tagName.toLowerCase()) {

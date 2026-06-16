@@ -4,8 +4,8 @@
  * 模块 ID：961
  */
 
-var r = require("../1648/714")
-var o = require("../1723/958")
+var r = require(/* 714 */"../1648/714")
+var o = require(/* 958 */"../1723/958")
 module.exports = function (e, t) {
   var /* [auto-meaningful-name] */e$exec = e.exec
   if ("function" === typeof e$exec) {

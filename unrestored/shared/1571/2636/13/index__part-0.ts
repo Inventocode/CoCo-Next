@@ -6,13 +6,13 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
-import * as o from "classnames"
-import i from "classnames"
-import { createContext, memo, useContext, useCallback, useState, useEffect } from "react"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../10/index"
+import * as /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import /* [auto-meaningful-name] */Classnames1 from /* 8 */"classnames"
+import { createContext, memo, useContext, useCallback, useState, useEffect } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */React1 from "react"
-import "./839"
+import /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import /* 839 */"./839"
 var c = createContext(null)
 var /* [auto-meaningful-name] */c$Provider = c.Provider
 var u = c
@@ -31,7 +31,7 @@ var d = memo(function (e) {
   return React1.createElement("button", {
     disabled: e$disabled,
     onClick: l,
-    className: i("coco-radio-item", e$className, {
+    className: Classnames1("coco-radio-item", e$className, {
       selected: (null === c || undefined === c ? undefined : c.value) === e$value
     })
   }, e$children || e$value)
@@ -43,7 +43,7 @@ var p = memo(function (e) {
   var /* [auto-meaningful-name] */e$style = e.style
   var /* [auto-meaningful-name] */e$defaultValue = e.defaultValue
   var d = useState(e$defaultValue)
-  var p = $$_10_index.a(d, 2)
+  var p = Module_10.a(d, 2)
   var f = p[0]
   var h = p[1]
   useEffect(function () {
@@ -70,7 +70,7 @@ var p = memo(function (e) {
       onChange: g
     }
   }, React1.createElement("div", {
-    className: i("coco-radio", e.className, {
+    className: Classnames1("coco-radio", e.className, {
       "disabled-all": false
     }),
     style: e$style

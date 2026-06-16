@@ -6,7 +6,7 @@
 
 "use strict"
 
-var /* [auto-meaningful-name] */require$_1138$MissingRef = require("./1138").MissingRef
+var /* [auto-meaningful-name] */require_1138_$_1138$MissingRef = require(/* 1138 */"./1138").MissingRef
 module.exports = function e(t, n, i) {
   var o = this
   if ("function" != typeof this._opts.loadSchema) {
@@ -22,7 +22,7 @@ module.exports = function e(t, n, i) {
       try {
         return o._compile(t)
       } catch (a) {
-        if (a instanceof require$_1138$MissingRef) {
+        if (a instanceof require_1138_$_1138$MissingRef) {
           return i(a)
         }
         throw a

@@ -8,8 +8,8 @@
 
 import { W } from "./index__part-1"
 import { ge, ye, be, we, xe, Ce, Oe, ke, Se, Te, Be, De, Ie, Re, Fe, Ne, Me, Le, je, Ue, He, Ge, Qe, We, Ke, Xe, Ye, qe, $e, Je, et, tt, nt, rt } from "./index__part-2"
-import /* [auto-meaningful-name] */$_1338 from "./1338"
-import /* [auto-meaningful-name] */$_1337 from "./1337"
+import /* [auto-meaningful-name] */Module_1338 from /* 1338 */"./1338"
+import /* [auto-meaningful-name] */Module_1337 from /* 1337 */"./1337"
 var r = {}
 Object.defineProperty(r, "isMobile", {
   get: function () {
@@ -18,12 +18,12 @@ Object.defineProperty(r, "isMobile", {
 })
 Object.defineProperty(r, "EventEmitter", {
   get: function () {
-    return $_1337
+    return Module_1337
   }
 })
 Object.defineProperty(r, "earcut", {
   get: function () {
-    return $_1338
+    return Module_1338
   }
 })
 Object.defineProperty(r, "BaseTextureCache", {

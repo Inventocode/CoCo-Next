@@ -4,8 +4,8 @@
  * 模块 ID：444
  */
 
-var r = require("../1720/424")
-var o = require("../1282/310")
+var r = require(/* 424 */"../1720/424")
+var o = require(/* 310 */"../1282/310")
 var i = /"/g
 module.exports = function (e, t, n, a) {
   var s = o(r(e))

@@ -7,16 +7,16 @@
 "use strict"
 
 import { Ap, Ip } from "./index__part-39"
-import * as Sp from "./83"
-import * as /* [auto-meaningful-name] */$_314 from "./314"
-import * as Jd from "./33"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
-import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */$_546_index from "./546/index"
+import * as /* [auto-meaningful-name] */Module_83 from /* 83 */"./83"
+import * as /* [auto-meaningful-name] */Module_314 from /* 314 */"./314"
+import * as /* [auto-meaningful-name] */Module_33 from /* 33 */"./33"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../src/editor/widget/built-in/types"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_546 from /* 546 */"./546/index"
 var Np = function (e) {
   var /* [auto-meaningful-name] */e$onEdit = e.onEdit
   var /* [auto-meaningful-name] */e$onChange = e.onChange
-  return React.createElement($_546_index.a, Object.assign({}, e, {
+  return React.createElement(Module_546.a, Object.assign({}, e, {
     onClick: function (e) {
       if (e$onEdit && e) {
         e$onEdit(e, function (e) {
@@ -24,7 +24,7 @@ var Np = function (e) {
             e$onChange("text", e)
           }
         }, {
-          sizeAdaptive: $$_$$_$$_$$_src_editor_widget_builtIn_types.q.FIXED,
+          sizeAdaptive: Src_editor_widget_builtIn_types.q.FIXED,
           maxLength: 200,
           isMultipleRow: false
         })
@@ -32,22 +32,22 @@ var Np = function (e) {
     }
   }))
 }
-var /* [auto-meaningful-name] */Sp$b$CONTAINED_TEXT = Sp.b.CONTAINED_TEXT
-var /* [auto-meaningful-name] */Sp$c$MEDIUM = Sp.c.MEDIUM
-var xp = Jd.Q(Sp$c$MEDIUM, Sp$b$CONTAINED_TEXT)
+var /* [auto-meaningful-name] */Module_83$b$CONTAINED_TEXT = Module_83.b.CONTAINED_TEXT
+var /* [auto-meaningful-name] */Module_83$c$MEDIUM = Module_83.c.MEDIUM
+var xp = Module_33.Q(Module_83$c$MEDIUM, Module_83$b$CONTAINED_TEXT)
 var /* [auto-meaningful-name] */xp$minWidth = xp.minWidth
 var /* [auto-meaningful-name] */xp$height = xp.height
 var Lp = {
-  icon: $_314.d,
+  icon: Module_314.d,
   title: "",
   previewAreaWidgetTitle: "ButtonWidget.widgetName",
-  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.d,
+  type: Src_editor_widget_builtIn_types.d,
   editConfig: Ip,
   contentTextField: "text",
-  isInvisibleWidget: $_314.c,
+  isInvisibleWidget: Module_314.c,
   hasAnyWidget: true,
   widget: {
-    isGlobalWidget: $_314.b,
+    isGlobalWidget: Module_314.b,
     size: {
       width: xp$minWidth,
       height: xp$height
@@ -60,10 +60,10 @@ var Lp = {
     attributes: {
       disabled: false,
       iconId: "default",
-      sizeType: Sp$c$MEDIUM,
-      mode: Sp$b$CONTAINED_TEXT,
+      sizeType: Module_83$c$MEDIUM,
+      mode: Module_83$b$CONTAINED_TEXT,
       text: "%{COCO_defaultButtonWidgetContent}",
-      color: $_314.a
+      color: Module_314.a
     }
   },
   component: Np,

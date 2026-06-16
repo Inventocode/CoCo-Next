@@ -10,23 +10,23 @@ import { we } from "./index__part-6"
 import { Bm } from "./index__part-75"
 import { _C } from "./index__part-139"
 import { eP, nP } from "./index__part-209"
-import /* [auto-meaningful-name] */$_160 from "./160"
-import * as /* [auto-meaningful-name] */$_147 from "./147"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
-import * as Et from "./9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as O from "./7"
-import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import { useSelector, useDispatch } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { memo, useState, useRef, useEffect } from "react"
+import /* [auto-meaningful-name] */Module_160 from /* 160 */"./160"
+import * as /* [auto-meaningful-name] */Module_147 from /* 147 */"./147"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"./9"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"./7"
+import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import { useSelector, useDispatch } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo, useState, useRef, useEffect } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_1534 from "./1534"
-import /* [auto-meaningful-name] */$_15341 from "./1534"
+import * as /* [auto-meaningful-name] */Module_1534 from /* 1534 */"./1534"
+import /* [auto-meaningful-name] */Module_15341 from /* 1534 */"./1534"
 var iP = {
   total: 1e5,
   dev: 100,
@@ -39,58 +39,58 @@ var aP = memo(function () {
   })
   var n = useDispatch()
   var r = useState(true)
-  var o = $_10_index.a(r, 2)
+  var o = Module_10.a(r, 2)
   var i = o[0]
   var a = o[1]
   var s = useState(iP)
-  var c = $_10_index.a(s, 2)
+  var c = Module_10.a(s, 2)
   var l = c[0]
   var u = c[1]
   var d = useState([])
-  var p = $_10_index.a(d, 2)
+  var p = Module_10.a(d, 2)
   var m = p[0]
   var g = p[1]
   var v = useState()
-  var b = $_10_index.a(v, 2)
+  var b = Module_10.a(v, 2)
   var y = b[0]
   var w = b[1]
   var C = useState()
-  var T = $_10_index.a(C, 2)
+  var T = Module_10.a(C, 2)
   var A = T[0]
   var j = T[1]
   var R = useState()
-  var k = $_10_index.a(R, 2)
+  var k = Module_10.a(R, 2)
   var x = k[0]
   var D = k[1]
   var M = useState([])
-  var L = $_10_index.a(M, 2)
+  var L = Module_10.a(M, 2)
   var P = L[0]
   var B = L[1]
   var F = useState([])
-  var G = $_10_index.a(F, 2)
+  var G = Module_10.a(F, 2)
   var W = G[0]
   var U = G[1]
   var H = useState(0)
-  var V = $_10_index.a(H, 2)
+  var V = Module_10.a(H, 2)
   var K = V[0]
   var q = V[1]
   var X = useState(true)
-  var Q = $_10_index.a(X, 2)
+  var Q = Module_10.a(X, 2)
   var Z = Q[0]
   var J = Q[1]
   var $ = useState(true)
-  var ee = $_10_index.a($, 2)
+  var ee = Module_10.a($, 2)
   var te = ee[0]
   var ne = ee[1]
   var re = useState(true)
-  var oe = $_10_index.a(re, 2)
+  var oe = Module_10.a(re, 2)
   var ie = oe[0]
   var ae = oe[1]
   var se = useState(0)
-  var ce = $_10_index.a(se, 2)
+  var ce = Module_10.a(se, 2)
   var le = ce[0]
   var ue = ce[1]
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var pe = useRef("")
   var fe = useSelector(function (e) {
     var /* [auto-meaningful-name] */e$common$userInfo
@@ -100,15 +100,15 @@ var aP = memo(function () {
     return e.common.isProjectFinishedOpen
   })
   var me = function () {
-    n($$_$$_$$_$$_src_editor_redux_common_actions.jj(false))
+    n(Src_editor_redux_common_actions.jj(false))
   }
-  var ge = Et.Y().map(function (e) {
+  var ge = Module_9.Y().map(function (e) {
     return e.attributes.cloudDbId
   })
   useEffect(function () {
     if (t) {
       var /* [auto-meaningful-name] */pe$current = pe.current
-      $_147.h().then(function (t) {
+      Module_147.h().then(function (t) {
         if (t && 0 !== t.length) {
           J(false)
           var n = 0
@@ -155,11 +155,11 @@ var aP = memo(function () {
     if (y) {
       ne(true)
       Promise.all([
-        $_147.e(y, i ? "dev" : "prod"), $_147.f(y, i ? "dev" : "prod", 0, 500), new Promise(function (e) {
+        Module_147.e(y, i ? "dev" : "prod"), Module_147.f(y, i ? "dev" : "prod", 0, 500), new Promise(function (e) {
           setTimeout(e, 300)
         })
       ]).then(function (e) {
-        var t = $_10_index.a(e, 3)
+        var t = Module_10.a(e, 3)
         var n = t[0]
         var r = t[1]
         t[2]
@@ -193,14 +193,14 @@ var aP = memo(function () {
   }, [y, i, le])
   useEffect(function () {
     var e = function () {
-      var e = O.a(RegeneratorRuntime.mark(function e(t) {
+      var e = Module_7.a(RegeneratorRuntime.mark(function e(t) {
         return RegeneratorRuntime.wrap(function (e) {
           for (;;) {
             switch (e.prev = e.next) {
               case 0:
                 try {
                   if (fe && he) {
-                    n($$_$$_$$_$$_src_editor_redux_common_actions.Cf(true))
+                    n(Src_editor_redux_common_actions.Cf(true))
                   }
                 } catch (t) {
                   console.error(t)
@@ -230,8 +230,8 @@ var aP = memo(function () {
     pe.current = e
   }
   var be = function (e) {
-    $_147.e(e, "dev").then(function (t) {
-      n($$_$$_$$_$$_src_editor_redux_common_actions.hg("", $$_$$_$$_$$_src_editor_widget_builtIn_types.h, {
+    Module_147.e(e, "dev").then(function (t) {
+      n(Src_editor_redux_common_actions.hg("", Src_editor_widget_builtIn_types.h, {
         x: 0,
         y: 0
       }, {
@@ -245,11 +245,11 @@ var aP = memo(function () {
   }
   var ye = function (e, t) {
     if (ge.includes(e)) {
-      n($$_$$_$$_$$_src_editor_redux_common_actions.zh({
-        title: $_710$a$formatMessage({
+      n(Src_editor_redux_common_actions.zh({
+        title: Module_710$a$formatMessage({
           id: "cloudDBManager.deleteTitle"
         }),
-        content: $_710$a$formatMessage({
+        content: Module_710$a$formatMessage({
           id: "cloudDBManager.deleteImportContent"
         }),
         cancelBtnVisible: false,
@@ -257,14 +257,14 @@ var aP = memo(function () {
       }))
     } else {
       var r = function () {
-        O.a(RegeneratorRuntime.mark(function t() {
+        Module_7.a(RegeneratorRuntime.mark(function t() {
           return RegeneratorRuntime.wrap(function (t) {
             for (;;) {
               switch (t.prev = t.next) {
                 case 0:
                   t.prev = 0
                   t.next = 3
-                  return $_147.c(e)
+                  return Module_147.c(e)
                 case 3:
                   q(K + 1)
                   t.next = 9
@@ -282,15 +282,15 @@ var aP = memo(function () {
         }))()
       }
       if (t.length > 0) {
-        n($$_$$_$$_$$_src_editor_redux_common_actions.zh({
+        n(Src_editor_redux_common_actions.zh({
           onConfirm: function () {
             r()
           },
           isDangerous: true,
-          title: $_710$a$formatMessage({
+          title: Module_710$a$formatMessage({
             id: "cloudDBManager.deleteTitle"
           }),
-          content: $_710$a$formatMessage({
+          content: Module_710$a$formatMessage({
             id: "cloudDBManager.deleteContent"
           })
         }))
@@ -304,22 +304,22 @@ var aP = memo(function () {
       ue(performance.now())
     }
     var r = function () {
-      n($$_$$_$$_$$_src_editor_redux_common_actions.ij(A || "", true, e, !i, t))
+      n(Src_editor_redux_common_actions.ij(A || "", true, e, !i, t))
     }
     if (i) {
       r()
     } else {
-      n($$_$$_$$_$$_src_editor_redux_common_actions.zh({
+      n(Src_editor_redux_common_actions.zh({
         onConfirm: function () {
           r()
         },
-        title: $_710$a$formatMessage({
+        title: Module_710$a$formatMessage({
           id: "cloudDBManager.editTitle"
         }),
-        content: $_710$a$formatMessage({
+        content: Module_710$a$formatMessage({
           id: "cloudDBManager.editNotice"
         }),
-        allowText: $_710$a$formatMessage({
+        allowText: Module_710$a$formatMessage({
           id: "cloudDBManager.editBtn"
         })
       }))
@@ -333,14 +333,14 @@ var aP = memo(function () {
     url: null === (e = Bm[0]) || undefined === e ? undefined : e.url,
     label: "云数据表"
   }
-  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.f, {
+  return React.createElement(Src_shared_ui_components_index.f, {
     visible: t,
-    className: $_160.cloudDBManager,
+    className: Module_160.cloudDBManager,
     title: React.createElement("div", {
-      className: $_160.managerTitle
+      className: Module_160.managerTitle
     }, React.createElement("div", {
-      className: $_160.titleText
-    }, $_710$a$formatMessage({
+      className: Module_160.titleText
+    }, Module_710$a$formatMessage({
       id: "cloudDBManager.title"
     })), React.createElement(_C, {
       onChange: function () {
@@ -355,55 +355,55 @@ var aP = memo(function () {
     })),
     onClose: me
   }, React.createElement("div", {
-    className: $_160.container
+    className: Module_160.container
   }, Z ? React.createElement("div", {
-    className: $_160.emptyContainer
+    className: Module_160.emptyContainer
   }, React.createElement(we, {
-    text: $_710$a$formatMessage({
+    text: Module_710$a$formatMessage({
       id: "cloudDBManager.noCloudDB"
     })
   })) : React.createElement(React.Fragment, null, React.createElement("div", {
-    className: $_160.left
+    className: Module_160.left
   }, React.createElement("div", {
-    className: $_160.capacity
+    className: Module_160.capacity
   }, React.createElement("div", {
-    className: $_160.header
+    className: Module_160.header
   }, React.createElement("span", {
-    className: $_160.text1
-  }, $_710$a$formatMessage({
+    className: Module_160.text1
+  }, Module_710$a$formatMessage({
     id: "cloudDBManager.capacity"
   })), React.createElement("span", {
-    className: $_160.text2
+    className: Module_160.text2
   }, "".concat(l.dev + l.prod, "/").concat(l.total))), React.createElement("div", {
-    className: $_160.data
+    className: Module_160.data
   }, l.dev > 0 && React.createElement("div", {
-    className: $_160.dataDev,
+    className: Module_160.dataDev,
     style: {
       width: "".concat(_e(l.dev, l.total), "%")
     }
   }), l.prod > 0 && React.createElement("div", {
-    className: $_160.dataProd,
+    className: Module_160.dataProd,
     style: {
       width: "".concat(_e(l.prod, l.total), "%")
     }
   })), React.createElement("div", {
-    className: $_160.description
+    className: Module_160.description
   }, React.createElement("div", {
-    className: Classnames($_160.point, $_160.dev)
+    className: Classnames(Module_160.point, Module_160.dev)
   }), React.createElement("span", {
-    className: $_160.text
-  }, $_710$a$formatMessage({
+    className: Module_160.text
+  }, Module_710$a$formatMessage({
     id: "cloudDBManager.testData"
   })), React.createElement("div", {
-    className: Classnames($_160.point, $_160.prod)
+    className: Classnames(Module_160.point, Module_160.prod)
   }), React.createElement("span", {
-    className: $_160.text
-  }, $_710$a$formatMessage({
+    className: Module_160.text
+  }, Module_710$a$formatMessage({
     id: "cloudDBManager.prodData"
   }))), React.createElement("div", {
-    className: $_160.line
+    className: Module_160.line
   })), React.createElement("div", {
-    className: $_160.DBData
+    className: Module_160.DBData
   }, m.map(function (e) {
     return React.createElement(eP, {
       key: e.id,
@@ -417,33 +417,33 @@ var aP = memo(function () {
       handleDelete: ye
     })
   }))), React.createElement("div", {
-    className: $_160.right
+    className: Module_160.right
   }, React.createElement("div", {
-    className: $_160.tabs
+    className: Module_160.tabs
   }, React.createElement("div", {
     onClick: function () {
       return Oe(true)
     },
-    className: Classnames($_160.tab, i && $_160.selected_dev)
-  }, $_710$a$formatMessage({
+    className: Classnames(Module_160.tab, i && Module_160.selected_dev)
+  }, Module_710$a$formatMessage({
     id: "cloudDBManager.testData"
   })), React.createElement("div", {
     onClick: function () {
       return Oe(false)
     },
-    className: Classnames($_160.tab, !i && $_160.selected_prod)
-  }, $_710$a$formatMessage({
+    className: Classnames(Module_160.tab, !i && Module_160.selected_prod)
+  }, Module_710$a$formatMessage({
     id: "cloudDBManager.prodData"
   }))), React.createElement("div", {
-    className: $_160.gridArea
+    className: Module_160.gridArea
   }, te ? React.createElement("div", {
-    className: Classnames($_160.container, $_160.loading)
+    className: Classnames(Module_160.container, Module_160.loading)
   }, React.createElement("img", {
-    src: $_15341,
+    src: Module_15341,
     alt: "loading"
   }), React.createElement("span", {
-    className: $_160.text
-  }, $_710$a$formatMessage({
+    className: Module_160.text
+  }, Module_710$a$formatMessage({
     id: "cloudDBWidget.loading"
   }))) : React.createElement(nP, {
     id: y || "",

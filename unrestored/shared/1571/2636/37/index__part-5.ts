@@ -6,23 +6,23 @@
 
 "use strict"
 
-import { F } from "./index__part-0"
+import { F } from "../../../../../src/editor/redux/common/reducer"
 import { Ce, Ie } from "./index__part-1"
 import { Pe } from "./index__part-2"
 import { We, et } from "./index__part-3"
 import { rt } from "./index__part-4"
-import * as /* [auto-meaningful-name] */$$_738_66 from "../738/66"
-import * as /* [auto-meaningful-name] */Redux from "redux"
-import * as /* [auto-meaningful-name] */$$_162 from "../162"
-var it = $$_738_66.a.Record({
+import * as /* [auto-meaningful-name] */Module_66 from /* 66 */"../738/66"
+import * as /* [auto-meaningful-name] */Redux from /* 156 */"redux"
+import * as /* [auto-meaningful-name] */Module_162 from /* 162 */"../162"
+var it = Module_66.a.Record({
   cloudDictList: [],
   cloudTableList: [],
-  initialRefDictIds: $$_738_66.a.Set(),
-  initialRefTableIds: $$_738_66.a.Set(),
+  initialRefDictIds: Module_66.a.Set(),
+  initialRefTableIds: Module_66.a.Set(),
   checkedTimeStamp: new Date().getTime(),
-  cloudDictKeysList: $$_738_66.a.List([]),
-  cloudTableColumnList: $$_738_66.a.List([]),
-  cloudTableDataList: $$_738_66.a.List([])
+  cloudDictKeysList: Module_66.a.List([]),
+  cloudTableColumnList: Module_66.a.List([]),
+  cloudTableDataList: Module_66.a.List([])
 })()
 function at(e, t) {
   return e.setIn(["cloudDictList"], t.payload)
@@ -35,11 +35,11 @@ function ct(e, t) {
   return e.setIn(["cloudTableList"], t.payload)
 }
 function lt(e, t) {
-  var n = $$_738_66.a.Set(t.payload)
+  var n = Module_66.a.Set(t.payload)
   return e.setIn(["initialRefDictIds"], n)
 }
 function ut(e, t) {
-  var n = $$_738_66.a.Set(t.payload)
+  var n = Module_66.a.Set(t.payload)
   return e.setIn(["initialRefTableIds"], n)
 }
 function dt(e, t) {
@@ -127,35 +127,35 @@ var Et = function () {
   var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : it
   var t = arguments.length > 1 ? arguments[1] : undefined
   switch (t.type) {
-    case $$_162.s:
+    case Module_162.s:
       return at(e, t)
-    case $$_162.t:
+    case Module_162.t:
       return ct(e, t)
-    case $$_162.m:
+    case Module_162.m:
       return st(e)
-    case $$_162.x:
+    case Module_162.x:
       return lt(e, t)
-    case $$_162.y:
+    case Module_162.y:
       return ut(e, t)
-    case $$_162.a:
+    case Module_162.a:
       return dt(e, t)
-    case $$_162.b:
+    case Module_162.b:
       return ft(e, t)
-    case $$_162.o:
+    case Module_162.o:
       return pt(e, t)
-    case $$_162.p:
+    case Module_162.p:
       return ht(e, t)
-    case $$_162.q:
+    case Module_162.q:
       return bt(e, t)
-    case $$_162.r:
+    case Module_162.r:
       return mt(e, t)
-    case $$_162.w:
+    case Module_162.w:
       return gt(e, t)
-    case $$_162.u:
+    case Module_162.u:
       return _t(e, t)
-    case $$_162.n:
+    case Module_162.n:
       return vt(e, t)
-    case $$_162.v:
+    case Module_162.v:
       return yt(e, t)
     default:
       return e

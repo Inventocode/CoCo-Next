@@ -4,4 +4,4 @@
  * 模块 ID：216
  */
 
-module.exports = require("../1580/1074")
+module.exports = require(/* 1074 */"../1580/1074")

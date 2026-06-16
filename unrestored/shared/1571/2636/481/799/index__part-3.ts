@@ -8,23 +8,23 @@
 
 import { f } from "./index__part-1"
 import { E } from "./index__part-2"
-import * as /* [auto-meaningful-name] */$_220 from "./220"
-import * as /* [auto-meaningful-name] */$_352 from "./352"
-import * as /* [auto-meaningful-name] */$_775_index from "./775/index"
-import * as /* [auto-meaningful-name] */$_729_index from "./729/index"
-import * as /* [auto-meaningful-name] */$_365 from "./365"
-import * as /* [auto-meaningful-name] */$_264 from "./264"
-import * as i from "./38"
-import * as /* [auto-meaningful-name] */$_745 from "./745"
-import * as /* [auto-meaningful-name] */$_1549 from "./1549"
-import * as /* [auto-meaningful-name] */$_317 from "./317"
+import * as /* [auto-meaningful-name] */Module_220 from /* 220 */"./220"
+import * as /* [auto-meaningful-name] */Module_352 from /* 352 */"./352"
+import * as /* [auto-meaningful-name] */Module_775 from /* 775 */"./775/index"
+import * as /* [auto-meaningful-name] */Module_729 from /* 729 */"./729/index"
+import * as /* [auto-meaningful-name] */Module_365 from /* 365 */"./365"
+import * as /* [auto-meaningful-name] */Module_264 from /* 264 */"./264"
+import * as /* [auto-meaningful-name] */Module_38 from /* 38 */"./38"
+import * as /* [auto-meaningful-name] */Module_745 from /* 745 */"./745"
+import * as /* [auto-meaningful-name] */Module_1549 from /* 1549 */"./1549"
+import * as /* [auto-meaningful-name] */Module_317 from /* 317 */"./317"
 var B = {
   traceFetch: true,
   traceXHR: true,
   tracingOrigins: ["localhost", /^\//]
 }
 function D(e) {
-  var t = i.a(i.a({}, B), e)
+  var t = Module_38.a(Module_38.a({}, B), e)
   var /* [auto-meaningful-name] */t$traceFetch = t.traceFetch
   var /* [auto-meaningful-name] */t$traceXHR = t.traceXHR
   var /* [auto-meaningful-name] */t$tracingOrigins = t.tracingOrigins
@@ -36,8 +36,8 @@ function D(e) {
     }
     var t = t$tracingOrigins
     s[e] = t.some(function (t) {
-      return $_745.a(e, t)
-    }) && !$_745.a(e, "sentry_key")
+      return Module_745.a(e, t)
+    }) && !Module_745.a(e, "sentry_key")
     return s[e]
   }
   var f = c
@@ -48,19 +48,19 @@ function D(e) {
   }
   var d = {}
   if (t$traceFetch) {
-    $_1549.a({
+    Module_1549.a({
       callback: function (e) {
         !function (e, t, n) {
-          if (!$_220.c() || !e.fetchData || !t(e.fetchData.url)) {
+          if (!Module_220.c() || !e.fetchData || !t(e.fetchData.url)) {
             return
           }
           if (e.endTimestamp && e.fetchData.__span) {
-            return void ((o = n[e.fetchData.__span]) && (e.response ? o.setHttpStatus(e.response.status) : e.error && o.setStatus($_352.a.InternalError), o.finish(), delete n[e.fetchData.__span]))
+            return void ((o = n[e.fetchData.__span]) && (e.response ? o.setHttpStatus(e.response.status) : e.error && o.setStatus(Module_352.a.InternalError), o.finish(), delete n[e.fetchData.__span]))
           }
-          var r = $_220.b()
+          var r = Module_220.b()
           if (r) {
             var o = r.startChild({
-              data: i.a(i.a({}, e.fetchData), {
+              data: Module_38.a(Module_38.a({}, e.fetchData), {
                 type: "fetch"
               }),
               description: e.fetchData.method + " " + e.fetchData.url,
@@ -71,14 +71,14 @@ function D(e) {
             var a = e.args[0] = e.args[0]
             var s = e.args[1] = e.args[1] || {}
             var /* [auto-meaningful-name] */s$headers = s.headers
-            if ($_317.d(a, Request)) {
+            if (Module_317.d(a, Request)) {
               s$headers = a.headers
             }
             if (s$headers) {
               if ("function" === typeof s$headers.append) {
                 s$headers.append("sentry-trace", o.toTraceparent())
               } else {
-                s$headers = Array.isArray(s$headers) ? i.f(s$headers, [["sentry-trace", o.toTraceparent()]]) : i.a(i.a({}, s$headers), {
+                s$headers = Array.isArray(s$headers) ? Module_38.f(s$headers, [["sentry-trace", o.toTraceparent()]]) : Module_38.a(Module_38.a({}, s$headers), {
                   "sentry-trace": o.toTraceparent()
                 })
               }
@@ -95,22 +95,22 @@ function D(e) {
     })
   }
   if (t$traceXHR) {
-    $_1549.a({
+    Module_1549.a({
       callback: function (e) {
         !function (e, t, n) {
           var /* [auto-meaningful-name] */e$xhr
           var /* [auto-meaningful-name] */e$xhr1
-          if (!$_220.c() || (null === (e$xhr = e.xhr) || undefined === e$xhr ? undefined : e$xhr.__sentry_own_request__) || !(null === (e$xhr1 = e.xhr) || undefined === e$xhr1 ? undefined : e$xhr1.__sentry_xhr__) || !t(e.xhr.__sentry_xhr__.url)) {
+          if (!Module_220.c() || (null === (e$xhr = e.xhr) || undefined === e$xhr ? undefined : e$xhr.__sentry_own_request__) || !(null === (e$xhr1 = e.xhr) || undefined === e$xhr1 ? undefined : e$xhr1.__sentry_xhr__) || !t(e.xhr.__sentry_xhr__.url)) {
             return
           }
           var /* [auto-meaningful-name] */e$xhr$__sentry_xhr__ = e.xhr.__sentry_xhr__
           if (e.endTimestamp && e.xhr.__sentry_xhr_span_id__) {
             return void ((c = n[e.xhr.__sentry_xhr_span_id__]) && (c.setHttpStatus(e$xhr$__sentry_xhr__.status_code), c.finish(), delete n[e.xhr.__sentry_xhr_span_id__]))
           }
-          var s = $_220.b()
+          var s = Module_220.b()
           if (s) {
             var c = s.startChild({
-              data: i.a(i.a({}, e$xhr$__sentry_xhr__.data), {
+              data: Module_38.a(Module_38.a({}, e$xhr$__sentry_xhr__.data), {
                 type: "xhr",
                 method: e$xhr$__sentry_xhr__.method,
                 url: e$xhr$__sentry_xhr__.url
@@ -132,9 +132,9 @@ function D(e) {
     })
   }
 }
-var I = $_365.b()
-var R = i.a({
-  idleTimeout: $_775_index.a,
+var I = Module_365.b()
+var R = Module_38.a({
+  idleTimeout: Module_775.a,
   markBackgroundTransactions: true,
   maxTransactionDuration: 600,
   routingInstrumentation: function (e, t, n) {
@@ -154,7 +154,7 @@ var R = i.a({
         })
       }
       if (n) {
-        $_1549.a({
+        Module_1549.a({
           callback: function (t) {
             var n = t.to
             var /* [auto-meaningful-name] */t$from = t.from
@@ -164,7 +164,7 @@ var R = i.a({
               if (t$from !== n) {
                 I$location$href = undefined
                 if (r) {
-                  $_264.a.log("[Tracing] Finishing current transaction with op: " + r.op)
+                  Module_264.a.log("[Tracing] Finishing current transaction with op: " + r.op)
                   r.finish()
                 }
                 r = e({
@@ -178,7 +178,7 @@ var R = i.a({
         })
       }
     } else {
-      $_264.a.warn("Could not initialize routing instrumentation due to invalid location")
+      Module_264.a.warn("Could not initialize routing instrumentation due to invalid location")
     }
   },
   startTransactionOnLocationChange: true,
@@ -195,7 +195,7 @@ var F = function () {
     } else {
       this._emitOptionsWarning = true
     }
-    this.options = i.a(i.a(i.a({}, R), t), {
+    this.options = Module_38.a(Module_38.a(Module_38.a({}, R), t), {
       tracingOrigins: B$tracingOrigins
     })
   }
@@ -203,8 +203,8 @@ var F = function () {
     var n = this
     this._getCurrentHub = t
     if (this._emitOptionsWarning) {
-      $_264.a.warn("[Tracing] You need to define `tracingOrigins` in the options. Set an array of urls or patterns to trace.")
-      $_264.a.warn("[Tracing] We added a reasonable default for you: " + B.tracingOrigins)
+      Module_264.a.warn("[Tracing] You need to define `tracingOrigins` in the options. Set an array of urls or patterns to trace.")
+      Module_264.a.warn("[Tracing] We added a reasonable default for you: " + B.tracingOrigins)
     }
     var /* [auto-meaningful-name] */this$options = this.options
     var /* [auto-meaningful-name] */this$options$routingInstrumentation = this$options.routingInstrumentation
@@ -221,18 +221,18 @@ var F = function () {
     if (this$options$markBackgroundTransactions) {
       if (f && f.document) {
         f.document.addEventListener("visibilitychange", function () {
-          var e = $_220.b()
+          var e = Module_220.b()
           if (f.document.hidden && e) {
-            $_264.a.log("[Tracing] Transaction: " + $_352.a.Cancelled + " -> since tab moved to the background, op: " + e.op)
+            Module_264.a.log("[Tracing] Transaction: " + Module_352.a.Cancelled + " -> since tab moved to the background, op: " + e.op)
             if (!e.status) {
-              e.setStatus($_352.a.Cancelled)
+              e.setStatus(Module_352.a.Cancelled)
             }
             e.setTag("visibilitychange", "document.hidden")
             e.finish()
           }
         })
       } else {
-        $_264.a.warn("[Tracing] Could not set up background tab detection due to lack of global document")
+        Module_264.a.warn("[Tracing] Could not set up background tab detection due to lack of global document")
       }
     }
     D({
@@ -255,39 +255,39 @@ var F = function () {
           return t ? t.getAttribute("content") : null
         }("sentry-trace")
         if (e) {
-          return $_220.a(e)
+          return Module_220.a(e)
         }
         return
       }() : undefined
-      var h = i.a(i.a(i.a({}, e), d), {
+      var h = Module_38.a(Module_38.a(Module_38.a({}, e), d), {
         trimEnd: true
       })
       var p = "function" === typeof this$options$beforeNavigate ? this$options$beforeNavigate(h) : h
-      var _ = undefined === p ? i.a(i.a({}, h), {
+      var _ = undefined === p ? Module_38.a(Module_38.a({}, h), {
         sampled: false
       }) : p
       if (false === _.sampled) {
-        $_264.a.log("[Tracing] Will not send " + _.op + " transaction because of beforeNavigate.")
+        Module_264.a.log("[Tracing] Will not send " + _.op + " transaction because of beforeNavigate.")
       }
-      $_264.a.log("[Tracing] Starting " + _.op + " transaction on scope")
+      Module_264.a.log("[Tracing] Starting " + _.op + " transaction on scope")
       var A = this._getCurrentHub()
-      var /* [auto-meaningful-name] */$_365$b$location = $_365.b().location
-      var v = $_729_index.b(A, _, this$options$idleTimeout, true, {
-        location: $_365$b$location
+      var /* [auto-meaningful-name] */Module_365$b$location = Module_365.b().location
+      var v = Module_729.b(A, _, this$options$idleTimeout, true, {
+        location: Module_365$b$location
       })
       v.registerBeforeFinishCallback(function (e, n) {
         t._metrics.addPerformanceEntries(e);
         (function (e, t, n) {
           var r = n - t.startTimestamp
           if (n && (r > e || r < 0)) {
-            t.setStatus($_352.a.DeadlineExceeded)
+            t.setStatus(Module_352.a.DeadlineExceeded)
             t.setTag("maxTransactionDurationExceeded", "true")
           }
-        })($_220.e(this$options$maxTransactionDuration), e, n)
+        })(Module_220.e(this$options$maxTransactionDuration), e, n)
       })
       return v
     }
-    $_264.a.warn("[Tracing] Did not create " + e.op + " transaction because _getCurrentHub is invalid.")
+    Module_264.a.warn("[Tracing] Did not create " + e.op + " transaction because _getCurrentHub is invalid.")
   }
   e.id = "BrowserTracing"
   return e
@@ -314,14 +314,14 @@ var P = function () {
               for (var e = [], r = 0; r < arguments.length; r++) {
                 e[r] = arguments[r]
               }
-              return n.call.apply(n, i.f([this], M(e, t)))
+              return n.call.apply(n, Module_38.f([this], M(e, t)))
             }
             return e
           }(e, t)
         })
       })(this._router, this._methods)
     } else {
-      $_264.a.error("ExpressIntegration is missing an Express instance")
+      Module_264.a.error("ExpressIntegration is missing an Express instance")
     }
   }
   e.id = "Express"
@@ -358,7 +358,7 @@ function N(e, t) {
           if (!(null === (e = s) || undefined === e)) {
             e.finish()
           }
-          o.call.apply(o, i.f([this], t))
+          o.call.apply(o, Module_38.f([this], t))
         })
       }
     case 4:
@@ -375,7 +375,7 @@ function N(e, t) {
           if (!(null === (e = c) || undefined === e)) {
             e.finish()
           }
-          a.call.apply(a, i.f([this], t))
+          a.call.apply(a, Module_38.f([this], t))
         })
       }
     default:

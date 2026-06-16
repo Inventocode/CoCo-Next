@@ -8,18 +8,18 @@
 
 import { g } from "./index__part-0"
 var A
-import * as /* [auto-meaningful-name] */$$_801_index from "../801/index"
-import * as /* [auto-meaningful-name] */$$_801_694_index from "../801/694/index"
-import * as /* [auto-meaningful-name] */$$_616_802 from "../616/802"
-import * as /* [auto-meaningful-name] */$$_616_index from "../616/index"
-import * as /* [auto-meaningful-name] */$_615 from "./615"
-import * as /* [auto-meaningful-name] */$$_803 from "../803"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_1542 from "./1542"
-import { useContext, createElement, Fragment } from "react"
-import * as /* [auto-meaningful-name] */$$_19 from "../19"
-import * as /* [auto-meaningful-name] */$$_35 from "../35"
-import * as /* [auto-meaningful-name] */$$_435 from "../435"
+import * as /* [auto-meaningful-name] */Module_801 from /* 801 */"../801/index"
+import * as /* [auto-meaningful-name] */Module_694 from /* 694 */"../801/694/index"
+import * as /* [auto-meaningful-name] */Module_802 from /* 802 */"../616/802"
+import * as /* [auto-meaningful-name] */Module_616 from /* 616 */"../616/index"
+import * as /* [auto-meaningful-name] */Module_615 from /* 615 */"./615"
+import * as /* [auto-meaningful-name] */Module_803 from /* 803 */"../803"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_1542 from /* 1542 */"./1542"
+import { useContext, createElement, Fragment } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"../19"
+import * as /* [auto-meaningful-name] */Module_35 from /* 35 */"../35"
+import * as /* [auto-meaningful-name] */Module_435 from /* 435 */"../435"
 var m = function (e, t) {
   var n = {}
   for (var r in e) if (Object.prototype.hasOwnProperty.call(e, r) && t.indexOf(r) < 0) {
@@ -48,7 +48,7 @@ if (g()) {
 }
 var y = function (e) {
   var t
-  var n = useContext($$_801_index.b)
+  var n = useContext(Module_801.b)
   var /* [auto-meaningful-name] */n$getPopupContainer = n.getPopupContainer
   var /* [auto-meaningful-name] */n$getPrefixCls = n.getPrefixCls
   var /* [auto-meaningful-name] */n$direction = n.direction
@@ -69,9 +69,9 @@ var y = function (e) {
     var /* [auto-meaningful-name] */e$okType = e.okType
     var /* [auto-meaningful-name] */e$cancelText = e.cancelText
     var /* [auto-meaningful-name] */e$confirmLoading = e.confirmLoading
-    return createElement(Fragment, null, createElement($$_616_index.a, $$_19.a({
+    return createElement(Fragment, null, createElement(Module_616.a, Module_19.a({
       onClick: y
-    }, e.cancelButtonProps), e$cancelText || t.cancelText), createElement($$_616_index.a, $$_19.a({}, $$_616_802.a(e$okType), {
+    }, e.cancelButtonProps), e$cancelText || t.cancelText), createElement(Module_616.a, Module_19.a({}, Module_802.a(e$okType), {
       loading: e$confirmLoading,
       onClick: b
     }, e.okButtonProps), e$okText || t.okText))
@@ -88,17 +88,17 @@ var y = function (e) {
   var I = m(e, ["prefixCls", "footer", "visible", "wrapClassName", "centered", "getContainer", "closeIcon", "focusTriggerAfterClose"])
   var R = n$getPrefixCls("modal", e$prefixCls)
   var F = n$getPrefixCls()
-  var P = createElement($$_801_694_index.a, {
+  var P = createElement(Module_694.a, {
     componentName: "Modal",
-    defaultLocale: $_615.b()
+    defaultLocale: Module_615.b()
   }, w)
   var N = createElement("span", {
     className: "".concat(R, "-close-x")
-  }, e$closeIcon || createElement($$_803.a, {
+  }, e$closeIcon || createElement(Module_803.a, {
     className: "".concat(R, "-close-icon")
   }))
-  var M = Classnames(e$wrapClassName, (t = {}, $$_35.a(t, "".concat(R, "-centered"), !!e$centered), $$_35.a(t, "".concat(R, "-wrap-rtl"), "rtl" === n$direction), t))
-  return createElement($_1542.a, $$_19.a({}, I, {
+  var M = Classnames(e$wrapClassName, (t = {}, Module_35.a(t, "".concat(R, "-centered"), !!e$centered), Module_35.a(t, "".concat(R, "-wrap-rtl"), "rtl" === n$direction), t))
+  return createElement(Module_1542.a, Module_19.a({}, I, {
     getContainer: undefined === e$getContainer ? n$getPopupContainer : e$getContainer,
     prefixCls: R,
     wrapClassName: M,
@@ -108,8 +108,8 @@ var y = function (e) {
     onClose: y,
     closeIcon: N,
     focusTriggerAfterClose: D,
-    transitionName: $$_435.b(F, "zoom", e.transitionName),
-    maskTransitionName: $$_435.b(F, "fade", e.maskTransitionName)
+    transitionName: Module_435.b(F, "zoom", e.transitionName),
+    maskTransitionName: Module_435.b(F, "fade", e.maskTransitionName)
   }))
 }
 y.defaultProps = {

@@ -7,7 +7,7 @@
 "use strict"
 
 export { o as a }
-import * as r from "./11"
+import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"./11"
 function i(e, t) {
   var n = Object.keys(e)
   if (Object.getOwnPropertySymbols) {
@@ -26,7 +26,7 @@ function o(e) {
     var n = null != arguments[t] ? arguments[t] : {}
     if (t % 2) {
       i(Object(n), true).forEach(function (t) {
-        r.a(e, t, n[t])
+        Module_11.a(e, t, n[t])
       })
     } else {
       if (Object.getOwnPropertyDescriptors) {

@@ -11,38 +11,38 @@ export { _ as c }
 export { v as b }
 export { E as a }
 export { O as e }
-import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
-import * as i from "../7"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index from "../../../../../src/shared/packages/@crc/blink/src/index"
-import * as /* [auto-meaningful-name] */$_733_index from "./733/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_procedure_blocks from "../../../../../src/shared/packages/@crc/blink/src/procedure/blocks"
-import * as /* [auto-meaningful-name] */$$_37_index from "../37/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_tools_index from "../../../../../src/shared/tools/index"
-import * as p from "../9"
-import * as /* [auto-meaningful-name] */$$_141_index from "../141/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_block_toolbox from "../../../../../src/editor/block/toolbox"
-import * as /* [auto-meaningful-name] */$$_26_index from "../26/index"
+import * as /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import /* [auto-meaningful-name] */RegeneratorRuntime1 from /* 1 */"regenerator-runtime"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../7"
+import * as /* [auto-meaningful-name] */Src_shared_packages_Crc_blink_src_index from /* 17 */"../../../../../src/shared/packages/@crc/blink/src/index"
+import * as /* [auto-meaningful-name] */Module_733 from /* 733 */"./733/index"
+import * as /* [auto-meaningful-name] */Src_shared_packages_Crc_blink_src_procedure_blocks from /* 732 */"../../../../../src/shared/packages/@crc/blink/src/procedure/blocks"
+import * as /* [auto-meaningful-name] */Module_37 from /* 37 */"../37/index"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"../9"
+import * as /* [auto-meaningful-name] */Module_141 from /* 141 */"../141/index"
+import * as /* [auto-meaningful-name] */Src_editor_block_toolbox from /* 261 */"../../../../../src/editor/block/toolbox"
+import * as /* [auto-meaningful-name] */Module_26 from /* 26 */"../26/index"
 function g() {
-  Object.keys($$_26_index.h()).forEach(function (e) {
+  Object.keys(Module_26.h()).forEach(function (e) {
     _(e)
   })
 }
 function _(e) {
-  $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.register_toolbox_category_callback(e, function () {
-    var t = $$_26_index.g.getToolbox()
+  Src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.register_toolbox_category_callback(e, function () {
+    var t = Module_26.g.getToolbox()
     var n = E()
     return t && n ? b(e, n, false) : []
   })
-  $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.register_toolbox_category_callback("ANY_" + e, function () {
-    return $$_26_index.g.getToolbox() ? b(e, "", true) : []
+  Src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.register_toolbox_category_callback("ANY_" + e, function () {
+    return Module_26.g.getToolbox() ? b(e, "", true) : []
   })
 }
 function v(e) {
-  var /* [auto-meaningful-name] */$$_37_index$d$dispatch = $$_37_index.d.dispatch
-  $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_procedure_blocks.register_procedure_blocks($$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink, e, function () {
-    var n = i.a(RegeneratorRuntime1.mark(function n(r) {
+  var /* [auto-meaningful-name] */Module_37$d$dispatch = Module_37.d.dispatch
+  Src_shared_packages_Crc_blink_src_procedure_blocks.register_procedure_blocks(Src_shared_packages_Crc_blink_src_index.Blink, e, function () {
+    var n = Module_7.a(RegeneratorRuntime1.mark(function n(r) {
       var i
       var a
       var /* [auto-meaningful-name] */a$name
@@ -58,7 +58,7 @@ function v(e) {
             case 4:
               a$name = a.name
               return n.abrupt("return", new Promise(function (e) {
-                $$_37_index$d$dispatch($$_$$_$$_$$_$$_src_editor_redux_common_actions.lj({
+                Module_37$d$dispatch(Src_editor_redux_common_actions.lj({
                   title: "procedureDialogTitle",
                   defaultValue: a$name,
                   placeholder: "procedureDialogPlaceholder",
@@ -75,7 +75,7 @@ function v(e) {
                     if (e[0].match(/[0-9_]/)) {
                       return "invalidVariableFirstChar"
                     }
-                    if (!$$_$$_$$_$$_$$_src_shared_tools_index.j(e)) {
+                    if (!Src_shared_tools_index.j(e)) {
                       return "invalidVariableName"
                     }
                     return ["函数", "函數", "function"].includes(e) ? "preservedProcedureName" : undefined
@@ -102,7 +102,7 @@ function v(e) {
       return n.apply(this, arguments)
     }
   }(), function () {
-    var n = i.a(RegeneratorRuntime1.mark(function n(r) {
+    var n = Module_7.a(RegeneratorRuntime1.mark(function n(r) {
       var i
       var a
       return RegeneratorRuntime1.wrap(function (n) {
@@ -116,14 +116,14 @@ function v(e) {
               throw Error("Trying to add param to undefined procedure")
             case 4:
               return n.abrupt("return", new Promise(function (e) {
-                $$_37_index$d$dispatch($$_$$_$$_$$_$$_src_editor_redux_common_actions.lj({
+                Module_37$d$dispatch(Src_editor_redux_common_actions.lj({
                   title: "parameterDialogTitle",
                   placeholder: "parameterDialogPlaceholder",
                   maxLength: 20,
                   validator: function (e) {
                     return "" === e ? "emptyParameterName" : a.params.find(function (t) {
                       return t.param_name === e
-                    }) ? "parameterExists" : e[0].match(/[0-9_]/) ? "invalidVariableFirstChar" : $$_$$_$$_$$_$$_src_shared_tools_index.j(e) ? undefined : "invalidVariableName"
+                    }) ? "parameterExists" : e[0].match(/[0-9_]/) ? "invalidVariableFirstChar" : Src_shared_tools_index.j(e) ? undefined : "invalidVariableName"
                   },
                   confirmCallback: function (t) {
                     return e({
@@ -147,21 +147,21 @@ function v(e) {
       return n.apply(this, arguments)
     }
   }())
-  $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.register_toolbox_category_callback("PROCEDURE", function () {
+  Src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.register_toolbox_category_callback("PROCEDURE", function () {
     return e().get_all_procedures_xml()
   })
-  $_733_index.register_default_procedure_events($$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace, e)
+  Module_733.register_default_procedure_events(Src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace, e)
 }
 function b(e, t, n) {
   var r = function (e, t, n) {
-    return p.Cb(e, t, n)
+    return Module_9.Cb(e, t, n)
   }(e, t, n)
   var o = "<xml>"
   r.forEach(function (e) {
     o += e
   })
   o += "</xml>"
-  return Array.from($$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.xml.text_to_dom(o).children)
+  return Array.from(Src_shared_packages_Crc_blink_src_index.Blink.xml.text_to_dom(o).children)
 }
 var y = ""
 function E() {
@@ -169,10 +169,10 @@ function E() {
 }
 function O(e) {
   y = e
-  var t = $$_37_index.d.getState()
+  var t = Module_37.d.getState()
   var n = t.project.screens.get(t.project.currentScreenIndex)
-  var r = p.Fb(e) || $$_$$_$$_$$_$$_src_editor_block_toolbox.d(e)
-  $$_141_index.a("BlockCategoryClick", {
+  var r = Module_9.Fb(e) || Src_editor_block_toolbox.d(e)
+  Module_141.a("BlockCategoryClick", {
     isCooperation: !!t.oTState.collWorkId,
     screenId: (null === n || undefined === n ? undefined : n.id) || "",
     screenName: (null === n || undefined === n ? undefined : n.title) || "",

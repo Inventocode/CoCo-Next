@@ -6,12 +6,12 @@
 
 "use strict"
 
-import /* [auto-meaningful-name] */React from "react"
-import { memo, forwardRef, useState, useRef, useEffect, useLayoutEffect, useImperativeHandle } from "react"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo, forwardRef, useState, useRef, useEffect, useLayoutEffect, useImperativeHandle } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import i from "classnames"
-import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
-import "./867"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../10/index"
+import /* 867 */"./867"
 var Q = memo(forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$defaultVisible = e.defaultVisible
@@ -27,7 +27,7 @@ var Q = memo(forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$disabled = e.disabled
   var v = undefined !== e$disabled && e$disabled
   var b = useState(!!e$defaultVisible)
-  var y = $$_10_index.a(b, 2)
+  var y = Module_10.a(b, 2)
   var E = y[0]
   var O = y[1]
   var w = useRef(null)
@@ -75,7 +75,7 @@ var Q = memo(forwardRef(function (e, t) {
   })
   return React.createElement("div", {
     style: e$style,
-    className: i("coco-popover", e$className),
+    className: Classnames("coco-popover", e$className),
     ref: w
   }, React.createElement("div", {
     className: "coco-popover-children",
@@ -83,7 +83,7 @@ var Q = memo(forwardRef(function (e, t) {
       O(true)
     }
   }, e$children), React.createElement("div", {
-    className: i("coco-popover-content", e$contentClassName, [E ? "show" : "hide"])
+    className: Classnames("coco-popover-content", e$contentClassName, [E ? "show" : "hide"])
   }, e$content), v && React.createElement("div", {
     className: "coco-popover-disabled-mask"
   }))

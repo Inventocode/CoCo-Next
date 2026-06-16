@@ -4,9 +4,9 @@
  * 模块 ID：956
  */
 
-var r = require("../1282/240")
-var o = require("../1662/443")
-var i = require("../1282/246/index")("species")
+var r = require(/* 240 */"../1282/240")
+var o = require(/* 443 */"../1662/443")
+var i = require(/* 246 */"../1282/246/index")("species")
 module.exports = function (e, t) {
   var n
   var /* [auto-meaningful-name] */rE$constructor = r(e).constructor

@@ -9,11 +9,11 @@
 export { o as b }
 export { a as c }
 export { s as a }
-import * as /* [auto-meaningful-name] */$_524 from "./524"
-import "./745"
+import * as /* [auto-meaningful-name] */Module_524 from /* 524 */"./524"
+import /* 745 */"./745"
 var i = {}
 function o() {
-  return $_524.b() ? global : "undefined" !== typeof window ? window : "undefined" !== typeof self ? self : i
+  return Module_524.b() ? global : "undefined" !== typeof window ? window : "undefined" !== typeof self ? self : i
 }
 function a() {
   var e = o()

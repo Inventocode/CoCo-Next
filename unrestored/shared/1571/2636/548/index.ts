@@ -6,23 +6,23 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_11 from "../11"
-import { useEffect } from "react"
+import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"../11"
+import { useEffect } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */Color from "color"
-import /* [auto-meaningful-name] */Color1 from "color"
-import * as /* [auto-meaningful-name] */Classnames from "classnames"
-import /* [auto-meaningful-name] */Classnames1 from "classnames"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
-import * as /* [auto-meaningful-name] */$$_90 from "../90"
-import * as /* [auto-meaningful-name] */$$_131 from "../131"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_tools_index from "../../../../../src/shared/tools/index"
-import * as h from "../9"
-import * as /* [auto-meaningful-name] */$$_53 from "../53"
-import * as /* [auto-meaningful-name] */$$_163 from "../163"
-import * as /* [auto-meaningful-name] */$_201 from "./201"
-import /* [auto-meaningful-name] */$_2011 from "./201"
+import /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Color from /* 51 */"color"
+import /* [auto-meaningful-name] */Color1 from /* 51 */"color"
+import * as /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import /* [auto-meaningful-name] */Classnames1 from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Module_90 from /* 90 */"../90"
+import * as /* [auto-meaningful-name] */Module_131 from /* 131 */"../131"
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"../9"
+import * as /* [auto-meaningful-name] */Module_53 from /* 53 */"../53"
+import * as /* [auto-meaningful-name] */Module_163 from /* 163 */"../163"
+import * as /* [auto-meaningful-name] */Module_201 from /* 201 */"./201"
+import /* [auto-meaningful-name] */Module_2011 from /* 201 */"./201"
 var _a
 _a = function (e) {
   var t = e.id
@@ -48,40 +48,40 @@ _a = function (e) {
     var e = function (e, t) {
       var n
       var o = Color1(t).toString()
-      return (n = {}, $$_11.a(n, $$_163.c.DEFAULT, {
+      return (n = {}, Module_11.a(n, Module_163.c.DEFAULT, {
         turnOn: {
-          backgroundColor: $$_$$_$$_$$_$$_src_shared_tools_index.hb(o, .3),
+          backgroundColor: Src_shared_tools_index.hb(o, .3),
           handleColor: o
         },
         turnOff: {
-          backgroundColor: $$_$$_$$_$$_$$_src_shared_tools_index.hb("#000", .2),
+          backgroundColor: Src_shared_tools_index.hb("#000", .2),
           handleColor: "#ffffff"
         },
         disabled: {
-          backgroundColor: $$_$$_$$_$$_$$_src_shared_tools_index.hb("#000", .1),
+          backgroundColor: Src_shared_tools_index.hb("#000", .1),
           handleColor: "#ffffff"
         }
-      }), $$_11.a(n, $$_163.c.PRIMARY, {
+      }), Module_11.a(n, Module_163.c.PRIMARY, {
         turnOn: {
           backgroundColor: o,
           handleColor: "#ffffff"
         },
         turnOff: {
-          backgroundColor: $$_$$_$$_$$_$$_src_shared_tools_index.hb("#000", .2),
+          backgroundColor: Src_shared_tools_index.hb("#000", .2),
           handleColor: "#ffffff"
         },
         disabled: {
-          backgroundColor: $$_$$_$$_$$_$$_src_shared_tools_index.hb("#000", .1),
+          backgroundColor: Src_shared_tools_index.hb("#000", .1),
           handleColor: "#ffffff"
         }
       }), n)[e]
     }(e$attributes$mode, e$attributes$color)
     return e$attributes$disabled ? e.disabled : e$attributes$value ? e.turnOn : e.turnOff
   }()
-  var D = h.hb(e$attributes$backgroundOpenImage)
-  var M = $$_$$_$$_$$_$$_src_shared_tools_index.U(e$attributes$backgroundOpenImage) ? e$attributes$backgroundOpenImage : D ? (null === D || undefined === D ? undefined : D.source) || (null === D || undefined === D ? undefined : D.cdnUrl) : $$_131.b
-  var L = h.hb(e$attributes$backgroundCloseImage)
-  var P = $$_$$_$$_$$_$$_src_shared_tools_index.U(e$attributes$backgroundCloseImage) ? e$attributes$backgroundCloseImage : L ? (null === L || undefined === L ? undefined : L.source) || (null === L || undefined === L ? undefined : L.cdnUrl) : $$_131.a
+  var D = Module_9.hb(e$attributes$backgroundOpenImage)
+  var M = Src_shared_tools_index.U(e$attributes$backgroundOpenImage) ? e$attributes$backgroundOpenImage : D ? (null === D || undefined === D ? undefined : D.source) || (null === D || undefined === D ? undefined : D.cdnUrl) : Module_131.b
+  var L = Module_9.hb(e$attributes$backgroundCloseImage)
+  var P = Src_shared_tools_index.U(e$attributes$backgroundCloseImage) ? e$attributes$backgroundCloseImage : L ? (null === L || undefined === L ? undefined : L.source) || (null === L || undefined === L ? undefined : L.cdnUrl) : Module_131.a
   var B = React1.createElement("div", {
     ref: R,
     style: {
@@ -93,7 +93,7 @@ _a = function (e) {
     }
   })
   useEffect(function () {
-    if (e$attributes$backgroundMode === $$_163.a.IMAGE && !k.current) {
+    if (e$attributes$backgroundMode === Module_163.a.IMAGE && !k.current) {
       var /* [auto-meaningful-name] */R$current = R.current
       if (!R$current) {
         return
@@ -106,79 +106,79 @@ _a = function (e) {
   }, [M, P, e$attributes$backgroundMode, e$attributes$value])
   return React1.createElement("div", {
     id: t,
-    "data-role": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.M,
-    "data-widget-type": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.F,
-    "data-min-width": $$_131.j,
-    "data-max-width": $$_53.o,
-    "data-min-height": $$_131.i,
-    "data-max-height": $$_53.m,
-    className: Classnames1($_2011.switchWidget, $$_90.b, $$_11.a({}, $_2011.hide, !e$visible)),
+    "data-role": Src_editor_widget_builtIn_types.M,
+    "data-widget-type": Src_editor_widget_builtIn_types.F,
+    "data-min-width": Module_131.j,
+    "data-max-width": Module_53.o,
+    "data-min-height": Module_131.i,
+    "data-max-height": Module_53.m,
+    className: Classnames1(Module_2011.switchWidget, Module_90.b, Module_11.a({}, Module_2011.hide, !e$visible)),
     style: {
       top: e$position.y,
       left: e$position.x,
       height: e$size.height,
       width: e$size.width,
-      minWidth: "".concat($$_131.j, "px"),
-      minHeight: "".concat($$_131.i, "px"),
-      maxWidth: "".concat($$_53.o, "px"),
-      maxHeight: "".concat($$_53.m, "px"),
+      minWidth: "".concat(Module_131.j, "px"),
+      minHeight: "".concat(Module_131.i, "px"),
+      maxWidth: "".concat(Module_53.o, "px"),
+      maxHeight: "".concat(Module_53.m, "px"),
       opacity: undefined === e$opacity ? undefined : e$opacity / 100,
-      filter: e$attributes$disabled && e$attributes$backgroundMode === $$_163.a.IMAGE ? "saturate(0) brightness(1.1)" : undefined
+      filter: e$attributes$disabled && e$attributes$backgroundMode === Module_163.a.IMAGE ? "saturate(0) brightness(1.1)" : undefined
     },
     onClick: function (t) {
       if (!e$attributes$disabled) {
         if (e$onSwitch) {
           e$onSwitch(!e$attributes$value)
         }
-        if (e$attributes$backgroundMode === $$_163.a.TEMPLATE) {
+        if (e$attributes$backgroundMode === Module_163.a.TEMPLATE) {
           var /* [auto-meaningful-name] */N$current
           if (!(null === (N$current = N.current) || undefined === N$current)) {
-            N$current.classList.add($_2011.leftAnimation)
+            N$current.classList.add(Module_2011.leftAnimation)
           }
           setTimeout(function () {
             var /* [auto-meaningful-name] */N$current1
             if (!(null === (N$current1 = N.current) || undefined === N$current1)) {
-              N$current1.classList.remove($_2011.leftAnimation)
+              N$current1.classList.remove(Module_2011.leftAnimation)
             }
           }, 100)
         } else {
           var /* [auto-meaningful-name] */R$current = R.current
-          if (!h.s(e.id) && e$isEditState || !R$current) {
+          if (!Module_9.s(e.id) && e$isEditState || !R$current) {
             return
           }
-          R$current.classList.add($_2011.imageAnimationFirstHalf)
+          R$current.classList.add(Module_2011.imageAnimationFirstHalf)
           k.current = true
           setTimeout(function () {
-            R$current.classList.remove($_2011.imageAnimationFirstHalf)
-            R$current.classList.add($_2011.imageAnimationSecondHalf)
+            R$current.classList.remove(Module_2011.imageAnimationFirstHalf)
+            R$current.classList.add(Module_2011.imageAnimationSecondHalf)
             R$current.style.backgroundImage = "url(".concat(e$attributes$value ? P : M, ")")
             setTimeout(function () {
-              R$current.classList.remove($_2011.imageAnimationSecondHalf)
+              R$current.classList.remove(Module_2011.imageAnimationSecondHalf)
               k.current = false
             }, 100)
           }, 100)
         }
       }
     }
-  }, e$attributes$backgroundMode === $$_163.a.IMAGE ? B : function () {
+  }, e$attributes$backgroundMode === Module_163.a.IMAGE ? B : function () {
     var /* [auto-meaningful-name] */e$size$width = e$size.width
     var /* [auto-meaningful-name] */e$size$height = e$size.height
-    e$size$height = (e$size$width = Math.min(e$size$width, e$size$height * $$_131.k)) / $$_131.k
+    e$size$height = (e$size$width = Math.min(e$size$width, e$size$height * Module_131.k)) / Module_131.k
     return React1.createElement("div", {
-      className: $_2011.templateWrapper,
+      className: Module_2011.templateWrapper,
       style: {
         width: e$size$width,
         height: e$size$height
       }
-    }, e$attributes$mode === $$_163.c.DEFAULT ? React1.createElement("div", {
-      className: $_2011.default,
+    }, e$attributes$mode === Module_163.c.DEFAULT ? React1.createElement("div", {
+      className: Module_2011.default,
       style: {
         backgroundColor: x.backgroundColor,
         borderRadius: e$size$height / 2
       }
     }, React1.createElement("div", {
       ref: N,
-      className: Classnames1($_2011.handle),
+      className: Classnames1(Module_2011.handle),
       style: {
         height: e$size$height,
         width: e$size$height,
@@ -186,7 +186,7 @@ _a = function (e) {
         left: e$attributes$value ? "calc(100% - ".concat(e$size$height, "px)") : 0
       }
     })) : React1.createElement("div", {
-      className: $_2011.primary,
+      className: Module_2011.primary,
       style: {
         borderRadius: e$size$height / 2,
         backgroundColor: x.backgroundColor,
@@ -194,7 +194,7 @@ _a = function (e) {
         width: e$size$width
       }
     }, React1.createElement("div", {
-      className: Classnames1($_2011.handle),
+      className: Classnames1(Module_2011.handle),
       style: {
         backgroundColor: x.handleColor,
         height: e$size$height,

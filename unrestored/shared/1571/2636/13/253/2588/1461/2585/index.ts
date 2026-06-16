@@ -4,7 +4,7 @@
  * 模块 ID：2585
  */
 
-var r = require("./502/index")
+var r = require(/* 502 */"./502/index")
 module.exports = function () {
   return r.Date.now()
 }

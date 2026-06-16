@@ -4,8 +4,8 @@
  * 模块 ID：992
  */
 
-var r = require("../../../../../2588/1461/2585/502/index")
-var i = require("./2473")
+var r = require(/* 502 */"../../../../../2588/1461/2585/502/index")
+var i = require(/* 2473 */"./2473")
 var o = exports && !exports.nodeType && exports
 var a = o && "object" == typeof module && module && !module.nodeType && module
 var s = a && a.exports === o ? r.Buffer : undefined

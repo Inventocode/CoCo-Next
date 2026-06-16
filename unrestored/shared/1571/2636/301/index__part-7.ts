@@ -6,24 +6,24 @@
 
 "use strict"
 
-import * as ye from "../6"
-import * as /* [auto-meaningful-name] */$$_27 from "../27"
-import * as /* [auto-meaningful-name] */$$_39 from "../39"
-import * as /* [auto-meaningful-name] */$_225 from "./225"
-import * as /* [auto-meaningful-name] */$_203 from "./203"
-import * as /* [auto-meaningful-name] */$$_58_index from "../58/index"
-import * as /* [auto-meaningful-name] */$$_59_index from "../59/index"
-import * as /* [auto-meaningful-name] */$_327 from "./327"
-import * as /* [auto-meaningful-name] */$$_123_index from "../123/index"
-import * as /* [auto-meaningful-name] */$_484 from "./484"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"../6"
+import * as /* [auto-meaningful-name] */Module_27 from /* 27 */"../27"
+import * as /* [auto-meaningful-name] */Module_39 from /* 39 */"../39"
+import * as /* [auto-meaningful-name] */Module_225 from /* 225 */"./225"
+import * as /* [auto-meaningful-name] */Module_203 from /* 203 */"./203"
+import * as /* [auto-meaningful-name] */Module_58 from /* 58 */"../58/index"
+import * as /* [auto-meaningful-name] */Module_59 from /* 59 */"../59/index"
+import * as /* [auto-meaningful-name] */Module_327 from /* 327 */"./327"
+import * as /* [auto-meaningful-name] */Module_123 from /* 123 */"../123/index"
+import * as /* [auto-meaningful-name] */Module_484 from /* 484 */"./484"
 var Ne = function (e) {
-  $$_58_index.a(n, e)
-  var t = $$_59_index.a(n)
+  Module_58.a(n, e)
+  var t = Module_59.a(n)
   function n(e) {
     var r
     var o
-    $$_27.a(this, n);
-    (o = t.call(this, ye.a(ye.a({}, e), {}, {
+    Module_27.a(this, n);
+    (o = t.call(this, Module_6.a(Module_6.a({}, e), {}, {
       opt_value: e.opt_value || (null === (r = e.get_options()[0]) || undefined === r ? undefined : r.value) || 0
     }, e.numberOptions))).dropdownConfig = e
     o.arrow = undefined
@@ -33,12 +33,12 @@ var Ne = function (e) {
     o.text_margin = 0
     return o
   }
-  $$_39.a(n, [
+  Module_39.a(n, [
     {
       key: "render_text_element",
       value: function () {
         if (this.text_element && this.field_group) {
-          $$_123_index.remove_children(this.text_element)
+          Module_123.remove_children(this.text_element)
           this.text_element.appendChild(document.createTextNode(this.get_display_text()))
           var e = this.utils.get_cached_width(this.text_element)
           this.text_margin = e < this.theme.renderer.TEXT_MIN_WIDTH_IN_FIELD ? (this.theme.renderer.TEXT_MIN_WIDTH_IN_FIELD - e) / 2 : 0
@@ -54,7 +54,7 @@ var Ne = function (e) {
         var e = this
         if (this.field_group && this.source_block) {
           if (!this.arrow) {
-            this.arrow = $_484.draw_arrow(this.source_block.workspace.options.dropdown.arrow_type)
+            this.arrow = Module_484.draw_arrow(this.source_block.workspace.options.dropdown.arrow_type)
             this.field_group.appendChild(this.arrow)
           }
           this.size_.width += this.source_block.workspace.options.dropdown.padding
@@ -81,7 +81,7 @@ var Ne = function (e) {
     }, {
       key: "show_editor",
       value: function () {
-        var e = $_225.a($_203.a(n.prototype), "show_editor", this).call(this)
+        var e = Module_225.a(Module_203.a(n.prototype), "show_editor", this).call(this)
         if (!this.source_block) {
           return e
         }
@@ -94,7 +94,7 @@ var Ne = function (e) {
     }, {
       key: "on_html_input_change",
       value: function () {
-        $_225.a($_203.a(n.prototype), "on_html_input_change", this).call(this)
+        Module_225.a(Module_203.a(n.prototype), "on_html_input_change", this).call(this)
         if (this.html_input) {
           var /* [auto-meaningful-name] */this$workspace_
           var t = (null === (this$workspace_ = this.workspace_) || undefined === this$workspace_ ? undefined : this$workspace_.get_scale()) || 1
@@ -132,14 +132,14 @@ var Ne = function (e) {
           r(o)
         }
         t.classList.add("blocklyDropdownMenu")
-        var i = $$_123_index.create_dom("div", {
+        var i = Module_123.create_dom("div", {
           style: "position: fixed",
           class: "blocklyWidgetDiv"
         })
         i.appendChild(t)
         document.body.appendChild(i)
         i.style.display = "block"
-        var a = $_484.position_dropdown(t, this)
+        var a = Module_484.position_dropdown(t, this)
         i.style.left = "".concat(a[0], "px")
         i.style.top = "".concat(a[1], "px")
         return i
@@ -191,9 +191,9 @@ var Ne = function (e) {
       value: function () {
         var e = this
         return function () {
-          $_225.a($_203.a(n.prototype), "widget_dispose", e).call(e)()
+          Module_225.a(Module_203.a(n.prototype), "widget_dispose", e).call(e)()
           if (e.menu) {
-            $$_123_index.remove_node(e.menu)
+            Module_123.remove_node(e.menu)
           }
           e.menu_items = []
           e.menu = undefined
@@ -203,15 +203,15 @@ var Ne = function (e) {
     }, {
       key: "dispose",
       value: function () {
-        $_225.a($_203.a(n.prototype), "dispose", this).call(this)
+        Module_225.a(Module_203.a(n.prototype), "dispose", this).call(this)
         if (this.menu) {
-          $$_123_index.remove_node(this.menu)
+          Module_123.remove_node(this.menu)
         }
         this.widget_div.hide_if_owner(this)
       }
     }
   ])
   return n
-}($_327.FieldNumber)
+}(Module_327.FieldNumber)
 Ne.field_type = "field_coco_number_dropdown"
 export { Ne }

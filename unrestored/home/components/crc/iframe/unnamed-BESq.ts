@@ -19,10 +19,10 @@ exports.getWood3PlayerUrl = getWood3PlayerUrl
 exports.getWood3CodelabCppIframeUrl = getWood3CodelabCppIframeUrl
 exports.getWood3CodelabTeacherCppIframeUrl = getWood3CodelabTeacherCppIframeUrl
 exports.getWood3ViewerUrl = getWood3ViewerUrl
-var base_1 = require("./unnamed-S9_H")
-var iframe_1 = require("./unnamed-IKhi")
-var utils_1 = require("./utils/1-MMZc")
-var types_1 = require("./types/1-8T_t")
+var base_1 = require(/* S9/H */"./unnamed-S9_H")
+var iframe_1 = require(/* IKhi */"./unnamed-IKhi")
+var utils_1 = require(/* MMZc */"./utils/1-MMZc")
+var types_1 = require(/* 8T/t */"./types/1-8T_t")
 function checkIfSuccess(result) {
   return result.status === types_1.EStatus.Success
 }

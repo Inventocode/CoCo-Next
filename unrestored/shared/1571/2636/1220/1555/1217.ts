@@ -107,8 +107,8 @@ exports.createDraggableData = function (e, t) {
     lastY: e.state.y
   }
 }
-var r = require("./941")
-var o = require("./1071/index")
+var r = require(/* 941 */"./941")
+var o = require(/* 1071 */"./1071/index")
 function i(e) {
   var t = e.findDOMNode()
   if (!t) {

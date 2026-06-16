@@ -10,11 +10,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.DeleteEvent = undefined
-var r = require("tslib")
-var i = require("inversify")
-var o = require("../../../123/195/index")
-var a = require("../../../1058/125")
-var s = (0, r.__importStar)(require("../../499/index"))
+var r = require(/* 93 */"tslib")
+var i = require(/* 134 */"inversify")
+var o = require(/* 195 */"../../../123/195/index")
+var a = require(/* 125 */"../../../1058/125")
+var s = (0, r.__importStar)(require(/* 499 */"../../499/index"))
 var c = function (e) {
   function t(t) {
     var n = e.call(this, t.block) || this
@@ -77,5 +77,5 @@ var c = function (e) {
   (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.events)], t.prototype, "events", undefined);
   (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.Blink)], t.prototype, "Blink", undefined)
   return t = (0, r.__decorate)([(0, i.injectable)()], t)
-}(require("./647").BlockEvent)
+}(require(/* 647 */"./647").BlockEvent)
 exports.DeleteEvent = c

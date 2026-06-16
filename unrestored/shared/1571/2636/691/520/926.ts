@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("../217/521")
+var r = require(/* 521 */"../217/521")
 function i(e) {
   for (var t, n = []; !(t = e.next()).done;) {
     n.push(t.value)
@@ -28,7 +28,7 @@ function a(e, t) {
 var s = "function" === typeof Object.is ? Object.is : function (e, t) {
   return e === t ? 0 !== e || 1 / e === 1 / t : e !== e && t !== t
 }
-var c = require("../217/394")
+var c = require(/* 394 */"../217/394")
 var /* [auto-meaningful-name] */Object$prototype$toString = Object.prototype.toString
 var l = function () {
   return "[object Arguments]" === Object$prototype$toString.call(arguments) ? function (e) {
@@ -76,7 +76,7 @@ var _ = "function" !== typeof Object.keys || h ? c.a(function (e) {
 }) : c.a(function (e) {
   return Object(e) !== e ? [] : Object.keys(e)
 })
-var A = require("../523/921")
+var A = require(/* 921 */"../523/921")
 function g(e, t, n, r) {
   var a = i(e)
   function s(e, t) {

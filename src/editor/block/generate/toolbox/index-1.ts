@@ -5,17 +5,17 @@
  */
 
 var E
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4 from "../../../../../unrestored/shared/1571/2636/4"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9 from "../../../../../unrestored/shared/1571/2636/9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_packages_Crc_blink_src_index from "../../../../shared/packages/@crc/blink/src/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_25_index from "../../../../../unrestored/shared/1571/2636/25/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_46_index from "../../../../../unrestored/shared/1571/2636/46/index"
+import * as /* [auto-meaningful-name] */Module_4 from /* 4 */"../../../../../unrestored/shared/1571/2636/4"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"../../../../../unrestored/shared/1571/2636/9"
+import * as /* [auto-meaningful-name] */Shared_packages_Crc_blink_src_index from "../../../../shared/packages/@crc/blink/src/index"
+import * as /* [auto-meaningful-name] */Module_25 from /* 25 */"../../../../../unrestored/shared/1571/2636/25/index"
+import * as /* [auto-meaningful-name] */Module_46 from /* 46 */"../../../../../unrestored/shared/1571/2636/46/index"
 function w(e, t) {
   var /* [auto-meaningful-name] */BKY_BLOCK_TAB_ICON = "%{BKY_BLOCK_TAB_ICON}"
   e.insertBlockProfile("screen_on_open", {
     type: "screen_on_open",
     message0: "%{BKY_SCREEN_ON_OPEN}",
-    args0: [$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.e(BKY_BLOCK_TAB_ICON, true)],
+    args0: [Module_4.e(BKY_BLOCK_TAB_ICON, true)],
     message1: "%1",
     args1: [
       {
@@ -38,7 +38,7 @@ function w(e, t) {
     type: "screen_on_open_get_param",
     message0: "%{BKY_SCREEN_ON_OPEN_GET_PARAM}",
     args0: [
-      $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.e(BKY_BLOCK_TAB_ICON, true), {
+      Module_4.e(BKY_BLOCK_TAB_ICON, true), {
         type: "input_value",
         name: "PARAMETER",
         align: "CENTRE",
@@ -64,7 +64,7 @@ function w(e, t) {
         name: "SCREEN_ID",
         custom: true,
         options: function () {
-          return [].concat($$_$$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_46_index.c().getScreenList()), [
+          return [].concat(Module_25.a(Module_46.c().getScreenList()), [
             {
               type: "line"
             }, {
@@ -94,7 +94,7 @@ function w(e, t) {
         name: "SCREEN_ID",
         custom: true,
         options: function () {
-          return [].concat($$_$$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_46_index.c().getScreenList()), [
+          return [].concat(Module_25.a(Module_46.c().getScreenList()), [
             {
               type: "line"
             }, {
@@ -142,7 +142,7 @@ function w(e, t) {
         name: "SCREEN_ID",
         custom: true,
         options: function () {
-          return [].concat($$_$$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_46_index.c().getScreenList()), [
+          return [].concat(Module_25.a(Module_46.c().getScreenList()), [
             {
               type: "line"
             }, {
@@ -200,7 +200,7 @@ function T(e) {
   })
   e.insertBlockSnippetGenerator("screen_on_open", function (t, n) {
     var r = e.statementToCode(t, n, "DO")
-    return r ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.m("onScreenOpen", [$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))], r) : ""
+    return r ? Module_4.m("onScreenOpen", [Module_4.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))], r) : ""
   })
   e.insertBlockSnippetGenerator("screen_on_open_get_param_value", function () {
     return "screenOpenParamValue"
@@ -211,27 +211,27 @@ function T(e) {
       return ""
     }
     var o = e.valueToCode(t, n, "PARAMETER", e.ORDER_FUNCTION_CALL)
-    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("onScreenOpen", [$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))], r, [o])
+    return Module_4.n("onScreenOpen", [Module_4.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))], r, [o])
   })
   e.insertBlockSnippetGenerator("screen_navigate_to", function (t, n) {
-    var r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(e.getFieldValue(t.blocks[n], "SCREEN_ID") || "")
-    return r === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o("nextScreen") ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("navigateToNextScreen", [$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))]) : r === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o("prevScreen") ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("navigateToPrevScreen", [$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))]) : $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("navigateToScreen", [r])
+    var r = Module_4.o(e.getFieldValue(t.blocks[n], "SCREEN_ID") || "")
+    return r === Module_4.o("nextScreen") ? Module_4.n("navigateToNextScreen", [Module_4.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))]) : r === Module_4.o("prevScreen") ? Module_4.n("navigateToPrevScreen", [Module_4.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))]) : Module_4.n("navigateToScreen", [r])
   })
   e.insertBlockSnippetGenerator("screen_navigate_to_by_value", function (t, n) {
-    var r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(e.getFieldValue(t.blocks[n], "SCREEN_ID") || "")
+    var r = Module_4.o(e.getFieldValue(t.blocks[n], "SCREEN_ID") || "")
     var o = e.valueToCode(t, n, "PARAMETER", e.ORDER_FUNCTION_CALL)
-    return r === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o("nextScreen") ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("navigateToNextScreen", [$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(e.getDynamicValue("__CURRENT_SCREEN_ID__")), o]) : r === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o("prevScreen") ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("navigateToPrevScreen", [$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(e.getDynamicValue("__CURRENT_SCREEN_ID__")), o]) : $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("navigateToScreen", [r, o])
+    return r === Module_4.o("nextScreen") ? Module_4.n("navigateToNextScreen", [Module_4.o(e.getDynamicValue("__CURRENT_SCREEN_ID__")), o]) : r === Module_4.o("prevScreen") ? Module_4.n("navigateToPrevScreen", [Module_4.o(e.getDynamicValue("__CURRENT_SCREEN_ID__")), o]) : Module_4.n("navigateToScreen", [r, o])
   })
   e.insertBlockSnippetGenerator("new_screen_navigate_to", function (t, n) {
     var r = t.blocks[n]
     var o = e.valueToCode(t, n, "SCREEN_ID", e.ORDER_FUNCTION_CALL)
-    return o.includes($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o("nextScreen")) ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("navigateToNextScreen", [$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))]), r, e) : o.includes($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o("prevScreen")) ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("navigateToPrevScreen", [$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))]), r, e) : $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("navigateToScreen", [o]), r, e)
+    return o.includes(Module_4.o("nextScreen")) ? Module_4.l(Module_4.n("navigateToNextScreen", [Module_4.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))]), r, e) : o.includes(Module_4.o("prevScreen")) ? Module_4.l(Module_4.n("navigateToPrevScreen", [Module_4.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))]), r, e) : Module_4.l(Module_4.n("navigateToScreen", [o]), r, e)
   })
   e.insertBlockSnippetGenerator("new_screen_navigate_to_by_value", function (t, n) {
     var r = t.blocks[n]
     var o = e.valueToCode(t, n, "SCREEN_ID", e.ORDER_FUNCTION_CALL)
     var i = e.valueToCode(t, n, "PARAMETER", e.ORDER_FUNCTION_CALL)
-    return o.includes($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o("nextScreen")) ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("navigateToNextScreen", [$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(e.getDynamicValue("__CURRENT_SCREEN_ID__")), i]), r, e) : o.includes($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o("prevScreen")) ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("navigateToPrevScreen", [$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(e.getDynamicValue("__CURRENT_SCREEN_ID__")), i]), r, e) : $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("navigateToScreen", [o, i]), r, e)
+    return o.includes(Module_4.o("nextScreen")) ? Module_4.l(Module_4.n("navigateToNextScreen", [Module_4.o(e.getDynamicValue("__CURRENT_SCREEN_ID__")), i]), r, e) : o.includes(Module_4.o("prevScreen")) ? Module_4.l(Module_4.n("navigateToPrevScreen", [Module_4.o(e.getDynamicValue("__CURRENT_SCREEN_ID__")), i]), r, e) : Module_4.l(Module_4.n("navigateToScreen", [o, i]), r, e)
   })
 }
 function S(e, t) {
@@ -502,22 +502,22 @@ function I(e) {
   e.insertBlockSnippetGenerator("loop_conditionally", function (t, n) {
     var r = e.valueToCode(t, n, "CONDITION", e.ORDER_FUNCTION_CALL) || "false"
     var o = e.statementToCode(t, n, "DO")
-    return o ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.i("asyncScheduler.loopConditionally", o, [$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.g(r, true)]) : ""
+    return o ? Module_4.i("asyncScheduler.loopConditionally", o, [Module_4.g(r, true)]) : ""
   })
   e.insertBlockSnippetGenerator("break_loop", function () {
-    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.i("asyncScheduler.breakLoop")
+    return Module_4.i("asyncScheduler.breakLoop")
   })
   e.insertBlockSnippetGenerator("continue_loop", function () {
-    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.i("asyncScheduler.continueLoop")
+    return Module_4.i("asyncScheduler.continueLoop")
   })
   e.insertBlockSnippetGenerator("loop_finitely", function (t, n) {
     var r = e.valueToCode(t, n, "TIMES", e.ORDER_FUNCTION_CALL)
     var o = e.statementToCode(t, n, "DO")
-    return o ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.i("asyncScheduler.loopFinitely", o, [r]) : ""
+    return o ? Module_4.i("asyncScheduler.loopFinitely", o, [r]) : ""
   })
   e.insertBlockSnippetGenerator("loop_infinitely", function (t, n) {
     var r = e.statementToCode(t, n, "DO")
-    return r ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.i("asyncScheduler.loopInfinitely", r) : ""
+    return r ? Module_4.i("asyncScheduler.loopInfinitely", r) : ""
   })
   e.insertBlockSnippetGenerator("sleep", function (t, n) {
     var r = e.valueToCode(t, n, "SECONDS", e.ORDER_FUNCTION_CALL) || "0"
@@ -525,20 +525,20 @@ function I(e) {
   })
   e.insertBlockSnippetGenerator("wait_until", function (t, n) {
     var r = e.valueToCode(t, n, "CONDITION", e.ORDER_FUNCTION_CALL) || "false"
-    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.i("asyncScheduler.waitUntil", undefined, [$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.g(r, true)])
+    return Module_4.i("asyncScheduler.waitUntil", undefined, [Module_4.g(r, true)])
   })
   e.insertBlockSnippetGenerator("console_log", function (t, n) {
-    for (var r = t.blocks[n], o = [e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL) || ""], /* [auto-meaningful-name] */r$mutation = r.mutation, a = $$_$$_$$_$$_shared_packages_Crc_blink_src_index.Blink.xml.text_to_dom(r$mutation).getAttribute("items"), s = a ? parseInt(a) : 0, c = 0; c < s; c++) {
+    for (var r = t.blocks[n], o = [e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL) || ""], /* [auto-meaningful-name] */r$mutation = r.mutation, a = Shared_packages_Crc_blink_src_index.Blink.xml.text_to_dom(r$mutation).getAttribute("items"), s = a ? parseInt(a) : 0, c = 0; c < s; c++) {
       var l = e.valueToCode(t, n, "VALUE".concat(c), e.ORDER_FUNCTION_CALL)
       if (l) {
         o.push(l)
       }
     }
     var u = e.getDynamicValue("__CURRENT_SCREEN_ID__")
-    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("consoleLog", [$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(u), $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(r.id)].concat(o))
+    return Module_4.n("consoleLog", [Module_4.o(u), Module_4.o(r.id)].concat(o))
   })
   e.insertBlockSnippetGenerator("new_console_log", function (t, n) {
-    for (var r = t.blocks[n], o = e.getFieldValue(r, "TYPE"), i = [e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL) || ""], /* [auto-meaningful-name] */r$mutation = r.mutation, s = $$_$$_$$_$$_shared_packages_Crc_blink_src_index.Blink.xml.text_to_dom(r$mutation).getAttribute("items"), c = s ? parseInt(s) : 0, l = 0; l < c; l++) {
+    for (var r = t.blocks[n], o = e.getFieldValue(r, "TYPE"), i = [e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL) || ""], /* [auto-meaningful-name] */r$mutation = r.mutation, s = Shared_packages_Crc_blink_src_index.Blink.xml.text_to_dom(r$mutation).getAttribute("items"), c = s ? parseInt(s) : 0, l = 0; l < c; l++) {
       var u = e.valueToCode(t, n, "VALUE".concat(l), e.ORDER_FUNCTION_CALL)
       if (u) {
         i.push(u)
@@ -553,17 +553,17 @@ function I(e) {
       }
     }
     var p = e.getDynamicValue("__CURRENT_SCREEN_ID__")
-    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n(consoleLog, [$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(p), $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(r.id)].concat(i))
+    return Module_4.n(consoleLog, [Module_4.o(p), Module_4.o(r.id)].concat(i))
   })
   e.insertBlockSnippetGenerator("console_error", function (t, n) {
-    for (var r = t.blocks[n], o = [e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL) || ""], /* [auto-meaningful-name] */r$mutation = r.mutation, a = $$_$$_$$_$$_shared_packages_Crc_blink_src_index.Blink.xml.text_to_dom(r$mutation).getAttribute("items"), s = a ? parseInt(a) : 0, c = 0; c < s; c++) {
+    for (var r = t.blocks[n], o = [e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL) || ""], /* [auto-meaningful-name] */r$mutation = r.mutation, a = Shared_packages_Crc_blink_src_index.Blink.xml.text_to_dom(r$mutation).getAttribute("items"), s = a ? parseInt(a) : 0, c = 0; c < s; c++) {
       var l = e.valueToCode(t, n, "VALUE".concat(c), e.ORDER_FUNCTION_CALL)
       if (l) {
         o.push(l)
       }
     }
     var u = e.getDynamicValue("__CURRENT_SCREEN_ID__")
-    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("consoleError", [$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(u), $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(r.id)].concat(o))
+    return Module_4.n("consoleError", [Module_4.o(u), Module_4.o(r.id)].concat(o))
   })
   e.insertBlockSnippetGenerator("controls_for", function (t, n) {
     var r = e.valueToCode(t, n, "FROM", e.ORDER_FUNCTION_CALL)
@@ -571,7 +571,7 @@ function I(e) {
     var i = e.valueToCode(t, n, "BY", e.ORDER_FUNCTION_CALL)
     var a = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL)
     var s = e.statementToCode(t, n, "DO")
-    return s ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.i("asyncScheduler.loopStep", s, [r, o, i], [a]) : ""
+    return s ? Module_4.i("asyncScheduler.loopStep", s, [r, o, i], [a]) : ""
   })
   e.insertBlockSnippetGenerator("controls_for_closed_range", function (t, n) {
     var r = e.valueToCode(t, n, "FROM", e.ORDER_FUNCTION_CALL)
@@ -579,10 +579,10 @@ function I(e) {
     var i = e.valueToCode(t, n, "BY", e.ORDER_FUNCTION_CALL)
     var a = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL)
     var s = e.statementToCode(t, n, "DO")
-    return s ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.i("asyncScheduler.loopStepClosedRange", s, [r, o, i], [a]) : ""
+    return s ? Module_4.i("asyncScheduler.loopStepClosedRange", s, [r, o, i], [a]) : ""
   })
   e.insertBlockSnippetGenerator("controls_for_value", function () {
-    return "".concat($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.a, "value")
+    return "".concat(Module_4.a, "value")
   })
 }
 function j(e) {
@@ -601,14 +601,14 @@ function j(e) {
           this.remove_input("MUTATE_REMOVE_BUTTON")
         }
         if (!this.get_input("MUTATE_ADD_BUTTON")) {
-          this.append_dummy_input("MUTATE_ADD_BUTTON").append_field($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.p(), "MUTATE_ADD_BUTTON")
+          this.append_dummy_input("MUTATE_ADD_BUTTON").append_field(Module_4.p(), "MUTATE_ADD_BUTTON")
         }
       } else {
         if (!this.get_input("MUTATE_REMOVE_BUTTON")) {
-          this.append_dummy_input("MUTATE_REMOVE_BUTTON").append_field($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.q(undefined), "MUTATE_REMOVE_BUTTON")
+          this.append_dummy_input("MUTATE_REMOVE_BUTTON").append_field(Module_4.q(undefined), "MUTATE_REMOVE_BUTTON")
         }
         if (!this.get_input("MUTATE_ADD_BUTTON")) {
-          this.append_dummy_input("MUTATE_ADD_BUTTON").append_field($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.p(), "MUTATE_ADD_BUTTON")
+          this.append_dummy_input("MUTATE_ADD_BUTTON").append_field(Module_4.p(), "MUTATE_ADD_BUTTON")
         }
       }
       e.events.enable()
@@ -616,9 +616,9 @@ function j(e) {
     addMutation: function (e) {
       var n = this
       var r = "VALUE".concat(this.itemCount_)
-      $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.b.call(this, r, function () {
+      Module_4.b.call(this, r, function () {
         if (!n.get_input("MUTATE_REMOVE_BUTTON")) {
-          n.append_dummy_input("MUTATE_REMOVE_BUTTON", "MUTATE_ADD_BUTTON").append_field($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.q(undefined), "MUTATE_REMOVE_BUTTON")
+          n.append_dummy_input("MUTATE_REMOVE_BUTTON", "MUTATE_ADD_BUTTON").append_field(Module_4.q(undefined), "MUTATE_REMOVE_BUTTON")
         }
         var e = n.append_value_input(r, "MUTATE_REMOVE_BUTTON")
         n.itemCount_++
@@ -628,7 +628,7 @@ function j(e) {
     removeMutation: function () {
       var e = this
       var t = "VALUE".concat(this.itemCount_ - 1)
-      $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.t.call(this, t, "TEXT", function () {
+      Module_4.t.call(this, t, "TEXT", function () {
         e.remove_input(t)
         if (1 === e.itemCount_) {
           e.remove_input("MUTATE_REMOVE_BUTTON")
@@ -658,7 +658,7 @@ function N(e, t) {
         name: "VAR",
         custom: true,
         advancedOptions: function () {
-          return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_46_index.c().getPrimitiveVariableList(this)
+          return Module_46.c().getPrimitiveVariableList(this)
         }
       }
     ],
@@ -675,7 +675,7 @@ function N(e, t) {
         name: "VAR",
         custom: true,
         advancedOptions: function () {
-          return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_46_index.c().getPrimitiveVariableList(this)
+          return Module_46.c().getPrimitiveVariableList(this)
         }
       }, {
         type: "input_value",
@@ -697,7 +697,7 @@ function N(e, t) {
         name: "VAR",
         custom: true,
         advancedOptions: function () {
-          return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_46_index.c().getPrimitiveVariableList(this)
+          return Module_46.c().getPrimitiveVariableList(this)
         }
       }, {
         type: "field_coco_dropdown",
@@ -728,13 +728,13 @@ function k(e) {
   e.insertBlockSnippetGenerator("variables_get", function (t, n) {
     var r = t.blocks[n]
     var o = e.getFieldValue(r, "VAR")
-    return o !== $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.h && o ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getVariableValue", [$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(o)]) : ""
+    return o !== Module_9.h && o ? Module_4.s("getVariableValue", [Module_4.o(o)]) : ""
   })
   e.insertBlockSnippetGenerator("variables_set", function (t, n) {
     var r = t.blocks[n]
     var o = e.valueToCode(t, n, "VALUE", e.ORDER_ASSIGNMENT) || "0"
     var i = e.getFieldValue(r, "VAR") || ""
-    return i !== $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.h && i ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("setVariableValue", [$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(i), o]) : ""
+    return i !== Module_9.h && i ? Module_4.n("setVariableValue", [Module_4.o(i), o]) : ""
   })
   e.insertBlockSnippetGenerator("variables_change", function (t, n) {
     var r = t.blocks[n]
@@ -745,7 +745,7 @@ function k(e) {
     if (!isNaN(s)) {
       a = s > 0 ? a : "(".concat(a, ")")
     }
-    return "increase" === o ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("increaseVariable", [$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(i), a]) : "decrease" === o ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("decreaseVariable", [$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(i), a]) : ""
+    return "increase" === o ? Module_4.n("increaseVariable", [Module_4.o(i), a]) : "decrease" === o ? Module_4.n("decreaseVariable", [Module_4.o(i), a]) : ""
   })
 }
 !function (e) {

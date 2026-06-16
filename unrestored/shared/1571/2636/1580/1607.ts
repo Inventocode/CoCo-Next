@@ -6,15 +6,15 @@
 
 "use strict"
 
-var r = require("./1662/86")
-var /* [auto-meaningful-name] */require$_1761_828$includes = require("./1761/828").includes
-var i = require("./1598/637")
+var r = require(/* 86 */"./1662/86")
+var /* [auto-meaningful-name] */require_828_$_1761_828$includes = require(/* 828 */"./1761/828").includes
+var i = require(/* 637 */"./1598/637")
 r({
   target: "Array",
   proto: true
 }, {
   includes: function (e) {
-    return require$_1761_828$includes(this, e, arguments.length > 1 ? arguments[1] : undefined)
+    return require_828_$_1761_828$includes(this, e, arguments.length > 1 ? arguments[1] : undefined)
   }
 })
 i("includes")

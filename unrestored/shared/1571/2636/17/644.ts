@@ -10,9 +10,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.lazy_inject = exports.bind_singleton = exports.get_instance = undefined
-var r = require("tslib")
-var i = require("inversify")
-var o = (0, r.__importDefault)(require("inversify-inject-decorators"))
+var r = require(/* 93 */"tslib")
+var i = require(/* 134 */"inversify")
+var o = (0, r.__importDefault)(require(/* 2140 */"inversify-inject-decorators"))
 var a = new i.Container()
 exports.get_instance = function () {
   return a

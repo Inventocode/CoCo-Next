@@ -6,10 +6,10 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$_224_index from "./224/index"
-import * as yb from "./21"
-import { createElement, forwardRef } from "react"
-import * as /* [auto-meaningful-name] */$_1543_index from "./1543/index"
+import * as /* [auto-meaningful-name] */Module_224 from /* 224 */"./224/index"
+import * as /* [auto-meaningful-name] */Module_21 from /* 21 */"./21"
+import { createElement, forwardRef } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_1543 from /* 1543 */"./1543/index"
 var BM = {
   icon: {
     tag: "svg",
@@ -30,7 +30,7 @@ var BM = {
   theme: "outlined"
 }
 var FM = function (e, t) {
-  return createElement($_224_index.a, yb.a(yb.a({}, e), {}, {
+  return createElement(Module_224.a, Module_21.a(Module_21.a({}, e), {}, {
     ref: t,
     icon: BM
   }))

@@ -6,7 +6,7 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$_127 from "./127"
+import * as /* [auto-meaningful-name] */Module_127 from /* 127 */"./127"
 var Hf = [
   {
     type: "WidgetTitle",
@@ -25,7 +25,7 @@ var Hf = [
     type: "Coordinate"
   }, {
     type: "Size",
-    sizeRange: [[$_127.m, $_127.k], [$_127.l, $_127.j]]
+    sizeRange: [[Module_127.m, Module_127.k], [Module_127.l, Module_127.j]]
   }, {
     type: "ListViewerStyleTemplate"
   }, {

@@ -11,14 +11,14 @@ import { B } from "./index__part-3"
 import { J, te, ie } from "./index__part-4"
 import { be, Ee } from "./index__part-5"
 import { Se, ke } from "./index__part-6"
-import * as /* [auto-meaningful-name] */$$_49_17_index from "../49/17/index"
-import * as /* [auto-meaningful-name] */$$_49_9 from "../49/9"
-import * as /* [auto-meaningful-name] */$$_49_50 from "../49/50"
-import * as /* [auto-meaningful-name] */$$_49_14 from "../49/14"
-import * as /* [auto-meaningful-name] */$$_49_8 from "../49/8"
-import * as /* [auto-meaningful-name] */$$_16_32 from "../16/32"
-import * as /* [auto-meaningful-name] */$_36_index from "./36/index"
-import * as Te from "./34"
+import * as /* [auto-meaningful-name] */Module_17 from /* 17 */"../49/17/index"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"../49/9"
+import * as /* [auto-meaningful-name] */Module_50 from /* 50 */"../49/50"
+import * as /* [auto-meaningful-name] */Module_14 from /* 14 */"../49/14"
+import * as /* [auto-meaningful-name] */Module_8 from /* 8 */"../49/8"
+import * as /* [auto-meaningful-name] */Module_32 from /* 32 */"../16/32"
+import * as /* [auto-meaningful-name] */Module_36 from /* 36 */"./36/index"
+import * as /* [auto-meaningful-name] */Module_34 from /* 34 */"./34"
 var je = ["EventTarget", "Window", "Node", "ApplicationCache", "AudioTrackList", "ChannelMergerNode", "CryptoOperation", "EventSource", "FileReader", "HTMLUnknownElement", "IDBDatabase", "IDBRequest", "IDBTransaction", "KeyOperation", "MediaController", "MessagePort", "ModalWindow", "Notification", "SVGElementInstance", "Screen", "TextTrack", "TextTrackCue", "TextTrackList", "WebSocket", "WebSocketWorker", "Worker", "XMLHttpRequest", "XMLHttpRequestEventTarget", "XMLHttpRequestUpload"]
 var xe = function () {
   function e(t) {
@@ -32,18 +32,18 @@ var xe = function () {
     }, t)
   }
   e.prototype.setupOnce = function () {
-    var e = $$_49_14.e()
+    var e = Module_14.e()
     if (this._options.setTimeout) {
-      $$_49_17_index.c(e, "setTimeout", this._wrapTimeFunction.bind(this))
+      Module_17.c(e, "setTimeout", this._wrapTimeFunction.bind(this))
     }
     if (this._options.setInterval) {
-      $$_49_17_index.c(e, "setInterval", this._wrapTimeFunction.bind(this))
+      Module_17.c(e, "setInterval", this._wrapTimeFunction.bind(this))
     }
     if (this._options.requestAnimationFrame) {
-      $$_49_17_index.c(e, "requestAnimationFrame", this._wrapRAF.bind(this))
+      Module_17.c(e, "requestAnimationFrame", this._wrapRAF.bind(this))
     }
     if (this._options.XMLHttpRequest && "XMLHttpRequest" in e) {
-      $$_49_17_index.c(XMLHttpRequest.prototype, "send", this._wrapXHR.bind(this))
+      Module_17.c(XMLHttpRequest.prototype, "send", this._wrapXHR.bind(this))
     }
     if (this._options.eventTarget) {
       (Array.isArray(this._options.eventTarget) ? this._options.eventTarget : je).forEach(this._wrapEventTarget.bind(this))
@@ -58,7 +58,7 @@ var xe = function () {
       t[0] = Ee(r, {
         mechanism: {
           data: {
-            function: Te.a(e)
+            function: Module_34.a(e)
           },
           handled: true,
           type: "instrument"
@@ -73,7 +73,7 @@ var xe = function () {
         mechanism: {
           data: {
             function: "requestAnimationFrame",
-            handler: Te.a(e)
+            handler: Module_34.a(e)
           },
           handled: true,
           type: "instrument"
@@ -82,10 +82,10 @@ var xe = function () {
     }
   }
   e.prototype._wrapEventTarget = function (e) {
-    var t = $$_49_14.e()
+    var t = Module_14.e()
     var n = t[e] && t[e].prototype
     if (n && n.hasOwnProperty && n.hasOwnProperty("addEventListener")) {
-      $$_49_17_index.c(n, "addEventListener", function (t) {
+      Module_17.c(n, "addEventListener", function (t) {
         return function (n, r, i) {
           try {
             if ("function" === typeof r.handleEvent) {
@@ -93,7 +93,7 @@ var xe = function () {
                 mechanism: {
                   data: {
                     function: "handleEvent",
-                    handler: Te.a(r),
+                    handler: Module_34.a(r),
                     target: e
                   },
                   handled: true,
@@ -106,7 +106,7 @@ var xe = function () {
             mechanism: {
               data: {
                 function: "addEventListener",
-                handler: Te.a(r),
+                handler: Module_34.a(r),
                 target: e
               },
               handled: true,
@@ -115,7 +115,7 @@ var xe = function () {
           }), i)
         }
       })
-      $$_49_17_index.c(n, "removeEventListener", function (e) {
+      Module_17.c(n, "removeEventListener", function (e) {
         return function (t, n, r) {
           var i
           var o = n
@@ -139,19 +139,19 @@ var xe = function () {
       var i = ["onload", "onerror", "onprogress", "onreadystatechange"]
       i.forEach(function (e) {
         if (e in r && "function" === typeof r[e]) {
-          $$_49_17_index.c(r, e, function (t) {
+          Module_17.c(r, e, function (t) {
             var n = {
               mechanism: {
                 data: {
                   function: e,
-                  handler: Te.a(t)
+                  handler: Module_34.a(t)
                 },
                 handled: true,
                 type: "instrument"
               }
             }
             if (t.__sentry_original__) {
-              n.mechanism.data.handler = Te.a(t.__sentry_original__)
+              n.mechanism.data.handler = Module_34.a(t.__sentry_original__)
             }
             return Ee(t, n)
           })
@@ -176,30 +176,30 @@ var Ce = function () {
   e.prototype.setupOnce = function () {
     Error.stackTraceLimit = 50
     if (this._options.onerror) {
-      $$_49_8.a.log("Global Handler attached: onerror")
+      Module_8.a.log("Global Handler attached: onerror")
       this._installGlobalOnErrorHandler()
     }
     if (this._options.onunhandledrejection) {
-      $$_49_8.a.log("Global Handler attached: onunhandledrejection")
+      Module_8.a.log("Global Handler attached: onunhandledrejection")
       this._installGlobalOnUnhandledRejectionHandler()
     }
   }
   e.prototype._installGlobalOnErrorHandler = function () {
     var t = this
     if (!this._onErrorHandlerInstalled) {
-      $$_49_50.a({
+      Module_50.a({
         callback: function (n) {
           var /* [auto-meaningful-name] */n$error = n.error
-          var i = $$_16_32.b()
+          var i = Module_32.b()
           var o = i.getIntegration(e)
           var a = n$error && true === n$error.__sentry_own_request__
           if (o && !be() && !a) {
             var s = i.getClient()
-            var u = undefined === n$error && $$_49_9.k(n.msg) ? t._eventFromIncompleteOnError(n.msg, n.url, n.line, n.column) : t._enhanceEventWithInitialFrame(ie(n$error || n.msg, undefined, {
+            var u = undefined === n$error && Module_9.k(n.msg) ? t._eventFromIncompleteOnError(n.msg, n.url, n.line, n.column) : t._enhanceEventWithInitialFrame(ie(n$error || n.msg, undefined, {
               attachStacktrace: s && s.getOptions().attachStacktrace,
               rejection: false
             }), n.url, n.line, n.column)
-            $$_49_14.a(u, {
+            Module_14.a(u, {
               handled: false,
               type: "onerror"
             })
@@ -216,7 +216,7 @@ var Ce = function () {
   e.prototype._installGlobalOnUnhandledRejectionHandler = function () {
     var t = this
     if (!this._onUnhandledRejectionHandlerInstalled) {
-      $$_49_50.a({
+      Module_50.a({
         callback: function (n) {
           var r = n
           try {
@@ -228,19 +228,19 @@ var Ce = function () {
               }
             }
           } catch (l) {}
-          var i = $$_16_32.b()
+          var i = Module_32.b()
           var o = i.getIntegration(e)
           var a = r && true === r.__sentry_own_request__
           if (!o || be() || a) {
             return true
           }
           var s = i.getClient()
-          var u = $$_49_9.i(r) ? t._eventFromRejectionWithPrimitive(r) : ie(r, undefined, {
+          var u = Module_9.i(r) ? t._eventFromRejectionWithPrimitive(r) : ie(r, undefined, {
             attachStacktrace: s && s.getOptions().attachStacktrace,
             rejection: true
           })
           u.level = B.Error
-          $$_49_14.a(u, {
+          Module_14.a(u, {
             handled: false,
             type: "onunhandledrejection"
           })
@@ -255,7 +255,7 @@ var Ce = function () {
   }
   e.prototype._eventFromIncompleteOnError = function (e, t, n, r) {
     var i
-    var o = $$_49_9.e(e) ? e.message : e
+    var o = Module_9.e(e) ? e.message : e
     var a = o.match(/^(?:[Uu]ncaught (?:exception: )?)?(?:((?:Eval|Internal|Range|Reference|Syntax|Type|URI|)Error): )?(.*)$/i)
     if (a) {
       i = a[1]
@@ -293,7 +293,7 @@ var Ce = function () {
     e.exception.values[0].stacktrace.frames = e.exception.values[0].stacktrace.frames || []
     var i = isNaN(parseInt(r, 10)) ? undefined : r
     var o = isNaN(parseInt(n, 10)) ? undefined : n
-    var a = $$_49_9.k(t) && t.length > 0 ? t : $$_49_14.f()
+    var a = Module_9.k(t) && t.length > 0 ? t : Module_14.f()
     if (0 === e.exception.values[0].stacktrace.frames.length) {
       e.exception.values[0].stacktrace.frames.push({
         colno: i,
@@ -318,8 +318,8 @@ var Re = function () {
     this._limit = t.limit || 5
   }
   e.prototype.setupOnce = function () {
-    $_36_index.b(function (t, n) {
-      var r = $$_16_32.b().getIntegration(e)
+    Module_36.b(function (t, n) {
+      var r = Module_32.b().getIntegration(e)
       if (r) {
         var i = r._handler && r._handler.bind(r)
         return "function" === typeof i ? i(t, n) : t
@@ -328,7 +328,7 @@ var Re = function () {
     })
   }
   e.prototype._handler = function (e, t) {
-    if (!e.exception || !e.exception.values || !t || !$$_49_9.g(t.originalException, Error)) {
+    if (!e.exception || !e.exception.values || !t || !Module_9.g(t.originalException, Error)) {
       return e
     }
     var n = this._walkErrorTree(t.originalException, this._key)
@@ -339,7 +339,7 @@ var Re = function () {
     if (undefined === n) {
       n = []
     }
-    if (!$$_49_9.g(e[t], Error) || n.length + 1 >= this._limit) {
+    if (!Module_9.g(e[t], Error) || n.length + 1 >= this._limit) {
       return n
     }
     var r = te(J(e[t]))
@@ -438,17 +438,17 @@ var Pe = function () {
   e.id = "Dedupe"
   return e
 }()
-var Ne = $$_49_14.e()
+var Ne = Module_14.e()
 var Ie = function () {
   function e() {
     this.name = e.id
   }
   e.prototype.setupOnce = function () {
-    $_36_index.b(function (t) {
+    Module_36.b(function (t) {
       var /* [auto-meaningful-name] */t$request
       var /* [auto-meaningful-name] */Ne$location
       var /* [auto-meaningful-name] */t$request1
-      if ($$_16_32.b().getIntegration(e)) {
+      if (Module_32.b().getIntegration(e)) {
         if (!Ne.navigator && !Ne.location && !Ne.document) {
           return t
         }
@@ -484,7 +484,7 @@ function Ae(e) {
     e.defaultIntegrations = Le
   }
   if (undefined === e.release) {
-    var t = $$_49_14.e()
+    var t = Module_14.e()
     if (t.SENTRY_RELEASE && t.SENTRY_RELEASE.id) {
       e.release = t.SENTRY_RELEASE.id
     }
@@ -495,9 +495,9 @@ function Ae(e) {
   (function (e, t) {
     var n
     if (true === t.debug) {
-      $$_49_8.a.enable()
+      Module_8.a.enable()
     }
-    var r = $$_16_32.b()
+    var r = Module_32.b()
     if (!(null === (n = r.getScope()) || undefined === n)) {
       n.update(t.initialScope)
     }
@@ -506,10 +506,10 @@ function Ae(e) {
   })(ke, e)
   if (e.autoSessionTracking) {
     (function () {
-      if ("undefined" === typeof $$_49_14.e().document) {
-        return void $$_49_8.a.warn("Session tracking in non-browser environment with @sentry/browser is not supported.")
+      if ("undefined" === typeof Module_14.e().document) {
+        return void Module_8.a.warn("Session tracking in non-browser environment with @sentry/browser is not supported.")
       }
-      var e = $$_16_32.b()
+      var e = Module_32.b()
       if ("function" !== typeof e.startSession || "function" !== typeof e.captureSession) {
         return
       }
@@ -517,7 +517,7 @@ function Ae(e) {
         ignoreDuration: true
       })
       e.captureSession()
-      $$_49_50.a({
+      Module_50.a({
         callback: function (t) {
           var /* [auto-meaningful-name] */t$from = t.from
           var r = t.to

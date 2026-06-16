@@ -6,31 +6,31 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
-import * as i from "../7"
-import "color"
-import * as /* [auto-meaningful-name] */$_784_index from "./784/index"
-import * as /* [auto-meaningful-name] */Lodash from "lodash"
-import * as /* [auto-meaningful-name] */$$_13_303_index from "../13/303/index"
-import /* [auto-meaningful-name] */$$_13_303_index1 from "../13/303/index"
-import * as /* [auto-meaningful-name] */AntdMobile from "antd-mobile"
-import * as /* [auto-meaningful-name] */$_657 from "./657"
-import * as /* [auto-meaningful-name] */Axios from "axios"
-import /* [auto-meaningful-name] */Axios1 from "axios"
-import * as /* [auto-meaningful-name] */$$_20_128 from "../20/128"
+import * as /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import /* [auto-meaningful-name] */RegeneratorRuntime1 from /* 1 */"regenerator-runtime"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../7"
+import /* 51 */"color"
+import * as /* [auto-meaningful-name] */Module_784 from /* 784 */"./784/index"
+import * as /* [auto-meaningful-name] */Lodash from /* 30 */"lodash"
+import * as /* [auto-meaningful-name] */Module_303 from /* 303 */"../13/303/index"
+import /* [auto-meaningful-name] */Module_3031 from /* 303 */"../13/303/index"
+import * as /* [auto-meaningful-name] */AntdMobile from /* 198 */"antd-mobile"
+import * as /* [auto-meaningful-name] */Module_657 from /* 657 */"./657"
+import * as /* [auto-meaningful-name] */Axios from /* 129 */"axios"
+import /* [auto-meaningful-name] */Axios1 from /* 129 */"axios"
+import * as /* [auto-meaningful-name] */Module_128 from /* 128 */"../20/128"
 function m() {
   return g.apply(this, arguments)
 }
 function g() {
-  return (g = i.a(RegeneratorRuntime1.mark(function e() {
+  return (g = Module_7.a(RegeneratorRuntime1.mark(function e() {
     var /* [auto-meaningful-name] */e$sent
     return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
             e.next = 2
-            return Axios1.get("".concat($$_20_128.a.tigerHost, "/tiger/v3/web/accounts/profile"), {
+            return Axios1.get("".concat(Module_128.a.tigerHost, "/tiger/v3/web/accounts/profile"), {
               withCredentials: true
             })
           case 2:

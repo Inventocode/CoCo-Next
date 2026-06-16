@@ -6,17 +6,17 @@
 
 "use strict"
 
-import qv from "./88"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import { useDispatch } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { memo } from "react"
+import /* [auto-meaningful-name] */Module_88 from /* 88 */"./88"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import { useDispatch } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_933 from "./933"
-import /* [auto-meaningful-name] */$_9331 from "./933"
+import * as /* [auto-meaningful-name] */Module_933 from /* 933 */"./933"
+import /* [auto-meaningful-name] */Module_9331 from /* 933 */"./933"
 var Xw = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "text" : e$keyName
@@ -24,30 +24,30 @@ var Xw = memo(function (e) {
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */e$formConfig = e.formConfig
   var a = e$getValue(n)
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var c = useDispatch()
-  var l = $_710$a$formatMessage({
+  var l = Module_710$a$formatMessage({
     id: e$formConfig.label || "text"
   })
-  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
-    className: Classnames(qv.formItemWrapper, $_9331.form),
+  return React.createElement(Src_shared_ui_components_index.i, {
+    className: Classnames(Module_88.formItemWrapper, Module_9331.form),
     label: l,
     align: "vertical"
   }, React.createElement("div", {
-    className: $_9331.imageBox
+    className: Module_9331.imageBox
   }, React.createElement("div", {
-    className: $_9331.edit
+    className: Module_9331.edit
   }, React.createElement("div", {
-    className: $_9331.btn,
+    className: Module_9331.btn,
     onClick: function () {
-      c($$_$$_$$_$$_src_editor_redux_common_actions.Bh({
+      c(Src_editor_redux_common_actions.Bh({
         onConfirm: function (e) {
           e$onChange(n, e)
         },
         content: a
       }))
     }
-  }, $_710$a$formatMessage({
+  }, Module_710$a$formatMessage({
     id: "edit"
   })))))
 })

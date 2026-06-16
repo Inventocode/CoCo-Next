@@ -6,13 +6,13 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_15 from "../../../../../src/shared/tools"
-import /* [auto-meaningful-name] */React from "react"
-import { memo, useRef, useState, useCallback, useEffect, useImperativeHandle } from "react"
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../../src/shared/tools/index"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo, useRef, useState, useCallback, useEffect, useImperativeHandle } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import i from "classnames"
-import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
-import "./877"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../10/index"
+import /* 877 */"./877"
 var ke = memo(React.forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$defaultValue = e.defaultValue
   var /* [auto-meaningful-name] */e$value = e.value
@@ -35,7 +35,7 @@ var ke = memo(React.forwardRef(function (e, t) {
   var C = useRef(null)
   var T = useRef(null)
   var S = useState(false)
-  var A = $$_10_index.a(S, 2)
+  var A = Module_10.a(S, 2)
   var I = A[0]
   var j = A[1]
   var N = useCallback(function (e) {
@@ -65,7 +65,7 @@ var ke = memo(React.forwardRef(function (e, t) {
       T$current.style.display = "block"
       var n = w$current.value.replace(/'\n'/g, "<br>")
       var r = getComputedStyle(w$current)
-      T$current.innerHTML = $$_15.t(n)
+      T$current.innerHTML = Src_shared_tools_index.t(n)
       T$current.style.width = r.width
       T$current.style.lineHeight = r.lineHeight
       T$current.style.minHeight = r.lineHeight
@@ -100,7 +100,7 @@ var ke = memo(React.forwardRef(function (e, t) {
     value: e$value
   }
   return React.createElement("div", {
-    className: i("coco-textarea", e$className)
+    className: Classnames("coco-textarea", e$className)
   }, React.createElement("textarea", Object.assign({
     ref: w,
     onChange: function (e) {

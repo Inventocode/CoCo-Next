@@ -6,36 +6,36 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_11 from "../11"
-import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
-import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
-import * as s from "../7"
-import * as /* [auto-meaningful-name] */$$_27 from "../27"
-import { useState, useRef, useEffect } from "react"
+import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"../11"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../10/index"
+import * as /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import /* [auto-meaningful-name] */RegeneratorRuntime1 from /* 1 */"regenerator-runtime"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../7"
+import * as /* [auto-meaningful-name] */Module_27 from /* 27 */"../27"
+import { useState, useRef, useEffect } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */Classnames from "classnames"
-import /* [auto-meaningful-name] */Classnames1 from "classnames"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
-import * as /* [auto-meaningful-name] */$$_90 from "../90"
-import * as /* [auto-meaningful-name] */$$_262 from "../262"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_components_index from "../../../../../src/shared/ui/components/index"
-import * as /* [auto-meaningful-name] */$$_75 from "../75"
-import * as /* [auto-meaningful-name] */$$_28_index from "../28/index"
-import * as /* [auto-meaningful-name] */$_672 from "./672"
-import /* [auto-meaningful-name] */$_6721 from "./672"
-import * as /* [auto-meaningful-name] */$$_53 from "../53"
-import * as /* [auto-meaningful-name] */$_673 from "./673"
-import * as /* [auto-meaningful-name] */$_176 from "./176"
-import /* [auto-meaningful-name] */$_1761 from "./176"
+import /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import /* [auto-meaningful-name] */Classnames1 from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Module_90 from /* 90 */"../90"
+import * as /* [auto-meaningful-name] */Module_262 from /* 262 */"../262"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */Module_75 from /* 75 */"../75"
+import * as /* [auto-meaningful-name] */Module_28 from /* 28 */"../28/index"
+import * as /* [auto-meaningful-name] */Module_672 from /* 672 */"./672"
+import /* [auto-meaningful-name] */Module_6721 from /* 672 */"./672"
+import * as /* [auto-meaningful-name] */Module_53 from /* 53 */"../53"
+import * as /* [auto-meaningful-name] */Module_673 from /* 673 */"./673"
+import * as /* [auto-meaningful-name] */Module_176 from /* 176 */"./176"
+import /* [auto-meaningful-name] */Module_1761 from /* 176 */"./176"
 var T = new function e() {
   var t = this
-  $$_27.a(this, e)
+  Module_27.a(this, e)
   this.urlStore = undefined
   this._state = undefined
   this.execute = function () {
-    var e = s.a(RegeneratorRuntime1.mark(function e(n, r) {
+    var e = Module_7.a(RegeneratorRuntime1.mark(function e(n, r) {
       var o
       return RegeneratorRuntime1.wrap(function (e) {
         for (;;) {
@@ -101,19 +101,19 @@ function S(e) {
   var /* [auto-meaningful-name] */e$onLoading = e.onLoading
   var /* [auto-meaningful-name] */e$attributes$url = e$attributes.url
   var /* [auto-meaningful-name] */e$attributes$refreshTimestamp = e$attributes.refreshTimestamp
-  var d = !$$_53.C.test(e$attributes$url)
-  var p = $$_28_index.c(e$attributes$url)
-  var f = $$_28_index.g()
+  var d = !Module_53.C.test(e$attributes$url)
+  var p = Module_28.c(e$attributes$url)
+  var f = Module_28.g()
   if (f) {
-    f = $_673.webviewRefusedUrl.some(function (e) {
+    f = Module_673.webviewRefusedUrl.some(function (e) {
       return e$attributes$url.startsWith(e)
     })
   }
   var h
   var m = e$attributes$url
-  var g = m.startsWith("http://") && !$$_28_index.d()
+  var g = m.startsWith("http://") && !Module_28.d()
   var _ = useState("loading")
-  var b = $$_10_index.a(_, 2)
+  var b = Module_10.a(_, 2)
   var w = b[0]
   var S = b[1]
   var A = useRef(null)
@@ -146,30 +146,30 @@ function S(e) {
   }, [m, g, p])
   if ("error" === w || "http-protocol-error" === w || d || f || p) {
     h = React1.createElement("div", {
-      className: $_1761.fail
+      className: Module_1761.fail
     }, React1.createElement("img", {
-      className: $_1761.image,
-      src: $_6721,
+      className: Module_1761.image,
+      src: Module_6721,
       alt: "failed"
     }), React1.createElement("p", {
-      className: $_1761.title
+      className: Module_1761.title
     }, "加载失败"), d && React1.createElement("span", {
-      className: $_1761.label
+      className: Module_1761.label
     }, "你输入的网址有错误，请输入正确的网址"), !d && f && React1.createElement("span", {
-      className: $_1761.label
+      className: Module_1761.label
     }, "你输入的网址做了限制无法打开，可在手机端正常打开"), !d && !f && "error" === w && React1.createElement("span", {
-      className: $_1761.label
+      className: Module_1761.label
     }, "请检查是否输入正确的网址，", React1.createElement("br", null), "如果网址正确，请尝试在手机端打开"), !d && !f && "http-protocol-error" === w && React1.createElement("span", {
-      className: $_1761.label
+      className: Module_1761.label
     }, "由于浏览器安全策略，http://开头的网址无法在浏览器预览，可在手机端正常打开"), p && React1.createElement("span", {
-      className: $_1761.label
+      className: Module_1761.label
     }, "你输入的网址无法打开"))
   } else {
     if ("loading" === w) {
       h = React1.createElement("div", {
-        className: $_1761.loaderBox
+        className: Module_1761.loaderBox
       }, React1.createElement("div", {
-        className: $_1761.loader
+        className: Module_1761.loader
       }))
     }
   }
@@ -190,13 +190,13 @@ function S(e) {
 }
 function A() {
   return React1.createElement("div", {
-    className: $_1761.placeholderPoster
+    className: Module_1761.placeholderPoster
   }, React1.createElement("div", {
-    className: $_1761.header
-  }, React1.createElement($$_$$_$$_$$_$$_src_shared_ui_components_index.j, {
+    className: Module_1761.header
+  }, React1.createElement(Src_shared_ui_components_index.j, {
     type: "icon-net"
   }), React1.createElement("span", null, "www.codemao.cn")), React1.createElement("div", {
-    className: $_1761.main
+    className: Module_1761.main
   }))
 }
 function I(e) {
@@ -215,26 +215,26 @@ _a = function (e) {
   var /* [auto-meaningful-name] */e$attributes$disabled = e$attributes.disabled
   return React1.createElement("div", {
     id: t,
-    "data-role": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.M,
-    "data-widget-type": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.C,
-    "data-min-width": $$_262.c,
-    "data-max-width": $$_75.e,
-    "data-max-height": $$_75.d,
-    "data-min-height": $$_262.b,
-    className: Classnames1($_1761.webViewWidget, $$_90.b, $$_11.a({}, $_1761.hide, !e$visible)),
+    "data-role": Src_editor_widget_builtIn_types.M,
+    "data-widget-type": Src_editor_widget_builtIn_types.C,
+    "data-min-width": Module_262.c,
+    "data-max-width": Module_75.e,
+    "data-max-height": Module_75.d,
+    "data-min-height": Module_262.b,
+    className: Classnames1(Module_1761.webViewWidget, Module_90.b, Module_11.a({}, Module_1761.hide, !e$visible)),
     style: {
       top: e$position.y,
       left: e$position.x,
       height: e$size.height,
       width: e$size.width,
-      minWidth: "".concat($$_262.c, "px"),
-      minHeight: "".concat($$_262.b, "px"),
-      maxWidth: "".concat($$_75.e, "px"),
-      maxHeight: "".concat($$_75.d, "px"),
+      minWidth: "".concat(Module_262.c, "px"),
+      minHeight: "".concat(Module_262.b, "px"),
+      maxWidth: "".concat(Module_75.e, "px"),
+      maxHeight: "".concat(Module_75.d, "px"),
       opacity: undefined === e$opacity ? undefined : e$opacity / 100
     }
   }, (e$isEditState || e$attributes$disabled) && React1.createElement("div", {
-    className: $_1761.mask
+    className: Module_1761.mask
   }), e$attributes$url ? React1.createElement(S, e) : React1.createElement(A, null))
 }
 export { _a as a }

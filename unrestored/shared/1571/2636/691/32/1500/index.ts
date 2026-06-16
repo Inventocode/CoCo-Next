@@ -6,8 +6,8 @@
 
 "use strict"
 
-var r = require("./1501")
-var i = require("./1502")
+var r = require(/* 1501 */"./1501")
+var i = require(/* 1502 */"./1502")
 var o = setTimeout
 function a(e) {
   return Boolean(e && "undefined" !== typeof e.length)
