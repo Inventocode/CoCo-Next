@@ -1,0 +1,33 @@
+/**
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：937
+ */
+
+.layout {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.header {
+    flex: none;
+    height: 52px;
+    position: relative;
+    z-index: 4;
+}
+
+.body {
+    flex-direction: row;
+    user-select: none;
+    height: calc(100% - 52px);
+}
+
+.body, .main {
+    display: flex;
+    flex: auto;
+    position: relative;
+    z-index: 1;
+}

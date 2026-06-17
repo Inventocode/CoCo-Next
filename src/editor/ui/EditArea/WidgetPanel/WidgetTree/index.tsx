@@ -26,7 +26,7 @@ import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../../../../../.
 import { useSelector, useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
 import { memo, useRef, useState, useEffect } from "react"
-import styles from "../../../../../../unrestored/shared/1571/2636/150"
+import styles from "./styles.module.css"
 
 const WidgetListItem = memo(function (e) {
   var t

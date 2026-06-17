@@ -5,7 +5,7 @@
  */
 
 import { v } from "../../../unrestored/shared/1571/2636/index__part-1"
-import { App, fB, isDevelopment, registerServiceWorker } from "./app"
+import { App, fB, isDevelopment, registerServiceWorker } from "./App"
 import { store } from "../redux/store"
 import * as /* [auto-meaningful-name] */Shared_env from "../../shared/env"
 import { Provider } from "react-redux"

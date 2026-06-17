@@ -6,87 +6,57 @@
 
 import { WidgetTree } from "./WidgetTree"
 import * as /* [auto-meaningful-name] */Module_26 from /* 26 */"../../../../../unrestored/shared/1571/2636/26/index"
-import * as CommonActions from "../../../redux/common/actions"
-import * as /* [auto-meaningful-name] */Shared_ui_components_index from "../../../../shared/ui/components/index"
+import { asyncSelectProjectWidgetAction, setIsHoverBlockAreaAction, setWidgetAttributeVisibleAction } from "../../../redux/common/actions"
+import { IconFont } from "../../../../shared/ui/components"
 import classnames from "classnames"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../../../../../unrestored/shared/1571/2636/710"
-import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../../../../../unrestored/shared/1571/2636/10/index"
 import { useDispatch, useSelector } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { memo, useState, useEffect, useRef } from "react"
-import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */Module_329 from /* 329 */"../../../../../unrestored/shared/1571/2636/329"
-import styles from "../../../../../unrestored/shared/1571/2636/329"
-var Uv = memo(function (e) {
-  var t = e.id
-  var /* [auto-meaningful-name] */e$icon = e.icon
-  var /* [auto-meaningful-name] */e$label = e.label
-  var /* [auto-meaningful-name] */e$color = e.color
-  var /* [auto-meaningful-name] */e$bgColor = e.bgColor
-  var a = useDispatch()
-  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
-  var c = useSelector(function (e) {
-    return e.project.selectedWidgetId
-  })
-  var l = useSelector(function (e) {
-    return e.block.flyoutVisible
-  })
-  var u = useState(false)
-  var d = Module_10.a(u, 2)
-  var p = d[0]
-  var m = d[1]
-  var g = useState("")
-  var v = Module_10.a(g, 2)
-  var b = v[0]
-  var y = v[1]
-  useEffect(function () {
-    y(c === t && l ? e$color : p || c === t && !l ? e$bgColor : "")
-  }, [c, t, l, p, e$color, e$bgColor])
+import React, { memo, useState, useEffect, useRef } from "react"
+import styles from "./styles.module.css"
+
+const ItemBlock = memo(({ id, icon, label, color, bgColor }) => {
+
+  const dispatch = useDispatch()
+  const { formatMessage } = Module_710.a()
+
+  const selectedWidgetId = useSelector((state) => state.project.selectedWidgetId)
+  const flyoutVisible = useSelector((state) => state.block.flyoutVisible)
+  const [p, m] = useState(false)
+  const [backgroundColor, setBackgroundColor] = useState("")
+
+  useEffect(() => {
+    setBackgroundColor(
+      selectedWidgetId === id && flyoutVisible ?
+        color :
+        p || selectedWidgetId === id && !flyoutVisible ? bgColor : ""
+    )
+  }, [selectedWidgetId, id, flyoutVisible, p, color, bgColor])
+
   return <div
-    key={t}
-    className={classnames(styles.itemBlock, c === t && l && styles.itemSelected)}
-    style={{
-      backgroundColor: b
-    }}
-    onClick={function () {
-      var e
-      var n
-      a(CommonActions.ug(t))
-      a(CommonActions.fj(false))
-      if (c === t && l) {
+    key={id}
+    className={classnames(styles.itemBlock, selectedWidgetId === id && flyoutVisible && styles.itemSelected)}
+    style={{ backgroundColor }}
+    onClick={() => {
+      dispatch(asyncSelectProjectWidgetAction(id))
+      dispatch(setWidgetAttributeVisibleAction(false))
+      if (selectedWidgetId === id && flyoutVisible) {
         Module_26.g.setSelectedItem()
-        if (!(null === (e = Module_26.g.getToolbox()) || undefined === e)) {
-          e.flyout.hide()
-        }
+        Module_26.g.getToolbox()?.flyout.hide()
       } else {
-        Module_26.g.setSelectedItem(null === (n = Module_26.g.getToolbox()) || undefined === n ? undefined : n.find_node_by_name(t))
+        Module_26.g.setSelectedItem(Module_26.g.getToolbox()?.find_node_by_name(id))
       }
     }}
-    onMouseEnter={function () {
-      m(true)
-    }}
-    onMouseLeave={function () {
-      m(false)
-    }}
+    onMouseEnter={() => { m(true) }}
+    onMouseLeave={() => { m(false) }}
   >
-    {<div
-      className={styles.itemBlockIcon}
-      style={{
-        color: e$color
-      }}
-    >
-      {<Shared_ui_components_index.j
-        type={e$icon}
-      />}
-    </div>}
-    {<span>
-      {Module_710$a$formatMessage({
-        id: e$label
-      })}
-    </span>}
+    <div className={styles.itemBlockIcon} style={{ color }}>
+      <IconFont type={icon} />
+    </div>
+    <span>{formatMessage({ id: label })}</span>
   </div>
 })
-var Hv = [
+
+const BASIC_BLOCK_BOX = [
   {
     id: "toolbox-event",
     icon: "icon-toolbox-event",
@@ -137,80 +107,48 @@ var Hv = [
     bgColor: "rgba(247,135,103,0.2)"
   }
 ]
-var Vv = memo(function () {
-  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
-  return <div
-    className={styles.basicBlockBox}
-  >
-    {<div
-      className={styles.categoryTitle}
-    >
-      {Module_710$a$formatMessage({
-        id: "basicBlock"
-      })}
-    </div>}
-    {<div
-      className={styles.blockList}
-    >
-      {Hv.map(function (e) {
-        return React.createElement(Uv, Object.assign({
-          key: e.id
-        }, e))
-      })}
-    </div>}
-    {<div
-      className={styles.spaceLine}
-    />}
+
+const BasicBlockBox = memo(() => {
+  const { formatMessage } = Module_710.a()
+  return <div className={styles.basicBlockBox}>
+    <div className={styles.categoryTitle}>{formatMessage({ id: "basicBlock" })}</div>
+    <div className={styles.blockList}>{BASIC_BLOCK_BOX.map((box) => <ItemBlock key={box.id} {...box} />)}</div>
+    <div className={styles.spaceLine} />
   </div>
 })
 
-var zv = memo(function () {
-  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
-  var t = useSelector(function (e) {
-    return e.block.isBlockDragDeleteArea
-  })
-  return <div
-    className={styles.deleteBlockBox}
-  >
-    {<div
-      className={classnames(styles.deleteTopIconBox, t && styles.deleteTopIconBoxOff)}
-    >
-      {<Shared_ui_components_index.j
-        type="icon-delete-top"
-        className={styles.deleteBlockTopIcon}
-      />}
-    </div>}
-    {<div
-      className={styles.deleteBottomIconBox}
-    >
-      {<Shared_ui_components_index.j
-        type="icon-delete-bottom"
-        className={styles.deleteBlockBottomIcon}
-      />}
-    </div>}
-    {<div>
-      {Module_710$a$formatMessage({
-        id: "Workspace.blockDragDeleteAreaTips"
-      })}
-    </div>}
+const DeleteBlockBox = memo(() => {
+
+  const { formatMessage } = Module_710.a()
+  const isBlockDragDeleteArea = useSelector((state) => state.block.isBlockDragDeleteArea)
+
+  return <div className={styles.deleteBlockBox}>
+    <div className={classnames(styles.deleteTopIconBox, isBlockDragDeleteArea && styles.deleteTopIconBoxOff)}>
+      <IconFont type="icon-delete-top" className={styles.deleteBlockTopIcon} />
+    </div>
+    <div className={styles.deleteBottomIconBox}>
+      <IconFont type="icon-delete-bottom" className={styles.deleteBlockBottomIcon} />
+    </div>
+    <div>{formatMessage({ id: "Workspace.blockDragDeleteAreaTips" })}</div>
   </div>
 })
 
 const WidgetPanel = memo(() => {
+
   const dispatch = useDispatch()
   const widgetTreeRef = useRef(null)
   const isBlockDragDeleteArea = useSelector((state) => state.block.isBlockDragDeleteArea)
+
   return <div
     className={styles.wrapper}
-    onMouseEnter={() => dispatch(CommonActions.ui(true))}
-    onMouseLeave={() => dispatch(CommonActions.ui(false))}
+    onMouseEnter={() => dispatch(setIsHoverBlockAreaAction(true))}
+    onMouseLeave={() => dispatch(setIsHoverBlockAreaAction(false))}
   >
-    <div className={styles.basicBlock}>{<Vv />}</div>
+    <div className={styles.basicBlock}>{<BasicBlockBox />}</div>
     <div className={styles.widgetTree} ref={widgetTreeRef}><WidgetTree /></div>
-    <div className={classnames(
-      styles.deleteBlockPanel,
-      isBlockDragDeleteArea && styles.deleteBlockPanelShow
-    )}>{React.createElement(zv, null)}</div>
+    <div className={classnames( styles.deleteBlockPanel, isBlockDragDeleteArea && styles.deleteBlockPanelShow)}>
+      <DeleteBlockBox />
+    </div>
   </div>
 })
 export { WidgetPanel as Yv }

@@ -26,8 +26,7 @@ import * as /* [auto-meaningful-name] */Module_141 from /* 141 */"../../../../..
 import * as /* [auto-meaningful-name] */Module_190 from /* 190 */"../../../../../unrestored/shared/1571/2636/190"
 import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"../../../../../unrestored/shared/1571/2636/18"
 import * as Actions from "../../../redux/common/actions"
-import * as /* [auto-meaningful-name] */Shared_ui_components from "../../../../shared/ui/components"
-import { IconFont } from "../../../../shared/ui/components"
+import { IconFont, Popover } from "../../../../shared/ui/components"
 import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"../../../../../unrestored/shared/1571/2636/11"
 import classnames from "classnames"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../../../../../unrestored/shared/1571/2636/710"
@@ -1608,7 +1607,7 @@ export const ScreenList = React.memo(() => {
     {<div
       className={classnames(styles.stageMask, O && styles.visible)}
     />}
-    {<Shared_ui_components.r
+    {<Popover
       content={G}
       onOpen={() => {
         w(true)
@@ -1634,7 +1633,7 @@ export const ScreenList = React.memo(() => {
           })}
         </span>}
       </div>}
-    </Shared_ui_components.r>}
+    </Popover>}
     {!playing && <div
       className={styles.screenIndexBox}
     >

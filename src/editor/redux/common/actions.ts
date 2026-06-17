@@ -20,7 +20,7 @@ export { g as ej }
 export { SET_FETCH_USER_INFO_DONE as nd }
 export { v as hi }
 export { ASYNC_SET_USER_INFO as wb }
-export { y as wg }
+export { asyncSetUserInfoAction as wg }
 export { OPEN_CONFIRM_DIALOG as Ec }
 export { openConfirmDialogAction as zh }
 export { TOGGLE_PERMISSION_DIALOG as Ke }
@@ -68,12 +68,12 @@ export { pe as Wi }
 export { SET_STAGE_VISIBLE as de }
 export { he as Yi }
 export { SET_IS_HOVER_BLOCK_AREA as Ad }
-export { ge as ui }
+export { setIsHoverBlockAreaAction as ui }
 export { setStageWidthAction as Zi }
 export { SET_BLOCKY_TOOLBOX_PINED as gd }
 export { ye as ci }
 export { SET_WIDGET_ATTRIBUTE_VISIBLE as ie }
-export { Oe as fj }
+export { setWidgetAttributeVisibleAction as fj }
 export { SET_RIGHT_SIDE_ACTIVE_MENU as ae }
 export { Ce as Vi }
 export { SHOW_GRID_DIALOG as ye }
@@ -253,7 +253,7 @@ export { Wr as Mh }
 export { SELECT_PROJECT_WIDGET as bd }
 export { Vr as Xh }
 export { ASYNC_SELECT_PROJECT_WIDGET as ub }
-export { Yr as ug }
+export { asyncSelectProjectWidgetAction as ug }
 export { SET_PROJECT_CURRENT_SCREEN_INDEX as Nd }
 export { qr as Bi }
 export { ASYNC_SET_PROJECT_CURRENT_SCREEN_INDEX as vb }
@@ -575,7 +575,7 @@ function v() {
 }
 
 export const ASYNC_SET_USER_INFO = "ASYNC_SET_USER_INFO"
-function y(e) {
+export function asyncSetUserInfoAction(e) {
   return {
     payload: e,
     type: ASYNC_SET_USER_INFO
@@ -781,10 +781,10 @@ function he(e) {
 }
 
 export const SET_IS_HOVER_BLOCK_AREA = "SET_IS_HOVER_BLOCK_AREA"
-function ge(e) {
+export function setIsHoverBlockAreaAction(isHoverBlockArea: boolean) {
   return {
     type: SET_IS_HOVER_BLOCK_AREA,
-    payload: e
+    payload: isHoverBlockArea
   }
 }
 
@@ -805,10 +805,10 @@ function ye(e) {
 }
 
 export const SET_WIDGET_ATTRIBUTE_VISIBLE = "SET_WIDGET_ATTRIBUTE_VISIBLE"
-function Oe(e) {
+export function setWidgetAttributeVisibleAction(widgetAttributeVisible: boolean) {
   return {
     type: SET_WIDGET_ATTRIBUTE_VISIBLE,
-    payload: e
+    payload: widgetAttributeVisible
   }
 }
 
@@ -1727,11 +1727,11 @@ function Vr(e) {
 }
 
 export const ASYNC_SELECT_PROJECT_WIDGET = "ASYNC_SELECT_PROJECT_WIDGET"
-function Yr(e, t) {
+export function asyncSelectProjectWidgetAction(widgetId: string, isEmitOT?: boolean) {
   return {
     payload: {
-      widgetId: e,
-      isEmitOT: t
+      widgetId: widgetId,
+      isEmitOT: isEmitOT
     },
     type: ASYNC_SELECT_PROJECT_WIDGET
   }

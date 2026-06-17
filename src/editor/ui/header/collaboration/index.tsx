@@ -18,8 +18,7 @@ import * as /* [auto-meaningful-name] */Module_1213 from /* 1213 */"../../../../
 import * as /* [auto-meaningful-name] */Module_97 from /* 97 */"../../../../../unrestored/shared/1571/2636/97"
 import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"../../../../../unrestored/shared/1571/2636/18"
 import * as Actions from "../../../redux/common/actions"
-import * as /* [auto-meaningful-name] */Shared_ui_components from "../../../../shared/ui/components"
-import { CoCoDialog, IconFont } from "../../../../shared/ui/components"
+import { Button, Dialog, IconFont, Popover } from "../../../../shared/ui/components"
 import classnames from "classnames"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../../../../../unrestored/shared/1571/2636/710"
 import * as /* [auto-meaningful-name] */Module_748 from /* 748 */"../../../../../unrestored/shared/1571/2636/748/index"
@@ -301,13 +300,13 @@ var Ct = React.memo(function () {
     <div className={styles.content}>
       {isAuthor && (
         <div className={styles.header}>
-          <Shared_ui_components.d
+          <Button
             className={styles.shareButton}
             onClick={() => share.apply(this, arguments)}
           >
             <IconFont className={styles.invitationIcon} type="icon-ot-invitation" />
             {formatMessage({ id: "OT.inviteFriend" })}
-          </Shared_ui_components.d>
+          </Button>
         </div>
       )}
       <ul className={styles.list}>
@@ -404,7 +403,7 @@ var Ct = React.memo(function () {
   }(), [dispatch, project$id, readOnlyInviteUrl])
   return (
     <div style={{ height: "100%" }}>
-      <Shared_ui_components.r
+      <Popover
         content={F}
         className={styles.oTButton}
         onOpen={() => M(true)}
@@ -422,8 +421,8 @@ var Ct = React.memo(function () {
             <IconFont type="icon-collaborate-active" className={styles.collIcon} />
           </div>
         </Module_748.a>
-      </Shared_ui_components.r>
-      <CoCoDialog
+      </Popover>
+      <Dialog
         className={styles.shareOtDialog}
         visible={b}
         title={formatMessage({ id: "OT.copyCollInvitationUrl" })}
@@ -459,7 +458,7 @@ var Ct = React.memo(function () {
           <div className={styles.text}>{formatMessage({ id: "OT.secure" })}</div>
         </div>
         {G() ? (
-          <Shared_ui_components.d
+          <Button
             className={styles.copy}
             type="primary"
             onClick={() => {
@@ -482,13 +481,13 @@ var Ct = React.memo(function () {
             }}
           >
             {formatMessage({ id: "OT.copyLink" })}
-          </Shared_ui_components.d>
+          </Button>
         ) : (
-          <Shared_ui_components.d className={styles.loadingBtn} type="primary">
+          <Button className={styles.loadingBtn} type="primary">
             <IconFont type="icon-loading2" />
-          </Shared_ui_components.d>
+          </Button>
         )}
-      </CoCoDialog>
+      </Dialog>
     </div>
   )
 })

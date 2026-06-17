@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux"
 
 import { Rn } from "../../../../unrestored/shared/1571/2636/index__part-23"
 import { ScreenList } from "./screen-list"
-import { WidgetTabContainer } from "./widget-list"
+import { WidgetTabContainer } from "./WidgetList"
 import { lo as DragBar } from "../../../../unrestored/shared/1571/2636/index__part-27"
 import { Stage } from "./stage"
 import { StageToast } from "./stage-toast"

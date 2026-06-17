@@ -1,0 +1,108 @@
+/**
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：869
+ */
+
+.coco-button {
+    border: 1px solid #6e4ff4;
+    background-color: #fff;
+    color: #6e4ff4;
+    padding: 0;
+    height: 34px;
+    width: 112px;
+    outline: none;
+    font-size: 14px;
+    white-space: nowrap;
+    display: inline-block;
+    position: relative;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer
+}
+
+.coco-button:not(:disabled):hover {
+    background-color: #f4f1fe
+}
+
+.coco-button:not(:disabled):active {
+    background-color: #ded6ff
+}
+
+.coco-button:disabled {
+    cursor: not-allowed;
+    color: #dddfe5;
+    border-color: #dddfe5
+}
+
+.coco-button-circle {
+    border-radius: 40px
+}
+
+.coco-button-square {
+    border-radius: 4px
+}
+
+.coco-button-primary {
+    background-color: #6e4ff4;
+    color: #fff;
+    border-color: #6e4ff4
+}
+
+.coco-button-primary:not(:disabled):hover {
+    color: #fff;
+    background-color: #5439ce;
+    border-color: #5439ce
+}
+
+.coco-button-primary:not(:disabled):active {
+    color: #fff;
+    background-color: #5118ce;
+    border-color: #5118ce
+}
+
+.coco-button-primary:disabled {
+    color: #fff;
+    border-color: #e2dbff;
+    background-color: #e2dbff
+}
+
+.coco-button-dangerous {
+    color: #fff;
+    background: #f04650;
+    border-color: #f04650
+}
+
+.coco-button-dangerous:not(:disabled):hover {
+    color: #fff;
+    background: #e23a44;
+    border-color: #e23a44
+}
+
+.coco-button-dangerous:not(:disabled):active {
+    color: #fff;
+    background: #cc353e;
+    border-color: #cc353e
+}
+
+.coco-button-dangerous:disabled {
+    color: #fff;
+    border-color: #faa4a9;
+    background-color: #faa4a9
+}
+
+.coco-button-light {
+    border: 1px solid #9fa1b3;
+    background-color: #fff;
+    color: #61626b
+}
+
+.coco-button-light:not(:disabled):hover {
+    background-color: #f5f3fe
+}
+
+.coco-button-light:not(:disabled):active {
+    background-color: #e2dbff;
+    color: #6e4ff4;
+    border-color: #6e4ff4
+}

@@ -13,7 +13,7 @@ import { getCommunityWorkUrl } from "../../../../../shared/tools"
 import * as /* [auto-meaningful-name] */Module_97 from /* 97 */"../../../../../../unrestored/shared/1571/2636/97"
 import * as CommonActions from "../../../../redux/common/actions"
 import * as Components from "../../../../../shared/ui/components"
-import { CoCoDialog, IconFont } from "../../../../../shared/ui/components"
+import { Button, Dialog, IconFont } from "../../../../../shared/ui/components"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../../../../../../unrestored/shared/1571/2636/710"
 import { useSelector, useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
@@ -162,7 +162,7 @@ export const ShareCommunityDialog = memo(({
     }
   }, [visible])
 
-  return <CoCoDialog
+  return <Dialog
     onClose={onClose}
     className={styles.publishDialog}
     visible={visible}
@@ -226,11 +226,11 @@ export const ShareCommunityDialog = memo(({
       </div>
     </main>
     <footer>
-      <Components.d
+      <Button
         type="primary"
         onClick={publish}
         disabled={!publishInfo.name}
-      >{isPublishing ? <Ge /> : formatMessage({ id: "Publish.publish" })}</Components.d>
+      >{isPublishing ? <Ge /> : formatMessage({ id: "Publish.publish" })}</Button>
     </footer>
-  </CoCoDialog>
+  </Dialog>
 })

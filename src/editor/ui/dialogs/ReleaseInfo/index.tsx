@@ -11,7 +11,7 @@ import { useDispatch, useSelector } from "react-redux"
 import * as /* [auto-meaningful-name] */Module_53 from "../../../../../unrestored/shared/1571/2636/53"
 import * as Actions from "../../../redux/common/actions"
 import { IconFont } from "../../../../shared/ui/components"
-import { CoCoDialog } from "../../../../shared/ui/components"
+import { Dialog } from "../../../../shared/ui/components"
 
 import styles from "./style/styles.module.css"
 import changelog from "../../../../../changelog.md"
@@ -75,7 +75,7 @@ export const ReleaseInfo = React.memo(() => {
   }, [hasShown, dispatch, userId, userInfoFetchDone])
 
   return (
-    <CoCoDialog
+    <Dialog
       visible={releaseInfoDialogVisible}
       className={styles.ReleaseInfoDialog}
       onClose={() => dispatch(Actions.showReleaseInfoDialog(false))}
@@ -97,6 +97,6 @@ export const ReleaseInfo = React.memo(() => {
           </div>
         </div>
       </div>
-    </CoCoDialog>
+    </Dialog>
   )
 })
