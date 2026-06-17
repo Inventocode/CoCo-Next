@@ -4,54 +4,51 @@
  * 模块 ID：2636__part-219
  */
 
-import { En } from "./Header/wrapper"
-import { PreviewArea } from "./PreviewArea"
-import { iI, aI } from "../../../unrestored/shared/1571/2636/index__part-170"
-import { lI } from "../../../unrestored/shared/1571/2636/index__part-171"
-import { hI } from "../../../unrestored/shared/1571/2636/index__part-172"
-import { bI } from "../../../unrestored/shared/1571/2636/index__part-173"
-import { BI } from "../../../unrestored/shared/1571/2636/index__part-176"
-import { aj } from "../../../unrestored/shared/1571/2636/index__part-179"
-import { mj } from "../../../unrestored/shared/1571/2636/index__part-180"
-import { rN } from "../../../unrestored/shared/1571/2636/index__part-190"
-import { kM } from "../../../unrestored/shared/1571/2636/index__part-194"
-import { OpenWork } from "./functions/open-work"
-import { dL, pL } from "../../../unrestored/shared/1571/2636/index__part-200"
-import { bL } from "../../../unrestored/shared/1571/2636/index__part-201"
-import { wL } from "../../../unrestored/shared/1571/2636/index__part-202"
-import { AL } from "../../../unrestored/shared/1571/2636/index__part-203"
-import { kL } from "../../../unrestored/shared/1571/2636/index__part-204"
-import { ML } from "./dialogs/download-apk/index"
-import { ReleaseInfo } from "./dialogs/ReleaseInfo/index"
-import { ZL } from "../../../unrestored/shared/1571/2636/index__part-208"
-import { aP } from "../../../unrestored/shared/1571/2636/index__part-210"
-import { _P } from "../../../unrestored/shared/1571/2636/index__part-211"
-import { kP } from "../../../unrestored/shared/1571/2636/index__part-213"
-import { LP } from "../../../unrestored/shared/1571/2636/index__part-214"
-import { zP } from "../../../unrestored/shared/1571/2636/index__part-215"
-import { qP } from "../../../unrestored/shared/1571/2636/index__part-216"
-import { ZP, JP } from "../../../unrestored/shared/1571/2636/index__part-217"
-import { iB } from "../../../unrestored/shared/1571/2636/index__part-218"
-import /* [auto-meaningful-name] */Unrestored_shared_1571_2636_937 from "../../../unrestored/shared/1571/2636/937"
-import * as /* [auto-meaningful-name] */Shared_tools from "../../shared/tools"
-import * as /* [auto-meaningful-name] */Module_97 from /* 97 */"../../../unrestored/shared/1571/2636/97"
-import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"../../../unrestored/shared/1571/2636/18"
-import * as /* [auto-meaningful-name] */Redux_common_actions from "../redux/common/actions"
-import * as Components from "../../shared/ui/components"
-import { CoCoDialog } from "../../shared/ui/components"
+import { Header } from "../Header/wrapper"
+import { PreviewArea } from "../PreviewArea"
+import { iI, aI } from "../../../../unrestored/shared/1571/2636/index__part-170"
+import { lI } from "../../../../unrestored/shared/1571/2636/index__part-171"
+import { hI } from "../../../../unrestored/shared/1571/2636/index__part-172"
+import { bI } from "../../../../unrestored/shared/1571/2636/index__part-173"
+import { BI } from "../../../../unrestored/shared/1571/2636/index__part-176"
+import { aj } from "../../../../unrestored/shared/1571/2636/index__part-179"
+import { mj } from "../../../../unrestored/shared/1571/2636/index__part-180"
+import { rN } from "../../../../unrestored/shared/1571/2636/index__part-190"
+import { kM } from "../../../../unrestored/shared/1571/2636/index__part-194"
+import { OpenWork } from "../functions/open-work"
+import { dL, pL } from "../../../../unrestored/shared/1571/2636/index__part-200"
+import { bL } from "../../../../unrestored/shared/1571/2636/index__part-201"
+import { wL } from "../../../../unrestored/shared/1571/2636/index__part-202"
+import { AL } from "../../../../unrestored/shared/1571/2636/index__part-203"
+import { kL } from "../../../../unrestored/shared/1571/2636/index__part-204"
+import { ML } from "../dialogs/download-apk/index"
+import { ReleaseInfo } from "../dialogs/ReleaseInfo/index"
+import { ZL } from "../../../../unrestored/shared/1571/2636/index__part-208"
+import { aP } from "../../../../unrestored/shared/1571/2636/index__part-210"
+import { _P } from "../../../../unrestored/shared/1571/2636/index__part-211"
+import { kP } from "../../../../unrestored/shared/1571/2636/index__part-213"
+import { LP } from "../../../../unrestored/shared/1571/2636/index__part-214"
+import { zP } from "../../../../unrestored/shared/1571/2636/index__part-215"
+import { qP } from "../../../../unrestored/shared/1571/2636/index__part-216"
+import { ZP, JP } from "../../../../unrestored/shared/1571/2636/index__part-217"
+import { iB } from "../../../../unrestored/shared/1571/2636/index__part-218"
+import styles from "./styles.module.css"
+import * as /* [auto-meaningful-name] */Shared_tools from "../../../shared/tools"
+import * as /* [auto-meaningful-name] */Module_97 from /* 97 */"../../../../unrestored/shared/1571/2636/97"
+import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"../../../../unrestored/shared/1571/2636/18"
+import * as /* [auto-meaningful-name] */Redux_common_actions from "../../redux/common/actions"
+import { Button, Dialog } from "../../../shared/ui/components"
 import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */Shared_ui_language from "../../shared/ui/language"
-import * as /* [auto-meaningful-name] */Module_188 from /* 188 */"../../../unrestored/shared/1571/2636/188"
-import * as /* [auto-meaningful-name] */Module_2681 from /* 2681 */"../../../unrestored/shared/1571/2636/2681/index"
-import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../../../unrestored/shared/1571/2636/7"
+import * as Language from "../../../shared/ui/language"
+import * as /* [auto-meaningful-name] */Module_188 from /* 188 */"../../../../unrestored/shared/1571/2636/188"
+import * as /* [auto-meaningful-name] */Module_2681 from /* 2681 */"../../../../unrestored/shared/1571/2636/2681/index"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../../../../unrestored/shared/1571/2636/7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import { useSelector, useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
 import { memo } from "react"
-import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */Module_816 from /* 816 */"../../../unrestored/shared/1571/2636/816"
-import /* [auto-meaningful-name] */Unrestored_shared_1571_2636_816 from "../../../unrestored/shared/1571/2636/816"
-import "./style/global.css"
+import /* [auto-meaningful-name] */Unrestored_shared_1571_2636_816 from "../../../../unrestored/shared/1571/2636/816"
+import "../style/global.css"
 
 var cB = memo(function () {
   const permissionDialogInfo = useSelector((state) => state.common.permissionDialogInfo)
@@ -75,7 +72,7 @@ var cB = memo(function () {
       imgUrl = "https://static.bcmcdn.com/coco/image/permission_microphone.png"
       tipText = "需要开启麦克风权限能使用环境音量"
   }
-  return <CoCoDialog
+  return <Dialog
     visible={permissionDialogInfo$visible}
     showCloseButton={false}
     withPortal={true}
@@ -89,7 +86,7 @@ var cB = memo(function () {
       <h3>授权提示</h3>
       <span>{tipText}</span>
       {<div className={Classnames(Unrestored_shared_1571_2636_816.dialogButtons)}>
-        <Components.d
+        <Button
           onClick={() => {
             if (permissionDialogInfo$onDeny) {
               permissionDialogInfo$onDeny()
@@ -100,8 +97,8 @@ var cB = memo(function () {
             }))
           }}
           className={Unrestored_shared_1571_2636_816.denyButton}
-        >{c}</Components.d>
-        {<Components.d
+        >{c}</Button>
+        {<Button
           type="primary"
           danger={permissionDialogInfo$isDangerous}
           onClick={function () {
@@ -115,10 +112,10 @@ var cB = memo(function () {
           }}
         >
           {u}
-        </Components.d>}
+        </Button>}
       </div>}
     </div>}
-  </CoCoDialog>
+  </Dialog>
 })
 
 function lB(e) {
@@ -175,83 +172,63 @@ function dB() {
 }
 
 export const App = React.memo(function () {
-  var e = useSelector(function (e) {
-    return e.common.language
-  })
-  var t = useSelector(function (e) {
-    return e.project.styleDialog.visible
-  })
-  var n = useSelector(function (e) {
-    return e.uiConfig.header
-  })
-  var r = undefined !== Shared_tools.parseURLSearchParamsToObject(window.location.href).archiveId
-  return <Module_2681.b
-    locale={e}
-    messages={Shared_ui_language.e[e] || Shared_ui_language.e[Shared_ui_language.b]}
-  >
-    {<div
-      className={Unrestored_shared_1571_2636_937.layout}
-      onDragOver={lB}
-      onDrop={uB}
-    >
+
+  const language = useSelector((state) => state.common.language)
+  const visible = useSelector((state) => state.project.styleDialog.visible)
+  const header = useSelector((state) => state.uiConfig.header)
+  const hasArchiveId = Shared_tools.parseURLSearchParamsToObject(window.location.href).archiveId !== undefined
+
+  return <Module_2681.b locale={language} messages={Language.e[language] || Language.e[Language.zh_CN]}>
+    <div className={styles.layout} onDragOver={lB} onDrop={uB}>
       {React.createElement(dB, null)}
       {React.createElement(aI, null)}
       <OpenWork />
-      {<header
-        className={Unrestored_shared_1571_2636_937.header}
-      >
-        {<En>
-          {<>
+      <header className={styles.header}>
+        <Header>
+          <>
             {React.createElement(dL, null)}
-            {!r && n.projectName !== Module_18.j.Hide && React.createElement(pL, {
-              readonly: n.projectName === Module_18.j.ReadOnly
+            {!hasArchiveId && header.projectName !== Module_18.j.Hide && React.createElement(pL, {
+              readonly: header.projectName === Module_18.j.ReadOnly
             })}
-          </>}
-        </En>}
-      </header>}
-      {<section
-        className={Unrestored_shared_1571_2636_937.body}
-      >
-        <aside>
-          <PreviewArea/>
-        </aside>
-        {<main
-          className={Unrestored_shared_1571_2636_937.main}
-        >
-          {React.createElement(iI, null)}
-        </main>}
-      </section>}
+          </>
+        </Header>
+      </header>
+      <section className={styles.body}>
+        <aside><PreviewArea/></aside>
+        <main className={styles.main}>{React.createElement(iI, null)}</main>
+      </section>
       {React.createElement(lI, null)}
       {React.createElement(hI, null)}
       {React.createElement(rN, null)}
       {React.createElement(bI, null)}
       {React.createElement(cB, null)}
       {React.createElement(mj, null)}
-      {<BI/>}
+      <BI/>
       {React.createElement(aj, null)}
       {React.createElement(kL, null)}
       {React.createElement(wL, null)}
-      {<AL/>}
-      {<ML/>}
+      <AL/>
+      <ML/>
       <ReleaseInfo />
       {React.createElement(aP, null)}
-      {<_P/>}
-      {<ZL/>}
-      {<LP/>}
+      <_P/>
+      <ZL/>
+      <LP/>
       {React.createElement(qP, null)}
-      {t && React.createElement(kM, null)}
+      {visible && React.createElement(kM, null)}
       {React.createElement(bL, null)}
       {React.createElement(kP, null)}
       {React.createElement(zP, null)}
-      {<ZP/>}
-      {<JP/>}
+      <ZP/>
+      <JP/>
       {React.createElement(iB, null)}
-    </div>}
+    </div>
   </Module_2681.b>
 })
+
 var fB = function (e) {
   if (e && e instanceof Function && !Shared_tools.h()) {
-    import("../../../unrestored/shared/1571/2636/3327").then(function (t) {
+    import("../../../../unrestored/shared/1571/2636/3327").then(function (t) {
       var /* [auto-meaningful-name] */t$getCLS = t.getCLS
       var /* [auto-meaningful-name] */t$getFID = t.getFID
       var /* [auto-meaningful-name] */t$getFCP = t.getFCP

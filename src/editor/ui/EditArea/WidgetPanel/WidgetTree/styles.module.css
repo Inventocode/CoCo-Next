@@ -1,0 +1,280 @@
+/**
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：150
+ */
+
+.wrapper {
+    height: 100%;
+    background-color: #fff;
+}
+
+.list {
+    padding: 8px 0;
+    color: #33383d;
+}
+
+.list p {
+    margin: 0;
+}
+
+.list .children {
+    position: relative;
+    margin-left: 35px;
+}
+
+.list .children:before {
+    position: absolute;
+    content: "";
+    top: -5px;
+    left: -10px;
+    width: 10px;
+    height: 23px;
+    border-color: #cdcada;
+    border-style: none none solid solid;
+    border-width: .5px;
+}
+
+.list .children.item {
+    padding-left: 6px;
+}
+
+.list .notLast:after {
+    position: absolute;
+    content: "";
+    left: -10px;
+    bottom: 0;
+    width: 10px;
+    height: 14px;
+    border: .5px #cdcada;
+    border-left-style: solid;
+}
+
+.list .parent {
+    padding-left: 0;
+}
+
+.list .parent .foldIconContainer {
+    display: inline-block;
+}
+
+.list .expanded .foldIconContainer {
+    transform: rotate(90deg);
+}
+
+.list .controlIcon {
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.list .controlIcon:hover {
+    background: #fff;
+}
+
+.list .controlIcon:active {
+    background: #e2dbff;
+}
+
+.list .controlIcon.seeIcon {
+    font-size: 16px;
+}
+
+.item {
+    display: flex;
+    height: 32px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6px 0 12px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin: 0 6px 4px;
+    font-size: 12px;
+}
+
+.item .foldIconContainer {
+    display: none;
+    color: #a6a6a6;
+}
+
+.item .widgetIcon {
+    margin-right: 6px;
+    font-size: 16px;
+    color: #775af4;
+    vertical-align: middle;
+    position: relative;
+    top: -1.3px;
+}
+
+.item .widgetUrlIcon {
+    width: 16px;
+    height: 16px;
+}
+
+.item .left {
+    align-items: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-break: break-all;
+}
+
+.item .left .labelGray {
+    color: #afb0b3;
+}
+
+.item .right {
+    display: none;
+    padding-left: 4px;
+    align-items: center;
+    color: #847da4;
+}
+
+.item:hover {
+    background-color: #f5f3fe;
+}
+
+.item:hover .right {
+    display: flex;
+}
+
+.item.selected {
+    background: #6e4ff4;
+    color: #fff;
+}
+
+.item.selected .foldIconContainer, .item.selected .right, .item.selected .widgetIcon {
+    color: #fff;
+}
+
+.item.selected .controlIcon:hover {
+    background: #5439ce;
+}
+
+.item.selected .controlIcon:active {
+    background: #5118ce;
+}
+
+.item.selectedLight {
+    background: #f5f3fe;
+}
+
+.item.selectedLight .controlIcon:hover {
+    background: #fff;
+}
+
+.item.selectedLight .controlIcon:active {
+    background: #e2dbff;
+}
+
+.anyWidget .widgetIcon {
+    color: #f17544;
+}
+
+.screenItem .attributeIcon {
+    display: none;
+}
+
+.screenItem .screenBottomIcon {
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.screenItem .right {
+    display: flex;
+}
+
+.screenItem:hover .attributeIcon {
+    display: block;
+}
+
+.screenItem:hover .screenBottomIcon {
+    display: none;
+}
+
+.separateLine {
+    width: 80%;
+    height: 0;
+    margin: 5px auto;
+    border-top: 1px solid var(--primary-color-8);
+}
+
+.dragLine {
+    border-bottom: 2px solid #a347ff!important;
+}
+
+.dragLine:after, .dragLine:before {
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-bottom: 8px solid #a347ff;
+    position: absolute;
+}
+
+.dragLine:after {
+    right: 0;
+    transform: translateY(-3px) rotate(-90deg);
+}
+
+.dragLine:before {
+    left: 0;
+    transform: translateY(-3px) rotate(90deg);
+}
+
+.widgetCategory {
+    padding: 0 11px 0 12px;
+    margin: 0 6px 4px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #82778c;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+.widgetCategory .fold, .widgetCategory .unFold {
+    transition: -webkit-transform .3s;
+    transition: transform .3s;
+    transition: transform .3s, -webkit-transform .3s;
+}
+
+.widgetCategory .unFold {
+    transform: rotate(180deg);
+}
+
+.widgetCategory:hover {
+    background-color: #f5f3fe;
+}
+
+.popoverWrapper {
+    width: 150px;
+    padding: 5px 0;
+    background: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .15);
+}
+
+.popoverWrapper .menuItem {
+    padding: 8px 16px;
+    color: var(--dark-text-color-t7);
+    cursor: pointer;
+}
+
+.popoverWrapper .menuItem:hover {
+    background-color: var(--primary-color-8);
+}
+
+.popoverWrapper .delete {
+    color: #f04650;
+}

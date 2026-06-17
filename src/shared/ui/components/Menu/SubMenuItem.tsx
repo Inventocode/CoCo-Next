@@ -4,21 +4,23 @@
  * 模块 ID：13__part-15
  */
 
-"use strict"
+import { MenuItem } from "."
+import * as Tools from "../../../tools"
+import { IconFont } from "../Iconfont"
+import React, { memo, useRef, useState, useMemo, ReactNode } from "react"
+import classnames from "classnames"
+import styles from "../../../../../unrestored/shared/1571/2636/13/318"
 
-import { Ce } from "../../../../../unrestored/shared/1571/2636/13/index__part-14"
-import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"../../../../../unrestored/shared/1571/2636/11"
-import * as Tools from /* 15 */"../../../tools/index"
-import { IconFont } from /* 94 */"../Iconfont/index"
-import /* [auto-meaningful-name] */React from /* 0 */"react"
-import { memo, useRef, useState, useMemo } from /* 0 */"react"
-import classnames from /* 8 */"classnames"
-import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../../../../../unrestored/shared/1571/2636/10/index"
-import styles from /* 318 */"../../../../../unrestored/shared/1571/2636/13/318"
+export interface ISubMenuItemProps {
+  value?: string
+  children?: ReactNode
+  subMenu?: ReactNode
+  onClick?(value: string): void
+}
 
-export const SubMenuItemWrapper = memo(({ value, children, subMenu, onClick }) => {
+export const SubMenuItem = memo(({ value, children, subMenu, onClick }: ISubMenuItemProps) => {
   const elementRef = useRef<HTMLDivElement>(null)
-  const [placement, setPlacement] = useState("right")
+  const [placement, setPlacement] = useState<"left" | "right">("right")
   const [visible, setVisible] = useState(false)
   const b = useMemo(() => Tools.p(setVisible, 100), [])
   return <div
@@ -49,14 +51,14 @@ export const SubMenuItemWrapper = memo(({ value, children, subMenu, onClick }) =
       }
     }}
   >
-    <Ce value={value}>
+    <MenuItem value={value}>
       <div>
         {children}
         {subMenu && <span className={styles.subMenuArrow}>
           <IconFont type="icon-arrow-down" />
         </span>}
       </div>
-    </Ce>
+    </MenuItem>
     {subMenu && <div className={classnames(styles.subMenuOverlay, {
       [styles.visible]: visible,
       [styles.placementLeft]: placement === "left",

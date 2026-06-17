@@ -11,19 +11,7 @@ import ReactDom from "react-dom"
 import "./styles.css"
 import { IconFont } from "../Iconfont"
 
-export const CoCoDialog = memo(({
-  className,
-  style,
-  visible,
-  maskClosable = false,
-  mask = true,
-  onClose,
-  children,
-  showCloseButton = true,
-  withPortal = false,
-  title,
-  footer
-}: {
+export interface IDialogProps {
   className?: classNames.Argument
   style?: CSSProperties
   visible: boolean
@@ -35,7 +23,21 @@ export const CoCoDialog = memo(({
   withPortal?: boolean
   title?: string
   footer?: ReactNode
-}) => {
+}
+
+export const Dialog = memo(({
+  className,
+  style,
+  visible,
+  maskClosable = false,
+  mask = true,
+  onClose,
+  children,
+  showCloseButton = true,
+  withPortal = false,
+  title,
+  footer
+}: IDialogProps) => {
 
   const elementRef = useRef<HTMLDivElement>(null)
   const contentElementRef = useRef<HTMLDivElement>(null)
@@ -116,4 +118,4 @@ export const CoCoDialog = memo(({
   </div>
   return withPortal ? ReactDom.createPortal(node, containerElement) : node
 })
-export { CoCoDialog as a }
+export { Dialog as a }

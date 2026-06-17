@@ -10,17 +10,17 @@
     flex-direction: column;
     position: relative;
     z-index: 2;
-    transition: margin-left .4s
+    transition: margin-left .4s;
 }
 
 .wrapper .side {
     flex: none;
     white-space: nowrap;
-    border-right: 1px solid #dddfe5
+    border-right: 1px solid #dddfe5;
 }
 
 .wrapper .side::-webkit-scrollbar {
-    width: 0
+    width: 0;
 }
 
 .wrapper .mask {
@@ -30,7 +30,7 @@
     top: 0;
     left: 0;
     z-index: 5;
-    background-color: transparent
+    background-color: transparent;
 }
 
 .header {
@@ -41,7 +41,7 @@
     position: relative;
     border-bottom: 1px solid var(--primary-color-7);
     display: flex;
-    align-items: center
+    align-items: center;
 }
 
 .body {
@@ -49,7 +49,7 @@
     flex: 1 1;
     flex-direction: row;
     position: relative;
-    height: 0
+    height: 0;
 }
 
 .main {
@@ -57,7 +57,7 @@
     background-color: #f5f5f5;
     position: relative;
     height: calc(100% - 54px);
-    top: 54px
+    top: 54px;
 }
 
 .stage {
@@ -65,33 +65,31 @@
     height: 100%;
     width: 100%;
     overflow: overlay;
-    -webkit-user-select: none;
-    -ms-user-select: none;
     user-select: none;
     display: flex;
     align-items: center;
-    justify-content: center
+    justify-content: center;
 }
 
 .stage::-webkit-scrollbar {
     width: 10px;
-    height: 10px
+    height: 10px;
 }
 
 .stage::-webkit-scrollbar-thumb {
     border: 2px solid transparent;
     background-clip: padding-box;
-    border-radius: 5px
+    border-radius: 5px;
 }
 
 .stage::-webkit-scrollbar-thumb:hover {
-    border-color: #dddfe5
+    border-color: #dddfe5;
 }
 
 .viewZone {
     position: absolute;
     height: 760px;
-    width: 420px
+    width: 420px;
 }
 
 .appZone {
@@ -99,7 +97,7 @@
     width: 360px;
     position: relative;
     background-color: #fff;
-    box-shadow: 0 2px 6px rgba(26, 15, 41, .3)
+    box-shadow: 0 2px 6px rgba(26, 15, 41, .3);
 }
 
 .dragBar {
@@ -109,11 +107,11 @@
     width: 10px;
     cursor: url(https://creation.codemao.cn/coconut/web/1.22.0-0/static/media/drag-x.2b732b15.svg) 8 8, col-resize;
     z-index: 25;
-    border-right: 1px solid #dddfe5
+    border-right: 1px solid #dddfe5;
 }
 
 .dragBar.active, .dragBar:hover {
-    border-right: 2px solid #c3b5fb
+    border-right: 2px solid #c3b5fb;
 }
 
 .toastWrapper {
@@ -122,7 +120,7 @@
     text-align: center;
     top: 40px;
     left: 0;
-    z-index: 30
+    z-index: 30;
 }
 
 .toastWrapper .toast {
@@ -135,14 +133,14 @@
     display: inline-block;
     width: 260px;
     box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .15);
-    border-radius: 8px
+    border-radius: 8px;
 }
 
 .toastWrapper .toast .icon {
     margin-right: 5px;
     font-size: 20px;
     color: #25cc7d;
-    vertical-align: sub
+    vertical-align: sub;
 }
 
 .stageMask {
@@ -153,15 +151,15 @@
     top: -4000px;
     background: #ff2f2f;
     opacity: .08;
-    z-index: 15
+    z-index: 15;
 }
 
 .isActorDragging {
-    overflow: hidden
+    overflow: hidden;
 }
 
 .isActorDragging [data-widget-type=CANVAS_WIDGET] {
-    z-index: 20
+    z-index: 20;
 }
 
 .foldBtn {
@@ -177,35 +175,35 @@
     background-color: #fff;
     border: 1px solid #dddfe5;
     z-index: 28;
-    cursor: pointer
+    cursor: pointer;
 }
 
 .foldBtn:hover {
     color: #fff;
     background-color: #6e4ff4;
-    border-color: #6e4ff4
+    border-color: #6e4ff4;
 }
 
 .foldBtn:active {
     color: #fff;
     background-color: #5118ce;
-    border-color: #5118ce
+    border-color: #5118ce;
 }
 
 .foldBtn.hide {
     display: none;
     right: -12px;
-    border-radius: 12px
+    border-radius: 12px;
 }
 
 .foldBtn.show {
     right: -24px;
     transform: rotate(180deg);
-    border-radius: 12px 0 0 12px
+    border-radius: 12px 0 0 12px;
 }
 
 .foldBtn.visible {
-    display: flex
+    display: flex;
 }
 
 @keyframes canvasFlashAnimation {
@@ -215,7 +213,7 @@
 
     to {
         outline: 2px solid #d7d0df
-    }
+    };
 }
 
 .canvasFlash {
@@ -223,13 +221,13 @@
     animation-name: canvasFlashAnimation;
     animation-duration: .1s;
     animation-iteration-count: 2;
-    animation-timing-function: ease-in-out
+    animation-timing-function: ease-in-out;
 }
 
 .guideLine {
     background-color: #ffa71a;
     position: absolute;
-    z-index: 10
+    z-index: 10;
 }
 
 .stageReadOnlyMask {
@@ -240,5 +238,5 @@
     height: 100%;
     background: transparent;
     opacity: .08;
-    z-index: 15
+    z-index: 15;
 }

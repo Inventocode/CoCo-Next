@@ -24,7 +24,6 @@ export { F as k }
 export { G as x }
 export { W as y }
 export { H as r }
-export { V as m }
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../../../unrestored/shared/1571/2636/7"
 import { getEnvironment } from "../env"
@@ -379,21 +378,18 @@ function H(e) {
   }
   return t
 }
-function V() {
-  return "https://".concat(function () {
-    var e = getEnvironment()
-    var t = ""
-    if ("development" === e || "dev" === e) {
-      t = "dev-"
-    } else {
-      if ("test" === e) {
-        t = "test-"
-      } else {
-        if ("staging" === e) {
-          t = "staging-"
-        }
-      }
+
+export function getAccountSettingUrl() {
+  return `https://${(() => {
+    const environment = getEnvironment()
+    let prefix = ""
+    if (environment === "development" || environment === "dev") {
+      prefix = "dev-"
+    } else if (environment === "test") {
+      prefix = "test-"
+    } else if (environment === "staging") {
+      prefix = "staging-"
     }
-    return t
-  }(), "shequ.codemao.cn/setting")
+    return prefix
+  })()}shequ.codemao.cn/setting`
 }
