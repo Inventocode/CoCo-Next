@@ -44,7 +44,6 @@
     ],
     "explorer.fileNesting.enabled": true,
     "explorer.fileNesting.patterns": {
-        "*": "${basename}.unrestored.*, ${capture}.unrestored.ts",
         "rspack.common.*": "rspack.*",
         "tsconfig.json": "tsconfig.*.json",
         "package.json": "package-lock.json"
