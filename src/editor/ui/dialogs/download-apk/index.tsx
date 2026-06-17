@@ -7,7 +7,7 @@
 import * as React from "react"
 
 import * as /* [auto-meaningful-name] */Redux_common_actions from "../../../redux/common/actions"
-import { CoCoDialog, IconFont } from "../../../../shared/ui/components"
+import { Dialog, IconFont } from "../../../../shared/ui/components"
 import { useDispatch, useSelector } from "react-redux"
 import styles from "./style/styles.module.css"
 
@@ -19,7 +19,7 @@ var ML = React.memo(() => {
   var /* [auto-meaningful-name] */blockImageDialogInfo$visible = blockImageDialogInfo.visible
   var /* [auto-meaningful-name] */blockImageDialogInfo$imgSrc = blockImageDialogInfo.imgSrc
   return (
-    <CoCoDialog
+    <Dialog
       visible={blockImageDialogInfo$visible}
       className={styles.blockImageDialog}
       onClose={() => {
@@ -40,7 +40,7 @@ var ML = React.memo(() => {
       >
         <IconFont type="icon-download-apk" />
       </div>
-    </CoCoDialog>
+    </Dialog>
   )
 })
 export { ML }

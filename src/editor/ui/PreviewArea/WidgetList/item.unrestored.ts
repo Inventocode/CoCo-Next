@@ -43,7 +43,7 @@ import * as /* [auto-meaningful-name] */Module_686 from /* 686 */"../../../../..
 import * as /* [auto-meaningful-name] */Module_685 from /* 685 */"../../../../../unrestored/shared/1571/2636/685/index"
 import * as /* [auto-meaningful-name] */Module_684 from /* 684 */"../../../../../unrestored/shared/1571/2636/684/index"
 import * as /* [auto-meaningful-name] */Module_683 from /* 683 */"../../../../../unrestored/shared/1571/2636/683"
-import /* [auto-meaningful-name] */Module_196 from /* 196 */"../../../../../unrestored/shared/1571/2636/196"
+import /* [auto-meaningful-name] */Module_196 from /* 196 */"./styles.module.css"
 import * as /* [auto-meaningful-name] */Module_53 from /* 53 */"../../../../../unrestored/shared/1571/2636/53"
 import * as /* [auto-meaningful-name] */Module_238 from /* 238 */"../../../../../unrestored/shared/1571/2636/238"
 import * as /* [auto-meaningful-name] */Widget_builtIn_types from /* 5 */"../../../widget/built-in/types"

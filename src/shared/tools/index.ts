@@ -69,7 +69,7 @@ export { k as A } from "./url"
 export { x as X } from "./url"
 export { y as Y } from "./url"
 export { r as O } from "./url"
-export { m as D } from "./url"
+export { getAccountSettingUrl, getAccountSettingUrl as D } from "./url"
 export { x as G }
 export { D as K }
 export { B as db }

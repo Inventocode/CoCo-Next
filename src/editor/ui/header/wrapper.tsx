@@ -27,10 +27,10 @@ import * as /* [auto-meaningful-name] */Module_97 from /* 97 */"../../../../unre
 import * as /* [auto-meaningful-name] */Module_454 from /* 454 */"../../../../unrestored/shared/1571/2636/454"
 import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"../../../../unrestored/shared/1571/2636/18"
 import * as Actions from "../../redux/common/actions"
-import * as /* [auto-meaningful-name] */Shared_ui_components from "../../../shared/ui/components"
-import { IconFont } from "../../../shared/ui/components"
+import * as Components from "../../../shared/ui/components"
+import { Button, Dropdown, IconFont, Menu, MenuItem } from "../../../shared/ui/components"
 import * as /* [auto-meaningful-name] */Module_627 from /* 627 */"../../../../unrestored/shared/1571/2636/627"
-import /* [auto-meaningful-name] */Classnames from "classnames"
+import classnames from "classnames"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../../../../unrestored/shared/1571/2636/710"
 import { a as Tooltip } from "../../../../unrestored/shared/1571/2636/748/index"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../../../../unrestored/shared/1571/2636/10/index"
@@ -38,44 +38,35 @@ import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../../../../unrest
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import { useDispatch, useSelector } from "react-redux"
 import * as /* [auto-meaningful-name] */Module_47 from /* 47 */"../../../../unrestored/shared/1571/2636/47"
-import * as /* [auto-meaningful-name] */Module_1053 from /* 1053 */"../../../../unrestored/shared/1571/2636/1053"
-
-import styles from "./styles.module.css"
 import cloudSpaceManagerStyles from "../../../../unrestored/shared/1571/2636/1053"
 
+import styles from "./styles.module.css"
+
 function CloudSpaceManager() {
-  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
-  var t = useSelector(function (e) {
-    return e.uiConfig.header
-  })
-  var n = useSelector(function (e) {
-    return e.cloudSpace.cloudDictList
-  })
-  var r = useSelector(function (e) {
-    return e.cloudSpace.cloudTableList
-  })
-  var o = React.useState(false)
-  var i = Module_10.a(o, 2)
-  var a = i[0]
-  var s = i[1]
-  var c = React.useState(false)
-  var l = Module_10.a(c, 2)
-  var u = l[0]
-  var d = l[1]
+
+  const { formatMessage } = Module_710.a()
+
+  const header = useSelector((state) => state.uiConfig.header)
+  const cloudDictList = useSelector((state) => state.cloudSpace.cloudDictList)
+  const cloudTableList = useSelector((state) => state.cloudSpace.cloudTableList)
+
+  const [outWarnLimit, setOutWarnLimit] = React.useState(false)
+  const [outMaxLimit, setOutMaxLimit] = React.useState(false)
+
   React.useEffect(function () {
-    s(false)
-    d(false)
+    setOutWarnLimit(false)
+    setOutMaxLimit(false)
     var e
-    var t = Module_47.a(n)
+    var t = Module_47.a(cloudDictList)
     try {
       for (t.s(); !(e = t.n()).done;) {
         var /* [auto-meaningful-name] */e$value = e.value
         if (e$value.prod_capacity >= Module_9.a * Module_9.c) {
-          d(true)
+          setOutMaxLimit(true)
           break
         }
         if (e$value.prod_capacity >= Module_9.b * Module_9.c) {
-          s(true)
+          setOutWarnLimit(true)
         }
       }
     } catch (l) {
@@ -84,16 +75,16 @@ function CloudSpaceManager() {
       t.f()
     }
     var i
-    var a = Module_47.a(r)
+    var a = Module_47.a(cloudTableList)
     try {
       for (a.s(); !(i = a.n()).done;) {
         var /* [auto-meaningful-name] */i$value = i.value
         if (i$value.prod_capacity >= Module_9.a * Module_9.d) {
-          d(true)
+          setOutMaxLimit(true)
           break
         }
         if (i$value.prod_capacity >= Module_9.b * Module_9.d) {
-          s(true)
+          setOutWarnLimit(true)
         }
       }
     } catch (l) {
@@ -101,48 +92,50 @@ function CloudSpaceManager() {
     } finally {
       a.f()
     }
-  }, [n, r])
-  if (t.cloudSpaceManager === Module_18.j.Hide) {
+  }, [cloudDictList, cloudTableList])
+
+  if (header.cloudSpaceManager === Module_18.j.Hide) {
     return null
   }
-  var p = Module_710$a$formatMessage(u ? {
+
+  const title = formatMessage(outMaxLimit ? {
     id: "cloudSpace.outMaxLimit"
-  } : a ? {
+  } : outWarnLimit ? {
     id: "cloudSpace.outWarnLimit"
   } : {
     id: "cloudSpace.cloudSpace"
   })
-  return (
-    <Tooltip
-      placement="bottom"
-      trigger={["hover"]}
-      title={p}
-      overlayInnerStyle={{ position: "relative", top: -7 }}
+
+  return  <Tooltip
+    placement="bottom"
+    trigger={["hover"]}
+    title={title}
+    overlayInnerStyle={{ position: "relative", top: -7 }}
+  >
+    <div
+      onClick={() => window.open(`${Shared_tools.A()}/`, "_blank")}
+      className={classnames(cloudSpaceManagerStyles.cloudSpaceManager)}
     >
-      <div
-        onClick={() => window.open(`${Shared_tools.A()}/`, "_blank")}
-        className={Classnames(cloudSpaceManagerStyles.cloudSpaceManager)}
-      >
-        {p === Module_710$a$formatMessage({ id: "cloudSpace.outMaxLimit" }) && (
-          <div className={cloudSpaceManagerStyles.cloudIconError}>
-            <IconFont type="icon-cloud-manager-error" />
-          </div>
-        )}
-        {p === Module_710$a$formatMessage({ id: "cloudSpace.outWarnLimit" }) && (
-          <div className={cloudSpaceManagerStyles.cloudIconWarn}>
-            <IconFont type="icon-cloud-manager-warn" />
-          </div>
-        )}
-        {p === Module_710$a$formatMessage({ id: "cloudSpace.cloudSpace" }) && (
-          <div>
-            <IconFont type="icon-cloud-manager-normal" />
-          </div>
-        )}
-      </div>
-    </Tooltip>
-  )
+      {title === formatMessage({ id: "cloudSpace.outMaxLimit" }) && (
+        <div className={cloudSpaceManagerStyles.cloudIconError}>
+          <IconFont type="icon-cloud-manager-error" />
+        </div>
+      )}
+      {title === formatMessage({ id: "cloudSpace.outWarnLimit" }) && (
+        <div className={cloudSpaceManagerStyles.cloudIconWarn}>
+          <IconFont type="icon-cloud-manager-warn" />
+        </div>
+      )}
+      {title === formatMessage({ id: "cloudSpace.cloudSpace" }) && (
+        <div>
+          <IconFont type="icon-cloud-manager-normal" />
+        </div>
+      )}
+    </div>
+  </Tooltip>
 }
-const Header = React.memo(({ children }: { children: JSX.Element }) => {
+
+export const Header = React.memo(({ children }: { children: JSX.Element }) => {
   const dispatch = useDispatch()
   var formatMessage = Module_710.a().formatMessage
   var o = React.useState(false)
@@ -744,71 +737,71 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
         {!le && uiConfig.cutLine === Module_18.j.Show && <div className={styles.logoCutLine} />}
         <div className={styles.menu}>
           {Object.values(uiConfig.file).includes(Module_18.j.Show) && !le && (
-            <Shared_ui_components.g
+            <Dropdown
               className={styles.fileDropdown}
               overlay={
-                <Shared_ui_components.l onClick={Ce}>
+                <Menu onClick={Ce}>
                   {uiConfig.file.newProject === Module_18.j.Show && (
-                    <Shared_ui_components.m value="CREATE_NEW_PROJECT">
+                    <MenuItem value="CREATE_NEW_PROJECT">
                       <div className={styles.itemContent}>
                         {formatMessage({ id: "HeaderDropdown.newProject" })}
                       </div>
-                    </Shared_ui_components.m>
+                    </MenuItem>
                   )}
                   {uiConfig.file.openMyProject === Module_18.j.Show && (
-                    <Shared_ui_components.m value="OPEN_MY_PROJECT">
+                    <MenuItem value="OPEN_MY_PROJECT">
                       <div className={styles.itemContent}>
                         {formatMessage({ id: "HeaderDropdown.openProject" })}
                       </div>
-                    </Shared_ui_components.m>
+                    </MenuItem>
                   )}
                   {showSaveAs && (
-                    <Shared_ui_components.m value="SAVE_AS">
+                    <MenuItem value="SAVE_AS">
                       <div className={styles.itemContent}>
                         {formatMessage({ id: "HeaderDropdown.saveAs" })}
                       </div>
-                    </Shared_ui_components.m>
+                    </MenuItem>
                   )}
                   <div className={styles.line} />
                   {uiConfig.file.showHistory === Module_18.j.Show && isAuthor && (
-                    <Shared_ui_components.m value="HISTORY">
+                    <MenuItem value="HISTORY">
                       <div className={styles.itemContent}>
                         {formatMessage({ id: "HeaderDropdown.history" })}
                       </div>
-                    </Shared_ui_components.m>
+                    </MenuItem>
                   )}
                   {!collWorkId && (
-                    <Shared_ui_components.m value="IMPORT_EXTENSION_WIDGET">
-                      <Shared_ui_components.B
+                    <MenuItem value="IMPORT_EXTENSION_WIDGET">
+                      <Components.B
                         onChange={Ie}
                         accept=".js,.jsx"
-                        className={Classnames(styles.itemUploadButton)}
+                        className={classnames(styles.itemUploadButton)}
                       >
                         {formatMessage({ id: "HeaderDropdown.importExtension" })}
-                      </Shared_ui_components.B>
-                    </Shared_ui_components.m>
+                      </Components.B>
+                    </MenuItem>
                   )}
                   {(showExportLocalFile || showExportLocalFile) && <div className={styles.line} />}
                   {showOpenLocalFile && (
-                    <Shared_ui_components.m value="OPEN_LOCAL_FILE">
-                      <Shared_ui_components.B
+                    <MenuItem value="OPEN_LOCAL_FILE">
+                      <Components.B
                         onChange={Se}
                         onCancel={Ae}
                         accept=".json"
-                        className={Classnames(styles.itemUploadButton)}
+                        className={classnames(styles.itemUploadButton)}
                       >
                         {formatMessage({ id: "HeaderDropdown.openLocalFile" })}
-                      </Shared_ui_components.B>
-                    </Shared_ui_components.m>
+                      </Components.B>
+                    </MenuItem>
                   )}
                   {showExportLocalFile && (
-                    <Shared_ui_components.m value="EXPORT_PROJECT_AS_JSON">
+                    <MenuItem value="EXPORT_PROJECT_AS_JSON">
                       <div className={styles.itemContent}>
                         {formatMessage({ id: "HeaderDropdown.exportProjectAsJson" })}
                       </div>
-                    </Shared_ui_components.m>
+                    </MenuItem>
                   )}
-                </Shared_ui_components.l>
+                </Menu>
               }
             >
               <Tooltip
@@ -822,23 +815,23 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
                   <IconFont className="coco-header-menuIcon" type="icon-file" />
                 </div>
               </Tooltip>
-            </Shared_ui_components.g>
+            </Dropdown>
           )}
           {Object.values(uiConfig.tutorial).includes(Module_18.j.Show) && !le && (
-            <Shared_ui_components.g
+            <Dropdown
               overlay={
-                <Shared_ui_components.l>
+                <Menu>
                   {uiConfig.tutorial.releaseInfo === Module_18.j.Show && (
-                    <Shared_ui_components.m value="courseVideo">
+                    <MenuItem value="courseVideo">
                       <div className={styles.itemLinkContent} onClick={xe}>
                         <span className={styles.link}>
                           {formatMessage({ id: "courseVideo" })}
                         </span>
                       </div>
-                    </Shared_ui_components.m>
+                    </MenuItem>
                   )}
                   {uiConfig.tutorial.tutorial === Module_18.j.Show && (
-                    <Shared_ui_components.m value="tutorial">
+                    <MenuItem value="tutorial">
                       <div className={styles.itemLinkContent}>
                         <a
                           href="https://codemao-guide.yuque.com/bfiekm/sbo5kh"
@@ -849,11 +842,11 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
                           {formatMessage({ id: "seeTutorial" })}
                         </a>
                       </div>
-                    </Shared_ui_components.m>
+                    </MenuItem>
                   )}
                   <div className={styles.line} />
                   {uiConfig.tutorial.feedback === Module_18.j.Show && (
-                    <Shared_ui_components.m value="feedback">
+                    <MenuItem value="feedback">
                       <div className={styles.itemLinkContent}>
                         <a
                           href="https://ozbws9i1yf.feishu.cn/share/base/form/shrcn5xCRSVjUiO4YnIrNRRdUDd"
@@ -864,27 +857,27 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
                           {formatMessage({ id: "feedback" })}
                         </a>
                       </div>
-                    </Shared_ui_components.m>
+                    </MenuItem>
                   )}
                   {uiConfig.tutorial.releaseInfo === Module_18.j.Show && (
-                    <Shared_ui_components.m value="releaseInfo">
+                    <MenuItem value="releaseInfo">
                       <div className={styles.itemLinkContent} onClick={() => dispatch(Actions.showReleaseInfoDialog(true))}>
                         <span className={styles.link}>
                           {formatMessage({ id: "releaseInfo" })}
                         </span>
                       </div>
-                    </Shared_ui_components.m>
+                    </MenuItem>
                   )}
                   {uiConfig.tutorial.about === Module_18.j.Show && (
-                    <Shared_ui_components.m value="aboutUs">
+                    <MenuItem value="aboutUs">
                       <div className={styles.itemLinkContent} onClick={De}>
                         <span className={styles.link}>
                           {formatMessage({ id: "aboutUs" })}
                         </span>
                       </div>
-                    </Shared_ui_components.m>
+                    </MenuItem>
                   )}
-                </Shared_ui_components.l>
+                </Menu>
               }
             >
               <Tooltip
@@ -898,27 +891,27 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
                   <IconFont className="coco-header-menuIcon" type="icon-help-circle-active" />
                 </div>
               </Tooltip>
-            </Shared_ui_components.g>
+            </Dropdown>
           )}
           {Object.values(uiConfig.help).includes(Module_18.j.Show) && !le && (
-            <Shared_ui_components.g
+            <Dropdown
               overlay={
-                <Shared_ui_components.l onClick={je}>
+                <Menu onClick={je}>
                   {uiConfig.help.ruler === Module_18.j.Show && (
-                    <Shared_ui_components.m value="STAGE_RULER">
-                      <div className={Classnames(styles.itemContent, playing && styles.disabled)}>
+                    <MenuItem value="STAGE_RULER">
+                      <div className={classnames(styles.itemContent, playing && styles.disabled)}>
                         {formatMessage(stageRulerVisible ? { id: "HeaderDropdown.hideRuler" } : { id: "HeaderDropdown.showRuler" })}
                       </div>
-                    </Shared_ui_components.m>
+                    </MenuItem>
                   )}
                   {uiConfig.help.stage === Module_18.j.Show && (
-                    <Shared_ui_components.m value="STAGE_AREA">
-                      <div className={Classnames(styles.itemContent, playing && styles.disabled)}>
+                    <MenuItem value="STAGE_AREA">
+                      <div className={classnames(styles.itemContent, playing && styles.disabled)}>
                         {formatMessage(stageVisible ? { id: "HeaderDropdown.hideWidgetAndStage" } : { id: "HeaderDropdown.showWidgetAndStage" })}
                       </div>
-                    </Shared_ui_components.m>
+                    </MenuItem>
                   )}
-                </Shared_ui_components.l>
+                </Menu>
               }
             >
               <Tooltip
@@ -932,7 +925,7 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
                   <IconFont className="coco-header-menuIcon" type="icon-settings" />
                 </div>
               </Tooltip>
-            </Shared_ui_components.g>
+            </Dropdown>
           )}
         </div>
         {!le && uiConfig.cloudDBManager === Module_18.j.Show && (
@@ -944,7 +937,7 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
             overlayInnerStyle={{ position: "relative", top: -7 }}
           >
             <div
-              className={Classnames(styles.iconWrapper, styles.cloudIconWrapper, cloudDBManagerDialogVisible && styles.activeIconWrapper)}
+              className={classnames(styles.iconWrapper, styles.cloudIconWrapper, cloudDBManagerDialogVisible && styles.activeIconWrapper)}
               onClick={() => dispatch(userInfo ? Actions.jj(true) : Actions.openSignInDialogAction())}
             >
               <IconFont type="icon-database-manage-active" className={styles.databaseIcon} />
@@ -957,17 +950,17 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
       <div className={styles.right}>
         {!le && uiConfig.coll === Module_18.j.Show && <div className={styles.otWrapper}><Collaboration /></div>}
         {!le && uiConfig.package === Module_18.j.Show && isAuthor && (
-          <Shared_ui_components.g
+          <Dropdown
             className={styles.shareMenu}
             overlay={
-              <Shared_ui_components.l>
-                <Shared_ui_components.m>
+              <Menu>
+                <MenuItem>
                   <ShareMenuItem target="community" />
-                </Shared_ui_components.m>
-                <Shared_ui_components.m>
+                </MenuItem>
+                <MenuItem>
                   <ShareMenuItem target="others" />
-                </Shared_ui_components.m>
-              </Shared_ui_components.l>
+                </MenuItem>
+              </Menu>
             }
           >
             <Tooltip
@@ -977,11 +970,11 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
               trigger={["hover", "click"]}
               overlayInnerStyle={{ position: "relative", top: -4 }}
             >
-              <div className={Classnames(styles.shareWrapper)}>
+              <div className={classnames(styles.shareWrapper)}>
                 <IconFont type="icon-share" className={styles.icon} />
               </div>
             </Tooltip>
-          </Shared_ui_components.g>
+          </Dropdown>
         )}
         {!le && uiConfig.cutLine === Module_18.j.Show && <div className={styles.cutLine} />}
         {!le && uiConfig.save === Module_18.j.Show && (
@@ -1033,9 +1026,9 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
             trigger={["hover", "click"]}
             overlayInnerStyle={{ position: "relative", top: "8px" }}
           >
-            <Shared_ui_components.d
+            <Button
               onClick={() => save(false, true)}
-              className={Classnames(styles.saveBtn, saving && styles.saving)}
+              className={classnames(styles.saveBtn, saving && styles.saving)}
             >
               <span className={styles.saveText}>
                 {formatMessage({ id: "save" })}
@@ -1043,22 +1036,22 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
               <span className={styles.savingIcon}>
                 <Ge stroke="#6e4ff4" />
               </span>
-            </Shared_ui_components.d>
+            </Button>
           </Tooltip>
         )}
         {!le && uiConfig.package === Module_18.j.Show && isAuthor && (
-          <Shared_ui_components.d
+          <Button
             className={styles.packageBtn}
             onClick={_e}
             disabled={isPackaging}
           >
             {formatMessage({ id: "package" })}
-          </Shared_ui_components.d>
+          </Button>
         )}
         {packageDialogVisible && <Dt />}
         {packageQrCodeVisible && <Gt />}
         {!le && uiConfig.userInfo === Module_18.j.Show && <UserInfo />}
-        <div className={Classnames(styles.saveTipsWrapper, jsonFrom !== Module_18.d.OTHER && ne && !isUpdate && styles.show)}>
+        <div className={classnames(styles.saveTipsWrapper, jsonFrom !== Module_18.d.OTHER && ne && !isUpdate && styles.show)}>
           {formatMessage({ id: "MyProject.newSaveTips" })}
           <div className={styles.closeSaveTips} onClick={() => re(false)}>
             <IconFont type="icon-close" />
@@ -1080,4 +1073,3 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
     </div>
   )
 })
-export { Header as En }

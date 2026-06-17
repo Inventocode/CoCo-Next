@@ -1,0 +1,58 @@
+/**
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：873
+ */
+
+.coco-dropdown-overlay .hide {
+    opacity: 0;
+    max-height: 0;
+    max-width: 0;
+    padding: 0;
+    overflow: hidden;
+    border: none;
+}
+
+.coco-dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.coco-dropdown:hover .coco-dropdown-overlay {
+    opacity: 1;
+    max-height: auto;
+}
+
+.coco-dropdown-overlay {
+    position: absolute;
+    top: 100%;
+    width: 124px;
+    background: #fff;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .15);
+    border-radius: 6px;
+    transition: opacity .1s ease-out;
+}
+
+.coco-dropdown-selector {
+    color: #eddbff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.coco-dropdown-selector:active, .coco-dropdown-selector:hover {
+    color: #fff;
+}
+
+.coco-dropdown-down-icon {
+    font-size: 8px;
+}
+
+.coco-dropdown-active {
+    color: #fff;
+}
+
+.coco-dropdown-active .coco-dropdown-down-icon {
+    transform: rotate(180deg);
+}

@@ -13,10 +13,10 @@
     text-transform: none;
     vertical-align: -.125em;
     text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased
+    -webkit-font-smoothing: antialiased;
 }
 
 .coco-iconfont-spin {
     display: inline-block;
-    animation: loadingCircle 1s linear infinite
+    animation: loadingCircle 1s linear infinite;
 }

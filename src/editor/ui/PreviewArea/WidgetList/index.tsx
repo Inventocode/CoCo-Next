@@ -9,13 +9,13 @@ import * as React from "react"
 import { we as Empty } from "../../../../../unrestored/shared/1571/2636/index__part-6"
 import { WidgetCategoryItem, BuiltInWidgetList } from "./item"
 import * as /* [auto-meaningful-name] */Shared_ui_components_Iconfont_index from "../../../../shared/ui/components/Iconfont/index"
-import /* [auto-meaningful-name] */Unrestored_shared_1571_2636_196 from "../../../../../unrestored/shared/1571/2636/196"
+import styles from "./styles.module.css"
 import * as /* [auto-meaningful-name] */Module_238 from /* 238 */"../../../../../unrestored/shared/1571/2636/238"
 import * as CustomWidgetType from "../../../../shared/widget/custom/type"
 import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"../../../../../unrestored/shared/1571/2636/9"
 import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"../../../../../unrestored/shared/1571/2636/18"
 import * as CommonActions from "../../../redux/common/actions"
-import * as /* [auto-meaningful-name] */Shared_ui_components from "../../../../shared/ui/components"
+import { Button } from "../../../../shared/ui/components"
 import classnames from "classnames"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../../../../../unrestored/shared/1571/2636/710"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../../../../../unrestored/shared/1571/2636/10/index"
@@ -24,33 +24,33 @@ import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import { useDispatch, useSelector } from "react-redux"
 import /* [auto-meaningful-name] */Unrestored_shared_1571_2636_1514 from "../../../../../unrestored/shared/1571/2636/1514"
 
-var WidgetMallButton = React.memo(function (e) {
+const WidgetMallButton = React.memo((props) => {
+
   const { formatMessage } = Module_710.a()
-  var n = useSelector(function (e) {
-    return e.common.userInfo
-  })
-  var r = useDispatch()
+  const userInfo = useSelector((state) => state.common.userInfo)
+  const dispatch = useDispatch()
+
   return (
-    <Shared_ui_components.d
-      className={Unrestored_shared_1571_2636_196.widgetMallBtn}
+    <Button
+      className={styles.widgetMallBtn}
       onClick={() => {
         const e = () => {
-          r(CommonActions.gj(true))
+          dispatch(CommonActions.gj(true))
         }
-        if (n) {
+        if (userInfo) {
           e()
         } else {
-          r(CommonActions.Ch(e))
+          dispatch(CommonActions.Ch(e))
         }
       }}
     >
-      <Shared_ui_components_Iconfont_index.a type="icon-shop" className={Unrestored_shared_1571_2636_196.shopIcon} />
-      {!e.singleColumn && <span>{formatMessage({ id: "Widget.widgetMall" })}</span>}
-    </Shared_ui_components.d>
+      <Shared_ui_components_Iconfont_index.a type="icon-shop" className={styles.shopIcon} />
+      {!props.singleColumn && <span>{formatMessage({ id: "Widget.widgetMall" })}</span>}
+    </Button>
   )
 })
 
-var WidgetScrollExtension = React.memo(function (e) {
+const WidgetScrollExtension = React.memo(function (e) {
   var t = useSelector(function (e) {
     return e.common.myExtensionWidgets
   })
@@ -125,10 +125,10 @@ var WidgetScrollExtension = React.memo(function (e) {
     }
   }, [unsafeExtensions, o, i])
   return <>
-    <div className={Unrestored_shared_1571_2636_196.scrollExtension}>
+    <div className={styles.scrollExtension}>
       {!u && g && (
-        <div className={Unrestored_shared_1571_2636_196.noExtensionWidgets}>
-          <div className={Unrestored_shared_1571_2636_196.noExtensionWidgetsWrapper}>
+        <div className={styles.noExtensionWidgets}>
+          <div className={styles.noExtensionWidgetsWrapper}>
             {!e.singleColumn && (
               <Empty
                 type="image-text"
@@ -153,12 +153,12 @@ var WidgetScrollExtension = React.memo(function (e) {
         </>
       )}
       {u && (
-        <div className={Unrestored_shared_1571_2636_196.loading} style={{ height: "100%" }}>
+        <div className={styles.loading} style={{ height: "100%" }}>
           <img src={Unrestored_shared_1571_2636_1514} alt="loading" />
         </div>
       )}
     </div>
-    <div className={Unrestored_shared_1571_2636_196.widgetMallBtnContainer}>
+    <div className={styles.widgetMallBtnContainer}>
       {!g && <WidgetMallButton singleColumn={e.singleColumn} />}
     </div>
   </>
@@ -183,14 +183,14 @@ export const WidgetTabContainer = React.memo(function (e) {
   var s = i[1]
   return (
     <div
-      className={classnames(Unrestored_shared_1571_2636_196.tabContainer, e.singleColumn ? Unrestored_shared_1571_2636_196.singleColumn : Unrestored_shared_1571_2636_196.doubleColumn, n && Unrestored_shared_1571_2636_196.readonly)}
+      className={classnames(styles.tabContainer, e.singleColumn ? styles.singleColumn : styles.doubleColumn, n && styles.readonly)}
     >
-      <div className={Unrestored_shared_1571_2636_196.tabNav}>
+      <div className={styles.tabNav}>
         <div
           onClick={() => {
             s(ETab.BASIC)
           }}
-          className={classnames(Unrestored_shared_1571_2636_196.tab, a === ETab.BASIC && Unrestored_shared_1571_2636_196.activeTab)}
+          className={classnames(styles.tab, a === ETab.BASIC && styles.activeTab)}
         >
           <div>{Module_710$a$formatMessage({ id: "Widget.basic" })}</div>
         </div>
@@ -198,16 +198,16 @@ export const WidgetTabContainer = React.memo(function (e) {
           onClick={() => {
             s(ETab.EXTENSION)
           }}
-          className={classnames(Unrestored_shared_1571_2636_196.tab, a === ETab.EXTENSION && Unrestored_shared_1571_2636_196.activeTab)}
+          className={classnames(styles.tab, a === ETab.EXTENSION && styles.activeTab)}
         >
           <div>{Module_710$a$formatMessage({ id: "Widget.extension" })}</div>
         </div>
       </div>
-      <div className={Unrestored_shared_1571_2636_196.tabContent}>
-        <div className={classnames(Unrestored_shared_1571_2636_196.tabContentBox, a !== ETab.BASIC && Unrestored_shared_1571_2636_196.hide)}>
+      <div className={styles.tabContent}>
+        <div className={classnames(styles.tabContentBox, a !== ETab.BASIC && styles.hide)}>
           <BuiltInWidgetList isOT={r} />
         </div>
-        <div className={classnames(Unrestored_shared_1571_2636_196.tabContentBox, a !== ETab.EXTENSION && Unrestored_shared_1571_2636_196.hide)}>
+        <div className={classnames(styles.tabContentBox, a !== ETab.EXTENSION && styles.hide)}>
           <WidgetScrollExtension singleColumn={e.singleColumn} />
         </div>
       </div>

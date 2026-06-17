@@ -6,13 +6,13 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */Src_shared_ui_components_iconfont_index from /* 94 */"../../../../../src/shared/ui/components/Iconfont/index"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_iconfont_index from /* 94 */"../Iconfont/index"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
 import { memo, useRef, useImperativeHandle } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
-import * as /* [auto-meaningful-name] */Src_shared_ui_components_dialog_index from /* 540 */"../../../../../src/shared/ui/components/Dialog/index"
-import /* 869 */"./869"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_dialog_index from /* 540 */"../Dialog/index"
+import /* 869 */"./styles.css"
 var J = memo(React.forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$type = e.type
   var /* [auto-meaningful-name] */e$icon = e.icon

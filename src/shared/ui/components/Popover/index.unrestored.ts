@@ -10,7 +10,7 @@ import /* [auto-meaningful-name] */React from /* 0 */"react"
 import { memo, forwardRef, useState, useRef, useEffect, useLayoutEffect, useImperativeHandle } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
-import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../10/index"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../../../../../unrestored/shared/1571/2636/10/index"
 import /* 867 */"./867"
 var Q = memo(forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$children = e.children

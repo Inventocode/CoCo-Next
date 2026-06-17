@@ -78,8 +78,8 @@ import * as /* [auto-meaningful-name] */ReactDom from "react-dom"
 import /* [auto-meaningful-name] */ReactDom1 from "react-dom"
 import * as /* [auto-meaningful-name] */Classnames from "classnames"
 import /* [auto-meaningful-name] */Classnames1 from "classnames"
-import * as /* [auto-meaningful-name] */Shared_ui_components from "../../../shared/ui/components"
-import { CoCoDialog } from "../../../shared/ui/components"
+import * as Components from "../../../shared/ui/components"
+import { Button, Dialog } from "../../../shared/ui/components"
 import * as /* [auto-meaningful-name] */Module_266 from /* 266 */"../../../../unrestored/shared/1571/2636/266"
 import /* [auto-meaningful-name] */Module_2661 from /* 266 */"../../../../unrestored/shared/1571/2636/266"
 import * as /* [auto-meaningful-name] */Module_188 from /* 188 */"../../../../unrestored/shared/1571/2636/188"
@@ -105,7 +105,7 @@ var No = function (e) {
       e$onConfirm()
     }
   }
-  return <CoCoDialog
+  return <Dialog
     visible={true}
     showCloseButton={false}
     withPortal={true}
@@ -124,7 +124,7 @@ var No = function (e) {
     <div
       className={Classnames1(Module_2661.dialogButtons)}
     >
-      {p && <Shared_ui_components.d
+      {p && <Button
         type="light"
         onClick={function () {
           if (e$onCancel) {
@@ -133,8 +133,8 @@ var No = function (e) {
         }}
       >
         {e$cancelText}
-      </Shared_ui_components.d>}
-      {e$denyText && <Shared_ui_components.d
+      </Button>}
+      {e$denyText && <Button
         onClick={function () {
           if (e$onDeny) {
             e$onDeny()
@@ -143,16 +143,16 @@ var No = function (e) {
         className={Module_2661.denyButton}
       >
         {e$denyText}
-      </Shared_ui_components.d>}
-      {h && <Shared_ui_components.d
+      </Button>}
+      {h && <Button
         type="primary"
         danger={e$isDangerous}
         onClick={_}
       >
         {e$allowText}
-      </Shared_ui_components.d>}
+      </Button>}
     </div>
-  </CoCoDialog>
+  </Dialog>
 }
 var Ro = new (function () {
   function e() {
@@ -4078,7 +4078,7 @@ function* generatePlayerData(isPlayCurrentScreen: boolean, debug?: boolean) {
   const globalObjectList = yield ReduxSagaEffects.f(Module_22.l)
   const globalWidgetIds = yield ReduxSagaEffects.f(Module_22.n)
   const currentScreen = yield ReduxSagaEffects.f(Module_22.f)
-  const apiToken = yield ReduxSagaEffects.f(Module_22.v)
+  let apiToken = yield ReduxSagaEffects.f(Module_22.v)
   if (!currentScreen) {
     return
   }

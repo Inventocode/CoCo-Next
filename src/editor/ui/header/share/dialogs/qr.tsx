@@ -14,7 +14,7 @@ import * as Tools from "../../../../../shared/tools"
 import * as /* [auto-meaningful-name] */Module_97 from /* 97 */"../../../../../../unrestored/shared/1571/2636/97"
 import * as CommonActions from "../../../../redux/common/actions"
 import * as Components from "../../../../../shared/ui/components"
-import { CoCoDialog, IconFont } from "../../../../../shared/ui/components"
+import { Dialog, IconFont } from "../../../../../shared/ui/components"
 import classnames from "classnames"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../../../../../../unrestored/shared/1571/2636/710"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../../../../../../unrestored/shared/1571/2636/10/index"
@@ -185,7 +185,7 @@ export function ShareQRDialog({ visible, onClose }: {
     }
   }, [publish, visible])
 
-  return <CoCoDialog
+  return <Dialog
     onClose={onClose}
     className={styles.shareToOthers}
     title={formatMessage({ id: "Publish.shareToOthers" })}
@@ -301,5 +301,5 @@ export function ShareQRDialog({ visible, onClose }: {
         </div>
       </div>
     </div>
-  </CoCoDialog>
+  </Dialog>
 }
