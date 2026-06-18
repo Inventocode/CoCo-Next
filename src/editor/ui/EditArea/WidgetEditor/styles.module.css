@@ -22,6 +22,18 @@
     transition: left .2s;
 }
 
+/* [CoCo Next] 小屏适配 */
+.wrapper.full {
+    width: 100%;
+    inset: 0;
+    z-index: 10;
+}
+
+.wrapper.hide.full {
+    inset: 0;
+    z-index: 3;
+}
+
 .wrapper .readonly div {
     pointer-events: none;
 }
@@ -61,7 +73,7 @@
     width: 0;
 }
 
-.wrapper .coco-input {
+.wrapper :global(.coco-input) {
     background: #f3f6fa;
     border: none;
 }

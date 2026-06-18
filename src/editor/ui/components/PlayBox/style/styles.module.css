@@ -29,11 +29,17 @@
     border-radius: 17px;
 }
 
+/* [CoCo Next] 侧栏中的运行按钮不显示文本 */
+.playButton.noText {
+    width: 34px;
+    padding: 0;
+}
+
 .playButton:active, .playButton:hover {
     background: #e75115;
 }
 
-.playButton .coco-iconfont {
+.playButton :global(.coco-iconfont) {
     font-size: 20px;
     margin-right: 2px;
 }

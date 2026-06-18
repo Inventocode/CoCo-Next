@@ -217,7 +217,8 @@ const initialState = Immutable.Record<ICommonState>({
   floatMiniIcons: {
     fixedIcons: [],
     temporaryIcons: []
-  }
+  },
+  startCurrentScreen: true
 })()
 
 function T(e, t) {
@@ -519,6 +520,9 @@ function commonReducer(state = initialState, action: Action<any>) {
       return P(state, action)
     case Actions.Sd:
       return B(state, action)
+    // 提取运行位置设置
+    case Actions.SET_START_CURRENT_SCREEN:
+      return state.set("startCurrentScreen", action.payload)
     default:
       return state
   }

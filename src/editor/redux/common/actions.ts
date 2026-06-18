@@ -2910,3 +2910,12 @@ function oc(e) {
     type: REPLACE_ICON_RESOURCE
   }
 }
+
+// 提取运行位置设置
+export const SET_START_CURRENT_SCREEN = "SET_START_CURRENT_SCREEN"
+export function setStartCurrentScreenAction(startCurrentScreen: boolean) {
+  return {
+    payload: startCurrentScreen,
+    type: SET_START_CURRENT_SCREEN
+  }
+}

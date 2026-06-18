@@ -55,6 +55,8 @@ export interface ICommonState extends IUserConfig {
   courseDialogVisible: boolean
   projectSavePrompt: IProjectSavePrompt
   floatMiniIcons: IFloatMiniIcons
+  // [CoCo Next] 提取运行位置设置
+  startCurrentScreen: boolean
 }
 
 export interface IUserConfig {

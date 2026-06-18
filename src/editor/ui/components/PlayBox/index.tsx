@@ -10,7 +10,7 @@ import * as /* [auto-meaningful-name] */Module_53 from /* 53 */"../../../../../u
 import headerStyles from "../../Header/styles.module.css"
 import * as /* [auto-meaningful-name] */Module_141 from /* 141 */"../../../../../unrestored/shared/1571/2636/141/index"
 import * as CommonActions from "../../../redux/common/actions"
-import { asyncPlayProjectAction, promisify, resetDataWatchValueAction, stopPlayingProjectAction } from "../../../redux/common/actions"
+import { asyncPlayProjectAction, promisify, resetDataWatchValueAction, setStartCurrentScreenAction, stopPlayingProjectAction } from "../../../redux/common/actions"
 import * as Components from "../../../../shared/ui/components"
 import { IconFont } from "../../../../shared/ui/components"
 import classNames from "classnames"
@@ -21,24 +21,35 @@ import { useDispatch, useSelector, batch } from "react-redux"
 import React, { useState, useEffect, memo, useRef } from "react"
 import styles from "./style/styles.module.css"
 
-export const PlayBox = React.memo(() => {
+// [CoCo Next] 侧栏中的运行按钮不显示文本
+export interface IPlayBoxProps {
+  showText?: boolean
+}
+
+export const PlayBox = React.memo(({ showText = true }: IPlayBoxProps) => {
 
   const { formatMessage } = Module_710.a()
   const dispatch = useDispatch()
 
-  const [startCurrentScreen, setStartCurrentScreen] = useState(true)
+  // [CoCo Next]
+  // const [startCurrentScreen, setStartCurrentScreen] = useState(true)
+  const startCurrentScreen = useSelector((state) => state.common.startCurrentScreen)
   var playing = useSelector((state) => state.project.playing)
   var screens = useSelector((state) => state.project.screens)
 
   useEffect(() => {
     if (screens.size === 1) {
-      setStartCurrentScreen(true)
+      dispatch(setStartCurrentScreenAction(true))
     }
   }, [screens])
 
   return <div className={styles.playBox}>
     <button
-      className={classNames(styles.playButton, screens.size > 1 && styles.borderLeft)}
+      className={classNames(
+        styles.playButton,
+        showText && screens.size > 1 && styles.borderLeft,
+        /* [CoCo Next] 侧栏中的运行按钮不显示文本 */!showText && styles.noText
+      )}
       onClick={() => {
         if (playing) {
           dispatch(stopPlayingProjectAction())
@@ -49,23 +60,25 @@ export const PlayBox = React.memo(() => {
       }}
     >
       {playing ? <>
-        <IconFont type="icon-stop" />{formatMessage({ id: "stop" })}
+        {/* [CoCo Next] 侧栏中的运行按钮不显示文本 */}
+        <IconFont type="icon-stop" />{showText && formatMessage({ id: "stop" })}
       </> : <>
         <IconFont type={startCurrentScreen ? "icon-start" : "icon-start-first-screen"} />
-        {formatMessage({ id: "play" })}
+        {/* [CoCo Next] 侧栏中的运行按钮不显示文本 */}
+        {showText && formatMessage({ id: "play" })}
       </>}
     </button>
-    {screens.size > 1 && <XM
+    {showText && screens.size > 1 && <XM
       overlayClassName={styles.playMenu}
       placement="bottomLeft"
       overlay={<Menu
         onClick={(event) => {
           switch (event.key) {
             case "START_FIRST_SCREEN":
-              setStartCurrentScreen(false)
+              dispatch(setStartCurrentScreenAction(false))
               break
             case "START_CURRENT_SCREEN":
-              setStartCurrentScreen(true)
+              dispatch(setStartCurrentScreenAction(true))
               break
           }
         }}

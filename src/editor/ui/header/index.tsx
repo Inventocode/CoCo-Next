@@ -28,6 +28,7 @@ import * as /* [auto-meaningful-name] */Module_97 from /* 97 */"../../../../unre
 import * as /* [auto-meaningful-name] */Module_454 from /* 454 */"../../../../unrestored/shared/1571/2636/454"
 import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"../../../../unrestored/shared/1571/2636/18"
 import * as Actions from "../../redux/common/actions"
+import { setStartCurrentScreenAction } from "../../redux/common/actions"
 import * as Components from "../../../shared/ui/components"
 import { Button, Dropdown, IconFont, Menu, MenuItem, SubMenuItem, SubMenuItem } from "../../../shared/ui/components"
 import * as /* [auto-meaningful-name] */Module_627 from /* 627 */"../../../../unrestored/shared/1571/2636/627"
@@ -666,15 +667,18 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
   const [isZoomOut, setIsZoomOut] = useState(false)
 
   var je = function (e) {
-    if (!playing) {
       switch (e) {
         case "STAGE_RULER":
-          dispatch(Actions.Wi(!stageRulerVisible))
+          if (!playing) {
+            dispatch(Actions.Wi(!stageRulerVisible))
+          }
           break
         case "STAGE_AREA":
-          dispatch(Actions.Yi(!stageVisible))
+          if (!playing) {
+            dispatch(Actions.Yi(!stageVisible))
+          }
           break
-        // [CoCo Next] 添加全屏和缩小显示
+        // [CoCo Next] 添加显示设置
         case "FULLSCREEN":
           document.documentElement.requestFullscreen()
           break
@@ -692,8 +696,14 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
           }
           setIsZoomOut(!isZoomOut)
           break
+        // [CoCo Next] 添加运行设置
+        case "PLAY_CURRENT_SCREEN":
+          dispatch(setStartCurrentScreenAction(true))
+          break
+        case "PLAY_FIRST_SCREEN":
+          dispatch(setStartCurrentScreenAction(false))
+          break
       }
-    }
   }
   React.useEffect(function () {
     if (uiConfig.preventLeave === Module_18.j.Show) {
@@ -878,33 +888,58 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
     </Menu>
   )
   const settingMenu = (
-    <Menu onClick={je}>
-      {uiConfig.help.ruler === Module_18.j.Show && (
-        <MenuItem value="STAGE_RULER">
-          <div className={classNames(styles.itemContent, playing && styles.disabled)}>
-            {formatMessage(stageRulerVisible ? { id: "HeaderDropdown.hideRuler" } : { id: "HeaderDropdown.showRuler" })}
-          </div>
-        </MenuItem>
+    <Menu>
+      {/* [CoCo Next] 调整设置 */}
+      {uiConfig.help.ruler === Module_18.j.Show && uiConfig.help.stage === Module_18.j.Show && (
+        <SubMenuItem subMenu={
+          <Menu onClick={je}>
+            {uiConfig.help.ruler === Module_18.j.Show && (
+              <MenuItem value="STAGE_RULER">
+                <div className={classNames(styles.itemContent, playing && styles.disabled)}>
+                  {formatMessage(stageRulerVisible ? { id: "HeaderDropdown.hideRuler" } : { id: "HeaderDropdown.showRuler" })}
+                </div>
+              </MenuItem>
+            )}
+            {uiConfig.help.stage === Module_18.j.Show && (
+              <MenuItem value="STAGE_AREA">
+                <div className={classNames(styles.itemContent, playing && styles.disabled)}>
+                  {formatMessage(stageVisible ? { id: "HeaderDropdown.hideWidgetAndStage" } : { id: "HeaderDropdown.showWidgetAndStage" })}
+                </div>
+              </MenuItem>
+            )}
+          </Menu>
+        }>
+          <div className={styles.itemContent}>{formatMessage({ id: "HeaderDropdown.stage" })}</div>
+        </SubMenuItem>
       )}
-      {uiConfig.help.stage === Module_18.j.Show && (
-        <MenuItem value="STAGE_AREA">
-          <div className={classNames(styles.itemContent, playing && styles.disabled)}>
-            {formatMessage(stageVisible ? { id: "HeaderDropdown.hideWidgetAndStage" } : { id: "HeaderDropdown.showWidgetAndStage" })}
-          </div>
-        </MenuItem>
-      )}
-      {/* [CoCo Next] 添加全屏按钮 */}
-      <MenuItem value="FULLSCREEN">
-        <div className={styles.itemContent}>
-          {formatMessage({ id: "HeaderDropdown.fullscreen" })}
-        </div>
-      </MenuItem>
-      {/* [CoCo Next] 添加缩小显示按钮 */}
-      <MenuItem value="ZOOM_OUT">
-        <div className={styles.itemContent}>
-          {formatMessage(!isZoomOut ? { id: "HeaderDropdown.zoomOut" } : { id: "HeaderDropdown.restoreZoomOut" })}
-        </div>
-      </MenuItem>
+      {/* [CoCo Next] 添加显示设置 */}
+      <SubMenuItem subMenu={
+        <Menu onClick={je}>
+          <MenuItem value="FULLSCREEN">
+            <div className={styles.itemContent}>{formatMessage({ id: "HeaderDropdown.fullscreen" })}</div>
+          </MenuItem>
+          <MenuItem value="ZOOM_OUT">
+            <div className={styles.itemContent}>
+              {formatMessage(!isZoomOut ? { id: "HeaderDropdown.zoomOut" } : { id: "HeaderDropdown.restoreZoomOut" })}
+            </div>
+          </MenuItem>
+        </Menu>
+      }>
+        <div className={styles.itemContent}>{formatMessage({ id: "HeaderDropdown.display" })}</div>
+      </SubMenuItem>
+      {/* [CoCo Next] 添加运行设置 */}
+      <SubMenuItem subMenu={
+        <Menu onClick={je}>
+          <MenuItem value="PLAY_CURRENT_SCREEN">
+            <div className={styles.itemContent}>{formatMessage({ id: "playCurrentScreen" })}</div>
+          </MenuItem>
+          <MenuItem value="PLAY_FIRST_SCREEN">
+            <div className={styles.itemContent}>{formatMessage({ id: "playFirstScreen" })}</div>
+          </MenuItem>
+        </Menu>
+      }>
+        <div className={styles.itemContent}>{formatMessage({ id: "HeaderDropdown.run" })}</div>
+      </SubMenuItem>
     </Menu>
   )
 

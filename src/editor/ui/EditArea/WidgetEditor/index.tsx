@@ -16,6 +16,7 @@ import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../../../../..
 import { useDispatch, useSelector } from /* 16 */"react-redux"
 import React, { memo } from "react"
 import { WidgetStyleForm } from "./WidgetStyleForm"
+import { useInnerWidth } from "../../../../shared/utils/ui/use-inner-width"
 
 export const WidgetEditor = memo(() => {
 
@@ -28,6 +29,11 @@ export const WidgetEditor = memo(() => {
   const blockyToolboxPinned = useSelector((state) => state.common.blockyToolboxPinned)
   const widget = selectedWidgetId ? Module_9.Bb(selectedWidgetId) : undefined
   const readOnly = useSelector((state) => state.uiConfig.widgetEditor) === Module_18.j.ReadOnly
+
+  // [CoCo Next] 小屏适配
+  const innerWidth = useInnerWidth()
+  const stageVisible = useSelector((state) => state.common.stageVisible)
+  const full = stageVisible && innerWidth < 1000
 
   function close() {
     if (!(dispatch(setWidgetAttributeVisibleAction(false)), blockyToolboxPinned)) {
@@ -48,8 +54,8 @@ export const WidgetEditor = memo(() => {
       const { editConfig, icon, childWidgetEditConfig } = widgetTypes
       const finalEditConfig = widget.parentId && childWidgetEditConfig ? childWidgetEditConfig : editConfig
       return <div
-        className={classNames(styles.wrapper, !widgetAttributeVisible && styles.hide)}
-        style={{ bottom: consoleHeight + 8 }}
+        className={classNames(styles.wrapper, !widgetAttributeVisible && styles.hide, full && styles.full)}
+        style={{ bottom: full ? undefined : consoleHeight + 8 }}
       >
         <div className={styles.header}>
           <h3 className={styles.title}>{formatMessage({ id: "property" })}</h3>
@@ -65,8 +71,8 @@ export const WidgetEditor = memo(() => {
   }
 
   return <div
-    className={classNames(styles.wrapper, !widgetAttributeVisible && styles.hide)}
-    style={{ bottom: consoleHeight + 8 }}
+    className={classNames(styles.wrapper, !widgetAttributeVisible && styles.hide, full && styles.full)}
+    style={{ bottom: full ? undefined : consoleHeight + 8 }}
   >
     <div className={styles.header}>
       <h3 className={styles.title}>{formatMessage({ id: "property" })}</h3>

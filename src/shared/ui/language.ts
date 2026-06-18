@@ -447,12 +447,16 @@ var u = Module_6.a(Module_6.a({}, {
   "HeaderDropdown.saveAs": "另存为",
   "HeaderDropdown.history": "还原历史版本",
   "HeaderDropdown.showRuler": "显示标尺",
+  // [CoCo Next] 调整设置
+  "HeaderDropdown.stage": "舞台",
   "HeaderDropdown.hideRuler": "隐藏标尺",
   "HeaderDropdown.showWidgetAndStage": "显示舞台",
   "HeaderDropdown.hideWidgetAndStage": "隐藏舞台",
+  "HeaderDropdown.display": "显示",
   // [CoCo Next] 添加全屏和缩小显示
   "HeaderDropdown.fullscreen": "全屏",
   "HeaderDropdown.zoomOut": "缩小显示",
+  "HeaderDropdown.run": "运行",
   "HeaderDropdown.restoreZoomOut": "正常显示",
   "projectDialog.newProject": "新建作品",
   "projectDialog.myProject": "我的作品",

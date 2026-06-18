@@ -5,6 +5,8 @@
 - 修复触屏设备操作的已知问题。
 - 针对小屏设备优化布局。
 
+目前，小屏布局还存在较多问题。阅读[文档](https://next.ccwidget.top/docs/guide/introduction/small-screen-operation)来了解更多关于小屏设备的操作指南。
+
 ## v1.23.2
 
 - 触屏长按触发拖拽时间延长到 0.4 秒，进一步防止滚动操作被识别为拖拽操作。

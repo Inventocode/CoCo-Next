@@ -30,6 +30,14 @@
     transform: rotate(-180deg);
 }
 
+.fullscreen {
+    opacity: .6;
+}
+
+.fullscreen>img {
+    width: 16px;
+}
+
 .line {
     margin-inline: 16px;
     height: 1px;
