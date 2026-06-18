@@ -61,7 +61,7 @@
     width: 0;
 }
 
-.wrapper .coco-input {
+.wrapper :global(.coco-input) {
     background: #f3f6fa;
     border: none;
 }
