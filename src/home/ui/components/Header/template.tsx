@@ -8,7 +8,7 @@ import { getCommunityAccountSettingUrl } from "../../../../../unrestored/home/ut
 import { sensorsCustomReport } from "../../../../../unrestored/home/sensorsData-yI2H"
 import { loginOut } from "../../../../../unrestored/home/components/api/login-yshM"
 import IconFont from "../../../../../unrestored/home/components/IconFont-zVV7"
-import classnames from "classnames"
+import classNames from "classnames"
 import { Dropdown } from "antd"
 import ReactCSSModules from "react-css-modules"
 import * as React from "react"
@@ -167,7 +167,7 @@ export class HeaderView extends React.Component<HeaderViewProps, HeaderViewState
             overlay={
               <div styleName="dropdown">
                 <div
-                  styleName={classnames("dropdownItem", (!userInfo || userInfo.isNewUser || courseListVisible) && "disabled")}
+                  styleName={classNames("dropdownItem", (!userInfo || userInfo.isNewUser || courseListVisible) && "disabled")}
                   onClick={this.handleShowCourse}
                 >入门教程</div>
                 <div styleName="dropdownItem" onClick={this.handleDocument}>帮助文档</div>

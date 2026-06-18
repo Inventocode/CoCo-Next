@@ -1,0 +1,77 @@
+/**
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：1060
+ */
+
+.wrapper {
+    flex: auto;
+    min-width: 500px;
+    position: relative;
+    background-color: var(--background-color);
+    box-shadow: 0 2px 6px 0 rgba(177, 163, 191, .24);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    height: 48px;
+    border-bottom: 1px solid var(--primary-color-7);
+}
+
+.tabs {
+    padding: 0;
+    margin: 0 0 0 28px;
+}
+
+.tabs .tab {
+    line-height: 40px;
+    display: inline-block;
+    width: 60px;
+    text-align: center;
+    cursor: pointer;
+    margin-right: 45px;
+}
+
+.tabs .tab .text {
+    font-weight: 500;
+    font-size: 16px;
+    color: #82778c;
+    display: inline-block;
+    position: relative;
+}
+
+.tabs .tab.selected .text {
+    font-size: 18px;
+    color: #9429ff;
+}
+
+.tabs .tab.selected .text:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -4px;
+    height: 4px;
+    background-color: #9429ff;
+    border-radius: 2px;
+}
+
+.toolboxMask {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 180px;
+    width: 319px;
+    background-color: #fff;
+    opacity: .92;
+    z-index: 2;
+    transition: left .3s;
+}
+
+.toolboxMask.hide {
+    left: -180px;
+    transition: left .3s;
+}

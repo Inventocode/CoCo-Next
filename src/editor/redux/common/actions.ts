@@ -208,7 +208,7 @@ export { Xn as Ff }
 export { IMPORT_PROJECT_FROM_TO_DOC as Bc }
 export { $n as xh }
 export { ASYNC_PLAY_PROJECT as kb }
-export { tr as kg }
+export { asyncPlayProjectAction as kg }
 export { ASYNC_UPDATE_PROJECT_WIDGET_ATTRIBUTE as Lb }
 export { rr as Kg }
 export { ASYNC_UPDATE_PROJECT_WIDGET_TITLE as Ob }
@@ -261,7 +261,7 @@ export { Qr as vg }
 export { START_PLAYING_PROJECT as Ie }
 export { Jr as Cj }
 export { STOP_PLAYING_PROJECT as Je }
-export { eo as Dj }
+export { stopPlayingProjectAction as Dj }
 export { ASYNC_ADD_PRIMITIVE_VARIABLE as u }
 export { no as uf }
 export { ASYNC_ADD_ARRAY_VARIABLE as o }
@@ -409,7 +409,7 @@ export { Wa as Pj }
 export { DELETE_DATA_WATCH_VARIABLE as gc }
 export { Va as bh }
 export { RESET_DATA_WATCH_VALUE as ad }
-export { Ya as Wh }
+export { resetDataWatchValueAction as Wh }
 export { CLEAR_DATA_WATCH_VALUE as Ub }
 export { qa as Tg }
 export { SET_TABLE_DATA_WATCH_DIALOG as fe }
@@ -1473,7 +1473,7 @@ function $n(e) {
 }
 
 export const ASYNC_PLAY_PROJECT = "ASYNC_PLAY_PROJECT"
-function tr(e) {
+export function asyncPlayProjectAction(e) {
   return {
     payload: {
       isPlayCurrentScreen: e
@@ -1765,7 +1765,7 @@ function Jr() {
 }
 
 export const STOP_PLAYING_PROJECT = "STOP_PLAYING_PROJECT"
-function eo() {
+export function stopPlayingProjectAction() {
   return {
     payload: undefined,
     type: STOP_PLAYING_PROJECT
@@ -2545,7 +2545,7 @@ function Va(e) {
 }
 
 export const RESET_DATA_WATCH_VALUE = "RESET_DATA_WATCH_VALUE"
-function Ya() {
+export function resetDataWatchValueAction() {
   return {
     type: RESET_DATA_WATCH_VALUE,
     payload: undefined

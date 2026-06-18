@@ -7,7 +7,7 @@
 import { memo, useRef, useState, useLayoutEffect, useEffect } from "react"
 import * as React from "react"
 import { useSelector, useDispatch } from "react-redux"
-import classnames from "classnames"
+import classNames from "classnames"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../../../../../unrestored/shared/1571/2636/710"
 import { IconFont } from "../../../../shared/ui/components/index"
 import * as CommonActions from "../../../redux/common/actions"
@@ -98,14 +98,14 @@ export const ContextMenu = memo(() => {
     }}
   >
     <div
-      className={classnames(styles.menuItem)}
+      className={classNames(styles.menuItem)}
       onMouseDown={() => {
         dispatch(CommonActions.Ef(Module_9.w(widgetId)))
       }}
     >{formatMessage({ id: "copyAndPaste" })}</div>
     {![BuiltInWidgetTypes.ACTOR_WIDGET, BuiltInWidgetTypes.BRUSH_WIDGET].includes(widget?.type || "") && (
       <div
-        className={classnames(styles.menuItem, styles.copyTo)}
+        className={classNames(styles.menuItem, styles.copyTo)}
         onMouseEnter={() => { setShowsScreens(true) }}
         onMouseLeave={() => { setShowsScreens(false) }}
       >
@@ -154,7 +154,7 @@ export const ContextMenu = memo(() => {
           dispatch(asyncDeleteProjectWidgetAction(widgetId, currentScreenId))
         }
       }}
-      className={classnames(styles.menuItem, styles.delete)}
+      className={classNames(styles.menuItem, styles.delete)}
     >{formatMessage({ id: "delete" })}</div>
   </div>
 })

@@ -11,7 +11,7 @@ import { formatTimestamp } from "../../../../../unrestored/home/components/utils
 import IconFont from "../../../../../unrestored/home/components/IconFont-zVV7"
 import { config } from "../../../../../unrestored/home/cfg-dpNx"
 import ReactCSSModules from "react-css-modules"
-import classnames from "classnames"
+import classNames from "classnames"
 import { Dropdown } from "antd"
 import * as React from "react"
 import styles from "./styles.module.css"
@@ -179,7 +179,7 @@ export class WorkItemView extends React.Component {
     var { item, workType } = this.props
     return <div styleName="workItem">
       <div
-        styleName={classnames("workImage", item.cover_url && item.preview_url && "cover")}
+        styleName={classNames("workImage", item.cover_url && item.preview_url && "cover")}
         onClick={() => this.handleSelfOpenWork()}
       >
         <div

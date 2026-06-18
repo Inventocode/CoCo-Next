@@ -12,6 +12,7 @@ export interface Widget {
     attributes: Attributes
   }
   editConfig: (EditConfig | EditConfig[])[]
+  childWidgetEditConfig?: (EditConfig | EditConfig[])[]
   isInvisibleWidget: boolean
   blockConfig: BlockConfig
 }

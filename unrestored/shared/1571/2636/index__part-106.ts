@@ -23,8 +23,8 @@ import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
 import { memo, useRef, useEffect, createElement, useLayoutEffect, forwardRef, useState, useCallback, useMemo } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */Module_420 from /* 420 */"./420"
-import /* [auto-meaningful-name] */Module_4201 from /* 420 */"./420"
+import * as /* [auto-meaningful-name] */Module_420 from /* 420 */"../../../../src/editor/ui/EditArea/WidgetEditor/styles.module.css"
+import /* [auto-meaningful-name] */Module_4201 from /* 420 */"../../../../src/editor/ui/EditArea/WidgetEditor/styles.module.css"
 var Sy = memo(function (e) {
   var /* [auto-meaningful-name] */e$formConfig = e.formConfig
   var n = (0, Module_710.a().formatMessage)({

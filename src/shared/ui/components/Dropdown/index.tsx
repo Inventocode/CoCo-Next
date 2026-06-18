@@ -7,7 +7,7 @@
 import { Popover } from "../Popover"
 import { IconFont } from "../Iconfont/index"
 import React, { memo, useState, useRef, ReactNode } from "react"
-import classnames from "classnames"
+import classNames from "classnames"
 import "./styles.css"
 
 export interface IDropdownProps {
@@ -34,7 +34,7 @@ export const Dropdown = memo(({
   }
 
   return <div
-    className={classnames("coco-dropdown", className)}
+    className={classNames("coco-dropdown", className)}
     onClick={() => {
       if (onClick) {
         onClick(!!popoverRef.current?.visible, setVisible)
@@ -54,7 +54,7 @@ export const Dropdown = memo(({
       onClose={() => { setIsActive(false) }}
     >
       <div
-        className={classnames("coco-dropdown-selector", { "coco-dropdown-active": isActive })}
+        className={classNames("coco-dropdown-selector", { "coco-dropdown-active": isActive })}
         onClick={() => {
           if (popoverRef.current?.visible) {
             popoverRef.current?.hideContent()
@@ -64,7 +64,7 @@ export const Dropdown = memo(({
         {children}
         {showDropdownIcon && <IconFont
           type="icon-dropdown-down"
-          className={classnames("coco-dropdown-down-icon")}
+          className={classNames("coco-dropdown-down-icon")}
         />}
       </div>
     </Popover>

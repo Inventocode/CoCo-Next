@@ -16,7 +16,7 @@ import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"../../../../../unr
 import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"../../../../../unrestored/shared/1571/2636/18"
 import * as CommonActions from "../../../redux/common/actions"
 import { Button } from "../../../../shared/ui/components"
-import classnames from "classnames"
+import classNames from "classnames"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../../../../../unrestored/shared/1571/2636/710"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../../../../../unrestored/shared/1571/2636/10/index"
 import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../../../../../unrestored/shared/1571/2636/7"
@@ -183,14 +183,14 @@ export const WidgetTabContainer = React.memo(function (e) {
   var s = i[1]
   return (
     <div
-      className={classnames(styles.tabContainer, e.singleColumn ? styles.singleColumn : styles.doubleColumn, n && styles.readonly)}
+      className={classNames(styles.tabContainer, e.singleColumn ? styles.singleColumn : styles.doubleColumn, n && styles.readonly)}
     >
       <div className={styles.tabNav}>
         <div
           onClick={() => {
             s(ETab.BASIC)
           }}
-          className={classnames(styles.tab, a === ETab.BASIC && styles.activeTab)}
+          className={classNames(styles.tab, a === ETab.BASIC && styles.activeTab)}
         >
           <div>{Module_710$a$formatMessage({ id: "Widget.basic" })}</div>
         </div>
@@ -198,16 +198,16 @@ export const WidgetTabContainer = React.memo(function (e) {
           onClick={() => {
             s(ETab.EXTENSION)
           }}
-          className={classnames(styles.tab, a === ETab.EXTENSION && styles.activeTab)}
+          className={classNames(styles.tab, a === ETab.EXTENSION && styles.activeTab)}
         >
           <div>{Module_710$a$formatMessage({ id: "Widget.extension" })}</div>
         </div>
       </div>
       <div className={styles.tabContent}>
-        <div className={classnames(styles.tabContentBox, a !== ETab.BASIC && styles.hide)}>
+        <div className={classNames(styles.tabContentBox, a !== ETab.BASIC && styles.hide)}>
           <BuiltInWidgetList isOT={r} />
         </div>
-        <div className={classnames(styles.tabContentBox, a !== ETab.EXTENSION && styles.hide)}>
+        <div className={classNames(styles.tabContentBox, a !== ETab.EXTENSION && styles.hide)}>
           <WidgetScrollExtension singleColumn={e.singleColumn} />
         </div>
       </div>

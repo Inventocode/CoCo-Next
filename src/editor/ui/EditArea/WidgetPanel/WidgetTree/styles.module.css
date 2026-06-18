@@ -243,9 +243,7 @@
 }
 
 .widgetCategory .fold, .widgetCategory .unFold {
-    transition: -webkit-transform .3s;
     transition: transform .3s;
-    transition: transform .3s, -webkit-transform .3s;
 }
 
 .widgetCategory .unFold {

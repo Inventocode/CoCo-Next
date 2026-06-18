@@ -11,7 +11,7 @@ import { showCreateDynamicDataDialogAction } from "../../../../../redux/common/a
 import * as Components from /* 13 */"../../../../../../shared/ui/components/index"
 import { IconFont } from "../../../../../../shared/ui/components/index"
 import * as /* [auto-meaningful-name] */Module_25 from /* 25 */"../../../../../../../unrestored/shared/1571/2636/25/index"
-import classnames from /* 8 */"classnames"
+import classNames from /* 8 */"classnames"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../../../../../../../unrestored/shared/1571/2636/710"
 import * as /* [auto-meaningful-name] */Module_748 from /* 748 */"../../../../../../../unrestored/shared/1571/2636/748/index"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../../../../../../../unrestored/shared/1571/2636/10/index"
@@ -367,7 +367,7 @@ export const VariablePanel = memo((props: VariablePanelProps) => {
       return <div />
     }
     return <div
-      className={classnames(styles.itemWrap, y === e$item.id && styles.select)}
+      className={classNames(styles.itemWrap, y === e$item.id && styles.select)}
       id={e$item.id}
       key={e$item.id}
       onClick={() => {
@@ -376,25 +376,25 @@ export const VariablePanel = memo((props: VariablePanelProps) => {
       }}
     >
       <div className={styles.item}>
-        <div className={classnames(styles.name)}>
+        <div className={classNames(styles.name)}>
           {m === e$item.id ? <Components.k
             type="text"
-            className={classnames(styles.nameInput, "".concat("VARIABLE_ID_" + e$item.id))}
+            className={classNames(styles.nameInput, "".concat("VARIABLE_ID_" + e$item.id))}
             maxLength={20}
             defaultValue={e$item.name}
             onBlur={re.bind(null, e$item, e$type)}
             onKeyDown={ie}
           /> : <div
-            className={classnames(styles.nameInputWrapper)}
+            className={classNames(styles.nameInputWrapper)}
           >
             {<div
               onClick={ae.bind(null, e$item.id)}
-              className={classnames(styles.noEditing)}
+              className={classNames(styles.noEditing)}
             >
               {e$item.name}
             </div>}
             {<div
-              className={classnames(styles.itemBtn, styles.delete)}
+              className={classNames(styles.itemBtn, styles.delete)}
               onClick={se.bind(null, e$item, e$type)}
             >
               {<Components.j
@@ -414,7 +414,7 @@ export const VariablePanel = memo((props: VariablePanelProps) => {
               >
                 {variableType === Module_18.b.PRIMITIVE && <Components.j
                   type="icon-fold-left"
-                  className={classnames(styles.itemExpand, l === e$item.id && styles.active)}
+                  className={classNames(styles.itemExpand, l === e$item.id && styles.active)}
                 />}
                 {variableType === Module_18.b.ARRAY && <Components.j
                   type="icon-list"

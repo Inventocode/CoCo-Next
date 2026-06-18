@@ -6,7 +6,7 @@
 
 "use strict"
 
-import { Re } from "../../../../src/editor/ui/dialogs/open-project/MyProject/index"
+import { Re } from "../../../../src/editor/ui/Dialogs/open-project/MyProject/index"
 import * as /* [auto-meaningful-name] */Module_141 from /* 141 */"./141/index"
 import /* [auto-meaningful-name] */Module_525 from /* 525 */"./525"
 import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"./18"
