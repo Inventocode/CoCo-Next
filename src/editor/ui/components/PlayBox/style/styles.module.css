@@ -33,7 +33,7 @@
     background: #e75115;
 }
 
-.playButton .coco-iconfont {
+.playButton :global(.coco-iconfont) {
     font-size: 20px;
     margin-right: 2px;
 }

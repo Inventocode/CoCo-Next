@@ -2966,23 +2966,6 @@
     background-color: #fff !important;
 }
 
-.coco-button {
-    border: 1px solid #6e4ff4;
-    background-color: #fff;
-    color: #6e4ff4;
-    padding: 0;
-    height: 34px;
-    width: 112px;
-    outline: none;
-    font-size: 14px;
-    white-space: nowrap;
-    display: inline-block;
-    position: relative;
-    font-weight: 400;
-    text-align: center;
-    cursor: pointer;
-}
-
 .coco-tree-group-main.hide, .coco-tree-select-list.hide {
     opacity: 0;
     max-height: 0;
