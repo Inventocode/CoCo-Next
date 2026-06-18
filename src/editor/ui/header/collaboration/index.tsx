@@ -19,7 +19,7 @@ import * as /* [auto-meaningful-name] */Module_97 from /* 97 */"../../../../../u
 import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"../../../../../unrestored/shared/1571/2636/18"
 import * as Actions from "../../../redux/common/actions"
 import { Button, Dialog, IconFont, Popover } from "../../../../shared/ui/components"
-import classnames from "classnames"
+import classNames from "classnames"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../../../../../unrestored/shared/1571/2636/710"
 import * as /* [auto-meaningful-name] */Module_748 from /* 748 */"../../../../../unrestored/shared/1571/2636/748/index"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../../../../../unrestored/shared/1571/2636/10/index"
@@ -55,7 +55,7 @@ var PermissionDialog = function (e) {
           >
             <IconFont
               type="icon-selected"
-              className={classnames(styles.icon, e$permission === Module_18.c.Edit && styles.selected)}
+              className={classNames(styles.icon, e$permission === Module_18.c.Edit && styles.selected)}
             />
             <span>{Module_710$a$formatMessage({ id: "OT.dialogCanEdit" })}</span>
           </div>
@@ -65,13 +65,13 @@ var PermissionDialog = function (e) {
           >
             <IconFont
               type="icon-selected"
-              className={classnames(styles.icon, e$permission === Module_18.c.ReadOnly && styles.selected)}
+              className={classNames(styles.icon, e$permission === Module_18.c.ReadOnly && styles.selected)}
             />
             <span>{Module_710$a$formatMessage({ id: "OT.dialogReadOnly" })}</span>
           </div>
           <div
             onClick={() => e.handleRemovePermission(t, c)}
-            className={classnames(styles.item, styles.remove)}
+            className={classNames(styles.item, styles.remove)}
           >
             <span>{Module_710$a$formatMessage({ id: "OT.dialogRemove" })}</span>
           </div>
@@ -93,7 +93,7 @@ var PermissionDialog = function (e) {
       </div>
     </Module_1213.a>
   ) : (
-    <div className={classnames(styles.edit_role, styles.disabled)}>
+    <div className={classNames(styles.edit_role, styles.disabled)}>
       <span>
         {e.permission === Module_18.c.Edit
           ? Module_710$a$formatMessage({ id: "OT.edit" })
@@ -317,7 +317,7 @@ var Ct = React.memo(function () {
           return (
             <li key={t}>
               <div
-                className={classnames(styles.headerPhotoBorder)}
+                className={classNames(styles.headerPhotoBorder)}
                 key={e.id}
                 style={{
                   marginRight: "8px",
@@ -417,7 +417,7 @@ var Ct = React.memo(function () {
           trigger={["hover", "click"]}
           overlayInnerStyle={{ position: "relative", top: -4 }}
         >
-          <div className={classnames(styles.collIconWrapper, D && styles.activeCollIconWrapper)}>
+          <div className={classNames(styles.collIconWrapper, D && styles.activeCollIconWrapper)}>
             <IconFont type="icon-collaborate-active" className={styles.collIcon} />
           </div>
         </Module_748.a>
@@ -432,7 +432,7 @@ var Ct = React.memo(function () {
           <div className={styles.text}>{formatMessage({ id: "OT.expiration" })}</div>
           <div
             onClick={() => W(Module_18.c.Edit)}
-            className={classnames(styles.tab, T === Module_18.c.Edit && styles.selected)}
+            className={classNames(styles.tab, T === Module_18.c.Edit && styles.selected)}
           >
             {formatMessage({ id: "OT.editor" })}
             <span>{formatMessage({ id: "OT.editorRules" })}</span>
@@ -444,7 +444,7 @@ var Ct = React.memo(function () {
           </div>
           <div
             onClick={() => W(Module_18.c.ReadOnly)}
-            className={classnames(styles.tab, T === Module_18.c.ReadOnly && styles.selected)}
+            className={classNames(styles.tab, T === Module_18.c.ReadOnly && styles.selected)}
           >
             {formatMessage({ id: "OT.reader" })}
             <span>{formatMessage({ id: "OT.readerRules" })}</span>

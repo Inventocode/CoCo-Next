@@ -6,7 +6,7 @@
 
 import { IconFont } from "../Iconfont"
 import React, { memo, useRef, useImperativeHandle, MouseEventHandler, ReactNode } from "react"
-import classnames from "classnames"
+import classNames from "classnames"
 import "./styles.css"
 
 export interface IButtonProps {
@@ -39,7 +39,7 @@ export const Button = memo(React.forwardRef(({
 
   return <button
     ref={elementRef}
-    className={classnames("coco-button", function () {
+    className={classNames("coco-button", function () {
       const prefix = "coco-button-"
       return (type ? prefix + type : "") + " " + (danger ? prefix + "dangerous" : "") + " " + (shape ? prefix + shape : "")
     }(), className)}

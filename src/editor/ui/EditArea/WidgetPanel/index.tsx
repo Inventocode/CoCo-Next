@@ -8,7 +8,7 @@ import { WidgetTree } from "./WidgetTree"
 import * as /* [auto-meaningful-name] */Module_26 from /* 26 */"../../../../../unrestored/shared/1571/2636/26/index"
 import { asyncSelectProjectWidgetAction, setIsHoverBlockAreaAction, setWidgetAttributeVisibleAction } from "../../../redux/common/actions"
 import { IconFont } from "../../../../shared/ui/components"
-import classnames from "classnames"
+import classNames from "classnames"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../../../../../unrestored/shared/1571/2636/710"
 import { useDispatch, useSelector } from "react-redux"
 import React, { memo, useState, useEffect, useRef } from "react"
@@ -35,7 +35,7 @@ const ItemBlock = memo(({ id, icon, label, color, bgColor }) => {
 
   return <div
     key={id}
-    className={classnames(styles.itemBlock, selectedWidgetId === id && flyoutVisible && styles.itemSelected)}
+    className={classNames(styles.itemBlock, selectedWidgetId === id && flyoutVisible && styles.itemSelected)}
     style={{ backgroundColor }}
     onClick={() => {
       dispatch(asyncSelectProjectWidgetAction(id))
@@ -124,7 +124,7 @@ const DeleteBlockBox = memo(() => {
   const isBlockDragDeleteArea = useSelector((state) => state.block.isBlockDragDeleteArea)
 
   return <div className={styles.deleteBlockBox}>
-    <div className={classnames(styles.deleteTopIconBox, isBlockDragDeleteArea && styles.deleteTopIconBoxOff)}>
+    <div className={classNames(styles.deleteTopIconBox, isBlockDragDeleteArea && styles.deleteTopIconBoxOff)}>
       <IconFont type="icon-delete-top" className={styles.deleteBlockTopIcon} />
     </div>
     <div className={styles.deleteBottomIconBox}>
@@ -134,7 +134,7 @@ const DeleteBlockBox = memo(() => {
   </div>
 })
 
-const WidgetPanel = memo(() => {
+export const WidgetPanel = memo(() => {
 
   const dispatch = useDispatch()
   const widgetTreeRef = useRef(null)
@@ -144,15 +144,14 @@ const WidgetPanel = memo(() => {
   const innerWidth = useInnerWidth()
 
   return <div
-    className={/* [CoCo Next] 小屏适配 */classnames(styles.wrapper, stageVisible && innerWidth <= 1000 && styles.full)}
+    className={/* [CoCo Next] 小屏适配 */classNames(styles.wrapper, stageVisible && innerWidth <= 1000 && styles.full)}
     onMouseEnter={() => dispatch(setIsHoverBlockAreaAction(true))}
     onMouseLeave={() => dispatch(setIsHoverBlockAreaAction(false))}
   >
     <div className={styles.basicBlock}>{<BasicBlockBox />}</div>
     <div className={styles.widgetTree} ref={widgetTreeRef}><WidgetTree /></div>
-    <div className={classnames( styles.deleteBlockPanel, isBlockDragDeleteArea && styles.deleteBlockPanelShow)}>
+    <div className={classNames( styles.deleteBlockPanel, isBlockDragDeleteArea && styles.deleteBlockPanelShow)}>
       <DeleteBlockBox />
     </div>
   </div>
 })
-export { WidgetPanel as Yv }

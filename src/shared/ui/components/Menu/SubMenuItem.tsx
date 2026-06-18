@@ -8,7 +8,7 @@ import { MenuItem } from "."
 import * as Tools from "../../../tools"
 import { IconFont } from "../Iconfont"
 import React, { memo, useRef, useState, useMemo, ReactNode, useEffect } from "react"
-import classnames from "classnames"
+import classNames from "classnames"
 import styles from "../../../../../unrestored/shared/1571/2636/13/318"
 
 export interface ISubMenuItemProps {
@@ -91,7 +91,7 @@ export const SubMenuItem = memo(({ value, children, subMenu, onClick }: ISubMenu
         </span>}
       </div>
     </MenuItem>
-    {subMenu && <div className={classnames(styles.subMenuOverlay, {
+    {subMenu && <div className={classNames(styles.subMenuOverlay, {
       [styles.visible]: visible,
       [styles.placementLeft]: placement === "left",
       [styles.placementRight]: placement === "right"

@@ -54,7 +54,7 @@ import * as /* [auto-meaningful-name] */Shared_tools from "../../../../shared/to
 import * as /* [auto-meaningful-name] */Module_1213 from /* 1213 */"../../../../../unrestored/shared/1571/2636/1213"
 import * as Actions from "../../../redux/common/actions"
 import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"../../../../../unrestored/shared/1571/2636/11"
-import classnames from "classnames"
+import classNames from "classnames"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../../../../../unrestored/shared/1571/2636/710"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../../../../../unrestored/shared/1571/2636/10/index"
 import * as /* [auto-meaningful-name] */Shared_ui_language from "../../../../shared/ui/language"
@@ -208,7 +208,7 @@ const ConfigItem = React.memo(({
       }
     >
       <div
-        className={classnames(styles.widgetItem, Module_11.a({}, styles.disabled, !hasCanvasWidget || !D))}
+        className={classNames(styles.widgetItem, Module_11.a({}, styles.disabled, !hasCanvasWidget || !D))}
         // [CoCo Next] 触发拖拽时放大控件
         style={{
           transform: isDragging && navigator.maxTouchPoints !== 0 ? "scale(1.2)" : undefined
@@ -420,9 +420,9 @@ export const WidgetCategoryItem = React.memo<{
     return e ? JSON.parse(e) : {}
   }
   return configList.length ? (
-    <div className={classnames(styles.categoryItem, Module_11.a({}, styles.expanded, c))}>
+    <div className={classNames(styles.categoryItem, Module_11.a({}, styles.expanded, c))}>
       <div
-        className={classnames(styles.categoryHeader, window.innerWidth <= 1300 && styles.categoryMinHeader)}
+        className={classNames(styles.categoryHeader, window.innerWidth <= 1300 && styles.categoryMinHeader)}
         onClick={() => {
           l(!c)
           if (Module_53.k.includes(title) && i && !d[title]) {
@@ -433,7 +433,7 @@ export const WidgetCategoryItem = React.memo<{
         }}
       >
         <div className={styles.categoryTitleBox}>
-          <h3 className={classnames(styles.categoryTitle)}>
+          <h3 className={classNames(styles.categoryTitle)}>
             {formatMessage({ id: title })}
           </h3>
           {Module_53.k.includes(title) && p && <div className={styles.newTips}>New</div>}

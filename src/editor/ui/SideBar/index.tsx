@@ -3,7 +3,7 @@ import React, { memo } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import cn from "classnames"
 
-import { dL } from "../../../../unrestored/shared/1571/2636/index__part-200"
+import { PlayBox } from "../components/PlayBox"
 import { IconFont } from "../../../shared/ui/components"
 import * as Actions from "../../redux/common/actions"
 import { setHeaderVisibleAction } from "../../redux/common/actions"
@@ -35,6 +35,6 @@ export const SideBar = memo(() => {
                 <img src={BlockIcon} />
             </div>
         </div>
-        <div className={styles.button}>{React.createElement(dL)}</div>
+        <div className={styles.button}><PlayBox /></div>
     </div>
 })

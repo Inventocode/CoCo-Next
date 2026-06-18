@@ -12,7 +12,7 @@ import { IconFont } from "../../../shared/ui/components"
 import * as /* [auto-meaningful-name] */Module_738 from /* 738 */"../../../../unrestored/shared/1571/2636/738/index"
 import * as /* [auto-meaningful-name] */Module_177 from /* 177 */"../../../../unrestored/shared/1571/2636/177"
 import * as /* [auto-meaningful-name] */Module_514 from /* 514 */"../../../../unrestored/player/2635/2637/514/index"
-import classnames from "classnames"
+import classNames from "classnames"
 import * as /* [auto-meaningful-name] */Module_68 from /* 68 */"../../../../unrestored/shared/1571/2636/68"
 import * as /* [auto-meaningful-name] */Shared_tools from "../../../shared/tools"
 import styles from "../../../../unrestored/player/2635/2637/531"
@@ -124,16 +124,16 @@ export const WebH5Wrapper = React.memo(() => {
   return <div className={styles.community}>
     <div
       id="webPlayer"
-      className={classnames(styles.main)}
+      className={classNames(styles.main)}
       style={{
         transform: gatTransform(scale),
         left: panelIsVisible ? "35%" : "50%"
       }}
     >
-      <div className={classnames(E && styles.vibrate, styles.playerWrapper)}>
+      <div className={classNames(E && styles.vibrate, styles.playerWrapper)}>
         {playerProps && React.createElement(Module_514.a, playerProps)}
       </div>
-      <div className={classnames(E && styles.vibrate, styles.deviceFrame)} />
+      <div className={classNames(E && styles.vibrate, styles.deviceFrame)} />
       <div className={styles.emulatorWrapper}>
         <Module_738.a messageWindow={window} />
       </div>

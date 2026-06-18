@@ -6,7 +6,7 @@
 
 "use strict"
 
-import { nI } from "./index__part-170"
+import { nI } from "../../../../src/editor/ui/EditArea"
 import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
 import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"

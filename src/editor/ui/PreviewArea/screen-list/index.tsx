@@ -28,7 +28,7 @@ import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"../../../../../u
 import * as Actions from "../../../redux/common/actions"
 import { IconFont, Popover } from "../../../../shared/ui/components"
 import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"../../../../../unrestored/shared/1571/2636/11"
-import classnames from "classnames"
+import classNames from "classnames"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../../../../../unrestored/shared/1571/2636/710"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../../../../../unrestored/shared/1571/2636/10/index"
 import { batch, useDispatch, useSelector } from "react-redux"
@@ -137,7 +137,7 @@ var Xr = React.forwardRef(function (e, t) {
     }
   }
   return <input
-    className={classnames(Unrestored_shared_1571_2636_1511.input, e$className, {
+    className={classNames(Unrestored_shared_1571_2636_1511.input, e$className, {
       "coco-input-warning-animation": b
     })}
     ref={w}
@@ -321,7 +321,7 @@ var Jr = React.memo(function (e) {
   }, [e$canEdit])
   return <div
     ref={v}
-    className={classnames(styles.item, Module_11.a({}, styles.selected, e$selected))}
+    className={classNames(styles.item, Module_11.a({}, styles.selected, e$selected))}
     key={e$screen.id}
   >
     {<div
@@ -1605,7 +1605,7 @@ export const ScreenList = React.memo(() => {
     }}
   >
     {<div
-      className={classnames(styles.stageMask, O && styles.visible)}
+      className={classNames(styles.stageMask, O && styles.visible)}
     />}
     {<Popover
       content={G}
@@ -1619,7 +1619,7 @@ export const ScreenList = React.memo(() => {
       ref={n}
     >
       {<div
-        className={classnames(styles.screenIconBox, !playing && styles.line)}
+        className={classNames(styles.screenIconBox, !playing && styles.line)}
       >
         {<IconFont
           type={"icon-screen-manage"}
@@ -1638,7 +1638,7 @@ export const ScreenList = React.memo(() => {
       className={styles.screenIndexBox}
     >
       {<div
-        className={classnames(styles.prev, d <= 0 && styles.hide)}
+        className={classNames(styles.prev, d <= 0 && styles.hide)}
         onClick={function () {
           var /* [auto-meaningful-name] */T$current
           if (!(null === (T$current = T.current) || undefined === T$current)) {
@@ -1655,7 +1655,7 @@ export const ScreenList = React.memo(() => {
         />}
       </div>}
       {<div
-        className={classnames(styles.next, d + v - 108 >= 38 * screens.size && styles.hide)}
+        className={classNames(styles.next, d + v - 108 >= 38 * screens.size && styles.hide)}
         onClick={function () {
           var /* [auto-meaningful-name] */T$current
           if (!(null === (T$current = T.current) || undefined === T$current)) {
@@ -1678,7 +1678,7 @@ export const ScreenList = React.memo(() => {
         {screens.map(function (e, t) {
           return <div
             id={"screen_index_".concat(t)}
-            className={classnames(styles.index, currentScreenIndex === t && styles.active)}
+            className={classNames(styles.index, currentScreenIndex === t && styles.active)}
             key={t}
             onClick={W.bind(null, t)}
           >

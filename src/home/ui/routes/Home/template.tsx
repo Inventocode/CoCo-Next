@@ -12,7 +12,7 @@ import TemplateItem from "../../../../../unrestored/home/components/TemplateItem
 import { config } from "../../../../../unrestored/home/cfg-dpNx"
 import ReactCSSModules from "react-css-modules"
 import { Carousel } from "antd"
-import classnames from "classnames"
+import classNames from "classnames"
 import * as React from "react"
 import styles from "./styles.module.css"
 
@@ -140,20 +140,20 @@ export class HomeView extends React.Component {
     }
     return <div styleName="home" onScroll={/* [CoCo Next] 去除创作盒子阴影 this.handleHomeScroll */undefined} ref={(e) => this.homePageRef = e}>
       {userInfo && !userInfo.isNewUser && (
-        <div styleName={/* [CoCo Next] 去除创作盒子阴影 classnames("createBox", isScrolled && "shadow") */"createBox"}>
+        <div styleName={/* [CoCo Next] 去除创作盒子阴影 classNames("createBox", isScrolled && "shadow") */"createBox"}>
           <div styleName="createItem" onClick={this.handleNavToCocoEditor}>
             <IconFont type="icon-create-app" styleName="createIcon" />
             应用创作
           </div>
-          <div styleName={classnames("createItem", "disabled")}>
+          <div styleName={classNames("createItem", "disabled")}>
             <IconFont type="icon-create-web" styleName="createIcon" />
             网页搭建
             <span styleName="tips">（敬请期待）</span>
           </div>
         </div>
       )}
-      <div styleName={classnames("center", (!userInfo || userInfo.isNewUser) && "newUser")}>
-        <div styleName={classnames("bannerBox", bannerList.length === 0 && "hide")}>
+      <div styleName={classNames("center", (!userInfo || userInfo.isNewUser) && "newUser")}>
+        <div styleName={classNames("bannerBox", bannerList.length === 0 && "hide")}>
           {bannerList.length > 1 && <>
             <div styleName="bannerPrev" onClick={() => this.handlePrevBanner()}>
               <IconFont type="icon-next" />
@@ -180,7 +180,7 @@ export class HomeView extends React.Component {
             ))}
           </Carousel>
         </div>
-        <div styleName={classnames("noticeBox", topicList.length === 0 && "hide")}>
+        <div styleName={classNames("noticeBox", topicList.length === 0 && "hide")}>
           <Carousel
             autoplay={true}
             vertical={true}
@@ -196,7 +196,7 @@ export class HomeView extends React.Component {
             ))}
           </Carousel>
         </div>
-        <div styleName={classnames(
+        <div styleName={classNames(
           "courseBox",
           userInfo && !userInfo.isNewUser && courseListVisible === false && !showCourseAnimation && "hidden",
           showCourseAnimation && "animation"
@@ -206,7 +206,7 @@ export class HomeView extends React.Component {
             {userInfo && !userInfo.isNewUser && (
               <div styleName="finish">
                 <div
-                  styleName={classnames("checkbox", courseListVisible === false && "checked")}
+                  styleName={classNames("checkbox", courseListVisible === false && "checked")}
                   onClick={this.handleHideCourseList}
                 >
                   {courseListVisible === false && <IconFont type="icon-selected" />}
@@ -246,7 +246,7 @@ export class HomeView extends React.Component {
               {newUserTemplateList.map((item, index) => (
                 <div
                   key={item.id}
-                  styleName={classnames("templateItem", this.templateColor[index])}
+                  styleName={classNames("templateItem", this.templateColor[index])}
                   onClick={() => this.handlePreviewTemplate(item.id, item.name)}
                 >
                   <div styleName="imageBox">
@@ -304,7 +304,7 @@ export class HomeView extends React.Component {
               </div>
               <div styleName="pageBtn">
                 <div
-                  styleName={classnames("btnItem")}
+                  styleName={classNames("btnItem")}
                   onClick={() => this.prevTemplate()}
                 >
                   <IconFont type="icon-next" styleName="prev" />

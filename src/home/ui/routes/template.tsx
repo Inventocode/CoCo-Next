@@ -6,7 +6,7 @@
 
 import * as React from "react"
 import { Switch, Route } from "react-router-dom"
-import classnames from "classnames"
+import classNames from "classnames"
 import { Header } from "../components/Header"
 import IconFontSvg from "../../../../unrestored/home/components/IconFont/IconFontSvg-DYHF"
 import { Menu } from "../components/Menu"
@@ -56,7 +56,7 @@ export class ViewRouterComponent extends React.Component<ViewRouterComponentProp
     return <div className={styles.wrapper} style={/* [CoCo Next] 小平适配 { minWidth: "990px" } */{}}>
       <Header />
       <IconFontSvg />
-      <div className={classnames(
+      <div className={classNames(
         styles.content,
         playCourseInfo.visible || courseDialogVisible ? "blur" : ""
       )}>

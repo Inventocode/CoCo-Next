@@ -15,7 +15,7 @@ import * as /* [auto-meaningful-name] */Module_97 from /* 97 */"../../../../../.
 import * as CommonActions from "../../../../redux/common/actions"
 import * as Components from "../../../../../shared/ui/components"
 import { Dialog, IconFont } from "../../../../../shared/ui/components"
-import classnames from "classnames"
+import classNames from "classnames"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../../../../../../unrestored/shared/1571/2636/710"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../../../../../../unrestored/shared/1571/2636/10/index"
 import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../../../../../../unrestored/shared/1571/2636/7"
@@ -229,7 +229,7 @@ export function ShareQRDialog({ visible, onClose }: {
       <div className={styles.shareLinkWrapper}>
         <div className={styles.link}>{link}</div>
         <div
-          className={classnames(styles.copyBtn, isLinkCopied && styles.copied, (isPublishing || isShareInfoChanged || F) && styles.disabled)}
+          className={classNames(styles.copyBtn, isLinkCopied && styles.copied, (isPublishing || isShareInfoChanged || F) && styles.disabled)}
           onClick={handleCopyLink}
         >
           {formatMessage(isLinkCopied ? { id: "Publish.shareLinkCopied" } : { id: "Publish.copyShareLink" })}
@@ -242,12 +242,12 @@ export function ShareQRDialog({ visible, onClose }: {
         <span>{formatMessage({ id: "Publish.moreSettings" })}</span>
         <IconFont
           type="icon-dropdown-down"
-          className={classnames(styles.settingsIcon, d && styles.rotateSettingsIcon)}
+          className={classNames(styles.settingsIcon, d && styles.rotateSettingsIcon)}
         />
       </div>
       <div className={styles.line} />
     </div>
-    <div className={classnames(styles.settingWrapper, !d && styles.invisible)}>
+    <div className={classNames(styles.settingWrapper, !d && styles.invisible)}>
       <div className={styles.workInfo}>
         <ul>
           <li>

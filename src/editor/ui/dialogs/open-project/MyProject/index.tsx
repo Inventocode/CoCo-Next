@@ -19,7 +19,7 @@ import { asyncGetProjectErrorAction, closeProjectDialogAction, openConfirmDialog
 import * as Components from "../../../../../shared/ui/components"
 import { IconFont } from "../../../../../shared/ui/components"
 import * as /* [auto-meaningful-name] */Module_25 from /* 25 */"../../../../../../unrestored/shared/1571/2636/25/index"
-import classnames from "classnames"
+import classNames from "classnames"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../../../../../../unrestored/shared/1571/2636/710"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../../../../../../unrestored/shared/1571/2636/10/index"
 import * as /* [auto-meaningful-name] */Shared_ui_language from "../../../../../shared/ui/language"
@@ -77,7 +77,7 @@ function ProjectItem({
     return e
   }
   return <div
-    className={classnames(styles.item)}
+    className={classNames(styles.item)}
     onClick={() => {
       onClick(project.id, project.name, project.updateTime)
     }}
@@ -486,7 +486,7 @@ const MyProject = React.memo(({ visible, importProjectJson }) => {
         return <div
           key={e}
           onClick={U.bind(null, e)}
-          className={classnames(styles.filterItem, type === e && styles.active)}
+          className={classNames(styles.filterItem, type === e && styles.active)}
         >
           {formatMessage({
             id: "MyProject.".concat(e)

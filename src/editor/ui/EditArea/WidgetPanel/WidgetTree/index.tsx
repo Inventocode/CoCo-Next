@@ -20,7 +20,7 @@ import { asyncCopyWidgetToScreenAction, asyncDeleteProjectWidgetAction, openConf
 import * as Components from "../../../../../shared/ui/components/index"
 import * as /* [auto-meaningful-name] */Module_25 from /* 25 */"../../../../../../unrestored/shared/1571/2636/25/index"
 import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"../../../../../../unrestored/shared/1571/2636/11"
-import classnames from "classnames"
+import classNames from "classnames"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../../../../../../unrestored/shared/1571/2636/710"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../../../../../../unrestored/shared/1571/2636/10/index"
 import { useSelector, useDispatch } from "react-redux"
@@ -173,7 +173,7 @@ const WidgetListItem = memo(function (e) {
       transform: dragType === "polyfill" ? "scale(1.2)" : undefined,
       transition: "transform .1s ease-in-out,box-shadow .1s"
     }}
-    className={classnames(styles.itemWrapper, E)}
+    className={classNames(styles.itemWrapper, E)}
   >
     {<Module_1213.a
       placement="bottomLeft"
@@ -202,7 +202,7 @@ const WidgetListItem = memo(function (e) {
             })}
           </div>}
           {<div
-            className={classnames(styles.menuItem, styles.delete)}
+            className={classNames(styles.menuItem, styles.delete)}
             onMouseDown={G}
           >
             {Module_710$a$formatMessage({
@@ -214,7 +214,7 @@ const WidgetListItem = memo(function (e) {
     >
       {<div
         ref={A}
-        className={classnames(styles.item, (t = {}, Module_11.a(t, styles.selected, e$selected && j), Module_11.a(t, styles.selectedLight, e$selected && !j), Module_11.a(t, styles.children, e$isChildren), Module_11.a(t, styles.parent, !!e$children), Module_11.a(t, styles.expanded, D), Module_11.a(t, styles.notLast, !e$isLast && e$isChildren), t))}
+        className={classNames(styles.item, (t = {}, Module_11.a(t, styles.selected, e$selected && j), Module_11.a(t, styles.selectedLight, e$selected && !j), Module_11.a(t, styles.children, e$isChildren), Module_11.a(t, styles.parent, !!e$children), Module_11.a(t, styles.expanded, D), Module_11.a(t, styles.notLast, !e$isLast && e$isChildren), t))}
         onContextMenu={function (e) {
           e.preventDefault()
           if (!(w || e$type !== BuiltInWidgetTypes.c && e$type !== BuiltInWidgetTypes.a && e$isChildren)) {
@@ -241,7 +241,7 @@ const WidgetListItem = memo(function (e) {
             />}
           </span>}
           {Shared_tools.X(e$icon) ? <img
-            className={classnames(styles.widgetIcon, styles.widgetUrlIcon)}
+            className={classNames(styles.widgetIcon, styles.widgetUrlIcon)}
             src={e$icon}
             alt={e$title}
             draggable={false}
@@ -250,13 +250,13 @@ const WidgetListItem = memo(function (e) {
             className={styles.widgetIcon}
           />}
           {<span
-            className={classnames(styles.label, !e$visible && styles.labelGray)}
+            className={classNames(styles.label, !e$visible && styles.labelGray)}
           >
             {e$title}
           </span>}
         </div>}
         {<div
-          className={/* [CoCo Next] 触屏适配 */classnames(
+          className={/* [CoCo Next] 触屏适配 */classNames(
             styles.right,
             navigator.maxTouchPoints > 0 && styles.show
           )}
@@ -270,7 +270,7 @@ const WidgetListItem = memo(function (e) {
                 e$onHide(n)
               }
             }}
-            className={classnames(
+            className={classNames(
               styles.controlIcon,
               styles.seeIcon,
               /* [CoCo Next] 触屏适配 */navigator.maxTouchPoints > 0 && styles.hide
@@ -612,7 +612,7 @@ export const WidgetTree = memo(() => {
       </div>
       {!isFold && renderWidgetList(currentScreenWidgets)}
       {!isFold && <div
-        className={classnames(styles.item, styles.screenItem, {
+        className={classNames(styles.item, styles.screenItem, {
           [styles.selected]: !selectedWidgetId && flyoutVisible,
           [styles.selectedLight]: !selectedWidgetId && !flyoutVisible
         })}
@@ -650,7 +650,7 @@ export const WidgetTree = memo(() => {
               Module_26.g.setSelectedItem(null === (t = Module_26.g.getToolbox()) || undefined === t ? undefined : t.find_node_by_name(currentScreen.id))
               dispatch(!selectedWidgetId && widgetAttributeVisible ? CommonActions.fj(false) : CommonActions.fj(true))
             }}
-            className={classnames(
+            className={classNames(
               styles.controlIcon,
               styles.attributeIcon,
               /* [CoCo Next] 触屏适配 */navigator.maxTouchPoints > 0 && styles.show
@@ -658,7 +658,7 @@ export const WidgetTree = memo(() => {
           >
             <Components.j type="icon-attribute" />
           </div>
-          <div className={classnames(
+          <div className={classNames(
             styles.screenBottomIcon,
             /* [CoCo Next] 触屏适配 */navigator.maxTouchPoints > 0 && styles.hide
           )}>
@@ -710,16 +710,16 @@ export const WidgetTree = memo(() => {
             return <div
               onClick={U.bind(null, e$type)}
               key={e$type}
-              className={classnames(styles.item, (t = {}, Module_11.a(t, styles.selected, selectedWidgetId === e$type && flyoutVisible), Module_11.a(t, styles.selectedLight, selectedWidgetId === e$type && !flyoutVisible), Module_11.a(t, styles.parent, false), t))}
+              className={classNames(styles.item, (t = {}, Module_11.a(t, styles.selected, selectedWidgetId === e$type && flyoutVisible), Module_11.a(t, styles.selectedLight, selectedWidgetId === e$type && !flyoutVisible), Module_11.a(t, styles.parent, false), t))}
             >
-              <div className={classnames(styles.left, styles.anyWidget)}>
+              <div className={classNames(styles.left, styles.anyWidget)}>
                 {Shared_tools.X(e$icon) ? <img
-                  className={classnames(styles.widgetIcon, styles.widgetUrlIcon)}
+                  className={classNames(styles.widgetIcon, styles.widgetUrlIcon)}
                   src={e$icon}
                   alt={e$title}
                   draggable={false}
                 /> : <Components.j type={e$icon} className={styles.widgetIcon} />}
-                <span className={classnames(styles.label)}>{e$title}</span>
+                <span className={classNames(styles.label)}>{e$title}</span>
               </div>
             </div>
           })}

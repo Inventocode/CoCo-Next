@@ -1,0 +1,86 @@
+/**
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：570
+ */
+
+.playBox {
+    position: relative;
+    display: flex;
+}
+
+.playBox:hover .playType:before {
+    display: none;
+}
+
+.playButton {
+    width: 72px;
+    height: 34px;
+    font-weight: 500;
+    color: #fff;
+    font-size: 14px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border: none;
+    background: #ff6d32;
+    cursor: pointer;
+    padding: 0 4px 0 0;
+    border-radius: 17px;
+}
+
+.playButton:active, .playButton:hover {
+    background: #e75115;
+}
+
+.playButton .coco-iconfont {
+    font-size: 20px;
+    margin-right: 2px;
+}
+
+.borderLeft {
+    border-radius: 17px 0 0 17px;
+}
+
+.playType {
+    width: 28px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: #fff;
+    background: #ff6d32;
+    border-radius: 0 17px 17px 0;
+}
+
+.playType:active, .playType:hover {
+    background: #e75115;
+}
+
+.playType:before {
+    content: "";
+    position: absolute;
+    left: 72px;
+    top: 8px;
+    bottom: auto;
+    right: auto;
+    height: 18px;
+    width: 1px;
+    background: hsla(0, 0%, 100%, .12);
+}
+
+.playMenu .menuIcon {
+    color: #847da4;
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+.playMenu .menuText {
+    margin-left: 6px;
+    color: #534c59;
+}
+
+.playMenu .ant-dropdown-menu {
+    margin-left: -72px;
+}

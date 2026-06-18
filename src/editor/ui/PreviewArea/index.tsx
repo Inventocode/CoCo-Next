@@ -1,6 +1,6 @@
 import * as React from "react"
 import { memo, useCallback, useEffect, useLayoutEffect, useRef, useState } from "react"
-import classnames from "classnames"
+import classNames from "classnames"
 import { useDispatch, useSelector } from "react-redux"
 
 import { Rn } from "../../../../unrestored/shared/1571/2636/index__part-23"
@@ -183,7 +183,7 @@ export const PreviewArea = memo(() => {
               trigger={["hover", "click"]}
             >
               <div
-                className={classnames(styles.foldBtn, stageVisible ? styles.hide : styles.show, (m || isHoverBlockArea) && styles.visible)}
+                className={classNames(styles.foldBtn, stageVisible ? styles.hide : styles.show, (m || isHoverBlockArea) && styles.visible)}
                 onClick={() => {
                   dispatch(CommonActions.Yi(!stageVisible))
                 }}
