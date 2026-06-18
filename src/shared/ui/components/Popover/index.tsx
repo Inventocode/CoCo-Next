@@ -5,7 +5,7 @@
  */
 
 import React, { memo, forwardRef, useState, useRef, useEffect, useLayoutEffect, useImperativeHandle, ReactNode, CSSProperties } from "react"
-import classnames from "classnames"
+import classNames from "classnames"
 import "./styles.css"
 
 export interface IPopoverProps {
@@ -84,14 +84,14 @@ export const Popover = memo(forwardRef(({
 
   return <div
     style={style}
-    className={classnames("coco-popover", className)}
+    className={classNames("coco-popover", className)}
     ref={elementRef}
   >
     <div
       className="coco-popover-children"
       onClick={() => { setIsOpen(true) }}
     >{children}</div>
-    <div className={classnames("coco-popover-content", contentClassName, [isOpen ? "show" : "hide"])}>
+    <div className={classNames("coco-popover-content", contentClassName, [isOpen ? "show" : "hide"])}>
       {content}
     </div>
     {disabled && <div className="coco-popover-disabled-mask" />}

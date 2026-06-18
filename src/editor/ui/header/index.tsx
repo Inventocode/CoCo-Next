@@ -30,7 +30,7 @@ import * as Actions from "../../redux/common/actions"
 import * as Components from "../../../shared/ui/components"
 import { Button, Dropdown, IconFont, Menu, MenuItem } from "../../../shared/ui/components"
 import * as /* [auto-meaningful-name] */Module_627 from /* 627 */"../../../../unrestored/shared/1571/2636/627"
-import classnames from "classnames"
+import classNames from "classnames"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../../../../unrestored/shared/1571/2636/710"
 import { a as Tooltip } from "../../../../unrestored/shared/1571/2636/748/index"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../../../../unrestored/shared/1571/2636/10/index"
@@ -114,7 +114,7 @@ function CloudSpaceManager() {
   >
     <div
       onClick={() => window.open(`${Shared_tools.A()}/`, "_blank")}
-      className={classnames(cloudSpaceManagerStyles.cloudSpaceManager)}
+      className={classNames(cloudSpaceManagerStyles.cloudSpaceManager)}
     >
       {title === formatMessage({ id: "cloudSpace.outMaxLimit" }) && (
         <div className={cloudSpaceManagerStyles.cloudIconError}>
@@ -775,7 +775,7 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
                       <Components.B
                         onChange={Ie}
                         accept=".js,.jsx"
-                        className={classnames(styles.itemUploadButton)}
+                        className={classNames(styles.itemUploadButton)}
                       >
                         {formatMessage({ id: "HeaderDropdown.importExtension" })}
                       </Components.B>
@@ -788,7 +788,7 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
                         onChange={Se}
                         onCancel={Ae}
                         accept=".json"
-                        className={classnames(styles.itemUploadButton)}
+                        className={classNames(styles.itemUploadButton)}
                       >
                         {formatMessage({ id: "HeaderDropdown.openLocalFile" })}
                       </Components.B>
@@ -899,14 +899,14 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
                 <Menu onClick={je}>
                   {uiConfig.help.ruler === Module_18.j.Show && (
                     <MenuItem value="STAGE_RULER">
-                      <div className={classnames(styles.itemContent, playing && styles.disabled)}>
+                      <div className={classNames(styles.itemContent, playing && styles.disabled)}>
                         {formatMessage(stageRulerVisible ? { id: "HeaderDropdown.hideRuler" } : { id: "HeaderDropdown.showRuler" })}
                       </div>
                     </MenuItem>
                   )}
                   {uiConfig.help.stage === Module_18.j.Show && (
                     <MenuItem value="STAGE_AREA">
-                      <div className={classnames(styles.itemContent, playing && styles.disabled)}>
+                      <div className={classNames(styles.itemContent, playing && styles.disabled)}>
                         {formatMessage(stageVisible ? { id: "HeaderDropdown.hideWidgetAndStage" } : { id: "HeaderDropdown.showWidgetAndStage" })}
                       </div>
                     </MenuItem>
@@ -937,7 +937,7 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
             overlayInnerStyle={{ position: "relative", top: -7 }}
           >
             <div
-              className={classnames(styles.iconWrapper, styles.cloudIconWrapper, cloudDBManagerDialogVisible && styles.activeIconWrapper)}
+              className={classNames(styles.iconWrapper, styles.cloudIconWrapper, cloudDBManagerDialogVisible && styles.activeIconWrapper)}
               onClick={() => dispatch(userInfo ? Actions.jj(true) : Actions.openSignInDialogAction())}
             >
               <IconFont type="icon-database-manage-active" className={styles.databaseIcon} />
@@ -970,7 +970,7 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
               trigger={["hover", "click"]}
               overlayInnerStyle={{ position: "relative", top: -4 }}
             >
-              <div className={classnames(styles.shareWrapper)}>
+              <div className={classNames(styles.shareWrapper)}>
                 <IconFont type="icon-share" className={styles.icon} />
               </div>
             </Tooltip>
@@ -1028,7 +1028,7 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
           >
             <Button
               onClick={() => save(false, true)}
-              className={classnames(styles.saveBtn, saving && styles.saving)}
+              className={classNames(styles.saveBtn, saving && styles.saving)}
             >
               <span className={styles.saveText}>
                 {formatMessage({ id: "save" })}
@@ -1051,7 +1051,7 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
         {packageDialogVisible && <Dt />}
         {packageQrCodeVisible && <Gt />}
         {!le && uiConfig.userInfo === Module_18.j.Show && <UserInfo />}
-        <div className={classnames(styles.saveTipsWrapper, jsonFrom !== Module_18.d.OTHER && ne && !isUpdate && styles.show)}>
+        <div className={classNames(styles.saveTipsWrapper, jsonFrom !== Module_18.d.OTHER && ne && !isUpdate && styles.show)}>
           {formatMessage({ id: "MyProject.newSaveTips" })}
           <div className={styles.closeSaveTips} onClick={() => re(false)}>
             <IconFont type="icon-close" />

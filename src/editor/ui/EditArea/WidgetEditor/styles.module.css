@@ -1,0 +1,67 @@
+/**
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：420
+ */
+
+.wrapper {
+    position: absolute;
+    left: 185px;
+    top: 8px;
+    width: 312px;
+    background: #fff;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, .15);
+    z-index: 3;
+    transition: left .2s, bottom .2s;
+}
+
+.wrapper.hide {
+    left: -185px;
+    transition: left .2s;
+}
+
+.wrapper .readonly div {
+    pointer-events: none;
+}
+
+.wrapper .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 36px;
+    background: #f7f9fc;
+    padding: 0 18px;
+}
+
+.wrapper .header .title {
+    margin: 0;
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 36px;
+}
+
+.wrapper .header .close {
+    color: #847da4;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.wrapper .content {
+    height: 100%;
+    padding: 0 6px 35px;
+    background-color: #fff;
+    overflow-y: scroll;
+    margin-right: 1px;
+}
+
+.wrapper .content::-webkit-scrollbar {
+    width: 0;
+}
+
+.wrapper .coco-input {
+    background: #f3f6fa;
+    border: none;
+}

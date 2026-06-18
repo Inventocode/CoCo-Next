@@ -4,9 +4,10 @@
  * 模块 ID：2636__part-219
  */
 
-import { Header } from "../Header/wrapper"
+import { Header } from "../Header"
 import { PreviewArea } from "../PreviewArea"
-import { iI, aI } from "../../../../unrestored/shared/1571/2636/index__part-170"
+import { EditArea } from "../EditArea"
+import { Icons } from "../Icons"
 import { lI } from "../../../../unrestored/shared/1571/2636/index__part-171"
 import { hI } from "../../../../unrestored/shared/1571/2636/index__part-172"
 import { bI } from "../../../../unrestored/shared/1571/2636/index__part-173"
@@ -16,13 +17,13 @@ import { mj } from "../../../../unrestored/shared/1571/2636/index__part-180"
 import { rN } from "../../../../unrestored/shared/1571/2636/index__part-190"
 import { kM } from "../../../../unrestored/shared/1571/2636/index__part-194"
 import { OpenWork } from "../functions/open-work"
-import { dL, pL } from "../../../../unrestored/shared/1571/2636/index__part-200"
+import { PlayBox, pL } from "../components/PlayBox"
 import { bL } from "../../../../unrestored/shared/1571/2636/index__part-201"
 import { wL } from "../../../../unrestored/shared/1571/2636/index__part-202"
 import { AL } from "../../../../unrestored/shared/1571/2636/index__part-203"
 import { kL } from "../../../../unrestored/shared/1571/2636/index__part-204"
-import { ML } from "../dialogs/download-apk/index"
-import { ReleaseInfo } from "../dialogs/ReleaseInfo/index"
+import { ML } from "../Dialogs/download-apk/index"
+import { ReleaseInfo } from "../Dialogs/ReleaseInfo/index"
 import { ZL } from "../../../../unrestored/shared/1571/2636/index__part-208"
 import { aP } from "../../../../unrestored/shared/1571/2636/index__part-210"
 import { _P } from "../../../../unrestored/shared/1571/2636/index__part-211"
@@ -33,7 +34,8 @@ import { qP } from "../../../../unrestored/shared/1571/2636/index__part-216"
 import { ZP, JP } from "../../../../unrestored/shared/1571/2636/index__part-217"
 import { iB } from "../../../../unrestored/shared/1571/2636/index__part-218"
 import styles from "./styles.module.css"
-import * as /* [auto-meaningful-name] */Shared_tools from "../../../shared/tools"
+import * as Tools from "../../../shared/tools"
+import { parseURLSearchParamsToObject } from "../../../shared/tools"
 import * as /* [auto-meaningful-name] */Module_97 from /* 97 */"../../../../unrestored/shared/1571/2636/97"
 import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"../../../../unrestored/shared/1571/2636/18"
 import * as /* [auto-meaningful-name] */Redux_common_actions from "../../redux/common/actions"
@@ -45,78 +47,9 @@ import * as /* [auto-meaningful-name] */Module_2681 from /* 2681 */"../../../../
 import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../../../../unrestored/shared/1571/2636/7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import { useSelector, useDispatch } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { memo } from "react"
-import /* [auto-meaningful-name] */Unrestored_shared_1571_2636_816 from "../../../../unrestored/shared/1571/2636/816"
+import React from "react"
+import { PermissionDialog } from "../Dialogs/PermissionDialog"
 import "../style/global.css"
-
-var cB = memo(function () {
-  const permissionDialogInfo = useSelector((state) => state.common.permissionDialogInfo)
-  var /* [auto-meaningful-name] */permissionDialogInfo$visible = permissionDialogInfo.visible
-  var /* [auto-meaningful-name] */permissionDialogInfo$type = permissionDialogInfo.type
-  var /* [auto-meaningful-name] */permissionDialogInfo$onConfirm = permissionDialogInfo.onConfirm
-  var /* [auto-meaningful-name] */permissionDialogInfo$onDeny = permissionDialogInfo.onDeny
-  var /* [auto-meaningful-name] */permissionDialogInfo$className = permissionDialogInfo.className
-  var /* [auto-meaningful-name] */permissionDialogInfo$isDangerous = permissionDialogInfo.isDangerous
-  var /* [auto-meaningful-name] */permissionDialogInfo$denyText = permissionDialogInfo.denyText
-  var c = undefined === permissionDialogInfo$denyText ? "拒绝" : permissionDialogInfo$denyText
-  var /* [auto-meaningful-name] */permissionDialogInfo$allowText = permissionDialogInfo.allowText
-  var u = undefined === permissionDialogInfo$allowText ? "同意" : permissionDialogInfo$allowText
-  const dispatch = useDispatch()
-  let imgUrl = "https://static.bcmcdn.com/coco/image/permission_camera.png"
-  let tipText = "需要开启相机权限才能进行拍照或摄像哦"
-  switch (permissionDialogInfo$type) {
-    case Module_18.e.camera:
-      break
-    case Module_18.e.microphone:
-      imgUrl = "https://static.bcmcdn.com/coco/image/permission_microphone.png"
-      tipText = "需要开启麦克风权限能使用环境音量"
-  }
-  return <Dialog
-    visible={permissionDialogInfo$visible}
-    showCloseButton={false}
-    withPortal={true}
-    maskClosable={false}
-    className={Classnames(Unrestored_shared_1571_2636_816.dialog, permissionDialogInfo$className)}
-  >
-    <img className={Unrestored_shared_1571_2636_816.permissionImage} src={imgUrl} alt="" />
-    {<div
-      className={Unrestored_shared_1571_2636_816.content}
-    >
-      <h3>授权提示</h3>
-      <span>{tipText}</span>
-      {<div className={Classnames(Unrestored_shared_1571_2636_816.dialogButtons)}>
-        <Button
-          onClick={() => {
-            if (permissionDialogInfo$onDeny) {
-              permissionDialogInfo$onDeny()
-            }
-            dispatch(Redux_common_actions.Ej({
-              type: permissionDialogInfo$type,
-              visible: false
-            }))
-          }}
-          className={Unrestored_shared_1571_2636_816.denyButton}
-        >{c}</Button>
-        {<Button
-          type="primary"
-          danger={permissionDialogInfo$isDangerous}
-          onClick={function () {
-            if (permissionDialogInfo$onConfirm) {
-              permissionDialogInfo$onConfirm()
-            }
-            dispatch(Redux_common_actions.Ej({
-              type: permissionDialogInfo$type,
-              visible: false
-            }))
-          }}
-        >
-          {u}
-        </Button>}
-      </div>}
-    </div>}
-  </Dialog>
-})
 
 function lB(e) {
   e.preventDefault()
@@ -176,17 +109,17 @@ export const App = React.memo(function () {
   const language = useSelector((state) => state.common.language)
   const visible = useSelector((state) => state.project.styleDialog.visible)
   const header = useSelector((state) => state.uiConfig.header)
-  const hasArchiveId = Shared_tools.parseURLSearchParamsToObject(window.location.href).archiveId !== undefined
+  const hasArchiveId = parseURLSearchParamsToObject(window.location.href).archiveId !== undefined
 
   return <Module_2681.b locale={language} messages={Language.e[language] || Language.e[Language.zh_CN]}>
     <div className={styles.layout} onDragOver={lB} onDrop={uB}>
       {React.createElement(dB, null)}
-      {React.createElement(aI, null)}
+      <Icons />
       <OpenWork />
       <header className={styles.header}>
         <Header>
           <>
-            {React.createElement(dL, null)}
+            <PlayBox />
             {!hasArchiveId && header.projectName !== Module_18.j.Hide && React.createElement(pL, {
               readonly: header.projectName === Module_18.j.ReadOnly
             })}
@@ -195,13 +128,13 @@ export const App = React.memo(function () {
       </header>
       <section className={styles.body}>
         <aside><PreviewArea/></aside>
-        <main className={styles.main}>{React.createElement(iI, null)}</main>
+        <main className={styles.main}><EditArea /></main>
       </section>
       {React.createElement(lI, null)}
       {React.createElement(hI, null)}
       {React.createElement(rN, null)}
       {React.createElement(bI, null)}
-      {React.createElement(cB, null)}
+      <PermissionDialog />
       {React.createElement(mj, null)}
       <BI/>
       {React.createElement(aj, null)}
@@ -227,7 +160,7 @@ export const App = React.memo(function () {
 })
 
 var fB = function (e) {
-  if (e && e instanceof Function && !Shared_tools.h()) {
+  if (e && e instanceof Function && !Tools.h()) {
     import("../../../../unrestored/shared/1571/2636/3327").then(function (t) {
       var /* [auto-meaningful-name] */t$getCLS = t.getCLS
       var /* [auto-meaningful-name] */t$getFID = t.getFID

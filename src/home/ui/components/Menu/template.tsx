@@ -8,7 +8,7 @@ import { config } from "../../../../../unrestored/home/cfg-dpNx"
 import IconFont from "../../../../../unrestored/home/components/IconFont-zVV7"
 import { NavLink } from "react-router-dom"
 import ReactCSSModules from "react-css-modules"
-import classnames from "classnames"
+import classNames from "classnames"
 import * as React from "react"
 import styles from "./styles.module.css"
 
@@ -33,7 +33,7 @@ export class MenuView extends React.Component {
     if (url === "/home") {
       active = current_url === "/" || current_url === "/home"
     }
-    return <NavLink to={url} styleName={classnames("menuItem", active && "active")}>
+    return <NavLink to={url} styleName={classNames("menuItem", active && "active")}>
       <IconFont type={icon} styleName="menuIcon" />
       {content}
     </NavLink>

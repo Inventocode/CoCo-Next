@@ -5,7 +5,7 @@
  */
 
 import * as React from "react"
-import classnames from "classnames"
+import classNames from "classnames"
 import IconFont from "../../../../../unrestored/home/components/IconFont-zVV7"
 import "./styles.module.css"
 
@@ -406,7 +406,7 @@ function Input({
   } satisfies React.InputHTMLAttributes<HTMLInputElement>
 
   return <div
-    className={classnames("coco-input", className, {
+    className={classNames("coco-input", className, {
       "coco-input-focus": isFocused,
       "coco-input-disabled": disabled,
       "coco-input-warning": warning,

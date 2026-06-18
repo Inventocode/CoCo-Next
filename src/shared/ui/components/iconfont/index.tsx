@@ -6,7 +6,7 @@
 
 import "react"
 import React from "react"
-import classnames from "classnames"
+import classNames from "classnames"
 import "./styles.css"
 
 export function IconFont({
@@ -43,7 +43,7 @@ export function IconFont({
     }
   }
 
-  return <i className={classnames("coco-iconfont", className, spinning && "coco-iconfont-spin")}>
+  return <i className={classNames("coco-iconfont", className, spinning && "coco-iconfont-spin")}>
     <svg
       width="1em"
       height="1em"

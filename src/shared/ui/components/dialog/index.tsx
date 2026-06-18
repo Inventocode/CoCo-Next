@@ -4,7 +4,7 @@
  * 模块 ID：540
  */
 
-import classnames from "classnames"
+import classNames from "classnames"
 import { memo, useRef, useState, useCallback, useEffect, CSSProperties, ReactNode } from "react"
 import React from "react"
 import ReactDom from "react-dom"
@@ -83,19 +83,19 @@ export const Dialog = memo(({
     data-html2canvas-ignore="true"
     ref={elementRef}
     tabIndex={-1}
-    className={classnames("coco-dialog", className)}
+    className={classNames("coco-dialog", className)}
     style={{
       display: visible ? "block" : "none",
       ...style
     }}
   >
     {mask && <div
-      className={visible ? "coco-dialog-mask" : classnames("coco-dialog-mask", "hidden")}
+      className={visible ? "coco-dialog-mask" : classNames("coco-dialog-mask", "hidden")}
       onClick={close}
     />}
     <div className="coco-dialog-scroll">
       <div
-        className={visible ? classnames("coco-dialog-wrapper", "show") : classnames("coco-dialog-wrapper", "hidden")}
+        className={visible ? classNames("coco-dialog-wrapper", "show") : classNames("coco-dialog-wrapper", "hidden")}
         onAnimationEnd={() => {
           if (!visible) {
             setIsAnimationFinished(false)

@@ -10,7 +10,7 @@ import IconFont from "../../../../../unrestored/home/components/IconFont-zVV7"
 import TemplateItem from "../../../../../unrestored/home/components/TemplateItem-eseu"
 import WorkItem from "../../components/WorkItem"
 import { EWorkType } from "./model/interface"
-import classnames from "classnames"
+import classNames from "classnames"
 import ReactCSSModules from "react-css-modules"
 import * as React from "react"
 import styles from "./styles.module.css"
@@ -262,13 +262,13 @@ export class WorkView extends React.Component {
       <div styleName="workType">
         <div
           onClick={() => this.handleSwitchWorkType(EWorkType.CREATE)}
-          styleName={classnames("typeItem", workType === EWorkType.CREATE && "active")}
+          styleName={classNames("typeItem", workType === EWorkType.CREATE && "active")}
         >
           我创建的
         </div>
         <div
           onClick={() => this.handleSwitchWorkType(EWorkType.COLL)}
-          styleName={classnames("typeItem", workType === EWorkType.COLL && "active")}
+          styleName={classNames("typeItem", workType === EWorkType.COLL && "active")}
         >
           我参与的
         </div>
@@ -299,14 +299,14 @@ export class WorkView extends React.Component {
     var _props4 = this.props
     var templateList = _props4.templateList
     var userInfo = _props4.userInfo
-    return <div styleName={classnames("templateBox", !userInfo && "notLogin")}>
+    return <div styleName={classNames("templateBox", !userInfo && "notLogin")}>
       <div styleName="titleBox">
         <div styleName="templateTitle">
           <IconFont type="icon-template" styleName="titleIcon" />
           <h2 styleName="title">从模版开始探索</h2>
         </div>
         <div styleName="pageBtn">
-          <div styleName={classnames("btnItem")} onClick={() => this.prevTemplate()}>
+          <div styleName={classNames("btnItem")} onClick={() => this.prevTemplate()}>
             <IconFont type="icon-next" styleName="prev" />
           </div>
           <div styleName="btnItem" onClick={() => this.nextTemplate()}>
@@ -352,7 +352,7 @@ export class WorkView extends React.Component {
             </div>
           )}
           {createWorkList.length == 0 && (
-            <div styleName={classnames("noData", userInfo && !userInfo.isNewUser && "oldUser")}>
+            <div styleName={classNames("noData", userInfo && !userInfo.isNewUser && "oldUser")}>
               {keyword && <>
                 <img src={require("../../../../../unrestored/home/unnamed-oet9")} alt="" />
                 <span styleName="searchTips">没有找到作品，换个姿势再搜索一次吧～</span>
@@ -382,7 +382,7 @@ export class WorkView extends React.Component {
             </div>
           )}
           {collWorkList.length == 0 && (
-            <div styleName={classnames("noData", userInfo && !userInfo.isNewUser && "oldUser")}>
+            <div styleName={classNames("noData", userInfo && !userInfo.isNewUser && "oldUser")}>
               {keyword && <>
                 <img src={require("../../../../../unrestored/home/unnamed-oet9")} alt="" />
                 <span styleName="searchTips">没有找到作品，换个姿势再搜索一次吧～</span>
@@ -417,7 +417,7 @@ export class WorkView extends React.Component {
           </div>
         </div>
         <div
-          styleName={classnames("clearRecoverBtn", deleteWorkList.length === 0 && "disabled")}
+          styleName={classNames("clearRecoverBtn", deleteWorkList.length === 0 && "disabled")}
           onClick={this.handleClearDeletedWork}
         >
           <IconFont type="icon-clear" styleName="icon" />
@@ -468,7 +468,7 @@ export class WorkView extends React.Component {
           <IconFont type="icon-create-app" styleName="createIcon" />
           应用创作
         </div>
-        <div styleName={classnames("createItem", "disabled")}>
+        <div styleName={classNames("createItem", "disabled")}>
           <IconFont type="icon-create-web" styleName="createIcon" />
           网页搭建<span styleName="tips">（敬请期待）</span>
         </div>
