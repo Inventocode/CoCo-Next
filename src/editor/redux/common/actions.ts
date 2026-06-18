@@ -780,6 +780,15 @@ function he(e) {
   }
 }
 
+// [CoCo Next] 小屏设备可隐藏 header
+export const SET_HEADER_VISIBLE = "SET_HEADER_VISIBLE"
+export function setHeaderVisibleAction(headerVisible: boolean) {
+  return {
+    type: SET_HEADER_VISIBLE,
+    payload: headerVisible
+  }
+}
+
 export const SET_IS_HOVER_BLOCK_AREA = "SET_IS_HOVER_BLOCK_AREA"
 export function setIsHoverBlockAreaAction(isHoverBlockArea: boolean) {
   return {

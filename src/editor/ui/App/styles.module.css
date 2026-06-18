@@ -17,6 +17,14 @@
     height: 52px;
     position: relative;
     z-index: 4;
+    /* [CoCo Next] 小屏设备可隐藏 header */
+    margin-top: 0px;
+    transition: margin-top .4s;
+}
+
+/* [CoCo Next] 小屏设备可隐藏 header */
+.header.hide {
+    margin-top: -52px;
 }
 
 .body {
@@ -30,4 +38,10 @@
     flex: auto;
     position: relative;
     z-index: 1;
+}
+
+/* [CoCo Next] 小屏适配 */
+.main>* {
+    min-width: 0 !important;
+    width: 0;
 }

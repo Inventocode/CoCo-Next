@@ -148,6 +148,8 @@ const initialState = Immutable.Record<ICommonState>({
   stageScale: 1,
   stageWidth: 412,
   stageVisible: true,
+  // [CoCo Next] 小屏设备可隐藏 header
+  headerVisible: false,
   isHoverBlockArea: false,
   collAutoSave: false,
   historyArchiveId: "",
@@ -399,6 +401,9 @@ function commonReducer(state = initialState, action: Action<any>) {
       return state.set("stageWidth", action.payload)
     case Actions.de:
       return state.set("stageVisible", action.payload)
+    // [CoCo Next] 小屏设备可隐藏 header
+    case Actions.SET_HEADER_VISIBLE:
+      return state.set("headerVisible", action.payload)
     case Actions.Ad:
       return state.set("isHoverBlockArea", action.payload)
     case Actions.gd:

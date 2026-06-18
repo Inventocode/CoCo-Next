@@ -940,7 +940,7 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
         {innerWidth >= 840 ? <>
           <div className={styles.menu}>
             {Object.values(uiConfig.file).includes(Module_18.j.Show) && !le && (
-              <SubMenuItem className={styles.fileDropdown} overlay={fileMenu}>
+              <Dropdown className={styles.fileDropdown} overlay={fileMenu}>
                 <Tooltip
                   mouseLeaveDelay={0}
                   placement="bottom"
@@ -952,10 +952,10 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
                     <IconFont className="coco-header-menuIcon" type="icon-file" />
                   </div>
                 </Tooltip>
-              </SubMenuItem>
+              </Dropdown>
             )}
             {Object.values(uiConfig.tutorial).includes(Module_18.j.Show) && !le && (
-              <SubMenuItem overlay={helpMenu}>
+              <Dropdown overlay={helpMenu}>
                 <Tooltip
                   mouseLeaveDelay={0}
                   placement="bottom"
@@ -967,10 +967,10 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
                     <IconFont className="coco-header-menuIcon" type="icon-help-circle-active" />
                   </div>
                 </Tooltip>
-              </SubMenuItem>
+              </Dropdown>
             )}
             {Object.values(uiConfig.help).includes(Module_18.j.Show) && !le && (
-              <SubMenuItem overlay={settingMenu}>
+              <Dropdown overlay={settingMenu}>
                 <Tooltip
                   mouseLeaveDelay={0}
                   placement="bottom"
@@ -982,7 +982,7 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
                     <IconFont className="coco-header-menuIcon" type="icon-settings" />
                   </div>
                 </Tooltip>
-              </SubMenuItem>
+              </Dropdown>
             )}
           </div>
           {!le && uiConfig.cloudDBManager === Module_18.j.Show && (
@@ -1003,7 +1003,7 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
           )}
           <CloudSpaceManager />
         </> : <div className={styles.menu}>
-          <SubMenuItem overlay={
+          <Dropdown overlay={
             <Menu onClick={handleClickMenu}>
               {Object.values(uiConfig.file).includes(Module_18.j.Show) && !le && (
                 <SubMenuItem subMenu={fileMenu}>
@@ -1039,7 +1039,7 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
                 <IconFont className="coco-header-menuIcon" type="icon-more" />
               </div>
             </Tooltip>
-          </SubMenuItem>
+          </Dropdown>
         </div>}
       </div>
       {/* [CoCo Next] 小屏设备不在 header 上显示运行按钮和作品名称 */}

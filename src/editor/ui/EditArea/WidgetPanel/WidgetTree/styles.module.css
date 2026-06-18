@@ -83,6 +83,11 @@
     font-size: 16px;
 }
 
+/* [CoCo Next] 触屏适配 */
+.list .controlIcon.seeIcon.hide {
+    display: none;
+}
+
 .item {
     display: flex;
     height: 32px;
@@ -135,6 +140,11 @@
 
 .item:hover {
     background-color: #f5f3fe;
+}
+
+/* [CoCo Next] 触屏适配 */
+.right.show {
+    display: flex;
 }
 
 .item:hover .right {
@@ -190,8 +200,18 @@
     display: flex;
 }
 
+/* [CoCo Next] 触屏适配 */
+.attributeIcon.show {
+    display: block;
+}
+
 .screenItem:hover .attributeIcon {
     display: block;
+}
+
+/* [CoCo Next] 触屏适配 */
+.screenBottomIcon.hide {
+    display: none;
 }
 
 .screenItem:hover .screenBottomIcon {

@@ -51,21 +51,30 @@ export const ContextMenu = memo(() => {
     if (!visible) { setShowsScreens(false) }
   }, [visible])
 
+  // [CoCo Next] 点击子菜单时不隐藏
   useEffect(() => {
-    function handleMouseDown() {
+    const wrapperElement = wrapperElementRef.current
+    if (wrapperElement === null) {
+      return
+    }
+    function handleMouseDown(event: MouseEvent) {
+      const target = event.target as Element
+      if (
+        target.closest(`.${styles.screens}`) === null &&
+        wrapperElement!.contains(target.closest(`.${styles.copyTo}`))
+      ) {
+        return
+      }
       setImmediate(() => {
         dispatch(closeContextMenuAction())
-        // [CoCo Next] 不使用捕获事件，因为捕获事件难以阻断
-        document.removeEventListener("mousedown", handleMouseDown/* , true */)
+        document.removeEventListener("mousedown", handleMouseDown, true)
       })
     }
     if (visible) {
-      // [CoCo Next] 不使用捕获事件
-      document.addEventListener("mousedown", handleMouseDown/* , true */)
+      document.addEventListener("mousedown", handleMouseDown, true)
     }
-    // [CoCo Next] 不使用捕获事件
-    return () => document.removeEventListener("mousedown", handleMouseDown/* , true */)
-  }, [dispatch, visible])
+    return () => document.removeEventListener("mousedown", handleMouseDown, true)
+  }, [wrapperElementRef, dispatch, visible])
 
   function copyWidgetToScreen(screenId) {
     dispatch(asyncCopyWidgetToScreenAction(Module_9.w(widgetId), screenId))
@@ -114,10 +123,6 @@ export const ContextMenu = memo(() => {
     {![BuiltInWidgetTypes.ACTOR_WIDGET, BuiltInWidgetTypes.BRUSH_WIDGET].includes(widget?.type || "") && (
       <div
         className={classnames(styles.menuItem, styles.copyTo)}
-        onMouseDown={(event) => {
-          // [CoCo Next] 打开子菜单时阻止主菜单关闭
-          event.nativeEvent.stopImmediatePropagation()
-        }}
         onClick={() => {
           // [CoCo Next] 触碰点击也能打开子菜单
           setShowsScreens(true)

@@ -256,7 +256,10 @@ const WidgetListItem = memo(function (e) {
           </span>}
         </div>}
         {<div
-          className={styles.right}
+          className={/* [CoCo Next] 触屏适配 */classnames(
+            styles.right,
+            navigator.maxTouchPoints > 0 && styles.show
+          )}
         >
           {!e$isInvisibleWidget && e$type !== BuiltInWidgetTypes.c && <div
             onClick={function (e) {
@@ -267,7 +270,11 @@ const WidgetListItem = memo(function (e) {
                 e$onHide(n)
               }
             }}
-            className={classnames(styles.controlIcon, styles.seeIcon)}
+            className={classnames(
+              styles.controlIcon,
+              styles.seeIcon,
+              /* [CoCo Next] 触屏适配 */navigator.maxTouchPoints > 0 && styles.hide
+            )}
           >
             {<Shared_ui_components_Iconfont_index.a
               type={e$visible ? "icon-see" : "icon-see-disable"}
@@ -643,11 +650,18 @@ export const WidgetTree = memo(() => {
               Module_26.g.setSelectedItem(null === (t = Module_26.g.getToolbox()) || undefined === t ? undefined : t.find_node_by_name(currentScreen.id))
               dispatch(!selectedWidgetId && widgetAttributeVisible ? CommonActions.fj(false) : CommonActions.fj(true))
             }}
-            className={classnames(styles.controlIcon, styles.attributeIcon)}
+            className={classnames(
+              styles.controlIcon,
+              styles.attributeIcon,
+              /* [CoCo Next] 触屏适配 */navigator.maxTouchPoints > 0 && styles.show
+            )}
           >
             <Components.j type="icon-attribute" />
           </div>
-          <div className={styles.screenBottomIcon}>
+          <div className={classnames(
+            styles.screenBottomIcon,
+            /* [CoCo Next] 触屏适配 */navigator.maxTouchPoints > 0 && styles.hide
+          )}>
             <Components.j type="icon-screen-bottom" />
           </div>
         </div>

@@ -13,6 +13,7 @@ import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../../../../..
 import { useDispatch, useSelector } from "react-redux"
 import React, { memo, useState, useEffect, useRef } from "react"
 import styles from "./styles.module.css"
+import { useInnerWidth } from "../../../../shared/utils/ui/use-inner-width"
 
 const ItemBlock = memo(({ id, icon, label, color, bgColor }) => {
 
@@ -138,9 +139,12 @@ const WidgetPanel = memo(() => {
   const dispatch = useDispatch()
   const widgetTreeRef = useRef(null)
   const isBlockDragDeleteArea = useSelector((state) => state.block.isBlockDragDeleteArea)
+  // [CoCo Next] 小屏适配
+  const stageVisible = useSelector((state) => state.common.stageVisible)
+  const innerWidth = useInnerWidth()
 
   return <div
-    className={styles.wrapper}
+    className={/* [CoCo Next] 小屏适配 */classnames(styles.wrapper, stageVisible && innerWidth <= 1000 && styles.full)}
     onMouseEnter={() => dispatch(setIsHoverBlockAreaAction(true))}
     onMouseLeave={() => dispatch(setIsHoverBlockAreaAction(false))}
   >

@@ -14,17 +14,32 @@
     background-color: #fff;
     display: flex;
     flex-direction: column;
+    /* [CoCo Next] 调整控件栏滚动区域 */
+    overflow-y: auto;
+    scrollbar-width: none;
+    transition: width .4s;
+}
+
+/* [CoCo Next] 小屏适配 */
+.wrapper.full {
+    width: 100%;
+}
+
+/* [CoCo Next] 调整控件栏滚动区域 */
+.wrapper::-webkit-scrollbar {
+    width: 0;
 }
 
 .widgetTree {
     position: relative;
     height: 100%;
-    overflow-y: auto;
+    /* [CoCo Next] 调整控件栏滚动区域 */
+    /* overflow-y: auto; */
 }
 
-.widgetTree::-webkit-scrollbar {
+/* .widgetTree::-webkit-scrollbar {
     width: 0;
-}
+} */
 
 .deleteBlockPanel {
     position: fixed;

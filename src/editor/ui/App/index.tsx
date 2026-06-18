@@ -49,9 +49,10 @@ import /* [auto-meaningful-name] */React from "react"
 import { memo } from "react"
 import /* [auto-meaningful-name] */Unrestored_shared_1571_2636_816 from "../../../../unrestored/shared/1571/2636/816"
 import "../style/global.css"
-import { SideBar } from "./SideBar"
-import { useInnerWidth } from "../../shared/utils/ui/use-inner-width"
-import { useInnerHeight } from "../../shared/utils/ui/use-inner-height"
+import { SideBar } from "../SideBar"
+import { useInnerWidth } from "../../../shared/utils/ui/use-inner-width"
+import { useInnerHeight } from "../../../shared/utils/ui/use-inner-height"
+import classNames from "classnames"
 
 var cB = memo(function () {
   const permissionDialogInfo = useSelector((state) => state.common.permissionDialogInfo)
@@ -178,10 +179,13 @@ export const App = React.memo(function () {
 
   const innerWidth = useInnerWidth()
   const innerHeight = useInnerHeight()
+  const showSideBar = innerWidth < 1200 || innerHeight < 640
 
   const language = useSelector((state) => state.common.language)
   const visible = useSelector((state) => state.project.styleDialog.visible)
   const header = useSelector((state) => state.uiConfig.header)
+  // [CoCo Next] 小屏设备可隐藏 header
+  const headerVisible = useSelector((state) => state.common.headerVisible)
   const hasArchiveId = Shared_tools.parseURLSearchParamsToObject(window.location.href).archiveId !== undefined
 
   return <Module_2681.b locale={language} messages={Language.e[language] || Language.e[Language.zh_CN]}>
@@ -189,7 +193,7 @@ export const App = React.memo(function () {
       {React.createElement(dB, null)}
       {React.createElement(aI, null)}
       <OpenWork />
-      <header className={styles.header}>
+      <header className={classNames(styles.header, showSideBar && !headerVisible && styles.hide)}>
         <Header>
           <>
             {React.createElement(dL, null)}
@@ -201,7 +205,7 @@ export const App = React.memo(function () {
       </header>
       <section className={styles.body}>
         {/* [CoCo Next] 添加侧栏 */}
-        {(innerWidth < 1200 || innerHeight < 640) && <SideBar />}
+        {showSideBar && <SideBar />}
         <aside><PreviewArea/></aside>
         <main className={styles.main}>{React.createElement(iI, null)}</main>
       </section>

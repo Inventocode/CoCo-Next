@@ -116,7 +116,15 @@ export const PreviewArea = memo(() => {
 
   useLayoutEffect(() => {
     if (previewAreaRef.current) {
-      const width = Math.max(innerWidth / 3, 514)
+      // [CoCo Next] 小屏适配
+      const width = (() => { switch (true) {
+        case innerWidth >= 1200:
+          return Math.max(innerWidth / 3, 514)
+        case innerWidth >= 1000:
+          return innerWidth / (1200 / (514 - 52))
+        default:
+          return Math.max(innerWidth / 2, 300)
+      } })()
       previewAreaRef.current.style.width = `${width}px`
       setPreviewAreaWidth(width + 1)
       dispatch(setStageWidthAction(width - widgetListWidth))
@@ -125,24 +133,25 @@ export const PreviewArea = memo(() => {
         const scaleX = .8 * offsetWidth / Module_75.e
         const scaleY = (offsetHeight - 80) / Module_75.d
         let scale = Math.min(scaleX, scaleY, 1)
-        scale = Math.max(scale, .7)
+        scale = Math.max(scale, .5)
         dispatch(setStageScaleAction(scale))
       }
     }
-  }, [dispatch, innerWidth])
+  }, [previewAreaRef, dispatch, innerWidth])
 
-  useLayoutEffect(function () {
-    if (previewAreaRef.current && mainElementRef.current) {
-      let width = mainElementRef.current.offsetWidth + widgetListWidth
-      width = Math.max(width, 514)
-      Animejs.default({
-        targets: "#previewAreaWrapper",
-        width,
-        easing: "easeInOutSine",
-        duration: 300
-      })
-    }
-  }, [])
+  // [CoCo Next] 小屏适配
+  // useLayoutEffect(function () {
+  //   if (previewAreaRef.current && mainElementRef.current) {
+  //     let width = mainElementRef.current.offsetWidth + widgetListWidth
+  //     width = Math.max(width, 514)
+  //     Animejs.default({
+  //       targets: "#previewAreaWrapper",
+  //       width,
+  //       easing: "easeInOutSine",
+  //       duration: 300
+  //     })
+  //   }
+  // }, [])
 
   return (
     <div

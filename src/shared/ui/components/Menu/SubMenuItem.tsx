@@ -52,9 +52,16 @@ export const SubMenuItem = memo(({ value, children, subMenu, onClick }: ISubMenu
     if (!visible) {
       return
     }
-    document.addEventListener("click", closeMenu)
-    return () => { document.removeEventListener("click", closeMenu) }
-  }, [visible])
+    function handleMouseDown(event: Event) {
+      const element = elementRef.current
+      const target = event.target as Element
+      if (element !== null && !element.contains(target)) {
+        closeMenu()
+      }
+    }
+    document.addEventListener("mousedown", handleMouseDown, true)
+    return () => { document.removeEventListener("mousedown", handleMouseDown, true) }
+  }, [elementRef, visible])
 
   return <div
     ref={elementRef}
@@ -66,9 +73,13 @@ export const SubMenuItem = memo(({ value, children, subMenu, onClick }: ISubMenu
         onClick(value)
       }
       // [CoCo Next] 防止事件冒泡到主菜单，使主菜单关闭
-      event.stopPropagation()
-      event.nativeEvent.stopImmediatePropagation()
-      // [CoCo Next] 触碰点击也能打开主菜单
+      const element = elementRef.current
+      const target = event.target as Element
+      if (element !== null && element.contains(target.closest(`.${styles.subMenuItemWrapper}>.coco-menu-item`))) {
+        event.stopPropagation()
+        event.nativeEvent.stopImmediatePropagation()
+      }
+      // [CoCo Next] 触碰点击也能打开子菜单
       openMenu()
     }}
   >
