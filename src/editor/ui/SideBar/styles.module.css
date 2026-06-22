@@ -30,6 +30,13 @@
     transform: rotate(-180deg);
 }
 
+.line {
+    margin-inline: 16px;
+    height: 1px;
+    background-color: #fff;
+    opacity: .6;
+}
+
 .fullscreen {
     opacity: .6;
 }
@@ -38,11 +45,11 @@
     width: 16px;
 }
 
-.line {
-    margin-inline: 16px;
-    height: 1px;
-    background-color: #fff;
+.toggleScreen {
+    font-size: 22px;
+    color: #fff;
     opacity: .6;
+    transition: transform .4s;
 }
 
 .padding {
@@ -67,5 +74,8 @@
 
 .toggleStageButton.active {
     transform: scale(1.1);
+}
+
+.active {
     background-color: orange;
 }

@@ -455,6 +455,7 @@ var u = Module_6.a(Module_6.a({}, {
   "HeaderDropdown.display": "显示",
   // [CoCo Next] 添加全屏和缩小显示
   "HeaderDropdown.fullscreen": "全屏",
+  "HeaderDropdown.exitFullscreen": "退出全屏",
   "HeaderDropdown.zoomOut": "缩小显示",
   "HeaderDropdown.run": "运行",
   "HeaderDropdown.restoreZoomOut": "正常显示",

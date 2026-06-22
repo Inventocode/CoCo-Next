@@ -76,6 +76,7 @@
     "regenerator-runtime": "~0.14.0",
     "resize-observer-polyfill": "^1.0.0",
     "sa-sdk-javascript": "^1.0.0",
+    "screenfull": "^6.0.2",
     "shortid": "^2.0.0",
     "socket.io-client": "^2.0.0",
     "terser": "^5.0.0",

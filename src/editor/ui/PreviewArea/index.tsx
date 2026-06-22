@@ -130,10 +130,9 @@ export const PreviewArea = memo(() => {
       dispatch(setStageWidthAction(width - widgetListWidth))
       if (mainElementRef.current) {
         const { offsetWidth, offsetHeight } = mainElementRef.current
-        const scaleX = .8 * offsetWidth / Module_75.e
-        const scaleY = (offsetHeight - 80) / Module_75.d
+        const scaleX = .9 * offsetWidth / Module_75.e
+        const scaleY = .9 * offsetHeight / Module_75.d
         let scale = Math.min(scaleX, scaleY, 1)
-        scale = Math.max(scale, .5)
         dispatch(setStageScaleAction(scale))
       }
     }

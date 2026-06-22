@@ -42,9 +42,11 @@ import { useDispatch, useSelector } from "react-redux"
 import * as /* [auto-meaningful-name] */Module_47 from /* 47 */"../../../../unrestored/shared/1571/2636/47"
 import cloudSpaceManagerStyles from "../../../../unrestored/shared/1571/2636/1053"
 
+import screenfull from "screenfull"
 import styles from "./styles.module.css"
 import { useInnerWidth } from "../../../shared/utils/ui/use-inner-width"
 import { useCallback, useState } from "react"
+import { useIsFullScreen } from "../../../shared/utils/ui/use-is-fullscreen"
 
 function CloudSpaceManager() {
 
@@ -664,6 +666,7 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
 
   // [CoCo Next] 小屏适配
   const innerWidth = useInnerWidth()
+  const isFullscreen = useIsFullScreen()
   const [isZoomOut, setIsZoomOut] = useState(false)
 
   var je = function (e) {
@@ -680,7 +683,7 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
           break
         // [CoCo Next] 添加显示设置
         case "FULLSCREEN":
-          document.documentElement.requestFullscreen()
+          screenfull.toggle()
           break
         case "ZOOM_OUT":
           const bodyStyle = document.body.style
@@ -916,7 +919,9 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
       <SubMenuItem subMenu={
         <Menu onClick={je}>
           <MenuItem value="FULLSCREEN">
-            <div className={styles.itemContent}>{formatMessage({ id: "HeaderDropdown.fullscreen" })}</div>
+            <div className={styles.itemContent}>
+              {formatMessage(isFullscreen ? { id: "HeaderDropdown.exitFullscreen" } : { id: "HeaderDropdown.fullscreen" })}
+            </div>
           </MenuItem>
           <MenuItem value="ZOOM_OUT">
             <div className={styles.itemContent}>
