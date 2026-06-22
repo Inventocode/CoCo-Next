@@ -33,7 +33,7 @@ const config = {
                 "wss://socketcoll.codemao.cn:8098",
                 "wss://socketcv.codemao.cn:9096",
                 "wss://socket-cr.codemao.cn:9090"
-            ].map(target => /** @type {NonNullable<rspack.DevServer["proxy"]>[number]} */({
+            ].map(target => /** @satisfies {NonNullable<rspack.DevServer["proxy"]>[number]} */({
                 context: "/proxy/" + target,
                 target,
                 ws: target.startsWith("wss:"),
@@ -43,27 +43,25 @@ const config = {
                 },
                 pathRewrite(path) { return path.replace("/proxy/" + target, "") },
                 changeOrigin: true,
-                onProxyRes(response, request) {
-                    const { host } = request.headers
-                    const setCookie = response.headers["set-cookie"]
-                    if (setCookie != null) {
-                        for (let i = 0; i < setCookie.length; i++) {
-                            setCookie[i] = setCookie[i]
-                                .replace(/codemao\.cn/g, host?.split(":")[0] ?? "coco.localhost")
+                on: {
+                    proxyRes(response, request) {
+                        const { host } = request.headers
+                        const setCookie = response.headers["set-cookie"]
+                        if (setCookie != null) {
+                            for (let i = 0; i < setCookie.length; i++) {
+                                setCookie[i] = setCookie[i]
+                                    .replace(/codemao\.cn/g, host?.split(":")[0] ?? "coco.localhost")
+                            }
                         }
                     }
                 }
             })), {
+                context: "/http-widget-proxy/",
                 router(req) {
                     const proxyURL = new URL(new URL(req.url ?? "", "http://coco.localhost").pathname
                         .replace(/^\/http-widget-proxy\/https@SEP@/, "https://")
                         .replace(/^\/http-widget-proxy\/http@SEP@/, "http://"))
                     return proxyURL.origin
-                },
-                bypass(req) {
-                    if (!req.url?.startsWith("/http-widget-proxy/")) {
-                        return req.url
-                    }
                 },
                 pathRewrite(path) {
                     const proxyURL = new URL(path

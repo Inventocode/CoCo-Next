@@ -4,12 +4,12 @@
  * 模块 ID：2636__part-26
  */
 
-"use strict"
+import * as React from "react"
 
 import { Pn } from "../../../../../unrestored/shared/1571/2636/index__part-24"
 import { Xn, Zn, Jn, er, tr, nr, rr, or, ar, sr, cr, lr, ur, dr, pr, hr, mr, gr, wr, Nr, Rr, kr, xr, Dr, Mr, Lr, Pr, Br, Fr, Gr, Wr } from "../../../../../unrestored/shared/1571/2636/index__part-25"
-import { Cv } from "../widget-list/index"
-import /* [auto-meaningful-name] */Module_702 from /* 702 */"../../../../../unrestored/shared/1571/2636/702"
+import { widgetListWidth } from ".."
+import /* [auto-meaningful-name] */Unrestored_shared_1571_2636_702 from "../../../../../unrestored/shared/1571/2636/702"
 import * as /* [auto-meaningful-name] */Module_142 from /* 142 */"../../../../../unrestored/shared/1571/2636/142"
 import * as /* [auto-meaningful-name] */Module_120 from /* 120 */"../../../../../unrestored/shared/1571/2636/120"
 import * as /* [auto-meaningful-name] */Module_362 from /* 362 */"../../../../../unrestored/shared/1571/2636/362"
@@ -25,25 +25,23 @@ import * as /* [auto-meaningful-name] */Module_26 from /* 26 */"../../../../../u
 import * as /* [auto-meaningful-name] */Module_141 from /* 141 */"../../../../../unrestored/shared/1571/2636/141/index"
 import * as /* [auto-meaningful-name] */Module_190 from /* 190 */"../../../../../unrestored/shared/1571/2636/190"
 import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"../../../../../unrestored/shared/1571/2636/18"
-import * as /* [auto-meaningful-name] */Redux_common_actions from /* 2 */"../../../redux/common/actions"
-import * as /* [auto-meaningful-name] */Shared_ui_components_index from /* 13 */"../../../../shared/ui/components/index"
+import * as CommonActions from "../../../redux/common/actions"
+import { asyncCreateProjectScreenAction, asyncRemoveProjectScreenAction, asyncSetProjectCurrentScreenIndexAction, moveProjectScreenAction, setProjectModifiedAction, showCommonToastInfoAction, updateProjectScreenSnapshotAction } from "../../../redux/common/actions"
+import { IconFont, Popover } from "../../../../shared/ui/components"
 import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"../../../../../unrestored/shared/1571/2636/11"
-import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import classNames from "classnames"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../../../../../unrestored/shared/1571/2636/710"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../../../../../unrestored/shared/1571/2636/10/index"
-import { useDispatch, useSelector, batch } from /* 16 */"react-redux"
-import * as /* [auto-meaningful-name] */ReactDom from /* 80 */"react-dom"
-import /* [auto-meaningful-name] */React from /* 0 */"react"
-import { useRef, useState, useImperativeHandle, useEffect, createRef, createElement, Component, useLayoutEffect, memo } from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from "react"
+import { batch, useDispatch, useSelector } from "react-redux"
+import * as /* [auto-meaningful-name] */ReactDom from "react-dom"
 import * as /* [auto-meaningful-name] */Module_553 from /* 553 */"../../../../../unrestored/shared/1571/2636/553"
 import * as /* [auto-meaningful-name] */Module_238 from /* 238 */"../../../../../unrestored/shared/1571/2636/238"
-import * as /* [auto-meaningful-name] */Module_212 from /* 212 */"../../../../../unrestored/shared/1571/2636/212"
-import /* [auto-meaningful-name] */Module_2121 from /* 212 */"../../../../../unrestored/shared/1571/2636/212"
+import styles from "./styles.module.css"
 import * as /* [auto-meaningful-name] */Module_53 from /* 53 */"../../../../../unrestored/shared/1571/2636/53"
-import * as /* [auto-meaningful-name] */Module_1511 from /* 1511 */"../../../../../unrestored/shared/1571/2636/1511"
-import /* [auto-meaningful-name] */Module_15111 from /* 1511 */"../../../../../unrestored/shared/1571/2636/1511"
-var Xr = React.forwardRef(function (e, t) {
+import /* [auto-meaningful-name] */Module_1511 from /* 1511 */"../../../../../unrestored/shared/1571/2636/1511"
+import type { IPopoverRef } from "../../../../shared/ui/components/Popover"
+
+const WidgetInput = React.forwardRef(function (e, t) {
   var n = useDispatch()
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var /* [auto-meaningful-name] */e$onChange = e.onChange
@@ -51,19 +49,19 @@ var Xr = React.forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$renameInputValue = e.renameInputValue
   var /* [auto-meaningful-name] */e$className = e.className
   var /* [auto-meaningful-name] */e$value = e.value
-  var l = useRef(e$value)
-  var u = useState(e$value)
+  var l = React.useRef(e$value)
+  var u = React.useState(e$value)
   var d = Module_10.a(u, 2)
   var p = d[0]
   var m = d[1]
-  var g = useState(false)
+  var g = React.useState(false)
   var v = Module_10.a(g, 2)
   var b = v[0]
   var y = v[1]
-  var E = useRef(null)
-  var O = useRef(true)
-  var w = useRef(null)
-  useImperativeHandle(t, function () {
+  var E = React.useRef(null)
+  var O = React.useRef(true)
+  var w = React.useRef(null)
+  React.useImperativeHandle(t, function () {
     return {
       focus: function () {
         var /* [auto-meaningful-name] */w$current
@@ -79,7 +77,7 @@ var Xr = React.forwardRef(function (e, t) {
       }
     }
   })
-  useEffect(function () {
+  React.useEffect(function () {
     m(e$value)
   }, [e$value])
   var C = function () {
@@ -138,13 +136,13 @@ var Xr = React.forwardRef(function (e, t) {
       }
     }
   }
-  return React.createElement("input", {
-    className: Classnames(Module_15111.input, e$className, {
+  return <input
+    className={classNames(Module_1511.input, e$className, {
       "coco-input-warning-animation": b
-    }),
-    ref: w,
-    value: p,
-    onBlur: function () {
+    })}
+    ref={w}
+    value={p}
+    onBlur={function () {
       if (e.onBlur) {
         e.onBlur()
       }
@@ -159,7 +157,7 @@ var Xr = React.forwardRef(function (e, t) {
           e$onChange(t)
         }
       } else {
-        n(Redux_common_actions.mj({
+        n(CommonActions.showCommonToastInfoAction({
           message: Module_710$a$formatMessage({
             id: "blankInputValue"
           }),
@@ -168,22 +166,22 @@ var Xr = React.forwardRef(function (e, t) {
         }))
         m(e$value)
       }
-    },
-    onChange: T,
-    onCompositionEnd: function () {
+    }}
+    onChange={T}
+    onCompositionEnd={function () {
       O.current = true
       T()
-    },
-    onCompositionStart: function () {
+    }}
+    onCompositionStart={function () {
       O.current = false
-    },
-    onKeyDown: function (e) {
+    }}
+    onKeyDown={function (e) {
       var /* [auto-meaningful-name] */w$current = w.current
       if (w$current && 13 === e.keyCode) {
         w$current.blur()
       }
-    }
-  })
+    }}
+  />
 })
 var Qr = function (e) {
   var /* [auto-meaningful-name] */e$screenId = e.screenId
@@ -193,11 +191,11 @@ var Qr = function (e) {
   var r = useSelector(function (e) {
     return e.oTState.userFocusOTInfoList
   })
-  var o = useState([])
+  var o = React.useState([])
   var i = Module_10.a(o, 2)
   var a = i[0]
   var s = i[1]
-  useEffect(function () {
+  React.useEffect(function () {
     var e = r.filter(function (e) {
       return e.path.screenId === e$screenId
     })
@@ -213,12 +211,12 @@ var Qr = function (e) {
   var c = a.map(function (e) {
     return e.nickname
   }).join(" ")
-  return React.createElement("div", {
-    className: Module_2121.collaboration,
-    title: c
-  }, React.createElement(Shared_ui_components_index.j, {
-    type: "icon-collaborate"
-  }))
+  return <div
+    className={styles.collaboration}
+    title={c}
+  >
+    <IconFont type="icon-collaborate" />
+  </div>
 }
 var Zr = function (e) {
   var t
@@ -235,7 +233,7 @@ var Zr = function (e) {
         o[i] = arguments[i]
       }
       t = Module_388.a(this, (e = Module_362.a(n)).call.apply(e, [this].concat(o)))
-      Module_35.a(Module_142.a(Module_142.a(t)), "wrappedInstance", createRef())
+      Module_35.a(Module_142.a(Module_142.a(t)), "wrappedInstance", React.createRef())
       return t
     }
     Module_120.a(n, t)
@@ -248,21 +246,21 @@ var Zr = function (e) {
       }, {
         key: "getWrappedInstance",
         value: function () {
-          Module_702(r.withRef, "To access the wrapped instance, you need to pass in {withRef: true} as the second argument of the SortableHandle() call")
+          Unrestored_shared_1571_2636_702(r.withRef, "To access the wrapped instance, you need to pass in {withRef: true} as the second argument of the SortableHandle() call")
           return this.wrappedInstance.current
         }
       }, {
         key: "render",
         value: function () {
           var t = r.withRef ? this.wrappedInstance : null
-          return createElement(e, Module_19.a({
+          return React.createElement(e, Module_19.a({
             ref: t
           }, this.props))
         }
       }
     ])
     return n
-  }(Component)
+  }(React.Component)
   Module_35.a(t, "displayName", sr("sortableHandle", e))
   return n
 }(function (e) {
@@ -270,17 +268,19 @@ var Zr = function (e) {
   var /* [auto-meaningful-name] */e$index = e.index
   var /* [auto-meaningful-name] */e$title = e.title
   var o = useDispatch()
-  return React.createElement("div", {
-    className: Module_2121.snapshotContainer,
-    onClick: function () {
-      o(Redux_common_actions.vg(e$index))
-    }.bind(null, e$index)
-  }, e$screen.snapshot && React.createElement("img", {
-    src: e$screen.snapshot,
-    className: Module_2121.snapshot,
-    alt: e$title,
-    draggable: false
-  }))
+  return <div
+    className={styles.snapshotContainer}
+    onClick={function () {
+      o(CommonActions.vg(e$index))
+    }.bind(null, e$index)}
+  >
+    {e$screen.snapshot && <img
+      src={e$screen.snapshot}
+      className={styles.snapshot}
+      alt={e$title}
+      draggable={false}
+    />}
+  </div>
 })
 var Jr = React.memo(function (e) {
   var /* [auto-meaningful-name] */e$screen = e.screen
@@ -298,106 +298,127 @@ var Jr = React.memo(function (e) {
     return e.oTState.collWorkId
   })
   var /* [auto-meaningful-name] */e$screen$title = e$screen.title
-  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
-  var m = useDispatch()
-  var g = useRef(null)
-  var v = useRef(null)
-  useEffect(function () {
+  const formatMessage = Module_710.a().formatMessage
+  const dispatch = useDispatch()
+  var g = React.useRef(null)
+  var v = React.useRef(null)
+  React.useEffect(function () {
     if (e$selected && v.current) {
       v.current.scrollIntoView()
     }
   }, [e$selected])
-  useEffect(function () {
+  React.useEffect(function () {
     var /* [auto-meaningful-name] */g$current
-    var /* [auto-meaningful-name] */g$current1
+    var /* [auto-meaningful-name] */_g$current
     if (e$canEdit) {
       if (!(null === g || undefined === g || null === (g$current = g.current) || undefined === g$current)) {
         g$current.focus()
       }
-      if (!(null === g || undefined === g || null === (g$current1 = g.current) || undefined === g$current1)) {
-        g$current1.select()
+      if (!(null === g || undefined === g || null === (_g$current = g.current) || undefined === _g$current)) {
+        _g$current.select()
       }
     }
   }, [e$canEdit])
-  return React.createElement("div", {
-    ref: v,
-    className: Classnames(Module_2121.item, Module_11.a({}, Module_2121.selected, e$selected)),
-    key: e$screen.id
-  }, React.createElement("div", {
-    className: Module_2121.view
-  }, React.createElement(Zr, {
-    screen: e$screen,
-    index: c,
-    title: e$screen$title
-  }), React.createElement(React.Fragment, null, !e$canEdit && React.createElement(React.Fragment, null, e$showDeleteIcon && !e$readonly && React.createElement("div", {
-    className: Module_2121.delete,
-    onClick: function (e) {
-      e.stopPropagation()
-      e$onDeleteIconClick(e$screen)
-    }
-  }, React.createElement(Shared_ui_components_index.j, {
-    type: "icon-delete-bold"
-  })), !e$readonly && React.createElement("div", {
-    className: Module_2121.copy,
-    onClick: function (e) {
-      if (l.size > 98) {
-        m(Redux_common_actions.mj({
-          showPrefixIcon: false,
-          message: Module_710$a$formatMessage({
-            id: "screeMaxSize"
-          })
-        }))
-      } else {
-        e.stopPropagation()
-        m(Redux_common_actions.vg(c))
-        m(Redux_common_actions.Df(e$screen.id))
-      }
-    }
-  }, React.createElement(Shared_ui_components_index.j, {
-    type: "icon-copy"
-  })), !!u && React.createElement(Qr, {
-    screenId: e$screen.id
-  })), React.createElement("div", {
-    className: Module_2121.index
-  }, c + 1))), React.createElement("div", {
-    className: Module_2121.titleBox
-  }, e$canEdit && !e$readonly ? React.createElement(Xr, {
-    value: e$screen$title,
-    checkValueIsRepeat: function (e) {
-      return Module_9.r(e$screen.id, e)
-    },
-    onChange: function (e) {
-      var n
-      m(Redux_common_actions.Jg(e$screen.id, "title", e))
-      if (!(null === (n = Module_26.g.getToolbox()) || undefined === n)) {
-        n.refresh_selection()
-      }
-    },
-    ref: g,
-    renameInputValue: function (e) {
-      var n
-      var r = Module_9.Ob(e$screen.id, e, l)
-      m(Redux_common_actions.Jg(e$screen.id, "title", r))
-      if (!(null === (n = Module_26.g.getToolbox()) || undefined === n)) {
-        n.refresh_selection()
-      }
-      return r
-    },
-    onBlur: function () {
-      e$updateCanEdit(false)
-    },
-    className: Module_2121.editName
-  }) : React.createElement("p", {
-    onClick: function (e) {
-      if (!e$readonly) {
-        e$updateCanEdit(true)
-      }
-    },
-    style: {
-      display: e$canEdit ? "none" : "block"
-    },
-    className: Module_2121.canNotEdit
-  }, e$screen$title)))
+  return <div
+    ref={v}
+    className={classNames(styles.item, Module_11.a({}, styles.selected, e$selected))}
+    key={e$screen.id}
+  >
+    {<div
+      className={styles.view}
+    >
+      {<Zr
+        screen={e$screen}
+        index={c}
+        title={e$screen$title}
+      />}
+      {<>
+        {!e$canEdit && <>
+          {e$showDeleteIcon && !e$readonly && <div
+            className={styles.delete}
+            onClick={function (e) {
+              e.stopPropagation()
+              e$onDeleteIconClick(e$screen)
+            }}
+          >
+            {<IconFont
+              type={"icon-delete-bold"}
+            />}
+          </div>}
+          {!e$readonly && <div
+            className={styles.copy}
+            onClick={(event) => {
+              if (l.size > 98) {
+                dispatch(CommonActions.showCommonToastInfoAction({
+                  showPrefixIcon: false,
+                  message: formatMessage({
+                    id: "screeMaxSize"
+                  })
+                }))
+              } else {
+                event.stopPropagation()
+                dispatch(CommonActions.vg(c))
+                dispatch(CommonActions.Df(e$screen.id))
+              }
+            }}
+          >
+            <IconFont type="icon-copy"></IconFont>
+          </div>}
+          {!!u && <Qr
+            screenId={e$screen.id}
+          />}
+        </>}
+        {<div
+          className={styles.index}
+        >
+          {c + 1}
+        </div>}
+      </>}
+    </div>}
+    {<div
+      className={styles.titleBox}
+    >
+      {e$canEdit && !e$readonly ? <WidgetInput
+        value={e$screen$title}
+        checkValueIsRepeat={function (e) {
+          return Module_9.r(e$screen.id, e)
+        }}
+        onChange={function (e) {
+          var n
+          dispatch(CommonActions.Jg(e$screen.id, "title", e))
+          if (!(null === (n = Module_26.g.getToolbox()) || undefined === n)) {
+            n.refresh_selection()
+          }
+        }}
+        ref={g}
+        renameInputValue={function (e) {
+          var n
+          var r = Module_9.Ob(e$screen.id, e, l)
+          dispatch(CommonActions.Jg(e$screen.id, "title", r))
+          if (!(null === (n = Module_26.g.getToolbox()) || undefined === n)) {
+            n.refresh_selection()
+          }
+          return r
+        }}
+        onBlur={function () {
+          e$updateCanEdit(false)
+        }}
+        className={styles.editName}
+      /> : <p
+        onClick={function (e) {
+          if (!e$readonly) {
+            e$updateCanEdit(true)
+          }
+        }}
+        style={{
+          display: e$canEdit ? "none" : "block"
+        }}
+        className={styles.canNotEdit}
+      >
+        {e$screen$title}
+      </p>}
+    </div>}
+  </div>
 })
 var $r = function (e) {
   var t
@@ -414,7 +435,7 @@ var $r = function (e) {
         o[i] = arguments[i]
       }
       t = Module_388.a(this, (e = Module_362.a(n)).call.apply(e, [this].concat(o)))
-      Module_35.a(Module_142.a(Module_142.a(t)), "wrappedInstance", createRef())
+      Module_35.a(Module_142.a(Module_142.a(t)), "wrappedInstance", React.createRef())
       return t
     }
     Module_120.a(n, t)
@@ -474,21 +495,21 @@ var $r = function (e) {
       }, {
         key: "getWrappedInstance",
         value: function () {
-          Module_702(r.withRef, "To access the wrapped instance, you need to pass in {withRef: true} as the second argument of the SortableElement() call")
+          Unrestored_shared_1571_2636_702(r.withRef, "To access the wrapped instance, you need to pass in {withRef: true} as the second argument of the SortableElement() call")
           return this.wrappedInstance.current
         }
       }, {
         key: "render",
         value: function () {
           var t = r.withRef ? this.wrappedInstance : null
-          return createElement(e, Module_19.a({
+          return React.createElement(e, Module_19.a({
             ref: t
           }, Zn(this.props, Wr)))
         }
       }
     ])
     return n
-  }(Component)
+  }(React.Component)
   Module_35.a(t, "displayName", sr("sortableElement", e))
   Module_35.a(t, "contextType", Fr)
   Module_35.a(t, "propTypes", Gr)
@@ -515,7 +536,8 @@ var $r = function (e) {
     showDeleteIcon: e$screensSize > 1
   }, s))
 })
-var eo = function (e) {
+
+var InnerScreenList = function (e) {
   var t
   var n
   var r = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : {
@@ -984,7 +1006,7 @@ var eo = function (e) {
       var r = new Xn()
       Pr(e)
       t.manager = r
-      t.wrappedInstance = createRef()
+      t.wrappedInstance = React.createRef()
       t.sortableContextValue = {
         manager: r
       }
@@ -1219,7 +1241,7 @@ var eo = function (e) {
       }, {
         key: "getWrappedInstance",
         value: function () {
-          Module_702(r.withRef, "To access the wrapped instance, you need to pass in {withRef: true} as the second argument of the SortableContainer() call")
+          Unrestored_shared_1571_2636_702(r.withRef, "To access the wrapped instance, you need to pass in {withRef: true} as the second argument of the SortableContainer() call")
           return this.wrappedInstance.current
         }
       }, {
@@ -1232,11 +1254,13 @@ var eo = function (e) {
         key: "render",
         value: function () {
           var t = r.withRef ? this.wrappedInstance : null
-          return createElement(Fr.Provider, {
-            value: this.sortableContextValue
-          }, createElement(e, Module_19.a({
-            ref: t
-          }, Zn(this.props, Lr))))
+          return <Fr.Provider
+            value={this.sortableContextValue}
+          >
+            {React.createElement(e, Module_19.a({
+              ref: t
+            }, Zn(this.props, Lr)))}
+          </Fr.Provider>
         }
       }, {
         key: "helperContainer",
@@ -1266,7 +1290,7 @@ var eo = function (e) {
       }
     ])
     return n
-  }(Component)
+  }(React.Component)
   Module_35.a(t, "displayName", sr("sortableList", e))
   Module_35.a(t, "defaultProps", Mr)
   Module_35.a(t, "propTypes", xr)
@@ -1275,8 +1299,8 @@ var eo = function (e) {
   var /* [auto-meaningful-name] */e$screens = e.screens
   var n = Module_295.a(e, ["screens"])
   var /* [auto-meaningful-name] */e$screens$size = e$screens.size
-  var o = useRef(null)
-  var i = useRef(0)
+  var o = React.useRef(null)
+  var i = React.useRef(0)
   var a = function () {
     if (o.current) {
       i.current = o.current.scrollLeft
@@ -1294,7 +1318,7 @@ var eo = function (e) {
       }
     }
   }
-  useLayoutEffect(function () {
+  React.useLayoutEffect(function () {
     if (o.current) {
       var /* [auto-meaningful-name] */o$current = o.current
       o.current.scrollLeft = i.current
@@ -1306,324 +1330,300 @@ var eo = function (e) {
       }
     }
   })
-  return React.createElement("div", {
-    className: Module_2121.list,
-    ref: o
-  }, e$screens.map(function (e, t) {
-    return React.createElement($r, Object.assign({
-      key: e.id,
-      screen: e,
-      index: t,
-      screenIndex: t,
-      screensSize: e$screens$size
-    }, n))
-  }))
+  return <div
+    className={styles.list}
+    ref={o}
+  >
+    {e$screens.map(function (e, t) {
+      return React.createElement($r, Object.assign({
+        key: e.id,
+        screen: e,
+        index: t,
+        screenIndex: t,
+        screensSize: e$screens$size
+      }, n))
+    })}
+  </div>
 })
-var to = memo(function () {
-  var /* [auto-meaningful-name] */n$current
-  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
-  var n = useRef(null)
-  var r = useSelector(function (e) {
-    return e.project.screens
-  })
-  var o = useSelector(function (e) {
-    return e.common.stageWidth
-  })
-  var i = useState(-1)
-  var a = Module_10.a(i, 2)
-  var s = a[0]
-  var c = a[1]
-  var l = useState(0)
-  var u = Module_10.a(l, 2)
-  var d = u[0]
-  var p = u[1]
-  var m = useState(0)
-  var g = Module_10.a(m, 2)
-  var v = g[0]
-  var b = g[1]
-  var y = useState(false)
-  var E = Module_10.a(y, 2)
-  var O = E[0]
-  var w = E[1]
-  var C = useRef()
-  var T = useRef(null)
-  var A = useSelector(function (e) {
-    return e.project.currentScreenIndex
-  })
-  var j = useSelector(function (e) {
-    return e.project.playing
-  })
-  var R = Module_238.d()
-  var k = useSelector(function (e) {
-    return e.uiConfig.screenPanel
-  }) === Module_18.j.ReadOnly
-  var x = useDispatch()
-  useEffect(function () {
-    var e = document.createElement("div")
-    e.id = "_cocoScreenListDragContainer"
-    document.body.appendChild(e)
+
+export const ScreenList = React.memo(() => {
+
+  const { formatMessage } = Module_710.a()
+
+  const popoverRef = React.useRef<IPopoverRef>(null)
+
+  const screens = useSelector((state) => state.project.screens)
+  const stageWidth = useSelector((state) => state.common.stageWidth)
+
+  const [editDomIndex, setEditDomIndex] = React.useState(-1)
+  const [d, p] = React.useState(0)
+  const [width, setWidth] = React.useState(0)
+  const [stageMaskVisible, setStageMaskVisible] = React.useState(false)
+  const screenToDelete = React.useRef()
+  const screenIndexListElementRef = React.useRef<HTMLDivElement>(null)
+
+  const currentScreenIndex = useSelector((state) => state.project.currentScreenIndex)
+  const playing = useSelector((state) => state.project.playing)
+  const currentScreen = Module_238.d()
+  const isReadonly = useSelector((state) => state.uiConfig.screenPanel) === Module_18.j.ReadOnly
+
+  const dispatch = useDispatch()
+
+  React.useEffect(() => {
+    const element = document.createElement("div")
+    element.id = "_cocoScreenListDragContainer"
+    document.body.appendChild(element)
   }, [])
-  useEffect(function () {
-    if (null === R || undefined === R ? undefined : R.id) {
-      setTimeout(function () {
-        var e = document.getElementById(R.id)
-        if (e) {
-          Module_553.a(e, 1).then(function (e) {
-            x(Redux_common_actions.Xj(R.id, e))
-          }).catch(function (e) {
-            return console.error(e)
-          })
-        }
-      }, 100)
+
+  React.useEffect(() => {
+    if (!currentScreen?.id) {
+      return
     }
-  }, [R, x])
-  useEffect(function () {
-    b(j ? o + Cv : o)
-  }, [j, o])
-  useEffect(function () {
-    var e = function (e) {
-      var /* [auto-meaningful-name] */n$current1
-      var /* [auto-meaningful-name] */n$current2
-      var /* [auto-meaningful-name] */e$target = e.target
-      var i = null === (n$current1 = n.current) || undefined === n$current1 ? undefined : n$current1.target
-      if (i && !(i.contains(e$target) || e$target.closest(".".concat(Module_2121.deleteScreenDialog)) || e$target.closest(".".concat(Module_2121.snapshotContainer)))) {
-        if (!(null === (n$current2 = n.current) || undefined === n$current2)) {
-          n$current2.hideContent()
-        }
+    setTimeout(() => {
+      const currentScreenElement = document.getElementById(currentScreen.id)
+      if (!currentScreenElement) {
+        return
+      }
+      Module_553.a(currentScreenElement, 1)
+        .then((screenSnapshot) => {
+          dispatch(updateProjectScreenSnapshotAction(currentScreen.id, screenSnapshot))
+        })
+        .catch((error) => console.error(error))
+    }, 100)
+  }, [currentScreen, dispatch])
+
+  React.useEffect(() => {
+    setWidth(playing ? stageWidth + widgetListWidth : stageWidth)
+  }, [playing, stageWidth])
+
+  React.useEffect(() => {
+    function close(event: PointerEvent | MouseEvent) {
+      const { target } = event as (PointerEvent | MouseEvent) & { target: Element }
+      const popoverElement = popoverRef.current?.target
+      if (popoverElement && !(
+        popoverElement.contains(target) ||
+        target.closest(`.${styles.deleteScreenDialog}`) ||
+        target.closest(`.${styles.snapshotContainer}`)
+      )) {
+        popoverRef.current?.hideContent()
       }
     }
-    document.body.addEventListener("click", e)
-    document.body.addEventListener("mousedown", e)
-    return function () {
-      document.body.removeEventListener("click", e)
-      document.body.removeEventListener("mousedown", e)
+    document.body.addEventListener("click", close)
+    document.body.addEventListener("mousedown", close)
+    return () => {
+      document.body.removeEventListener("click", close)
+      document.body.removeEventListener("mousedown", close)
     }
-  }, [null === (n$current = n.current) || undefined === n$current ? undefined : n$current.visible])
-  useEffect(function () {
-    var e = document.getElementById("screen_index_".concat(A))
-    if (e) {
-      e.scrollIntoView({
+  }, [popoverRef.current?.visible])
+
+  React.useEffect(function () {
+    const screenElement = document.getElementById(`screen_index_${currentScreenIndex}`)
+    if (screenElement) {
+      screenElement.scrollIntoView({
         block: "end",
         inline: "nearest"
       })
     }
-  }, [A])
-  var D = function () {
-    if (T.current) {
-      p(T.current.scrollLeft)
+  }, [currentScreenIndex])
+
+  function handleScroll() {
+    if (screenIndexListElementRef.current) {
+      p(screenIndexListElementRef.current.scrollLeft)
     }
   }
-  var M = function (e) {
-    var /* [auto-meaningful-name] */T$current
-    if (0 === e.deltaX && 0 !== e.deltaY) {
-      e.preventDefault()
-      if (!(null === (T$current = T.current) || undefined === T$current)) {
-        T$current.scrollBy({
-          left: Math.round(e.deltaY) / 2,
-          behavior: "smooth"
-        })
-      }
+
+  function handleWheel(event: WheelEvent) {
+    if (event.deltaX === 0 && event.deltaY !== 0) {
+      event.preventDefault()
+      screenIndexListElementRef.current?.scrollBy({
+        left: Math.round(event.deltaY) / 2,
+        behavior: "smooth"
+      })
     }
   }
-  useLayoutEffect(function () {
-    if (T.current) {
-      var /* [auto-meaningful-name] */T$current = T.current
-      T.current.addEventListener("scroll", D)
-      T.current.addEventListener("wheel", M)
-      return function () {
-        T$current.removeEventListener("scroll", D)
-        T$current.removeEventListener("wheel", M)
-      }
+
+  React.useLayoutEffect(() => {
+    if (!screenIndexListElementRef.current) {
+      return
+    }
+    const screenIndexListElement = screenIndexListElementRef.current
+    screenIndexListElementRef.current.addEventListener("scroll", handleScroll)
+    screenIndexListElementRef.current.addEventListener("wheel", handleWheel)
+    return function () {
+      screenIndexListElement.removeEventListener("scroll", handleScroll)
+      screenIndexListElement.removeEventListener("wheel", handleWheel)
     }
   })
-  if (!R) {
+
+  if (!currentScreen) {
     return null
   }
-  var L = function (e) {
-    var n = r.find(function (t) {
-      return t.id === e
-    })
-    if (n) {
-      C.current = n
-      var o = n.get("title")
-      var i = Module_710$a$formatMessage({
-        id: "deleteScreen"
-      }) + "“" + Module_190.f(o, 10) + "”?"
-      x(Redux_common_actions.zh({
-        onClose: B,
-        onConfirm: F,
-        title: i,
-        isDangerous: true,
-        content: Module_710$a$formatMessage({
-          id: "deleteScreenTips"
-        }),
-        allowText: Module_710$a$formatMessage({
-          id: "delete"
-        }),
-        className: Module_2121.deleteScreenDialog
-      }))
+
+  function deleteScreenConfirm(id: string) {
+    const screen = screens.find((screen)  => screen.id === id)
+    if (!screen) {
+      return
+    }
+    screenToDelete.current = screen
+    const title = screen.get("title")
+    const message = formatMessage({ id: "deleteScreen" }) + "“" + Module_190.f(title, 10) + "”?"
+    dispatch(CommonActions.openConfirmDialogAction({
+      onClose: cancelDeleteScreen,
+      onConfirm: confirmDeleteScreen,
+      title: message,
+      isDangerous: true,
+      content: formatMessage({
+        id: "deleteScreenTips"
+      }),
+      allowText: formatMessage({
+        id: "delete"
+      }),
+      className: styles.deleteScreenDialog
+    }))
+  }
+
+  function deleteScreenNoConfirm(id) {
+    dispatch(asyncRemoveProjectScreenAction(id))
+  }
+
+  function cancelDeleteScreen() {
+    screenToDelete.current = undefined
+  }
+
+  function confirmDeleteScreen() {
+    const id = screenToDelete.current?.get("id")
+    if (id) {
+      dispatch(asyncRemoveProjectScreenAction(id))
     }
   }
-  var P = function (e) {
-    x(Redux_common_actions.ng(e))
-  }
-  var B = function () {
-    C.current = undefined
-  }
-  var F = function () {
-    var /* [auto-meaningful-name] */C$current
-    var t = null === (C$current = C.current) || undefined === C$current ? undefined : C$current.get("id")
-    if (t) {
-      x(Redux_common_actions.ng(t))
-    }
-  }
-  var G = React.createElement(React.Fragment, null, React.createElement("div", {
-    className: Module_2121.closeIconBox,
-    onClick: function () {
-      var /* [auto-meaningful-name] */n$current1
-      if (!(null === (n$current1 = n.current) || undefined === n$current1)) {
-        n$current1.hideContent()
-      }
-    }
-  }, React.createElement(Shared_ui_components_index.j, {
-    type: "icon-close"
-  })), React.createElement("section", {
-    className: Module_2121.popoverBody,
-    style: {
-      width: v + 2
-    },
-    "data-html2canvas-ignore": "true"
-  }, React.createElement(eo, {
-    screens: r,
-    editDomIndex: s,
-    currentScreenIndex: A,
-    readonly: k,
-    updateCanEdit: function (e, t) {
-      c(e ? t : -1)
-    },
-    onDeleteIconClick: function (e) {
-      if (!function (e, t) {
-        return 0 === t.get("widgetIds").length && Module_26.z.isEmptyWorkspace(e.id, t.id)
-      }(R, e)) {
-        L(e.id)
-      } else {
-        P(e.id)
-      }
-    },
-    axis: "x",
-    onSortEnd: function (e) {
-      var /* [auto-meaningful-name] */e$oldIndex = e.oldIndex
-      var /* [auto-meaningful-name] */e$newIndex = e.newIndex
-      if (e$oldIndex === e$newIndex) {
-        x(Redux_common_actions.vg(e$newIndex))
-        return void Module_141.a("ScreenItemClick", {
-          screenId: r.getIn([e$newIndex, "id"]),
-          screenName: r.getIn([e$newIndex, "title"])
-        })
-      }
-      batch(function () {
-        var e
-        x(Redux_common_actions.Fi(true))
-        x(Redux_common_actions.yh(e$oldIndex, e$newIndex))
-        x(Redux_common_actions.vg(e$newIndex))
-        if (!(null === (e = Module_26.g.getToolbox()) || undefined === e)) {
-          e.refresh_selection()
-        }
-      })
-    },
-    helperClass: Module_2121.dragItem,
-    helperContainer: document.getElementById("_cocoScreenListDragContainer") || document.body,
-    useDragHandle: true
-  }), !k && React.createElement("div", {
-    className: Module_2121.addScreen,
-    onClick: function () {
-      if (r.size > 98) {
-        x(Redux_common_actions.mj({
-          showPrefixIcon: false,
-          message: Module_710$a$formatMessage({
-            id: "screeMaxSize"
+
+  const PopoverContent = <>
+    <div
+      className={styles.closeIconBox}
+      onClick={() => { popoverRef.current?.hideContent() }}
+    >
+      <IconFont type="icon-close" />
+    </div>
+    <section
+      className={styles.popoverBody}
+      style={{ width: width + 2 }}
+      data-html2canvas-ignore="true"
+    >
+      <InnerScreenList
+        screens={screens}
+        editDomIndex={editDomIndex}
+        currentScreenIndex={currentScreenIndex}
+        readonly={isReadonly}
+        updateCanEdit={(e, t) => { setEditDomIndex(e ? t : -1) }}
+        onDeleteIconClick={(screen) => {
+          if (
+            screen.get("widgetIds").length === 0 &&
+            Module_26.z.isEmptyWorkspace(currentScreen.id, screen.id)
+          ) {
+            deleteScreenNoConfirm(screen.id)
+          } else {
+            deleteScreenConfirm(screen.id)
+          }
+        }}
+        axis="x"
+        onSortEnd={({ oldIndex, newIndex }) => {
+          if (oldIndex === newIndex) {
+            dispatch(asyncSetProjectCurrentScreenIndexAction(newIndex))
+            Module_141.a("ScreenItemClick", {
+              screenId: screens.getIn([newIndex, "id"]),
+              screenName: screens.getIn([newIndex, "title"])
+            })
+            return
+          }
+          batch(() => {
+            dispatch(setProjectModifiedAction(true))
+            dispatch(moveProjectScreenAction(oldIndex, newIndex))
+            dispatch(asyncSetProjectCurrentScreenIndexAction(newIndex))
+            Module_26.g.getToolbox()?.refresh_selection()
           })
-        }))
-      } else {
-        x(Redux_common_actions.Hf())
-        c(r.size)
-      }
-    }
-  }, React.createElement(Shared_ui_components_index.j, {
-    type: "icon-add2",
-    className: Module_2121.addBtn
-  }))))
-  var W = function (e) {
-    x(Redux_common_actions.vg(e))
+        }}
+        helperClass={styles.dragItem}
+        helperContainer={document.getElementById("_cocoScreenListDragContainer") || document.body}
+        useDragHandle={true}
+      />
+      {!isReadonly && <div
+        className={styles.addScreen}
+        onClick={function () {
+          if (screens.size > 98) {
+            dispatch(showCommonToastInfoAction({
+              showPrefixIcon: false,
+              message: formatMessage({ id: "screeMaxSize" })
+            }))
+          } else {
+            dispatch(asyncCreateProjectScreenAction())
+            setEditDomIndex(screens.size)
+          }
+        }}
+      >
+        <IconFont type="icon-add2" className={styles.addBtn} />
+      </div>}
+    </section>
+  </>
+
+  function setCurrentScreenIndex(index: number) {
+    dispatch(asyncSetProjectCurrentScreenIndexAction(index))
   }
-  return React.createElement("div", {
-    className: Module_2121.wrapper,
-    style: {
-      left: j ? 0 : Cv,
-      width: v
-    }
-  }, React.createElement("div", {
-    className: Classnames(Module_2121.stageMask, O && Module_2121.visible)
-  }), React.createElement(Shared_ui_components_index.r, {
-    content: G,
-    onOpen: function () {
-      w(true)
-    },
-    onHide: function () {
-      w(false)
-    },
-    autoClose: false,
-    ref: n
-  }, React.createElement("div", {
-    className: Classnames(Module_2121.screenIconBox, !j && Module_2121.line)
-  }, React.createElement(Shared_ui_components_index.j, {
-    type: "icon-screen-manage",
-    className: Module_2121.screenIcon
-  }), React.createElement("span", {
-    className: Module_2121.screenText
-  }, Module_710$a$formatMessage({
-    id: "screenManage"
-  })))), !j && React.createElement("div", {
-    className: Module_2121.screenIndexBox
-  }, React.createElement("div", {
-    className: Classnames(Module_2121.prev, d <= 0 && Module_2121.hide),
-    onClick: function () {
-      var /* [auto-meaningful-name] */T$current
-      if (!(null === (T$current = T.current) || undefined === T$current)) {
-        T$current.scrollBy({
-          left: -190,
-          behavior: "smooth"
-        })
-      }
-    }
-  }, React.createElement(Shared_ui_components_index.j, {
-    type: "icon-pick-up",
-    className: Module_2121.prevIcon
-  })), React.createElement("div", {
-    className: Classnames(Module_2121.next, d + v - 108 >= 38 * r.size && Module_2121.hide),
-    onClick: function () {
-      var /* [auto-meaningful-name] */T$current
-      if (!(null === (T$current = T.current) || undefined === T$current)) {
-        T$current.scrollBy({
-          left: 190,
-          behavior: "smooth"
-        })
-      }
-    }
-  }, React.createElement(Shared_ui_components_index.j, {
-    type: "icon-pick-up",
-    className: Module_2121.nextIcon
-  })), React.createElement("div", {
-    className: Module_2121.screenIndexList,
-    ref: T
-  }, r.map(function (e, t) {
-    return React.createElement("div", {
-      id: "screen_index_".concat(t),
-      className: Classnames(Module_2121.index, A === t && Module_2121.active),
-      key: t,
-      onClick: W.bind(null, t)
-    }, t + 1)
-  }))))
+
+  return <div
+    className={styles.wrapper}
+    style={{
+      left: playing ? 0 : widgetListWidth,
+      width
+    }}
+  >
+    <div className={classNames(styles.stageMask, stageMaskVisible && styles.visible)} />
+    <Popover
+      content={PopoverContent}
+      onOpen={() => { setStageMaskVisible(true) }}
+      onHide={() => { setStageMaskVisible(false) }}
+      autoClose={false}
+      ref={popoverRef}
+    >
+      <div
+        className={classNames(styles.screenIconBox, !playing && styles.line)}
+      >
+        <IconFont type="icon-screen-manage" className={styles.screenIcon} />
+        <span className={styles.screenText}>{formatMessage({ id: "screenManage" })}</span>
+      </div>
+    </Popover>
+    {!playing && <div className={styles.screenIndexBox}>
+      <div
+        className={classNames(styles.prev, d <= 0 && styles.hide)}
+        onClick={() => {
+          screenIndexListElementRef.current?.scrollBy({
+            left: -190,
+            behavior: "smooth"
+          })
+        }}
+      >
+        <IconFont type="icon-pick-up" className={styles.prevIcon} />
+      </div>
+      <div
+        className={classNames(styles.next, d + width - 108 >= 38 * screens.size && styles.hide)}
+        onClick={() => {
+          screenIndexListElementRef.current?.scrollBy({
+            left: 190,
+            behavior: "smooth"
+          })
+        }}
+      >
+        <IconFont type="icon-pick-up" className={styles.nextIcon} />
+      </div>
+      <div className={styles.screenIndexList} ref={screenIndexListElementRef}>
+        {screens.map((__screen, index) =>  <div
+          id={`screen_index_${index}`}
+          className={classNames(styles.index, currentScreenIndex === index && styles.active)}
+          key={index}
+          onClick={setCurrentScreenIndex.bind(null, index)}
+        >{index + 1}</div>)}
+      </div>
+    </div>}
+  </div>
 })
-export { Xr }
-export { to }
+
+export { WidgetInput as Xr }

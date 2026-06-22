@@ -331,7 +331,7 @@ function commonReducer(state = initialState, action: Action<any>) {
       })
     case CLOSE_CONFIRM_DIALOG:
       return state.set("confirmDialogInfo", closedConfirmDialogInfo)
-    case Actions.Ke:
+    case Actions.TOGGLE_PERMISSION_DIALOG:
       return state.set("permissionDialogInfo", action.payload)
     case Actions.Fc:
       return state.set("iconLibraryDialog", {
@@ -378,7 +378,7 @@ function commonReducer(state = initialState, action: Action<any>) {
       return state.setIn(["projectSaveProgressDialog", "progress"], action.payload)
     case Actions.Xd:
       return state.set("saving", action.payload)
-    case Actions.n:
+    case Actions.APPEND_MESSAGE_TO_CONSOLE:
       return state.set("consoleMessages", T(state, action))
     case Actions.Tb:
       return state.set("consoleMessages", Immutable.List())

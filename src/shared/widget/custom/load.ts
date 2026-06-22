@@ -16,7 +16,7 @@ export { le as o }
 export { getMethodTypes as j }
 export { InvisibleWidget as c }
 export { VisibleWidget as d }
-export { isExtensions as q } from "./type"
+export { isExtensions, isExtensions as q } from "./type"
 
 import BabelRuntimeHelperRegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../../../../unrestored/shared/1571/2636/7"

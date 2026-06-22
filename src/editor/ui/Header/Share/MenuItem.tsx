@@ -4,8 +4,8 @@
  * 模块 ID：2636__part-18
  */
 
-import { ShareQRDialog } from "./dialogs/qr"
-import { ShareCommunityDialog } from "./dialogs/community"
+import { ShareQRDialog } from "./Dialogs/QR"
+import { ShareCommunityDialog } from "./Dialogs/Community"
 import * as CustomWidgetRestrict from "../../../../shared/widget/custom/restrict"
 import * as CustomWidgetStorage from "../../../../shared/widget/custom/storage"
 import /* [auto-meaningful-name] */Unrestored_shared_1571_2636_1510 from "../../../../../unrestored/shared/1571/2636/1510"

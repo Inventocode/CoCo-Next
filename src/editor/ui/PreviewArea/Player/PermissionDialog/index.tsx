@@ -4,13 +4,13 @@
  * 模块 ID：2636__part-219
  */
 
-import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"../../../../../unrestored/shared/1571/2636/18"
-import * as /* [auto-meaningful-name] */Redux_common_actions from "../../../redux/common/actions"
-import { Button, Dialog } from "../../../../shared/ui/components"
+import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"../../../../../../unrestored/shared/1571/2636/18"
+import * as /* [auto-meaningful-name] */Redux_common_actions from "../../../../redux/common/actions"
+import { Button, Dialog } from "../../../../../shared/ui/components"
 import classNames from "classnames"
 import { useSelector, useDispatch } from "react-redux"
 import React, { memo } from "react"
-import styles from "../../../../../unrestored/shared/1571/2636/816"
+import styles from "../../../../../../unrestored/shared/1571/2636/816"
 
 export const PermissionDialog = memo(() => {
   const permissionDialogInfo = useSelector((state) => state.common.permissionDialogInfo)
