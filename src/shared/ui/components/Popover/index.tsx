@@ -22,7 +22,14 @@ export interface IPopoverProps {
   disabled?: boolean
 }
 
-export const Popover = memo(forwardRef(({
+export interface IPopoverRef {
+  target: HTMLElement
+  visible: boolean
+  showContent(): void
+  hideContent(): void
+}
+
+export const Popover = memo(forwardRef<IPopoverRef>(({
   children,
   defaultVisible,
   className,

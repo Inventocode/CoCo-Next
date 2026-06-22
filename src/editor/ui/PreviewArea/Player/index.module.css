@@ -1,0 +1,65 @@
+/**
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：618
+ */
+
+.wrapper {
+    background-color: #f0f0f0;
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 54px);
+    text-align: center;
+    z-index: 25;
+    top: 54px;
+}
+
+.deviceFrameWrapper {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.deviceFrameWrapper .deviceFrameContainer {
+    display: inline-block;
+    width: 410px;
+    height: 720px;
+}
+
+.deviceFrameWrapper .deviceFrameContainer .deviceFrame {
+    height: 100%;
+    position: relative;
+}
+
+.deviceFrameWrapper .deviceFrameContainer .deviceFrame iframe {
+    border: none;
+    width: 360px;
+    height: 640px;
+}
+
+.deviceFrameWrapper .deviceFrameContainer .deviceFrame .mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background-repeat: no-repeat;
+}
+
+.emulatorWrapper {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.galaxy5 iframe {
+    margin-top: 38px;
+}
+
+.galaxy5 .mask {
+    background: url(https://creation.codemao.cn/coconut/web/1.22.0-0/static/media/galaxy5.1e8ad9c3.png) 0 0 no-repeat;
+    background-size: cover;
+}

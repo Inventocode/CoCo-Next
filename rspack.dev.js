@@ -1,7 +1,7 @@
 const path = require("path")
 const rspack = require("@rspack/core")
 const { merge } = require("webpack-merge")
-const ReactRefreshPlugin = require("@rspack/plugin-react-refresh")
+const { ReactRefreshRspackPlugin } = require("@rspack/plugin-react-refresh")
 
 const common = require("./rspack.common")
 const server = require("./rspack.server")
@@ -40,9 +40,8 @@ module.exports = (env) => {
             ]
         },
         plugins: [
-            new ReactRefreshPlugin({
-                exclude: [/[\\\/]node_modules[\\\/]/i, /[\\\/]external-module\.ts$/i],
-                overlay: false
+            new ReactRefreshRspackPlugin({
+                exclude: [/[\\\/]node_modules[\\\/]/i, /[\\\/]external-module\.ts$/i]
             })
         ]
     }), env)

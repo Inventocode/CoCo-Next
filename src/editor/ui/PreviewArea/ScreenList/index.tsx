@@ -25,7 +25,8 @@ import * as /* [auto-meaningful-name] */Module_26 from /* 26 */"../../../../../u
 import * as /* [auto-meaningful-name] */Module_141 from /* 141 */"../../../../../unrestored/shared/1571/2636/141/index"
 import * as /* [auto-meaningful-name] */Module_190 from /* 190 */"../../../../../unrestored/shared/1571/2636/190"
 import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"../../../../../unrestored/shared/1571/2636/18"
-import * as Actions from "../../../redux/common/actions"
+import * as CommonActions from "../../../redux/common/actions"
+import { asyncCreateProjectScreenAction, asyncRemoveProjectScreenAction, asyncSetProjectCurrentScreenIndexAction, moveProjectScreenAction, setProjectModifiedAction, showCommonToastInfoAction, updateProjectScreenSnapshotAction } from "../../../redux/common/actions"
 import { IconFont, Popover } from "../../../../shared/ui/components"
 import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"../../../../../unrestored/shared/1571/2636/11"
 import classNames from "classnames"
@@ -35,13 +36,12 @@ import { batch, useDispatch, useSelector } from "react-redux"
 import * as /* [auto-meaningful-name] */ReactDom from "react-dom"
 import * as /* [auto-meaningful-name] */Module_553 from /* 553 */"../../../../../unrestored/shared/1571/2636/553"
 import * as /* [auto-meaningful-name] */Module_238 from /* 238 */"../../../../../unrestored/shared/1571/2636/238"
-import * as /* [auto-meaningful-name] */Module_212 from /* 212 */"../../../../../unrestored/shared/1571/2636/212"
-import styles from "../../../../../unrestored/shared/1571/2636/212"
+import styles from "./styles.module.css"
 import * as /* [auto-meaningful-name] */Module_53 from /* 53 */"../../../../../unrestored/shared/1571/2636/53"
-import * as /* [auto-meaningful-name] */Module_1511 from /* 1511 */"../../../../../unrestored/shared/1571/2636/1511"
-import /* [auto-meaningful-name] */Unrestored_shared_1571_2636_1511 from "../../../../../unrestored/shared/1571/2636/1511"
+import /* [auto-meaningful-name] */Module_1511 from /* 1511 */"../../../../../unrestored/shared/1571/2636/1511"
+import type { IPopoverRef } from "../../../../shared/ui/components/Popover"
 
-var Xr = React.forwardRef(function (e, t) {
+const WidgetInput = React.forwardRef(function (e, t) {
   var n = useDispatch()
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var /* [auto-meaningful-name] */e$onChange = e.onChange
@@ -137,7 +137,7 @@ var Xr = React.forwardRef(function (e, t) {
     }
   }
   return <input
-    className={classNames(Unrestored_shared_1571_2636_1511.input, e$className, {
+    className={classNames(Module_1511.input, e$className, {
       "coco-input-warning-animation": b
     })}
     ref={w}
@@ -157,7 +157,7 @@ var Xr = React.forwardRef(function (e, t) {
           e$onChange(t)
         }
       } else {
-        n(Actions.showCommonToastInfoAction({
+        n(CommonActions.showCommonToastInfoAction({
           message: Module_710$a$formatMessage({
             id: "blankInputValue"
           }),
@@ -271,7 +271,7 @@ var Zr = function (e) {
   return <div
     className={styles.snapshotContainer}
     onClick={function () {
-      o(Actions.vg(e$index))
+      o(CommonActions.vg(e$index))
     }.bind(null, e$index)}
   >
     {e$screen.snapshot && <img
@@ -349,7 +349,7 @@ var Jr = React.memo(function (e) {
             className={styles.copy}
             onClick={(event) => {
               if (l.size > 98) {
-                dispatch(Actions.showCommonToastInfoAction({
+                dispatch(CommonActions.showCommonToastInfoAction({
                   showPrefixIcon: false,
                   message: formatMessage({
                     id: "screeMaxSize"
@@ -359,8 +359,8 @@ var Jr = React.memo(function (e) {
               // [CoCo Next] 移除屏幕数量上限
               // else {
               event.stopPropagation()
-              dispatch(Actions.vg(c))
-              dispatch(Actions.Df(e$screen.id))
+              dispatch(CommonActions.vg(c))
+              dispatch(CommonActions.Df(e$screen.id))
               // }
             }}
           >
@@ -380,14 +380,14 @@ var Jr = React.memo(function (e) {
     {<div
       className={styles.titleBox}
     >
-      {e$canEdit && !e$readonly ? <Xr
+      {e$canEdit && !e$readonly ? <WidgetInput
         value={e$screen$title}
         checkValueIsRepeat={function (e) {
           return Module_9.r(e$screen.id, e)
         }}
         onChange={function (e) {
           var n
-          dispatch(Actions.Jg(e$screen.id, "title", e))
+          dispatch(CommonActions.Jg(e$screen.id, "title", e))
           if (!(null === (n = Module_26.g.getToolbox()) || undefined === n)) {
             n.refresh_selection()
           }
@@ -396,7 +396,7 @@ var Jr = React.memo(function (e) {
         renameInputValue={function (e) {
           var n
           var r = Module_9.Ob(e$screen.id, e, l)
-          dispatch(Actions.Jg(e$screen.id, "title", r))
+          dispatch(CommonActions.Jg(e$screen.id, "title", r))
           if (!(null === (n = Module_26.g.getToolbox()) || undefined === n)) {
             n.refresh_selection()
           }
@@ -538,7 +538,8 @@ var $r = function (e) {
     showDeleteIcon: e$screensSize > 1
   }, s))
 })
-var eo = function (e) {
+
+var InnerScreenList = function (e) {
   var t
   var n
   var r = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : {
@@ -1348,346 +1349,286 @@ var eo = function (e) {
 })
 
 export const ScreenList = React.memo(() => {
-  var /* [auto-meaningful-name] */n$current
-  const formatMessage = Module_710.a().formatMessage
-  var n = React.useRef(null)
-  var screens = useSelector(function (e) {
-    return e.project.screens
-  })
-  var stageWidth = useSelector(function (e) {
-    return e.common.stageWidth
-  })
-  var i = React.useState(-1)
-  var a = Module_10.a(i, 2)
-  var s = a[0]
-  var c = a[1]
-  var l = React.useState(0)
-  var u = Module_10.a(l, 2)
-  var d = u[0]
-  var p = u[1]
-  var m = React.useState(0)
-  var g = Module_10.a(m, 2)
-  var v = g[0]
-  var b = g[1]
-  var y = React.useState(false)
-  var E = Module_10.a(y, 2)
-  var O = E[0]
-  var w = E[1]
-  var C = React.useRef()
-  var T = React.useRef(null)
-  var currentScreenIndex = useSelector(function (e) {
-    return e.project.currentScreenIndex
-  })
-  var playing = useSelector(function (e) {
-    return e.project.playing
-  })
-  var R = Module_238.d()
-  var screenPanel = useSelector(function (e) {
-    return e.uiConfig.screenPanel
-  }) === Module_18.j.ReadOnly
+
+  const { formatMessage } = Module_710.a()
+
+  const popoverRef = React.useRef<IPopoverRef>(null)
+
+  const screens = useSelector((state) => state.project.screens)
+  const stageWidth = useSelector((state) => state.common.stageWidth)
+
+  const [editDomIndex, setEditDomIndex] = React.useState(-1)
+  const [d, p] = React.useState(0)
+  const [width, setWidth] = React.useState(0)
+  const [stageMaskVisible, setStageMaskVisible] = React.useState(false)
+  const screenToDelete = React.useRef()
+  const screenIndexListElementRef = React.useRef<HTMLDivElement>(null)
+
+  const currentScreenIndex = useSelector((state) => state.project.currentScreenIndex)
+  const playing = useSelector((state) => state.project.playing)
+  const currentScreen = Module_238.d()
+  const isReadonly = useSelector((state) => state.uiConfig.screenPanel) === Module_18.j.ReadOnly
+
   const dispatch = useDispatch()
-  React.useEffect(function () {
-    var e = document.createElement("div")
-    e.id = "_cocoScreenListDragContainer"
-    document.body.appendChild(e)
+
+  React.useEffect(() => {
+    const element = document.createElement("div")
+    element.id = "_cocoScreenListDragContainer"
+    document.body.appendChild(element)
   }, [])
-  React.useEffect(function () {
-    if (null === R || undefined === R ? undefined : R.id) {
-      setTimeout(function () {
-        var e = document.getElementById(R.id)
-        if (e) {
-          Module_553.a(e, 1).then(function (e) {
-            dispatch(Actions.Xj(R.id, e))
-          }).catch(function (e) {
-            return console.error(e)
-          })
-        }
-      }, 100)
+
+  React.useEffect(() => {
+    if (!currentScreen?.id) {
+      return
     }
-  }, [R, dispatch])
+    setTimeout(() => {
+      const currentScreenElement = document.getElementById(currentScreen.id)
+      if (!currentScreenElement) {
+        return
+      }
+      Module_553.a(currentScreenElement, 1)
+        .then((screenSnapshot) => {
+          dispatch(updateProjectScreenSnapshotAction(currentScreen.id, screenSnapshot))
+        })
+        .catch((error) => console.error(error))
+    }, 100)
+  }, [currentScreen, dispatch])
+
   const widgetListWidth = useWidgetListWidth()
-  React.useEffect(function () {
-    b(playing ? stageWidth + widgetListWidth : stageWidth)
+  React.useEffect(() => {
+    setWidth(playing ? stageWidth + widgetListWidth : stageWidth)
   }, [playing, stageWidth])
-  React.useEffect(function () {
-    var e = function (e) {
-      var /* [auto-meaningful-name] */_n$current
-      var /* [auto-meaningful-name] */_n$current2
-      var /* [auto-meaningful-name] */e$target = e.target
-      var i = null === (_n$current = n.current) || undefined === _n$current ? undefined : _n$current.target
-      if (i && !(i.contains(e$target) || e$target.closest(".".concat(styles.deleteScreenDialog)) || e$target.closest(".".concat(styles.snapshotContainer)))) {
-        if (!(null === (_n$current2 = n.current) || undefined === _n$current2)) {
-          _n$current2.hideContent()
-        }
+
+  React.useEffect(() => {
+    function close(event: PointerEvent | MouseEvent) {
+      const { target } = event as (PointerEvent | MouseEvent) & { target: Element }
+      const popoverElement = popoverRef.current?.target
+      if (popoverElement && !(
+        popoverElement.contains(target) ||
+        target.closest(`.${styles.deleteScreenDialog}`) ||
+        target.closest(`.${styles.snapshotContainer}`)
+      )) {
+        popoverRef.current?.hideContent()
       }
     }
-    document.body.addEventListener("click", e)
-    document.body.addEventListener("mousedown", e)
-    return function () {
-      document.body.removeEventListener("click", e)
-      document.body.removeEventListener("mousedown", e)
+    document.body.addEventListener("click", close)
+    document.body.addEventListener("mousedown", close)
+    return () => {
+      document.body.removeEventListener("click", close)
+      document.body.removeEventListener("mousedown", close)
     }
-  }, [null === (n$current = n.current) || undefined === n$current ? undefined : n$current.visible])
+  }, [popoverRef.current?.visible])
+
   React.useEffect(function () {
-    var e = document.getElementById("screen_index_".concat(currentScreenIndex))
-    if (e) {
-      e.scrollIntoView({
+    const screenElement = document.getElementById(`screen_index_${currentScreenIndex}`)
+    if (screenElement) {
+      screenElement.scrollIntoView({
         block: "end",
         inline: "nearest"
       })
     }
   }, [currentScreenIndex])
-  var D = function () {
-    if (T.current) {
-      p(T.current.scrollLeft)
+
+  function handleScroll() {
+    if (screenIndexListElementRef.current) {
+      p(screenIndexListElementRef.current.scrollLeft)
     }
   }
-  var M = function (e) {
-    var /* [auto-meaningful-name] */T$current
-    if (0 === e.deltaX && 0 !== e.deltaY) {
-      e.preventDefault()
-      if (!(null === (T$current = T.current) || undefined === T$current)) {
-        T$current.scrollBy({
-          left: Math.round(e.deltaY) / 2,
-          behavior: "smooth"
-        })
-      }
+
+  function handleWheel(event: WheelEvent) {
+    if (event.deltaX === 0 && event.deltaY !== 0) {
+      event.preventDefault()
+      screenIndexListElementRef.current?.scrollBy({
+        left: Math.round(event.deltaY) / 2,
+        behavior: "smooth"
+      })
     }
   }
+
   React.useLayoutEffect(() => {
-    if (T.current) {
-      var /* [auto-meaningful-name] */T$current = T.current
-      T.current.addEventListener("scroll", D)
-      T.current.addEventListener("wheel", M)
-      return function () {
-        T$current.removeEventListener("scroll", D)
-        T$current.removeEventListener("wheel", M)
-      }
+    if (!screenIndexListElementRef.current) {
+      return
+    }
+    const screenIndexListElement = screenIndexListElementRef.current
+    screenIndexListElementRef.current.addEventListener("scroll", handleScroll)
+    screenIndexListElementRef.current.addEventListener("wheel", handleWheel)
+    return function () {
+      screenIndexListElement.removeEventListener("scroll", handleScroll)
+      screenIndexListElement.removeEventListener("wheel", handleWheel)
     }
   })
-  if (!R) {
+
+  if (!currentScreen) {
     return null
   }
-  var L = function (e) {
-    var n = screens.find(function (t) {
-      return t.id === e
-    })
-    if (n) {
-      C.current = n
-      var o = n.get("title")
-      var i = formatMessage({
-        id: "deleteScreen"
-      }) + "“" + Module_190.f(o, 10) + "”?"
-      dispatch(Actions.openConfirmDialogAction({
-        onClose: B,
-        onConfirm: F,
-        title: i,
-        isDangerous: true,
-        content: formatMessage({
-          id: "deleteScreenTips"
-        }),
-        allowText: formatMessage({
-          id: "delete"
-        }),
-        className: styles.deleteScreenDialog
-      }))
+
+  function deleteScreenConfirm(id: string) {
+    const screen = screens.find((screen)  => screen.id === id)
+    if (!screen) {
+      return
+    }
+    screenToDelete.current = screen
+    const title = screen.get("title")
+    const message = formatMessage({ id: "deleteScreen" }) + "“" + Module_190.f(title, 10) + "”?"
+    dispatch(CommonActions.openConfirmDialogAction({
+      onClose: cancelDeleteScreen,
+      onConfirm: confirmDeleteScreen,
+      title: message,
+      isDangerous: true,
+      content: formatMessage({
+        id: "deleteScreenTips"
+      }),
+      allowText: formatMessage({
+        id: "delete"
+      }),
+      className: styles.deleteScreenDialog
+    }))
+  }
+
+  function deleteScreenNoConfirm(id) {
+    dispatch(asyncRemoveProjectScreenAction(id))
+  }
+
+  function cancelDeleteScreen() {
+    screenToDelete.current = undefined
+  }
+
+  function confirmDeleteScreen() {
+    const id = screenToDelete.current?.get("id")
+    if (id) {
+      dispatch(asyncRemoveProjectScreenAction(id))
     }
   }
-  var P = function (e) {
-    dispatch(Actions.ng(e))
-  }
-  var B = function () {
-    C.current = undefined
-  }
-  var F = function () {
-    var /* [auto-meaningful-name] */C$current
-    var t = null === (C$current = C.current) || undefined === C$current ? undefined : C$current.get("id")
-    if (t) {
-      dispatch(Actions.ng(t))
-    }
-  }
-  var G = <>
-    {<div
+
+  const PopoverContent = <>
+    <div
       className={styles.closeIconBox}
-      onClick={function () {
-        var /* [auto-meaningful-name] */_n$current3
-        if (!(null === (_n$current3 = n.current) || undefined === _n$current3)) {
-          _n$current3.hideContent()
-        }
-      }}
+      onClick={() => { popoverRef.current?.hideContent() }}
     >
-      {<IconFont
-        type={"icon-close"}
-      />}
-    </div>}
-    {<section
+      <IconFont type="icon-close" />
+    </div>
+    <section
       className={styles.popoverBody}
-      style={{
-        width: v + 2
-      }}
-      data-html2canvas-ignore={"true"}
+      style={{ width: width + 2 }}
+      data-html2canvas-ignore="true"
     >
-      {React.createElement(eo, {
-        screens: screens,
-        editDomIndex: s,
-        currentScreenIndex: currentScreenIndex,
-        readonly: screenPanel,
-        updateCanEdit: function (e, t) {
-          c(e ? t : -1)
-        },
-        onDeleteIconClick: function (e) {
-          if (!function (e, t) {
-            return 0 === t.get("widgetIds").length && Module_26.z.isEmptyWorkspace(e.id, t.id)
-          }(R, e)) {
-            L(e.id)
+      <InnerScreenList
+        screens={screens}
+        editDomIndex={editDomIndex}
+        currentScreenIndex={currentScreenIndex}
+        readonly={isReadonly}
+        updateCanEdit={(e, t) => { setEditDomIndex(e ? t : -1) }}
+        onDeleteIconClick={(screen) => {
+          if (
+            screen.get("widgetIds").length === 0 &&
+            Module_26.z.isEmptyWorkspace(currentScreen.id, screen.id)
+          ) {
+            deleteScreenNoConfirm(screen.id)
           } else {
-            P(e.id)
+            deleteScreenConfirm(screen.id)
           }
-        },
-        axis: "x",
-        onSortEnd: function (e) {
-          var /* [auto-meaningful-name] */e$oldIndex = e.oldIndex
-          var /* [auto-meaningful-name] */e$newIndex = e.newIndex
-          if (e$oldIndex === e$newIndex) {
-            dispatch(Actions.vg(e$newIndex))
-            return void Module_141.a("ScreenItemClick", {
-              screenId: screens.getIn([e$newIndex, "id"]),
-              screenName: screens.getIn([e$newIndex, "title"])
+        }}
+        axis="x"
+        onSortEnd={({ oldIndex, newIndex }) => {
+          if (oldIndex === newIndex) {
+            dispatch(asyncSetProjectCurrentScreenIndexAction(newIndex))
+            Module_141.a("ScreenItemClick", {
+              screenId: screens.getIn([newIndex, "id"]),
+              screenName: screens.getIn([newIndex, "title"])
             })
+            return
           }
-          batch(function () {
-            var e
-            dispatch(Actions.Fi(true))
-            dispatch(Actions.yh(e$oldIndex, e$newIndex))
-            dispatch(Actions.vg(e$newIndex))
-            if (!(null === (e = Module_26.g.getToolbox()) || undefined === e)) {
-              e.refresh_selection()
-            }
+          batch(() => {
+            dispatch(setProjectModifiedAction(true))
+            dispatch(moveProjectScreenAction(oldIndex, newIndex))
+            dispatch(asyncSetProjectCurrentScreenIndexAction(newIndex))
+            Module_26.g.getToolbox()?.refresh_selection()
           })
-        },
-        helperClass: styles.dragItem,
-        helperContainer: document.getElementById("_cocoScreenListDragContainer") || document.body,
-        useDragHandle: true
-      })}
-      {!screenPanel && <div
+        }}
+        helperClass={styles.dragItem}
+        helperContainer={document.getElementById("_cocoScreenListDragContainer") || document.body}
+        useDragHandle={true}
+      />
+      {!isReadonly && <div
         className={styles.addScreen}
         onClick={function () {
           if (screens.size > 98) {
-            dispatch(Actions.showCommonToastInfoAction({
+            dispatch(showCommonToastInfoAction({
               showPrefixIcon: false,
-              message: formatMessage({
-                id: "screeMaxSize"
-              })
+              message: formatMessage({ id: "screeMaxSize" })
             }))
           }
           // [CoCo Next] 移除屏幕数量上限
           // else {
-          dispatch(Actions.Hf())
-          c(screens.size)
+          dispatch(asyncCreateProjectScreenAction())
+          setEditDomIndex(screens.size)
           // }
         }}
       >
-        {<IconFont
-          type={"icon-add2"}
-          className={styles.addBtn}
-        />}
+        <IconFont type="icon-add2" className={styles.addBtn} />
       </div>}
-    </section>}
+    </section>
   </>
-  var W = function (e) {
-    dispatch(Actions.vg(e))
+
+  function setCurrentScreenIndex(index: number) {
+    dispatch(asyncSetProjectCurrentScreenIndexAction(index))
   }
+
   return <div
     className={styles.wrapper}
     style={{
       left: playing ? 0 : widgetListWidth,
-      width: v
+      width
     }}
   >
-    {<div
-      className={classNames(styles.stageMask, O && styles.visible)}
-    />}
-    {<Popover
-      content={G}
-      onOpen={() => {
-        w(true)
-      }}
-      onHide={() => {
-        w(false)
-      }}
+    <div className={classNames(styles.stageMask, stageMaskVisible && styles.visible)} />
+    <Popover
+      content={PopoverContent}
+      onOpen={() => { setStageMaskVisible(true) }}
+      onHide={() => { setStageMaskVisible(false) }}
       autoClose={false}
-      ref={n}
+      ref={popoverRef}
     >
-      {<div
+      <div
         className={classNames(styles.screenIconBox, !playing && styles.line)}
       >
-        {<IconFont
-          type={"icon-screen-manage"}
-          className={styles.screenIcon}
-        />}
-        {<span
-          className={styles.screenText}
-        >
-          {formatMessage({
-            id: "screenManage"
-          })}
-        </span>}
-      </div>}
-    </Popover>}
-    {!playing && <div
-      className={styles.screenIndexBox}
-    >
-      {<div
+        <IconFont type="icon-screen-manage" className={styles.screenIcon} />
+        <span className={styles.screenText}>{formatMessage({ id: "screenManage" })}</span>
+      </div>
+    </Popover>
+    {!playing && <div className={styles.screenIndexBox}>
+      <div
         className={classNames(styles.prev, d <= 0 && styles.hide)}
-        onClick={function () {
-          var /* [auto-meaningful-name] */T$current
-          if (!(null === (T$current = T.current) || undefined === T$current)) {
-            T$current.scrollBy({
-              left: -190,
-              behavior: "smooth"
-            })
-          }
+        onClick={() => {
+          screenIndexListElementRef.current?.scrollBy({
+            left: -190,
+            behavior: "smooth"
+          })
         }}
       >
-        {<IconFont
-          type={"icon-pick-up"}
-          className={styles.prevIcon}
-        />}
-      </div>}
-      {<div
-        className={classNames(styles.next, d + v - 108 >= 38 * screens.size && styles.hide)}
-        onClick={function () {
-          var /* [auto-meaningful-name] */T$current
-          if (!(null === (T$current = T.current) || undefined === T$current)) {
-            T$current.scrollBy({
-              left: 190,
-              behavior: "smooth"
-            })
-          }
+        <IconFont type="icon-pick-up" className={styles.prevIcon} />
+      </div>
+      <div
+        className={classNames(styles.next, d + width - 108 >= 38 * screens.size && styles.hide)}
+        onClick={() => {
+          screenIndexListElementRef.current?.scrollBy({
+            left: 190,
+            behavior: "smooth"
+          })
         }}
       >
-        {<IconFont
-          type={"icon-pick-up"}
-          className={styles.nextIcon}
-        />}
-      </div>}
-      {<div
-        className={styles.screenIndexList}
-        ref={T}
-      >
-        {screens.map(function (e, t) {
-          return <div
-            id={"screen_index_".concat(t)}
-            className={classNames(styles.index, currentScreenIndex === t && styles.active)}
-            key={t}
-            onClick={W.bind(null, t)}
-          >
-            {t + 1}
-          </div>
-        })}
-      </div>}
+        <IconFont type="icon-pick-up" className={styles.nextIcon} />
+      </div>
+      <div className={styles.screenIndexList} ref={screenIndexListElementRef}>
+        {screens.map((__screen, index) =>  <div
+          id={`screen_index_${index}`}
+          className={classNames(styles.index, currentScreenIndex === index && styles.active)}
+          key={index}
+          onClick={setCurrentScreenIndex.bind(null, index)}
+        >{index + 1}</div>)}
+      </div>
     </div>}
   </div>
 })
 
-export { Xr }
+export { WidgetInput as Xr }
