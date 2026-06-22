@@ -3,12 +3,12 @@ import { memo, useEffect, useLayoutEffect, useRef, useState } from "react"
 import classNames from "classnames"
 import { useDispatch, useSelector } from "react-redux"
 
-import { Rn } from "../../../../unrestored/shared/1571/2636/index__part-23"
-import { ScreenList } from "./screen-list"
+import { Player } from "./Player"
+import { ScreenList } from "./ScreenList"
 import { WidgetTabContainer } from "./WidgetList"
 import { lo as DragBar } from "../../../../unrestored/shared/1571/2636/index__part-27"
 import { Stage } from "./stage"
-import { StageToast } from "./stage-toast"
+import { StageToast } from "./StageToast"
 import styles from "./styles.module.css"
 import { ContextMenu } from "./ContextMenu"
 import * as /* [auto-meaningful-name] */Module_75 from /* 75 */"../../../../unrestored/shared/1571/2636/75"
@@ -16,7 +16,7 @@ import * as /* [auto-meaningful-name] */Module_90 from /* 90 */"../../../../unre
 import * as /* [auto-meaningful-name] */Animejs from "animejs"
 import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"../../../../unrestored/shared/1571/2636/9"
 import * as CommonActions from "../../redux/common/actions"
-import { setStageScaleAction, setStageWidthAction } from "../../redux/common/actions"
+import { setIsHoverBlockAreaAction, setStageScaleAction, setStageWidthAction } from "../../redux/common/actions"
 import { changeContextMenuInfoAction, closeContextMenuAction } from "../../redux/common/actions"
 import { IconFont } from "../../../shared/ui/components"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../../../../unrestored/shared/1571/2636/710"
@@ -143,7 +143,7 @@ export const PreviewArea = memo(() => {
           )}
         </>
       </section>
-      <Rn />
+      <Player />
       {!playing && (
         <DragBar
           onDrag={(width) => { dispatch(setStageWidthAction(width - widgetListWidth)) }}
@@ -151,8 +151,8 @@ export const PreviewArea = memo(() => {
             setPreviewAreaWidth(width + 1)
             dispatch(setStageWidthAction(width - widgetListWidth))
           }}
-          onEnter={() => dispatch(CommonActions.ui(true))}
-          onLeave={() => dispatch(CommonActions.ui(false))}
+          onEnter={() => dispatch(setIsHoverBlockAreaAction(true))}
+          onLeave={() => dispatch(setIsHoverBlockAreaAction(false))}
           previewAreaRef={previewAreaRef}
         />
       )}

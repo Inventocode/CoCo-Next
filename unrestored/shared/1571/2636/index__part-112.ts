@@ -6,7 +6,7 @@
 
 "use strict"
 
-import { Xr } from "../../../../src/editor/ui/PreviewArea/screen-list/index"
+import { Xr } from "../../../../src/editor/ui/PreviewArea/ScreenList/index"
 import { gy } from "./index__part-103"
 import { FE } from "./index__part-111"
 import /* [auto-meaningful-name] */Module_88 from /* 88 */"./88"

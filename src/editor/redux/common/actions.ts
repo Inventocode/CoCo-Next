@@ -24,7 +24,7 @@ export { asyncSetUserInfoAction as wg }
 export { OPEN_CONFIRM_DIALOG as Ec }
 export { openConfirmDialogAction as zh }
 export { TOGGLE_PERMISSION_DIALOG as Ke }
-export { C as Ej }
+export { togglePermissionDialogAction as Ej }
 export { S as Vg }
 export { OPEN_ICON_LIB_DIALOG as Fc }
 export { CLOSE_ICON_LIB_DIALOG as Yb }
@@ -37,7 +37,7 @@ export { closeProjectDialogAction as Xg }
 export { OPEN_PROJECT_DIALOG as Gc }
 export { L as Ah }
 export { SET_PROJECT_MODIFIED as Rd }
-export { B as Fi }
+export { setProjectModifiedAction as Fi }
 export { SET_PROJECT_LAST_SAVED_TIME as Qd }
 export { G as Ei }
 export { SET_PROJECT_SAVE_PROGRESS_DIALOG as Vd }
@@ -49,7 +49,7 @@ export { Y as Si }
 export { ASYNC_CANCEL_SAVE_PROJECT as y }
 export { q as yf }
 export { APPEND_MESSAGE_TO_CONSOLE as n }
-export { Q as nf }
+export { appendMessageToConsoleAction as nf }
 export { CLEAR_CONSOLE_MESSAGE as Tb }
 export { J as Sg }
 export { SET_CONSOLE_HEIGHT as kd }
@@ -123,7 +123,7 @@ export { gt as jj }
 export { SHOW_CLOUD_DB_PUBLISH_DIALOG as pe }
 export { vt as kj }
 export { SET_IS_OFF_LINE as Bd }
-export { yt as vi }
+export { setIsOffLineAction as vi }
 export { TOGGLE_SLIDER_IMAGE_DIALOG as Me }
 export { Ot as Gj }
 export { TOGGLE_SWITCH_IMAGE_DIALOG as Ne }
@@ -165,9 +165,9 @@ export { SET_PROJECT_OPEN_FINISHED as Sd }
 export { an as Gi }
 export { promisify as Nf }
 export { ASYNC_CREATE_PROJECT_SCREEN as H }
-export { ln as Hf }
+export { asyncCreateProjectScreenAction as Hf }
 export { ASYNC_REMOVE_PROJECT_SCREEN as nb }
-export { dn as ng }
+export { asyncRemoveProjectScreenAction as ng }
 export { ASYNC_COPY_PROJECT_SCREEN as D }
 export { fn as Df }
 export { ASYNC_DELETE_PROJECT_WIDGET as M }
@@ -238,7 +238,7 @@ export { Ir as Qg }
 export { ASYNC_CHANGE_PROJECT_TITLE as B }
 export { jr as Bf }
 export { UPDATE_PROJECT_SCREEN_SNAPSHOT as Ve }
-export { Rr as Xj }
+export { updateProjectScreenSnapshotAction as Xj }
 export { ADD_PROJECT_GLOBAL_WIDGET as j }
 export { xr as hf }
 export { ADD_PROJECT_WIDGET as l }
@@ -257,7 +257,7 @@ export { asyncSelectProjectWidgetAction as ug }
 export { SET_PROJECT_CURRENT_SCREEN_INDEX as Nd }
 export { qr as Bi }
 export { ASYNC_SET_PROJECT_CURRENT_SCREEN_INDEX as vb }
-export { Qr as vg }
+export { asyncSetProjectCurrentScreenIndexAction as vg }
 export { START_PLAYING_PROJECT as Ie }
 export { Jr as Cj }
 export { STOP_PLAYING_PROJECT as Je }
@@ -285,7 +285,7 @@ export { Eo as wi }
 export { ASYNC_UPDATE_OBJECT_VARIABLE_PROPERTY as Gb }
 export { wo as Gg }
 export { MOVE_PROJECT_SCREEN as Dc }
-export { To as yh }
+export { moveProjectScreenAction as yh }
 export { ADD_PRIMITIVE_VARIABLE as i }
 export { Io as gf }
 export { DELETE_PRIMITIVE_VARIABLE as jc }
@@ -405,7 +405,7 @@ export { INIT_PROJECT_DATA_WATCH as Cc }
 export { ADD_DATA_WATCH_VARIABLE as c }
 export { Ga as bf }
 export { UPDATE_DATA_WATCH_VARIABLE_PROPERTY as Pe }
-export { Wa as Pj }
+export { updateDataWatchVariablePropertyAction as Pj }
 export { DELETE_DATA_WATCH_VARIABLE as gc }
 export { Va as bh }
 export { RESET_DATA_WATCH_VALUE as ad }
@@ -514,7 +514,7 @@ export { l as Eb } from "../../../../unrestored/shared/1571/2636/162"
 export { K as Eg } from "../../../../unrestored/shared/1571/2636/162"
 
 import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"../../../../unrestored/shared/1571/2636/6"
-import { ICommonToastInfo, IConfirmDialogInfo } from "./interface"
+import { ICommonToastInfo, IConfirmDialogInfo, IPermissionDialogInfo } from "./interface"
 
 export const SET_APP_LANGUAGE = "SET_APP_LANGUAGE"
 
@@ -591,10 +591,10 @@ export function openConfirmDialogAction(payload: IConfirmDialogInfo) {
 }
 
 export const TOGGLE_PERMISSION_DIALOG = "TOGGLE_PERMISSION_DIALOG"
-function C(e) {
+export function togglePermissionDialogAction(info: IPermissionDialogInfo) {
   return {
     type: TOGGLE_PERMISSION_DIALOG,
-    payload: e
+    payload: info
   }
 }
 
@@ -648,7 +648,7 @@ function L(e) {
 }
 
 export const SET_PROJECT_MODIFIED = "SET_PROJECT_MODIFIED"
-function B(e) {
+export function setProjectModifiedAction(e) {
   return {
     payload: e,
     type: SET_PROJECT_MODIFIED
@@ -696,7 +696,7 @@ function q() {
 }
 
 export const APPEND_MESSAGE_TO_CONSOLE = "APPEND_MESSAGE_TO_CONSOLE"
-function Q(e) {
+export function appendMessageToConsoleAction(e) {
   return {
     type: APPEND_MESSAGE_TO_CONSOLE,
     payload: e
@@ -1046,10 +1046,10 @@ function vt(e, t, callback) {
 }
 
 export const SET_IS_OFF_LINE = "SET_IS_OFF_LINE"
-function yt(e) {
+export function setIsOffLineAction(isOffline: boolean) {
   return {
     type: SET_IS_OFF_LINE,
-    payload: e
+    payload: isOffline
   }
 }
 
@@ -1230,23 +1230,18 @@ export function promisify<T = unknown>(
 }
 
 export const ASYNC_CREATE_PROJECT_SCREEN = "ASYNC_CREATE_PROJECT_SCREEN"
-function ln(e) {
+export function asyncCreateProjectScreenAction(index?: number) {
   return {
-    payload: {
-      index: e
-    },
+    payload: { index },
     type: ASYNC_CREATE_PROJECT_SCREEN
   }
 }
 
 export const ASYNC_REMOVE_PROJECT_SCREEN = "ASYNC_REMOVE_PROJECT_SCREEN"
-function dn(e, t) {
+export function asyncRemoveProjectScreenAction(screenId: string, isEmitOT?: boolean) {
   return {
     type: ASYNC_REMOVE_PROJECT_SCREEN,
-    payload: {
-      screenId: e,
-      isEmitOT: t
-    }
+    payload: { screenId, isEmitOT }
   }
 }
 
@@ -1648,7 +1643,7 @@ function jr(e, t) {
 }
 
 export const UPDATE_PROJECT_SCREEN_SNAPSHOT = "UPDATE_PROJECT_SCREEN_SNAPSHOT"
-function Rr(e, t) {
+export function updateProjectScreenSnapshotAction(e, t) {
   return {
     type: UPDATE_PROJECT_SCREEN_SNAPSHOT,
     payload: {
@@ -1746,12 +1741,9 @@ function qr(e) {
 }
 
 export const ASYNC_SET_PROJECT_CURRENT_SCREEN_INDEX = "ASYNC_SET_PROJECT_CURRENT_SCREEN_INDEX"
-function Qr(e, t) {
+export function asyncSetProjectCurrentScreenIndexAction(index: number, shouldSaveCurrentData?: boolean) {
   return {
-    payload: {
-      index: e,
-      shouldSaveCurrentData: t
-    },
+    payload: { index, shouldSaveCurrentData },
     type: ASYNC_SET_PROJECT_CURRENT_SCREEN_INDEX
   }
 }
@@ -1908,13 +1900,10 @@ function wo(e) {
 }
 
 export const MOVE_PROJECT_SCREEN = "MOVE_PROJECT_SCREEN"
-function To(e, t) {
+export function moveProjectScreenAction(from: number, to: number) {
   return {
     type: MOVE_PROJECT_SCREEN,
-    payload: {
-      from: e,
-      to: t
-    }
+    payload: { from, to }
   }
 }
 
@@ -2525,13 +2514,9 @@ function Ga(e) {
 }
 
 export const UPDATE_DATA_WATCH_VARIABLE_PROPERTY = "UPDATE_DATA_WATCH_VARIABLE_PROPERTY"
-function Wa(e, t, n) {
+export function updateDataWatchVariablePropertyAction(id: string, property: string, value: unknown) {
   return {
-    payload: {
-      id: e,
-      property: t,
-      value: n
-    },
+    payload: { id, property, value },
     type: UPDATE_DATA_WATCH_VARIABLE_PROPERTY
   }
 }
