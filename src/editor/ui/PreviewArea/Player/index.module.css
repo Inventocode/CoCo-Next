@@ -14,6 +14,12 @@
     top: 54px;
 }
 
+/* [CoCo Next] 隐藏屏幕列表时高度沾满 */
+.wrapper.full {
+    height: 100%;
+    top: 0;
+}
+
 .deviceFrameWrapper {
     height: 100%;
     display: flex;
@@ -26,6 +32,8 @@
     display: inline-block;
     width: 410px;
     height: 720px;
+    /* [CoCo Next] 阻止宽度压缩 */
+    flex-shrink: 0;
 }
 
 .deviceFrameWrapper .deviceFrameContainer .deviceFrame {

@@ -12,6 +12,8 @@ import "./styles.css"
 import { IconFont } from "../Iconfont"
 import { useInnerWidth } from "../../../utils/ui/use-inner-width"
 import { useInnerHeight } from "../../../utils/ui/use-inner-height"
+import { useOffsetWidth } from "../../../utils/ui/use-offset-width"
+import { useOffsetHeight } from "../../../utils/ui/use-offset-height"
 
 export interface IDialogProps {
   className?: classNames.Argument
@@ -68,20 +70,22 @@ export const Dialog = memo(({
   // [CoCo Next] 缩小显示过大的对话框
   const innerWidth = useInnerWidth()
   const innerHeight = useInnerHeight()
+  const wrapperElementWidth = useOffsetWidth(wrapperElementRef.current)
+  const wrapperElementHeight = useOffsetHeight(wrapperElementRef.current)
   useLayoutEffect(() => {
     const wrapperElement = wrapperElementRef.current
     if (wrapperElement === null) {
       return
     }
-    const zoomX = innerWidth / wrapperElement.offsetWidth
-    const zoomY = innerHeight / wrapperElement.offsetHeight
+    const zoomX = innerWidth / wrapperElementWidth
+    const zoomY = innerHeight / wrapperElementHeight
     const zoom = Math.min(zoomX, zoomY)
     if (zoom < 1) {
-      wrapperElement.style.zoom = `${zoom}`
+      wrapperElement.style.transform = `translate(-50%, -50%) scale(${zoom})`
     } else {
-      wrapperElement.style.zoom = ""
+      wrapperElement.style.transform = ""
     }
-  }, [wrapperElementRef, innerWidth, innerHeight])
+  }, [wrapperElementRef, innerWidth, innerHeight, wrapperElementWidth, wrapperElementHeight])
 
   useEffect(() => {
     const element = elementRef.current

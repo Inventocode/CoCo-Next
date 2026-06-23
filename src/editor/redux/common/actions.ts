@@ -780,12 +780,21 @@ function he(e) {
   }
 }
 
-// [CoCo Next] 小屏设备可隐藏 header
+// [CoCo Next] 小屏设备可隐藏顶栏
 export const SET_HEADER_VISIBLE = "SET_HEADER_VISIBLE"
 export function setHeaderVisibleAction(headerVisible: boolean) {
   return {
     type: SET_HEADER_VISIBLE,
     payload: headerVisible
+  }
+}
+
+// [CoCo Next] 小屏设备可隐藏屏幕列表
+export const SET_SCREEN_LIST_VISIBLE = "SET_SCREEN_LIST_VISIBLE"
+export function setScreenListVisibleAction(screenListVisible: boolean) {
+  return {
+    type: SET_SCREEN_LIST_VISIBLE,
+    payload: screenListVisible
   }
 }
 

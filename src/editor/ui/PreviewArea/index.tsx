@@ -13,7 +13,6 @@ import styles from "./styles.module.css"
 import { ContextMenu } from "./ContextMenu"
 import * as /* [auto-meaningful-name] */Module_75 from /* 75 */"../../../../unrestored/shared/1571/2636/75"
 import * as /* [auto-meaningful-name] */Module_90 from /* 90 */"../../../../unrestored/shared/1571/2636/90"
-import * as /* [auto-meaningful-name] */Animejs from "animejs"
 import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"../../../../unrestored/shared/1571/2636/9"
 import * as CommonActions from "../../redux/common/actions"
 import { setIsHoverBlockAreaAction, setStageScaleAction, setStageWidthAction } from "../../redux/common/actions"
@@ -22,6 +21,9 @@ import { IconFont } from "../../../shared/ui/components"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../../../../unrestored/shared/1571/2636/710"
 import * as /* [auto-meaningful-name] */Module_748 from /* 748 */"../../../../unrestored/shared/1571/2636/748/index"
 import { useInnerWidth } from "../../../shared/utils/ui/use-inner-width"
+import { useOffsetWidth } from "../../../shared/utils/ui/use-offset-width"
+import { useOffsetHeight } from "../../../shared/utils/ui/use-offset-height"
+import { useInnerHeight } from "../../../shared/utils/ui/use-inner-height"
 
 export function useWidgetListWidth() {
   return useInnerWidth() > 1300 ? 144 : 92
@@ -39,11 +41,15 @@ export const PreviewArea = memo(() => {
   const previewAreaRef = useRef<HTMLDivElement>(null)
   const playing = useSelector((state) => state.project.playing)
   const stageVisible = useSelector((state) => state.common.stageVisible)
+  const screenListVisible = useSelector((state) => state.common.screenListVisible)
   const isHoverBlockArea = useSelector((state) => state.common.isHoverBlockArea)
   const [previewAreaWidth, setPreviewAreaWidth] = useState(0)
   const [m, g] = useState(false)
 
   const innerWidth = useInnerWidth()
+  const innerHeight = useInnerHeight()
+  const mainElementWidth = useOffsetWidth(mainElementRef.current)
+  const mainElementHeight = useOffsetHeight(mainElementRef.current)
   const widgetListWidth = useWidgetListWidth()
   const widgetListSingleColumn = useWidgetListSingleColumn(widgetListWidth)
 
@@ -128,15 +134,12 @@ export const PreviewArea = memo(() => {
       previewAreaRef.current.style.width = `${width}px`
       setPreviewAreaWidth(width + 1)
       dispatch(setStageWidthAction(width - widgetListWidth))
-      if (mainElementRef.current) {
-        const { offsetWidth, offsetHeight } = mainElementRef.current
-        const scaleX = .9 * offsetWidth / Module_75.e
-        const scaleY = .9 * offsetHeight / Module_75.d
-        let scale = Math.min(scaleX, scaleY, 1)
-        dispatch(setStageScaleAction(scale))
-      }
+      const scaleX = .9 * mainElementWidth / Module_75.e
+      const scaleY = .9 * mainElementHeight / Module_75.d
+      let scale = Math.min(scaleX, scaleY, 1)
+      dispatch(setStageScaleAction(scale))
     }
-  }, [previewAreaRef, dispatch, innerWidth])
+  }, [previewAreaRef, dispatch, innerWidth, mainElementWidth, mainElementHeight])
 
   // [CoCo Next] 小屏适配
   // useLayoutEffect(function () {
@@ -168,7 +171,11 @@ export const PreviewArea = memo(() => {
             <WidgetTabContainer singleColumn={widgetListSingleColumn} />
           </aside>
           <ScreenList />
-          <main className={styles.main} ref={mainElementRef}>
+          <main
+            // [CoCo Next] 小平设备不显示屏幕列表时扩展屏幕高度
+            className={classNames(styles.main, innerHeight < 640 && !screenListVisible && styles.full)}
+            ref={mainElementRef}
+          >
             <Stage />
             <StageToast />
             <ContextMenu />

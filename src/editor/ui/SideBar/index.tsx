@@ -21,6 +21,7 @@ export const SideBar = memo(() => {
 
     const headerVisible = useSelector((state) => state.common.headerVisible)
     const stageVisible = useSelector((state) => state.common.stageVisible)
+    const screenListVisible = useSelector((state) => state.common.screenListVisible)
 
     const isFullscreen = useIsFullScreen()
 
@@ -40,7 +41,7 @@ export const SideBar = memo(() => {
         </div>
         <div
             className={classNames(styles.toggleScreen, styles.button)}
-            onClick={() => { alert("暂不支持") }}
+            onClick={() => { dispatch(Actions.setScreenListVisibleAction(!screenListVisible)) }}
         >
             <IconFont type="icon-screen-manage" />
         </div>

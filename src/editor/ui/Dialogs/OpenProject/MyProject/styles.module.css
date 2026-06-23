@@ -18,7 +18,9 @@
     display: grid;
     justify-content: space-between;
     grid-row-gap: 24px;
-    grid-template-columns: repeat(5, 133px);
+    /* [CoCo Next] 优化布局 */
+    /* grid-template-columns: repeat(5, 133px); */
+    grid-template-columns: repeat(auto-fill, minmax(133px,1fr));
     padding: 0 38px;
     grid-template-rows: 290px
 }

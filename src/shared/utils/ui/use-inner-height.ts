@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react"
 
 export function useInnerHeight(): number {
-    const [, setWidth] = useState(innerHeight)
-    function update() {
-        setWidth(innerHeight)
-    }
+    const [height, setHeight] = useState(innerHeight)
     useEffect(() => {
+        function update() {
+            setHeight(innerHeight)
+        }
         addEventListener("resize", update)
         return () => {
             removeEventListener("resize", update)
         }
-    })
-    return innerHeight
+    }, [])
+    return height
 }

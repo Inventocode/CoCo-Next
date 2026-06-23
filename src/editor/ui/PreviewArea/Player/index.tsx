@@ -19,6 +19,10 @@ import * as /* [auto-meaningful-name] */Module_68 from /* 68 */"../../../../../u
 import * as /* [auto-meaningful-name] */Module_55 from /* 55 */"../../../../../unrestored/shared/1571/2636/55"
 import * as BuiltInWidgetTypes from "../../../widget/built-in/types"
 import styles from "./index.module.css"
+import { useInnerWidth } from "../../../../shared/utils/ui/use-inner-width"
+import { useInnerHeight } from "../../../../shared/utils/ui/use-inner-height"
+import { useOffsetHeight } from "../../../../shared/utils/ui/use-offset-height"
+import { useOffsetWidth } from "../../../../shared/utils/ui/use-offset-width"
 
 interface IDeviceFrameProps {
   children?: ReactNode
@@ -44,6 +48,7 @@ export const Player = React.memo(() => {
   const playedAt = useSelector((state) => state.project.playedAt)
   const id = useSelector((state) => state.project.id)
   const language = useSelector((state) => state.common.language)
+  const screenListVisible = useSelector((state) => state.common.screenListVisible)
 
   const dispatch = useDispatch()
   const { formatMessage } = Module_710.a()
@@ -168,19 +173,23 @@ export const Player = React.memo(() => {
     }
   }, [playing, dispatch])
 
+  // [CoCo Next] 检测尺寸变化
+  const wrapperElementWidth = useOffsetWidth(wrapperElementRef.current)
+  const wrapperElementHeight = useOffsetHeight(wrapperElementRef.current)
   useLayoutEffect(() => {
     if (playing && wrapperElementRef.current && iframeRef.current) {
-      const { clientWidth, clientHeight } = wrapperElementRef.current
-      let scale = Math.min((clientWidth - 208) / 384, (clientHeight - 20) / 700, 1)
-      scale = Math.floor(10 * scale) / 10
-      scale = Math.max(scale, .7)
-      const left = clientWidth / 2 + 192 * scale
+      // [CoCo Next] 调整缩放算法，使屏幕显示更大
+      // let scale = Math.min((clientWidth - 208) / 384, (clientHeight - 20) / 700, 1)
+      // scale = Math.floor(10 * scale) / 10
+      // scale = Math.max(scale, .7)
+      let scale = Math.min((wrapperElementWidth - 20) / 384, (wrapperElementHeight - 20) / 700, 1)
+      const left = wrapperElementWidth / 2 + 192 * scale
       if (emulatorWrapperElementRef.current) {
         emulatorWrapperElementRef.current.style.left = `${left}px`
       }
       setScale(scale)
     }
-  }, [playing])
+  }, [playing, wrapperElementWidth, wrapperElementHeight])
 
   const searchParams = window.location.search.split("?")[1]
   const archiveId = new URLSearchParams(searchParams).get("archiveId")
@@ -189,7 +198,8 @@ export const Player = React.memo(() => {
 
   return <div
     style={{ display: playing ? undefined : "none" }}
-    className={styles.wrapper}
+    // [CoCo Next] 隐藏屏幕列表时高度沾满
+    className={classNames(styles.wrapper, innerHeight < 640 && !screenListVisible && styles.full)}
     ref={wrapperElementRef}
   >
     <div className={styles.deviceFrameWrapper}>

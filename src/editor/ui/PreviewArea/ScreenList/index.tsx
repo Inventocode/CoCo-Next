@@ -26,7 +26,7 @@ import * as /* [auto-meaningful-name] */Module_141 from /* 141 */"../../../../..
 import * as /* [auto-meaningful-name] */Module_190 from /* 190 */"../../../../../unrestored/shared/1571/2636/190"
 import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"../../../../../unrestored/shared/1571/2636/18"
 import * as CommonActions from "../../../redux/common/actions"
-import { asyncCreateProjectScreenAction, asyncRemoveProjectScreenAction, asyncSetProjectCurrentScreenIndexAction, moveProjectScreenAction, setProjectModifiedAction, showCommonToastInfoAction, updateProjectScreenSnapshotAction } from "../../../redux/common/actions"
+import { asyncCreateProjectScreenAction, asyncRemoveProjectScreenAction, asyncSetProjectCurrentScreenIndexAction, moveProjectScreenAction, setProjectModifiedAction, setScreenListVisibleAction, showCommonToastInfoAction, updateProjectScreenSnapshotAction } from "../../../redux/common/actions"
 import { IconFont, Popover } from "../../../../shared/ui/components"
 import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"../../../../../unrestored/shared/1571/2636/11"
 import classNames from "classnames"
@@ -40,6 +40,7 @@ import styles from "./styles.module.css"
 import * as /* [auto-meaningful-name] */Module_53 from /* 53 */"../../../../../unrestored/shared/1571/2636/53"
 import /* [auto-meaningful-name] */Module_1511 from /* 1511 */"../../../../../unrestored/shared/1571/2636/1511"
 import type { IPopoverRef } from "../../../../shared/ui/components/Popover"
+import { useInnerHeight } from "../../../../shared/utils/ui/use-inner-height"
 
 const WidgetInput = React.forwardRef(function (e, t) {
   var n = useDispatch()
@@ -1356,6 +1357,9 @@ export const ScreenList = React.memo(() => {
 
   const screens = useSelector((state) => state.project.screens)
   const stageWidth = useSelector((state) => state.common.stageWidth)
+  // [CoCo Next] 小屏设备可隐藏屏幕列表
+  const screenListVisible = useSelector((state) => state.common.screenListVisible)
+  const innerHeight = useInnerHeight()
 
   const [editDomIndex, setEditDomIndex] = React.useState(-1)
   const [d, p] = React.useState(0)
@@ -1394,10 +1398,12 @@ export const ScreenList = React.memo(() => {
     }, 100)
   }, [currentScreen, dispatch])
 
+
+  // [CoCo Next] 自动调整控件单双列
   const widgetListWidth = useWidgetListWidth()
   React.useEffect(() => {
     setWidth(playing ? stageWidth + widgetListWidth : stageWidth)
-  }, [playing, stageWidth])
+  }, [playing, stageWidth, widgetListWidth])
 
   React.useEffect(() => {
     function close(event: PointerEvent | MouseEvent) {
@@ -1575,7 +1581,8 @@ export const ScreenList = React.memo(() => {
   }
 
   return <div
-    className={styles.wrapper}
+    // [CoCo Next] 小屏设备可隐藏屏幕列表
+    className={classNames(styles.wrapper, innerHeight < 640 && !screenListVisible && styles.hide)}
     style={{
       left: playing ? 0 : widgetListWidth,
       width

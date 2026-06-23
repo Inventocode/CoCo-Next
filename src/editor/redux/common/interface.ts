@@ -34,8 +34,9 @@ export interface ICommonState extends IUserConfig {
   stageScale: number
   stageWidth: number
   stageVisible: boolean
-  // [CoCo Next] 小屏设备可隐藏 header
+  // [CoCo Next] 小屏设备可隐藏顶栏和屏幕列表
   headerVisible: boolean
+  screenListVisible: boolean
   isHoverBlockArea: boolean
   collAutoSave: boolean
   historyArchiveId: string

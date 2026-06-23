@@ -4,6 +4,16 @@
     background-color: #6e4ff4;
     flex-direction: column;
     z-index: 10;
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+
+.sideBar::-webkit-scrollbar {
+    width: 0;
+}
+
+.sideBar>* {
+    flex-shrink: 0;
 }
 
 .item {

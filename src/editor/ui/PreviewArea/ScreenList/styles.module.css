@@ -14,6 +14,11 @@
     z-index: 30;
 }
 
+/* [CoCo Next] 小屏设备可隐藏屏幕列表 */
+.wrapper.hide {
+    margin-top: -54px;
+}
+
 .wrapper :global(.coco-popover-content) {
     position: fixed;
     height: 215px;
