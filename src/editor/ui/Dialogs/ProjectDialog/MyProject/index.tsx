@@ -12,22 +12,20 @@ import { we } from "../../../../../../unrestored/shared/1571/2636/index__part-6"
 import * as /* [auto-meaningful-name] */Module_141 from /* 141 */"../../../../../../unrestored/shared/1571/2636/141/index"
 import * as /* [auto-meaningful-name] */Module_190 from /* 190 */"../../../../../../unrestored/shared/1571/2636/190"
 import * as /* [auto-meaningful-name] */Module_297 from /* 297 */"../../../../../../unrestored/shared/1571/2636/297"
-import * as Tools from "../../../../../shared/tools"
 import * as /* [auto-meaningful-name] */Module_1213 from /* 1213 */"../../../../../../unrestored/shared/1571/2636/1213"
 import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"../../../../../../unrestored/shared/1571/2636/18"
 import { asyncGetProjectErrorAction, closeProjectDialogAction, openConfirmDialogAction, showCommonToastInfoAction, warpAsyncCreateProject } from "../../../../redux/common/actions"
-import * as Components from "../../../../../shared/ui/components"
 import { AdvancedText, IconFont, Menu, MenuItem, ScrollPaginate } from "../../../../../shared/ui/components"
 import * as /* [auto-meaningful-name] */Module_25 from /* 25 */"../../../../../../unrestored/shared/1571/2636/25/index"
 import classNames from "classnames"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../../../../../../unrestored/shared/1571/2636/710"
-import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../../../../../../unrestored/shared/1571/2636/10/index"
 import * as /* [auto-meaningful-name] */Shared_ui_language from "../../../../../shared/ui/language"
 import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../../../../../../unrestored/shared/1571/2636/7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import { useDispatch, useSelector } from "react-redux"
 import * as /* [auto-meaningful-name] */Shared_player_audit from "../../../../../shared/player/audit"
 import styles from "./styles.module.css"
+import { useOffsetHeight } from "../../../../../shared/utils/ui/use-offset-height"
 
 enum EType {
   SELF = "self",
@@ -155,6 +153,12 @@ export const MyProject = React.memo(({ visible, importProjectJson }: IMyProjectP
   var C = React.useRef(0)
   var A = React.useRef(1)
   var j = React.useRef(false)
+
+  // [CoCo Next] 优化布局
+  const wrapperElementRef = React.useRef<HTMLDivElement>(null)
+  const filterElementRef = React.useRef<HTMLDivElement>(null)
+  const wrapperElementHeight = useOffsetHeight(wrapperElementRef.current)
+  const filterElementHeight = useOffsetHeight(filterElementRef.current)
 
   const { formatMessage } = Module_710.a()
 
@@ -468,8 +472,8 @@ export const MyProject = React.memo(({ visible, importProjectJson }: IMyProjectP
     }
   }()
 
-  return <div>
-    <div className={styles.filter}>
+  return <div ref={wrapperElementRef} className={styles.wrapper}>
+    <div ref={filterElementRef} className={styles.filter}>
       {TYPES.map((type) => (
         <div
           key={type}
@@ -489,7 +493,7 @@ export const MyProject = React.memo(({ visible, importProjectJson }: IMyProjectP
         <div className={styles.main}>
           <ScrollPaginate
             offsetY={300}
-            height={450}
+            height={/* [CoCo Next] 优化布局 */wrapperElementHeight - filterElementHeight}
             onScrollBottom={function () {
               D(projects)
             }}

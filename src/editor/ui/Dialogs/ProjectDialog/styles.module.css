@@ -5,8 +5,11 @@
  */
 
 .container :global(.coco-dialog-content) {
-    width: 880px;
-    height: 580px;
+    /* [CoCo Next] 优化布局 */
+    width: 100vw;
+    height: 100vh;
+    max-width: 880px;
+    max-height: 580px;
     padding: 0;
 }
 

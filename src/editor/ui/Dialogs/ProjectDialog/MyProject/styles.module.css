@@ -4,6 +4,10 @@
  * 模块 ID：418
  */
 
+.wrapper {
+    height: 100%;
+}
+
 .container {
     display: flex;
     align-items: center;
@@ -20,7 +24,7 @@
     grid-row-gap: 24px;
     /* [CoCo Next] 优化布局 */
     /* grid-template-columns: repeat(5, 133px); */
-    grid-template-columns: repeat(auto-fill, minmax(133px,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(157px,1fr));
     padding: 0 38px;
     grid-template-rows: 290px
 }
@@ -33,7 +37,9 @@
 }
 
 .item {
-    width: 133px;
+    /* [CoCo Next] 优化布局 */
+    /* width: 133px; */
+    margin-inline: 12px;
     cursor: pointer;
     position: relative
 }

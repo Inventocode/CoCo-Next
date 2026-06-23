@@ -71,3 +71,23 @@
     background: url(https://creation.codemao.cn/coconut/web/1.22.0-0/static/media/galaxy5.1e8ad9c3.png) 0 0 no-repeat;
     background-size: cover;
 }
+
+/* [CoCo Next] 模拟器隐藏按钮 */
+.emulatorToggle {
+    width: 46px;
+    height: 32px;
+    background-color: white;
+    font-size: 22px;
+    position: absolute;
+    right: 0;
+    border-radius: 8px;
+    transform: rotate(180deg);
+}
+
+.emulatorWrapper.hide .emulatorToggle {
+    transform: none;
+}
+
+.emulatorWrapper.hide :global(.emulator-wrapper) {
+    visibility: hidden;
+}

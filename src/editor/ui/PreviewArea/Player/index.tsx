@@ -19,10 +19,9 @@ import * as /* [auto-meaningful-name] */Module_68 from /* 68 */"../../../../../u
 import * as /* [auto-meaningful-name] */Module_55 from /* 55 */"../../../../../unrestored/shared/1571/2636/55"
 import * as BuiltInWidgetTypes from "../../../widget/built-in/types"
 import styles from "./index.module.css"
-import { useInnerWidth } from "../../../../shared/utils/ui/use-inner-width"
-import { useInnerHeight } from "../../../../shared/utils/ui/use-inner-height"
 import { useOffsetHeight } from "../../../../shared/utils/ui/use-offset-height"
 import { useOffsetWidth } from "../../../../shared/utils/ui/use-offset-width"
+import { IconFont } from "../../../../shared/ui/components"
 
 interface IDeviceFrameProps {
   children?: ReactNode
@@ -61,6 +60,8 @@ export const Player = React.memo(() => {
   const emulatorWrapperElementRef = useRef<HTMLDivElement>(null)
   const [contentWindow, setContentWindow] = useState<Window | null>(null)
   const [scale, setScale] = useState(1)
+
+  const [hideEmulator, setHideEmulator] = useState(true)
 
   function handleVibrate(e) {
     const targetEndTime = Date.now() + e.data.duration
@@ -186,6 +187,12 @@ export const Player = React.memo(() => {
       const left = wrapperElementWidth / 2 + 192 * scale
       if (emulatorWrapperElementRef.current) {
         emulatorWrapperElementRef.current.style.left = `${left}px`
+        const emulatorScale = (wrapperElementHeight - 20) / 500
+        if (emulatorScale < 1) {
+          emulatorWrapperElementRef.current.style.transform = `translateY(-50%) scale(${emulatorScale})`
+        } else {
+          emulatorWrapperElementRef.current.style.transform = ""
+        }
       }
       setScale(scale)
     }
@@ -219,9 +226,13 @@ export const Player = React.memo(() => {
       </DeviceFrame>
     </div>
     <div
-      className={styles.emulatorWrapper}
+      className={classNames(styles.emulatorWrapper, hideEmulator && styles.hide)}
       ref={emulatorWrapperElementRef}
     >
+      {/* [CoCo Next] 模拟器可隐藏 */}
+      <div className={styles.emulatorToggle} onClick={() => { setHideEmulator(!hideEmulator) }}>
+        <IconFont type="icon-arrow-down" />
+      </div>
       <Module_738.a messageWindow={contentWindow} />
     </div>
   </div>
