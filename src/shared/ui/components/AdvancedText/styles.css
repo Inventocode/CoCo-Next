@@ -1,0 +1,18 @@
+/**
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：879
+ */
+
+.coco-advanced-text {
+    width: 100%;
+}
+
+.coco-advanced-text-tip {
+    position: fixed;
+    color: #fff;
+    background-color: rgba(0, 0, 0, .6);
+    padding: 2px 10px;
+    border-radius: 4px;
+    z-index: 10;
+}

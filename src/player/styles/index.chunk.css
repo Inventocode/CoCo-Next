@@ -1323,25 +1323,6 @@
     background: #c285ff
 }
 
-.coco-advanced-text {
-    width: 100%
-}
-
-.coco-advanced-text-tip {
-    position: fixed;
-    color: #fff;
-    background-color: rgba(0,0,0,.6);
-    padding: 2px 10px;
-    border-radius: 4px;
-    z-index: 10
-}
-
-.coco-scroll-paginate {
-    width: 100%;
-    overflow: hidden;
-    overflow-y: auto
-}
-
 .coco-avatar-editor {
     position: relative;
     border-radius: 8px;

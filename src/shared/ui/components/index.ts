@@ -16,8 +16,6 @@ import "../../../../unrestored/shared/1571/2636/13/index__part-12"
 import { je, Ne } from "../../../../unrestored/shared/1571/2636/13/index__part-16"
 import { Re } from "../../../../unrestored/shared/1571/2636/13/index__part-17"
 import { ke } from "../../../../unrestored/shared/1571/2636/13/index__part-18"
-import { Pe } from "../../../../unrestored/shared/1571/2636/13/index__part-19"
-import { Fe } from "../../../../unrestored/shared/1571/2636/13/index__part-20"
 import { Ue } from "../../../../unrestored/shared/1571/2636/13/index__part-21"
 import "../../../../unrestored/shared/1571/2636/13/index__part-22"
 export { p as s }
@@ -43,7 +41,7 @@ export { je as B }
 export { Ne as h }
 export { Re as i }
 export { ke as A }
-export { Pe as a }
-export { Fe as v }
+export { AdvancedText, AdvancedText as a } from "./AdvancedText"
+export { ScrollPaginate, ScrollPaginate as v } from "./ScrollPaginate"
 export { Ue as c }
 export { a as z } from "../../../../unrestored/shared/1571/2636/322"

@@ -35,7 +35,7 @@ export { k as rh }
 export { CLOSE_PROJECT_DIALOG as Zb }
 export { closeProjectDialogAction as Xg }
 export { OPEN_PROJECT_DIALOG as Gc }
-export { L as Ah }
+export { openProjectDialogAction as Ah }
 export { SET_PROJECT_MODIFIED as Rd }
 export { setProjectModifiedAction as Fi }
 export { SET_PROJECT_LAST_SAVED_TIME as Qd }
@@ -638,11 +638,11 @@ export function closeProjectDialogAction() {
 }
 
 export const OPEN_PROJECT_DIALOG = "OPEN_PROJECT_DIALOG"
-function L(e) {
+export function openProjectDialogAction(selected) {
   return {
     type: OPEN_PROJECT_DIALOG,
     payload: {
-      selected: e
+      selected
     }
   }
 }

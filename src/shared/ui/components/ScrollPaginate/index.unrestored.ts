@@ -6,7 +6,7 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../tools/index"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
 import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import /* 880 */"./880"

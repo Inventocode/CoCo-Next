@@ -1,7 +1,8 @@
 import type { List } from "immutable"
+import type * as Language from "../../../shared/ui/language"
 
 export interface ICommonState extends IUserConfig {
-  language: string
+  language: Language.Language
   editAreaUpdatedAt: number
   previewAreaUpdatedAt: number
   extensionListUpdateAt: number
