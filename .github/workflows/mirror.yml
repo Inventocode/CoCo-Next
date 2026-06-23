@@ -1,8 +1,6 @@
 name: 从 Gitee 镜像编辑器和文档的主分支
 
 on:
-  schedule:
-    - cron: '0 0 * * *'
   workflow_dispatch:
 
 jobs:
