@@ -1,0 +1,82 @@
+/**
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：495
+ */
+
+.container {
+    padding: 0 22px;
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    grid-row-gap: 22px;
+    justify-content: space-between;
+}
+
+.itemContainer {
+    border-radius: 10px;
+    padding: 1px;
+    width: 200px;
+    height: 200px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 4px;
+}
+
+.itemContainer:hover {
+    border: 2px solid #6e4ff4;
+}
+
+.itemContainer:hover .gif {
+    visibility: visible;
+}
+
+.itemContainer .gif {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    visibility: hidden;
+}
+
+.itemContainer .item {
+    border-radius: 4px;
+    overflow: hidden;
+    height: 100%;
+    border: 1px solid #dddfe4;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.itemContainer .item.emptyItem {
+    border: 1px dashed #e8dcff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.itemContainer .item.emptyItem .emptyContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.itemContainer .item.emptyItem .emptyContent .iconContainer {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.itemContainer .item.emptyItem .emptyContent .iconContainer .icon {
+    font-size: 30px;
+    color: #6e4ff4;
+}
+
+.itemContainer .item.emptyItem .emptyContent .text {
+    font-size: 14px;
+    font-weight: 500;
+    color: #33383d;
+    margin-bottom: 0;
+}
