@@ -10,8 +10,8 @@ var V
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Module_97 from /* 97 */"./97/index"
-import * as /* [auto-meaningful-name] */Module_525 from /* 525 */"./525"
-import /* [auto-meaningful-name] */Module_5251 from /* 525 */"./525"
+import * as /* [auto-meaningful-name] */Module_525 from /* 525 */"../../../../src/editor/ui/Dialogs/ProjectDialog/styles.module.css"
+import /* [auto-meaningful-name] */Module_5251 from /* 525 */"../../../../src/editor/ui/Dialogs/ProjectDialog/styles.module.css"
 import * as /* [auto-meaningful-name] */Module_1213 from /* 1213 */"./1213"
 import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../src/shared/tools/index"
 !function (e) {

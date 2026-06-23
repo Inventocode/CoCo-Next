@@ -3584,25 +3584,6 @@
     background: #c285ff;
 }
 
-.coco-advanced-text {
-    width: 100%;
-}
-
-.coco-advanced-text-tip {
-    position: fixed;
-    color: #fff;
-    background-color: rgba(0, 0, 0, .6);
-    padding: 2px 10px;
-    border-radius: 4px;
-    z-index: 10;
-}
-
-.coco-scroll-paginate {
-    width: 100%;
-    overflow: hidden;
-    overflow-y: auto;
-}
-
 .coco-avatar-editor {
     position: relative;
     border-radius: 8px;
@@ -3710,63 +3691,6 @@
     margin-left: -7px;
 }
 
-.ProjectDialog_container__3MHJe .coco-dialog-content {
-    width: 880px;
-    height: 580px;
-    padding: 0;
-}
-
-.ProjectDialog_container__3MHJe .coco-dialog-close {
-    top: 15px;
-    right: 15px;
-}
-
-.ProjectDialog_container__3MHJe .ProjectDialog_wrapper__1qRa_ {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
-}
-
-.ProjectDialog_container__3MHJe .ProjectDialog_wrapper__1qRa_ .ProjectDialog_header__12J0d {
-    height: 60px;
-    box-shadow: 0 1px 6px 0 rgba(33, 35, 38, .1);
-    padding-top: 10px;
-    text-align: center;
-}
-
-.ProjectDialog_container__3MHJe .ProjectDialog_wrapper__1qRa_ .ProjectDialog_header__12J0d .ProjectDialog_tabItem__9Qyxb {
-    font-size: 16px;
-    font-weight: 500;
-    color: #847da4;
-    display: inline-block;
-    line-height: 50px;
-    height: 50px;
-    cursor: pointer;
-    margin-left: 15px;
-    margin-right: 15px;
-}
-
-.ProjectDialog_container__3MHJe .ProjectDialog_wrapper__1qRa_ .ProjectDialog_header__12J0d .ProjectDialog_tabItem__9Qyxb.ProjectDialog_selected__1iBoA {
-    color: #6e4ff4;
-    border-bottom: 4px solid #6e4ff4;
-}
-
-.ProjectDialog_container__3MHJe .ProjectDialog_wrapper__1qRa_ .ProjectDialog_header__12J0d .ProjectDialog_tabItem__9Qyxb:hover {
-    color: #6e4ff4;
-}
-
-.ProjectDialog_container__3MHJe .ProjectDialog_wrapper__1qRa_ .ProjectDialog_header__12J0d .ProjectDialog_tabItem__9Qyxb .ProjectDialog_icon__ZsRb7 {
-    padding-left: 4px;
-    padding-right: 8px;
-}
-
-.ProjectDialog_container__3MHJe .ProjectDialog_wrapper__1qRa_ .ProjectDialog_content__1nYQU {
-    flex: 1 1;
-    overflow-y: auto;
-    padding-top: 28px;
-}
-
 .Empty_container__25TbA {
     text-align: center;
     max-width: 100%;
@@ -3808,83 +3732,6 @@
     color: #afb0b3;
     font-size: 12px;
     margin: 0;
-}
-
-.CreateProject_container__2ek3w {
-    padding: 0 22px;
-    display: grid;
-    grid-template-columns: repeat(4, 200px);
-    grid-row-gap: 22px;
-    justify-content: space-between;
-}
-
-.CreateProject_itemContainer__EWdh9 {
-    border-radius: 10px;
-    padding: 1px;
-    width: 200px;
-    height: 200px;
-    cursor: pointer;
-    position: relative;
-    border-radius: 4px;
-}
-
-.CreateProject_itemContainer__EWdh9:hover {
-    border: 2px solid #6e4ff4;
-}
-
-.CreateProject_itemContainer__EWdh9:hover .CreateProject_gif__1H_O0 {
-    visibility: visible;
-}
-
-.CreateProject_itemContainer__EWdh9 .CreateProject_gif__1H_O0 {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    visibility: hidden;
-}
-
-.CreateProject_itemContainer__EWdh9 .CreateProject_item__3dVY_ {
-    border-radius: 4px;
-    overflow: hidden;
-    height: 100%;
-    border: 1px solid #dddfe4;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.CreateProject_itemContainer__EWdh9 .CreateProject_item__3dVY_.CreateProject_emptyItem__2RGhH {
-    border: 1px dashed #e8dcff;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.CreateProject_itemContainer__EWdh9 .CreateProject_item__3dVY_.CreateProject_emptyItem__2RGhH .CreateProject_emptyContent__1PAlD {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.CreateProject_itemContainer__EWdh9 .CreateProject_item__3dVY_.CreateProject_emptyItem__2RGhH .CreateProject_emptyContent__1PAlD .CreateProject_iconContainer__cU2Ko {
-    width: 56px;
-    height: 56px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.CreateProject_itemContainer__EWdh9 .CreateProject_item__3dVY_.CreateProject_emptyItem__2RGhH .CreateProject_emptyContent__1PAlD .CreateProject_iconContainer__cU2Ko .CreateProject_icon__2c3j6 {
-    font-size: 30px;
-    color: #6e4ff4;
-}
-
-.CreateProject_itemContainer__EWdh9 .CreateProject_item__3dVY_.CreateProject_emptyItem__2RGhH .CreateProject_emptyContent__1PAlD .CreateProject_text__2ZExn {
-    font-size: 14px;
-    font-weight: 500;
-    color: #33383d;
-    margin-bottom: 0;
 }
 
 @-webkit-keyframes Spinner_coco-spinner-dash__1-lIC {

@@ -17,7 +17,7 @@ import * as /* [auto-meaningful-name] */Module_1213 from /* 1213 */"../../../../
 import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"../../../../../../unrestored/shared/1571/2636/18"
 import { asyncGetProjectErrorAction, closeProjectDialogAction, openConfirmDialogAction, showCommonToastInfoAction, warpAsyncCreateProject } from "../../../../redux/common/actions"
 import * as Components from "../../../../../shared/ui/components"
-import { IconFont } from "../../../../../shared/ui/components"
+import { AdvancedText, IconFont, Menu, MenuItem, ScrollPaginate } from "../../../../../shared/ui/components"
 import * as /* [auto-meaningful-name] */Module_25 from /* 25 */"../../../../../../unrestored/shared/1571/2636/25/index"
 import classNames from "classnames"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../../../../../../unrestored/shared/1571/2636/710"
@@ -43,6 +43,7 @@ const TIPS = {
   published: "MyProject.noPublishProjectTips",
   unpublished: "MyProject.noCreateProjectTips"
 }
+
 function je(e) {
   var /* [auto-meaningful-name] */e$title = e.title
   var /* [auto-meaningful-name] */e$type = e.type
@@ -54,33 +55,34 @@ function je(e) {
     })}
   </div> : <></>
 }
-function ProjectItem({
-  project, onClick, onDelete, filterType, status
-}: {
+
+interface IProjectItemProps {
   project: (/** TODO */any)
   onClick(id: string, name: string, updateTime: string): void
   onDelete(id: string, name: string, isCollWork: boolean): void
   filterType: EType
   status: "loading" | "loaded" | "emptyList"
-}) {
+}
+
+function ProjectItem({
+  project, onClick, onDelete, filterType, status
+}: IProjectItemProps) {
+
   const { formatMessage } = Module_710.a()
-  var t
-  function c() {
-    var e = []
+
+  function menuItems() {
+    const items = []
     if (filterType === EType.COLL) {
-      e.push("deleteCollProject")
-    } else {
-      if (!project.publishedTime) {
-        e.push("deleteProject")
-      }
+      items.push("deleteCollProject")
+    } else if (!project.publishedTime) {
+      items.push("deleteProject")
     }
-    return e
+    return items
   }
+
   return <div
     className={classNames(styles.item)}
-    onClick={() => {
-      onClick(project.id, project.name, project.updateTime)
-    }}
+    onClick={() => { onClick(project.id, project.name, project.updateTime) }}
     key={project.id}
   >
     <div className={styles.cover}>
@@ -89,95 +91,73 @@ function ProjectItem({
         alt={project.name}
       />
     </div>
-    <Components.a
-      className={styles.name}
-      text={project.name}
-    />
-    <p
-      className={styles.time}
-    >
+    <AdvancedText className={styles.name} text={project.name} />
+    <p className={styles.time}>
       {React.createElement(ne, {
         time: project.updateTime,
         currentTime: project.serverTime
       })}
     </p>
-    {!!c().length && <div
+    {!!menuItems().length && <div
       className={styles.menuContainer}
-      onClick={function (e) {
-        e.stopPropagation()
-      }}
+      onClick={(event) => { event.stopPropagation() }}
     >
-      {<Module_1213.a
-        placement={"rightTop"}
-        trigger={"click"}
+      <Module_1213.a
+        placement="rightTop"
+        trigger="click"
         overlayClassName={styles.menuPopover}
         zIndex={100}
-        content={<div
-          className={styles.menuContent}
-        >
-          <Components.l
-            onClick={function (e) {
-              if (!("deleteProject" !== e && "deleteCollProject" !== e)) {
-                onDelete(project.id, project.name, project.isCollWork || filterType === EType.COLL)
-              }
-            }}
-          >
-            {c().map(function (e, t) {
-              return <Components.m
-                value={e}
-                key={t}
-              >
-                {<span>
-                  {formatMessage({
-                    id: "MyProject." + e
-                  })}
-                </span>}
-              </Components.m>
-            })}
-          </Components.l>
-        </div>}
+        content={
+          <div className={styles.menuContent}>
+            <Menu
+              onClick={(value) => {
+                if (value === "deleteProject" || value === "deleteCollProject") {
+                  onDelete(project.id, project.name, project.isCollWork || filterType === EType.COLL)
+                }
+              }}
+            >
+              {menuItems().map((item, index) => (
+                <MenuItem value={item} key={index}>
+                  <span>{formatMessage({ id: "MyProject." + item })}</span>
+                </MenuItem>
+              ))}
+            </Menu>
+          </div>
+        }
       >
-        <div>
-          {<IconFont
-            type={"icon-more"}
-          />}
-        </div>
-      </Module_1213.a>}
+        <div><IconFont type="icon-more" /></div>
+      </Module_1213.a>
     </div>}
-    <div
-      className={styles.badgeWrapper}
-    >
-      {(project.isCollWork || filterType === EType.COLL) && "loaded" === status && <IconFont
-        type={"icon-collaborator"}
-      />}
-      {!!project.publishedTime && <IconFont
-        type={"icon-publish"}
-      />}
+    <div className={styles.badgeWrapper}>
+      {(project.isCollWork || filterType === EType.COLL) && status === "loaded" &&
+        <IconFont type="icon-collaborator" />}
+      {!!project.publishedTime && <IconFont type="icon-publish" />}
     </div>
   </div>
 }
 
-const MyProject = React.memo(({ visible, importProjectJson }) => {
-  var r = React.useState([])
-  var o = Module_10.a(r, 2)
-  var i = o[0]
-  var a = o[1]
+export interface IMyProjectProps {
+  visible: boolean
+  importProjectJson
+}
+
+export const MyProject = React.memo(({ visible, importProjectJson }: IMyProjectProps) => {
+
+  const [projects, setProjects] = React.useState([])
   const [status, setStatus] = React.useState<"loading" | "loaded" | "emptyList">("loaded")
-  const language = useSelector(function (e) {
-    return e.common.language
-  })
-  const userInfo = useSelector(function (e) {
-    return e.common.userInfo
-  })
-  const id = useSelector(function (e) {
-    return e.project.id
-  })
-  const [type, setType] = React.useState(EType.SELF)
+  const language = useSelector((state) => state.common.language)
+  const userInfo = useSelector((state) => state.common.userInfo)
+  const id = useSelector((state) => state.project.id)
+  const [selectedType, setSelectedType] = React.useState(EType.SELF)
+
   const dispatch = useDispatch()
+
   var C = React.useRef(0)
   var A = React.useRef(1)
   var j = React.useRef(false)
+
   const { formatMessage } = Module_710.a()
+
   async function onClick(id, r, o) {
     try {
       const response = await Module_297.d(id)
@@ -216,7 +196,7 @@ const MyProject = React.memo(({ visible, importProjectJson }) => {
         })
         Module_141.a("OpenWork", {
           workId: id,
-          workType: type === EType.COLL ? 2 : 1,
+          workType: selectedType === EType.COLL ? 2 : 1,
           isSuccess: true,
           failReason: ""
         })
@@ -229,13 +209,14 @@ const MyProject = React.memo(({ visible, importProjectJson }) => {
       console.error("getProjectJson error", error)
       Module_141.a("OpenWork", {
         workId: id,
-        workType: type === EType.COLL ? 2 : 1,
+        workType: selectedType === EType.COLL ? 2 : 1,
         isSuccess: false,
         failReason: error.message
       })
     }
     dispatch(closeProjectDialogAction())
   }
+
   var D = React.useCallback(function () {
     var e = Module_7.a(RegeneratorRuntime.mark(function e(t) {
       return RegeneratorRuntime.wrap(function (e) {
@@ -248,7 +229,7 @@ const MyProject = React.memo(({ visible, importProjectJson }) => {
               }
               return e.abrupt("return")
             case 2:
-              if (j.current = true, setStatus("loading"), type !== EType.COLL) {
+              if (j.current = true, setStatus("loading"), selectedType !== EType.COLL) {
                 e.next = 10
                 break
               }
@@ -259,7 +240,7 @@ const MyProject = React.memo(({ visible, importProjectJson }) => {
               e.next = 26
               break
             case 10:
-              if (type !== EType.SELF) {
+              if (selectedType !== EType.SELF) {
                 e.next = 16
                 break
               }
@@ -270,7 +251,7 @@ const MyProject = React.memo(({ visible, importProjectJson }) => {
               e.next = 26
               break
             case 16:
-              if (type !== EType.PUBLISHED) {
+              if (selectedType !== EType.PUBLISHED) {
                 e.next = 22
                 break
               }
@@ -281,7 +262,7 @@ const MyProject = React.memo(({ visible, importProjectJson }) => {
               e.next = 26
               break
             case 22:
-              if (type !== EType.UNPUBLISHED) {
+              if (selectedType !== EType.UNPUBLISHED) {
                 e.next = 26
                 break
               }
@@ -302,7 +283,8 @@ const MyProject = React.memo(({ visible, importProjectJson }) => {
     return function (t) {
       return e.apply(this, arguments)
     }
-  }(), [type])
+  }(), [selectedType])
+
   function M(e, t) {
     return L.apply(this, arguments)
   }
@@ -334,6 +316,7 @@ const MyProject = React.memo(({ visible, importProjectJson }) => {
       }, e)
     }))).apply(this, arguments)
   }
+
   function P(e) {
     return B.apply(this, arguments)
   }
@@ -365,6 +348,7 @@ const MyProject = React.memo(({ visible, importProjectJson }) => {
       }, e)
     }))).apply(this, arguments)
   }
+
   React.useEffect(function () {
     if (visible) {
       C.current = 0
@@ -372,17 +356,20 @@ const MyProject = React.memo(({ visible, importProjectJson }) => {
       D([])
     }
   }, [D, visible])
+
   if (!visible) {
     return null
   }
+
   function F(e) {
-    a(e)
+    setProjects(e)
     if (0 === e.length) {
       setStatus("emptyList")
     } else {
       setStatus("loaded")
     }
   }
+
   var G = function () {
     var e = Module_7.a(RegeneratorRuntime.mark(function e(t) {
       var n
@@ -391,7 +378,7 @@ const MyProject = React.memo(({ visible, importProjectJson }) => {
         for (;;) {
           switch (e.prev = e.next) {
             case 0:
-              if (!userInfo || type !== EType.COLL) {
+              if (!userInfo || selectedType !== EType.COLL) {
                 e.next = 6
                 break
               }
@@ -412,11 +399,11 @@ const MyProject = React.memo(({ visible, importProjectJson }) => {
               }
             case 10:
               if (n) {
-                if ((r = i.findIndex(function (e) {
+                if ((r = projects.findIndex(function (e) {
                   return e.id === t
                 })) > -1) {
-                  i.splice(r, 1)
-                  F(Module_25.a(i))
+                  projects.splice(r, 1)
+                  F(Module_25.a(projects))
                   if (id === t) {
                     dispatch(warpAsyncCreateProject())
                   }
@@ -439,8 +426,9 @@ const MyProject = React.memo(({ visible, importProjectJson }) => {
       return e.apply(this, arguments)
     }
   }()
+
   function onDelete(e, t, n) {
-    if (type === EType.COLL) {
+    if (selectedType === EType.COLL) {
       dispatch(openConfirmDialogAction({
         onConfirm: G.bind(null, e),
         allowText: formatMessage({
@@ -460,13 +448,14 @@ const MyProject = React.memo(({ visible, importProjectJson }) => {
       G(e)
     }
   }
+
   var U = function () {
     var e = Module_7.a(RegeneratorRuntime.mark(function e(type) {
       return RegeneratorRuntime.wrap(function (e) {
         for (;;) {
           switch (e.prev = e.next) {
             case 0:
-              setType(type)
+              setSelectedType(type)
             case 1:
             case "end":
               return e.stop()
@@ -478,55 +467,46 @@ const MyProject = React.memo(({ visible, importProjectJson }) => {
       return e.apply(this, arguments)
     }
   }()
+
   return <div>
-    {<div
-      className={styles.filter}
-    >
-      {TYPES.map(function (e) {
-        return <div
-          key={e}
-          onClick={U.bind(null, e)}
-          className={classNames(styles.filterItem, type === e && styles.active)}
+    <div className={styles.filter}>
+      {TYPES.map((type) => (
+        <div
+          key={type}
+          onClick={U.bind(null, type)}
+          className={classNames(styles.filterItem, selectedType === type && styles.active)}
         >
-          {formatMessage({
-            id: "MyProject.".concat(e)
-          })}
+          {formatMessage({ id: "MyProject.".concat(type) })}
         </div>
-      })}
-    </div>}
-    {<div
-      className={styles.container}
-    >
+      ))}
+    </div>
+    <div className={styles.container}>
       {React.createElement(je, {
-        title: formatMessage({
-          id: TIPS[type]
-        }),
+        title: formatMessage({ id: TIPS[selectedType] }),
         type: status
       })}
-      {i.length > 0 && <div
-        className={styles.main}
-      >
-        {<Components.v
-          offsetY={300}
-          height={450}
-          onScrollBottom={function () {
-            D(i)
-          }}
-        >
-          {i.map(function (e) {
-            return <ProjectItem
-              status={status}
-              key={e.id}
-              project={e}
-              onClick={onClick}
-              onDelete={onDelete}
-              filterType={type}
-            />
-          })}
-        </Components.v>}
-      </div>}
-    </div>}
+      {projects.length > 0 && (
+        <div className={styles.main}>
+          <ScrollPaginate
+            offsetY={300}
+            height={450}
+            onScrollBottom={function () {
+              D(projects)
+            }}
+          >
+            {projects.map((project) => (
+              <ProjectItem
+                status={status}
+                key={project.id}
+                project={project}
+                onClick={onClick}
+                onDelete={onDelete}
+                filterType={selectedType}
+              />
+            ))}
+          </ScrollPaginate>
+        </div>
+      )}
+    </div>
   </div>
 })
-
-export { MyProject as Re }

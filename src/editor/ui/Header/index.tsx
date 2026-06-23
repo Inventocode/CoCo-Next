@@ -9,7 +9,7 @@ import * as React from "react"
 import packageInfo from "../../../../package.json"
 import { B, G, H } from "../../../../unrestored/shared/1571/2636/index__part-2"
 import { Q } from "../../../../unrestored/shared/1571/2636/index__part-3"
-import { Pe } from "../../../../unrestored/shared/1571/2636/index__part-8"
+import { ProjectDialog } from "../Dialogs/ProjectDialog"
 import { Ge } from "../../../../unrestored/shared/1571/2636/index__part-9"
 import { UserInfo } from "./UserAvatar"
 import { Xe, ot as Notice } from "../../../../unrestored/shared/1571/2636/index__part-11"
@@ -27,8 +27,8 @@ import * as /* [auto-meaningful-name] */Shared_tools from "../../../shared/tools
 import * as /* [auto-meaningful-name] */Module_97 from /* 97 */"../../../../unrestored/shared/1571/2636/97"
 import * as /* [auto-meaningful-name] */Module_454 from /* 454 */"../../../../unrestored/shared/1571/2636/454"
 import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"../../../../unrestored/shared/1571/2636/18"
-import * as Actions from "../../redux/common/actions"
-import { setStartCurrentScreenAction } from "../../redux/common/actions"
+import * as CommonActions from "../../redux/common/actions"
+import { setStartCurrentScreenAction, warpAsyncCreateProject } from "../../redux/common/actions"
 import * as Components from "../../../shared/ui/components"
 import { Button, Dropdown, IconFont, Menu, MenuItem, SubMenuItem, SubMenuItem } from "../../../shared/ui/components"
 import * as /* [auto-meaningful-name] */Module_627 from /* 627 */"../../../../unrestored/shared/1571/2636/627"
@@ -258,8 +258,8 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
       }
       document.body.setAttribute("style", n)
     }()
-    dispatch(Actions.Tf())
-    dispatch(Actions.Xf())
+    dispatch(CommonActions.Tf())
+    dispatch(CommonActions.Xf())
   }, [dispatch])
   var _e = function () {
     var e = Module_7.a(RegeneratorRuntime.mark(function e() {
@@ -271,14 +271,14 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
                 e.next = 3
                 break
               }
-              dispatch(Actions.openSignInDialogAction())
+              dispatch(CommonActions.openSignInDialogAction())
               return e.abrupt("return")
             case 3:
               if (!isPackaging) {
                 e.next = 6
                 break
               }
-              dispatch(Actions.showCommonToastInfoAction({
+              dispatch(CommonActions.showCommonToastInfoAction({
                 message: formatMessage({
                   id: "package.packagePending"
                 }),
@@ -288,7 +288,7 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
             case 6:
               e.prev = 6
               e.next = 9
-              return Actions.promisify(dispatch, Actions.Vf())
+              return CommonActions.promisify(dispatch, CommonActions.Vf())
             case 9:
               e.next = 14
               break
@@ -323,7 +323,7 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
               }
               asyncCreateProjectRef.current = null
               if (e$sent) {
-                dispatch(Actions.dj(Module_18.j.Hide))
+                dispatch(CommonActions.dj(Module_18.j.Hide))
                 setTimeout(function () {
                   return Oe()
                 }, 100)
@@ -344,7 +344,7 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
       asyncCreateProjectRef.current()
     }
     asyncCreateProjectRef.current = null
-    dispatch(Actions.dj(Module_18.j.Hide))
+    dispatch(CommonActions.dj(Module_18.j.Hide))
     setTimeout(function () {
       return Oe()
     }, 100)
@@ -359,7 +359,7 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
                 e.next = 3
                 break
               }
-              dispatch(Actions.Ri({
+              dispatch(CommonActions.Ri({
                 visible: true,
                 openFrom: "backHome",
                 onSave: ve,
@@ -380,7 +380,7 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
               }
               return e.abrupt("return")
             case 9:
-              dispatch(Actions.dj(Module_18.j.Hide))
+              dispatch(CommonActions.dj(Module_18.j.Hide))
               setTimeout(function () {
                 return Oe()
               }, 100)
@@ -400,7 +400,7 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
   }
   const save = React.useCallback(async (isAutoSave, isNeedReport) => {
     if (!userInfo) {
-      dispatch(Actions.openSignInDialogAction())
+      dispatch(CommonActions.openSignInDialogAction())
       return
     }
     if (saving) {
@@ -411,19 +411,19 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
     }
     if (!isAutoSave) {
       J.current = window.setTimeout(function () {
-        dispatch(Actions.Qi(true))
+        dispatch(CommonActions.Qi(true))
       }, 6e3)
     }
     s(false)
     let isSuccess = true
     try {
-      await Actions.promisify(dispatch, Actions.asyncSaveProjectAction({
+      await CommonActions.promisify(dispatch, CommonActions.asyncSaveProjectAction({
         isUpdate,
         isAutoSave,
         isNeedReport
       }))
       if (!isAutoSave) {
-        dispatch(Actions.showCommonToastInfoAction({
+        dispatch(CommonActions.showCommonToastInfoAction({
           message: formatMessage({
             id: "saveProject.successTips"
           }),
@@ -433,7 +433,7 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
       fe(false)
     } catch (error) {
       if (error.message === Module_276.a.CLOUD_SPACE_DATA_ERROR) {
-        dispatch(Actions.Cf(true))
+        dispatch(CommonActions.Cf(true))
         ce(true)
       } else {
         if (error.message !== Module_276.a.USER_CANCEL_SAVE && error.message !== Module_276.a.USER_NOT_LOGIN) {
@@ -444,12 +444,12 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
           }
         }
       }
-      dispatch(Actions.Si(false))
+      dispatch(CommonActions.Si(false))
       isSuccess = false
     }
     if (J.current) {
       clearTimeout(J.current)
-      dispatch(Actions.Qi(false))
+      dispatch(CommonActions.Qi(false))
     }
     return isSuccess
   }, [dispatch, formatMessage, isUpdate, saving, userInfo])
@@ -488,7 +488,7 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
                     e.next = 2
                     return save(true)
                   case 2:
-                    dispatch(Actions.sg(historyArchiveId))
+                    dispatch(CommonActions.sg(historyArchiveId))
                   case 3:
                   case "end":
                     return e.stop()
@@ -497,7 +497,7 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
             }, e)
           }))()
         } else {
-          dispatch(Actions.sg(historyArchiveId))
+          dispatch(CommonActions.sg(historyArchiveId))
         }
       }
     }
@@ -505,33 +505,33 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
   React.useEffect(function () {
     if (collAutoSave && isProjectModified) {
       save(true).then(function () {
-        dispatch(Actions.di(false))
+        dispatch(CommonActions.di(false))
       }).catch(function (e) {
         console.error(e)
-        dispatch(Actions.di(false))
+        dispatch(CommonActions.di(false))
       })
     }
   }, [isProjectModified, save, collAutoSave, dispatch])
   var Ce = function (e) {
     switch (e) {
       case "EXPORT_PROJECT_AS_JSON":
-        dispatch(Actions.Of(true))
+        dispatch(CommonActions.Of(true))
         Module_141.a("SaveToComputerClick", {
           workId: id,
           workName: title
         })
         break
       case "CREATE_NEW_PROJECT":
-        dispatch(Actions.Ah(Module_18.f.CREATE_PROJECT))
+        dispatch(CommonActions.Ah(Module_18.f.CREATE_PROJECT))
         break
       case "OPEN_MY_PROJECT":
         if (!userInfo) {
-          return void dispatch(Actions.openSignInDialogAction())
+          return void dispatch(CommonActions.openSignInDialogAction())
         }
-        dispatch(Actions.Ah(Module_18.f.MY_PROJECT))
+        dispatch(CommonActions.Ah(Module_18.f.MY_PROJECT))
         break
       case "SAVE_AS":
-        dispatch(Actions.asyncSaveProjectAction({
+        dispatch(CommonActions.asyncSaveProjectAction({
           isUpdate: false,
           isAutoSave: false,
           isNeedReport: true,
@@ -539,16 +539,16 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
         }))
         break
       case "HISTORY":
-        return void dispatch(Actions.tj(true))
+        return void dispatch(CommonActions.tj(true))
       case "IMPORT_EXTENSION_WIDGET":
         break
       case "OPEN_LOCAL_FILE":
-        dispatch(Actions.Gi(false))
+        dispatch(CommonActions.Gi(false))
     }
   }
   const importProjectJson = React.useCallback((e) => {
     if (isProjectModified) {
-      dispatch(Actions.Ri({
+      dispatch(CommonActions.Ri({
         visible: true,
         openFrom: "",
         async onSave() {
@@ -566,13 +566,13 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
         }
       }))
       asyncCreateProjectRef.current = () => {
-        dispatch(Actions.warpAsyncCreateProject(e))
+        dispatch(warpAsyncCreateProject(e))
       }
     } else {
-      dispatch(Actions.warpAsyncCreateProject(e))
+      dispatch(warpAsyncCreateProject(e))
     }
     var editPermission = e?.editPermission === Module_18.c.ReadOnly ? Module_18.c.ReadOnly : Module_18.c.Edit
-    dispatch(Actions.Ci(editPermission))
+    dispatch(CommonActions.Ci(editPermission))
   }, [dispatch, save, isProjectModified])
   var Se = function () {
     var e = Module_7.a(RegeneratorRuntime.mark(function e(t) {
@@ -616,7 +616,7 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
     }
   }()
   var Ae = function () {
-    dispatch(Actions.Gi(true))
+    dispatch(CommonActions.Gi(true))
   }
   var Ie = function () {
     var e = Module_7.a(RegeneratorRuntime.mark(function e(t) {
@@ -638,7 +638,7 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
             case 5:
               e$sent = e.sent
               e$sent$title = e$sent.title
-              dispatch(Actions.showCommonToastInfoAction({
+              dispatch(CommonActions.showCommonToastInfoAction({
                 message: formatMessage({
                   id: "HeaderDropdown.importExtensionSuccess"
                 }, {
@@ -673,12 +673,12 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
       switch (e) {
         case "STAGE_RULER":
           if (!playing) {
-            dispatch(Actions.Wi(!stageRulerVisible))
+            dispatch(CommonActions.Wi(!stageRulerVisible))
           }
           break
         case "STAGE_AREA":
           if (!playing) {
-            dispatch(Actions.Yi(!stageVisible))
+            dispatch(CommonActions.Yi(!stageVisible))
           }
           break
         // [CoCo Next] 添加显示设置
@@ -737,14 +737,14 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
                 e.next = 3
                 break
               }
-              dispatch(Actions.showCommonToastInfoAction({
+              dispatch(CommonActions.showCommonToastInfoAction({
                 message: formatMessage({
                   id: "coursePlayingTips"
                 })
               }))
               return e.abrupt("return")
             case 3:
-              dispatch(Actions.fi(true))
+              dispatch(CommonActions.fi(true))
             case 4:
             case "end":
               return e.stop()
@@ -872,7 +872,7 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
       )}
       {uiConfig.tutorial.releaseInfo === Module_18.j.Show && (
         <MenuItem value="releaseInfo">
-          <div className={styles.itemLinkContent} onClick={() => dispatch(Actions.showReleaseInfoDialog(true))}>
+          <div className={styles.itemLinkContent} onClick={() => dispatch(CommonActions.showReleaseInfoDialog(true))}>
             <span className={styles.link}>
               {formatMessage({ id: "releaseInfo" })}
             </span>
@@ -951,7 +951,7 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
   const handleClickMenu = useCallback((value) => {
     switch (value) {
       case "cloudDB":
-        dispatch(userInfo ? Actions.jj(true) : Actions.openSignInDialogAction())
+        dispatch(userInfo ? CommonActions.jj(true) : CommonActions.openSignInDialogAction())
         break
       case "cloudSpace":
         window.open(`${Shared_tools.A()}/`, "_blank")
@@ -1035,7 +1035,7 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
             >
               <div
                 className={classNames(styles.iconWrapper, styles.cloudIconWrapper, cloudDBManagerDialogVisible && styles.activeIconWrapper)}
-                onClick={() => dispatch(userInfo ? Actions.jj(true) : Actions.openSignInDialogAction())}
+                onClick={() => dispatch(userInfo ? CommonActions.jj(true) : CommonActions.openSignInDialogAction())}
               >
                 <IconFont type="icon-database-manage-active" className={styles.databaseIcon} />
               </div>
@@ -1201,7 +1201,7 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
             onClose={() => fe(false)}
           />
         )}
-        <Pe importProjectJson={importProjectJson} />
+        <ProjectDialog importProjectJson={importProjectJson} />
         <SaveProgress />
       </div>
       <SaveFailedDialog1 visible={a} onClose={() => s(false)} save={() => save(false)} />
