@@ -98,9 +98,12 @@ function rewriteURL(url: URL): URL {
         newURL.searchParams.set("__proxy_url__", url.href)
         return newURL
     }
+    // 由于在旧版浏览器中不支持正则断言/环视，这里只好把代码写得复杂了一些
     url.pathname = "/proxy/" + url.origin
-        .replace(/(?<=^https?:\/\/)dev-/, "")
-        .replace(/(?<=^https?:\/\/)backend-dev/, "api")
+        .replace(/http:\/\/dev-/, "http://")
+        .replace(/https:\/\/dev-/, "https://")
+        .replace(/http:\/\/backend-dev/, "http://api")
+        .replace(/https:\/\/backend-dev/, "https://api")
         + url.pathname
     if (location.protocol == "http:") {
         if (url.protocol == "https:") {

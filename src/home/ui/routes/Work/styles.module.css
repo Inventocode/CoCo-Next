@@ -417,7 +417,9 @@
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    overflow-x: scroll
+    overflow-x: scroll;
+    /* [CoCo Next] 兼容 Firefox */
+    scrollbar-width: none;
 }
 
 .work .templateBox .templateList::-webkit-scrollbar {
@@ -552,7 +554,7 @@
 }
 
 /* [CoCo Next] 极小屏优化，极小屏设备作品类型和搜索框显示在两行上，主体界面上边距减小 */
-@media screen and not (min-width: 512px) {
+@media not (min-width: 512px) {
 
     .work {
         width: 100%;

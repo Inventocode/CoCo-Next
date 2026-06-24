@@ -71,7 +71,7 @@
 }
 
 /* [CoCo Next] 小屏优化，小屏设备不显示不能用的按钮 */
-@media screen and not (min-width: 768px) {
+@media not (min-width: 768px) {
     .home .createBox .disabled {
         display: none;
     }
@@ -706,7 +706,9 @@
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    overflow-x: scroll
+    overflow-x: scroll;
+    /* [CoCo Next] 兼容 Firefox */
+    scrollbar-width: none;
 }
 
 .home .center .oldUserTemplate .templateList::-webkit-scrollbar {
@@ -878,14 +880,14 @@
 }
 
 /* [CoCo Next] 中小屏优化，中小屏设备新手入门最小宽度减小 */
-@media screen and not (min-width: 1024px) {
+@media not (min-width: 1024px) {
     .home .center .courseBox .courseList {
         grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
     }
 }
 
 /* [CoCo Next] 极小屏优化，极小屏设备作品最小宽度减小 */
-@media screen and not (min-width: 512px) {
+@media not (min-width: 512px) {
     .home .center .myWork .workList {
         grid-template-columns: repeat(auto-fill,minmax(160px,1fr));
     }

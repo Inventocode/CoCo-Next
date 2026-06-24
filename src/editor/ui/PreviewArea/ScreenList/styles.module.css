@@ -236,9 +236,13 @@
 
 .list {
     white-space: nowrap;
-    overflow-x: scroll;
+    /* [CoCo Next] */
+    /* overflow-x: scroll; */
+    overflow-x: auto;
     overflow-y: hidden;
     user-select: none;
+    /* [CoCo Next] 兼容 Firefox */
+    scrollbar-width: none;
 }
 
 .list::-webkit-scrollbar {

@@ -30,7 +30,7 @@ import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"../../../../unre
 import * as CommonActions from "../../redux/common/actions"
 import { setStartCurrentScreenAction, warpAsyncCreateProject } from "../../redux/common/actions"
 import * as Components from "../../../shared/ui/components"
-import { Button, Dropdown, IconFont, Menu, MenuItem, SubMenuItem, SubMenuItem } from "../../../shared/ui/components"
+import { Button, Dropdown, IconFont, Menu, MenuItem, SubMenuItem } from "../../../shared/ui/components"
 import * as /* [auto-meaningful-name] */Module_627 from /* 627 */"../../../../unrestored/shared/1571/2636/627"
 import classNames from "classnames"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../../../../unrestored/shared/1571/2636/710"

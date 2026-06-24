@@ -45,6 +45,8 @@
 }
 
 .body {
+    /* [CoCo Next] 在旧版浏览器中，如果没有 max-height 限制，高度会被内容撑高 */
+    max-height: 100%;
     display: flex;
     flex: 1 1;
     flex-direction: row;

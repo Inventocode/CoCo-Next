@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
         "target": "ESNext",
-        "jsx": "react",
+        "jsx": "preserve",
         "lib": ["ESNext", "DOM"],
         "checkJs": true,
         "skipLibCheck": true,
@@ -10,6 +10,7 @@
         "sourceMap": true,
         "resolveJsonModule": true,
         "esModuleInterop": true,
+        "experimentalDecorators": true,
         "strict": true,
         "allowUnreachableCode": false,
         "allowUnusedLabels": false,
@@ -27,6 +28,6 @@
             { "name": "typescript-plugin-css-modules" }
         ]
     },
-    "include": ["src/**/*", "unrestored/**/*", "scripts/**/*", "helper/**/*"],
+    "include": ["src/**/*", "unrestored/**/*", "helper/**/*"],
     "exclude": ["node_modules", "public", "src/**/*.unrestored.*"]
 }

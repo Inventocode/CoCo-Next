@@ -190,7 +190,9 @@
 
 .tabContainer .tabContent .scrollBasic {
     height: 100%;
-    overflow-y: scroll;
+    /* [CoCo Next] 旧版 Firefox 不支持隐藏滚动条，auto 自动显示滚动条比 scroll 持续显示滚动条好看 */
+    /* overflow-y: scroll; */
+    overflow-y: auto;
     /* [CoCo Next] 标准滚动条 */
     scrollbar-width: none;
 }
@@ -201,7 +203,9 @@
 
 .tabContainer .tabContent .scrollExtension {
     height: calc(100% - 64px);
-    overflow-y: scroll;
+    /* [CoCo Next] 同上 */
+    /* overflow-y: scroll; */
+    overflow-y: auto;
     /* [CoCo Next] 标准滚动条 */
     scrollbar-width: none;
 }

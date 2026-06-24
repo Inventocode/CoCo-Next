@@ -1,3 +1,4 @@
+import "core-js"
 import "./styles/0.chunk.css"
 import "./styles/index.chunk.css"
 import "reflect-metadata"

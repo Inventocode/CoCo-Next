@@ -9,11 +9,11 @@
     display: flex;
 }
 
-.content > *:not(.content > *:first-child) {
+.content>*:last-child {
     flex-grow: 1;
 }
 
-@media screen and not (min-width: 512px) {
+@media not (min-width: 512px) {
     .content {
         flex-direction: column-reverse;
         flex-grow: 1;

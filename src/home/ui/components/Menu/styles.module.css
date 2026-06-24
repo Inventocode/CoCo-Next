@@ -70,7 +70,7 @@
 }
 
 /* [CoCo Next] 中小屏优化，中小屏设备缩小菜单宽度 */
-@media screen and not (min-width: 1024px) {
+@media not (min-width: 1024px) {
 
     .menu {
         width: 60px;
@@ -92,7 +92,7 @@
 }
 
 /* [CoCo Next] 极小屏优化，极小屏设备菜单显示在下放 */
-@media screen and not (min-width: 512px) {
+@media not (min-width: 512px) {
 
     .menu {
         height: 61px;

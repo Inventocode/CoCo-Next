@@ -26,6 +26,7 @@ const PAGES = [
  * @property {string} [publicPath]
  * @property {boolean} [analyze]
  * @property {boolean} [noPublicCDN]
+ * @property {boolean} [compatible]
  */
 
 /**
@@ -52,7 +53,7 @@ module.exports = (moreConfig, env) => {
  */
 function commonConfig(development, env) {
 
-    const { publicPath = "/", noPublicCDN = development } = env
+    const { publicPath = "/", noPublicCDN = development, compatible = false } = env
     const publicCDN = !noPublicCDN
 
     /** @type {SWC.Config} */
@@ -160,6 +161,10 @@ function commonConfig(development, env) {
         resolve: {
             extensions: [".ts", ".tsx", ".js", ".jsx"],
             alias: {
+                ...compatible ? {} : {
+                    "core-js": require.resolve("none"),
+                    "abortcontroller-polyfill/dist/polyfill-patch-fetch": require.resolve("none")
+                },
                 "lodash._arrayeach": require.resolve("lodash/_arrayEach"),
                 "lodash._baseeach": require.resolve("lodash/_baseEach"),
                 "lodash._getnative": require.resolve("lodash/_getNative"),
