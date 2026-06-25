@@ -10,7 +10,7 @@ import { loginOut } from "../../../../../unrestored/home/components/api/login-ys
 import IconFont from "../../../../../unrestored/home/components/IconFont-zVV7"
 import classNames from "classnames"
 import { Dropdown } from "antd"
-import "antd/lib/dropdown/style/css"
+import "antd/es/dropdown/style/css"
 import ReactCSSModules from "react-css-modules"
 import * as React from "react"
 import styles from "./styles.module.css"
