@@ -1804,48 +1804,6 @@
     opacity: .5
 }
 
-.Menu_subMenuItemWrapper__3Hnj3 {
-    position: relative
-}
-
-.Menu_subMenuArrow__3Lncd {
-    position: absolute;
-    top: 12px;
-    right: 10px;
-    font-size: 10px;
-    color: #666;
-    -webkit-transform: rotate(270deg);
-    transform: rotate(270deg)
-}
-
-.Menu_subMenuOverlay__2fp7d {
-    position: absolute;
-    top: 0;
-    visibility: hidden
-}
-
-.Menu_subMenuOverlay__2fp7d.Menu_visible__2iROs {
-    visibility: visible
-}
-
-.Menu_subMenuOverlay__2fp7d.Menu_placementRight__1-Ea- {
-    left: 100%
-}
-
-.Menu_subMenuOverlay__2fp7d.Menu_placementLeft__4hP3d {
-    right: 100%
-}
-
-.Menu_subMenuOverlay__2fp7d .coco-menu {
-    min-width: 120px;
-    width: -webkit-max-content;
-    width: max-content;
-    background: #fff;
-    border-radius: 6px;
-    box-shadow: 0 0 10px 0 rgba(0,0,0,.15);
-    padding: 10px 0
-}
-
 .coco-upload-button {
     width: 100%;
     height: 100%;
