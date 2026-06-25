@@ -55,6 +55,7 @@ function commonConfig(development, env) {
 
     const { publicPath = "/", noPublicCDN = development, compatible = false } = env
     const publicCDN = !noPublicCDN
+    const browserTarget = "Chrome >= 60, Firefox >= 55"
 
     /** @type {SWC.Config} */
     const commonSwcConfig = {
@@ -99,7 +100,26 @@ function commonConfig(development, env) {
         },
         module: {
             rules: [
-                {
+                compatible && {
+                    test: /\.(t|j)sx?$/i,
+                    loader: "babel-loader",
+                    options: /** @satisfies {import("@babel/core").TransformOptions} */({
+                        presets: [
+                            ["@babel/preset-env", /** @type {import("@babel/preset-env").Options} */({
+                                targets: browserTarget
+                            })],
+                            "@babel/preset-react"
+                        ],
+                        plugins: [
+                            "@babel/plugin-transform-runtime",
+                            ["babel-plugin-polyfill-corejs3", {
+                                method: "entry-global",
+                                targets: browserTarget,
+                                version: require("core-js/package.json").version
+                            }]
+                        ]
+                    })
+                }, {
                     test: /\.tsx?$/i,
                     exclude: [
                         /[\\\/]node_modules[\\\/]/i,
@@ -138,6 +158,20 @@ function commonConfig(development, env) {
                         },
                         esModule: false
                     }
+                },
+                compatible && {
+                    test: /\.css$/,
+                    loader: "postcss-loader",
+                    options: {
+                        postcssOptions: /** @satisfies {import("postcss-load-config").Config} */({
+                            plugins: [
+                                /** @type {typeof import("postcss-preset-env").default} */(
+                                    /** @type {unknown} */(require("postcss-preset-env"))
+                                )({ browsers: browserTarget })
+                            ]
+                        })
+                    },
+                    type: "javascript/auto"
                 }, {
                     test: /\.(png|svg|jpg|jpeg|gif)$/i,
                     type: "asset",

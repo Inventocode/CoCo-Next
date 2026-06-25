@@ -33,6 +33,8 @@
 
 .subMenuOverlay.placementLeft {
     right: 100%;
+    /* [CoCo Next] 在旧版 Chrome 中，仅设置 right 会使菜单显示到左侧，同时设置 left 和 right 来兼容 */
+    left: 100%;
 }
 
 .subMenuOverlay :global(.coco-menu) {
