@@ -8,7 +8,7 @@ import { PlayBox } from "../components/PlayBox"
 import { IconFont } from "../../../shared/ui/components"
 import * as Actions from "../../redux/common/actions"
 import { setHeaderVisibleAction } from "../../redux/common/actions"
-import { useIsFullScreen } from "../../../shared/utils/ui/use-is-fullscreen"
+import { useIsFullScreen } from "../../../shared/ui/hooks/use-is-fullscreen"
 
 import styles from "./styles.module.css"
 import FullscreenIcon from "./icons/fullscreen.svg"

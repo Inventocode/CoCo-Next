@@ -10,10 +10,10 @@ import React from "react"
 import ReactDom from "react-dom"
 import "./styles.css"
 import { IconFont } from "../Iconfont"
-import { useInnerWidth } from "../../../utils/ui/use-inner-width"
-import { useInnerHeight } from "../../../utils/ui/use-inner-height"
-import { useOffsetWidth } from "../../../utils/ui/use-offset-width"
-import { useOffsetHeight } from "../../../utils/ui/use-offset-height"
+import { useInnerWidth } from "../../hooks/use-inner-width"
+import { useInnerHeight } from "../../hooks/use-inner-height"
+import { useOffsetWidth } from "../../hooks/use-offset-width"
+import { useOffsetHeight } from "../../hooks/use-offset-height"
 
 export interface IDialogProps {
   className?: classNames.Argument

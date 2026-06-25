@@ -13,7 +13,7 @@ import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../../../../..
 import { useDispatch, useSelector } from "react-redux"
 import React, { memo, useState, useEffect, useRef } from "react"
 import styles from "./styles.module.css"
-import { useInnerWidth } from "../../../../shared/utils/ui/use-inner-width"
+import { useInnerWidth } from "../../../../shared/ui/hooks/use-inner-width"
 
 const ItemBlock = memo(({ id, icon, label, color, bgColor }) => {
 

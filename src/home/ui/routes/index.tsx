@@ -34,5 +34,5 @@ function map_dispatch(dispatch) {
 const ViewWithRouter = withRouter(ReactRedux.connect(map_state, map_dispatch)(ViewRouterComponent))
 
 export function ViewRouter() {
-  return <BrowserRouter><ViewWithRouter/></BrowserRouter>
+  return <BrowserRouter><ViewWithRouter /></BrowserRouter>
 }

@@ -38,13 +38,13 @@ const store = store_manager.get_store()
 function App() {
   return <ReactRedux.Provider store={store}>
     <IntlWrapperComponent>
-      <ViewRouter/>
+      <ViewRouter />
     </IntlWrapperComponent>
   </ReactRedux.Provider>
 }
 
 if (root_dom.hasChildNodes()) {
-  ReactDOM.hydrate(<App/>, root_dom)
+  ReactDOM.hydrate(<App />, root_dom)
 } else {
-  ReactDOM.render(<App/>, root_dom)
+  ReactDOM.render(<App />, root_dom)
 }

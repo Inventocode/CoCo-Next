@@ -20,10 +20,10 @@ import { changeContextMenuInfoAction, closeContextMenuAction } from "../../redux
 import { IconFont } from "../../../shared/ui/components"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../../../../unrestored/shared/1571/2636/710"
 import * as /* [auto-meaningful-name] */Module_748 from /* 748 */"../../../../unrestored/shared/1571/2636/748/index"
-import { useInnerWidth } from "../../../shared/utils/ui/use-inner-width"
-import { useOffsetWidth } from "../../../shared/utils/ui/use-offset-width"
-import { useOffsetHeight } from "../../../shared/utils/ui/use-offset-height"
-import { useInnerHeight } from "../../../shared/utils/ui/use-inner-height"
+import { useInnerWidth } from "../../../shared/ui/hooks/use-inner-width"
+import { useOffsetWidth } from "../../../shared/ui/hooks/use-offset-width"
+import { useOffsetHeight } from "../../../shared/ui/hooks/use-offset-height"
+import { useInnerHeight } from "../../../shared/ui/hooks/use-inner-height"
 
 export function useWidgetListWidth() {
   return useInnerWidth() > 1300 ? 144 : 92

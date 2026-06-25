@@ -16,7 +16,7 @@ import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../../../../..
 import { useDispatch, useSelector } from /* 16 */"react-redux"
 import React, { memo } from "react"
 import { WidgetStyleForm } from "./WidgetStyleForm"
-import { useInnerWidth } from "../../../../shared/utils/ui/use-inner-width"
+import { useInnerWidth } from "../../../../shared/ui/hooks/use-inner-width"
 
 export const WidgetEditor = memo(() => {
 

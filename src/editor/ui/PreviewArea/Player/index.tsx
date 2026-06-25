@@ -19,8 +19,8 @@ import * as /* [auto-meaningful-name] */Module_68 from /* 68 */"../../../../../u
 import * as /* [auto-meaningful-name] */Module_55 from /* 55 */"../../../../../unrestored/shared/1571/2636/55"
 import * as BuiltInWidgetTypes from "../../../widget/built-in/types"
 import styles from "./index.module.css"
-import { useOffsetHeight } from "../../../../shared/utils/ui/use-offset-height"
-import { useOffsetWidth } from "../../../../shared/utils/ui/use-offset-width"
+import { useOffsetHeight } from "../../../../shared/ui/hooks/use-offset-height"
+import { useOffsetWidth } from "../../../../shared/ui/hooks/use-offset-width"
 import { IconFont } from "../../../../shared/ui/components"
 
 interface IDeviceFrameProps {

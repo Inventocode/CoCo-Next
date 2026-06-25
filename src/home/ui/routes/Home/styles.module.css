@@ -71,10 +71,8 @@
 }
 
 /* [CoCo Next] 小屏优化，小屏设备不显示不能用的按钮 */
-@media not (min-width: 768px) {
-    .home .createBox .disabled {
-        display: none;
-    }
+:global(.small-screen) .home .createBox .disabled {
+    display: none;
 }
 
 .home .createBox .disabled .tips {
@@ -880,15 +878,11 @@
 }
 
 /* [CoCo Next] 中小屏优化，中小屏设备新手入门最小宽度减小 */
-@media not (min-width: 1024px) {
-    .home .center .courseBox .courseList {
-        grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
-    }
+:global(.middle-screen) .home .center .courseBox .courseList {
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
 }
 
 /* [CoCo Next] 极小屏优化，极小屏设备作品最小宽度减小 */
-@media not (min-width: 512px) {
-    .home .center .myWork .workList {
-        grid-template-columns: repeat(auto-fill,minmax(160px,1fr));
-    }
+:global(.very-small-screen) .home .center .myWork .workList {
+    grid-template-columns: repeat(auto-fill,minmax(160px,1fr));
 }

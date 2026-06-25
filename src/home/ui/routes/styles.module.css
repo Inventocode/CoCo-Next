@@ -13,9 +13,7 @@
     flex-grow: 1;
 }
 
-@media not (min-width: 512px) {
-    .content {
-        flex-direction: column-reverse;
-        flex-grow: 1;
-    }
+:global(.very-small-screen) .content {
+    flex-direction: column-reverse;
+    flex-grow: 1;
 }

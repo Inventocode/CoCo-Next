@@ -44,9 +44,9 @@ import cloudSpaceManagerStyles from "../../../../unrestored/shared/1571/2636/105
 
 import screenfull from "screenfull"
 import styles from "./styles.module.css"
-import { useInnerWidth } from "../../../shared/utils/ui/use-inner-width"
+import { useInnerWidth } from "../../../shared/ui/hooks/use-inner-width"
 import { useCallback, useState } from "react"
-import { useIsFullScreen } from "../../../shared/utils/ui/use-is-fullscreen"
+import { useIsFullScreen } from "../../../shared/ui/hooks/use-is-fullscreen"
 
 function CloudSpaceManager() {
 

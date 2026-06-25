@@ -554,18 +554,15 @@
 }
 
 /* [CoCo Next] 极小屏优化，极小屏设备作品类型和搜索框显示在两行上，主体界面上边距减小 */
-@media not (min-width: 512px) {
+:global(.very-small-screen) .work {
+    width: 100%;
+}
 
-    .work {
-        width: 100%;
-    }
+:global(.very-small-screen) .work .userWorkBox .workList, .work .recoverList {
+    grid-template-columns: repeat(auto-fill,minmax(160px,1fr));
+}
 
-    .work .userWorkBox .workList, .work .recoverList {
-        grid-template-columns: repeat(auto-fill,minmax(160px,1fr));
-    }
-
-    .work .workCategory {
-        flex-direction: column;
-        height: 100px;
-    }
+:global(.very-small-screen) .work .workCategory {
+    flex-direction: column;
+    height: 100px;
 }

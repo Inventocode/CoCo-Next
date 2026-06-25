@@ -25,7 +25,7 @@ import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import { useDispatch, useSelector } from "react-redux"
 import * as /* [auto-meaningful-name] */Shared_player_audit from "../../../../../shared/player/audit"
 import styles from "./styles.module.css"
-import { useOffsetHeight } from "../../../../../shared/utils/ui/use-offset-height"
+import { useOffsetHeight } from "../../../../../shared/ui/hooks/use-offset-height"
 
 enum EType {
   SELF = "self",

@@ -40,7 +40,7 @@ import styles from "./styles.module.css"
 import * as /* [auto-meaningful-name] */Module_53 from /* 53 */"../../../../../unrestored/shared/1571/2636/53"
 import /* [auto-meaningful-name] */Module_1511 from /* 1511 */"../../../../../unrestored/shared/1571/2636/1511"
 import type { IPopoverRef } from "../../../../shared/ui/components/Popover"
-import { useInnerHeight } from "../../../../shared/utils/ui/use-inner-height"
+import { useInnerHeight } from "../../../../shared/ui/hooks/use-inner-height"
 
 const WidgetInput = React.forwardRef(function (e, t) {
   var n = useDispatch()

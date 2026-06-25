@@ -51,8 +51,8 @@ import React from "react"
 import { PermissionDialog } from "../PreviewArea/Player/PermissionDialog"
 import "../style/global.css"
 import { SideBar } from "../SideBar"
-import { useInnerWidth } from "../../../shared/utils/ui/use-inner-width"
-import { useInnerHeight } from "../../../shared/utils/ui/use-inner-height"
+import { useInnerWidth } from "../../../shared/ui/hooks/use-inner-width"
+import { useInnerHeight } from "../../../shared/ui/hooks/use-inner-height"
 import classNames from "classnames"
 
 function lB(e) {
