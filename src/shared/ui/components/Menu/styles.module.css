@@ -1,0 +1,45 @@
+/**
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：318
+ */
+
+.subMenuItemWrapper {
+    position: relative;
+}
+
+.subMenuArrow {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    font-size: 10px;
+    color: #666;
+    transform: rotate(270deg);
+}
+
+.subMenuOverlay {
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+}
+
+.subMenuOverlay.visible {
+    visibility: visible;
+}
+
+.subMenuOverlay.placementRight {
+    left: 100%;
+}
+
+.subMenuOverlay.placementLeft {
+    right: 100%;
+}
+
+.subMenuOverlay :global(.coco-menu) {
+    min-width: 120px;
+    width: max-content;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .15);
+    padding: 10px 0;
+}
