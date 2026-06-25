@@ -100,10 +100,10 @@ function rewriteURL(url: URL): URL {
     }
     // 由于在旧版浏览器中不支持正则断言/环视，这里只好把代码写得复杂了一些
     url.pathname = "/proxy/" + url.origin
-        .replace(/http:\/\/dev-/, "http://")
-        .replace(/https:\/\/dev-/, "https://")
-        .replace(/http:\/\/backend-dev/, "http://api")
-        .replace(/https:\/\/backend-dev/, "https://api")
+        .replace(/^http:\/\/dev-/, "http://")
+        .replace(/^https:\/\/dev-/, "https://")
+        .replace(/^http:\/\/backend-dev/, "http://api")
+        .replace(/^https:\/\/backend-dev/, "https://api")
         + url.pathname
     if (location.protocol == "http:") {
         if (url.protocol == "https:") {
@@ -177,6 +177,9 @@ function proxyIFrame() {
 
 function changeIFrameSrc(iFrame: HTMLIFrameElement) {
     const src = new URL(iFrame.src, location.href)
+    if (src.host == "dev-shequ.codemao.cn") {
+        src.host = "shequ.codemao.cn"
+    }
     if (src.host == "shequ.codemao.cn" && src.pathname.startsWith("/codemao_login")) {
         if (location.protocol == "http:" && src.protocol == "https:") {
             src.protocol = "http:"

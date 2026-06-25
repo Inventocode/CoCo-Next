@@ -9,7 +9,7 @@ import * as Tools from "../../../tools"
 import { IconFont } from "../Iconfont"
 import React, { memo, useRef, useState, useMemo, ReactNode, useEffect } from "react"
 import classNames from "classnames"
-import styles from "../../../../../unrestored/shared/1571/2636/13/318"
+import styles from "./styles.module.css"
 
 export interface ISubMenuItemProps {
   value?: string

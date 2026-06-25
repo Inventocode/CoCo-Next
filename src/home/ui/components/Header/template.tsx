@@ -11,6 +11,7 @@ import { loginOut } from "../../../../../unrestored/home/components/api/login-ys
 import IconFont from "../../../../../unrestored/home/components/IconFont-zVV7"
 import classNames from "classnames"
 import { Dropdown } from "antd"
+import "antd/es/dropdown/style/css"
 import ReactCSSModules from "react-css-modules"
 import * as React from "react"
 import styles from "./styles.module.css"
@@ -169,7 +170,7 @@ export class HeaderView extends React.Component<HeaderViewProps, HeaderViewState
                     })}
                   </div>
                 }
-                placement={"topLeft"}
+                placement="topLeft"
               >
                 <div styleName="dropdownItem">
                   服务协议

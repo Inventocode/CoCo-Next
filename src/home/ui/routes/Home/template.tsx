@@ -12,6 +12,7 @@ import TemplateItem from "../../../../../unrestored/home/components/TemplateItem
 import { config } from "../../../../../unrestored/home/cfg-dpNx"
 import ReactCSSModules from "react-css-modules"
 import { Carousel } from "antd"
+import "antd/es/carousel/style/css"
 import classNames from "classnames"
 import * as React from "react"
 import styles from "./styles.module.css"
