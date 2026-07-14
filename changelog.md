@@ -1,5 +1,11 @@
 # CoCo Next 更新日志
 
+## v1.23.5
+
+- 适配 Android 版。
+
+到 [Android | CoCo Next 文档](https://next.ccwidget.top/docs/guide/start#2-android) 查看使用帮助。
+
 ## v1.23.4
 
 - 针对小屏设备优化布局。

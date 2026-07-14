@@ -106,3 +106,11 @@ declare module "@babel/preset-react" {
   var index: PluginItem
   export default index
 }
+
+declare global {
+  var CoCoNextAndroidBridge_MainActivity: {
+    startDownloadActivity(): void
+  }
+}
+
+export {}

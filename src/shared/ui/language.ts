@@ -438,8 +438,9 @@ var u = Module_6.a(Module_6.a({}, {
   resourceManage: "资源管理",
   radioGroup: "单选框",
   "HeaderDropdown.more": "展开菜单",
-  "HeaderDropdown.openLocalFile": "打开电脑文件",
-  "HeaderDropdown.exportProjectAsJson": "保存到电脑",
+  // [CoCo Next] 把“电脑”改为“本地”
+  "HeaderDropdown.openLocalFile": "打开本地文件",
+  "HeaderDropdown.exportProjectAsJson": "保存到本地",
   "HeaderDropdown.importExtension": "导入自定义控件",
   "HeaderDropdown.importExtensionSuccess": "已导入「{title}」控件，请到拓展控件添加",
   "HeaderDropdown.newProject": "新建",

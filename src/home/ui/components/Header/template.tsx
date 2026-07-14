@@ -210,6 +210,13 @@ export class HeaderView extends React.Component<HeaderViewProps, HeaderViewState
                 <div styleName="dropdownItem" onClick={this.handleDocument}>帮助文档</div>
                 {/* [CoCo Next] 添加关于我们 */}
                 <div styleName="dropdownItem" onClick={this.handleAbout}>关于我们</div>
+                {/* [CoCo Next] 添加进入下载 */}
+                {typeof CoCoNextAndroidBridge_MainActivity !== "undefined" && <div
+                  styleName="dropdownItem"
+                  onClick={CoCoNextAndroidBridge_MainActivity.startDownloadActivity}
+                >
+                  进入下载
+                </div>}
               </div>
             }
             onVisibleChange={this.handleHelpDropdownVisibleChange}
