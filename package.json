@@ -20,9 +20,7 @@
     "build": "rspack --config rspack.prod.js",
     "build:dev": "rspack --config rspack.dev.js",
     "serve": "rspack serve --config rspack.server.js",
-    "release": "npm run build:release-default && npm run build:release-compatible && node scripts/zip.js",
-    "build:release-default": "npm run build \"--\" --env noPublicCDN && mv dist/coco.codemao.cn dist/default",
-    "build:release-compatible": "npm run build \"--\" --env noPublicCDN --env compatible && mv dist/coco.codemao.cn dist/compatible"
+    "release": "node scripts/release.js"
   },
   "dependencies": {
     "@ant-design/icons": "^4.0.0",
