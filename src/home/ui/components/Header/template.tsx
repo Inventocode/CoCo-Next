@@ -213,7 +213,7 @@ export class HeaderView extends React.Component<HeaderViewProps, HeaderViewState
                 {/* [CoCo Next] 添加进入下载 */}
                 {typeof CoCoNextAndroidBridge_MainActivity !== "undefined" && <div
                   styleName="dropdownItem"
-                  onClick={CoCoNextAndroidBridge_MainActivity.startDownloadActivity}
+                  onClick={() => { CoCoNextAndroidBridge_MainActivity.startDownloadActivity() }}
                 >
                   进入下载
                 </div>}
