@@ -25,7 +25,7 @@ const PAGES = [
  * @typedef {Object} CommonEnv
  * @property {string} [publicPath]
  * @property {boolean} [analyze]
- * @property {boolean} [noPublicCDN]
+ * @property {string} [publicCDN]
  * @property {boolean} [compatible]
  */
 
@@ -53,8 +53,7 @@ module.exports = (moreConfig, env) => {
  */
 function commonConfig(development, env) {
 
-    const { publicPath = "/", noPublicCDN = development, compatible = false } = env
-    const publicCDN = !noPublicCDN
+    const { publicPath = "/", publicCDN, compatible = false } = env
     const browserTarget = "Chrome >= 60, Firefox >= 55"
 
     /** @type {SWC.Config} */
@@ -301,7 +300,7 @@ function commonConfig(development, env) {
                         path: "dist/react-redux.min.js"
                     }
                 ],
-                prodUrl: "https://npm.webcache.cn/:name@:version/:path",
+                prodUrl: publicCDN,
                 crossOrigin: true
             })
         ]

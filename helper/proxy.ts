@@ -94,7 +94,10 @@ function needsProxy(url: URL): boolean {
 
 function rewriteURL(url: URL): URL {
     if (location.hostname.endsWith(".ccwidget.top")) {
-        const newURL = new URL(url.protocol + "//next.ccwidget.top/proxy/")
+        if (/wss?:/.test(url.protocol)) {
+            return new URL(url.protocol + "//ws.next.slightning.site/" + url.href.replace(/wss?:\/\//, ""))
+        }
+        const newURL = new URL(url.protocol + "//next.slightning.site/proxy/")
         newURL.searchParams.set("__proxy_url__", url.href)
         return newURL
     }

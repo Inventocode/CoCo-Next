@@ -22,11 +22,11 @@ async function main() {
 async function build() {
 
     await fs.rm(defaultSource, { recursive: true, force: true })
-    await exec("npm run build -- --env noPublicCDN")
+    await exec("npm run build")
     await fs.rename(dist, defaultSource)
 
     await fs.rm(compatibleSource, { recursive: true, force: true })
-    await exec("npm run build -- --env noPublicCDN --env compatible")
+    await exec("npm run build -- --env compatible")
     await fs.rename(dist, compatibleSource)
 }
 
