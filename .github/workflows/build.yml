@@ -44,8 +44,12 @@ jobs:
         working-directory: ./editor
 
       - name: 构建编辑器
-        run: npm run build
+        run: npm run build -- --env publicPath=https://next.slightning.site
         working-directory: ./editor
+
+      - name: 复制编辑器静态文件
+        run: |
+          mkdir edge-one && cp ./editor/dist/coco.codemao.cn/static ./edge-one
 
       - name: 移动编辑器文件到分发目录
         run: |
@@ -67,9 +71,22 @@ jobs:
         run: |
           mv ./docs/build ./dist/docs
 
-      - name: 移动静态文件到分发目录
+      - name: 移动 Cloudflare 静态文件到分发目录
         run: |
-          mv ./main/static/* ./dist/
+          mv ./main/static/cloudflare/* ./dist/
+
+      - name: 移动 EdgeOne 静态文件到分发目录
+        run: |
+          mv ./main/static/edge-one/* ./edge-one/
+
+      - name: 部署静态文件到 EdgeOne
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.ACTIONS_DEPLOY_EDGE_ONE_TOKEN }}
+          external_repository: S-LIGHTNING/CoCo-Next-Static
+          publish_branch: edge-one
+          publish_dir: ./edge-one
+          force_orphan: true
 
       - name: 部署到 GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

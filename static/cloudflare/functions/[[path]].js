@@ -132,10 +132,12 @@ export async function onRequest(context) {
             const newResponse = new Response(response.body, response)
 
             // 替换 Cookie 域名
-            const setCookie = newResponse.headers.get("set-cookie")
-            if (setCookie) {
-                const modifiedCookie = setCookie.replace(/codemao\.cn/g, origin.origin.endsWith(".ccwidget.top") ? ".ccwidget.top" : origin.origin)
-                newResponse.headers.set("set-cookie", modifiedCookie)
+            const { headers: responseHeaders } = newResponse
+            const setCookies = responseHeaders.getAll("set-cookie")
+            responseHeaders.delete("set-cookie")
+            for (const setCookie of setCookies) {
+                const modifiedCookie = setCookie.replace(/codemao\.cn/g, origin.hostname.endsWith(".ccwidget.top") ? ".ccwidget.top" : origin.host)
+                responseHeaders.append("set-cookie", modifiedCookie)
             }
 
             // 允许跨域请求
@@ -196,6 +198,6 @@ export async function onRequest(context) {
 
     } catch (error) {
         const errorMessage = error instanceof Error ? error.stack ?? error.message : JSON.stringify(error)
-        return new Response("An error occurred while processing the request:\n" + errorMessage, { status: 500 })
+        return new Response("An error occurred while proxy the request:\n" + errorMessage, { status: 500 })
     }
 }

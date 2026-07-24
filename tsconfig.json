@@ -3,6 +3,7 @@
         "target": "ESNext",
         "jsx": "react",
         "lib": ["ESNext"],
+        "rootDir": ".",
         "outDir": "dist",
         "checkJs": true,
         "skipLibCheck": true,
@@ -23,6 +24,6 @@
         "noUnusedParameters": true,
         "types": ["@cloudflare/workers-types"]
     },
-    "include": ["static/**/*"],
+    "include": ["static/**/*", "cloud"],
     "exclude": ["node_modules"]
 }
