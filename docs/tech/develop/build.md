@@ -43,8 +43,8 @@ Rspack CLI 环境变量：
 |:-:|:-:|:-:|
 | publicPath | 加载资源文件的地址，详见 [Output - Rspack](https://rspack.rs/zh/config/output#outputpublicpath) | `/` |
 | analyze | 生成用于分析的构建信息 | false |
-| noPublicCDN | 不使用公共 CDN 来加载第三方依赖 | false |
-| compatible | 兼容模式，计划兼容到 Chrome 60，Firefox 55（2017 年），代价是构建耗时增加 4 倍，分发文件体积会略大一点，运行速度略慢一点，需要与 noPublicCDN 同时使用才能达到最好的效果 | false |
+| publicCDN | 公共 CDN 地址，设置后会用公共 CDN 来加载第三方依赖 |  |
+| compatible | 兼容模式，计划兼容到 Chrome 60，Firefox 55（2017 年），代价是构建耗时增加 4 倍，分发文件体积会略大一点，运行速度略慢一点 | false |
 
 :::tip
 
