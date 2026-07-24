@@ -44,7 +44,7 @@ jobs:
         working-directory: ./editor
 
       - name: 构建编辑器
-        run: npm run build -- --env publicPath=https://next.slightning.site
+        run: npm run build -- --env publicPath=https://next.slightning.site/
         working-directory: ./editor
 
       - name: 复制编辑器静态文件
