@@ -49,7 +49,7 @@ jobs:
 
       - name: 复制编辑器静态文件
         run: |
-          mkdir edge-one && cp ./editor/dist/coco.codemao.cn/static ./edge-one
+          mkdir edge-one && cp -r ./editor/dist/coco.codemao.cn/static ./edge-one
 
       - name: 移动编辑器文件到分发目录
         run: |
