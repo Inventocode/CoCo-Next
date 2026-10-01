@@ -15,7 +15,7 @@ var i = require(/* 134 */"inversify")
 var o = require(/* 293 */"../../123/293")
 var a = require(/* 579 */"../../1022/579")
 var s = require(/* 195 */"../../123/195/index")
-var c = require(/* 125 */"../../1058/125")
+var c = require(/* 125 */"../../../../../../src/shared/packages/@crc/blink/src/core/di")
 var u = function (e) {
   function t() {
     var t = e.call(this) || this
@@ -342,5 +342,5 @@ var u = function (e) {
   };
   (0, r.__decorate)([(0, c.lazy_inject)(c.BINDING.Blink)], t.prototype, "Blink", undefined)
   return t = (0, r.__decorate)([(0, i.injectable)()], t)
-}(require(/* 1127 */"./2188/1127").Controller)
+}(require(/* 1127 */"./2187/1127").Controller)
 exports.ColorController = u

@@ -10,7 +10,7 @@ import { Yh } from "./index__part-68"
 import { lg } from "./index__part-76"
 import * as /* [auto-meaningful-name] */Module_61 from /* 61 */"./61"
 import * as /* [auto-meaningful-name] */Module_118 from /* 118 */"./118/index"
-import * as /* [auto-meaningful-name] */Module_46 from /* 46 */"./46/index"
+import * as /* [auto-meaningful-name] */Module_46 from /* 46 */"../../../../src/editor/block/declare/index"
 import * as /* [auto-meaningful-name] */Module_4 from /* 4 */"./4"
 import * as /* [auto-meaningful-name] */Module_33 from /* 33 */"./33"
 import * as /* [auto-meaningful-name] */Src_shared_packages_Crc_blink_src_index from /* 17 */"../../../../src/shared/packages/@crc/blink/src/index"
@@ -74,16 +74,16 @@ function fg() {
     },
     optOnchange: function (e) {
       if (!Src_shared_packages_Crc_blink_src_index.Blink.events.is_undoing()) {
-        var /* [auto-meaningful-name] */r$addMutation
-        var /* [auto-meaningful-name] */r$removeMutation
+        var /* [auto-meaningful-name] */this$source_block$addMutation
+        var /* [auto-meaningful-name] */this$source_block$removeMutation
         var /* [auto-meaningful-name] */this$source_block = this.source_block
         if (this$source_block) {
           if ("nth" === e) {
-            if (!(null === (r$addMutation = this$source_block.addMutation) || undefined === r$addMutation)) {
-              r$addMutation.call(this$source_block)
+            if (!(null === (this$source_block$addMutation = this$source_block.addMutation) || undefined === this$source_block$addMutation)) {
+              this$source_block$addMutation.call(this$source_block)
             }
-          } else if (!(null === (r$removeMutation = this$source_block.removeMutation) || undefined === r$removeMutation)) {
-            r$removeMutation.call(this$source_block)
+          } else if (!(null === (this$source_block$removeMutation = this$source_block.removeMutation) || undefined === this$source_block$removeMutation)) {
+            this$source_block$removeMutation.call(this$source_block)
           }
         }
       }
@@ -281,16 +281,16 @@ var mg = {
       }
       function r(e) {
         if (!t.events.is_undoing()) {
-          var /* [auto-meaningful-name] */o$addMutation
-          var /* [auto-meaningful-name] */o$removeMutation
+          var /* [auto-meaningful-name] */this$source_block$addMutation
+          var /* [auto-meaningful-name] */this$source_block$removeMutation
           var /* [auto-meaningful-name] */this$source_block = this.source_block
           if (this$source_block) {
             if ("nth" === e) {
-              if (!(null === (o$addMutation = this$source_block.addMutation) || undefined === o$addMutation)) {
-                o$addMutation.call(this$source_block)
+              if (!(null === (this$source_block$addMutation = this$source_block.addMutation) || undefined === this$source_block$addMutation)) {
+                this$source_block$addMutation.call(this$source_block)
               }
-            } else if (!(null === (o$removeMutation = this$source_block.removeMutation) || undefined === o$removeMutation)) {
-              o$removeMutation.call(this$source_block)
+            } else if (!(null === (this$source_block$removeMutation = this$source_block.removeMutation) || undefined === this$source_block$removeMutation)) {
+              this$source_block$removeMutation.call(this$source_block)
             }
           }
         }

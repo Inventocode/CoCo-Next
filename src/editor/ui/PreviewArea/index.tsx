@@ -18,7 +18,7 @@ import * as CommonActions from "../../redux/common/actions"
 import { setIsHoverBlockAreaAction, setStageScaleAction, setStageWidthAction } from "../../redux/common/actions"
 import { changeContextMenuInfoAction, closeContextMenuAction } from "../../redux/common/actions"
 import { IconFont } from "../../../shared/ui/components"
-import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../../../../unrestored/shared/1571/2636/710"
+import { useIntl } from "react-intl"
 import * as /* [auto-meaningful-name] */Module_748 from /* 748 */"../../../../unrestored/shared/1571/2636/748/index"
 import { useInnerWidth } from "../../../shared/ui/hooks/use-inner-width"
 import { useOffsetWidth } from "../../../shared/ui/hooks/use-offset-width"
@@ -35,7 +35,7 @@ export function useWidgetListSingleColumn(widgetListWidth: number) {
 
 export const PreviewArea = memo(() => {
 
-  const { formatMessage } = Module_710.a()
+  const { formatMessage } = useIntl()
   const dispatch = useDispatch()
   const mainElementRef = useRef<HTMLElement>(null)
   const previewAreaRef = useRef<HTMLDivElement>(null)

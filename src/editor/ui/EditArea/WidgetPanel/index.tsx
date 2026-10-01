@@ -9,7 +9,7 @@ import * as /* [auto-meaningful-name] */Module_26 from /* 26 */"../../../../../u
 import { asyncSelectProjectWidgetAction, setIsHoverBlockAreaAction, setWidgetAttributeVisibleAction } from "../../../redux/common/actions"
 import { IconFont } from "../../../../shared/ui/components"
 import classNames from "classnames"
-import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../../../../../unrestored/shared/1571/2636/710"
+import { useIntl } from "react-intl"
 import { useDispatch, useSelector } from "react-redux"
 import React, { memo, useState, useEffect, useRef } from "react"
 import styles from "./styles.module.css"
@@ -18,7 +18,7 @@ import { useInnerWidth } from "../../../../shared/ui/hooks/use-inner-width"
 const ItemBlock = memo(({ id, icon, label, color, bgColor }) => {
 
   const dispatch = useDispatch()
-  const { formatMessage } = Module_710.a()
+  const { formatMessage } = useIntl()
 
   const selectedWidgetId = useSelector((state) => state.project.selectedWidgetId)
   const flyoutVisible = useSelector((state) => state.block.flyoutVisible)
@@ -110,7 +110,7 @@ const BASIC_BLOCK_BOX = [
 ]
 
 const BasicBlockBox = memo(() => {
-  const { formatMessage } = Module_710.a()
+  const { formatMessage } = useIntl()
   return <div className={styles.basicBlockBox}>
     <div className={styles.categoryTitle}>{formatMessage({ id: "basicBlock" })}</div>
     <div className={styles.blockList}>{BASIC_BLOCK_BOX.map((box) => <ItemBlock key={box.id} {...box} />)}</div>
@@ -120,7 +120,7 @@ const BasicBlockBox = memo(() => {
 
 const DeleteBlockBox = memo(() => {
 
-  const { formatMessage } = Module_710.a()
+  const { formatMessage } = useIntl()
   const isBlockDragDeleteArea = useSelector((state) => state.block.isBlockDragDeleteArea)
 
   return <div className={styles.deleteBlockBox}>

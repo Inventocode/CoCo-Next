@@ -19,6 +19,7 @@ import { AdvancedText, IconFont, Menu, MenuItem, ScrollPaginate } from "../../..
 import * as /* [auto-meaningful-name] */Module_25 from /* 25 */"../../../../../../unrestored/shared/1571/2636/25/index"
 import classNames from "classnames"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../../../../../../unrestored/shared/1571/2636/710"
+import { useIntl } from "react-intl"
 import * as /* [auto-meaningful-name] */Shared_ui_language from "../../../../../shared/ui/language"
 import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../../../../../../unrestored/shared/1571/2636/7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
@@ -66,7 +67,7 @@ function ProjectItem({
   project, onClick, onDelete, filterType, status
 }: IProjectItemProps) {
 
-  const { formatMessage } = Module_710.a()
+  const { formatMessage } = useIntl()
 
   function menuItems() {
     const items = []
@@ -160,7 +161,7 @@ export const MyProject = React.memo(({ visible, importProjectJson }: IMyProjectP
   const wrapperElementHeight = useOffsetHeight(wrapperElementRef.current)
   const filterElementHeight = useOffsetHeight(filterElementRef.current)
 
-  const { formatMessage } = Module_710.a()
+  const { formatMessage } = useIntl()
 
   async function onClick(id, r, o) {
     try {

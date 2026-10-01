@@ -8,14 +8,14 @@
 
 import { gT, _T, vT } from "./index__part-146"
 import { OT } from "./index__part-147"
-import /* [auto-meaningful-name] */Module_99 from /* 99 */"./99"
+import /* [auto-meaningful-name] */Module_99 from /* 99 */"../../../../src/editor/ui/EditArea/BlockEditor/styles.module.css"
 import * as /* [auto-meaningful-name] */Src_shared_packages_Crc_blink_src_index from /* 17 */"../../../../src/shared/packages/@crc/blink/src/index"
 import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"./9"
 import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"./18"
 import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
 import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
-import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import { useIntl } from /* 710 */"react-intl"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
 import { useDispatch, useSelector } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
@@ -24,7 +24,7 @@ import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_935 from /* 935 */"./935"
 import /* [auto-meaningful-name] */Module_9351 from /* 935 */"./935"
 var TT = memo(function () {
-  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
+  var /* [auto-meaningful-name] */useIntl$formatMessage = useIntl().formatMessage
   var t = useDispatch()
   var n = useSelector(function (e) {
     return e.block.dropdown
@@ -51,7 +51,7 @@ var TT = memo(function () {
     if (Src_shared_packages_Crc_blink_src_index.BU.base.is_old_dropdown_option(t)) {
       return t[1] === Module_9.h && t[0] === Module_9.g ? React.createElement("div", {
         className: Module_99.nullItem
-      }, Module_710$a$formatMessage({
+      }, useIntl$formatMessage({
         id: "closeHeadline"
       })) : React.createElement(Src_shared_ui_components_index.p, {
         value: t[1],

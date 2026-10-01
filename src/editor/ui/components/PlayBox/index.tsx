@@ -11,10 +11,9 @@ import headerStyles from "../../Header/styles.module.css"
 import * as /* [auto-meaningful-name] */Module_141 from /* 141 */"../../../../../unrestored/shared/1571/2636/141/index"
 import * as CommonActions from "../../../redux/common/actions"
 import { asyncPlayProjectAction, promisify, resetDataWatchValueAction, setStartCurrentScreenAction, stopPlayingProjectAction } from "../../../redux/common/actions"
-import * as Components from "../../../../shared/ui/components"
-import { IconFont } from "../../../../shared/ui/components"
+import { IconFont, Input } from "../../../../shared/ui/components"
 import classNames from "classnames"
-import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../../../../../unrestored/shared/1571/2636/710"
+import { useIntl } from "react-intl"
 import * as /* [auto-meaningful-name] */Module_748 from /* 748 */"../../../../../unrestored/shared/1571/2636/748/index"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../../../../../unrestored/shared/1571/2636/10/index"
 import { useDispatch, useSelector, batch } from "react-redux"
@@ -28,7 +27,7 @@ export interface IPlayBoxProps {
 
 export const PlayBox = React.memo(({ showText = true }: IPlayBoxProps) => {
 
-  const { formatMessage } = Module_710.a()
+  const { formatMessage } = useIntl()
   const dispatch = useDispatch()
 
   // [CoCo Next]
@@ -109,7 +108,7 @@ var pL = memo(function (e) {
     return e.oTState.isAuthor
   })
   var o = useRef(null)
-  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
+  var { formatMessage } = useIntl()
   var a = useDispatch()
   var s = useState(false)
   var c = Module_10.a(s, 2)
@@ -127,13 +126,13 @@ var pL = memo(function (e) {
     {<div
       className={headerStyles.projectTitleWrapper}
     >
-      {<Components.k
+      {<Input
         defaultValue={n}
         dependency={n}
         disabled={!r || e.readonly}
         isTrimmed={true}
         className={headerStyles.projectTitle}
-        placeholder={Module_710$a$formatMessage({
+        placeholder={formatMessage({
           id: "projectTitlePlaceholder"
         })}
         rules={[
@@ -159,7 +158,7 @@ var pL = memo(function (e) {
             })
           } else {
             a(CommonActions.mj({
-              message: Module_710$a$formatMessage({
+              message: formatMessage({
                 id: "isEmptyProjectTitle"
               }),
               showCloseIcon: false
