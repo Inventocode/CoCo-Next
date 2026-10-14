@@ -1,0 +1,80 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=360,user-scalable=no"/><meta name="description" content="CoCo Next"/><title></title><link rel="icon" href="/favicon.svg"/><meta name="environment" content="production"><script defer="defer" src="https://next.slightning.site/static/scripts/runtime.2a9f003aaeaf7ab6.js"></script><script defer="defer" src="https://next.slightning.site/static/scripts/proxy.9a5664496cdf462e.js"></script><script defer="defer" src="https://next.slightning.site/static/scripts/8415.048d53fc43b4d935.js"></script><script defer="defer" src="https://next.slightning.site/static/scripts/5577.428443fd60a1d03f.js"></script><script defer="defer" src="https://next.slightning.site/static/scripts/91.2f25a789c5146ae0.js"></script><script defer="defer" src="https://next.slightning.site/static/scripts/1436.a45c6ba09335def3.js"></script><script defer="defer" src="https://next.slightning.site/static/scripts/1289.58c302ea28bafbc6.js"></script><script defer="defer" src="https://next.slightning.site/static/scripts/6183.5ce090cab6197acc.js"></script><script defer="defer" src="https://next.slightning.site/static/scripts/8658.ad4dc05f65d21387.js"></script><script defer="defer" src="https://next.slightning.site/static/scripts/9301.824d919b96ebba9b.js"></script><script defer="defer" src="https://next.slightning.site/static/scripts/995.7cbeed2d10f437bc.js"></script><script defer="defer" src="https://next.slightning.site/static/scripts/3178.67c86a53dcaae849.js"></script><script defer="defer" src="https://next.slightning.site/static/scripts/8609.f02bb2f6eccd2de7.js"></script><script defer="defer" src="https://next.slightning.site/static/scripts/6789.ebb5cd2f5a0ebf2f.js"></script><script defer="defer" src="https://next.slightning.site/static/scripts/2461.e15f553bcc87f754.js"></script><script defer="defer" src="https://next.slightning.site/static/scripts/5818.de685a807ddf5a79.js"></script><script defer="defer" src="https://next.slightning.site/static/scripts/3177.3c78714e7a6b8fb5.js"></script><script defer="defer" src="https://next.slightning.site/static/scripts/3883.477efb3efcd43a7c.js"></script><script defer="defer" src="https://next.slightning.site/static/scripts/4736.8f5aaac93ed1d559.js"></script><script defer="defer" src="https://next.slightning.site/static/scripts/7008.6b1e8f099d9bcdb8.js"></script><script defer="defer" src="https://next.slightning.site/static/scripts/3621.d3cd01a48fd3f29c.js"></script><script defer="defer" src="https://next.slightning.site/static/scripts/1347.8a74451a69f9e8d3.js"></script><script defer="defer" src="https://next.slightning.site/static/scripts/7640.6783ae8838377766.js"></script><script defer="defer" src="https://next.slightning.site/static/scripts/5979.7d36f174b9c52bc5.js"></script><script defer="defer" src="https://next.slightning.site/static/scripts/964.5646d70f2da3694a.js"></script><script defer="defer" src="https://next.slightning.site/static/scripts/2407.21903d7937436fe8.js"></script><script defer="defer" src="https://next.slightning.site/static/scripts/3373.0416404304cf12a0.js"></script><script defer="defer" src="https://next.slightning.site/static/scripts/8495.4c21713e820a7fb9.js"></script><script defer="defer" src="https://next.slightning.site/static/scripts/player.115f82733ff89a77.js"></script><link href="https://next.slightning.site/static/styles/7924.aeef6e645914ee59.css" rel="stylesheet"><link href="https://next.slightning.site/static/styles/player.e04e6f35c3a87a27.css" rel="stylesheet"></head><body><script>try {
+                const url = new URL(window.location.href)
+                const title = url.searchParams.get("title")
+                if (title)  { document.title = title }
+            } catch (error) {
+                console.error("Set title error", error)
+            }</script><div id="loading"><style>#loading {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    position: fixed;
+                    left: 0;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    z-index: -100;
+                }
+                #loading .logo {
+                    width: 128px;
+                }
+                #loading .process-bar--wrapper {
+                    border: 4px solid #6e4ff4;
+                    border-radius: 100px;
+                }
+                #loading .process-bar--fill--wrapper {
+                    width: 256px;
+                    margin: 4px;
+                }
+                #loading .process--fill {
+                    width: 0%;
+                    height: 8px;
+                    border-radius: 4px;
+                    background-color: #6e4ff4;
+                    transition: width 100ms;
+                }
+                #loading .text {
+                    margin: 4px;
+                }
+                #loading .percentage {
+                    float: right;
+                }</style><img class="logo" src="/favicon.svg" alt="logo.svg"><div class="info"><div class="process-bar--wrapper"><div class="process-bar--fill--wrapper"><div class="process--fill"></div></div></div><div class="text"><span class="prompt">努力加载中……</span>(<span class="ratio">0/0</span>)<span class="percentage">0%</span></div></div><script>const processFillElement = document.querySelector("#loading .process--fill")
+                const promptElement = document.querySelector("#loading .prompt")
+                const ratioElement = document.querySelector("#loading .ratio")
+                const percentageElement = document.querySelector("#loading .percentage")
+
+                let total = 0, loaded = 0, hasError = false
+
+                function increaseProcess() {
+                    loaded++
+                    updateProcessBar()
+                }
+
+                function updateProcessBar() {
+                    const process = loaded / total * 100
+                    processFillElement.style.width = `${process}%`
+                    ratioElement.innerText = `${loaded}/${total}`
+                    percentageElement.innerText = `${Math.round(process)}%`
+                }
+
+                function handleError() {
+                    if (!hasError) {
+                        promptElement.innerText = "❌ 加载失败"
+                        hasError = true
+                    }
+                }
+
+                for (const element of document.querySelectorAll("script[src], link[rel=stylesheet]")) {
+                    total++
+                    element.addEventListener("load", increaseProcess)
+                    element.addEventListener("error", handleError)
+                }
+
+                updateProcessBar()
+
+                addEventListener("load", () => {
+                    if (!hasError) {
+                        document.getElementById("loading").remove()
+                    }
+                })</script></div><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div></body></html>
