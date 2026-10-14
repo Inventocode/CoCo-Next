@@ -28,7 +28,7 @@ import * as /* [auto-meaningful-name] */Module_97 from /* 97 */"../../../../unre
 import * as /* [auto-meaningful-name] */Module_454 from /* 454 */"../../../../unrestored/shared/1571/2636/454"
 import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"../../../../unrestored/shared/1571/2636/18"
 import * as CommonActions from "../../redux/common/actions"
-import { setStartCurrentScreenAction, warpAsyncCreateProject } from "../../redux/common/actions"
+import { openPluginDialogAction, setStartCurrentScreenAction, showCommonToastInfoAction, warpAsyncCreateProject } from "../../redux/common/actions"
 import * as Components from "../../../shared/ui/components"
 import { Button, Dropdown, IconFont, Menu, MenuItem, SubMenuItem } from "../../../shared/ui/components"
 import * as /* [auto-meaningful-name] */Module_627 from /* 627 */"../../../../unrestored/shared/1571/2636/627"
@@ -47,6 +47,9 @@ import styles from "./styles.module.css"
 import { useInnerWidth } from "../../../shared/ui/hooks/use-inner-width"
 import { useCallback, useState } from "react"
 import { useIsFullScreen } from "../../../shared/ui/hooks/use-is-fullscreen"
+import { usePluginRecord } from "../../../shared/ui/hooks/use-plugin-record"
+import { pluginManager, REGISTRATIONS, PluginURLAssets } from "../../../shared/plugin"
+import { PluginDialog } from "../Dialogs/PluginDialog"
 
 function CloudSpaceManager() {
 
@@ -619,11 +622,12 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
     dispatch(CommonActions.Gi(true))
   }
 
-  async function handleImportCustomWidget(fileList: FileList) {
+  // [CoCo Next] 添加对更多控件的支持
+  async function handleImportCustomWidget(loaderName: string | undefined, fileList: FileList) {
     if (fileList && fileList.length > 0) {
       const file = fileList[0]!
       try {
-        const { title } = await LoadCustomWidget.importCostumeWidgetFromBlob(file, false)
+        const { title } = await LoadCustomWidget.importCostumeWidgetFromBlob(file, false, loaderName)
         dispatch(CommonActions.showCommonToastInfoAction({
           message: formatMessage({
             id: "HeaderDropdown.importExtensionSuccess"
@@ -644,7 +648,11 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
   const isFullscreen = useIsFullScreen()
   const [isZoomOut, setIsZoomOut] = useState(false)
 
-  var je = function (e) {
+  // [CoCo Next] 添加对更多控件的支持
+  const CoCoWidgetLoaders = usePluginRecord(REGISTRATIONS.CoCoWidgetLoader)
+  const InternalWidgetLoaders = usePluginRecord(REGISTRATIONS.InternalWidgetLoader)
+
+  var je = async function (e) {
       switch (e) {
         case "STAGE_RULER":
           if (!playing) {
@@ -680,6 +688,10 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
           break
         case "PLAY_FIRST_SCREEN":
           dispatch(setStartCurrentScreenAction(false))
+          break
+        // [CoCO Next] 添加插件
+        case "OPEN_PLUGIN_DIALOG":
+          dispatch(openPluginDialogAction())
           break
       }
   }
@@ -769,17 +781,33 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
       )}
       {
       // [CoCo Next] 移除协作导入自定义控件限制
+      // [CoCo Next] 添加对更多控件的支持
       // !collWorkId &&
       (
-        <MenuItem value="IMPORT_EXTENSION_WIDGET">
-          <Components.B
-            onChange={handleImportCustomWidget}
-            accept=".js,.jsx"
-            className={classNames(styles.itemUploadButton)}
-          >
-            {formatMessage({ id: "HeaderDropdown.importExtension" })}
-          </Components.B>
-        </MenuItem>
+        <SubMenuItem subMenu={
+          <Menu>
+            <MenuItem value="IMPORT_EXTENSION_WIDGET">
+              <Components.B
+                onChange={handleImportCustomWidget.bind(null, undefined)}
+                accept=".js,.jsx"
+                className={classNames(styles.itemUploadButton)}
+              >
+                {formatMessage({ id: "HeaderDropdown.unsafeCoCoExtension" })}
+              </Components.B>
+            </MenuItem>
+            {Object.entries({ ...CoCoWidgetLoaders, ...InternalWidgetLoaders }).map(([name, { widgetTypeName }]) => (
+              <MenuItem key={name}>
+                <Components.B
+                  onChange={handleImportCustomWidget.bind(null, name)}
+                  accept=".js,.jsx"
+                  className={classNames(styles.itemUploadButton)}
+                >{widgetTypeName}</Components.B>
+              </MenuItem>
+            ))}
+          </Menu>
+        }>
+          <div className={styles.itemContent}>{formatMessage({ id: "HeaderDropdown.importExtension" })}</div>
+        </SubMenuItem>
       )}
       {(showExportLocalFile || showExportLocalFile) && <div className={styles.line} />}
       {showOpenLocalFile && (
@@ -866,7 +894,7 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
     </Menu>
   )
   const settingMenu = (
-    <Menu>
+    <Menu onClick={je}>
       {/* [CoCo Next] 调整设置 */}
       {uiConfig.help.ruler === Module_18.j.Show && uiConfig.help.stage === Module_18.j.Show && (
         <SubMenuItem subMenu={
@@ -920,6 +948,9 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
       }>
         <div className={styles.itemContent}>{formatMessage({ id: "HeaderDropdown.run" })}</div>
       </SubMenuItem>
+      <MenuItem value="OPEN_PLUGIN_DIALOG">
+        <div className={styles.itemContent}>{formatMessage({ id: "HeaderDropdown.plugin" })}</div>
+      </MenuItem>
     </Menu>
   )
 
@@ -1177,6 +1208,8 @@ export const Header = React.memo(({ children }: { children: JSX.Element }) => {
           />
         )}
         <ProjectDialog importProjectJson={importProjectJson} />
+        {/* [CoCo Next] 添加插件 */}
+        <PluginDialog />
         <SaveProgress />
       </div>
       <SaveFailedDialog1 visible={a} onClose={() => s(false)} save={() => save(false)} />

@@ -1,0 +1,34 @@
+.wrapper {
+    height: 64px;
+    padding: 8px;
+    display: flex;
+}
+
+.icon {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    background-position: center;
+    background-size: cover;
+    margin-right: 8px;
+}
+
+.textArea {
+    width: 0;
+    flex-grow: 1;
+}
+
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.name {
+    composes: ellipsis;
+    margin: 0;
+}
+
+.description {
+    composes: ellipsis;
+}

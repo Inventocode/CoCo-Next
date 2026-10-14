@@ -23,7 +23,7 @@ import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../../../../unrest
 import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"../../../../unrestored/shared/1571/2636/6"
 import * as AntdMobile from "antd-mobile"
 import Color from "color"
-import React, { ReactNode } from "react"
+import React_0, { ReactNode } from "react"
 import Lodash from "lodash"
 import { axiosWithCredentials } from "../../utils/network/axios-with-credentials"
 import * as /* [auto-meaningful-name] */Module_228 from /* 228 */"../../../../unrestored/shared/1571/2636/228/index"
@@ -103,6 +103,14 @@ class InvisibleWidget implements types.InvisibleWidget {
 
 import * as Storage from "./storage"
 import { SafeExtensionFileStorage, UnsafeExtensionFileStorage } from "./storage"
+import { pluginManager, REGISTRATIONS } from "../../plugin"
+import { CoCoWidgetLoaderConstructor } from "../../packages/plugin-sdk/src/widget-loader/coco"
+import { BaseWidgetLoaderTypes } from "../../packages/plugin-sdk/src"
+import { InternalWidgetLoaderConstructor } from "../../packages/plugin-sdk/src/widget-loader/internal"
+import { setBlockGroup } from "../../../editor/block/declare"
+import { Blink } from "../../packages/@crc/blink/src"
+import * as /* [auto-meaningful-name] */Module_118 from /* 118 */"../../../../unrestored/shared/1571/2636/118/index"
+import { blockSnippetSettersForPlugin } from "../../plugin/snippet-for-plugin"
 
 enum BlockOlder {
   EVENTORDER = 1e4,
@@ -498,8 +506,19 @@ function defaultRequire(id: string): unknown {
   return id === "antd-mobile" ? AntdMobile : id === "color" ? Color : undefined
 }
 
+interface CustomWidgetData {
+  type: string
+  name: string
+  loader: string
+  sandbox: string | boolean
+}
+
+abstract class InternalWidgetWrapper extends VisibleWidget {}
+
 /**
  * 从代码加载自定义控件
+ *
+ * [CoCo Next] 添加对更多控件的支持
  *
  * @param code 控件代码
  * @param isFromWidgetShop 控件是否来自控件商城
@@ -510,54 +529,96 @@ export async function loadCustomWidget(
   code: string,
   isFromWidgetShop: boolean,
   widgetRequire: (id: string) => unknown = defaultRequire
-): Promise<types.Exports> {
-  async function loadExternalModule(url: string): Promise<void> {
-    if (!url.startsWith(EXTERNAL_MODULE_BASE_URL) && !url.startsWith(OLD_EXTERNAL_MODULE_BASE_URL)) {
-      return
-    }
-    await Tools.cb(url)
+): Promise<types.Exports | { types: Internal.Widget, widget: types.Widget }> {
+  const loaderName = code.match(/^\/\/ __coco_next_loader__: (.*)/)?.[1]
+  if (loaderName !== undefined) {
+    await pluginManager.ensureInstalled(loaderName)
   }
-  code = (await import("@babel/core")).transformSync(code, {
-    presets: [(await import("@babel/preset-react")).default]
-  })?.code || ""
+  let loaderTypes: BaseWidgetLoaderTypes | null = null
+  let isInternal = false
+  if (loaderName !== undefined) {
+    try {
+      loaderTypes = await REGISTRATIONS.CoCoWidgetLoader.get(loaderName)
+    } catch (__ignore) {}
+    try {
+      loaderTypes = await REGISTRATIONS.InternalWidgetLoader.get(loaderName)
+      isInternal = true
+    } catch (__ignore) {}
+    if (loaderTypes === null) {
+      throw new Error(`插件 ${loaderName} 不存在或未注册控件加载器`)
+    }
+  }
+  let preprocess = loaderTypes?.preprocess ?? {}
+  if (typeof preprocess === "boolean") {
+    preprocess = { jsx: preprocess, esModule: preprocess }
+  }
+  preprocess = {
+    jsx: true,
+    esModule: false,
+    ...preprocess
+  }
+  if (Object.values(preprocess).some(Boolean)) {
+    code = (await (await import("@babel/core")).transformAsync(code, {
+      presets: [
+        ...preprocess.jsx ? [(await import("@babel/preset-react")).default] : []
+      ],
+      plugins: [
+        ...preprocess.esModule ? [(await import("@babel/plugin-transform-modules-commonjs")).default] : []
+      ]
+    }))?.code || ""
+  }
   ExternalModule.clearExternalModules()
-  new Function(
-    "require",
-    "exports",
-    "InvisibleWidget",
-    "VisibleWidget",
-    "React",
-    code
-  ).apply(undefined, [
-    ExternalModule.requireExternalModule,
-    {},
-    class {},
-    class {},
-    React
-    // [CoCo Next] 移除自定义控件的全局变量访问限制
-  ])
-  const EXTERNAL_MODULE_BASE_URL: string = "https://static.bcmcdn.com/appcraft/modules/"
-  const OLD_EXTERNAL_MODULE_BASE_URL = "https://static.codemao.cn/appcraft/modules/"
-  await Promise.all(ExternalModule.getExternalModules().map(loadExternalModule))
-  const widgetExports: Partial<types.Exports> = {}
-  new Function(
-    "require",
-    "exports",
-    "InvisibleWidget",
-    "VisibleWidget",
-    "React",
-    code
-  ).apply(undefined, [
-    widgetRequire,
-    widgetExports,
-    InvisibleWidget,
-    VisibleWidget,
-    React
-    // [CoCo Next] 移除自定义控件的全局变量访问限制
-  ])
-  const widgetTypes: types.Types = widgetExports.types!
-  const widgetWidget: types.Widget = widgetExports.widget!
-  if (!widgetTypes.isInvisibleWidget) {
+  let widgetFunction: (
+      require: (id: string) => unknown,
+      exports: Partial<types.Exports | { types: Internal.Widget, widget?: types.Widget }>,
+      InvisibleWidget: new (props: types.InvisibleWidgetProps) => types.InvisibleWidget,
+      VisibleWidget: new (props: types.VisibleWidgetProps) => types.VisibleWidget,
+      React: typeof React_0
+  ) => void | Promise<void>
+  let widgetMarkResolve: ((value: string) => void) | null = null
+  if (loaderTypes === null) {
+    widgetFunction = new Function("require", "exports", "InvisibleWidget", "VisibleWidget", "React", code).bind(window)
+  } else if (!isInternal) {
+    let loaderConstructor: CoCoWidgetLoaderConstructor
+    ;[loaderConstructor, widgetMarkResolve] = await pluginManager.getPluginLoader(loaderName!).loadCoCoWidgetLoader()
+    const loader = new loaderConstructor(code)
+    widgetFunction = loader.run.bind(loader) as typeof widgetFunction
+  } else {
+    let loaderConstructor: InternalWidgetLoaderConstructor
+    ;[loaderConstructor, widgetMarkResolve] = await pluginManager.getPluginLoader(loaderName!).loadInternalWidget()
+    widgetFunction = async (__require, exports, __InvisibleWidget, __VisibleWidget, React) => {
+      const loader = new loaderConstructor(code)
+      exports.types = await loader.run({ React })
+      exports.widget = class extends InternalWidgetWrapper {
+        public constructor(props: types.VisibleWidgetProps) {
+          super(props)
+          loader.createInstance?.({ id: props.__widgetId, type: props.__widgetType, attributes: props })
+        }
+        public override render() {
+          return React_0.createElement((widgetTypes as Internal.Widget).component as any, this)
+        }
+      }
+      Storage.setInternalWidgetLoader(Type.standardize(exports.types.type, isFromWidgetShop), loader)
+    }
+  }
+  if (!isInternal) {
+    await widgetFunction(ExternalModule.requireExternalModule, {}, class {} as any, class {} as any, React_0)
+    const EXTERNAL_MODULE_BASE_URL: string = "https://static.bcmcdn.com/appcraft/modules/"
+    const OLD_EXTERNAL_MODULE_BASE_URL = "https://static.codemao.cn/appcraft/modules/"
+    async function loadExternalModule(url: string): Promise<void> {
+      if (!url.startsWith(EXTERNAL_MODULE_BASE_URL) && !url.startsWith(OLD_EXTERNAL_MODULE_BASE_URL)) {
+        return
+      }
+      await Tools.cb(url)
+    }
+    await Promise.all(ExternalModule.getExternalModules().map(loadExternalModule))
+  }
+  const widgetExports: Partial<types.Exports | { types: Internal.Widget, widget?: undefined }> = {}
+  await widgetFunction(widgetRequire, widgetExports, InvisibleWidget, VisibleWidget, React_0)
+  const widgetTypes = widgetExports.types!
+  const widgetWidget = widgetExports.widget!
+  widgetMarkResolve?.(widgetTypes.title !== undefined ? `[控件 ${widgetTypes.title}]` : "[未知控件]")
+  if ("properties" in widgetTypes && !widgetTypes.isInvisibleWidget) {
     if (!widgetTypes.properties.some(function (property: types.PropertyTypes): boolean {
       return "__opacity" === property.key
     })) {
@@ -595,29 +656,48 @@ export async function loadCustomWidget(
     }
   }
   widgetTypes.type = Type.standardize(widgetTypes.type, isFromWidgetShop)
+  if ("blockConfig" in widgetTypes) {
+    const { blockConfig } = widgetTypes
+    blockConfig.type = Type.standardize(blockConfig.type, isFromWidgetShop)
+    const { category } = blockConfig
+    category.blocks = Type.standardize(blockConfig.type, isFromWidgetShop)
+    // 为防止通过 getter 绕过检查，这里把 `blockDeclareGroup` 复制了一份。
+    const blockDeclareGroup = Object.assign({}, blockConfig.blockDeclareGroup)
+    if (
+      blockDeclareGroup.setBlockGroupSnippet !== undefined &&
+      !blockSnippetSettersForPlugin.has(blockDeclareGroup.setBlockGroupSnippet)) {
+        throw new Error("出于安全考虑，由插件提供的内置控件只能通过 createBlockSnippetSetter 创建代码生成器")
+      }
+    setBlockGroup(Blink, Module_118.a, blockDeclareGroup)
+  }
   return {
     types: widgetTypes,
     widget: widgetWidget
-  }
+  } as any
 }
 
 /**
  * 注册自定义控件
+ *
+ * [CoCo Next] 添加对内部控件的支持
  *
  * @param exports 控件的导出
  * @param onRegistered 成功注册控件后回调
  * @param onCancel 用户取消导入控件时回调
  */
 export function registerCustomWidget(
-  exports: types.Exports,
+  exports: types.Exports | { types: Internal.Widget, widget: types.Widget },
   onRegistered?: () => void,
   onCancel?: () => void
 ): void {
   const { widget, types } = exports
   const { title, type } = types
   function registered(): void {
-    Module_85.e(types)
-    const internalWidget = toInternalWidget(types, widget)
+    const isInternal = widget.prototype instanceof InternalWidgetWrapper
+    if (!isInternal) {
+      Module_85.e(types)
+    }
+    const internalWidget = isInternal ? types as Internal.Widget : toInternalWidget(types as types.Types, widget)
     Module_9.Nb(Module_9.j.EXTENSION, [internalWidget])
     Module_228.c(internalWidget.type)
     if (onRegistered) {
@@ -629,8 +709,8 @@ export function registerCustomWidget(
     Store.dispatch(openConfirmDialogAction({
       onConfirm: registered,
       onCancel,
-      allowText: Language.format(Language.zh_CN, "ExtensionWidget.overwrite").toString(),
-      title: Language.format(Language.zh_CN, "ExtensionWidget.dialogTitle", {
+      allowText: Language.format(Language.locale, "ExtensionWidget.overwrite").toString(),
+      title: Language.format(Language.locale, "ExtensionWidget.dialogTitle", {
         title,
         type: unprefixedType
       }).toString(),
@@ -699,24 +779,36 @@ function z(e, t) {
  * @returns 控件的类型定义
  */
 async function importCustomWidget(code: string, isFromWidgetShop: boolean): Promise<types.Types> {
-  const { types, widget } = await loadCustomWidget(code, isFromWidgetShop)
-  return new Promise((resolve, reject): void => {
-    registerCustomWidget(
-      { types, widget },
-      (): void => {
-        const { type } = types
-        if (!isFromWidgetShop) {
-          Storage.addUnsafeExtension({ type, types, code })
-          oTHelper.extensionWidget?.clientOp.addUnsafeExtensionWidget({ type, code })
+  try {
+    const { types, widget } = await loadCustomWidget(code, isFromWidgetShop, defaultRequire)
+    return new Promise((resolve, reject): void => {
+      registerCustomWidget(
+        { types, widget },
+        (): void => {
+          const { type } = types
+          if (!isFromWidgetShop) {
+            Storage.addUnsafeExtension({ type, types, code })
+            oTHelper.extensionWidget?.clientOp.addUnsafeExtensionWidget({ type, code })
+          }
+          Store.dispatch(updateExtensionWidgetListAction())
+          resolve(types)
+        },
+        (): void => {
+          reject("User cancel import widget")
         }
-        Store.dispatch(updateExtensionWidgetListAction())
-        resolve(types)
-      },
-      (): void => {
-        reject("User cancel import widget")
-      }
-    )
-  })
+      )
+    })
+  } catch (error) {
+    console.error(error)
+    const errorMessage = error instanceof Error ? error.message : String(error)
+    Store.dispatch(openConfirmDialogAction({
+      allowText: Language.format(Language.locale, "cloudDb.know").toString(),
+      title: "加载自定义控件出错",
+      content: errorMessage + "\n\n详细错误信息请到浏览器控制台中查看",
+      cancelBtnVisible: false
+    }))
+    throw error
+  }
 }
 
 /**
@@ -724,10 +816,15 @@ async function importCustomWidget(code: string, isFromWidgetShop: boolean): Prom
  *
  * @param blob 控件代码的 Blob
  * @param isFromWidgetShop 控件是否来自控件商城
+ * @param loaderName [CoCo Next] 控件加载器的包名
  * @returns 控件的类型定义
  */
-export async function importCostumeWidgetFromBlob(blob: Blob, isFromWidgetShop: boolean): Promise<types.Types> {
-  const code: string = await new Promise((resolve, reject): void => {
+export async function importCostumeWidgetFromBlob(
+  blob: Blob,
+  isFromWidgetShop: boolean,
+  loaderName?: string
+): Promise<types.Types> {
+  let code: string = await new Promise((resolve, reject): void => {
     const fileReader = new FileReader()
     fileReader.readAsText(blob)
     fileReader.onload = (): void => {
@@ -737,6 +834,9 @@ export async function importCostumeWidgetFromBlob(blob: Blob, isFromWidgetShop: 
   })
   if (!isFromWidgetShop) {
     await checkKeyWords(code)
+  }
+  if (loaderName !== undefined) {
+    code = `// __coco_next_loader__: ${loaderName}\n${code}`
   }
   return await importCustomWidget(code, isFromWidgetShop)
 }

@@ -4,7 +4,7 @@
  * 模块 ID：23
  */
 
-export { zh_CN as b }
+export { locale as b }
 export { messages as e }
 export { f as a }
 export { format as c }
@@ -442,6 +442,9 @@ var u = Module_6.a(Module_6.a({}, {
   "HeaderDropdown.openLocalFile": "打开本地文件",
   "HeaderDropdown.exportProjectAsJson": "保存到本地",
   "HeaderDropdown.importExtension": "导入自定义控件",
+  // [CoCo Next] 添加对更多控件的支持
+  "HeaderDropdown.unsafeCoCoExtension": "CoCo 控件",
+  // "HeaderDropdown.unsafeCoCoExtension": "CoCo 控件（兼容 CoCo，不安全）",
   "HeaderDropdown.importExtensionSuccess": "已导入「{title}」控件，请到拓展控件添加",
   "HeaderDropdown.newProject": "新建",
   "HeaderDropdown.openProject": "打开",
@@ -460,6 +463,7 @@ var u = Module_6.a(Module_6.a({}, {
   "HeaderDropdown.zoomOut": "缩小显示",
   "HeaderDropdown.run": "运行",
   "HeaderDropdown.restoreZoomOut": "正常显示",
+  "HeaderDropdown.plugin": "插件（实验性）",
   "projectDialog.newProject": "新建作品",
   "projectDialog.myProject": "我的作品",
   "ChromeTips.compatibility": "当前浏览器可能存在兼容问题，无法正常运行CoCo请使用谷歌Chrome浏览器打开该网页",
@@ -499,6 +503,35 @@ var u = Module_6.a(Module_6.a({}, {
   "MyProject.quitCollWorkDescription": "退出后, 该作品将不在作品管理页中显示",
   "MyProject.projectHasDeleted": "你要打开的作品已被删除",
   "MyProject.projectHasNoRermission": "你没有权限打开该作品，将打开默认作品",
+  // [CoCo Next] 添加插件
+  "PluginDialog.installed": "已安装",
+  "PluginDialog.shop": "商城",
+  "PluginDialog.settings": "设置",
+  "PluginDialog.develop": "开发",
+  "PluginList.search": "搜索插件",
+  "PluginList.noPlugin": "没有插件",
+  "PluginList.notSelected": "选择一个插件，在此处查看插件的更多信息",
+  "PluginShop.latest": "最新",
+  "PluginShop.views": "最热",
+  "PluginShop.showInNewTab": "在新标签页查看",
+  "PluginDevelop.inputURL": "请输入插件地址",
+  "PluginDevelop.addPlugin": "添加插件",
+  "PluginDevelop.addPluginSuccess": "成功添加「{name}」插件",
+  "PluginDevelop.addPluginFailed": "添加插件失败",
+  "PluginDetail.install": "安装",
+  "PluginDetail.installing": "正在安装……",
+  "PluginDetail.remove": "移除",
+  "PluginDetail.readmeLoading": "加载中……",
+  "PluginDetail.readmeLoadFailed": "加载失败：{message}",
+  "PluginManager.loadFiled": "加载失败",
+  "PluginManager.loadFiledMessage": "加载失败：{message}",
+  "PluginManager.installPluginSuccess": "已安装插件「{name}」",
+  "PluginManager.installPluginFailed": "安装插件失败",
+  "PluginManager.removePluginFinished": "已移除插件「{name}」",
+  "PluginManager.needsInstallTitle": "需要安装插件「{name}」",
+  "PluginManager.needsInstallContent": "该作品依赖插件\n名称： {name}\n包名：{packageName}\n作者：{authorName}\n介绍：{description}\n是否安装该插件？\n⚠️ 安装插件具有安全风险，请确认安全再安装！",
+  "PluginManager.confirmInstall": "安装",
+  "PluginManager.rejectInstall": "安装",
   "StorageDialog.defaultData": "初始数据",
   addBroadcastTitle: "{scene}.新建广播",
   addCurrentScreenIndexTitle: "屏幕{currentScreenIndex}：新建广播",
@@ -1029,7 +1062,7 @@ var u = Module_6.a(Module_6.a({}, {
 
 export type Language = "zh-CN"
 
-export const zh_CN = "zh-CN"
+export const locale = "zh-CN"
 
 export const messages: Record<Language, Record<string, string>> = {
   "zh-CN": u
@@ -1041,12 +1074,12 @@ function f(e) {
   }
 }
 var h = createIntl({
-  locale: zh_CN,
-  messages: messages[zh_CN]
+  locale,
+  messages: messages[locale]
 })
 
 export function format(language: Language, key: string, args?: Record<string, string>): string {
-  let result: string = messages[language]?.[key] || messages[zh_CN]?.[key]
+  let result: string = messages[language]?.[key] || messages[locale]?.[key]
   if (typeof result === "string" && args) {
     result = result.replace(/{([^}]*)}/g, (__substring, key): string => {
       let value: string | undefined = args[key]

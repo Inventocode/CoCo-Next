@@ -29,5 +29,5 @@
         ]
     },
     "include": ["src/**/*", "unrestored/**/*", "helper/**/*"],
-    "exclude": ["node_modules", "public", "src/**/*.unrestored.*"]
+    "exclude": ["node_modules", "public", "src/**/*.unrestored.*", "src/shared/packages/plugin-sdk/dist"]
 }

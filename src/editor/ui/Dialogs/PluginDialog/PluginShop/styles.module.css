@@ -1,0 +1,36 @@
+.wrapper {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.toolbar {
+    z-index: 1;
+    padding: 8px;
+    box-shadow: 0 0 8px #BABABA80;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+
+.sort {
+    display: flex;
+}
+
+.sortItem {
+    margin-inline: 4px;
+    padding-inline: 6px;
+    border-radius: 14px;
+    border: 1px #6e4ff4 solid;
+    cursor: pointer;
+}
+
+.sortItem.selected {
+    color: white;
+    background-color: #6e4ff4;
+}
+
+.pluginList {
+    flex-grow: 1;
+}

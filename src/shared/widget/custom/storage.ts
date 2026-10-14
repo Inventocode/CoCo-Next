@@ -13,6 +13,7 @@ import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"../../../../unrest
 
 import * as types from "./types"
 import * as Type from "./type"
+import { IInternalLoader } from "../../packages/plugin-sdk/src/widget-loader/internal"
 
 export interface UnsafeExtensionStorage extends UnsafeExtensionFileStorage {
   types: types.Types
@@ -35,6 +36,8 @@ export interface SafeExtensionFileStorage {
 
 const safeExtensions = new Map<string, SafeExtensionStorage>()
 const unsafeExtensions = new Map<string, UnsafeExtensionStorage>()
+// [CoCo Next] 添加对自定义内置控件的支持
+const internalLoaders = new Map<string, IInternalLoader>()
 
 export function addSafeExtension(storage: SafeExtensionStorage) {
   const { type } = storage
@@ -44,10 +47,15 @@ export function addUnsafeExtension(storage: UnsafeExtensionStorage): void {
   const { type } = storage
   unsafeExtensions.set(type, storage)
 }
+// [CoCo Next] 添加对自定义内置控件的支持
+export function setInternalWidgetLoader(type: string, loader: IInternalLoader) {
+  internalLoaders.set(type, loader)
+}
 
 // [CoCo Next] 添加移除自定义控件的功能
 export function removeUnsafeExtension(type: string): void {
   unsafeExtensions.delete(type)
+  internalLoaders.delete(type)
 }
 
 export function getExtension(type: string) {
@@ -55,6 +63,10 @@ export function getExtension(type: string) {
 }
 export function getUnsafeExtension(type: string) {
   return unsafeExtensions.has(type)
+}
+// [CoCo Next] 添加对自定义内置控件的支持
+export function getInternalWidgetLoader(type: string) {
+  return internalLoaders.get(type)
 }
 
 export function unsafeExtensionsToFileStorage(): UnsafeExtensionFileStorage[] {

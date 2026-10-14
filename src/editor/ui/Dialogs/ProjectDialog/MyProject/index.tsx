@@ -18,7 +18,6 @@ import { asyncGetProjectErrorAction, closeProjectDialogAction, openConfirmDialog
 import { AdvancedText, IconFont, Menu, MenuItem, ScrollPaginate } from "../../../../../shared/ui/components"
 import * as /* [auto-meaningful-name] */Module_25 from /* 25 */"../../../../../../unrestored/shared/1571/2636/25/index"
 import classNames from "classnames"
-import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../../../../../../unrestored/shared/1571/2636/710"
 import { useIntl } from "react-intl"
 import * as /* [auto-meaningful-name] */Shared_ui_language from "../../../../../shared/ui/language"
 import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../../../../../../unrestored/shared/1571/2636/7"
@@ -158,8 +157,8 @@ export const MyProject = React.memo(({ visible, importProjectJson }: IMyProjectP
   // [CoCo Next] 优化布局
   const wrapperElementRef = React.useRef<HTMLDivElement>(null)
   const filterElementRef = React.useRef<HTMLDivElement>(null)
-  const wrapperElementHeight = useOffsetHeight(wrapperElementRef.current)
-  const filterElementHeight = useOffsetHeight(filterElementRef.current)
+  const wrapperElementHeight = useOffsetHeight(wrapperElementRef)
+  const filterElementHeight = useOffsetHeight(filterElementRef)
 
   const { formatMessage } = useIntl()
 

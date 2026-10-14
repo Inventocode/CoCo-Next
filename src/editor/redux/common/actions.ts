@@ -514,7 +514,7 @@ export { l as Eb } from "../../../../unrestored/shared/1571/2636/162"
 export { K as Eg } from "../../../../unrestored/shared/1571/2636/162"
 
 import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"../../../../unrestored/shared/1571/2636/6"
-import { ICommonToastInfo, IConfirmDialogInfo, IPermissionDialogInfo } from "./interface"
+import { ICommonToastInfo, IConfirmDialogInfo, IPermissionDialogInfo, IPluginDialog } from "./interface"
 
 export const SET_APP_LANGUAGE = "SET_APP_LANGUAGE"
 
@@ -637,6 +637,11 @@ export function closeProjectDialogAction() {
   }
 }
 
+export const CLOSE_PLUGIN_DIALOG = "CLOSE_PLUGIN_DIALOG"
+export function closePluginDialogAction() {
+  return { type: CLOSE_PLUGIN_DIALOG, payload: undefined }
+}
+
 export const OPEN_PROJECT_DIALOG = "OPEN_PROJECT_DIALOG"
 export function openProjectDialogAction(selected) {
   return {
@@ -645,6 +650,11 @@ export function openProjectDialogAction(selected) {
       selected
     }
   }
+}
+
+export const OPEN_PLUGIN_DIALOG = "OPEN_PLUGIN_DIALOG"
+export function openPluginDialogAction() {
+  return { type: OPEN_PLUGIN_DIALOG, payload: undefined }
 }
 
 export const SET_PROJECT_MODIFIED = "SET_PROJECT_MODIFIED"

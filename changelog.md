@@ -1,5 +1,11 @@
 # CoCo Next 更新日志
 
+## v1.23.6
+
+添加实验性插件功能，目前该功能还非常不完善。
+
+到 [插件简介 | CoCo Next 文档](https://next.ccwidget.top/docs/guide/plugin/intro) 查看更多信息。
+
 ## v1.23.5
 
 - 适配 Android 版。

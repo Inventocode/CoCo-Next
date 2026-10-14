@@ -438,8 +438,10 @@ export function setBlockGroupExtra(Blink: typeof Blink_0) {
     itemCount_: 0,
     updateShape_() {
       Blink.events.disable()
+      if (!this.get_input("NEXT_MARK")) {
+        this.append_dummy_input("NEXT_MARK").append_field(Blink.Msg.NEXT_MARK, "TEXT")
+      }
       if (!this.get_input("TITLE")) {
-        this.append_dummy_input("TITLE").append_field(Blink.Msg.NEXT_MARK, "TEXT")
         this.append_dummy_input("TITLE").append_field(Blink.Msg.LIST, "TEXT")
       }
       if (this.get_input("MUTATE_REMOVE_BUTTON")) {

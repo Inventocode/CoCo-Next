@@ -1,0 +1,44 @@
+{
+  "name": "@oldsquaw-coco-next/plugin-sdk",
+  "version": "1.23.5",
+  "description": "CoCo Next 插件 SDK",
+  "author": "Oldsquaw",
+  "keywords": [
+    "codemao"
+  ],
+  "license": "Apache-2.0",
+  "exports": {
+    ".": {
+      "types": "./dist/types/src/shared/packages/plugin-sdk/src/index.d.ts"
+    },
+    "./self": {
+      "types": "./dist/types/src/shared/packages/plugin-sdk/src/self.d.ts"
+    },
+    "./utils": {
+      "types": "./dist/types/src/shared/packages/plugin-sdk/src/utils/index.d.ts"
+    },
+    "./blink": {
+      "types": "./dist/types/src/shared/packages/plugin-sdk/src/blink/blink.d.ts"
+    },
+    "./blink/dist/core/di": {
+      "types": "./dist/types/src/shared/packages/plugin-sdk/src/blink/di.d.ts"
+    },
+    "./coco-widget-loader": {
+      "types": "./dist/types/src/shared/packages/plugin-sdk/src/widget-loader/coco/index.d.ts"
+    },
+    "./internal-widget-loader": {
+      "types": "./dist/types/src/shared/packages/plugin-sdk/src/widget-loader/internal/index.d.ts"
+    }
+  },
+  "files": [
+    "package.json",
+    "dist/types"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc --watch"
+  },
+  "peerDependencies": {
+    "@types/react": "^16.0.0"
+  }
+}

@@ -98,7 +98,7 @@ let profileManager = new BlockProfileManager()
 let snippetManager = new BlockSnippetManager()
 let XMLManager = new BlockXMLManager()
 
-function setBlockGroup(Blink: typeof Blink_0, dropdownField, declare: IBlockDeclareGroup) {
+export function setBlockGroup(Blink: typeof Blink_0, dropdownField, declare: IBlockDeclareGroup) {
   declare.setBlockGroupProfile(profileManager, Blink, dropdownField)
   if (declare.setBlockGroupSnippet) {
     declare.setBlockGroupSnippet(snippetManager)

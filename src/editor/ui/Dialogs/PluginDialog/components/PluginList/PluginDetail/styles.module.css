@@ -1,0 +1,33 @@
+.wrapper {
+    height: 100%;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.info {
+    display: flex;
+}
+
+.icon {
+    width: 96px;
+    height: 96px;
+    margin-right: 16px;
+    background-position: center;
+    background-size: cover;
+}
+
+.infoRight>* {
+    margin: 0;
+}
+
+.buttons>* {
+    margin-inline: 4px;
+}
+
+.readme {
+    overflow-y: auto;
+    height: 0;
+    flex-grow: 1;
+    border: none;
+}

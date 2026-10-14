@@ -10,6 +10,8 @@ import * as di_symbols from "./core/di/di_symbols"
 import * as di_bind from "../../../../../../unrestored/shared/1571/2636/17/2142/index"
 import type { Blink as BlinkSingleton } from "./core/singletons/blink"
 
+import BlinkMain from "./assets/images/blink-main-compressed.jpg?inline"
+
 const __BLINK_VERSION__ = require("../package.json").version
 // [CoCo Next] Codemao 已死，Oldsquaw 当立！🤣🤣🤣😂😂😂😥😥😥😅😅😅
 // console.log("%c⭐️ Codemao Blink - v" + __BLINK_VERSION__ + " ⭐️", `
@@ -22,7 +24,7 @@ console.log("%c⭐️ Oldsquaw Blink - v" + __BLINK_VERSION__ + " ⭐️", `
   color: #FFDB29;
   text-shadow: 0 1px 0 #BF7000;
   padding: 140px 10px 20px 35px;
-  background: no-repeat left / 150px 150px url("http://kn-cdn.codemao.cn/blink/blink-main-compressed.jpeg");
+  background: no-repeat left / 150px 150px url("${BlinkMain}");
 `)
 const cont = container.get_instance()
 di_bind.bind_di_modules(cont)

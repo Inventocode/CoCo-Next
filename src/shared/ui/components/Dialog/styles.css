@@ -16,7 +16,7 @@
 .coco-dialog-scroll {
     height: 100%;
     overflow: auto;
-    position: relative
+    position: relative;
 }
 
 .coco-dialog-wrapper {
@@ -26,22 +26,29 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
-    transform-origin: center;
+    /* [CoCo Next] 优化过度动画 */
+    transform: translate(-50%,-50%) scale(0);
+    /* transform-origin: center; */
+    transition: opacity .3s, transform .3s;
     min-width: 380px;
     z-index: 2;
-    overflow: hidden
+    overflow: hidden;
 }
 
 .coco-dialog-wrapper.show {
-    animation: showDialog .3s ease-in-out
+    /* [CoCo Next] 优化过度动画 */
+    /* animation: showDialog .3s ease-in-out */
+    opacity: 1;
 }
 
 .coco-dialog-wrapper.hidden {
-    animation: closeDialog .3s ease-in-out
+    /* [CoCo Next] 优化过度动画 */
+    /* animation: closeDialog .3s ease-in-out */
+    opacity: 0;
 }
 
-@keyframes showDialog {
+/* [CoCo Next] 优化过度动画 */
+/* @keyframes showDialog {
     0% {
         transform: translate(-50%,-50%) scale(0);
         opacity: 0
@@ -51,9 +58,10 @@
         transform: translate(-50%,-50%) scale(1);
         opacity: 1
     }
-}
+} */
 
-@keyframes closeDialog {
+/* [CoCo Next] 优化过度动画 */
+/* @keyframes closeDialog {
     0% {
         transform: translate(-50%,-50%) scale(1);
         opacity: 1
@@ -63,7 +71,7 @@
         transform: translate(-50%,-50%) scale(0);
         opacity: 0
     }
-}
+} */
 
 .coco-dialog-content {
     padding: 40px 40px 28px
@@ -86,14 +94,20 @@
     left: 0;
     bottom: 0;
     right: 0;
-    z-index: 1
+    z-index: 1;
+    /* [CoCo Next] 优化过度动画 */
+    opacity: 1;
+    transition: opacity .3s;
 }
 
 .coco-dialog-mask.hidden {
-    animation: hideMask .3s ease-in-out
+    /* [CoCo Next] 优化过度动画 */
+    /* animation: hideMask .3s ease-in-out */
+    opacity: 0;
 }
 
-@keyframes hideMask {
+/* [CoCo Next] 优化过度动画 */
+/* @keyframes hideMask {
     0% {
         opacity: 1
     }
@@ -101,7 +115,7 @@
     to {
         opacity: 0
     }
-}
+} */
 
 .coco-dialog-close {
     color: #ccc;

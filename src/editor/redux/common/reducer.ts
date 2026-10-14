@@ -13,8 +13,9 @@ import * as CustomWidgetType from "../../../shared/widget/custom/type"
 import * as /* [auto-meaningful-name] */Module_77 from /* 77 */"../../../../unrestored/shared/1571/2636/77"
 import { Action } from "redux-actions"
 import { ICommonState } from "./interface"
+import { Language } from "../../../shared/ui/language"
 
-const language = window.localStorage.getItem("LANGUAGE") || navigator.language
+const language = window.localStorage.getItem("LANGUAGE") || navigator.language as Language
 
 const confirmDialogInfo = {
   visible: false,
@@ -70,6 +71,11 @@ const projectDialog = {
   selected: Module_18.f.CREATE_PROJECT
 }
 
+// [CoCo Next] 插件窗口
+const pluginDialog = {
+  visible: false
+}
+
 const gridDialog = {
   visible: false,
   grid: {
@@ -111,6 +117,8 @@ const initialState = Immutable.Record<ICommonState>({
     isActorDragging: false
   },
   projectDialog,
+  // [CoCo Next] 插件窗口
+  pluginDialog,
   gridDialog,
   gridStatus: {
     copiedContent: {
@@ -372,6 +380,11 @@ function commonReducer(state = initialState, action: Action<any>) {
       })
     case Actions.Zb:
       return state.set("projectDialog", { ...projectDialog })
+    // [CoCo Next] 插件窗口
+    case Actions.OPEN_PLUGIN_DIALOG:
+      return state.set("pluginDialog", { visible: true })
+    case Actions.CLOSE_PLUGIN_DIALOG:
+      return state.set("pluginDialog", { ...pluginDialog })
     case Actions.Rd:
       return state.set("isProjectModified", action.payload)
     case Actions.Qd:

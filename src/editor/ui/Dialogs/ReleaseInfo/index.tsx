@@ -14,40 +14,20 @@ import { IconFont } from "../../../../shared/ui/components"
 import { Dialog } from "../../../../shared/ui/components"
 
 import styles from "./style/styles.module.css"
-import changelog from "../../../../../changelog.md"
 import packageInfo from "../../../../../package.json"
 
 import LeftSideImage from "../../../assets/images/release-info/left-side.png"
-
-function getReleaseMessage(): string {
-  let result = ""
-  let isBefore = true
-  const changelogDocument = (new DOMParser()).parseFromString(changelog, "text/html")
-  for (const line of Array.from(changelogDocument.body.children)) {
-    if (!isBefore) {
-      if (line.tagName === "H2") {
-        break
-      }
-      result += line.outerHTML
-    }
-    if (line.textContent === `v${Module_53.f}`) {
-      isBefore = false
-    }
-  }
-  return result
-}
-
-const releaseMessages = getReleaseMessage()
 
 export const ReleaseInfo = React.memo(() => {
 
   const releaseInfoDialogVisible = useSelector((state) => state.common.releaseInfoDialogVisible)
   const userId = useSelector((state) => state.common.userInfo?.id)
   const userInfoFetchDone = useSelector((state) => state.common.userInfoFetchDone)
+  const [releaseMessages, setReleaseMessages] = useState<string>()
   const [hasShown, setHasShown] = useState(false)
   const dispatch = useDispatch()
 
-  useEffect(function () {
+  useEffect(() => {
     if (userInfoFetchDone) {
       if (!hasShown) {
         const lastVersion = localStorage.getItem("ReleaseVersion")
@@ -74,6 +54,16 @@ export const ReleaseInfo = React.memo(() => {
     }
   }, [hasShown, dispatch, userId, userInfoFetchDone])
 
+  useEffect(() => {
+    if (!releaseInfoDialogVisible || releaseMessages !== undefined) {
+      return
+    }
+    ;(async () => {
+      const [{ marked }, { default: changelog }] = await Promise.all([import("marked"), import("../../../../../changelog.md")])
+      setReleaseMessages(await marked(changelog))
+    })()
+  }, [releaseInfoDialogVisible, releaseMessages])
+
   return (
     <Dialog
       visible={releaseInfoDialogVisible}
@@ -86,12 +76,11 @@ export const ReleaseInfo = React.memo(() => {
       <div className={styles.right}>
         <div className={styles.content}>
           <div className={styles.updateInfo}>
-            <header>{`版本v${Module_53.f}更新`}</header>
-            <div dangerouslySetInnerHTML={{ __html: releaseMessages }}></div>
+            <div dangerouslySetInnerHTML={{ __html: releaseMessages ?? "加载中……" }}></div>
           </div>
           <div className={styles.overViewInfo}>
             <a href="https://gitee.com/oldsquaw-coco-next/CoCo-Next/blob/main/changelog.md" target="_blank" rel="noopener noreferrer">
-              往期功能更新回顾
+              在新标签页中查看
               <IconFont className={styles.iconLink} type="icon-dropdown-down" />
             </a>
           </div>

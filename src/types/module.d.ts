@@ -33,7 +33,12 @@ declare module "*.webp" {
   export default src
 }
 
-declare module "*.text" {
+declare module "*.svg" {
+  const src: string
+  export default src
+}
+
+declare module "*.txt" {
   const content: string
   export default content
 }
@@ -107,10 +112,8 @@ declare module "@babel/preset-react" {
   export default index
 }
 
-declare global {
-  var CoCoNextAndroidBridge_MainActivity: {
-    startDownloadActivity(): void
-  }
+declare module "@babel/plugin-transform-modules-commonjs" {
+  import { PluginItem } from "@babel/core"
+  var index: PluginItem
+  export default index
 }
-
-export {}

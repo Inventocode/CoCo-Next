@@ -41,7 +41,7 @@
 .ReleaseInfoDialog .right .content {
     height: 100%;
     width: 100%;
-    padding: 0 22px
+    padding: 0 22px;
 }
 
 .ReleaseInfoDialog .right .content .updateInfo {
@@ -49,7 +49,8 @@
     height: 310px;
     padding: 20px 14px;
     background: #f6f4fe;
-    border-radius: 8px
+    border-radius: 8px;
+    overflow-y: scroll;
 }
 
 .ReleaseInfoDialog .right .content .updateInfo header {

@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react"
+import { RefObject, useLayoutEffect, useState } from "react"
 import ResizeObserver from "resize-observer-polyfill"
 
-export function useOffsetHeight(element?: HTMLElement | null | undefined) {
-    const [height, setHeight] = useState(element?.offsetHeight ?? 0)
-    useEffect(() => {
+export function useOffsetHeight(elementRef: RefObject<HTMLElement | null | undefined>) {
+    const [height, setHeight] = useState(elementRef.current?.offsetHeight ?? 0)
+    useLayoutEffect(() => {
+        const element = elementRef.current
         if (element === null || element === undefined) {
             return
         }
@@ -14,6 +15,6 @@ export function useOffsetHeight(element?: HTMLElement | null | undefined) {
         const observer = new ResizeObserver(update)
         observer.observe(element)
         return () => { observer.unobserve(element) }
-    }, [element])
+    }, [elementRef.current])
     return height
 }

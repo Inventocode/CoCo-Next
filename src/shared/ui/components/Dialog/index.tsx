@@ -5,7 +5,7 @@
  */
 
 import classNames from "classnames"
-import { memo, useRef, useState, useCallback, useEffect, CSSProperties, ReactNode, useLayoutEffect } from "react"
+import { memo, useRef, useState, useCallback, useEffect, CSSProperties, ReactNode } from "react"
 import React from "react"
 import ReactDom from "react-dom"
 import "./styles.css"
@@ -46,7 +46,7 @@ export const Dialog = memo(({
   const elementRef = useRef<HTMLDivElement>(null)
   const wrapperElementRef = useRef<HTMLDivElement>(null)
   const contentElementRef = useRef<HTMLDivElement>(null)
-  const [, setIsPlayingAnimation] = useState(false)
+  const [isPlayingAnimation, setIsPlayingAnimation] = useState(false)
 
   let containerElement = document.getElementById("_cocoDialogContainer")
   if (!containerElement) {
@@ -70,22 +70,25 @@ export const Dialog = memo(({
   // [CoCo Next] 缩小显示过大的对话框
   const innerWidth = useInnerWidth()
   const innerHeight = useInnerHeight()
-  const wrapperElementWidth = useOffsetWidth(wrapperElementRef.current)
-  const wrapperElementHeight = useOffsetHeight(wrapperElementRef.current)
-  useLayoutEffect(() => {
+  const wrapperElementWidth = useOffsetWidth(wrapperElementRef)
+  const wrapperElementHeight = useOffsetHeight(wrapperElementRef)
+  useEffect(() => {
     const wrapperElement = wrapperElementRef.current
     if (wrapperElement === null) {
       return
     }
     const zoomX = innerWidth / wrapperElementWidth
     const zoomY = innerHeight / wrapperElementHeight
-    const zoom = Math.min(zoomX, zoomY)
-    if (zoom < 1) {
+    const zoom = Math.min(zoomX, zoomY, 1)
+    if (visible && isPlayingAnimation) {
       wrapperElement.style.transform = `translate(-50%, -50%) scale(${zoom})`
     } else {
       wrapperElement.style.transform = ""
+      if (visible) {
+        setTimeout(() => { setIsPlayingAnimation(true) }, 10)
+      }
     }
-  }, [wrapperElementRef, innerWidth, innerHeight, wrapperElementWidth, wrapperElementHeight])
+  }, [wrapperElementRef, visible, isPlayingAnimation, innerWidth, innerHeight, wrapperElementWidth, wrapperElementHeight])
 
   useEffect(() => {
     const element = elementRef.current
@@ -98,34 +101,40 @@ export const Dialog = memo(({
     return () => { element?.removeEventListener("keydown", listener) }
   }, [])
 
+  // [CoCo Next] 优化动画
   useEffect(() => {
-    if (visible) {
-      setIsPlayingAnimation(true)
+    if (!visible && isPlayingAnimation) {
+      const handle = setTimeout(() => { setIsPlayingAnimation(false) }, 300)
+      return () => { clearTimeout(handle) }
     }
-  }, [visible])
+    return undefined
+  }, [visible, wrapperElementWidth, isPlayingAnimation])
 
-  const node = <div
+  // [CoCo Next] 优化
+  const node = (visible || isPlayingAnimation) && <div
     data-html2canvas-ignore="true"
     ref={elementRef}
     tabIndex={-1}
     className={classNames("coco-dialog", className)}
     style={{
-      display: visible ? "block" : "none",
+      // [CoCo Next] 优化动画
+      display: (visible || isPlayingAnimation) ? "block" : "none",
       ...style
     }}
   >
     {mask && <div
-      className={visible ? "coco-dialog-mask" : classNames("coco-dialog-mask", "hidden")}
+      className={visible && isPlayingAnimation ? "coco-dialog-mask" : classNames("coco-dialog-mask", "hidden")}
       onClick={close}
     />}
     <div className="coco-dialog-scroll">
       <div
-        className={visible ? classNames("coco-dialog-wrapper", "show") : classNames("coco-dialog-wrapper", "hidden")}
-        onAnimationEnd={() => {
-          if (!visible) {
-            setIsPlayingAnimation(false)
-          }
-        }}
+        className={visible && isPlayingAnimation ? classNames("coco-dialog-wrapper", "show") : classNames("coco-dialog-wrapper", "hidden")}
+        // [CoCo Next] 优化动画
+        // onAnimationEnd={() => {
+        //   if (!visible) {
+        //     setIsPlayingAnimation(false)
+        //   }
+        // }}
         ref={wrapperElementRef}
       >
         <div className={title && showCloseButton ? "coco-dialog-title" : ""}>

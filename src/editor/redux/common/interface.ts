@@ -17,6 +17,8 @@ export interface ICommonState extends IUserConfig {
   stageToast: IStageToast
   stageState: IStageState
   projectDialog: IProjectDialog
+  // [CoCo Next] 插件窗口
+  pluginDialog: IPluginDialog
   gridDialog: IGridDialog
   gridStatus: IGridStatus
   tableDataDialog: IGridDialog
@@ -137,6 +139,11 @@ export interface IStageState {
 export interface IProjectDialog {
   visible: boolean
   selected: unknown
+}
+
+// [CoCo Next] 插件窗口
+export interface IPluginDialog {
+  visible: boolean
 }
 
 export interface IGridDialog {

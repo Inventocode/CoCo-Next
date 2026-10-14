@@ -48,8 +48,8 @@ export const PreviewArea = memo(() => {
 
   const innerWidth = useInnerWidth()
   const innerHeight = useInnerHeight()
-  const mainElementWidth = useOffsetWidth(mainElementRef.current)
-  const mainElementHeight = useOffsetHeight(mainElementRef.current)
+  const mainElementWidth = useOffsetWidth(mainElementRef)
+  const mainElementHeight = useOffsetHeight(mainElementRef)
   const widgetListWidth = useWidgetListWidth()
   const widgetListSingleColumn = useWidgetListSingleColumn(widgetListWidth)
 

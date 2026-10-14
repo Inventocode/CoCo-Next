@@ -175,8 +175,8 @@ export const Player = React.memo(() => {
   }, [playing, dispatch])
 
   // [CoCo Next] 检测尺寸变化
-  const wrapperElementWidth = useOffsetWidth(wrapperElementRef.current)
-  const wrapperElementHeight = useOffsetHeight(wrapperElementRef.current)
+  const wrapperElementWidth = useOffsetWidth(wrapperElementRef)
+  const wrapperElementHeight = useOffsetHeight(wrapperElementRef)
   useLayoutEffect(() => {
     if (playing && wrapperElementRef.current && iframeRef.current) {
       // [CoCo Next] 调整缩放算法，使屏幕显示更大

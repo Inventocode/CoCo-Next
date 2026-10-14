@@ -213,4 +213,4 @@ export interface VisibleWidgetProps extends WidgetProps {
   __height: number
 }
 
-export type Widget = new (props: Record<string, any>) => WidgetInstance
+export type Widget = new (props: (VisibleWidgetProps | VisibleWidgetProps) & Record<string, any>) => WidgetInstance

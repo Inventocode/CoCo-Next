@@ -105,17 +105,14 @@ function commonConfig(development, env) {
                     options: /** @satisfies {import("@babel/core").TransformOptions} */({
                         presets: [
                             ["@babel/preset-env", /** @type {import("@babel/preset-env").Options} */({
-                                targets: browserTarget
+                                targets: browserTarget,
+                                useBuiltIns: "entry",
+                                corejs: require("core-js/package.json").version
                             })],
                             "@babel/preset-react"
                         ],
                         plugins: [
-                            "@babel/plugin-transform-runtime",
-                            ["babel-plugin-polyfill-corejs3", {
-                                method: "entry-global",
-                                targets: browserTarget,
-                                version: require("core-js/package.json").version
-                            }]
+                            "@babel/plugin-transform-runtime"
                         ]
                     })
                 }, {
@@ -173,18 +170,23 @@ function commonConfig(development, env) {
                     type: "javascript/auto"
                 }, {
                     test: /\.(png|svg|jpg|jpeg|gif)$/i,
-                    type: "asset",
-                    parser: {
-                        dataUrlCondition: {
-                            maxSize: 1024
+                    rules: [
+                        {
+                            resourceQuery: /inline/,
+                            type: "asset/inline"
+                        }, {
+                            resourceQuery: { not: /inline/ },
+                            type: "asset",
+                            parser: {
+                                dataUrlCondition: {
+                                    maxSize: 1024
+                                }
+                            }
                         }
-                    }
+                    ]
                 }, {
-                    test: /\.txt$/i,
+                    test: /\.(txt|md)$/i,
                     type: "asset/source"
-                }, {
-                    test: /\.md$/i,
-                    use: ["html-loader", "markdown-loader"]
                 }
             ]
         },
@@ -221,6 +223,9 @@ function commonConfig(development, env) {
             new rspack.ProgressPlugin(),
             new rspack.ProvidePlugin({
                 process: "process/"
+            }),
+            new rspack.NormalModuleReplacementPlugin(/^node:/, (data) => {
+                data.request = data.request.replace("node:", "")
             }),
             // @ts-ignore
             publicCDN && new WebpackCdnPlugin({

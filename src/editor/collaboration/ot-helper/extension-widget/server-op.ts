@@ -30,7 +30,7 @@ export function pick(data) {
   CustomWidgetStorage.removeUnsafeExtension(type)
   dispatch(CommonActions.updateExtensionWidgetListAction())
   dispatch(CommonActions.openConfirmDialogAction({
-    title: Language.format(Language.zh_CN, "ExtensionWidget.finishRemove", { title, type }),
+    title: Language.format(Language.locale, "ExtensionWidget.finishRemove", { title, type }),
     cancelBtnVisible: false
   }))
 }

@@ -121,7 +121,7 @@ export const App = React.memo(function () {
   const headerVisible = useSelector((state) => state.common.headerVisible)
   const hasArchiveId = parseURLSearchParamsToObject(window.location.href).archiveId !== undefined
 
-  return <IntlProvider locale={language} messages={Language.messages[language] || Language.messages[Language.zh_CN]}>
+  return <IntlProvider locale={language} messages={Language.messages[language] || Language.messages[Language.locale]}>
     <div className={styles.layout} onDragOver={lB} onDrop={uB}>
       {React.createElement(dB, null)}
       <Icons />

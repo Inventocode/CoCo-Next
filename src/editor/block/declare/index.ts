@@ -7,6 +7,7 @@
 export {
     getBlockResources, getBlockResources as c,
     setBlockResources, setBlockResources as f,
+    setBlockGroup,
     setBlockGroups, setBlockGroups as e,
     getBlockProfileList, getBlockProfileList as a,
     getBlockXMLRecord, getBlockXMLRecord as b,

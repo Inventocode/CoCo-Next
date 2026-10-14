@@ -9,6 +9,16 @@ export { getProperty } from "../../../../unrestored/shared/1571/2636/20/index"
 export { onWidgetEvent } from "../../../../unrestored/shared/1571/2636/20/index"
 export { setProperty } from "../../../../unrestored/shared/1571/2636/20/index"
 
+import { getInternalWidgetLoader } from "./storage"
+
+export function callInternalLoadersMethod(type: string, key: string, ...args: unknown[]) {
+  const loader = getInternalWidgetLoader(type)
+  if (loader === undefined) {
+    throw new Error(`找不到控件 ${type} 的加载器`)
+  }
+  ;(loader as any)[key](...args)
+}
+
 var HTTP = {}
 Object.defineProperty(HTTP, "setHeader", {
   get: function () {

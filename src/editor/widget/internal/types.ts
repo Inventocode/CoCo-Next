@@ -1,6 +1,6 @@
 import type React from "react"
 
-import type { IBlockDeclareGroup } from "../../block/declare/group"
+import type { IBlockDeclareGroup } from "../../block/declare/group/interfaces"
 import type * as CustomWidget from "../../../shared/widget/custom/types"
 
 type FirstParam<T extends (param0: any, ...args: any[]) => any> = T extends (param0: infer T) => any ? T : never
