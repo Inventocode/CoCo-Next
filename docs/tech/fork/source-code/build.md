@@ -18,7 +18,7 @@ git clone https://gitee.com/oldsquaw-coco-next/CoCo-Source-Code-Plan.git
 ### 2. 安装依赖
 
 ```sh
-$ npm install --legacy-peer-deps
+npm install --legacy-peer-deps
 ```
 
 ## 二、【可选】自动还原代码
@@ -40,7 +40,7 @@ $ npm install --legacy-peer-deps
 提示：如果设备内存不多，Node.js 的内存限制会比较小，可以通过设置环境变量 `NODE_OPTIONS = "--max_old_space_size=4096"` 来调大内存限制。
 
 ```sh
-$ npm run auto-reverse
+npm run auto-reverse
 ```
 
 ## 三、以开发模式打包运行解包后的代码
@@ -48,7 +48,7 @@ $ npm run auto-reverse
 ### 1. 启动开发服务
 
 ```sh
-$ npm run start
+npm run start
 ```
 
 ### 2. 在浏览器中打开
@@ -58,7 +58,7 @@ $ npm run start
 ## 四、构建生产版本
 
 ```sh
-$ npm run build
+npm run build
 ```
 
 Rspack CLI 环境变量：
@@ -72,7 +72,7 @@ Rspack CLI 环境变量：
 提示：你可以使用下面这个命令在本地启动一个服务器来查看生产版本。
 
 ```sh
-$ npm run serve
+npm run serve
 ```
 
 依然是在 http://coco.localhost:7090/ 中打开
