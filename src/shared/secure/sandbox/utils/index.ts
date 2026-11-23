@@ -1,5 +1,7 @@
 export * from "./harden"
 export * from "./safe-globals"
 export * from "./blank-allow"
+export * from "./all-undefined"
+export * from "./incept"
 export * from "./console"
 export * from "./merge-scope"

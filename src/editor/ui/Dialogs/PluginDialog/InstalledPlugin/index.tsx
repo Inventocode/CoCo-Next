@@ -21,6 +21,6 @@ export const InstalledPlugin = memo(() => {
 function getPlugins(): IPluginListPluginsProps[] {
     return Object.values(pluginManager.info)
         .map((info) => ({
-            info, asset: () => pluginManager.getPluginAssets(info.packageName)
+            info, asset: () => pluginManager.getPluginAssetsSync(info.packageName)
         }))
 }

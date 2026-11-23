@@ -580,12 +580,12 @@ export async function loadCustomWidget(
     widgetFunction = new Function("require", "exports", "InvisibleWidget", "VisibleWidget", "React", code).bind(window)
   } else if (!isInternal) {
     let loaderConstructor: CoCoWidgetLoaderConstructor
-    ;[loaderConstructor, widgetMarkResolve] = await pluginManager.getPluginLoader(loaderName!).loadCoCoWidgetLoader()
+    ;[loaderConstructor, widgetMarkResolve] = await (await pluginManager.getPluginLoader(loaderName!)).loadCoCoWidgetLoader()
     const loader = new loaderConstructor(code)
     widgetFunction = loader.run.bind(loader) as typeof widgetFunction
   } else {
     let loaderConstructor: InternalWidgetLoaderConstructor
-    ;[loaderConstructor, widgetMarkResolve] = await pluginManager.getPluginLoader(loaderName!).loadInternalWidget()
+    ;[loaderConstructor, widgetMarkResolve] = await (await pluginManager.getPluginLoader(loaderName!)).loadInternalWidget()
     widgetFunction = async (__require, exports, __InvisibleWidget, __VisibleWidget, React) => {
       const loader = new loaderConstructor(code)
       exports.types = await loader.run({ React })

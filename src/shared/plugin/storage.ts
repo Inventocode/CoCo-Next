@@ -13,7 +13,7 @@ export class PluginStorage {
 
     public add(this: this, packageName: string): void {
         this.record[packageName] = null
-        const assets = pluginManager.getPluginAssets(packageName)
+        const assets = pluginManager.getPluginAssetsSync(packageName)
         localStorage.setItem(Paths.PLUGIN_SOURCE(packageName), JSON.stringify({
             source: assets.source, data: assets.data
         }))
@@ -42,4 +42,4 @@ export class PluginStorage {
     }
 }
 
-export const pluginStore = new PluginStorage()
+export const pluginStorage = new PluginStorage()

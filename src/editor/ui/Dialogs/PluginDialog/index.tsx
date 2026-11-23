@@ -1,4 +1,4 @@
-import { memo, useState } from "react"
+import { memo, useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { useIntl } from "react-intl"
 import classNames from "classnames"
@@ -9,6 +9,8 @@ import styles from "./styles.module.css"
 import { InstalledPlugin } from "./InstalledPlugin"
 import { PluginShop } from "./PluginShop"
 import { PluginDevelop } from "./PluginDevelop"
+import { PluginBuiltInAssets, pluginManager, REGISTRATIONS } from "../../../../shared/plugin"
+import { BuiltinPlugins } from "../../../../shared/plugin/builtin"
 
 enum ETabItem {
     INSTALLED = "INSTALLED",
@@ -25,6 +27,32 @@ export const PluginDialog = memo(() => {
     const [selected, setSelected] = useState<ETabItem>(ETabItem.INSTALLED)
 
     const { visible } = useSelector((state) => state.common.pluginDialog)
+
+    useEffect(() => {
+        Object.assign(globalThis, { importScripts() {} })
+        for (const index of BuiltinPlugins) {
+            pluginManager.checkBuiltinPlugin(new PluginBuiltInAssets({ index }))
+        }
+    }, [])
+
+    useEffect(() => {
+        REGISTRATIONS.EditorStart.call()
+    }, [])
+
+    useEffect(() => {
+        const params = new URLSearchParams(location.search)
+        const installPluginString = params.get("installPlugin")
+        if (installPluginString === null) {
+            return
+        }
+        const installPlugin = JSON.parse(installPluginString)
+        params.delete("installPlugin")
+        const url = new URL(location.href)
+        url.search = params.toString()
+        history.replaceState(null, "", url)
+        const { packageName, shop } = installPlugin
+        pluginManager.ensureInstalled(packageName, shop)
+    }, [])
 
     return <Dialog
         visible={visible}

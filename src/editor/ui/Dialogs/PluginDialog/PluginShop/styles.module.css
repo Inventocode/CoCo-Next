@@ -8,17 +8,29 @@
     z-index: 1;
     padding: 8px;
     box-shadow: 0 0 8px #BABABA80;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     background-color: white;
 }
 
-.sort {
+.showInExternalPage {
+    float: right;
+}
+
+.shopOptions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pluginSource {
+    display: flex;
+    margin-block: 4px;
+}
+
+.shopList, .shopOption {
     display: flex;
 }
 
-.sortItem {
+.shopItem, .shopOptionItem {
     margin-inline: 4px;
     padding-inline: 6px;
     border-radius: 14px;
@@ -26,7 +38,7 @@
     cursor: pointer;
 }
 
-.sortItem.selected {
+.selected {
     color: white;
     background-color: #6e4ff4;
 }

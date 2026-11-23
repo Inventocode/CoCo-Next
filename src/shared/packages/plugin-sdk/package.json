@@ -1,6 +1,6 @@
 {
   "name": "@oldsquaw-coco-next/plugin-sdk",
-  "version": "1.23.5",
+  "version": "1.23.7",
   "description": "CoCo Next 插件 SDK",
   "author": "Oldsquaw",
   "keywords": [
@@ -37,6 +37,10 @@
   "scripts": {
     "build": "tsc",
     "start": "tsc --watch"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   },
   "peerDependencies": {
     "@types/react": "^16.0.0"

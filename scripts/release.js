@@ -7,12 +7,12 @@ const packageInfo = require("../package.json")
 const dist = "dist/coco.codemao.cn"
 
 const defaultSource = "dist/default"
-const defaultDist = `dist/${packageInfo.name}-dist-v${packageInfo.version}.zip`
-const defaultMap = `dist/${packageInfo.name}-source-map-v${packageInfo.version}.zip`
+const defaultDist = `dist/coco-next-dist-v${packageInfo.version}.zip`
+const defaultMap = `dist/coco-next-source-map-v${packageInfo.version}.zip`
 
 const compatibleSource = "dist/compatible"
-const compatibleDist = `dist/${packageInfo.name}-dist-compatible-v${packageInfo.version}.zip`
-const compatibleMap = `dist/${packageInfo.name}-source-map-compatible-v${packageInfo.version}.zip`
+const compatibleDist = `dist/coco-next-dist-compatible-v${packageInfo.version}.zip`
+const compatibleMap = `dist/coco-next-source-map-compatible-v${packageInfo.version}.zip`
 
 async function main() {
     await build()

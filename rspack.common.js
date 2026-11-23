@@ -4,6 +4,7 @@ const { merge } = require("webpack-merge")
 const SWC = require("@swc/types")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 const WebpackCdnPlugin = require("webpack-cdn-plugin")
+const { readdirSync, statSync } = require("fs")
 
 /**
  * @typedef {Object} PageInfo
@@ -20,6 +21,24 @@ const PAGES = [
     { name: "about" },
     { name: "download" }
 ]
+
+/**
+ * @typedef {Object} PluginInfo
+ * @property {string} name
+ * @property {string} index
+ */
+
+/** @type {PluginInfo[]} */
+const PLUGINS = []
+const builtinPluginsPath = path.resolve(__dirname, "src", "shared", "plugin", "builtin")
+for (const pluginName of readdirSync(builtinPluginsPath)) {
+    if (statSync(path.resolve(builtinPluginsPath, pluginName)).isDirectory()) {
+        PLUGINS.push({
+            name: pluginName,
+            index: path.resolve(builtinPluginsPath, pluginName, "src", "index")
+        })
+    }
+}
 
 /**
  * @typedef {Object} CommonEnv
@@ -85,7 +104,12 @@ function commonConfig(development, env) {
                 filename: "editor/main.sw.js",
                 runtime: false
             },
-            ...Object.fromEntries(PAGES.map(({ name }) => [name, path.resolve(__dirname, "src", name, "index")]))
+            ...Object.fromEntries(PAGES.map(({ name }) => [name, path.resolve(__dirname, "src", name, "index")])),
+            ...Object.fromEntries(PLUGINS.map(({ name, index }) => [name, {
+                import: index,
+                filename: `static/scripts/builtin-plugins/${name}/index.js`,
+                runtime: false
+            }]))
         },
         output: {
             path: path.resolve(__dirname, "dist", "coco.codemao.cn"),
@@ -186,7 +210,11 @@ function commonConfig(development, env) {
                     ]
                 }, {
                     test: /\.(txt|md)$/i,
+                    exclude: /[\\\/]src[\\\/]shared[\\\/]plugin[\\\/]builtin[\\\/].*\.md$/i,
                     type: "asset/source"
+                }, {
+                    test: /[\\\/]src[\\\/]shared[\\\/]plugin[\\\/]builtin[\\\/].*\.md$/i,
+                    type: "asset/resource"
                 }
             ]
         },
@@ -219,10 +247,15 @@ function commonConfig(development, env) {
                 "assert": require.resolve("assert/")
             }
         },
+        externalsType: "commonjs",
+        externals: /@oldsquaw-coco-next\/plugin-sdk(\/.*)?/,
         plugins: [
             new rspack.ProgressPlugin(),
             new rspack.ProvidePlugin({
                 process: "process/"
+            }),
+            new rspack.EnvironmentPlugin({
+                NODE_ENV: development ? "development" : "production"
             }),
             new rspack.NormalModuleReplacementPlugin(/^node:/, (data) => {
                 data.request = data.request.replace("node:", "")

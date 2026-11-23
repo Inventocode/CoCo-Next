@@ -2,9 +2,10 @@ import { CoCoWidgetLoaderConstructor } from "../packages/plugin-sdk/src/widget-l
 import { createBlockSnippetSetter, InternalWidgetLoaderConstructor } from "../packages/plugin-sdk/src/widget-loader/internal"
 import * as Blink from "../packages/@crc/blink/src"
 import * as BlinkDi from "../packages/@crc/blink/src/core/di"
-import { BLANK_ALLOW, createConsole, createSandbox, ISandbox, mergeScope, SAFE_GLOBALS } from "../secure/sandbox"
+import { createConsole, createSandbox, incept, ISandbox, SAFE_GLOBALS } from "../secure/sandbox"
 import { IPluginAssets } from "./assets"
 import { IPluginRegistration, REGISTRATIONS } from "./registration"
+import { IPluginPermission } from "./interfaces"
 
 function require(requireMap: Record<string, any>, id: string): any {
     return requireMap[id]
@@ -17,12 +18,16 @@ export class PluginLoader {
     private readonly registrationModule
     private readonly requireMap: Record<string, any>
 
+    private readonly globals: Partial<Window & typeof globalThis>
+
     public constructor(
         private readonly packageName: string,
-        private readonly assets: IPluginAssets
+        private readonly assets: IPluginAssets,
+        private readonly permission: IPluginPermission | undefined
     ) {
+        this.globals = this.buildGlobals()
         this.sandbox = createSandbox({
-            globals: mergeScope(BLANK_ALLOW, SAFE_GLOBALS)
+            globals: this.globals
         })
         this.registrationModule = this.buildRegistrationModule(REGISTRATIONS)
         this.requireMap = {
@@ -88,51 +93,82 @@ export class PluginLoader {
             }
         })
         const cratedElements = new WeakSet<Element>()
-        const interceptGlobals = new Set<string | symbol>()
-        const sandbox = createSandbox({
-            globals: new Proxy({
-                ...SAFE_GLOBALS,
+        const sandbox = createSandbox({ globals: incept({
+            object: window,
+            rewrite: {
+                ...(SAFE_GLOBALS as any),
+                ...this.globals,
                 console: sandboxConsole,
-                document: {
-                    body: {
-                        appendChild: document.body.appendChild.bind(document.body)
-                    },
-                    createElement(tagName: string, options?: ElementCreationOptions) {
-                        const element = document.createElement(tagName, options)
-                        cratedElements.add(element)
-                        return element
-                    },
-                    createElementNS(namespace: string | null, qualifiedName: string) {
-                        const element = document.createElementNS(namespace, qualifiedName)
-                        cratedElements.add(element)
-                        return element
-                    },
-                    getElementById(elementId: string) {
-                        const element = document.getElementById(elementId)
-                        if (element !== null && cratedElements.has(element)) {
+                document: incept({
+                    object: document,
+                    rewrite: {
+                        body: incept({
+                            object: document.body,
+                            rewrite: { appendChild: document.body.appendChild.bind(document.body) },
+                            warn(p) { sandboxConsole.warn(`已拦截禁用的功能 document.body.${String(p)}`) }
+                        }),
+                        createElement(tagName: string, options?: ElementCreationOptions) {
+                            const element = document.createElement(tagName, options)
+                            cratedElements.add(element)
                             return element
+                        },
+                        createElementNS(namespace: string | null, qualifiedName: string, options?: string | ElementCreationOptions) {
+                            const element = document.createElementNS(namespace, qualifiedName, options)
+                            cratedElements.add(element)
+                            return element as any
+                        },
+                        getElementById(elementId: string) {
+                            const element = document.getElementById(elementId)
+                            if (element !== null && cratedElements.has(element)) {
+                                return element
+                            }
+                            return null
                         }
-                        return null
-                    }
-                }
-            }, {
-                get(target, p, receiver) {
-                    if (!BYPASS_GLOBALS.includes(p) && !(p in target) && p in globalThis) {
-                        if (!interceptGlobals.has(p)) {
-                            interceptGlobals.add(p)
-                            sandboxConsole.warn(`已拦截禁用的功能 ${String(p)}`)
-                        }
-                        return BLANK_ALLOW
-                    }
-                    return Reflect.get(target, p, receiver)
-                },
-                has(target, p) {
-                    return !BYPASS_GLOBALS.includes(p) && (p in target || p in globalThis)
-                }
-            })
-        })
+                    },
+                    warn(p) { sandboxConsole.warn(`已拦截禁用的功能 document.${String(p)}`) }
+                })
+            },
+            bypass: BYPASS_GLOBALS,
+            warn(p) { sandboxConsole.warn(`已拦截禁用的功能 ${String(p)}`) }
+        }) as any })
         return [sandbox, widgetMarkResolve!]
+    }
+
+    private buildGlobals(this: this): Partial<Window & typeof globalThis> {
+        const pluginConsole = createConsole({
+            interceptMessage: (message) => {
+                if (message.label !== undefined) {
+                    message.label = `[插件 ${this.packageName}] ${message.label}`
+                } else {
+                    message.data.unshift(`[插件 ${this.packageName}]`)
+                }
+                return message
+            }
+        })
+        const globals: Partial<typeof window> = incept({
+            object: window,
+            rewrite: { ...SAFE_GLOBALS, eval, console: pluginConsole },
+            bypass: BYPASS_GLOBALS,
+            warn(p) { pluginConsole.warn(`已拦截禁用的功能 ${String(p)}`) }
+        })
+        if (this.permission === undefined) {
+            return globals
+        }
+        if (this.permission.network) {
+            Object.assign(globals, {
+                XMLHttpRequest, fetch, FormData, URLSearchParams,
+                document: incept({
+                    object: document,
+                    rewrite: {
+                        get cookie() { return document.cookie },
+                        set cookie(value) { document.cookie = value }
+                    },
+                    warn(p) { pluginConsole.warn(`已拦截禁用的功能 document.${String(p)}`) }
+                })
+            })
+        }
+        return globals
     }
 }
 
-const BYPASS_GLOBALS: (string | symbol)[] = ["globalThis", "window", "Function"]
+const BYPASS_GLOBALS: (keyof typeof globalThis)[] = ["self", "globalThis", "window", "Function"]

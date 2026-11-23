@@ -11,6 +11,8 @@ import { useOffsetHeight } from "../../../../../../shared/ui/hooks/use-offset-he
 export interface IPluginListProps {
     plugins: IPluginListPluginsProps[]
     onInsufficient?(): void
+    shop?: string
+    loading?: boolean
 }
 
 export interface IPluginListPluginsProps {
@@ -18,7 +20,7 @@ export interface IPluginListPluginsProps {
     asset(): IPluginAssets
 }
 
-export const PluginList = memo(({ plugins, onInsufficient }: IPluginListProps) => {
+export const PluginList = memo(({ plugins, onInsufficient, shop, loading }: IPluginListProps) => {
 
     const { formatMessage } = useIntl()
 
@@ -29,7 +31,7 @@ export const PluginList = memo(({ plugins, onInsufficient }: IPluginListProps) =
 
     useEffect(() => {
         checkInsufficient()
-    }, [listElementHeight])
+    }, [plugins, listElementHeight])
 
     function checkInsufficient() {
         const listElement = listElementRef.current
@@ -48,7 +50,8 @@ export const PluginList = memo(({ plugins, onInsufficient }: IPluginListProps) =
             onClick={() => { setSelected(null) }}
             onScroll={checkInsufficient}
         >
-            {plugins.length === 0 && <div className={styles.tip}>{formatMessage({ id: "PluginList.noPlugin" })}</div>}
+            {plugins.length === 0 && loading && <div className={styles.tip}>{formatMessage({ id: "PluginList.loading" })}</div>}
+            {plugins.length === 0 && !loading && <div className={styles.tip}>{formatMessage({ id: "PluginList.noPlugin" })}</div>}
             {/* {list.length !== 0 && <div className={styles.search}>
                 <Input placeholder={formatMessage({ id: "PluginList.search" })} />
             </div>} */}
@@ -67,7 +70,7 @@ export const PluginList = memo(({ plugins, onInsufficient }: IPluginListProps) =
         </div>
         <div className={styles.right}>
             {selected === null && <div className={styles.tip}>{formatMessage({ id: "PluginList.notSelected" })}</div>}
-            {selected !== null && <PluginDetail {...selected} />}
+            {selected !== null && <PluginDetail {...selected} shop={shop} />}
         </div>
     </div>
 })

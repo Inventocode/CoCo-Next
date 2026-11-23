@@ -1,12 +1,12 @@
 import { IExecutable, ISandbox, ISandboxProps, IScope } from "../common/interface"
-import { mergeScope } from "../utils"
+import { ALL_UNDEFINED, mergeScope } from "../utils"
 
 export class Sandbox implements ISandbox {
 
     public readonly globalThis: IScope
 
     public constructor(public readonly props: ISandboxProps) {
-        let injectObject: IScope = {}
+        const injectObject: IScope = {}
         this.globalThis = mergeScope(this.restoreThis(mergeScope(injectObject, props.globals)), {})
         Object.assign(injectObject, {
             window: this.globalThis,
@@ -22,7 +22,7 @@ export class Sandbox implements ISandbox {
         return new Proxy(scope, {
             get(target, p, receiver) {
                 const value = Reflect.get(target, p, receiver)
-                if (typeof value === "function" && value === (globalThis as IScope)[p]) {
+                if (typeof value === "function" && value === (globalThis as IScope)[p] && p !== "eval") {
                     let newFunction = globalFunctionMap.get(value)
                     if (newFunction === undefined) {
                         newFunction = new Proxy(value, {
@@ -42,12 +42,12 @@ export class Sandbox implements ISandbox {
         const sandbox = this
         function newFunction(originalFunction: typeof Function, argsName: string[]) {
             const code = argsName.pop()!
-            const func = new originalFunction("scope", "args", `with (this) {\nwith(scope) {\nreturn (function (${argsName.join()}) {\n${code}\n}).apply(this, args)\n}\n}`)
+            const func = new originalFunction("globalThis", `with (this.allUndefined) {\nwith (this.globalThis) {\nreturn (function (${argsName.join()}) {\n${code}\n}).apply(this.this, this.args)\n}\n}`)
             const newFunction = function (this: IScope) {
                 if (this === globalThis || this === null || this === undefined) {
-                    return func.call(sandbox.globalThis, sandbox.globalThis, arguments)
+                    return func.call({ this: sandbox.globalThis, args: arguments, allUndefined: ALL_UNDEFINED, globalThis: sandbox.globalThis })
                 } else {
-                    return func.call(this, sandbox.globalThis, arguments)
+                    return func.call({ this: this, args: arguments, allUndefined: ALL_UNDEFINED, globalThis: sandbox.globalThis })
                 }
             }
             let functionString: string | null = null
@@ -78,7 +78,7 @@ export class Sandbox implements ISandbox {
     }
 
     public async compile(this: this, code: string): Promise<IExecutable> {
-        return new Executable(this, new Function("scope", `with (this) {\nwith (scope) {\n${code}\n}\n}`))
+        return new Executable(this, new Function("globalThis", `with (this.allUndefined) {\nwith (this.globalThis) {\nwith (this.scope) {\n${code}\n}\n}\n}`))
     }
 }
 
@@ -90,6 +90,6 @@ export class Executable implements IExecutable {
     ) {}
 
     public run<T = void>(this: this, ...scopes: IScope[]): T {
-        return this.func.call(this.sandbox.globalThis, mergeScope(...scopes)) as T
+        return this.func.call({ scope: mergeScope(...scopes), allUndefined: ALL_UNDEFINED, globalThis: this.sandbox.globalThis }) as T
     }
 }

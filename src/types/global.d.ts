@@ -1,7 +1,7 @@
 declare global {
-  var CoCoNextAndroidBridge_MainActivity: {
+  const CoCoNextAndroidBridge_MainActivity: {
     startDownloadActivity(): void
-  }
+  } | undefined
 }
 
 export {}

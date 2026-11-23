@@ -3,28 +3,25 @@ import axios from "axios"
 import pLimit from "p-limit"
 
 import * as Language from "../ui/language"
-import { IPluginAssets, PluginLocalAssets } from "./assets"
+import { IPluginAssets, PluginBuiltInAssets, PluginLocalAssets } from "./assets"
 import { PluginLoader } from "./loader"
 import { REGISTRATIONS } from "./registration"
-import { pluginStore } from "./storage"
+import { pluginStorage } from "./storage"
 import { dispatch } from "../../editor/redux/store"
 import { openConfirmDialogAction, showCommonToastInfoAction } from "../../editor/redux/common/actions"
-
-export interface IPluginInfo {
-    packageName: string
-    name: string
-    icon?: string
-    description?: string
-    author: string
-}
+import { IPluginInfo, IPluginInfoInShop, IPluginPermission } from "./interfaces"
 
 interface IPluginPackageInfo {
     name: string
     title?: string
+    icon?: string
+    version?: string
     description?: string
     author: string
+    permission?: IPluginPermission
 }
 
+const downloadLimit = pLimit(1)
 const installAskLimit = pLimit(1)
 
 export class PluginManager {
@@ -32,8 +29,9 @@ export class PluginManager {
     public readonly info: Record<string, IPluginInfo>
     public readonly assets: Record<string, IPluginAssets>
     public readonly loader: Record<string, PluginLoader>
+    public readonly permission: Record<string, IPluginPermission | undefined>
 
-    private readonly loadPromise: Promise<void>
+    private readonly loadingPromise: Promise<void>
     private readonly installing: Record<string, Promise<void>>
 
     public readonly changed: Signal<void>
@@ -42,13 +40,14 @@ export class PluginManager {
         this.info = Object.create(null)
         this.assets = Object.create(null)
         this.loader = Object.create(null)
+        this.permission = Object.create(null)
         this.installing = Object.create(null)
         this.changed = new Signal()
         const promises: Promise<void>[] = []
-        for (const packageName of Object.keys(pluginStore.record)) {
+        for (const packageName of Object.keys(pluginStorage.record)) {
             promises.push((async () => {
                 try {
-                    await this.addPlugin(pluginStore.getAssets(packageName))
+                    await this.addPlugin(pluginStorage.getAssets(packageName))
                 } catch (error) {
                     console.error(error)
                     const message = error instanceof Error ? error.message : JSON.stringify(error)
@@ -62,29 +61,40 @@ export class PluginManager {
                 }
             })())
         }
-        this.loadPromise = Promise.all(promises).then()
+        this.loadingPromise = Promise.all(promises).then()
     }
 
-    public async addPlugin(this: this, assets: IPluginAssets): Promise<IPluginInfo> {
-        const packageInfo: IPluginPackageInfo = JSON.parse(await assets.get("package.json"))
-        const packageName = packageInfo.name
-        const pluginInfo: IPluginInfo = {
-            packageName,
-            name: packageInfo.title ?? packageName,
-            description: packageInfo.description,
-            author: packageInfo.author
+    public async addPlugin(this: this, assets: IPluginAssets, pluginInfo?: IPluginInfo): Promise<IPluginInfo> {
+        if (pluginInfo === undefined) {
+            pluginInfo = await this.loadPluginInfo(assets)
         }
+        const { packageName } = pluginInfo
         this.info[packageName] = pluginInfo
         this.assets[packageName] = assets
         this.changed.emit()
         return pluginInfo
     }
 
-    public async addNewPlugin(this: this, assets: IPluginAssets): Promise<IPluginInfo> {
-        const info = await this.addPlugin(assets)
+    public async loadPluginInfo(this: this, assets: IPluginAssets): Promise<IPluginInfo> {
+        const packageInfo: IPluginPackageInfo = JSON.parse(await assets.get("package.json"))
+        const packageName = packageInfo.name
+        this.permission[packageName] = packageInfo.permission
+        return {
+            packageName,
+            version: packageInfo.version ?? "",
+            name: packageInfo.title ?? packageName,
+            icon: packageInfo.icon,
+            description: packageInfo.description,
+            author: packageInfo.author
+        }
+    }
+
+    public async addNewPlugin(this: this, assets: IPluginAssets, pluginInfo?: IPluginInfo): Promise<IPluginInfo> {
+        await this.loadingPromise
+        const info = await this.addPlugin(assets, pluginInfo)
         const { packageName } = info
         await this.loadPlugin(packageName)
-        pluginStore.add(packageName)
+        pluginStorage.add(packageName)
         return info
     }
 
@@ -92,10 +102,14 @@ export class PluginManager {
         if (Object.hasOwn(this.loader, packageName) && !reload) {
             return
         }
-        await this.getPluginLoader(packageName).load()
+        await (await this.getPluginLoader(packageName)).load()
     }
 
-    public async installPlugin(this: this, packageName: string): Promise<void> {
+    public async installPluginFromShop(this: this, shop: string, packageName: string): Promise<void>
+    public async installPluginFromShop(this: this, shop: string, pluginInfo: IPluginInfo): Promise<void>
+    public async installPluginFromShop(this: this, shop: string, pluginInfo: IPluginInfoInShop): Promise<void>
+    public async installPluginFromShop(this: this, shop: string, pluginInfo: string | IPluginInfo | IPluginInfoInShop): Promise<void> {
+        const packageName = typeof pluginInfo === "string" ? pluginInfo : pluginInfo.packageName
         let installing = this.installing[packageName]
         if (installing === undefined) {
             installing = install.call(this)
@@ -104,17 +118,24 @@ export class PluginManager {
         return installing
         async function install(this: PluginManager) {
             try {
-                const { link } = (await axios.get("https://ccn.hopex.top/api/external/plugins", {
-                    params: { custom_id: packageName }
-                })).data.data
+                await this.ensureInstalled(shop)
+                const { link } =
+                    typeof pluginInfo === "object" && "link" in pluginInfo ?
+                    pluginInfo :
+                    await (await REGISTRATIONS.PluginShopGet.get(shop))(packageName)
                 const index: Record<string, string> = (await axios.get(link)).data
                 const filesContent: Record<string, string> = {}
-                for (const [path, url] of Object.entries(index)) {
-                    filesContent[path] = await (await fetch(url)).text()
+                await Promise.all(Object.entries(index).map(async ([path, url]) => {
+                    await downloadLimit(async () => filesContent[path] = await (await fetch(url)).text())
+                }))
+                if (Object.hasOwn(this.info, packageName)) {
+                    await this.removePlugin(packageName)
                 }
-                const pluginInfo = await this.addNewPlugin(new PluginLocalAssets({ packageName }, filesContent))
+                pluginInfo = await this.addNewPlugin(
+                    new PluginLocalAssets({ packageName, shop }, filesContent),
+                    typeof pluginInfo === "string" ? undefined : pluginInfo
+                )
                 dispatch(showCommonToastInfoAction({
-                    visible: true,
                     type: "success",
                     message: Language.format(Language.locale, "PluginManager.installPluginSuccess", { name: pluginInfo.name })
                 }))
@@ -133,8 +154,41 @@ export class PluginManager {
         }
     }
 
-    public async ensureInstalled(this: this, packageName: string): Promise<void> {
-        await this.loadPromise
+    private async installBuiltinPlugin(this: this, assets: PluginBuiltInAssets, pluginInfo: IPluginInfo) {
+        const { packageName } = pluginInfo
+        let installing = this.installing[packageName]
+        if (installing === undefined) {
+            installing = install.call(this)
+            this.installing[packageName] = installing
+        }
+        return installing
+        async function install(this: PluginManager) {
+            try {
+                const filesContent = await assets.getAll()
+                if (Object.hasOwn(this.info, packageName)) {
+                    await this.removePlugin(packageName)
+                }
+                await this.addNewPlugin(
+                    new PluginLocalAssets({ packageName, shop: "@oldsquaw-coco-next/plugin-shop-builtin" }, filesContent),
+                    pluginInfo
+                )
+            } catch (error) {
+                console.error(error)
+                const errorMessage = error instanceof Error ? error.message : JSON.stringify(error)
+                dispatch(openConfirmDialogAction({
+                    allowText: Language.format(Language.locale, "cloudDb.know"),
+                    title: Language.format(Language.locale, "PluginManager.installPluginFailed"),
+                    content: errorMessage + "\n\n详细错误信息请到浏览器控制台中查看",
+                    cancelBtnVisible: false
+                }))
+                throw error
+            }
+            delete this.installing[packageName]
+        }
+    }
+
+    public async ensureInstalled(this: this, packageName: string, shop = "@oldsquaw-coco-next/plugin-shop-ccn-community"): Promise<void> {
+        await this.loadingPromise
         if (Object.hasOwn(this.info, packageName)) {
             return
         }
@@ -146,6 +200,7 @@ export class PluginManager {
                 dispatch(openConfirmDialogAction({
                     title: Language.format(Language.locale, "PluginManager.needsInstallTitle", { name }),
                     content: Language.format(Language.locale, "PluginManager.needsInstallContent", {
+                        shop: REGISTRATIONS.PluginShop.getRecordSync()[packageName]?.name ?? shop,
                         name, packageName, authorName: nickname, description
                     }),
                     allowText: Language.format(Language.locale, "PluginManager.confirmInstall"),
@@ -153,41 +208,51 @@ export class PluginManager {
                     onCancel() { reject(new Error("用户拒绝安装插件 " + packageName)) }
                 }))
             }))
+            await this.installPluginFromShop(shop, packageName)
         }
-        await this.installPlugin(packageName)
+    }
+
+    public async checkBuiltinPlugin(this: this, assets: PluginBuiltInAssets): Promise<void> {
+        await this.loadingPromise
+        const newestPluginInfo = await this.loadPluginInfo(assets)
+        const { packageName } = newestPluginInfo
+        if (process.env.NODE_ENV !== "development" && Object.hasOwn(this.info, packageName)) {
+            const installedPluginInfo = this.info[packageName]!
+            if (newestPluginInfo.version === installedPluginInfo.version) {
+                return
+            }
+        }
+        if (!Object.hasOwn(this.installing, packageName)) {
+            await this.installBuiltinPlugin(assets, newestPluginInfo)
+        }
     }
 
     public async removePlugin(this: this, packageName: string): Promise<void> {
-        const pluginInfo = this.getPluginInfo(packageName)
         if (Object.hasOwn(this.loader, packageName)) {
             REGISTRATIONS.Clean.getRecordSync()[packageName]?.()
             delete this.loader[packageName]
         }
         delete this.info[packageName]
+        delete this.permission[packageName]
         const assets = this.assets[packageName]
         delete this.assets[packageName]
         for (const registration of Object.values(REGISTRATIONS)) {
             ;(registration as any).unregister(packageName)
         }
         this.changed.emit()
-        pluginStore.remove(packageName)
-        await assets?.clean()
-        dispatch(showCommonToastInfoAction({
-            visible: true,
-            type: "success",
-            message: Language.format(Language.locale, "PluginManager.removePluginFinished", { name: pluginInfo.name })
-        }))
+        pluginStorage.remove(packageName)
+        await assets?.clean?.()
     }
 
-    public hasPlugin(this: this, packageName: string): boolean {
+    public hasPluginSync(this: this, packageName: string): boolean {
         return Object.hasOwn(this.info, packageName)
     }
 
-    public getPluginInfoArray(this: this): IPluginInfo[] {
+    public getPluginInfoArraySync(this: this): IPluginInfo[] {
         return Object.values(this.info)
     }
 
-    public getPluginInfo(this: this, packageName: string): IPluginInfo {
+    public getPluginInfoSync(this: this, packageName: string): IPluginInfo {
         const info = this.info[packageName]
         if (info === undefined) {
             throw new Error(`插件 ${packageName} 不存在`)
@@ -195,7 +260,12 @@ export class PluginManager {
         return info
     }
 
-    public getPluginAssets(this: this, packageName: string): IPluginAssets {
+    public async getPluginInfo(this: this, packageName: string): Promise<IPluginInfo> {
+        await this.loadingPromise
+        return this.getPluginInfoSync(packageName)
+    }
+
+    public getPluginAssetsSync(this: this, packageName: string): IPluginAssets {
         const assets = this.assets[packageName]
         if (assets === undefined) {
             throw new Error(`插件 ${packageName} 不存在`)
@@ -203,13 +273,25 @@ export class PluginManager {
         return assets
     }
 
-    public getPluginLoader(this: this, packageName: string): PluginLoader {
+    public async getPluginLoader(this: this, packageName: string): Promise<PluginLoader> {
+        await this.loadingPromise
         let loader = this.loader[packageName]
         if (loader === undefined) {
-            loader = new PluginLoader(packageName, this.getPluginAssets(packageName))
+            loader = new PluginLoader(
+                packageName,
+                this.getPluginAssetsSync(packageName),
+                await this.getPluginPermission(packageName)
+            )
             this.loader[packageName] = loader
         }
         return loader
+    }
+
+    public async getPluginPermission(this: this, packageName: string): Promise<IPluginPermission | undefined> {
+        if (!Object.hasOwn(this.permission, packageName)) {
+            await this.loadPluginInfo(this.getPluginAssetsSync(packageName))
+        }
+        return this.permission[packageName]
     }
 }
 

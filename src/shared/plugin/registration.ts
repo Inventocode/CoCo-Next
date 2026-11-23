@@ -1,7 +1,7 @@
 import { Signal } from "@soncodi/signal"
 
 import { pluginManager } from "./manager"
-import type { CoCoWidgetLoaderTypes, InternalWidgetLoaderTypes } from "../packages/plugin-sdk/src/index"
+import type { CoCoWidgetLoaderTypes, InternalWidgetLoaderTypes, onClean, onEditorStart, onPluginShopGet, onPluginShopLoad, PluginShopTypes } from "../packages/plugin-sdk/src/index"
 import * as Paths from "./paths"
 
 export interface IPluginRegistration<T, S> {
@@ -37,7 +37,7 @@ export abstract class BasePluginRegistration<T, S>implements IPluginRegistration
         return Object.values(await this.getRecord())
     }
     public getRegister(this: this, packageName: string) {
-        return this.register.bind(this, packageName)
+        return Object.assign(this.register.bind(this, packageName), { packageName })
     }
 
     public register(this: this, packageName: string, value: T): void {
@@ -149,12 +149,23 @@ class FunctionPluginRegistration<T extends Function> extends BasePluginRegistrat
         }
         await this.loadPromise
     }
+
+    public async call(
+        this: this,
+        ...args: (T extends (...args: any) => any ? Parameters<T> : never)
+    ): Promise<(T extends (...args: any) => any ? ReturnType<T> : never)[]> {
+        return Promise.all(Object.values((await this.getRecord())).map((func) => func(...args)))
+    }
 }
 
 export const REGISTRATIONS = buildRegistrations({
+    EditorStart: FunctionPluginRegistration<Parameters<typeof onEditorStart>[0]>,
+    Clean: FunctionPluginRegistration<Parameters<typeof onClean>[0]>,
+    PluginShop: JSONPluginRegistration<PluginShopTypes>,
+    PluginShopLoad: FunctionPluginRegistration<Parameters<typeof onPluginShopLoad>[0]>,
+    PluginShopGet: FunctionPluginRegistration<Parameters<typeof onPluginShopGet>[0]>,
     CoCoWidgetLoader: JSONPluginRegistration<CoCoWidgetLoaderTypes>,
-    InternalWidgetLoader: JSONPluginRegistration<InternalWidgetLoaderTypes>,
-    Clean: FunctionPluginRegistration<() => void>
+    InternalWidgetLoader: JSONPluginRegistration<InternalWidgetLoaderTypes>
 })
 
 type RegistrationConstructor = new (name: string, store?: any) => IPluginRegistration<any, any>

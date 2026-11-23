@@ -1,0 +1,21 @@
+{
+  "name": "@oldsquaw-coco-next/plugin-shop-ccn-community",
+  "title": "CoCo Next 社区插件商城",
+  "icon": "/image/builtin-plugins-icon/plugin-shop-ccn-community.svg",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CoCo Next 社区插件商城",
+  "author": "Oldsquaw",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@oldsquaw-coco-next/plugin-sdk": "file:../../../packages/plugin-sdk"
+  },
+  "permission": {
+    "network": true
+  },
+  "engines": {
+    "coco-next": "^1.23.7"
+  }
+}
