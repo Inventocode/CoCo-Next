@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="-10 -10 120 120">
+    <!-- <rect width="120" height="120" x="-10" y="-10" fill="none" stroke-width="20" stroke="#FF000020" /> -->
+    <g>
+        <circle cx="8" cy="3" r="3" />
+        <line x1="8" y1="3" x2="92" y2="3" stroke="black" stroke-width="6" />
+        <circle cx="92" cy="3" r="3" />
+        <line x1="92" y1="3" x2="97" y2="18" stroke="black" stroke-width="6" />
+        <circle cx="3" cy="18" r="3" />
+        <path d="M 3 18 a 9.4 9.4 0 0 0 23.5 0 " fill="none" stroke="black" stroke-width="6"/>
+        <circle cx="26.5" cy="18" r="3" />
+        <path d="M 26.5 18 a 9.4 9.4 0 0 0 23.5 0 " fill="none" stroke="black" stroke-width="6"/>
+        <circle cx="50" cy="18" r="3" />
+        <path d="M 50 18 a 9.4 9.4 0 0 0 23.5 0 " fill="none" stroke="black" stroke-width="6"/>
+        <circle cx="73.5" cy="18" r="3" />
+        <path d="M 73.5 18 a 9.4 9.4 0 0 0 23.5 0 " fill="none" stroke="black" stroke-width="6"/>
+        <circle cx="97" cy="18" r="3" />
+        <line x1="3" y1="18" x2="8" y2="3" stroke="black" stroke-width="6" />
+        <line x1="3" y1="18" x2="3" y2="97" stroke="black" stroke-width="6" />
+        <circle cx="3" cy="97" r="3" />
+        <line x1="3" y1="97" x2="60" y2="97" stroke="black" stroke-width="6" />
+        <circle cx="60" cy="97" r="3" />
+        <line x1="97" y1="18" x2="97" y2="60" stroke="black" stroke-width="6" />
+        <circle cx="97" cy="60" r="3" />
+    </g>
+    <g transform="translate(20, 33) scale(0.6)">
+        <circle cx="95" cy="50" r="5" />
+        <line x1="95" y1="50" x2="95" y2="20" stroke="black" stroke-width="10" />
+        <circle cx="95" cy="20" r="5" />
+        <line x1="95" y1="20" x2="70" y2="20" stroke="black" stroke-width="10" />
+        <circle cx="70" cy="20" r="5" />
+        <path d="M 70 20 a 15 15 0 0 0 -30 0" fill="none" stroke="black" stroke-width="10" />
+        <circle cx="40" cy="20" r="5" />
+        <line x1="40" y1="20" x2="20" y2="20" stroke="black" stroke-width="10" />
+        <circle cx="20" cy="20" r="5" />
+        <line x1="20" y1="20" x2="20" y2="40" stroke="black" stroke-width="10" />
+        <circle cx="20" cy="40" r="5" />
+        <path d="M 20 40 a 15 15 0 0 0 0 30" fill="none" stroke="black" stroke-width="10" />
+        <circle cx="20" cy="70" r="5" />
+        <line x1="20" y1="70" x2="20" y2="90" stroke="black" stroke-width="10" />
+        <circle cx="20" cy="90" r="5" />
+        <line x1="20" y1="90" x2="40" y2="90" stroke="black" stroke-width="10" />
+        <circle cx="40" cy="90" r="5" />
+        <path d="M 40 90 a 15 15 0 0 1 30 0" fill="none" stroke="black" stroke-width="10" />
+        <circle cx="70" cy="90" r="5" />
+    </g>
+    <g transform="translate(66.67, 66.67) scale(0.333)">
+        <defs>
+            <linearGradient id="linearGradient1" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color: #f17645;" />
+                <stop offset="100%" style="stop-color: #ffa568;" />
+            </linearGradient>
+            <linearGradient id="linearGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color: #50ffeb;" />
+                <stop offset="100%" style="stop-color: #7b40ff;" />
+            </linearGradient>
+            <linearGradient id="linearGradient3" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color: #643cff;" />
+                <stop offset="100%" style="stop-color: #e793ff;" />
+            </linearGradient>
+        </defs>
+        <path d="M 2 15 h 30 v 70 a 15 15 0 0 1 -30 0" fill="url(#linearGradient1)" />
+        <path d="M 6.0862 25.2902 a 15 15 0 0 1 21.8277 -20.5804 l 66 70 l -21.8277 20.5804 l -66 -70" fill="url(#linearGradient2)" />
+        <path d="M 68 15 a 15 15 0 0 1 30 0 v 70 a 15 15 0 0 1 -30 0" fill="url(#linearGradient3)" />
+    </g>
+</svg>

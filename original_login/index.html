@@ -1,0 +1,11 @@
+<!doctype html><html><head><title>编程猫社区</title><style>
+            body {
+                margin: 0;
+            }
+            iframe {
+                border: none;
+                position: fixed;
+                width: 100%;
+                height: 100%;
+            }
+        </style></head><body><script>function closeThisWindow(){window.close(),setTimeout(()=>{alert("关闭窗口失败，请手动关闭窗口")},0)}addEventListener("message",({origin:e,data:a})=>{if(("https://shequ.codemao.cn"==e||"http://shequ.codemao.cn"==e)&&null!=a&&"object"==typeof a&&"content"in a){let{content:e}=a;if(null!=e&&"object"==typeof e&&"type"in e&&"codemao-login.onEvent"==e.type){let{payload:a}=e;switch(a.event){case"IFRAME_READY":case"REGISTER_CONFIRM":case"BIND_PHONE_SUCCESS":case"REPORT":break;case"PASSWORD_LOGIN_SUCCESS":case"SMS_LOGIN_SUCCESS":case"THIRD_PARTY_LOGIN_SUCCESS":case"REGISTER_SUCCESS":alert("登录成功"),closeThisWindow();break;case"CLOSE_ANIMATION_END":closeThisWindow();break;default:console.info("未知事件:",a)}}}});const searchParams=new URLSearchParams(location.search),url=searchParams.get("url")??"https://shequ.codemao.cn/codemao_login?onlyLogin=false&language=zh&disableThirdParty=false&ageLimit=false&pageView=login&theme=violet&env=production&pid=7KeVbBdw&productCode=appcraft",iframeElement=document.createElement("iframe");iframeElement.src=url,document.body.appendChild(iframeElement)</script></body></html>

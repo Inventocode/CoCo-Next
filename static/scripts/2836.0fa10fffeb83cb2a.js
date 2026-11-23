@@ -1,0 +1,2 @@
+"use strict";(self.rspackChunk_oldsquaw_coco_next_coco_next=self.rspackChunk_oldsquaw_coco_next_coco_next||[]).push([[2836],{50720(){},19102(e,s,a){s.default=void 0;var o=a(38573),r=a(85007);s.default=(0,o.declare)((e,s)=>(e.assertVersion("^7.0.0-0 || ^8.0.0-0"),(0,r.createClassFeaturePlugin)({name:"transform-class-properties",api:e,feature:r.FEATURES.fields,loose:s.loose,manipulateOptions(e,s){s.plugins.push("classProperties","classPrivateProperties")}})))}}]);
+//# sourceMappingURL=2836.0fa10fffeb83cb2a.js.map

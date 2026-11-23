@@ -1,0 +1,1 @@
+"use strict";(self.rspackChunk_oldsquaw_coco_next_coco_next=self.rspackChunk_oldsquaw_coco_next_coco_next||[]).push([[2822],{50720(){}}]);
