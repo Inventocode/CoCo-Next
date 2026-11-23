@@ -1,5 +1,5 @@
 ---
-sidebar_position: 4
+sidebar_position: 5
 ---
 
 # 自定义控件加载器
@@ -45,7 +45,7 @@ registerCoCoWidgetLoader({
 
 类型：`boolean | { jsx?: boolean, esModule?: boolean }`
 
-说明：对代码进行预处理，将特殊语法转换为普通代码。默认只转换 JSX。
+说明：对代码进行预处理，将特殊语法转换为普通代码。为布尔值时表示启用/禁用全部转换。默认只转换 JSX。
 
 ## 二、加载器实体
 
