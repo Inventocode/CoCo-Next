@@ -92,7 +92,9 @@ export async function onRequest(context) {
         // 处理编程猫 API 代理
         if (targetUrl) {
 
-            let origin = new URL(request.headers.get("Origin") ?? "", "https://next.ccwidget.top")
+            const { headers: requestHeaders } = request
+
+            let origin = new URL(requestHeaders.get("Origin") ?? requestHeaders.get("Referer") ?? "", "https://next.ccwidget.top")
 
             // 来源域名检查
             if (!ALLOWED_ORIGIN_DOMAINS.includes(origin.hostname)) {
@@ -129,7 +131,7 @@ export async function onRequest(context) {
             }
 
             // 构建新请求
-            const newHeaders = new Headers(request.headers)
+            const newHeaders = new Headers(requestHeaders)
             newHeaders.set("Origin", "https://coco.codemao.cn")
             newHeaders.set("Referer", "https://coco.codemao.cn/")
             newHeaders.delete("host")
